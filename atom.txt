@@ -1,0 +1,3 @@
+zen package
+	shift-f11
+	distraction free

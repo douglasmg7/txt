@@ -1,0 +1,60 @@
+n - toggle panel right
+t - toggle panel left
+shift + a - add
+tab - change object mode to edit mode and vice vesra
+m - change object layer
+sapce (in to 3d view) - search bar
+ctr+alt+u - user preferences
+
+b - box select object
+c - circle select in edit mode
+a - select all / deselect all
+ctr + lmb - selet
+ctr + shift + lmb - deselect
+
+g (+ x, y ou z) - grab
+s (+ x, y ou z) - scale
+s (shift + z) negate z, scale x and y
+r (+ x, y ou z) - rotate
+e (+ x, y ou z) - extrude
+r y 30 - rotate into x 30 graus
+shift + s - precisely place the 3d cursor
+shift + c - put 3d cursor on the origin and zoom out
+
+home - zoom all
+/ (num pad) - zoom selected object
+
+w - shortcut menu for editing options
+o - proportional edition enable/desable
+z - change the shade mode
+
+alt + rmb - circular selection in edit mode
+shift - slow the motiom of the mouse
+
+ctrl + j - join objects, but retain the original nodes
+p - partition in edit mode to separete objects
+p - in object mode deletes the scene background, esc to go back
+
+f - create a face from selected vertices
+
+k - knife too, enter to finish
+
+alt + c - convert curve to mesh
+
+bézier
+e - insert a point
+ctrl + lmb - insert a point
+f - join to separeted nodes
+v - change the handle type
+
+shift + d - duplicate
+
+ctrl + r - add edge loop
+
+d + rmb - write line
+d + lmb - erase line
+
+i - insert a face
+ctrl + tab - mesh select mode
+
+preferences/interface/rotate around selection

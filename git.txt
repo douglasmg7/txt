@@ -1,0 +1,187 @@
+git checkout
+git commit
+git rebase
+git checkout bugFix^
+git checkout bugFix~4
+git branch -f master HEAD~3
+git reset HEAD~1 - on local repostiory
+git revert HEAD - remote repositoriy, create new commit with reverted changes
+git fetch - update from remote
+git pull = git fetch && git merge
+git push - uploading your changes
+git push --rebase = git fetch && git rebase
+
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+git config --global core.editor vim
+
+git config --list
+list all settings
+
+git init
+initialize a repository on current folder
+
+git init project1
+initialize a repository
+
+git status
+view repository status
+
+git stauts -s
+short status flag so you can see your changes in a more compact way
+ M a.txt - modified but not staged
+MM b.txt - modified, staged and modified again
+A  c.txt - new files that have been added to staging area
+M  d.txt - modified and staged
+?? e.txt - new file not tracked
+
+git add file.txt
+add a file to repository
+
+git commit
+make a commit
+
+git commit -m "My fisrt commit"
+make a commit with comment
+
+git commit -v
+inculde a reminder of what you've modified
+
+git commit -a
+automatically stage every file thas is alredy tracked before doing the commit
+
+git config --global user.name "Jonh Doe"
+git config --global user.email johndoe@example.com
+configura o nome e o e-mail
+
+git config user.name
+visualiza o nome
+
+git config --global core.editor vim
+configura o editor de texto a ser utilizado
+
+git config -l
+visualizar as configurações
+
+git clone https://github.com/libgit2/libgit2
+get a copy of an existing git repository
+
+
+git clone https://github.com/libgit2/libgit2 mylibgit
+get a copy of an existing git repository into a directory mylibgit
+
+.gitignore
+list of files to Git not show you
+
+https://github.com/github/gitignore
+.gitignore templates
+
+git diff
+to see what you've changed but not yet staged
+
+git diff --staged
+compares your staged changes to your last commit
+
+git rm file.txt
+remove a file
+
+git rm --cached file.txt
+remove from git track but nor from working tree
+
+git mv a.txt b.txt
+rename a file or move
+
+git log
+get the commit history
+
+git log -p -2
+show the diferences introduced in each commit for the last two commit
+
+git log --stat
+list a abbreviation of stats
+
+git commit --amend
+correct a commit message or/and add a forgotten file to the last commit
+
+git reset HEAD file.txt
+to unstaging a file
+
+git checkout -- file.txt
+revert the file.txt modifications
+
+git remote
+to see which remote servers you have configured
+
+git remote -v
+show the urls when reading and writing to the remote
+
+git remote add pb https://github.com/paulboone/ticgit
+add a new remote repositories with a short name pb
+
+git fetch pb
+fetch all the information from pb repository
+
+git push origin master
+git push [remote-name] [branch-name]
+push it upstream
+
+git remote show origin
+list the url for the remote repository as well as the tracking branch information
+
+git remote rename pb paul
+rename a reference
+
+git remote rm paul
+remove a remote repository
+
+git tag
+list the available tags
+
+git tag -a v0.2 -m 'my version 1.4'
+creating an annotated tag
+
+git tag v0.2
+creating a lightweight tag
+
+git show v0.2
+see the tag data
+
+git log --pretty=oneline
+git tag -a v1.3 9fceb02
+tagging late
+
+git push origin v0.2
+push a tag (shearing)
+
+git push origin --tags
+push all the tags
+
+git config --global alias.unstage 'reset HEAD --'
+create a alias
+
+git config --global alias.visual '!gitk'
+run a external tool gitk (git visual)
+
+git branch test
+create a new branch
+
+git branch -d test
+remove a branch
+
+git log --oneline --decorate
+to see the branchs
+
+git log --oneline --decorate --graph -- all
+to see where brach diverges
+
+git checkout test
+moves HEAD to point to the branch test
+
+git checkout -b iss53
+shorthand for:
+git branch iss53
+git checkout iss53
+
+git checkout master
+git merge iss53
+merge iss53 to the master

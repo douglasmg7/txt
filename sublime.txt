@@ -1,0 +1,37 @@
+ctrl+enter
+insert line after
+
+ctrl+enter
+insert line before
+
+ctrl+x
+remove a line
+
+ctrl+l
+selecting an entire line
+
+ctrl+p
+going to a file or line (:3)
+
+ctrl+shift+j:
+selecting code that is similarly indented
+
+ctrl+shift+a
+selecting everything inside an html tag
+
+ctrl+d
+selecting a word
+
+ctrl+g
+going to a line
+
+ctrl+m
+jumping to ( or ) when inside
+
+ctrl+shift+m
+selecting the text inside ()
+
+ctrl+p
+go to anything
+
+

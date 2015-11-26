@@ -1,0 +1,31 @@
+bower install
+install the packages using the bower.json
+
+bower install jquery#1.10.3
+install a package
+
+bower install jquery --save
+install a package and add ito to bower.json dependencies
+
+bower install jquery --save-dev
+install a package and add ito to bower.json devDependencies
+
+bower init
+initialize the bower.json
+
+bower update
+update all dependencies
+
+bower update jquery
+update a specific dependencie
+
+bower uninstall jquery
+remove a dependencie
+
+bower search jquery
+search a module
+
+bower list
+list installed packages
+
+

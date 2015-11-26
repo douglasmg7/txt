@@ -1,0 +1,64 @@
+Salmo 15-S lugger
+loa - 4,55 m
+beam - 1,64 m
+draft - 0.18 / 0,9 m
+sail - 9,5 m2
+lastro - 40 - 80 kg
+
+first mate
+loa - 4,57 m
+beam - 1,5 m
+
+dingue
+loa - 4,16 m
+beam - 1,64 m
+pontal - 0,48 m
+weight hull - 85 kg
+sail - 6,5 m2
+
+laser
+loa - 4,2 m
+beam - 1,39 m
+hull weight - 59 kg
+sail - 7 m2
+
+daysailer
+loa - 5,10 m
+beam - 1,91 m
+draft - 0,18 / 1,14
+sail - 13,47
+deslocamento - 533 kg
+weight - 260 kg
+possível deslocamento - 273 kg
+
+penny fee
+loa - 4,88 m
+beam - 1,60 m
+weight - 135 kg
+
+scamp
+loa - 3,63m
+beam - 1,63m
+draft - 180mm
+hull weight including rig - 190kg
+sail - 9,3m2
+crew - 2 pessoas
+
+Boat - x
+plywood - 9mm ou 10mm
+loa - 4,95 m (16'-4")
+beam - 1,6 m (5'-3")
+weight - 150 kg
+2 pessoas - 80+80= 160 kg
+mochila - 20+20= 40 kg
+total = 200 kg
+deslocamento total = 160+40+150 = 350 kg
+dagger board
+mudar para 4 a 4,2m
+1,50 a 1,55m de boca
+fundo plano com 4 planks por lado
+flat bottom and four strake by side
+
+mangaA1k
+
+

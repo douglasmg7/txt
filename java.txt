@@ -1,0 +1,310 @@
+/usr/share/applications/jetbrains-idea-ce.desktop
+Exec=bash -i "/opt/ide/idea-IC-141.1532.4/bin/idea.sh" %f
+jetbrains launcher correction
+
+HotSpot
+provides a just-in-time (JIT) compiler for bytecode
+
+servlet
+a small program that executes on a server
+
+Encapsulation
+a programming mechanism that binds together code and the data it manipulates, and that keeps both safe from outside interference and misuse
+
+Polymorphism
+(from Greek, meaning “many forms”) is the quality that allows one interface to access a general class of actions
+
+Inheritance
+the process by which one object can acquire the properties of another object
+
+# config java path - ~/.bashrc
+JAVA_HOME=/opt/java/jdk1.8.0_20/bin
+export JAVA_HOME
+PATH=$PATH:$JAVA_HOME
+export PATH
+
+built-in primitive data types (no-objects)
+	boolean - JVM-specific
+	byte - 8 -128 to 127
+	char - 16
+	short - 16 - 32.768 to 32.767
+	int - 32 -2e9 to 2e9
+	long - 64 -9e18 to 9e18 
+	float - 32
+	double - 64
+
+without f, java think it is double, will not compile
+float ft = 123f
+
+long l = 123_5_7
+o mesmo que l = 12357
+
+((Object)l).getClass().getTypeName();
+get type name 		// java.lang.Long
+
+Long.class.isInstance(20l);
+get type name 		// true
+
+hex = 0xff			// 255 in decimal
+octal = 011			// 9 in decimal
+binário = 0b1100	// 12 in decimal
+
+dentro de um bloco interno não pode ser declarado um nome de variável que já existe fora do bloco
+
+&& - ||
+short-circuit
+
+break pode ser usado de forma similar a goto
+two: {
+	{
+	   break two;
+	}
+     }
+
+argument
+a caller passes arguments
+
+parameter
+a method uses parameters
+
+encapsulation
+ex. Granty the boundery of instance variable
+
+instance variable
+are declared inside a class
+get default value
+
+local variable
+are declared within a method
+must be initialized
+method parameters are considered local variables too
+
+a == b
+if two primitive values are the same
+if two reference point to same object on heap
+
+.equals()
+if two objects have the same values
+
+Integer.parseInt("3")
+parse
+
+for(int cell: cells)
+cell 	- hold one elemnt from the array at each loop
+:		- menas in
+cells 	- the array to interate over in the loop
+
+java.util.ArrayList
+variable array
+
+import
+to do not need type all class's name
+
+java.lang
+is automatic imported - default
+that contais System, Math, String e etc ...
+
+javax
+extension packages - not default
+
+public class Cat extend Feline
+cat is-a feline (test if is ok to create a inheritance)
+
+not a inheritance
+has-a (test if a object contains another)
+
+
+polymorphism
+many forms
+the reference type can be a superclass of the actual object type
+Animal pet = new Dog()
+
+polymorphic arguments
+where i declare the method parameter as a superclass type, i can pass in any subclass object at runtime.
+
+override
+a method with same name and arguments in subclass, return can be changed to a subclass type
+you can't change the access level
+
+overload
+a method with same name e diferent arguments, return can be changed if arguments a diferents
+you can't change only the return type
+you can vary the access levels in any direction
+
+interface
+a abstract class
+are the poly in polymorphism
+
+abstract class
+defines the protocolo
+
+abstract class Animal
+prevent a class from being instantiated (can't do "new Animal")
+
+concrete
+not abstract
+
+abstract method
+public abstract void soma();
+you must implement abstract methods in real subclasses, not in abstract subclasses
+
+abstract class means the class must be extended
+abstract method means the method must be overridden
+
+If you declare an abstract method
+you MUST mark the class abstract as well. You can’t have an abstract method in a non-abstract class.
+
+abstract class can have a real method
+you can mix both abstract and non-abstract methods in the abstract class
+
+every class extends Object
+
+Object
+	.equal()
+	.getClass()
+	.hashCode()
+	.toString()
+
+if(obj instanceof Dog) { Dog d = (Dog)obj; }
+make sure o can be cast to dog
+
+inteface
+public interface Pet {}
+all methods in an interface are abstract
+interface methods are implicitly public and abstract
+
+public class Dog extends Canine implements Pet, saveable {}
+when a class implements an interface
+
+super.runSomeTinhg();
+run the superclass method from a subclass that override this same method
+
+java has two areas of memory
+stack and heap
+
+heap
+where the objects live
+
+stack
+where the methods and local variable live
+
+java lets you declare a method with the same name as your class
+that doesn't make it a constructor, though
+the thing that separate a method from a constructor is the return type
+method must have a return type, but constructor cannot have a return type
+
+constructor are not inherited, you get the default constructor on subclass
+
+super();
+to call a superclass constructor
+
+the compiler puts in a call to super() if you don't
+
+the call to super() must be the first statement in each constructor
+
+this()
+invoke a contructor
+must be the first statement in the constructor
+the call to this() can be used only in a constructor 
+a constructor can jave a call to super() or this(), but never both
+
+setter method
+public void setSize(int newSize){ size = newSize;}
+
+Math
+cannot be instantiated, your constructor is private
+
+static methods can't use non-static (instance) variables
+static methods can't use non-static methods, either
+static can't see instance variable state
+
+statict variable value is the same for all instance of the class
+
+public static final dougle PI = 3.1415
+static final variables are constats
+
+static { BAR_SIGN = (double) Math.random(); }
+static initializer
+a block of code that runs when a class is loaded
+great place to initialize static variables
+
+final static variables must be definded
+at the time you declare it or in a static initializer
+
+final instance variable must be initialized either at the time is declered, or in the constructor
+
+final variable means you can't chage its value
+final method means you can't override the method
+final class means you can't extend the calss (you can't make a subclass)
+if the class is final, you don't need to mark the methods final
+
+wrapping
+some method don't accept pimitive values
+
+wrapping a value
+Integer iWrap = new Integer(3);
+
+unwrapping a value
+int i = iWrap.intValue();
+
+autoboxing
+java version 5.0 or greater
+you don't need wrap and unwrap, the compile automatically do it
+
+to work with int - autoboxing
+ArrayList<Integer> ls = new ArrayList<Integer>();
+ls.add(3);
+
+parse a boolean
+boolean b = new Boolean("true").booleanValue();
+
+primitive number into a String
+double d = 42.5;
+String ds = "" + d;
+String ds = Double.toString(d);
+
+String s = String.format("Isto é um número: %, d", 1000000000);
+format a string
+
+String s = String.format("Isto é uma data: %tA, %<tB, %<td", new Date());
+"<" flag that tells the formatter to use the previous argument
+
+Calendar cal = Calendar.getInstance();
+get a calendar instance
+
+import static java.lang.System.out;
+improt static java.Math.*;
+out.println(sqrt(2.0));
+static imports in action
+
+exception
+a method has to declare the exceptions it might throw
+public void takeRisk() throws BadException {
+	if (abondonAllHope) {
+		throw new BadException();
+	}
+}
+
+exception hierarchy
+IOException -> Exception -> Throwable
+
+Throwable methods
+getMessage(), printStackTrace()
+
+checked exceptions
+exception that are not subclasses of RuntimeException are checked for by the compiler
+
+unchecked exceptions
+RuntimeExceptions are not checked by the compiler
+you can throw, catch, and declare RuntimeExceptions, but you don't have to,
+and the compiler won't check
+
+finally
+if the try catch block has a return statment, flow jumps to finallym then back to the return
+
+you can declare a superclass of the exceptions instead of each one exception
+same thing to the catch blocks
+
+duck
+declare that a method throws the exception to not neet put a try catch,
+so the caller will handle the exception

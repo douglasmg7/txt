@@ -1,0 +1,15 @@
+gulp
+run the default task
+
+gulp copy
+run the copy task
+
+gulpfile.js
+default gulp file
+
+packages
+	watch
+	util
+	uglify
+	liverload
+	browsersync

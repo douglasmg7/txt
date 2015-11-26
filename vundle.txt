@@ -1,0 +1,22 @@
+:PluginList
+list all installed plugins
+
+:PluginInstall
+install plugins
+
+comment or remove the plugin from ~/.vimrc
+:PluginClean
+remove a plugin
+
+:PluginUpdate
+update all plugins
+
+:PluginInstall!
+re-install all plugins and update if necessary
+
+:PluginSearch!
+list every plugin that vundle can find on the vim scripts site
+! at end of the command refreshes the local list
+
+:PluginSearch javascript
+search for all plugins with javascript on the name

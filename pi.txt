@@ -1,0 +1,10 @@
+ssh pi@10.10.10.103
+ssh pi@raspberrypi
+-logar em outro computador usando security shell
+
+scp file user@server:/file
+-copiar um arquivo entre computadores 
+
+sudo halt -p
+sudo shutdown -h now
+shutdown the system

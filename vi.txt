@@ -1,0 +1,248 @@
+ZZ ou :wq - salva e sai
+:e! - descarta as alterações
+:q! - sai sem salvar
+
+i - insere no caracter atual
+a - insere no próximo caracter
+
+gg - para o inicio do texto
+G - para o fim do arquivo
+0 - para o incio da linha
+$ - para o fim da linha
+A - para o final da linha e modo insert
+w - para a próxima palavra
+b - para a palavra anterior
+e - para o fim da próxima palavra
+ge - para o fim da palavra anterior
+
+2w - duas palavras a frente
+3gg - vai para linha 3
+3G  - vai para linha 3
+
+:set wm=10
+configura o tamanho do warp
+
+:set tabstop=4
+configura o tamanho do tab
+
+:set nu
+mostra o número da linha
+
+l - um caracter
+aw - uma palavra
+ap - um parágrafo
+dd - repeat the operator to applay to a line
+
+d - delete
+dl - um caracter
+d0 - até o inicio da linha
+dw - até o final da palavra
+dd - toda a linha
+d$ ou D - cut até o final da linha
+daw - uma palavra 
+dap - um parágrafo
+
+c - change (go to insert mode) 
+
+y - yank into register
+
+P - cola antes do cursor
+p - cola depois do cursor
+"0p - cola the yank before the last d
+
+r - modifica um único caracter e volta pro modo comando
+R - modifica o texto até presionar esc
+s - apaga um caracter e vai para o modo insert
+x - apaga um caracter e continua no modo comand
+S - apaga a linha e vai pro modo insert
+
+gu - low case
+gU - upper case
+g~ - toggle case (use espace after ~)
+
+guaw - low case a word
+gUgU - upper case all the line
+gUU - upper case all the line
+gUap - uper case a paragraph
+~~ - modifica o case do caracter
+
+:syntax on
+colore o texto em função da sintaxe
+
+
+u - undo
+ctrl-r - redo
+
+. - repete a ultima entrada
+
+:help vimrc - visualiza arquivo de ajuda
+:version - obtem a versão do vim
+:echo $HOME - diretório utilizado pelo vim
+:echo expand('~')
+:echo $VIM
+:echo $VIMRUNTIME
+
+:reg
+access all currently defined registers
+
+"ay - copy o texto selecionado para o registro a
+"ap - paste o texto do registro a
+"+y - copy to clipboard
+"+x - cut from clipboard
+"+p - paste from clipboard
+"* - ?
+": - last comand
+
+:so %
+:so $MYVIMRC
+reload .vimrc
+so=source read the content of especified file and tread this as vim code
+% stands for current file name
+
+/ - find
+n - next find
+N - back find
+ggn - start file
+Gn - end file
+? - find backward
+* - find for current exactly word in normal mode
+# - find backword current exactly word in normal mode
+
+:ls - list all buffers
+:bn - go to next buffer
+:bd - delete atual buffer
+:b1 - go to buffer 1
+:2bd - delete o buffer 2
+:bd txt <tab> - show buffers that match the txt
+
+:r file - insert the file below the cursor
+:r !cmd - execute cmd and insert its standard output below the cursor
+
+slpit windows
+Ctrl+W, S for horizontal splitting
+Ctrl+W, V for vertical splitting
+Ctrl+W, Q to close one
+Ctrl+W, Ctrl+W to switch between windows
+Ctrl+W, J (xor K, H, L) to switch to adjacent window (intuitively up, down, left, right)
+:sp filename for a horizontal split
+:vsp filename or :vs filename for a vertical split
+
+:h key-notation
+key notation information
+
+vim -u NONE -N
+-u NONE - not to source your vimrc on startup
+-N - nocompatible mode (keep useful features enable)
+
+.
+repeat the last command (entry insert to leave isert)
+
+>>
+ident a line
+
+5>>
+ident five lines
+
+vjj>
+ident several lines
+
+>%
+ident all the curl, must be in the line of curl
+
+f+
+to the next + symbol in the line
+
+F+
+to the previous + symbol in the line
+
+;
+repeat the last search that the f command performed
+
+,
+repeat the last search that the f command performed backward
+
+:s/the/The
+substitution the by The in the current line
+
+:%s/the/The/g
+substitution the by The in all file
+
+&
+repeat the last substitution
+
+*
+search for the word under the cursor
+
+<C-a>
+plus one on numbers under cursor or after the cursor (same line)
+
+100<C-a>
+add 100 to the first number after the cursor
+
+<C-x>
+minus one on numbers under cursor or after the cursor (same line)
+
+operator+movement
+dw
+after type d, vim go to operator-pending mode
+
+<C-w>
+delete back one word
+
+<C-h>
+delete back on character (backspace)
+
+<C-u>
+delte back to start of line
+
+<C-o>
+insert normal mode
+
+<C-[>
+esc
+
+zz
+scrool the position of cursor to the middle of window
+
+<C-r>0
+paste the text that we just yanked - character by character
+
+<C-r><C-p>{register}
+paste without indentation - a junk of character
+
+<C-r>=
+input a aritmetic count in insert mode
+
+<C-v>065
+insert a characte in insert mode
+
+<C-v>u00bf
+insert a character in hexadecimal
+
+ga
+find a numeric code for a character in the cursor
+
+<C-k>{char}{char}
+insert a character represented by digraph
+
+:h digraphs-default
+:h digraphs-table
+:digraphs
+summarized digraphs
+
+R
+replace mode
+
+gR
+virtual replace mode - treats the tab character as though it consisted of spaces
+
+gr
+single-shot virual replace mode
+
+:help usr_41.txt
+help function-list
+earn vim script
+
+remap caps lock to ctrl?
+Tim Pope’s commentary.vim plugin
+Kana Natsuno’s textobj-entire plugin is a good example

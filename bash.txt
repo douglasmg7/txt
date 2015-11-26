@@ -1,0 +1,24 @@
+color=blue
+define var color
+
+echo $color
+echo ${color}
+print var color
+
+export color
+make color global
+
+unset color
+unmake color global
+
+echo "A data é `date`"
+`` execute the comand between back quote
+
+read tmp
+write user input do variable tmp
+
+printf "Oi\nBeleza\n"
+to use escape sequence
+
+ctrl-d
+end of file

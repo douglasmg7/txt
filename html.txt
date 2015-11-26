@@ -1,0 +1,20 @@
+flow layout
+	float
+	clear
+
+Jello layout
+	inside a div
+	fixed width
+	margin-auto
+
+fixed layout
+	position absolute
+		z-order
+	position fixed
+		z-order
+
+&nbsp;
+space
+
+&amp;
+$ - ampersand

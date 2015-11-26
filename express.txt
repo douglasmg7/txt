@@ -1,0 +1,28 @@
+obtem a versão do express disponível no repositório
+npm info express version
+
+tool that provides a simple way to get an application skeleton going
+sudo npm install -g express-generator
+
+express myApp --css stylus
+create an application skeleton using stylus and jade
+
+npm install
+install dependencies
+
+npm start
+start the server
+
+install dependencies from package (run inside directory that contains the package.json)
+sudo npm install
+
+define environment variable to put node in production - last as long as your current shell session does
+export NODE_ENV=production
+
+keep between sessions
+echo export NODE_ENV=production >> ~/.bash_profile
+
+continuar na pg 52
+
+
+

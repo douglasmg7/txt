@@ -1,0 +1,54 @@
+mongo
+start mongo shell
+looks for a database server listening on port 27017 on the localhost
+for diferente host and port use the options --port and --host
+
+db
+display the current db
+
+show dbs
+display the list of databases
+
+use mydb
+switch to a new database named mydb
+
+help
+method.help()
+get mongo help
+
+j = {l:3}
+db.testDb.insert(j)
+create a document j and insert into testDb collection
+
+db.testDb.save({a:1})
+saves a document in the collection
+
+db.testDb.update(query, {$set: data});
+updates items that match query in with data object values
+
+db.testDb.remove(query)
+removes all items that match query criteria
+
+printjson(document)
+prints the variable document
+
+show collections
+list the collections
+
+db.testDb.find()
+return a iterator
+
+db.testDb.find().limit(3)
+return a iterator with limit of 3
+
+db.testDb.findOne()
+return a document
+
+it
+to iterate over the next set of result
+
+.mongorc.js
+the mongo shell loads and parses the .mongorc.js file on startup so your function is available every time you start a session
+
+mongoimport --db blog --collection users --file ./db/users.json --jsonArray
+insert data into database from a json file

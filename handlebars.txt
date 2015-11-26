@@ -1,0 +1,15 @@
+handlebars
+is another template engine, it inherits from mustache
+
+<h1>{{title}}</h1>
+<p>{{body}}</p>
+
+with data:
+{
+	title: "Express.js Guide",
+	body: "The Comprehensive Book on Express.js"
+}
+
+renders:
+<h1>Express.js Guide</h1>
+<p>The Comprehensive Book on Express.js</p>

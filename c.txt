@@ -1,0 +1,38 @@
+#include <sdtio.h> - inclui uma biblioteca padrão
+
+#define PI 3.14159 - define uma constante
+
+sizeof()
+memória utilizada em bytes por uma variável
+
+strlen()
+comprimento da string sem \0 - #include <string.h>
+
+data object
+region of data storage that can be used to hold data
+
+lvalue
+expression that identifies a particular data object
+
+rvalue
+quantities that can be assigned to modifiable lvalues
+
+operand
+what operators operate on
+
+operator
+realiza alguma coisa
+
+expression
+consist of combination of operators and operands
+
+statment
+a complete instruction to the computer - indicated by a semicolon at the end
+
+ctype.h
+funções para trabalhar com caracter - pg 229
+
+echo $?
+obtem o retorno do programa
+
+continuar pg 240

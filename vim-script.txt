@@ -1,0 +1,92 @@
+:echom
+the messages que bi view late with :messages
+
+:messages
+view all the messages from echom
+
+# this is a comment
+
+:set number
+:set nonumber
+boolean options
+
+:set number!
+toggling boolean options
+
+:set number?
+cheking options
+
+:set numberwidth=10
+options with values
+
+:ser number numberwidth=10
+setting multiple options at once
+
+:help wrap
+view help command
+
+:map 
+:map <space> viw
+:map <c-d> dd
+:map <space> viw
+map one key to anothar key
+
+:unmap x
+unmap the key on normal mode
+
+:map :unmap - normal and visual mode
+:nmap :nunmap - normal mode
+:imap :iunmap - insert mode
+:vmap :vunmap - visual mode
+
+:imap <c-d> <esc>ddi
+remove a line with <c-d> in insert mode
+
+:nnoremap x d
+no recursive map, map to default mean of key instead of whatever is mapped
+
+:noremap - normal and visual mode
+:nnoremap - normal mode
+:inoremap - insert mode
+:vnoremap - visual mode
+always use this insted of *map
+
+-, H, L, <space>, <cr> and <bs>
+keys usaly free to map in normal mode
+
+:nnoremap -c dd
+can be use as prefix
+
+:let mapleader = "-"
+:nnoremap <leader>c dd
+make esay to change the prefix in all maps
+
+:let maplocalleader = "\\"
+like leader but take effect for certain types of files
+
+<cr>
+enter
+
+set localleader="+"
+used for buffer maping
+
+:setlocal nonumber
+define for especific buffer
+
+:autocmd BufWritePre *.html :normal gg=G
+evento - antes de salvar o arquivo
+pattern - para todos os arquivos .html
+comanto - :normal gg=G
+
+:help autocmd-events
+get the autocmd events available
+
+iabbrev adn and
+change adn to and
+
+augroup testgroup
+autocmd! #clean the testgroup to not repeat the same command
+autocmd FileType html nnoremap <buffer> <localleader>f Vatzf
+augroup END
+
+

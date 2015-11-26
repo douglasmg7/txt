@@ -1,0 +1,9 @@
+find . - lista todos os caminhos de todos arquivos do diretório corrente
+
+find / -name file_name - procura por file_name a partir do diretório raiz
+
+find /tmp /var/tmp . $HOME -name 2>/dev/null - procura em vários lugares e não imprime erro
+
+find / -type f -mtime -7 - procura por todos arquivos modificados até 7 dias
+
+find / -mmin -10 - até  minutos atrás

@@ -1,0 +1,17 @@
+
+Start playing a track	Enter
+Pause track	Space or p
+Play next track	n
+Play previous track	b
+Switch from playlist browsing to filesystem browsing (and vice versa)	tab
+Add one track to the playlist	a
+Remove track from playlist	d
+Add a folder recursively to playlist	A
+Clear playlist	C
+Increase volume 5%	. (dot)
+Decrease volume 5%	, (comma)
+Increase volume 1%	>
+Decrease volume 1%	<
+Change volume to 10%	meta + 1
+Change volume to 20%	meta + 2
+Quit player	q

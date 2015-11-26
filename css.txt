@@ -1,0 +1,11 @@
+selector₁ selector₂
+descendant
+
+selector₁ > selector₂
+child
+
+selector₁ + selector₂
+the adjacent/next‐sibling
+
+selector₁ ~ selector₂
+following sibling

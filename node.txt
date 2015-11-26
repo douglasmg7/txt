@@ -1,0 +1,108 @@
+verificar a versão
+node -v
+
+instalação ubuntu e mint
+sudo apt-get install npm
+sudo apt-get install nodejs
+sudo ln -s /usr/bin/nodejs /usr/bin/node
+
+install node
+wget http://nodejs.org/dist/v0.10.24/node-v0.10.24-linux-arm-pi.tar.gz
+tar -xvzf node-v0.10.24-linux-arm-pi.tar.gz
+
+nodejs file.js &
+iniciar processo em background
+
+ps -ef | grep node
+ps aux | grep node
+encontr o process em background
+
+kill 3091
+finalizar o processo a partir do id encontrado
+
+REPL - read eval print loop
+
+_ - obtem a ultima expressão
+
+npm install -g sax
+instala a última versão do pacote sax globalmente
+
+npm install sax
+instala a última versão do pacote sax localmente
+
+npm install sax@0.2.5
+instala a versão 0.2.5 do pcaote sax localmente
+
+npm uninstall sax
+desinstala o pacote sax
+
+npm update sax
+atualiza o pacote sax
+
+npm install
+instala todas as dependências listadas no package.json
+
+npm install --save socket.io
+install the module and automaticly add to dependecies package
+
+npm install --save-dev socket.io
+install the module and automaticly add to dependecies package and categorize
+this module as a development dependency(devDependecies)
+
+npm update
+atualiza todas as dependências listadas no package.json
+
+npm show express version
+show the last version of a module
+
+npm ls
+list installed packages
+
+npm init
+create package.json
+
+global, process, module.exports, exports end buffer
+
+existe apenas um event handle rodando por vez
+um even handle irá rodar até o seu final sem ser interrompido
+
+(function(){}())
+define uma função dentro de um escopo e chama ela ()
+
+em js, uma função não opera em ambiente isolado, mas sim lembrando o contexto onde foi declarada, o que permie a manipulação de qualquer variável presente neste contexto ou no contexto pai
+
+var http = require('http');
+load a core module
+
+var myModule = require('/home/my_module');
+load a non-core module
+
+ln -s /usr/bin/nodejs /usr/bin/node
+make a link to nodejs
+
+everything is local by default, in case we need access globals, there is a global object
+And when we need to export something, we shoud do so explicitly
+
+the main core modules of node.js
+http, util, querystring, url end fs
+
+querystring.stringify()
+serializes an object to a query string
+
+querystring.parse()
+deserializes a query string to an object
+
+npm install -g express-generator
+instal express cli (scaffolding)
+
+express -c styl
+create an app with stylus
+
+app.enable('trust proxy')
+app.set('trust proxy', true)
+the same config in express
+
+require.main === module
+when a file is run directly from node, require.main is set to its module
+
+continuar - pg 71 Professional Node

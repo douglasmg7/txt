@@ -1,0 +1,24 @@
+root
+saladino
+
+sudo service mysql status
+sudo service mysql stop
+sudo service mysql start
+sudo service mysql restart
+
+mysql -u root -p
+
+select version();
+
+quit
+
+show databases;
+
+create database test;
+
+use test;
+
+select database();
+ver base de dados sendo utilizada
+
+show tables;

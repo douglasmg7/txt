@@ -1,0 +1,16 @@
+Alt+Right/Alt+Left	move among windows
+Ctrl+F3/Ctrl+F4		move splits around
+Shift+Arrow			move between splits
+Shift+Alt+Arrow		resize splits
+
+byobu-quiet
+disable hard status line
+
+byobu-quiet --undo
+undo disable hard status line
+
+byobu-silent
+disable hard status line and caption line
+
+byobu-silent --undo
+undo disable hard status line and caption line

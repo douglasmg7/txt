@@ -1,0 +1,8 @@
+/etc/xdg/menus/xfce-applications.menu
+~/.config/menus
+menu configuration
+
+*.desktop
+/usr/share/applications
+~/.local/share/applications
+files for menu entry

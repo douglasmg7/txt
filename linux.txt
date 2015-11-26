@@ -1,0 +1,313 @@
+DPMS
+Debian Package Management System
+
+- apt
+A difference between APT and dpkg is that APT does not directly deal with
+.deb packages; instead, it manages software via the locations (repositories) specified in a configuration file. This file is the sources.list file.
+
+$ dpkg -l
+List all currently installed softwares.
+n
+$ dpkg -l bash
+Get basic information about the bash package.
+
+$ dpkg --print-avail
+Get detailed information about the bash package.
+
+$ dpkg -L bash
+$ dpkg-query -L bash
+Get list of files that comes with the bash package.
+
+$dpkg -x file.deb
+extract a .deb file
+
+$ sudo dpkg --install lynx_2.8.6-2ubuntu2_i386.deb
+$ sudo dpkg --remove lynx
+Install and remove a .deb package.
+
+$ apt-get update
+refresh apt-get's cache of package information using the repository
+/etc/apt/sources.list
+
+$ apt-get upgrade
+upgrade installed softwares.
+
+$ apt-get update && apt-get upgrade
+Best way to use the commands.
+
+$ apt-get dist-update
+in addition to performing the function of upgrade, also intelligently handles changing dependencies with new versios of packages
+$ sudo apt-get install lynx
+$ sudo apt-get remove lynx
+$ sudo apt-get install lynx-
+$ sudo apt-get --purge remove lynx	// remove configuration files too.
+Insall a package called lynx and take care of any dependency issues.
+
+$ apt-cache search slite3
+Pesquisar qual diferença do comando acima.
+
+apt-cache show torcs
+Hmmm... it seems interesting. But is this game not already installed on my computer? And what is the available version? Is it from Universe or main?
+
+apt-cache policy torcs
+Ok, so now, let's install it!
+
+apt-get install torcs
+
+#
+indica que está logado como usuário root
+
+sudo -l
+loga como usuário root
+
+date
+obtem a data do sistema
+
+/bin - Core operation system commands.
+/boot - kernel and files needed to load the kernel.
+/dev - Device entries for disks, printers, pseudo-terminals, etc.
+/etc - Critical startup and configuration files.
+/home - Default home directories for users.
+/lib - Libraries, shared libraries, and parts of the C compiler.
+/media - Mount points for filessystems on removable media.
+/mnt - Temporary mount points, mounts for removable media.
+/opt - Optional software packages (not consistently used).
+/proc - Information about all running process.
+/root - Home directory of the superuser.
+/sbin - Commands needed for minimal system operability.
+/tmp - Temporary files that may disappear between reboots.
+/usr - Hierarchy of secondary files and commands.
+/usr/bin - Most commands and executable files.
+/usr/include - Header files for compiling C programs.
+/usr/lib - Libraries; also, support files for standard programs.
+/usr/local - Software you write or install.
+/usr/share - Items that might be common to multiple systems.
+/var - System-specific data and configuration files.
+
+sudo date "APR 21 2013 21:47:00"
+Configurar a data
+
+df
+disk free - armazenamento do disco
+
+free
+mémoria ram livre
+
+cd -
+volta para o diretório anterior
+
+cd ~usuário
+vai para a pasta de um usuário espcífico
+
+file file_name
+lista o tipo do arquivo
+
+less file_name - visualizar arquivo
+/search_name - pesquisa
+n - próximo da pesquisa
+q - sair do less 
+
+dpkg --get-selections
+obtem os programas instalados
+
+apt-get autoremove
+remove software sem dependências
+
+whereis software_name
+procura por arquivos de configuração
+
+rm -rf /etc/apache2
+remove o diretório
+
+cp -u *.txt dir_destino
+copia todos os aqruivos que não existem ou são mais novos
+
+mv a.txt b.txt
+rename a file
+
+ln file link
+cria um hard link
+
+ln -s file item link
+cria um symbolic link
+
+cp /var/* .
+copia tudo para o diretório atual
+
+type cp
+mostra o tipo do comando, -a mostra todos em vez de mostrar somente o primeiro
+
+which ls
+mostra a localização do comando
+
+PATH=$PATH:"/var"
+adiciona uma caminho na variável de ambiente
+
+./
+You need the ./ bit to tell the shell where the executable is, since the current directory is unlikely to be in $PATH.
+
+tar -xzvf file_name.tar.gz
+-z gzip
+-f use archive
+-x extract
+-v verbose
+
+sudo date -s "11 APR 2014 07:34:00"
+configurar a data
+
+man ls
+mostra a documentação do comando ls
+
+ls -h ou ls --help
+mostra o help do comando ls
+
+apropos command
+man -k command
+pesquisa pelo comando no manpages names e nas descrições
+
+stat file
+mostra informações do arquivo
+
+ls
+-F mostra o tipo do arquivo / diretório * executavel, @ symbolic link, % whiteout, = socket, | FIFO
+-d fazer uma pesquisa por pattern * qualquer string, ? um único caracter, [] lista de caracter
+-t order by date
+-tr order by reverse date
+-a list hide files
+-l list in long format
+
+pwd
+print working directory
+
+printenv
+view ao enviroment variables
+
+printenv USER
+view the value of USER enviroment variable
+
+set
+view all enviroment variables, shell variables and functions variables
+
+echo $USER
+view the value of USER enviroment variable
+
+ls | grep java
+obtem todas as linha que contem java
+
+cat file_name
+imprimir um arquivo no console
+
+cat > a.txt
+bla bla <c-d><c-d>
+send the text to a.txt
+
+/usr/share/applications$
+launcher for applications
+
+turn off
+gnome-session-quit --power-off
+gnome-session-quit --reboot
+
+lsb_release -a
+linux version
+
+dpkg-reconfigure keyboard-configuration
+keyboard configuration
+
+ip a
+iwconfig
+find wireless interface
+
+iwlist scan
+scan for available networks
+
+ifdown wlan0
+shutdown interface wlan0
+
+ifup wlan0
+start interface wla0
+
+wpa_passphrase my-ssid password
+create password to use into /etc/network/interface
+
+/etc/network/interface expemple
+auto wlan0
+iface wlan0 inet dhcp
+	wpa-ssid Vivo WiFi
+	wpa-psk as38492039asfkjalskfdj348390adflakjd
+
+cat /proc/cpuinfo
+lscpu
+cpu info
+
+cat /proc/meminfo
+memory info
+
+top
+htop (improved top)
+gnome-system-monitor
+cpu and memory use
+
+ps aux
+list all processes
+
+pgrep firefox
+get pid of firefox process
+
+kill 1254
+send a term signal to the process
+this allows the program to perform clean-up operations and exit smoothly
+
+kill -KILL 4545
+send to kernel, which shuts down the process
+this is used to bypass programs that ignore the signals sent to them
+
+killall firefox
+send a term signal to all process instance
+
+lscpu - list cpu
+lsusb - list usbs
+lsscsi - list scsis
+lsblk - list block devices
+
+wc -l
+count number of lines
+
+who
+show who is logged
+
+chmod +x file
+make file executable
+
+sudo fdisk -l
+list partition table
+
+sudo umount -fl /dev/sdb1
+unmount
+
+sudo fdisk /dev/sdb
+partition the disk sdb
+
+mkfs.ext3 /dev/sdb1
+mkfs.vflat /dev/sdb1
+format linux partition using ext2fs on the new disk
+
+sudo eject /dev/sdb1
+eject the device
+The.Linux.Command.Line
+
+man -k '^print'
+find all point on man that begin with print
+
+ps aux | grep 'node'
+outputs all node.js programs running on a machine
+
+uname -p
+to know the architecture type of processor
+Classic Shell Script - 9
+
+touch file.txt
+create a new file
+
+dmesg
+hardware error messages
