@@ -2,7 +2,7 @@
 file containing version in the project root directory or any parent directory
 nvm use, nvm install, nvm exec, nvm run and nvm which will respect .nvmrc file when a version is not supplied
 
-.nvm ls-remote
+nvm ls-remote
 list node versions disponible
 
 nvm install 4.2.2
