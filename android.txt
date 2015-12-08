@@ -1,0 +1,6 @@
+apt-get install gphotofs
+mkdir ~/android
+# on android set Connect as Camera (PTP)
+gphotofs ~/android
+# before disconnect, close the file browser and
+fusermount -u ~/android

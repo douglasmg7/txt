@@ -1,0 +1,6 @@
+download inkscape source
+apt-get install gcc
+apt-get install intltool
+apt-get build-dep inkscape
+make
+make install

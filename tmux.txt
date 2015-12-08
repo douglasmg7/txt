@@ -10,3 +10,6 @@ Ctrl-b q Show pane numbers (used to switch between panes)
 Ctrl-b o Switch to the next pane
 Ctrl-b ? List all keybindings
 Ctrl-b w (List all windows / window numbers)
+
+ctrl-b ctr-arrow - resize panes
+ctrl-b arrow - change pane

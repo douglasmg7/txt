@@ -87,9 +87,6 @@ obtem a data do sistema
 sudo date "APR 21 2013 21:47:00"
 Configurar a data
 
-df
-disk free - armazenamento do disco
-
 free
 mémoria ram livre
 
@@ -276,9 +273,6 @@ count number of lines
 who
 show who is logged
 
-chmod +x file
-make file executable
-
 sudo fdisk -l
 list partition table
 
@@ -307,7 +301,63 @@ to know the architecture type of processor
 Classic Shell Script - 9
 
 touch file.txt
-create a new file
+change timestamps file, if not exist create the file
 
 dmesg
 hardware error messages
+
+chmod 777 file-name
+change permission
+
+chown owner file-name
+change file permission
+
+chgrp group file-name
+change file name group
+
+chmod +x file
+make file executable
+
+xdg-open file-name
+open a pdf
+
+echo "hey" >&2
+redirect stdout from echo command to stderr
+
+1>file-name
+>file-name
+redirect stdout to file-name
+
+1>>file-name
+>>file-name
+redirect and append stdout to file-name
+
+2>file-name
+redirect stderr to file-name
+
+&>file-name
+redirect borh stdout and stderr to file-name
+
+m>n
+m is a file descriptor, which defaults to 1, if not explicitly set
+n is a file name
+
+m>&n
+m is a file descriptor, which defaults to 1, if not explicitly set
+n is another file descriptior
+
+df
+disk free - reports the amount of space used and available on currently
+mounted filesystem
+
+stat file
+show file status like timestamp
+
+journalctl --unit=bash
+show error msg from porcess bash
+
+history
+list history of commands used
+
+!1234
+re-use history command 1234
