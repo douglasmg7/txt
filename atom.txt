@@ -1,3 +1,9 @@
 zen package
 	shift-f11
 	distraction free
+
+ctrl+shift+d
+duplicate line
+
+ctrl+d
+select a word
