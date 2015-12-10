@@ -15,3 +15,6 @@ Decrease volume 1%	<
 Change volume to 10%	meta + 1
 Change volume to 20%	meta + 2
 Quit player	q
+
+x - change mixer channels
+w - turn on/off soft channel
