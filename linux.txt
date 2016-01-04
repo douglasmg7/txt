@@ -35,7 +35,7 @@ upgrade installed softwares.
 $ apt-get update && apt-get upgrade
 Best way to use the commands.
 
-$ apt-get dist-update
+$ apt-get dist-upgrade
 in addition to performing the function of upgrade, also intelligently handles changing dependencies with new versios of packages
 $ sudo apt-get install lynx
 $ sudo apt-get remove lynx
