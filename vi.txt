@@ -14,6 +14,7 @@ w - para a próxima palavra
 b - para a palavra anterior
 e - para o fim da próxima palavra
 ge - para o fim da palavra anterior
+M - put cursor on middle of the text
 
 2w - duas palavras a frente
 3gg - vai para linha 3
@@ -238,6 +239,9 @@ virtual replace mode - treats the tab character as though it consisted of spaces
 
 gr
 single-shot virual replace mode
+
+COLORSCROLL
+view themes
 
 :help usr_41.txt
 help function-list

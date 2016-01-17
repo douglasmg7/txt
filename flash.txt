@@ -1,0 +1,4 @@
+dwnload Adobe Flash plugin for linux (tar.gz)
+cd /Downloads
+tar xzf install_flash_<your version>
+cp libflashplayer.so /usr/lib/mozilla/plugins/libflashplayer.so
