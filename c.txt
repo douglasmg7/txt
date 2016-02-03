@@ -35,4 +35,7 @@ funções para trabalhar com caracter - pg 229
 echo $?
 obtem o retorno do programa
 
+gcc -H -fsyntax-only address.c
+list head files in a c file
 continuar pg 240
+

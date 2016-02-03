@@ -1,4 +1,13 @@
-/usr/share/applications/jetbrains-idea-ce.desktop
+update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk1.7.0/bin/java" 1;
+update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/jdk1.7.0/bin/javac" 1;
+update-alternatives --install "/usr/bin/javaws" "javaws" "/usr/lib/jvm/jdk1.7.0/bin/javaws" 1;
+update-alternatives --install "/usr/bin/jcontrol" "jcontrol" "/usr/lib/jvm/jdk1.7.0/bin/jcontrol" 1;
+chmod a+x /usr/bin/java;
+chmod a+x /usr/bin/javac;
+chmod a+x /usr/bin/javaws;
+chmod a+x /usr/bin/jcontrol;
+chown -R root:root /usr/lib/jvm/jdk1.7.0;/share/applications/jetbrains-idea-ce.desktop
+								
 Exec=bash -i "/opt/ide/idea-IC-141.1532.4/bin/idea.sh" %f
 jetbrains launcher correction
 

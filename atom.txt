@@ -7,3 +7,21 @@ duplicate line
 
 ctrl+d
 select a word
+
+alt + shift + s
+see all available snippets for the file type currently open
+
+ctrl + m
+go to match bracket
+
+ctrl + alt + m
+select text inside bracket
+
+ctrl + p
+open a file
+
+ctrl + shift + p
+smart command
+
+ctrl + shift + l
+show / select grammar

@@ -1,0 +1,14 @@
+update-alternatives --config java
+configure alternatives
+
+update-alternatives --install /usr/bin/java java /opt/jdk/jdk1.8.0_66/bin/java 100
+create a alternative
+
+update-alternatives --remove java /usr/lib/jvm/java-6-ibm/jre/bin/java
+remove a alternative
+
+update-alternatives --set java /ust/lib/jvm/java-6-ibm/jre/bin/javakkj
+choose a options
+
+update-alternatives --query java
+show selected and options
