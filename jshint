@@ -1,0 +1,4 @@
+"jshintConfig": {
+  "esversion": "6"
+}
+config js version inside package.js

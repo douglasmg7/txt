@@ -39,3 +39,5 @@ gcc -H -fsyntax-only address.c
 list head files in a c file
 continuar pg 240
 
+ENOENT
+It's an abbreviation of Error NO ENTry, and can actually be used for more than files/directories.

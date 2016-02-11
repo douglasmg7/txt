@@ -1,0 +1,14 @@
+npm install -g coffee-script
+install coffeescript
+
+coffee -c test.coffee
+creates test.js
+
+coffee -cw test.coffee
+every time test.coffee is updated re-compile
+
+coffee -c src -o js
+compile all .coffee files in the src dir into the js dir
+
+coffe -cw src -o js
+every time a file is update re-compile

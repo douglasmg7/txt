@@ -1,0 +1,32 @@
+npm install --save-dev babel-cli
+install locally and include devDependecies on package.json
+
+uninstall --global babel-cli
+unistall if globally installed
+
+babel file (node_module/.bin)
+compile the file and outpud to stdout
+
+babel file -o file_
+compile the file and output to file_
+
+babel file -wo file_
+compile every time that you change a file
+
+babel src -d dst
+compile entire src directory and output it to the dst directory
+
+babel-node file
+compile and run file
+
+babel-node -e "class Test {}"
+evaluate code
+
+npm install --global babel-preset-es2015
+install plugin es2015
+
+.babelrc
+{
+  "presets": ["es2015"]
+}
+configure plugin es2015
