@@ -185,3 +185,6 @@ git checkout iss53
 git checkout master
 git merge iss53
 merge iss53 to the master
+
+git remote set-url origin git@github.com:douglasmg7/txt.git
+config origin
