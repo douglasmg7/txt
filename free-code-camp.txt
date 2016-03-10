@@ -1,0 +1,49 @@
+<a href="#">cat photos</a>
+dead link
+
+placeholder
+<input type="text" placeholder="cat photo URL">
+
+required
+<input type="text" placeholder="cat photo URL" required>
+
+!important
+force specific css take precedence
+.pink-text {
+  color: pink !important;
+}
+
+<span>
+use to add class, id etc...
+
+bootstrap
+container-fluid
+img-responsive
+text-center
+text-danger
+btn
+  btn-block
+  btn-primary
+  btn-info
+  btn-danger
+row
+  col-xs-4
+
+font awesome
+
+JQuery
+$("button").addClass("btn");
+$(".btn").removeClass("btn");
+$("#pri").css("color", "red");
+$("button").prop("disabled", true);
+$("#target4").html("<i>#target4</i>")
+$("#target4").remove();
+$("#target2").appendTo("#right-well");
+$("#target5").clone().appendTo("#left-well");
+$("#target1").parent().css("background-color", "red");
+$("#right-well").children().css("color", "orange");
+$(".target:nth-child(2)").addClass("animated bounce");
+$(".target:even").addClass("animated shake");
+
+
+<i class="fa fa-info-circle"></i>

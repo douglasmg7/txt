@@ -18,3 +18,25 @@ space
 
 &amp;
 $ - ampersand
+
+display: inline | block | none
+
+inline tags
+a, span, img
+
+block tags
+div, p, h1
+
+margin: 30px auto 0 auto;
+center entire block
+is fixed-width
+
+text-align: center;
+center children inside
+
+padding: 0 0 0 0;
+margin: 0 0 0 0;
+border: 1px solid #555555
+
+list-style-type: none;
+text-decoration: none;

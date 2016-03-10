@@ -1,0 +1,66 @@
+git help config
+get a help for comand config
+
+git init
+initiate git repository
+
+git add '*.txt'
+add all txt include directory
+
+git add -all
+add all new files
+
+git commit -m 'Comment of commit'
+commit adding a comment
+
+git remote add origin https://github.com/try-git/try_git.git
+create a remote repository with the name origin
+
+git push -u origin master
+put your commit on repository origin in to brach master
+-u remember the parameters, so next time we can simply run git push
+
+git pull origin master
+check changes and pull down any new changes
+
+git stash:
+Sometimes when you go to pull you may have changes you don't want to commit just yet. One option you have, other than commiting, is to stash the changes.
+Use the command 'git stash' to stash your changes, and 'git stash apply' to re-apply your changes after your pull.
+
+git diff HEAD
+diff of our most recent commit, which we can refer to using the HEAD pointer
+
+git diff --staged
+compare with staged files
+
+git reset octofamily/octodog.txt
+unstage files
+
+git checkout -- octocat.txt
+get rid of all the changes since the last commit
+-- It's simply promising the command line that there are no more options after the '--'. This way if you happen to have a branch named octocat.txt, it will still revert the file, instead of switching to the branch of the same name.
+
+git branch clean_up
+create a new branch
+
+git branch
+see all branchs
+
+git checkout clean_up
+switch to branch clean_up
+
+git rm '*.txt'
+remove the actual file from disk, but will also stage the removal of the files for us
+
+git rm -r folder_cats
+remove a directory
+
+if delete a file without using git rm
+git commit -a (git commit -am "Delete stuff")
+auto remove deleted files with commit
+
+git merge clean_up
+you must be in branch master to make the merge
+
+git branch -d clean_up
+delete a branch

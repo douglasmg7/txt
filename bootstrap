@@ -1,0 +1,126 @@
+<div class="container">
+</div>
+responsively wrap content to a fixed width and update margins based on the current windows size
+
+<div class="container-fluid">
+</div>
+stretched across the entire screen
+
+<div class="footer">
+</div>
+
+<div class="jumbotron">
+</div>
+A jumbotron indicates a big box for calling extra attention to some special content or information.
+A jumbotron is displayed as a grey box with rounded corners. It also enlarges the font sizes of the text inside it.
+
+<div class="thumbnail">
+  <img class="img-responsive center-block"     src="http://res.cloudinary.com/dy8wgq38q/image/upload/v1457144379/11-05-09_299_shydcw.jpg" alt="" />
+  <p class="caption text-center">Iain paddling your Stickback boat, designed by himself</p>
+</div>
+format a image
+
+
+<div class="row">
+  <div class="col-md-6"></div>
+  <div class="col-md-6"></div>
+</div>
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4"></div>
+  <div class="col-md-4"></div>
+</div>
+<div class="row">
+  <div class="col-md-8"></div>
+  <div class="col-md-3 col-md-offset-1"></div>
+</div>
+
+col-md-offset-0
+remove offset
+
+hidden-sm
+hidden the element for that size
+
+visible-sm
+only show the element for that size
+
+clearfix
+like clear left
+
+col-xs-x
+0+ phone
+
+col-sm-x
+768+ tablet
+
+col-md-x
+992px+ laptop/desktop
+
+col-lg-x
+1200px+ tv
+
+typography
+
+.lead
+not so big but stand out
+
+.text-center .text-justify .text-left .text-right .text-nowrap
+
+glyphicons
+<i class='glyphicon glyphicon-briefcase'></i>
+
+create a new css after bootstrap and put:
+.features .glyphicon { font-size: 32px; color: red }
+all icons under .features will be large
+
+.list-unstyled
+remove the bullets from <ul> and correct the margins
+
+.list-inline
+make <ul> be horizontal
+
+.well
+format all elements
+
+.well well-lg
+increase padding
+
+.well well-sm
+decrease padding
+
+.btn
+format buttons
+
+.btn-lg | .btn-xs | .btn-sm | .btn-md (default)
+make buttons size
+
+.btn-default | .btn-primary | .btn-sucess | .btn-info | .btn-danger | .btn-warning
+buttons styles
+
+.navbar-brand
+
+.nav
+.nav-pills | .nav-tabs | .navbar-nav
+<ul class ="nav navbar-nav navbar-right">
+
+make a complete bar
+<div class="container navbar navbar-default">
+<div class="container navbar navbar-inverse">
+
+<div class="navbar navbar-default navbar-static-top">
+  <div class="container">
+  </div>
+</div>
+
+navbar-static-top | navbar-static-bottom | navbar-fixed-top | navbar-fixed-bottom
+
+<div class='navbar navbar-default navbar-static-top'>
+  <div class='container'>
+        <a class='navbar-brand' href='index.html'>Blasting Off with Bootstrap</a>
+        <ul class='nav navbar-nav navbar-right'>
+          <li><a href='tickets.html'>Tickets</a></li>
+          <li><a href='stations.html'>Stations</a></li>
+          <li><a href='about.html'>About</a></li>
+        </ul>
+  </div>
+</div>
