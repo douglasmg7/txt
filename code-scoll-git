@@ -64,3 +64,51 @@ you must be in branch master to make the merge
 
 git branch -d clean_up
 delete a branch
+
+
+-- level 2 --
+git diff
+see difference from commit to unstaged
+
+git diff --staged
+see difference from commit to staged
+
+git -a -m "Modify readme"
+stage traked files and commit
+
+git reset --soft HEAD^
+undo last commit, put changes into staging
+
+git reset --hard HEAD^
+undo last commit and all changes
+
+git reset --hard HEAD^^
+undo last 2 commit and all changes
+
+git add todo.txt
+git commit --amend -m "Modify readme & add todo.txt."
+add to the last commit and update the message
+
+remote repository hosting
+Hosted
+  GitHub
+  BitBucket
+Self Managed
+  Gitosis
+  Gitorious
+
+git remote add origin https://github.com/douglasmg7/git-real.git
+adding a remote
+
+git remote -v
+show remote repositories
+
+git push -u origin master
+origin - remote repository name
+master - local branch to push
+
+git remote rm <name>
+remove remotes
+
+git checkout -- cats.html index.html
+discard changes to cats.html and index.html

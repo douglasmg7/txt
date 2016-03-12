@@ -124,3 +124,6 @@ navbar-static-top | navbar-static-bottom | navbar-fixed-top | navbar-fixed-botto
         </ul>
   </div>
 </div>
+
+<span class="sr-only">Toggle navigation</span>
+just show the text to readers

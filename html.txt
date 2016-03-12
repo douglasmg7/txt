@@ -40,3 +40,16 @@ border: 1px solid #555555
 
 list-style-type: none;
 text-decoration: none;
+
+display: block
+margin 1px auto 1px auto
+make <img> to be center
+
+background-color: #ffffff;
+background-image: url(images/img-a.jpg);
+background
+
+background: #ffffff url(images/img-a.jpg) top left no-repeat;
+
+<a href="#">About</a>
+won't take vistors to a new page
