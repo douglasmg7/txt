@@ -53,3 +53,54 @@ background: #ffffff url(images/img-a.jpg) top left no-repeat;
 
 <a href="#">About</a>
 won't take vistors to a new page
+
+float: left
+make inline element take the right side of block elements
+
+html, body, h1, h2, h3, p, ol, ul, li, a {
+	padding: 0;
+	border: 0;
+	margin: 0;
+	font-size: 100%;
+	font: inherit;
+}
+resetting default browser font style
+
+h2 {
+	font-size: 26px;
+	font-weight: bold | normal | lighter | bolder;
+	font-style: italic;
+	text-transform: uppercase;
+}
+change font style
+
+line-height: 16px;
+space between lines
+
+input types
+<input type="text">
+<input type="checkbox">
+<input type="radio">
+<input type="file">
+<input type="password">
+<input type="submit">
+
+associates the label to the input - each for/id pair has to be unique on the page
+<form>
+	<label for="recipe-name">Recipe Name</label>
+	<input type="text" id="recipe-name">
+	<input type="submit" value="Click to Submit">
+</form>
+
+<textarea></textarea>
+several lines
+
+label, input {
+	display: block
+}
+better to visualize
+
+input[type=submit] {
+	width: 300px;
+}
+attribute selector
