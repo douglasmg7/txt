@@ -1,0 +1,66 @@
+html5
+<link rel="stylesheet" href="file.css">
+<script src="file.cs"></script>
+
+<i>
+alternate voice or mood
+can be used to indicate a technical term, a phrase from another language, a thought, or a ship name, etc.
+
+<b>
+stylistically offset
+
+<em>
+stress emphasis (word to be paid atention)
+
+<strong>
+strong importance (a date for example)
+
+<section>
+for related content, if not use div
+
+<header>
+<footer>
+<aside>
+<nav>
+<article>
+<main>
+
+<figure><img><figcaption></figcaption></figure>
+
+<time datetime="2016-03-16">16 de fevereiro - 2016</time>
+
+<input>
+if browser not works with html5. input will be type="text"
+
+<input type="search" />
+<input type="email" />
+<input type="url" />
+<input type="date" />
+<input type="tel" />
+<input type="number" />
+<input type="range" />
+<input type="month" />
+<input type="week" />
+<input type="time" />
+<input type="datetime-local" />
+<input type="color" />
+
+<input type="text" list="browser" />
+<datalist id="browser">
+  <option value="Chrome">
+  <option value="Firefox">
+  <option value="Safari">
+  <option value="Opera">
+</datalist>
+
+<input type="text" placeholder="Entry your e-mail" />
+better than value attribute
+
+<input type="text" autofocus />
+get the focus when the page load
+
+<input type="text" required />
+force use fill the input before submit
+
+<input type="text" pattern="[0-9]{3}" />
+regular expression
