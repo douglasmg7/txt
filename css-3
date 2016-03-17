@@ -1,0 +1,7 @@
+border-radius: 4px 15px 12px 10px;
+
+box-shadow: <inset> <offset-x> <offset-y> <blur-radius> <spread-radius> <color>
+
+text-shadow: <offset-x> <offset-y> <blur-radius> <color>
+
+box-sizing: padding-box | border-box

@@ -1,3 +1,6 @@
+npm install -g bower
+install bower global
+
 bower install
 install the packages using the bower.json
 
