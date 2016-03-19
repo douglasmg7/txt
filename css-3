@@ -5,3 +5,44 @@ box-shadow: <inset> <offset-x> <offset-y> <blur-radius> <spread-radius> <color>
 text-shadow: <offset-x> <offset-y> <blur-radius> <color>
 
 box-sizing: padding-box | border-box
+
+{
+  background-mage: url(imga), url(imgb);
+  background-position: top left, center right;
+  background-repeat: no-repeat, no-repeat;
+}
+{
+  background:
+    url(imga) top left no-repeat,
+    url(imgb) center right no-repeat
+}
+
+background: linear-gradient(to bottom, red, yellow)
+background: radial-gradient(aqua, blue)
+background: radial-gradient(<shape> <size> at <position>, <color-stop>s)
+
+opacity: .35;
+
+@font-face {
+  font-familiy: 'OpenSansRegular';
+  src: url('OpenSansRegular-webfont.eot');
+  font-style: normal;
+  font-weight: normal;
+}
+h1 {
+  font-family: 'OpenSansRegular', Helvetica, Arial, sans-serif;
+}
+
+transform: translate(20px, 30px);
+transform: translateX(20px);
+transform: rotate(45deg);
+transform: scale(1.5);
+transform: scaleX(3);
+transform: skewX(-25deg)
+
+{
+  background-color: white;
+  transition: background-color: black 0.2s ease-in-out
+}
+transition: <property> <duration> <timing-function> <delay>
+<timing-function> ease | ease-in | ease-in-out | linear
