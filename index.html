@@ -4,40 +4,33 @@
     <meta charset="utf-8">
     <title>Teste</title>
     <style type="text/css">
-      body {
-        background-color: black;
-        transition: background-color white 2s linear 1s;
+      .box {
+        display: inline;
+        background: red;
+        width: 100px;
+        height: 100px;
+        color: white;
+        float: left;
+        margin: 5px;
       }
-      h1 {
-        color: black;
-        text-align: center;
-        margin-top: 100px;
-        font-size: 82px;
-        text-shadow: 8px 5px 5px #777;
-        opacity: .70;
+      #two {
+        position: absolute;;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
       }
-      button {
-        display: block;
-        margin: auto;
-        width: 200px;
-        font-size: 40px;
-        border-radius: 20px;
-        box-shadow: 5px 5px 0px 0px #337;
-        border: none;
-        /*transform: scale(1.5, 5);*/
-        /*transform: translate(50px, 20px);
-        transform: rotate(30deg);*/
-        transform: skewX(-25deg);
+      #one {
+        z-index: -3;
       }
-
-
-
     </style>
   </head>
   <body>
-    <h1>
-      Este é um teste.
-    </h1>
-    <button type="button" name="button">Teste</button>
+    <section>
+      <div class="box" id="one">One</div>
+      <div class="box" id="two">Two</div>
+      <div class="box" id="three">Three</div>
+      <div class="box" id="four">Four</div>
+    </section>
+
   </body>
 </html>

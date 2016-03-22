@@ -46,3 +46,29 @@ transform: skewX(-25deg)
 }
 transition: <property> <duration> <timing-function> <delay>
 <timing-function> ease | ease-in | ease-in-out | linear
+
+float: left | right | none
+removes elements from the document flow and moves them to a specified edge
+
+clear: right | left | both
+make the next item not participate from the float element
+if floated item is taller than non-floated content
+if all children are floating
+
+priority
+p {color: #fff !important;}
+<h1 style="color: #fff;">Mogul</h1>
+#header {color :#fff;}
+.intro {color: #fff;}
+p {color: #fff;}
+
+overflow: visible | hidden | scroll | auto | hidden
+overflow-x:
+study more
+
+position: static | relative | absolute | fixed
+{
+  position: relative;
+  top: -0.5em;
+}
+study more

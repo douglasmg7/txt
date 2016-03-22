@@ -1,3 +1,9 @@
 alert();
 confirm();
 prompt();
+
+[].map();
+
+[].pop();
+[].push();
+[].shift();

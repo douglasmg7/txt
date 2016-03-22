@@ -1,0 +1,14 @@
+'.destination li'
+descendant selector
+
+'.destination > li'
+direct child selector
+
+'.destiantion, .orgin'
+multiple selectors
+
+'.destiantion li:first'
+'.destiantion li:last'
+'.destiantion li:odd'
+'.destiantion li:even'
+pseudo selector
