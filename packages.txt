@@ -39,3 +39,4 @@ handlebars
 
 browserify
 
+coffee-script -g

@@ -12,3 +12,24 @@ multiple selectors
 '.destiantion li:odd'
 '.destiantion li:even'
 pseudo selector
+
+$('#destination').find('li');
+	selection	   traversal
+traversing - is faster
+
+$('li:first');
+$('li').first();
+
+$('li').first().next();
+.prev();
+.parent();
+
+$('.teste').children();
+unlike find(), only select direct children
+
+var price = $('<p>From $399.99</p>');
+
+.before()
+.after()
+.prepend() - add to the first child
+.append() - add to the last child

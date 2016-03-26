@@ -26,6 +26,7 @@ _ - obtem a ultima expressão
 
 npm install -g sax
 instala a última versão do pacote sax globalmente
+you can't require global module, so you need to install local too, if you wante require it
 
 npm install sax
 instala a última versão do pacote sax localmente

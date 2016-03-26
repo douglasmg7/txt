@@ -1,0 +1,11 @@
+npm search request
+search for a module in npm repository
+
+'connect': '1.8.7'
+1 - major version - will change api
+8 - minor version - probably not change api
+7 - patch version - doesn't change api
+
+'connect': '~1'   - >=1.0.0 < 2.0.0 - dangerous
+'connect': '~1.8' - >=1.8.0 < 1.9.0 - api could change
+'connect': '~1.8.7' - >=1.8.7 < 1.9.0 - considered safe

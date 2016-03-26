@@ -1,4 +1,4 @@
-DPMS
+/DPMS
 Debian Package Management System
 
 - apt
@@ -361,3 +361,6 @@ list history of commands used
 
 !1234
 re-use history command 1234
+
+du -sh
+size content directory

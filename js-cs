@@ -7,3 +7,9 @@ prompt();
 [].pop();
 [].push();
 [].shift();
+
+for (key in object) {
+}
+
+String.prototype.newMethod = func
+create a new methods for all strings

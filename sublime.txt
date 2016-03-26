@@ -1,17 +1,38 @@
-ctrl+enter
+install 
+	Package Control
+	SideBarEnhancements
+	BracketHighlighter
+	Emment
+	SublimeLinter
+	npm install -g jshint
+	SublimeLinter-jshint
+	npm install -g csslint
+	SublimeLinter-csslint
+
+Control Package Remove
+remove installed packages
+
+ctrl + k + b
+show/hide sidebar
+
+ctrl + enter
 insert line after
 
-ctrl+enter
+ctrl + shift + enter
 insert line before
 
-ctrl+x
+ctrl + x
 remove a line
+remove selection
 
 ctrl+l
 selecting an entire line
 
 ctrl+p
-going to a file or line (:3)
+go to file
+
+ctrl+g
+go to line
 
 ctrl+shift+j:
 selecting code that is similarly indented
@@ -20,10 +41,10 @@ ctrl+shift+a
 selecting everything inside an html tag
 
 ctrl+d
-selecting a word
+selecting a word | multiple selection
 
-ctrl+g
-going to a line
+ctrl+k+d
+multiple selection - skip the current instance
 
 ctrl+m
 jumping to ( or ) when inside
@@ -31,7 +52,68 @@ jumping to ( or ) when inside
 ctrl+shift+m
 selecting the text inside ()
 
-ctrl+p
-go to anything
+ctrl+shift+d
+duplicate line
+
+ctrl+shift+v
+paste and indent
+
+edit->line->reindent
+correct the identation
+
+ctrl+k, ctrl+backspace
+delete to beginning
+
+ctrl+k, ctrl+k
+delete to end
+
+ctrl + backspace
+delete word forward
+
+ctrl + delete
+delete word backward
+
+ctrl + u (do not working)
+soft undo
+
+ctrl + shift + u (do not working)
+soft redo
+
+ctrl + t
+transpose a letter
+
+ctrl + k, ctrl + u
+upper case
+
+ctrl + k, ctrl + l
+lower case
+
+ctrl + j
+join lines
+
+ctrl + shift + up
+swap line up
+
+ctrl + shift + dwon
+swap line down
+
+alt + q
+wrap paragraphs
+
+ctrl + shift + /
+toggle block comment
 
 
+
+
+
+
+d
+d adsf adsf
+asdf asdfasdf 
+basdfas
+frfr
+ytyty
+era um veza
+safas ase a
+asdf adsf asdffr

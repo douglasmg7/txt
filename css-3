@@ -72,3 +72,40 @@ position: static | relative | absolute | fixed
   top: -0.5em;
 }
 study more
+
+dry - don't repeat yourself
+
+display: inline-block
+same flow as inline element but behave as a block element
+
+margin: 0 auto;
+center a block element
+
+text-align: center;
+center a inline element;
+
+collapsing margins will not occur when one or more block element has:
+padding or border
+relative or absolute position
+a float left or right
+
+content image should be marked up as inline images
+layout elements should be defined as background images
+
+overflow crop method - image crop
+li {
+  height: 300px;
+  width: 400px;
+  overflow: hidden;
+}
+
+overflow crop method - set just height
+.store li {
+  height: 150px;
+  width: 150px;
+  overflow: hidden;
+}
+.store li img {
+  height: 150px;
+    width: auto;
+}
