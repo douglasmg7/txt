@@ -364,3 +364,6 @@ re-use history command 1234
 
 du -sh
 size content directory
+
+ctrl + d, ctrl + d
+insert EOF in command line

@@ -13,15 +13,16 @@ multiple selectors
 '.destiantion li:even'
 pseudo selector
 
-$('#destination').find('li');
+$('#destination').find('li'); = $('#destination li')
 	selection	   traversal
 traversing - is faster
 
 $('li:first');
 $('li').first();
 
-$('li').first().next();
-.prev();
+$('li').first()
+.next();	// for siblings elements
+.prev();	// for siblings elements
 .parent();
 
 $('.teste').children();
@@ -33,3 +34,21 @@ var price = $('<p>From $399.99</p>');
 .after()
 .prepend() - add to the first child
 .append() - add to the last child
+
+filtring
+.eq(index) - array index of jquery objects returned instead of []
+.filter(.c1)
+.first() = eq(0)
+.last() = eq(-1)
+
+<li class="usa tour" data-discount="299">
+var temp = $('.tour').data('discount');
+get attribute data
+
+$('.tour').on('click', 'button', function() {});
+selector inside a event
+
+$('#tour').find('img').slideDown();
+img {display: none}
+
+$('.photos').slideToggle();

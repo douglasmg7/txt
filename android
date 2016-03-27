@@ -4,3 +4,6 @@ mkdir ~/mobile
 gphotofs ~/mobile
 # before disconnect, close the file browser and
 fusermount -u ~/mobile
+
+apt-get install lib32z1 lib32z1-dev lib32stdc++6 zliblg lib64z1
+for gradle errors
