@@ -13,3 +13,15 @@ for (key in object) {
 
 String.prototype.newMethod = func
 create a new methods for all strings
+
+var magicShoe = Object.create(shoe);
+magicShoes inherit all properties from shoe (shoe.prototype)
+Object.isPrototype(magicShoe); - true
+
+function Shoe(size, color) {
+	this.size = size;
+	this.color = color;
+};
+Shoe.prototype = {
+	putOn: function() {alert('Shoes on!, ' + this.size);}
+};

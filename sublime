@@ -8,6 +8,7 @@ install
 	SublimeLinter-jshint
 	npm install -g csslint
 	SublimeLinter-csslint
+	Clickable URLs
 
 Control Package Remove
 remove installed packages
@@ -25,14 +26,20 @@ ctrl + x
 remove a line
 remove selection
 
-ctrl+l
+ctrl + l
 selecting an entire line
 
-ctrl+p
-go to file
+ctrl + p
+goto file
 
-ctrl+g
-go to line
+ctrl + g
+goto line
+
+ctrl + r
+goto symbol
+
+ctrl + ;
+goto word
 
 ctrl+shift+j:
 selecting code that is similarly indented
@@ -103,8 +110,8 @@ wrap paragraphs
 ctrl + shift + /
 toggle block comment
 
-
-
+lorem tab
+insert lorem inpsum
 
 
 

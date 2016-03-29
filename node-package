@@ -7,7 +7,13 @@ superagent
 small progressive client-side HTTP request library
 
 request
-simplified HTTP request client 
+simplified HTTP request client
+
+url
+url resolution and parse
+
+ejs
+embedded javascript templates
 
 socket.io
 

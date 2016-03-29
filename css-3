@@ -1,3 +1,15 @@
+selector₁ selector₂
+descendant
+
+selector₁ > selector₂
+child
+
+selector₁ + selector₂
+the adjacent/next‐sibling
+
+selector₁ ~ selector₂
+following sibling
+
 border-radius: 4px 15px 12px 10px;
 
 box-shadow: <inset> <offset-x> <offset-y> <blur-radius> <spread-radius> <color>
@@ -109,3 +121,48 @@ overflow crop method - set just height
   height: 150px;
     width: auto;
 }
+
+add descriptive text to a image-replaced element
+<a href='#' class='logo'>Seven nodes</a>
+.logo {
+  background: url(logo.png);
+  display: block;
+  height: 100px;
+  width: 200px;
+  text-indent: -9999px;
+}
+
+sprites - one file with all pictures
+<a href='#' class='logo'>Seven nodes</a>
+.logo {
+  background: url(logo.png);
+  display: block;
+  height: 100px;
+  width: 200px;
+  text-indent: -9999px;
+}
+.logo:hover, .logo:focus {
+  background-position: 0 -100px; 
+}
+
+pseudo classes
+:first-child
+:last-child
+:only-child
+:nth-child(even)
+:nth-child(odd)
+:nth-child(an+b) - intervals of a, starting with element b
+:nth-child(2n) - even
+:nth-child(2n + 1) - odd
+:hover
+:focus
+:active
+:visited
+
+pseudo elements
+p:last-child:after {
+  content: 'asdf';
+} - just after is pseudo element
+:before
+:first-letter
+:first-line
