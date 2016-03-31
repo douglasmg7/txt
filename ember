@@ -1,0 +1,23 @@
+npm install -g ember-cli
+install ember
+
+ember new woodland
+create project woodland
+
+cd woodland && ember serve
+start the server
+
+app/templates/application.hbs
+main templatem who insert other into {{outlet}}
+
+app/teplates/index.hbs
+loat into {{outlet}}
+
+.hbs
+handblars files
+
+{{}}
+handlebars or mustache
+
+app/router.js
+router

@@ -25,3 +25,33 @@ function Shoe(size, color) {
 Shoe.prototype = {
 	putOn: function() {alert('Shoes on!, ' + this.size);}
 };
+
+Object.valueOf()
+returns whatever primitive type associated with the object
+usually override in object types
+
+cocker.constructor;
+return the function constructor
+
+cocker.constructor.prototype; =~ cocker.__proto__;
+we get the prototype
+
+cocker.__proto__;
+get inherited object
+
+isA && isB ? (a=1, b=2) : 
+		 (c=3, d=4);
+ternary operator
+
+var armory = {addSword: function(sword) {
+  this.swords = this.swords ? this.swords : [];
+  this.swords.push(sword);
+}};
+
+var armory = {addSword: function(sword) {
+  this.swords = this.swords || [];
+  this.swords.push(sword);
+}};
+
+JSON.stringfy(asdf);
+JSON.parse();

@@ -1,0 +1,9 @@
+npm install redis --save
+install redis
+
+var redis = require('redis');
+var client = redis.createClient();
+client.set('message1', 'hello, yes this is dog');
+client.get('message1', function(err, reply){
+	console.log(reply);
+});

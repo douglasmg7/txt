@@ -303,6 +303,9 @@ Classic Shell Script - 9
 touch file.txt
 change timestamps file, if not exist create the file
 
+touch text-{a,b,c}.txt
+create files: text-a.txt, text-b.txt, text-c.txt
+
 dmesg
 hardware error messages
 

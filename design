@@ -1,0 +1,32 @@
+content is king
+
+design reflect the mean of content
+
+attributes that influence the design
+audience - age, race, gender, cultural niche
+tone - casual, formal, friendly, sarcastic
+purpose - informational, conversions
+
+typography
+	headline text (300% of body copy)
+	b-head / sub-head (150% of body copy)
+	navigation text (100% of body copy)
+	body copy - lorem ipsum - 16px (sugestion)
+	byline text (75% of body copy)
+
+typography is verbal & visual
+
+serif
+sans-serif
+script (comic sans) - mimic caligraphy
+
+leading
+amount of space between lines of text
+(120-150% of body copy)
+line-height: 1.5;
+
+line-width
+50-70 characters per line (cpl) is ideal
+
+max-width
+a higher max-width allow for more characters per line
