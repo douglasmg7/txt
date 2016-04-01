@@ -1,0 +1,25 @@
+cta
+call to action
+
+transition <property> <duration>;
+transition <property (all)> <duration> <timing-function (easy)> <delay (0)>;
+transition .4s;
+
+.btn {
+	background-color: #00A0D6;
+	color: #FFF;
+	transition: background-color 0.4s, color 0.4s;
+}
+.btn:hover {
+	background-color:#007DA7;
+	color: #E3E3E3;
+}
+
+prefix vendor
+-webkit-transition .4s;		chrome / safari
+-moz-transition .4s;		mozzila
+-ms-transition .4s;			ie
+-o-transition .4s;			opera
+
+caniuse.com
+to know if need use prefix vendor

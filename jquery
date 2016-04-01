@@ -52,3 +52,9 @@ $('#tour').find('img').slideDown();
 img {display: none}
 
 $('.photos').slideToggle();
+
+var price = +$(this).data('price');
+use + to convert the string to a number
+
+va quantity = +=(this).val();
+get the value from input tag

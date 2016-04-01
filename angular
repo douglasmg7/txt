@@ -1,0 +1,44 @@
+directive
+mark on html tag that tell angular to run or reference some js code
+
+var app = angular.module('store', []);		// app.js
+create a angular module ('name', dependencies)
+
+<html ng-app='store'>
+create an app, run the store module when the pages loads
+
+{{1+2}}
+angular expression
+
+controllers
+where we define our app's behavior by defining functions and values
+
+app.controller('storeController', function(){
+	this.product = gem;
+});
+var gem = {name: Dodecahedrom, price: 2.95, canBy=true};
+<div ng-controller='storeController as store'>
+	<h1>{{store.product.name}}</h1>
+	<h2>{{store.product.price | price}}</h2> </div>
+	<button ng-show=store.product.canBy></button>
+create a controller
+
+<p ng-show='store.product.canBy'>'test'</p>
+<p ng-hide='store.product.canBy'>'test'</p>
+
+<div ng-repeat='product in store.products'>
+
+filters
+{{product.price | currency}}
+{{'12344343234343' | date:'mm/dd/yyyy @h:mm:ss'}}
+{{product.name | lowercase}}
+{{'my description' | limitTo:8}}
+<li ng-repeat='product in store.products | limitTo:3'>
+<li ng-repeat='product in store.products | orderBy:"-price"'> // descending order
+<li ng-repeat='product in store.products | orderBy:"price"'> // ascending order
+
+<img ng-src='{{product.image[0].full}}''>
+
+ng-init='tab =1'
+ng-click='tab=2'
+ng-class='{active:tab===2}'

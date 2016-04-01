@@ -30,3 +30,58 @@ line-width
 
 max-width
 a higher max-width allow for more characters per line
+
+subtractive color (cmyk)
+can touch (apple)
+
+additive color (rgb)
+can't touch (ray)
+
+human process color in hsl (rgb is hard)
+hue, saturation and lightness
+
+hue (0-360)
+0-red, 120-green, 360-blue
+
+saturation (0-100)
+0-gray, 100-most-vibrant-color
+
+lightness
+0-black, 50-most-vibrant-color, 100-white
+
+most pure form of red
+hsl(0, 100, 50);
+
+color scheme
+4-5 colors
+first choose a base color
+
+red
+heat, passion, excitement
+
+orange
+warmth, vitality
+
+yellow
+optimist, creative
+
+green
+serenity, health
+
+blue
+security, truth, stability
+
+purple
+spirituality, intelligence, wealth
+
+pink
+youthful intensity
+
+brown
+durability, class
+
+black
+power, drama
+
+white
+simplicity, cleanliness
