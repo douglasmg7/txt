@@ -1,9 +1,9 @@
 cta
 call to action
 
-transition <property> <duration>;
-transition <property (all)> <duration> <timing-function (easy)> <delay (0)>;
-transition .4s;
+transition: <property> <duration>;
+transition: <property (all)> <duration> <timing-function (easy)> <delay (0)>;
+transition: .4s;
 
 .btn {
 	background-color: #00A0D6;
@@ -23,3 +23,37 @@ prefix vendor
 
 caniuse.com
 to know if need use prefix vendor
+
+transform: rotate(360deg);
+transform: rotate(1turn);
+
+.modal-close {
+	transition: transform 4s;
+}
+.modal-close:hover {
+	transform: rotate(360deg);
+}
+
+tranform: scale(2);
+tranform: scale(4, 2); - (x, y)
+tranform: scaleX(4);
+
+transform-origin: center left;
+anchor point to tranform
+
+transform: translateX(3px);
+
+transform: scale(0.8), translate(-40px);
+
+@keyframes swing {
+	0% {tranform: rotate(0deg);}
+	100% {tranform: rotate(-10deg);}
+}
+#left-arm {
+	animation: swing 2s 0s infinite ease;
+}
+
+#left-arm {
+	animation: swing 2s 0s forwards;
+}
+keep at the final step

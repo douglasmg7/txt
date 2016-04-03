@@ -42,3 +42,22 @@ filters
 ng-init='tab =1'
 ng-click='tab=2'
 ng-class='{active:tab===2}'
+
+ng-model='review.stars' -> {{review.stars}}
+
+ng-submit='reviewCtrl.addReview(product)';
+
+<form novalidate></>
+turn off browser validate
+
+<input type='email required'/>
+mark required fields
+
+{{reviewForm.$valid}}
+reviewForm - form name attribute
+valid - form property made by angular
+
+class='ng-pristine ng-invalid'
+class='ng-dirty ng-invalid'
+class='ng-dirty ng-valid'
+angular add class to form, depending on his state

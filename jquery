@@ -58,3 +58,20 @@ use + to convert the string to a number
 
 va quantity = +=(this).val();
 get the value from input tag
+
+$('.vaction').on('click', '.expand', function(event){
+	event.preventDefault();
+	$(this).closest('.vacation')
+		   .find('.comments')
+		   .fadeToggle();
+});
+avoid screem change position because href=#- preventDefault()
+
+$('.vaction').on('click', '.expand', function(event){
+	event.stopPropagation();
+	$(this).closest('.vacation')
+		   .find('.comments')
+		   .fadeToggle();
+});
+avoid propagation of event from container objects
+

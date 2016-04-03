@@ -166,3 +166,6 @@ p:last-child:after {
 :before
 :first-letter
 :first-line
+
+.form-input + .form-label
+only select the first label after each .form-input
