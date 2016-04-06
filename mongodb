@@ -52,3 +52,77 @@ the mongo shell loads and parses the .mongorc.js file on startup so your functio
 
 mongoimport --db blog --collection users --file ./db/users.json --jsonArray
 insert data into database from a json file
+
+db.potions.remove({'name': 'Love'});
+remove all documents that match
+
+db.potions.update({'name': 'Love'}, {'$set': {'price': 3.99}});
+update just the first match
+
+db.potions.update({'name': 'Love'}, {'price': 3.99});
+will have just the price property and id
+
+db.potions.update({'name': 'Love'}, {'$set': {'price': 3.99}}, {'multi', true});
+update all match documents
+
+
+db.potions.update({'portion': 'Shrinking'}, {'$inc': {'count': 2}});
+update count += 2
+
+db.potions.update({'portion': 'Shrinking'}, {'$inc': {'count': 1}}, {'upsert', true});
+create documento if not found
+
+db.potions.update(
+	{},
+	{'$unset': {'color': ''}},
+	{'multi': true}
+)
+remove color field from all documents
+
+db.potions.update(
+	{},
+	{'$rename': {'score': 'grade'}},
+	{'multi': true}
+)
+rename field score to grade on all documents
+
+db.potions.update(
+	{'name', 'Shrinking'},
+	{'$set': {'ingredients.1': 42}},
+)
+update the second value of array ingredients
+
+db.potions.update(
+	{'ingredients', 'secret'},
+	{'$set': {'ingredients.$': 42}},
+	{'multi': true}
+)
+$ define the element secret on array ingredients
+
+db.potions.update(
+	{'name', 'Shrinking'},
+	{'$pop': {'categories': 1}},
+remove the last element from array 'categories' (-1 for the first)
+
+db.potions.update(
+	{'name', 'Shrinking'},
+	{'$push': {'categories': 'budget'}},
+add budget to the end of array categories
+
+db.potions.update(
+	{'name', 'Shrinking'},
+	{'$addToSet': {'categories': 'budget'}},
+only add budget to the end of array categories if not exist yet
+
+db.potions.update(
+	{'name', 'Shrinking'},
+	{'$pull': {'categories': 'budget'}},
+remove any budget instance from array categories
+
+$gt, $gte, $ne, $lt, $lte
+comparison query operators
+
+db.potions.find({'price': {'$gt':10, '$lt': 20}});
+
+db.portions.find({'sizes': {'$elemMatch': {'$gt':8, '$lt': 16}}});
+sizes = [5, 8 11]

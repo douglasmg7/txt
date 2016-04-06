@@ -61,3 +61,44 @@ class='ng-pristine ng-invalid'
 class='ng-dirty ng-invalid'
 class='ng-dirty ng-valid'
 angular add class to form, depending on his state
+
+ng-include='"file.html"'
+insert a html inside
+some over head, include using ajax
+
+<product-title></product-title>
+app.directive('productTitle', function(){
+	return {
+		restrict: 'E', // E for element
+		templateUrl: 'product-title.html'
+	};
+});
+define an element directive
+
+<product-title></product-title>
+element directive
+
+<product-title></product-title>
+app.directive('productTitle', function(){
+	return {
+		restrict: 'A', // A for attribute
+		templateUrl: 'product-title.html'
+	};
+});
+define an attribute directive
+
+<h3 product-title></h3>
+attribute directive
+
+<product-title></product-title>
+app.directive('productTitle', function(){
+	return {
+		restrict: 'E', // E for element
+		templateUrl: 'product-title.html',
+		controller: function() {
+			...
+		},
+		controllerAs: 'panels'
+	};
+});
+define an element directive with controller

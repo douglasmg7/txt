@@ -75,3 +75,47 @@ $('.vaction').on('click', '.expand', function(event){
 });
 avoid propagation of event from container objects
 
+$(this).css('background-color', 'red')
+	   .css('border-color', '1px solid blue');
+$(this).css({'background-color': 'red',
+			 'border-color': '1px solid #333'})	   
+
+$(this).addClass('highlighted');
+$(this).removeClass('highlighted');
+$(this).toggleClass('highlighted');
+
+$(this).animate({'top': '-10px'});
+$(this).animate({'top': '-10px'}, 'fast');
+$(this).animate({'top': '-10px'}, 300); - ms
+
+$(this).hasClass('highliht');
+
+function Tour(el) {
+  var tour = this;
+  this.el = el;
+  this.fetchPhotos = function() { 
+    $.ajax('/photos.html', {
+      data: {location: tour.el.data('location')},
+      context: tour,
+      success: function(response) {
+        this.el.find('.photos').html(response).fadeIn();
+      },
+      error: function() {
+        this.el.find('.photos').html('<li>There was a problem fetching the latest photos. Please try again.</li>');
+      },
+      timeout: 3000,
+      beforeSend: function() {
+        this.el.addClass('is-fetching');
+      },
+      complete: function() {
+        this.el.removeClass('is-fetching');
+      }
+    });
+  }
+  this.el.on('click', 'button', this.fetchPhotos);
+}
+$(document).ready(function() { 
+  var paris = new Tour($('#paris'));
+  var london = new Tour($('#london'));
+});
+

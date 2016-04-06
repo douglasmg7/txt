@@ -1,0 +1,39 @@
+$.ajax('confirmation.html?confNum=1234', {
+	sucess: function(response) {
+		$('.ticket').html(response).slideDown();
+	}
+});
+
+$.ajax('confirmation.html', {
+	sucess: function() {
+		$('.ticket').html(response).slideDown();		
+	},
+	data: {confNum: 1234}	
+});
+
+<div class='ticket' data-confNum='1234'>
+$.ajax('confirmation.html', {
+	sucess: function() {
+		$('.ticket').html(response).slideDown();		
+	},
+	data: {confNum: $('.ticket').data('confNum')}	
+});
+
+$.get('confirmation.html', function (response){
+	$('.ticket').html(response).slideDown();
+});
+
+$.ajax('confirmation.html?confNum=1234', {
+	sucess: function(response) {
+		$('.ticket').html(response).slideDown();
+	},
+	error: function(request, errorType, errorMessage){	
+	},
+	timout: 3000,
+	beforeSend: function(){		 // runs before the ajax request
+		$('.confirmation').addClass('is-loading');
+	},
+	complete: function() {		// runs after success and error
+		$('.confirmation').removeClass('is-loading');
+	}
+});

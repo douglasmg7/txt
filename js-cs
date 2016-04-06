@@ -57,3 +57,19 @@ JSON.stringfy(asdf);
 JSON.parse();
 
 var weapon = isKnight && armory.retrieveSword('katana');
+
+for-in loop
+for(p in list) {
+	console.log(list(p));
+}
+// is faster than for(;;), but will list Array.prototype included
+
+file.js
+the browser download all resource in parallel way
+the all downloads from a webpage halt until the js file finish to download
+
+<script src='' async>
+async attribute allow the rest of the page to load before the script runs
+
+var a ,b; instead of var a; bar b;
+every var keyword adds a look-up for the js parser that can be avoided with comma extensions

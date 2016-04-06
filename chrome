@@ -1,0 +1,48 @@
+ctrl + enter
+include www and .com to the text
+
+ctrl + l
+highlights url
+
+ctrl + u
+open the source
+
+ctrl + shift + i,
+f12
+open developer tools
+
+ctrl + d
+bookmarks
+
+ctrl + shift + d
+save all open tabs in a new bookmark folder
+
+ctrl + shift + b
+toggle tool bar
+
+shift + esc
+open the task manager
+
+ctrl + shift + t
+reopens the last tab you've closed
+
+ctrl + w
+close current tab
+
+ctrl + num
+switch to a specific tab
+
+ctrl + r
+reload frozen page
+
+ctrl + j
+open download page
+
+$()
+blin
+
+inspect($('#date'));
+show the selected element
+
+$0, $1, $2
+show selections history
