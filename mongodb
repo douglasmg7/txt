@@ -126,3 +126,91 @@ db.potions.find({'price': {'$gt':10, '$lt': 20}});
 
 db.portions.find({'sizes': {'$elemMatch': {'$gt':8, '$lt': 16}}});
 sizes = [5, 8 11]
+
+db.portions.find(grade: {$gte: 80}, {vendor: true, name: true});
+db.wands.find({}, {'name':true});
+projection, return only the fields vendor and name (document_id is always returned)
+
+db.protions.find(grade: {$gte: 80}, {vendor: false, price: false});
+exclude specific fields
+
+db.protions.find().count()
+number of itens on the cursor
+
+db.portions.find().sort({'price: 1'});
+sort
+
+db.portions.find().limit(3);
+limit the number of returned itens
+
+db.portions.find().skip(3).limit(3);
+skip the first 3 and get the next 3
+
+{
+	name: 'invisibilty',
+	vendor_id: 'portions_sa' 
+}
+reference to another document
+
+embedding
+documents accessed through parent
+single query
+atomic writes
+
+reference
+documents exist independently
+require 2 queries
+doesn't support multi-document writes
+
+data size over 100
+consider use reference
+
+db.portions.aggregate(
+	[{$group: {_id: '$vendor_id'}}]
+)
+aggregation framework
+
+db.portions.aggregate([
+	{$group: 
+		{
+			_id: '$vendor_id', 
+			'total': {'$sum': 1},
+			'grade_total': {'$sum': '$grade'}
+		}
+	}
+]);
+$x: $y - x is a operator, y is a filed pattern
+{'_id': "Keetcoocked", 'total': 2, 'grade_total': 400},
+{'_id': "Brewers", 'total': 1, 'grade_total': 340},
+{'_id': "Leprechaun Inc", 'total': 1, 'grade_total': 92}
+
+db.portions.aggregate([
+	{$group: 
+		{
+			_id: '$vendor_id', 
+			'avg-grade': {'$avg': '$grade'}
+		}
+	}
+]);
+averaging grade per vendor
+
+db.portions.aggregate{[
+	{'$match': {'ingredients': 'unicorn'}},
+	{'$group': 
+		{
+			'_id': $vendor_id,
+			'portion_count': {'$sum': 1}
+		}
+	}
+
+]};
+pipeline
+
+db.portions.aggregate{[
+	{'$match': {'price': {'$lt': 15}}},
+	{'$project': {'_id': false, 'vendor_id: true': 'grade': true}}.
+	{'$group': {'_id': '$vender_id', 'avg_grade': {'$avg': '$grade'}}},
+	{'$sort': {'avg_grade': -1}},
+	{'$limit': 3}
+]};
+more complex pipeline

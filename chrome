@@ -46,3 +46,13 @@ show the selected element
 
 $0, $1, $2
 show selections history
+
+shift + f5
+reload the page not using the cache
+
+ctrl + shift + n
+new incognito window
+no use cache
+
+devtools -> settings -> disable cache
+not use cache

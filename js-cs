@@ -73,3 +73,33 @@ async attribute allow the rest of the page to load before the script runs
 
 var a ,b; instead of var a; bar b;
 every var keyword adds a look-up for the js parser that can be avoided with comma extensions
+
+console.time()
+console.timeEnd()
+measure time
+
+d = new Date();
+console.log(+d);	// in ms
+same that console.log(new Number(d));
+
+try {
+	alert(alarm);
+	if (list === undefined){
+		throw new ReferenceError();
+	}
+} catch (error) {
+	if (err instanceof ReferenceError)
+	{
+
+	}
+	if (err instanceof TypeError)
+	{
+
+	}
+} finally {	
+}
+exception
+
+throw new ReferenceError();
+throw new Error('message error');
+throw a exception
