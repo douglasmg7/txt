@@ -1,5 +1,5 @@
-var f = function(){
-	var pen = {};
-	pen.ch()
-};
-f();
+$(document).ready(function() {
+	$('li').each(function(i) {
+		$(this).html(i+1);
+	});
+});

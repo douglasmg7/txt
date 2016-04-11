@@ -1,0 +1,19 @@
+{
+  "name": "test",
+  "homepage": "https://github.com/douglasmg7/txt",
+  "authors": [
+    "Douglas Gomes <douglasmg7@gmail.com>"
+  ],
+  "description": "make little tests",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

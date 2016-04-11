@@ -1,0 +1,45 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/douglasmg7/node-v4.4.1-linux-x64/bin/node',
+1 verbose cli   '/home/douglasmg7/node-v4.4.1-linux-x64/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'bower' ]
+2 info using npm@2.14.20
+3 info using node@v4.4.1
+4 verbose install initial load of /home/douglasmg7/node-v4.4.1-linux-x64/lib/package.json
+5 verbose readDependencies loading dependencies from /home/douglasmg7/node-v4.4.1-linux-x64/lib/package.json
+6 silly cache add args [ 'bower', null ]
+7 verbose cache add spec bower
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'bower',
+8 silly cache add   scope: null,
+8 silly cache add   name: null,
+8 silly cache add   rawSpec: 'bower',
+8 silly cache add   spec: '/home/douglasmg7/txt/bower',
+8 silly cache add   type: 'local' }
+9 silly addLocalTarball shasum (computed) 98a3e8d9ed8e5e94540ccad02912073fb3f281a6
+10 verbose addTmpTarball /home/douglasmg7/txt/bower not in flight; adding
+11 verbose correctMkdir /home/douglasmg7/.npm correctMkdir not in flight; initializing
+12 verbose addTmpTarball validating metadata from /home/douglasmg7/txt/bower
+13 verbose tar unpack /home/douglasmg7/txt/bower
+14 verbose tar unpacking to /tmp/npm-9903-b990a556/unpack-2c4d368aeecd
+15 silly gentlyRm /tmp/npm-9903-b990a556/unpack-2c4d368aeecd is being purged
+16 verbose gentlyRm don't care about contents; nuking /tmp/npm-9903-b990a556/unpack-2c4d368aeecd
+17 silly gunzTarPerm modes [ '755', '644' ]
+18 error not a package /home/douglasmg7/txt/bower
+19 error addLocal Could not install /home/douglasmg7/txt/bower
+20 verbose stack Error: ENOENT: no such file or directory, open '/tmp/npm-9903-b990a556/unpack-2c4d368aeecd/package.json'
+20 verbose stack     at Error (native)
+21 verbose cwd /home/douglasmg7/txt
+22 error Linux 3.16.0-4-amd64
+23 error argv "/home/douglasmg7/node-v4.4.1-linux-x64/bin/node" "/home/douglasmg7/node-v4.4.1-linux-x64/bin/npm" "install" "-g" "bower"
+24 error node v4.4.1
+25 error npm  v2.14.20
+26 error path /tmp/npm-9903-b990a556/unpack-2c4d368aeecd/package.json
+27 error code ENOENT
+28 error errno -2
+29 error syscall open
+30 error enoent ENOENT: no such file or directory, open '/tmp/npm-9903-b990a556/unpack-2c4d368aeecd/package.json'
+30 error enoent This is most likely not a problem with npm itself
+30 error enoent and is related to npm not being able to find a file.
+31 verbose exit [ -2, true ]

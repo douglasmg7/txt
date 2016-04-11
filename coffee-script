@@ -12,3 +12,91 @@ compile all .coffee files in the src dir into the js dir
 
 coffe -cw src -o js
 every time a file is update re-compile
+
+message = "olá mundo"
+var message = "olá mundo";
+
+coffee = ->
+	confirm "Ready for some coffe?"
+var coffee = function(){
+	return confirm("Ready for some coffe?");
+}
+
+coffee = (message) ->
+	answer = confirm message
+	"Your answer is" + #{answer}"
+var coffee = function(message) {
+	var answer = confirm(message);
+	return "Your answer is " + answer;
+}
+
+coffee()
+coffee("Yo")
+coffee Yo
+coffee("Yo", 2)
+coffee Yo, 2
+calling function
+
+coffee = (message="Ready for some coffee?") ->
+	answer = confirm message
+	"Your answer is #{answer}"
+optional parameters
+
+if age < 18
+	alert 'Under age'
+else
+	alert 'of age'
+
+alert 'Under age' if age < 18
+
+if age < 18 then alert 'Under age' else alert 'of age'
+
+no ternary operator
+
+==, is
+=== in js
+
+!= isnt
+!== in js
+
+not, unless
+! in js
+
+and
+&& in js
+
+or
+!! in js
+
+true, yes, on
+true in js
+
+false, no, off
+false
+
+if 2 < newLevel < 5
+	alert 'In Range!'
+if (2 < newLevel && newLevel < 5)
+	alert 'InRange'
+
+message = switch CupsOfCoffee
+	when 0 then 'Asleep'
+	when 1 then 'Eyes Open'
+	when 2 then 'Buzzed'
+	else 'Dangerous'
+
+if cupsOfCoffee?
+	alert 'it exists'
+
+if (typeof cupsOfCoffee != 'undefined' && cupsOfCoffee != null)
+	alert 'it exists'
+
+cupsOfCoffee ?= 0
+if not CupsOfCoffee? then cupsOfCoffee = 0
+cupsOfCoffee = 0 unless cupsOfCoffee?
+
+if coffeePot? then coffeePot.brew()
+coffeePot?.brew()
+existential operators
+
+vehicle.startEngine?().shiftGear?()

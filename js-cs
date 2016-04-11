@@ -103,3 +103,31 @@ exception
 throw new ReferenceError();
 throw new Error('message error');
 throw a exception
+
+var drawBridge = {
+	soldiers: 8,
+	capacity: 20,
+	open: function() {
+		alert('rrrrrrrrrBang!');
+	}
+}
+with(drawBrigde) {
+	open();
+	close = function (){ alert('yunyunyunClack!')};
+}
+// will create close into global scope instead
+
+with
+avoid the use
+
+eval(js);
+compile the js code
+affect legibility, ability to debug, and performance
+
+eval('regiment' + number).motto = 'adf';
+create a method on runtime
+
+eval(json)
+use JSON.parse() instead
+
+use bracket on if statements always
