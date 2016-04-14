@@ -100,3 +100,60 @@ coffeePot?.brew()
 existential operators
 
 vehicle.startEngine?().shiftGear?()
+
+range = [1..4]
+var range = [1, 2, 3, 4];
+
+range = [1...4]
+var range = [1, 2, 3];
+
+range = [5,6,7,8,9,10]
+range[1..4] 	// 5, 6, 7, 8
+
+var ar = [
+	'asdf'
+	'erer'
+	'ereres'
+]
+ar.forEach (location, index) -> 
+	alert 'location #{location}'
+
+for location in ar
+	alert 'Location #{location}'
+
+alert 'Location #{location}' for location in ar
+
+ar = ('#{loc}, FL' for loc in ar)
+change the origin array
+
+geloLocate(loc) for loc in ar when loc isnt 'Sanford'
+filter expression
+
+newLocs = []
+for loc in storeLocations
+	newLocs.push loc if loc isnt 'Sanford'
+
+newLocs = (loc for loc in storeLocations isnt 'Sanford')
+
+splat arguments
+searchLocation = (brand, cities...) ->
+	"looking for #{brand} in #{cities.join(',')}"
+searchLocation 'Starducks', 'Orlando'
+searchLocation 'Starducks', 'Orlando', 'Winter Park'
+params = ['Starducks', 'Orlando', 'Winter Park']
+searchLocation(params...)
+
+coffee = name: 'French', strength: 1
+coffee = 
+	name: 'French'
+	strength: 1
+	brew: -> alert('brewing #{@name}')
+
+'#{key} has #{value.in_stock}' for key, value of coffees
+
+for key, value of coffees
+	'#{key} has #{value.in_stock}'
+
+to_print = for key, value of coffees when value.in_stock > 0
+	'#{key} has #{value.in_stock}'
+to_print.join ', '	

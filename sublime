@@ -116,6 +116,16 @@ toggle block comment
 lorem tab
 insert lorem inpsum
 
+"/home/douglasmg7/node-v4.4.1-linux-x64/bin/Babel.sublime-build"
+{
+	"cmd": ["babel-node", "$file"],
+	"selector": "source.js",
+	"path": "/home/douglasmg7/node-v4.4.1-linux-x64/bin/",
+	"quiet": true	
+}
+create build
+
+
 
 
 d

@@ -1,0 +1,50 @@
+let tes = 3;
+scoped to the nearest block and are not hoised
+scoped to the nearest block and not function
+
+const MAX_USERS;
+MAX_USERS = 10;
+error
+
+const MAX_USERS = 10;
+correct
+
+function loadProfiles(usernames = []) {
+	...
+}
+default parameters values
+
+function setPageThread(name, {popular, expires, activeClass}){
+	console.log('Name: ', name );
+	console.log('popular: ', popular );
+	console.log('Expires: ', expires );
+	console.log('Active: ', activeClass );
+}
+named parameters
+
+function setPageThread(name, {popular, expires, activeClass}={}){
+}
+to not cause error when invoked without parameters
+
+function displayTags(...tags) {
+	for(let i int tags){
+		...
+	}
+}
+function displayTags(targetElement, ...tags) {
+	for(let i int tags){
+		...
+	}
+}
+rest parameters
+must be the last parameter
+
+...tags
+spread operator allows us to split an array into individual elements
+var tags = ['fx', 'cs', lt];
+displayTags(tags[0], tags[1], tags[2]);
+displayTags(...tags);
+
+=>
+arrow functions bind to the scope of where they are defined, not where they are used
+also known as lexical binding

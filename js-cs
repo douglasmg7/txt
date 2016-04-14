@@ -131,3 +131,65 @@ eval(json)
 use JSON.parse() instead
 
 use bracket on if statements always
+
+var num = .3;
+num.toFixed(1); // 0.3
+
+parseFloat('.34')
+parseInt('88')
+parseInt('88', 10)	// decimal value
+
+typeof NaN;		// number
+console.log(NaN === NaN); 	// false
+isNaN('42'); 	// false
+
+CAR = {
+}
+simulate a namespace
+
+var ARMORY = (function(){
+	// private
+	var weaponList = [...];
+	var removeWeapon = function(){};
+	// public
+	return {
+		makeWeaponRequest: function(){}
+	}
+})();
+private variables with anonymous clojure
+
+var wartime = true;
+var ARMORY = (function(war){
+	// private
+	var weaponList = [...];
+	var removeWeapon = function(){};
+	// public
+	return {
+		makeWeaponRequest: function(){ if (war) ....}
+	}
+})(wartime);
+for clearer, faster globals in modules use imports
+the global value stay protected
+
+augmentation provides extra properties for existing modules
+in a separate file we'll keep a function which will add values or functionality to our existing module
+
+var wartime = true;
+var ARMORY = (function(war){
+	// private
+	var weaponList = [...];
+	var removeWeapon = function(){};
+	// public
+	return {
+		makeWeaponRequest: function(){ if (war) ....}
+	}
+})(wartime);
+// no one private data from initial ARMORY can be reach from augmentetion ARMORY
+ARMORY = (function(oldNs){
+	// private
+	var oilBarrels = 1000;
+	// public
+	oldNs.assignCatapult = function(regiment){};
+	return oldNs
+})(ARMORY)
+augmentetion

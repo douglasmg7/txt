@@ -122,10 +122,10 @@ copia todos os aqruivos que não existem ou são mais novos
 mv a.txt b.txt
 rename a file
 
-ln file link
+ln src_file link
 cria um hard link
 
-ln -s file item link
+ln -s src_file link
 cria um symbolic link
 
 cp /var/* .

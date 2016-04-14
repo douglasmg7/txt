@@ -21,3 +21,23 @@ update movies set a=2, b=3
 	where a>3;
 
 delete from movies where a=2;
+
+create database Chaplin Theaters
+
+drop database Chaplin Theaters
+remove
+
+create table movies (
+	id int,
+	title varchar(20),
+	genre varchar(100),
+	duration int
+);
+
+drop table movies;
+
+alter table movies
+	add column ratings int;
+
+alter table movies
+	drop column ratings;
