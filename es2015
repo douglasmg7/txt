@@ -48,3 +48,45 @@ displayTags(...tags);
 =>
 arrow functions bind to the scope of where they are defined, not where they are used
 also known as lexical binding
+
+function buildUser(first, last) {
+	let fullName = first + ' ' + last;
+	return {first, last, fullName};
+}
+create object {first: first ...} automatic create the properties names
+object initializer shorthand syntax
+
+let name = 'Sam';
+let age = 45;
+let friends = ['Brook', 'Tyler'];
+let user = {name, age, friend};
+console.log(user.name);
+object initializer shorthand - from variables to object properties
+
+let {first, last, fullName} = buildUser('Sam', 'Williams');
+let {fullName} = buildUser('Sam', 'Williams');
+object destructuring - from object properties to variables
+
+function buildUser(first, last) {
+	let fullName = first + ' ' + last;
+	const ACTIVE_POST_COUNT = 10;
+	return {
+		first, 
+		last, 
+		fullName,
+		isActive() {
+			return postCount >= ACTIVE_POST_COUNT;
+		}
+	}
+}
+method initializer shorthand
+
+let first = 'Marcos'
+let last = 'Aurélio'
+let fullName = `${first} ${last}`;
+template string (back-ticks not single quotes)
+
+let veryLongText = `Hi ${userName},
+
+this is a very long text`
+template sting - empty lines are preserved
