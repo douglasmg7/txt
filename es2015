@@ -90,3 +90,13 @@ let veryLongText = `Hi ${userName},
 
 this is a very long text`
 template sting - empty lines are preserved
+
+function countdownTimer(target, timeLeft, options ={}){
+	let defaults = {
+		container: 	'.time-displa',
+		timeUnit:	'seconds'
+	};
+	let settings = Object.assign({}, defaults, options);
+}
+Object.assign{target, source1, source2, sourcen};
+
