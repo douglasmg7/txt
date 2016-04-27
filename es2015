@@ -100,3 +100,31 @@ function countdownTimer(target, timeLeft, options ={}){
 }
 Object.assign{target, source1, source2, sourcen};
 
+let users = ['Sam', 'tyle', 'Brook'];
+let [a, b, c] = users;
+let [a, , c] = users; // not use the second element
+console.log(a, b, c);
+array destructuring
+
+let users = ['Sam', 'tyle', 'Brook'];
+let [first, ...last] = users;
+console.log(first, last);
+combine destructuring with rest parameters
+
+let names = ['Sam', 'Tyler', 'Brook'];
+for(let name of names) {
+	console.log(name);
+}
+
+console.log(typeof users[Symbol.iterator]);
+this function must be defined to for of work with the object
+
+let users = [
+	{login: 'Sam', admin: false},
+	{login: 'Brook', admin: true}
+	{login: 'Tyle', admin: true}];
+let admin = users.find(user => user.admin);
+console.log(admin);
+find the first element in the array that satisfies a provided test function
+
+

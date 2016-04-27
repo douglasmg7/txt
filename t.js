@@ -1,6 +1,6 @@
-let text = `Hi,
-Este é um grande texto
-
-terceira linha 
- fim.`;
-console.log(text);
+let users = [
+	{login: 'Sam', admin: false},
+	{login: 'Brook', admin: true},
+	{login: 'Tyle', admin: true}];
+let admin = users.find(user => user.admin);
+console.log(admin);

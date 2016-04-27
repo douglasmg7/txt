@@ -191,6 +191,24 @@ view the value of USER enviroment variable
 ls | grep java
 obtem todas as linha que contem java
 
+grep
+stands for global regular expression print
+
+grep -i mount
+enable case insensitive
+
+grep -R Arctic /home
+grep -Rl Arctic /home
+searches all files in a directory
+
+sed
+stands for stream editor
+
+set 's/snow/rain' file.txt
+set 's/snow/rain/g' file.txt
+substitution snow by rain
+g - global
+
 cat file_name
 imprimir um arquivo no console
 
@@ -370,3 +388,6 @@ size content directory
 
 ctrl + d, ctrl + d
 insert EOF in command line
+
+uniq file.txt
+filters out adjacent, duplicate lines in a file
