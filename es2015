@@ -127,4 +127,28 @@ let admin = users.find(user => user.admin);
 console.log(admin);
 find the first element in the array that satisfies a provided test function
 
+let user1 = { name: 'Sam'};
+let user2 = { name: 'Tyler'};
+let totalReplies = new Map();
+totalReplies.set(user1, 5);
+totalReplies.set(user2, 42);
+console.log(totalReplies.get(user1));
+console.log(totalReplies.get(user2));
+use Map when all keys are the same type and all values are the same type
+If not use Object instead
+
+for (let [key, value] of mapSettings) {
+	console.log(`${key} = ${value}`);
+}
+maps can be used with for of
+
+let user = {};
+let comment = {};
+let mapSettings = new WeakMap();
+mapSettings.set(user. 'user');
+mapSettings.set(comment, 'comment');
+weak map can be used only with key object
+is not iterable, can't use for of
+weakmaps don't prevent the garbage collection from collecting objects currently used as keys, but that are no longer referenced anywhere else in the system
+
 
