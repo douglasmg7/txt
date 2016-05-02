@@ -151,4 +151,66 @@ weak map can be used only with key object
 is not iterable, can't use for of
 weakmaps don't prevent the garbage collection from collecting objects currently used as keys, but that are no longer referenced anywhere else in the system
 
+set
+store unique values of any type
+
+let tags = new Set();
+tags.add('JavaScript');
+tags.add('Programming');
+tags.add({version: '2014'});
+console.log('Total ', tags.size);
+set objects are iterable and destructuring
+
+WeakSet is like WeakMap
+
+class SponsorWidget extends Widget {
+	constructor(name, description, url) {
+		super(); // run the constructor parent
+		this.name = name;
+		this.description = description;
+		this.ulr = url;
+	}
+
+	render() {
+		super.render(); // call parent method
+	};
+	_make() {}; // not public api
+}
+
+// flash-message.js
+export default function(message) {
+	alert(message);
+}
+// app.js
+import flashMessage from './flash-message';
+flashMessage('Hello');
+module in js
+defalut keyword permit use any name you want when importing
+
+// message.js
+export function alertMessage(message) {
+	alert(message);
+}
+export function logMessage(message) {
+	console.log(message);
+}
+// app.js
+import {alertMessage, logMessage} from './message';
+alertMessage('hello');
+logMessage('hello');
+module in js
+
+// message.js
+function alertMessage(message) {
+	alert(message);
+}
+function logMessage(message) {
+	console.log(message);
+}
+export {alertMessage, logMessage};
+
+import * as flash from './flash-message';
+flash.alertMessage('hello');
+flash.logMessage('hello');
+module in js
 
