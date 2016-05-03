@@ -21,3 +21,6 @@ ReactDom.render(
 babel.js make the browser understand es6 and jsx
 components.js where our components live
 
+class
+className
+

@@ -214,3 +214,27 @@ flash.alertMessage('hello');
 flash.logMessage('hello');
 module in js
 
+promise
+is a new abstraction that allows us to write async code in an easier way
+
+getPollResultsFromSerer('Sass vs. LESS')
+	.then(function(results){
+		return result.filter(result => result.city === 'Orlando');
+	})
+	.then(function(resultsFromOrland){
+		ui.renderSidebar(resultsFromOrland);
+	})
+	.catch(function(error){
+		console.log('Error: ', error);
+	});
+function getPollResultsFromServer(pooName) {
+	return new Promise(function(resolve, reject) {
+		if () {
+			resolve('ok');
+		}
+		else {
+			reject('general error');
+		}
+	});
+};
+promise
