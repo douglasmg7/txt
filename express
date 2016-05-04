@@ -35,6 +35,28 @@ app.get('/blocks', function(req, res){
 });
 redirection
 
+res.sendFile(__dirname + '/public/index.html');
+serving files
+
+app.use(express.static('public'));
+middleware serving files from public folder
+
+module.exports = function(req, res, next) {
+	var start = +new Date();
+	var stream = process.stdout;
+	var url = req.url;
+	var method = req.method;
+
+	response.on('finish', function(){
+		var duration = +new Date() - start;
+		var message = method + ' to ' + url + 
+			'\ntook ' + duration + ' ms \n\n';
+		stream.write(message);
+	});
+	next();
+}
+creating a middleware
+
 continuar na pg 52
 
 

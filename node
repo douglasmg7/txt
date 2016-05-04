@@ -106,4 +106,6 @@ the same config in express
 require.main === module
 when a file is run directly from node, require.main is set to its module
 
+the node module system follows the commonjs specification
+
 continuar - pg 71 Professional Node
