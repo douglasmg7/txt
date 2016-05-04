@@ -22,6 +22,19 @@ export NODE_ENV=production
 keep between sessions
 echo export NODE_ENV=production >> ~/.bash_profile
 
+response.send({text: 'Hello'});
+same than response.write(); response.end();
+automatic convert json to string
+
+response.json(blocks);
+same response as response.send() for objects and arrays
+
+app.get('/blocks', function(req, res){
+	res.redirect('/parts');
+	// res.redirect(301, '/parts'); optional status code
+});
+redirection
+
 continuar na pg 52
 
 

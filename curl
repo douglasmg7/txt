@@ -1,0 +1,5 @@
+curl http://localhost:3000/blocks
+request the url
+
+curl -i http://localhost:3000/blocks
+print response headers

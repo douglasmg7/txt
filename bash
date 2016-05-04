@@ -38,3 +38,13 @@ if <test> true, the command <command> is not executed
 
 echo $-
 show flags that determine how your shell will function
+
+source ~/.bash_profile
+reload profile file
+
+export PS1=">> "
+PS1 is a variable that defines the makeup and style of the command prompt
+
+env
+list of the environment variable of current user
+
