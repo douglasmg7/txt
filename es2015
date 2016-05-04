@@ -238,3 +238,49 @@ function getPollResultsFromServer(pooName) {
 	});
 };
 promise
+
+let post = {
+	title: 'New Features',
+	replies: 19
+};
+post[Symbol.iterator] = function(){
+	let properties = Object.keys(this);
+	let count = 0;
+	let isDone = false;
+	let next = () => {
+		if(count >= properties.length) {
+			isDone = true;
+		}
+	return {done: isDone, value: this[properties[count++]]};
+	}
+	return {next};
+}
+
+let values = [...post];
+iterable objects can be used with the spread operator
+
+let [title, replies] = post;
+iterable objects can be used with destructuring
+
+function *nameList() {
+	yield 'Sam';
+	yield 'Tyler';	
+}
+for (let name of nameList()){
+	console.log(name);
+}
+let names = [...nameList()];
+let [first, second] = nameList();
+generator
+
+let post = {
+	title: 'New Features',
+	replies: 19
+};
+post[Symbol.iterator] = function *(){
+	let properties = Object.keys(this);
+	for(let p of properties){
+		yield this[p];
+	}
+}
+refactoring iterator using generator function
