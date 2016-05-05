@@ -57,6 +57,16 @@ module.exports = function(req, res, next) {
 }
 creating a middleware
 
+req.query.limit
+reading query values
+
+app.get('/blocks/:name' , function...
+req.params.name - automaticly create the property
+dynamic routes - name is a placehold for the rest of url
+
+res.status(404).json({No description found.')
+send a error 404 message
+
 continuar na pg 52
 
 
