@@ -1,0 +1,18 @@
+var TodoItem = Backbone.Model.extend({});
+var todoItem = new TodoItem(
+	{description: 'Pick up milk', status: 'incomplete', id:1}
+);
+create a model
+
+todoItem.get('description');
+todoItem.set('description', 'verde');
+todoItem.save();
+manipulating a model
+
+var TodoView = Backbone.View.extend({
+	render() {
+		var html = '<h3>' + this.model.get('description') + '</h3>';
+		$(this.el).html(html);
+	}
+});
+var totdoView = new TodoView({model: todoIem});
