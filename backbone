@@ -16,3 +16,144 @@ var TodoView = Backbone.View.extend({
 	}
 });
 var totdoView = new TodoView({model: todoIem});
+
+var todoItem = new TodoItem();
+todoItem.url = '/todo';
+todoItem.fetch();
+fetching data from the server
+
+var TodoItem = Backbone.Model.extend({urlRoot: '/todos'});
+var todoItem = new TodoItem({id: 1});
+todoItem.fetch(); //GET /todos/1
+todoItem.set({description: 'Pick up cooks.'});
+todoItem.save(); //PUT /todos/1 with json params
+
+var todoItem.destroy(); //DELETE /todo/2
+
+todoItem.toJSON();
+get json from model
+
+var TodoItem = Backbone.Model.extend({
+	defaults: {
+		description: 'Empty todo ...',
+		status: 'incomplete'
+	}
+});
+var Appointment = Backbone.Model.extend({
+  defaults: function(){
+    return { 
+    	title: 'Checkup',
+    	date: new Date()
+    };
+  }
+});
+default values
+
+todoItem.on('event-name', function() {
+	alert('event-name happened!');
+});
+todoItem.trigger('event-name');
+models can have events
+
+todoItem.on('change', doThing);
+todoItem.set({description: 'Fill description'}); // trigger change event
+
+todoItem.set({description: 'Fill description'}, {silent: true});
+no triggering event
+
+todoItem.off('change', doThing);
+remove event listener
+
+appointment.on('change:cancelled', function(){
+  alert("Hey Dr. Goodparts, your appointment has changed!");
+});
+listem just to change on attribute cancelled
+
+var SimpleView = Backbone.View.extend({});
+simpleView = new SimpleView();
+console.log(simpleView.el);
+--> <div></div>
+create a view
+
+var SimpleView = Backbone.View.extend({tagName: 'li'});
+make el be <li>
+
+var SimpleView = Backbone.View.extend({
+	tagName: 'article',
+	id: 'todo_view',
+	className: 'todo'
+});
+simpleView = new SimpleView();
+console.log(simpleView.el); 
+--> <article id='todo-view' class='todo'></article>
+
+$('#todo-view').html();
+$(todoView.el).html();
+todoView.$el.html();
+the last is a shorthand
+
+var TodoView = Backbone.View.extend({
+	template: _.template('<h3><%= description %><h3>'),
+	render() {
+		var attributes = this.model.toJson();
+		this.$el.html(this.template(attributes));
+	}
+});
+var totdoView = new TodoView({model: todoIem});
+todoView.render();
+
+var todoView = Backbone.View.extend({
+	events: {
+		'click h3': 'alertStatus',
+		'click .title': 'select'
+	},
+	alertStatus: function(e) {
+		alert('Hey you clicked the h3!');
+	}
+})
+
+var TodoList = Backbone.Collection.extend({
+	model: TodoItem
+});
+var todoList = new TodoList();
+todoList.length;
+todoList.add(todoItem1);
+todoList.at(0);
+todoList.get(1); // get by id
+todoList.remove(todoItem1);
+collections
+
+var todos = [
+	{description: 'Pick up milk.', status: 'incomplete'},
+	{description: 'Get a car wash.', status: 'incomplete'},
+	{description: 'Learn Backbone.', status: 'incomplete'}
+];
+todoList.reset(todos);
+bulk population - each item in array becomes a todoItem
+
+var TodoList = Backbone.Collection.extend({
+	url: '/todos'
+});
+var todoList = new TodoList();
+todoList.fetch();
+
+todoList.on('add', function(todoItem)){...});
+events on collections
+
+var TodoListView = Backbone.View.extend({
+	initialize: function(){
+		this.collection.on('add', this.addOne, this);
+	},
+	collection: todoList,
+	render: function(){
+		this.collection.forEach(addOne, this);
+	},
+	addOne: function(todoItem){
+		var todoView = new TodoView({model: todoItem});
+		this.$el.append(todoView.render().el);
+	}
+});
+todoListView = new TodoListView();
+todoListView.render();
+todoListView.add(newTodoItem);
+console.log(todoListView.el);
