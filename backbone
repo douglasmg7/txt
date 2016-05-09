@@ -157,3 +157,39 @@ todoListView = new TodoListView();
 todoListView.render();
 todoListView.add(newTodoItem);
 console.log(todoListView.el);
+
+var router = new Backbone.Router({
+	routes: {'todos/:id': 'show'},
+	index: function(id) {}
+});
+create a route
+
+route.navigate('todo/1', {
+	trigger: true
+});
+triggering routes
+
+Backbone.history.start();
+router.navigate('todos/1') --> #todo/1
+pushState off - avoid
+
+Backbone.history.start({pushState: true});
+router.navigate('todos/1') --> /todo/1
+pushState on - better
+
+var TodoRouter = Backbone.Router.extend({
+	routes: {'
+		'': 'index',
+		todos/:id': 'show'},
+	index: function(){
+		this.todoList.fetch();
+	}
+	show: function(id){
+		this.todoList.focusOnTodoItem(id);
+	},
+	initialize: function(options){
+		this.todoList = options.todoList;
+	}
+});
+var todoList = new TodoList();
+var TodoApp = new TodoRouter({todoList: todoList});
