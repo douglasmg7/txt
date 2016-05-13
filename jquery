@@ -311,3 +311,7 @@ $.when(
   }
 );
 forcing correct order call
+
+ jqXHR
+ jQuery XMLHttpRequest
+ superset of the XMLHTTPRequest object

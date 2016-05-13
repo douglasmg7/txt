@@ -95,7 +95,7 @@ the last is a shorthand
 var TodoView = Backbone.View.extend({
 	template: _.template('<h3><%= description %><h3>'),
 	render() {
-		var attributes = this.model.toJson();
+		var attributes = this.model.toJSON();
 		this.$el.html(this.template(attributes));
 	}
 });
