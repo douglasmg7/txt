@@ -18,3 +18,10 @@ touch db.json
 localhost:3000
 
 json-server --watch db.json
+json-server --watch db.json --port 3004
+
+curl localhost:3000/posts
+curl localhost:3000/posts/1
+
+s
+save a snapshot file from modification
