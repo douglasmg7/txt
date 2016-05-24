@@ -73,7 +73,7 @@ see difference from commit to unstaged
 git diff --staged
 see difference from commit to staged
 
-git -a -m "Modify readme"
+git -am "Modify readme"
 stage traked files and commit
 
 git reset --soft HEAD^
