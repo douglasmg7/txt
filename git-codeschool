@@ -121,3 +121,5 @@ add your ssh to the ssh-agent
 ssh-add ~/.ssh/id_rsa
 copy to clipboatd the file content
 ~/.ssh/id_rsa.pub
+test 
+ssh -T git@github.com
