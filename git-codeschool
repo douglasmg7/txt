@@ -123,3 +123,16 @@ copy to clipboatd the file content
 ~/.ssh/id_rsa.pub
 test 
 ssh -T git@github.com
+use ssh
+$ git remote set-url origin git@github.com:username/repo.git
+
+using ssh
+$ git remote set-url origin git@github.com:username/repo.git
+
+using https
+$ git remote set-url origin https://github.com/username/repo.git
+
+git config --global credential.helper cache
+set git to use the credential memory cache
+git config --global credential.helper 'cache --timeout=3600'
+set the cache to timeout after 1 hour (setting is in seconds)
