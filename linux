@@ -391,3 +391,6 @@ insert EOF in command line
 
 uniq file.txt
 filters out adjacent, duplicate lines in a file
+
+hostname
+get the computer name
