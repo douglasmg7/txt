@@ -144,7 +144,9 @@ adiciona uma caminho na variável de ambiente
 You need the ./ bit to tell the shell where the executable is, since the current directory is unlikely to be in $PATH.
 
 tar -xzvf file_name.tar.gz
+tar -jxf file.tar.bz2
 -z gzip
+-j bz2
 -f use archive
 -x extract
 -v verbose

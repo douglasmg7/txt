@@ -75,6 +75,16 @@ app.param('name', function(req, res, next){
 });
 running pre-conditions on dynamic routes
 
+app.route('/blocks')
+	.blockRoute.get(function(req, res){});
+	.blockRoute.post(function(req, res){});
+
+var express = require('express');
+// get middle router
+var router = express.router()
+module.exports = router;
+
+
 continuar na pg 52
 
 
