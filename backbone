@@ -193,3 +193,21 @@ var TodoRouter = Backbone.Router.extend({
 });
 var todoList = new TodoList();
 var TodoApp = new TodoRouter({todoList: todoList});
+
+todoItems.fetch({data: {page: 6}});
+fetch with extra params
+
+var TodoItems = Backbone.Collection.extend({
+	comparator: 'status'
+});
+order models by comparator
+
+var TodoItems = Backbone.Collection.extend({
+	comparator: function(todo1, todo2){
+		return todo1.get('status') < todo2.get('status');
+	}
+});
+order models by comparator using function
+
+this.where({status: 'complete'}).length;
+return filtered array of models
