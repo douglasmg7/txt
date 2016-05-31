@@ -1,6 +1,4 @@
-$(function() {
-	​var selections = []; 
-	$(".niners").click(function() { // this closure has access to the selections variable​
-		selections.push (this.prop("name")); // update the selections variable in the outer function's scope​
-	});
-});
+var test = 'arrrrrr';
+console.log(test);
+
+console.log(test.match(/ar+$/));

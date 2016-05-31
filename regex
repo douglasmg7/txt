@@ -1,0 +1,98 @@
+/345/
+asd345gfg
+23456
+
+/345 | 123/
+or
+
+ar+
+one or more r
+
+[a-z]
+character set
+represent only one character
+
+[a-z]+
+several characters
+
+/
+modifier
+
+/i
+insensitive case
+
+[a-z]/i
+match on character lower or upper case
+
+\s
+white space
+
+[A-Z\s]
+upper case and white space
+
+[0-9a-z]
+characters and numbers
+
+\w
+word metacharacter
+same than [a-zA-Z0-9]
+
+.
+any character except new line
+
+\.
+match .
+
+\+
+match +
+
+?
+make proceeding pattern optional
+
+\?
+match ?
+
+()
+group
+(com | net | org | edu)
+
+^
+start
+
+$
+end
+
+\b
+boundary metacharater
+whole words only
+
+[^]
+^ mean "not" when placed within a character set
+
+\d
+digit character (number)
+
+[^\d]
+\D
+
+[^\s]
+\S
+
+[^\w]
+W
+
+{}
+interval expressions
+[a-z]{2}
+match two words
+[a-z]{1,3}
+match one or tree times
+
+{0,1}
+same as ?
+
+{0,}
+same as *
+
+{1,}
+same as + 

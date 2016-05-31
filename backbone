@@ -211,3 +211,23 @@ order models by comparator using function
 
 this.where({status: 'complete'}).length;
 return filtered array of models
+
+var todoRouter = new (Backbone.Router.extend({
+	routes: {
+		'search/:query(/p:page)(/)': 'search',
+		'*path': 'notFound'
+	},
+	search: function(query, page){
+		page = page || 0;
+		query = decodeURIComponent(query); //'hello%20world' --> 'hello world'
+		console.log(query);
+		console.log(page);
+	},
+	notFound: function(path){
+		alert('Sorry! There is no content here');
+	}
+}));
+TodoRouter.navigate('search/milk', {trigger: true}); 
+TodoRouter.navigate('search/milk/p2', {trigger: true}); 
+TodoRouter.navigate('search/milk/p2/', {trigger: true}); 
+define multiples routes on same line
