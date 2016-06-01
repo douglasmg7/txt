@@ -231,3 +231,73 @@ TodoRouter.navigate('search/milk', {trigger: true});
 TodoRouter.navigate('search/milk/p2', {trigger: true}); 
 TodoRouter.navigate('search/milk/p2/', {trigger: true}); 
 define multiples routes on same line
+
+var todoView = new TodoView({model: todoItem, el: $('.todo')});
+todoView.render();
+using an existing tag
+
+var todoView = new TodoView({
+	model: todoItem,
+	user: currentUser
+});
+var TodoView = Backbone.View.extend({
+	initialize: function(){
+		this.user = this.option.user;
+	}
+});
+using extra options
+
+var TodoView = Backbone.View.extend({
+	template: _.template('<%= description %>'),
+	render: function(){
+		this.$el.html(this.template(this.model.attributes));
+		return this;
+	}
+})
+var todoView = new TodoView({model: todoItem})
+todoItem.set('description', "<script src='attack.js' />");
+todoItem.render().el --> <div><script src='attack.js' /></div>
+
+var TodoView = Backbone.View.extend({
+	template: _.template('<%= model.escape("description") %>'),
+	render: function(){
+		this.$el.html(this.template({model: this.model}));
+		return this;
+	}
+})
+var todoView = new TodoView({model: todoItem})
+todoItem.set('description', "<script src='attack.js' />");
+todoItem.render().el --> <div>&lt;script src=&#x27;attack.js&#x27; /&gt; </div>
+
+var TodoView = Backbone.View.extend({
+	initialize: function(){
+		this.listenTo(this.model, 'change', this.render);
+	}
+});
+view listen to a model
+view event clenup
+todoView.stopListening(); // stop all listeners for this view
+todoView.remove(); // will automatically call stopListening()
+
+var AppointmentView = Backbone.View.extend({
+  template: _.template("<span><%= title %></span>"),
+  initialize: function(){
+    this.model.on('change:title', this.changedTitle, this);
+  },
+  render: function(){
+    this.$el.html(this.template(this.model.attributes));
+  },
+  changedTitle: function(model, value, options){
+    this.$('span').html(value);
+    if(options.highlight) {
+    	this.$el.effect('highlight', {}, 1000);
+    }
+  }
+});
+var appointment = new Appointment({title: "Toothache"});
+var appView = new AppointmentView({model: appointment});
+appointment.set({title: "General Cleaning"}, {highlight: false});
+event options
+
+errors = JSON.parse(xhr.responseText).erros;
+error: function from save

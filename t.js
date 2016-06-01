@@ -1,4 +1,2 @@
-var test = 'arrrrrr';
-console.log(test);
-
-console.log(test.match(/ar+$/));
+var res = /([^']+)/.exec("Bhe said 'hello'");
+console.log(res);

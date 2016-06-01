@@ -1,3 +1,9 @@
+var test = 'arrrrrr';
+console.log(test);
+console.log(test.match(/ar+$/));	// Sring.match(regex);
+
+console.log(/qwe/.test('asqwedf'));
+
 /345/
 asd345gfg
 23456
@@ -15,17 +21,33 @@ represent only one character
 [a-z]+
 several characters
 
+\d	Any digit character
+\w	An alphanumeric character (“word character”)
+\s	Any whitespace character (space, tab, newline, and similar)
+\D	A character that is not a digit
+\W	A nonalphanumeric character
+\S	A nonwhitespace character
+.	Any character except for newline
+
+[.] inside character set, lost the mean. It just a point
+
 /
 modifier
 
 /i
-insensitive case
+insensitive case modifier
+
+/g
+global modifier, keep look on all document
+not stopping when find the first occurency
+
+/m
+multiline modifier
+make ^  anchors to begin of line
+make $  anchors to end of line
 
 [a-z]/i
 match on character lower or upper case
-
-\s
-white space
 
 [A-Z\s]
 upper case and white space
@@ -35,10 +57,7 @@ characters and numbers
 
 \w
 word metacharacter
-same than [a-zA-Z0-9]
-
-.
-any character except new line
+same than [a-zA-Z0-9_]
 
 \.
 match .
@@ -96,3 +115,6 @@ same as *
 
 {1,}
 same as + 
+
+?:
+non-capturing group
