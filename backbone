@@ -301,3 +301,24 @@ event options
 
 errors = JSON.parse(xhr.responseText).erros;
 error: function from save
+
+var App = new (Backbone.View.extend ({
+	Models: {},
+	Views: {},
+	Collections: {},
+	events: {
+		'click a': function(e){
+			e.preventDefault();
+			Backbone.history.navigate(e.target.pathname, {trigger: true});
+		}
+	},
+	start: function(){
+		Backbone.history.start();
+	}
+}))({el: document.body});
+$(function(){app.start();});
+App.Models.TodoItem = Backbone.Model.extend({});
+App.TodoRouter = Backbone.Router.extend({});
+var todoItem = new App.Models.TodoItem({});
+using a global object for namespace
+
