@@ -299,8 +299,10 @@ var appView = new AppointmentView({model: appointment});
 appointment.set({title: "General Cleaning"}, {highlight: false});
 event options
 
-errors = JSON.parse(xhr.responseText).erros;
-error: function from save
+model.save({
+    sucess: function(model, response, options) {console.log('fetch-sucess');},
+    error: function(model, xhr, options) {console.log(JSON.parse(xhr.responseText).erros);}
+});
 
 var App = new (Backbone.View.extend ({
 	Models: {},

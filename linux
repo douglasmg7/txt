@@ -84,7 +84,8 @@ obtem a data do sistema
 /usr/share - Items that might be common to multiple systems.
 /var - System-specific data and configuration files.
 
-sudo date "APR 21 2013 21:47:00"
+date "APR 21 2013 21:47:00"
+date +%T -s "10:13:13"
 Configurar a data
 
 free
