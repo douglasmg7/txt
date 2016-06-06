@@ -1,4 +1,4 @@
-Ctrl-b c Create new window
+%Ctrl-b c Create new window
 Ctrl-b d Detach current client
 Ctrl-b l Move to previously selected window
 Ctrl-b n Move to the next window
