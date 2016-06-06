@@ -100,7 +100,7 @@ vai para a pasta de um usuário espcífico
 file file_name
 lista o tipo do arquivo
 
-less file_name - visualizar arquivo
+less file_name - view content file
 /search_name - pesquisa
 n - próximo da pesquisa
 q - sair do less 

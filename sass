@@ -1,0 +1,106 @@
+Sass
+Syntactically Awesome Stylesheets
+
+Sass
+not SASS
+
+scss
+sassy css
+
+.scss
+sassy extension
+
+css is a valid scss
+
+// This comment will not be output to the compiled css file
+/* This will be */
+
+@import 'buttons';
+import buttons.scss, _buttons.scss, buttons.sass or _buttons.sass
+
+_buttons.scss
+underscore files will not be create .css files
+
+// nesting selectors
+sass
+.content{
+	h2 {}
+	p {}
+}
+css
+.content{}
+.content h2 {
+.content p {}
+}
+
+// nesting properties
+sass
+.btn {
+	text: {
+		decoration: underline;
+		transform: lowercase;
+	}
+}
+css
+.btn {
+	text-decoration: underline;
+	text-transform: lowercase;
+}
+
+// ampersend, parent selector
+sass
+.content {
+	.callout {}
+	&.callout {}
+}
+css
+.content{}
+.content .callout{}
+.content.callout{}
+
+// pseudo class
+sass
+a {
+	color: #FFF;
+	&:hover {
+		color: #777;
+	}
+	&:active {
+		color: #888;
+	}
+}
+css
+a {
+	color: #FFF;
+}
+a:hover {
+		color: #777;
+}
+a:active {
+		color: #888;
+}
+
+ampersand after
+sass
+.sidebar {
+	.users & {
+	}
+}
+css
+.sidebar{
+}
+.users .sidebar {
+}
+
+ampersand nested
+sass
+.sidebar {
+	h2 {
+		.users & {
+		}		
+	}
+
+}
+css
+& -> .sidebar h2
+.users .sidebar h2

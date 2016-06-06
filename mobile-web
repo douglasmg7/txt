@@ -1,0 +1,35 @@
+body{
+	font-size: 62.5%; /* 1em = 10px (10/16)
+}
+
+adaptive design
+doesn't cover universal web
+
+responsive design
+flexible and universal
+
+@media screen and (max-width: 320px){
+	body{
+	font-size: 100%;
+	}
+}
+
+img {
+	max-width: 100%;
+}
+about img {
+	width: 30%;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5){
+	.logo {
+		background-image: url(logo@2x.png);
+		-webkit-background-size: 12px 16px;
+		background-size: 12px 16px;		// background-size equal to the size of the original image
+	}
+}
+
+logo.png
+logo@2x.png // name convention for retina images

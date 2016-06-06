@@ -1,6 +1,9 @@
 selector₁ selector₂
 descendant
 
+selector₁selector₂ (.classOne.classTwo)
+element have the two classes
+
 selector₁ > selector₂
 child
 
@@ -9,6 +12,7 @@ the adjacent/next‐sibling
 
 selector₁ ~ selector₂
 following sibling
+
 
 border-radius: 4px 15px 12px 10px;
 
