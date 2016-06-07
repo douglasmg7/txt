@@ -103,4 +103,83 @@ sass
 }
 css
 & -> .sidebar h2
-.users .sidebar h2
+.users .sidebar h1
+
+$base: #777777;		//define a variable
+body{
+	background-color: $base;
+}
+
+
+$base: #666666 !default;
+since a value exist, it isn't overwriten
+
+$side: top;
+sup {
+	position: relative;
+	#{$side}: -0.5em;
+}
+.callout-#{$side} {
+	background: #777;
+}
+interpolation
+
+mixins
+block of reusable code that take optional arguments
+@mixin button {
+	border: 1px solid #ccc;
+	font-size: 1em;
+	text-transform: uppercase;
+}
+btn-a {
+	@include button;
+	background: #777;
+}
+
+@mixin box-sizing($x: content-box){
+	-webkit-box-sizing: $x;
+	-moz-box-sizing: $x;
+	box-sizing: $x;
+}
+.content {
+	@include box-sizing(border-box);
+	border: 1px solid #ccc;
+	padding: 20px;
+}
+
+sass
+.btn-a{
+	background: #777;
+	border: 1px solid #ccc;
+	font-size: 1em;
+	text-transform: uppercase;
+}
+.btn-b{
+	@extend .btn-a;
+	background: #fff;
+}
+css
+.btn-a, 
+.btn-b{
+	background: #777;
+	border: 1px solid #ccc;
+	font-size: 1em;
+	text-transform: uppercase;
+}
+.btn-b{
+	background: #fff;
+}
+
+placeholder
+%btn {
+	background: #777;
+	border: 1px solid #ccc;
+	font-size: 1em;
+	text-transform: uppercase;
+}
+btn-a {
+	@extend %btn
+}
+btn-b {
+	@extend %btn
+}
