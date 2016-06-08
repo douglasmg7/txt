@@ -1,11 +1,18 @@
+git help
 git help config
 get a help for comand config
+
+git config --global user.name "Han Solo"
+git config --global user.email "hansolo@gmail.com"
 
 git init
 initiate git repository
 
-git add '*.txt'
-add all txt include directory
+git add *.txt
+add all txt included in directory
+
+git add "*.txt"
+add all txt included in all the project
 
 git add -all
 add all new files
@@ -14,7 +21,7 @@ git add .
 add all directory
 
 git commit -m 'Comment of commit'
-commit adding a comment
+commit adding a comment (use present tense messages)
 
 git remote add origin https://github.com/try-git/try_git.git
 create a remote repository with the name origin
@@ -139,3 +146,5 @@ git config --global credential.helper cache
 set git to use the credential memory cache
 git config --global credential.helper 'cache --timeout=3600'
 set the cache to timeout after 1 hour (setting is in seconds)
+
+next git real: 2;

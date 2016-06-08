@@ -183,3 +183,48 @@ btn-a {
 btn-b {
 	@extend %btn
 }
+
+@function fluidize($target, $context) {
+	@return ($target / $context) * 100%;
+}
+.sidebar {
+	width: fulidize(350px / 1000px);
+}
+
+$theme: dark;
+header {
+	@if $theme == dark {
+		background: #000;
+	} @else {
+		background: #fff;
+	}
+}
+
+$authors: nick aimme dan drew;
+@each $author in $authors {
+	.athor-#{$author} {
+		background: url(author-#{$author}.jpg);
+	}
+}
+
+.item {
+	position: absolute;
+	right: 0;
+	@for $i from 1 through 3 {
+		&.item-#{$i} {
+			top: $i * 30px;
+		}
+	}
+}
+
+$i: 1;
+.item {
+	position: absolute;
+	right: 0;
+	@while $i < 4 {
+		&.item-#{$i} {
+			top: $i * 30px;
+		}
+		$i: $i + 1;
+	}
+}
