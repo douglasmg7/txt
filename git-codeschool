@@ -20,48 +20,6 @@ add all new files
 git add .
 add all directory
 
-git commit -m 'Comment of commit'
-commit adding a comment (use present tense messages)
-
-git remote add origin https://github.com/try-git/try_git.git
-create a remote repository with the name origin
-
-git push -u origin master
-put your commit on repository origin in to brach master
--u remember the parameters, so next time we can simply run git push
-
-git pull origin master
-check changes and pull down any new changes
-
-git stash:
-Sometimes when you go to pull you may have changes you don't want to commit just yet. One option you have, other than commiting, is to stash the changes.
-Use the command 'git stash' to stash your changes, and 'git stash apply' to re-apply your changes after your pull.
-
-git diff
-show unstaged differences since last commit
-
-git diff --staged
-view staged differences
-
-git diff HEAD
-diff of our most recent commit, which we can refer to using the HEAD pointer
-
-git reset octofamily/octodog.txt
-unstage files
-
-git checkout -- octocat.txt
-get rid of all the changes since the last commit
--- It's simply promising the command line that there are no more options after the '--'. This way if you happen to have a branch named octocat.txt, it will still revert the file, instead of switching to the branch of the same name.
-
-git branch clean_up
-create a new branch
-
-git branch
-see all branchs
-
-git checkout clean_up
-switch to branch clean_up
-
 git rm '*.txt'
 remove the actual file from disk, but will also stage the removal of the files for us
 
@@ -72,22 +30,37 @@ if delete a file without using git rm
 git commit -a (git commit -am "Delete stuff")
 auto remove deleted files with commit
 
-git merge clean_up
-you must be in branch master to make the merge
-
-git branch -d clean_up
-delete a branch
-
-
--- level 2 --
-git diff
-see difference from commit to unstaged
-
-git diff --staged
-see difference from commit to staged
+git commit -m 'Comment of commit'
+commit adding a comment (use present tense messages)
 
 git -am "Modify readme"
 stage traked files and commit
+not include new files
+
+git diff
+show unstaged differences since last commit
+local vs stage
+
+git diff --staged
+git diff HEAD
+view staged differences
+stage vs commit
+
+git reset HEAD
+to unstaged
+
+HEAD
+refers to last commit
+
+git diff HEAD
+diff of our most recent commit, which we can refer to using the HEAD pointer
+
+git reset octofamily/octodog.txt
+unstage files
+
+git checkout -- octocat.txt
+get rid of all the changes since the last commit
+-- It's simply promising the command line that there are no more options after the '--'. This way if you happen to have a branch named octocat.txt, it will still revert the file, instead of switching to the branch of the same name.
 
 git reset --soft HEAD^
 undo last commit, put changes into staging
@@ -102,7 +75,68 @@ git add todo.txt
 git commit --amend -m "Modify readme & add todo.txt."
 add to the last commit and update the message
 
-remote repository hosting
+git remote add origin https://github.com/try-git/try_git.git
+create a remote repository with the name origin
+
+git push -u origin master
+put your commit on repository origin in to brach master
+-u remember the parameters, so next time we can simply run git push
+
+dont't do these after you push
+git reset --soft HEAD^
+git reset --hard HEAD^
+git commit -amend
+
+git pull origin master
+check changes and pull down any new changes
+
+git stash:
+Sometimes when you go to pull you may have changes you don't want to commit just yet. One option you have, other than commiting, is to stash the changes.
+Use the command 'git stash' to stash your changes, and 'git stash apply' to re-apply your changes after your pull.
+
+git branch clean_up
+create a new branch
+
+git branch
+see all branchs
+
+git checkout clean_up
+switch to branch clean_up
+
+git checkout -b new_feature
+create a new branch and checkout
+
+git merge clean_up
+you must be in branch master to make the merge
+
+git branch -d clean_up
+delete a branch
+
+git branch -D clean_up
+delete a branch with warnings
+
+create remote branch
+git checkout -b shopping_cart
+git push origin shopping_cart
+
+git branch -r
+list remote branchs
+need use 'git fetch' first
+
+git remote show origin
+list all branchs
+
+git push origin :shopping_cart
+delete remote branch shopping_cart
+
+git remote prune origin
+to clean up deleted remote branches
+
+git push heroku-staging staging:master
+will push and deploy staging on heroku
+
+git do not have control access, need other software for that
+control acess
 Hosted
   GitHub
   BitBucket
@@ -112,6 +146,8 @@ Self Managed
 
 git remote add origin https://github.com/douglasmg7/git-real.git
 adding a remote
+origin - given name to the repository, can be anyone
+can have several remote repositories like, production and test
 
 git remote -v
 show remote repositories
@@ -125,6 +161,10 @@ remove remotes
 
 git checkout -- cats.html index.html
 discard changes to cats.html and index.html
+
+git clone http://github.com/gitschool/git-real.git
+git clone http://github.com/gitschool/git-real.git git-real-codescool
+cloning a repository
 
 generating a new ssh key
 $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
@@ -150,4 +190,29 @@ set git to use the credential memory cache
 git config --global credential.helper 'cache --timeout=3600'
 set the cache to timeout after 1 hour (setting is in seconds)
 
-next git real: 2;
+git tag
+list all tags
+
+git checkout v0.0.1
+checkout code at commit
+
+git tag -a v0.0.3 -m 'version 0.0.3'
+add a tag
+
+git push --tags
+push tag to the server
+
+git checkout HEAD^
+detach HEAD from master and point to commit before
+
+git checkout 3423fdf<tab>
+detach HEAD from master and point to a specific commit
+
+git checkout HEAD~3
+detach HEAD from master and point to 3 commits before
+
+git branch -f master HEAD~3
+git branch -f master erw77f<tab>
+move the master
+
+contiunue - Ramping Up - Reversing Changins in Git (4)
