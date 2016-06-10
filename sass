@@ -10,6 +10,9 @@ sassy css
 .scss
 sassy extension
 
+.sass
+indented syntax
+
 css is a valid scss
 
 // This comment will not be output to the compiled css file
@@ -228,3 +231,94 @@ $i: 1;
 		$i: $i + 1;
 	}
 }
+
+trigger division
+$size / 10
+(100px / 20)
+20px * 5 / 2
+
+stringg addition
+'sans-' + serif 	// 'sans-serif'
+sans- + 'serif' 	// sans-serif
+
+pre-defined math utilites
+round,
+ceil,
+floor,
+abs,
+min,
+max,
+percentage(350px/1000px);		// 35%
+
+color functions
+$color: #333;
+color: lighten($color, 20%);
+color: darken($color, 20%);
+color: saturate($color, 20%);
+color: desaturate($color, 20%);
+color: mix(#ffff00, #107fc9);
+color: mix(#ffff00, #107fc9, 30%);
+color: grayscale($color);
+color: invert($color);
+color: complement($color);
+
+mixin
+=box-sizing($x)
+	-webkit-box-sizing: $x
+	moz-box-sizing: $x
+	box-sizing: $x
+.content
+	+box-sizing(border-box)
+
+list functions
+$authors: nick aimee dan drew
+length($authors) 	// 4
+append($authors, tim) 	// nick aimee dan drew tim
+join($authors, $authors2)
+index($authors, dan) 	// 3
+index($authors, rob) 	// false
+nth($authors, 3)	// dan
+$authors: nick aimee
+$co-authors: dan drew
+zip($authors, $co-authors)	// nick dan, aimee drew
+
+if(condition, true, false)
+ternary operator if
+
+@import 'compass';		// utilities, typography and css3
+@import 'compass/layout';
+@import 'compass/reset';	// adds set of rules based on Eric Meyer's reset after compiling
+
+avoid 'compass/reset' in production
+Normalize.css maybe better
+
+.content
+	+box-sizing(border-box)
+// compass defined mixin to prefix browser vendor
+
++clearfix
+// not recomended use this mixin from compass
+
+compass mixin
+background: image-url('bg-body.png') repeat
+color: scale-lightness(#eee, 7%)
+color: scale-saturation(#eee, 7%)
+opposite-position(top) 	// bottom
+pi, sin, cos, tan, e, log, sqrt, pow
+contrast-color(input-color, dark-color, light-color, threshold)
+stretch // compass/layout
+
+@import compass
+.log
+	background: image-url('s.png')
+	height: image-height('s.png')
+	width: image-width('s.png')
+.log{
+	background: url('images/s.png')
+	height: 236px;
+	width: 236px;
+}
+
+inline-image('s.png')
+base64 embed images
+	

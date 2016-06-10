@@ -37,11 +37,14 @@ git stash:
 Sometimes when you go to pull you may have changes you don't want to commit just yet. One option you have, other than commiting, is to stash the changes.
 Use the command 'git stash' to stash your changes, and 'git stash apply' to re-apply your changes after your pull.
 
-git diff HEAD
-diff of our most recent commit, which we can refer to using the HEAD pointer
+git diff
+show unstaged differences since last commit
 
 git diff --staged
-compare with staged files
+view staged differences
+
+git diff HEAD
+diff of our most recent commit, which we can refer to using the HEAD pointer
 
 git reset octofamily/octodog.txt
 unstage files
