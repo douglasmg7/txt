@@ -8,6 +8,9 @@ git config --global user.email "hansolo@gmail.com"
 git init
 initiate git repository
 
+git log --oneline
+show each commit in oneline
+
 git add *.txt
 add all txt included in directory
 
@@ -20,15 +23,9 @@ add all new files
 git add .
 add all directory
 
-git rm '*.txt'
-remove the actual file from disk, but will also stage the removal of the files for us
-
-git rm -r folder_cats
-remove a directory
-
-if delete a file without using git rm
-git commit -a (git commit -am "Delete stuff")
-auto remove deleted files with commit
+git rm <file>
+git rm -r <folder>
+remove a file from the working directory (if applicable) and stop tracking the file
 
 git commit -m 'Comment of commit'
 commit adding a comment (use present tense messages)
@@ -47,6 +44,7 @@ view staged differences
 stage vs commit
 
 git reset HEAD
+git reset
 to unstaged
 
 HEAD
@@ -56,7 +54,7 @@ git diff HEAD
 diff of our most recent commit, which we can refer to using the HEAD pointer
 
 git reset octofamily/octodog.txt
-unstage files
+to unstage files
 
 git checkout -- octocat.txt
 get rid of all the changes since the last commit
@@ -70,6 +68,9 @@ undo last commit and all changes
 
 git reset --hard HEAD^^
 undo last 2 commit and all changes
+
+git clean -f
+clean added files
 
 git add todo.txt
 git commit --amend -m "Modify readme & add todo.txt."
@@ -94,25 +95,25 @@ git stash:
 Sometimes when you go to pull you may have changes you don't want to commit just yet. One option you have, other than commiting, is to stash the changes.
 Use the command 'git stash' to stash your changes, and 'git stash apply' to re-apply your changes after your pull.
 
-git branch clean_up
-create a new branch
+git branch <branch-name>
+create a new branch using the current working directory as its base
 
 git branch
-see all branchs
+list all branches
 
-git checkout clean_up
-switch to branch clean_up
+git checkout <branch-name>
+make the working directory and the HEAD match the specified branch
 
 git checkout -b new_feature
 create a new branch and checkout
 
-git merge clean_up
-you must be in branch master to make the merge
+git merge <branch-name>
+merge a branch into the checked-out branch
 
-git branch -d clean_up
+git branch -d <branch-name>
 delete a branch
 
-git branch -D clean_up
+git branch -D <branch-name>
 delete a branch with warnings
 
 create remote branch
@@ -215,4 +216,17 @@ git branch -f master HEAD~3
 git branch -f master erw77f<tab>
 move the master
 
-contiunue - Ramping Up - Reversing Changins in Git (4)
+git revert HEAD
+create a new commit discarting the changes from the last command
+make the last commit equal one before
+undo this commit rather than restore this version
+
+git log --graph --full-history --all --color \
+        --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"
+git log --graph --full-history --all --pretty=format:"%h%x09%d%x20%s"
+git log --oneline --decorate --all --graph
+git log --graph --oneline --all
+show history tree
+
+git config --global alias.tree "log --oneline --decorate --all --graph"
+create alias
