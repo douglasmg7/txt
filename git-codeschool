@@ -88,8 +88,12 @@ git reset --soft HEAD^
 git reset --hard HEAD^
 git commit -amend
 
+git fetch
+fetch branches and/or tags (collectively, "refs") from one or more other repositories
+
 git pull origin master
 check changes and pull down any new changes
+does a git fetch followed by a git merge
 
 git stash:
 Sometimes when you go to pull you may have changes you don't want to commit just yet. One option you have, other than commiting, is to stash the changes.
@@ -230,3 +234,10 @@ show history tree
 
 git config --global alias.tree "log --oneline --decorate --all --graph"
 create alias
+
+git rebase <new-base>
+move the current branch’s commits to the tip of <new-base>, 
+which can be either a branch name or a commit ID.
+
+git rebase --continue
+continue rebase after resolve a conflit
