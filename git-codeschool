@@ -4,6 +4,11 @@ get a help for comand config
 
 git config --global user.name "Han Solo"
 git config --global user.email "hansolo@gmail.com"
+git config --global core.editor sublime		# use sublime for interactive commands
+git config --global core.tool opendiff		# use opendiff for merging conflicts
+
+git config --list
+list all configurations
 
 git init
 initiate git repository
@@ -27,6 +32,9 @@ git rm <file>
 git rm -r <folder>
 remove a file from the working directory (if applicable) and stop tracking the file
 
+git rm --cached <file>
+stop tracking the file but do not delete from local system
+
 git commit -m 'Comment of commit'
 commit adding a comment (use present tense messages)
 
@@ -42,6 +50,24 @@ git diff --staged
 git diff HEAD
 view staged differences
 stage vs commit
+
+git diff HEAD^
+parent of last commit
+
+git diff HEAD~5
+five commit ago
+
+git diff HEAD^..HEAD
+second most recent commit vs. most recent
+
+git diff 4fb063f..f5a5ff9
+between two hash
+
+git diff master bird
+between two branchs
+
+git blame index.html --date short
+show file history changes
 
 git reset HEAD
 git reset
@@ -234,6 +260,7 @@ show history tree
 
 git config --global alias.tree "log --oneline --decorate --all --graph"
 create alias
+git tree
 
 git rebase <new-base>
 move the current branch’s commits to the tip of <new-base>, 
@@ -256,6 +283,8 @@ $s  - subject
 $d  - ref names
 
 git log --oneline -p
+git log --patch
+git log -p
 show line changes - p for patch
 
 git log --oneline --stat
@@ -270,3 +299,11 @@ git log --since=1.hour.ago
 git log --since=1.month.ago --until=2.weeks.ago
 git log --since=2000-01-01 --until=2012-12-21
 show log by date ranges
+
+.git/info/exclude
+experiments/
+will exclude this folder from git
+
+.gitignore
+logs/*.log
+don't commit log files
