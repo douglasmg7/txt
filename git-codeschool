@@ -241,3 +241,32 @@ which can be either a branch name or a commit ID.
 
 git rebase --continue
 continue rebase after resolve a conflit
+
+git config --global color.ui true
+make log color
+
+git log --pretty=oneline
+show log in one line
+
+git log --pretty=format:"%h %ad- %s [%an]"
+$ad - author date
+$an - author name
+%h  - sha hash
+$s  - subject
+$d  - ref names
+
+git log --oneline -p
+show line changes - p for patch
+
+git log --oneline --stat
+show stats for each commit
+
+git log --oneline --graph
+visual representation of the branch merging into master
+
+git log --until=1.minute.ago
+git log --since=1.day.ago
+git log --since=1.hour.ago
+git log --since=1.month.ago --until=2.weeks.ago
+git log --since=2000-01-01 --until=2012-12-21
+show log by date ranges
