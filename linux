@@ -25,6 +25,11 @@ $ sudo dpkg --install lynx_2.8.6-2ubuntu2_i386.deb
 $ sudo dpkg --remove lynx
 Install and remove a .deb package.
 
+dpkg-query -l
+dpkg --get-selections | grep -v deinstall
+list of packages installed
+-v tag "inverts" grep to return non-matching lines
+
 $ apt-get update
 refresh apt-get's cache of package information using the repository
 /etc/apt/sources.list
