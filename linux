@@ -152,6 +152,12 @@ tar -jxf file.tar.bz2
 -x extract
 -v verbose
 
+gzip -d <file>
+extract .gz files
+
+unzip <file>
+extract .zip files
+
 sudo date -s "11 APR 2014 07:34:00"
 configurar a data
 
