@@ -266,8 +266,16 @@ git rebase <new-base>
 move the current branch’s commits to the tip of <new-base>, 
 which can be either a branch name or a commit ID.
 
+git checkout unicorns
+git rebase master
+make unicorns rebase at last commit of master
+
 git rebase --continue
 continue rebase after resolve a conflit
+
+git rebase -i HEAD~3
+interactive mode
+we can choose a specific commit to rebase
 
 git config --global color.ui true
 make log color

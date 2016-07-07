@@ -1,0 +1,12 @@
+pep8 style guide
+lowercase, use underscores for space
+swallow_limit
+
+swallow_limit = 5
+variable declaration
+
+import math
+import built in library
+
+math.ceil(45.6)
+using a library

@@ -1,0 +1,5 @@
+npm install -g showdown
+install
+
+showdown makehtml -i arrais-amador.md -o arrais-amador.html
+convert markdown to html
