@@ -10,3 +10,21 @@ import built in library
 
 math.ceil(45.6)
 using a library
+
+str(345)
+convert number into string
+
+str_name[0]
+get the first character from string
+
+len(str_name)
+return the string length
+
+str_name[2:5]
+str_name[:5]
+str_name[2:]
+string slice
+
+6//4
+integer division
+python 3

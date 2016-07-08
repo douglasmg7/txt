@@ -315,3 +315,58 @@ will exclude this folder from git
 .gitignore
 logs/*.log
 don't commit log files
+
+git stash
+git stash save
+git stash save "New message"
+save modifed files on working directory in a temporary area
+and go back to last commit
+normally, only tracked files get stashed
+to allow make importanting changes in master
+
+git stash applay
+git stash applay stach@{0}
+bring stash files back
+bring the top stack stach stach@{0}
+
+git stash save
+git checkout master
+git commit
+git chckout new_branch
+git stash applay
+
+git stash list
+show a list of stack staches
+
+git stash list --stat
+can take any option 'git log' can
+
+git stash show
+git stash show stash@{0}
+git stash show --patch
+show one particular stash
+
+git stash applay stach@{1}
+got to a specific stach
+
+git stash drop
+git stash drop stach@{0}
+remove the stash from the list
+
+git stash pop
+=git stash apply && git stash drop
+
+git stash save --keep-index
+causes the staging area not to be stashed
+
+git stash save --include-untracked
+causes untracked files to be stashed too
+
+git stash branch gerbil-toys stash@{0}
+create new branch to restore the stashed@{0}
+
+git stash clear
+clears all of them at once
+
+wip
+work in progress
