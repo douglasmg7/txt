@@ -1,3 +1,5 @@
+# this is a comment
+
 pep8 style guide
 lowercase, use underscores for space
 swallow_limit
@@ -28,3 +30,31 @@ string slice
 6//4
 integer division
 python 3
+
+if 4 < 5:
+	print ('less')
+elif 4 == 5:
+	print ('equal')
+elif:
+	print ('more')
+
+if (a == 2) or (b==2)
+if (a == 2) and (b==2)
+
+identation recomendation
+4 spaces
+
+value = input('Enter the day of week')
+
+x = '2'
+x = int(2)
+convert string to int
+
+list
+x = [1, 'dog', true]
+print (x[0])
+x[1:2]	# sub list
+x.append('new element')
+x.remove('dog')
+del x[1]
+del x[:2]

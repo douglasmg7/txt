@@ -370,3 +370,33 @@ clears all of them at once
 
 wip
 work in progress
+
+git clone rep_original rep_backup
+make a backup
+you must be on directory above the repository to backup
+
+git filter-branch --tree-filter <command>
+<command> is any shell command
+purging history
+
+git filter-branch --tree-filter 'rm -f passwords.txt'
+git filter-branch -f --tree-filter 'rm -f passwords.txt'
+remove passwords.txt from project root
+use -f for the second time
+
+git filter-branch --tree-filter 'find . -name "*.mp4" -exec rm {} \;'
+remove video files from any directory
+
+git filter-branch -f --prune-empty -- --all
+git filter-branch --tree-filter 'rm -f passwords.txt' --prune-empty -- --all
+drops commits that don't alter any files
+
+git filter-branch --tree-filter 'rm -f passwords.txt' -- --all
+filter all commits in all branches
+
+git filter-branch --tree-filter 'rm -f passwords.txt' -- HEAD
+filter all commits in current branch only
+
+git index-branch --index-filter <command>
+git index-branch --index-filter 'git rm --cached --ignore-unmatch password.txt'
+operate on staging area
