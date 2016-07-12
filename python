@@ -58,3 +58,45 @@ x.append('new element')
 x.remove('dog')
 del x[1]
 del x[:2]
+
+dictionary
+y = {'vog': 'virtual vision', '3d': 'dimensional wolrd'}
+print(y['vog']) # throw exception if value not exist
+print(y.get('vog') # return None if value not exist
+y['new value'] = 2
+del y['3d']
+
+None
+absence of value
+
+prices[2.50, 3.50, 4.50]
+for price in prices:
+	print('Price is: ' + price)
+
+for i in range(5):
+	print(i)
+# 1 2 3 4 5
+
+for i in range(2005, 2010, 2):
+	print (i)
+# 2005 2007 2009
+
+import random
+r1 = random.random()	# [0.0, 1.0)
+r2 = random.choice([1, 2, 3, 4, 5])
+r3 = random.randint(1, 1000)
+get random numbers
+
+list(range(20))
+create a list from range in python 3
+
+for key, value in x_dicitonary.items()
+	print(key + ':' + value, sep='')
+change default print separate
+
+print(format(value, '.2f'))
+formating numbers
+
+while x != 3:
+	print(x)
+	x = x + 1
