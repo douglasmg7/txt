@@ -548,3 +548,25 @@ git log --walk-reflogs
 # re-create a deleted branch
 # need find the last commit from that branch with git log --walk-reflogs
 git branch aviary 280e43
+
+fork
+copy of repo that you can contribuite
+it's a copy of repo into your user name
+is like a branch
+
+# pull request
+request original repo to merge your changes to them
+
+# Upstream
+upstream is the main repo
+downstream is the forks
+
+# updating your fork
+## add remote for upstream
+git remote add upstream <path_to_repo>
+## fetch changes
+git fetch upstream
+## merge them into your master branch
+git merge upstream/master master
+## push them to your fork (remote)
+git push origin master
