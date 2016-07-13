@@ -139,8 +139,9 @@ git remote add origin https://github.com/try-git/try_git.git
 create a remote repository with the name origin
 
 git push -u origin master
-put your commit on repository origin in to brach master
--u remember the parameters, so next time we can simply run git push
+upload branch master on repo origin
+-u upsetream - config upstream - .git/config
+local/master -> origin/master
 
 dont't do these after you push
 git reset --soft HEAD^
@@ -570,3 +571,8 @@ git fetch upstream
 git merge upstream/master master
 ## push them to your fork (remote)
 git push origin master
+
+# create a branch and push
+git checkout -b new_feature
+git commit
+git push -u master new_feature

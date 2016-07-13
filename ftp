@@ -1,0 +1,28 @@
+# start ftp client
+ftp
+
+# connect to a ftp
+ftp> open test.talia.net
+ftp test.talia.net
+
+# list of ftp servers to test
+ftp://speedtest.tele2.net/
+test.talia.net
+
+# user and password
+anonymous
+email
+
+# login
+user
+
+# list files
+ls
+
+# download file
+get file
+get file_src file_dst
+get file_src dir_a/file_b
+
+# download serveral files
+mget
