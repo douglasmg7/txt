@@ -482,3 +482,69 @@ git cherry-pick -x 4321
 git cherry-pick -signoff 4321
 --signoff adds current user's name to commit message
 who made the cherry-pick
+
+git submodules
+a git repo inside a git repo
+
+# add git repo as a submodule
+git submodule add 'git@example.com:css.git'
+git commit -m 'new module'
+git push
+
+# clone a project with submodule
+git clone git@example.com:aquarium.git
+# adds entries to .git/config from .gitmodules
+git submodule init
+# clone submodules
+git submodule update
+# start into some branch
+git checkout master
+
+# modify a submodule
+# go inside submodule
+cd css
+git checkout master
+git status
+git commit
+git push
+# the parent project still references the old commit on the submodule
+cd ..
+git status
+git add css
+git commit
+git push
+
+# if make changes in headless state
+git checkout master
+git merge b6bb78f
+
+# if make changes in headless state
+git branch temp_changes b6bb78f
+git checkout master
+git merge temp_changes
+
+# worried about forgetting push submodule
+git push --recurse-submodules=check
+# will abort a push if you haven't pushed a submodule
+
+# to push all repositories(even submodules)
+git push --recurse-submodules=on-demand
+git config --global alias.pushall 'push --recurse-submodules=on-demand'
+
+# git keeps a second log, only in your local repo, reflog
+git reflog
+
+git reflog
+43c13e7 HEAD@{2}: 	commit: move txt
+sha     shortname   operation
+
+# restore commits
+git reset --hard 43c13e7
+git reset --hard HEAD@{2}
+
+# show reflog into log
+git log --walk-reflogs
+
+# re-create a deleted branch
+# need find the last commit from that branch with git log --walk-reflogs
+git branch aviary 280e43

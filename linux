@@ -49,7 +49,7 @@ $ sudo apt-get --purge remove lynx	// remove configuration files too.
 Insall a package called lynx and take care of any dependency issues.
 
 $ apt-cache search slite3
-Pesquisar qual diferença do comando acima.
+Pesquisar por pacotes
 
 apt-cache show torcs
 Hmmm... it seems interesting. But is this game not already installed on my computer? And what is the available version? Is it from Universe or main?

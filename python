@@ -35,7 +35,7 @@ if 4 < 5:
 	print ('less')
 elif 4 == 5:
 	print ('equal')
-elif:
+else:
 	print ('more')
 
 if (a == 2) or (b==2)
@@ -90,7 +90,7 @@ get random numbers
 list(range(20))
 create a list from range in python 3
 
-for key, value in x_dicitonary.items()
+for key, value in x_dicitonary.items():
 	print(key + ':' + value, sep='')
 change default print separate
 
@@ -100,3 +100,52 @@ formating numbers
 while x != 3:
 	print(x)
 	x = x + 1
+
+def average(prices):
+	return avg
+
+def main():
+main()
+like c
+
+file = open('file_name', 'w')
+file.write('teste')
+file.close()
+w, r, a
+
+file.read()
+read entire file
+
+file.readline()
+read one line
+
+for line in file:
+	print(line)
+
+str.strip()
+removes any leading or trailing whitespace
+
+(show, time) = line.split(' - ')
+assign show and time
+
+try:
+	file = open('sales.txt', 'r')
+	print(file.read())
+except ValueError as err:
+	print('value error:' + err)
+except:
+	print("file doesn't exist")
+
+apt-get install python-pip
+pip install -U pip setuptools
+
+pip install requests
+install requests module using python package manager
+
+import requests
+my_req = requests.get('https://go.codeschool.com/spamvanmenu')
+my_list = my_req.json()
+print(my_list)	# list of dictionary
+
+each file is a module
+if in the same directory we can import - import file
