@@ -140,8 +140,9 @@ create a remote repository with the name origin
 
 git push -u origin master
 upload branch master on repo origin
--u upsetream - config upstream - .git/config
+-u --upsetream - config upstream - .git/config
 local/master -> origin/master
+-f --force
 
 dont't do these after you push
 git reset --soft HEAD^
@@ -170,6 +171,7 @@ git branch <branch-name>
 create a new branch using the current working directory as its base
 
 git branch
+-a include remote tracking branches in red
 list all branches
 
 git checkout <branch-name>
@@ -179,6 +181,7 @@ git checkout -b new_feature
 create a new branch and checkout
 
 git merge <branch-name>
+--no-ff no fast-forward merge (will be recursive merge)
 merge a branch into the checked-out branch
 
 git branch -d <branch-name>
@@ -576,3 +579,18 @@ git push origin master
 git checkout -b new_feature
 git commit
 git push -u master new_feature
+
+# reviewing a pull request
+git fetch
+git branch -a
+git checkout <branch_name>
+
+# fast forward
+	* less commits
+# recursive
+	* clear what was done on a branch
+	* single commit to revert
+# interacively rebase
+	* to simplify history
+# rebase
+	* to create a linear history
