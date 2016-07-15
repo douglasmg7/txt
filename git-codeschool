@@ -201,8 +201,9 @@ need use 'git fetch' first
 git remote show origin
 list all branchs
 
-git push origin :shopping_cart
-delete remote branch shopping_cart
+delete remote branch
+	git push origin :<branch_name>
+	git push origin --delete <branch_name>
 
 git remote prune origin
 to clean up deleted remote branches
@@ -269,13 +270,49 @@ git tag
 list all tags
 
 git checkout v0.0.1
-checkout code at commit
+checkout code at commit with a tag
 
-git tag -a v0.0.3 -m 'version 0.0.3'
-add a tag
+git tag -a v0.0.3 -m 'first release'
+	-a name
+	-m description
+	first checkout the desire commit
+
+git push --tags
+	push changes and new tags
+	tags are not pushed automatically
+
+tag
+	tag every time you push to production
+lightweiht
+	just a tag, no message or tagger
+signed
+	uses public key to prove identity of tagger
+annotated
+	adds info on who tagged, when and why
+
+tag best practices name (semantic versioning)
+	release: major.minor.path
+		v1.3.2
+		major - break compatibility
+		minor - new feature
+		patch - fix bug
+	tag not meant for production (add a pre-release version after version name)
+		v5.9-beta.3
 
 git push --tags
 push tag to the server
+
+release branch (rb1.0)
+	make changes to a production release without affecting master
+	can be update with new commits
+
+use cases for release branches
+	manual QA
+	long running releases
+	on demand hot fixes
+
+release tags
+	point to a single commit
 
 git checkout HEAD^
 detach HEAD from master and point to commit before
@@ -594,3 +631,4 @@ git checkout <branch_name>
 	* to simplify history
 # rebase
 	* to create a linear history
+
