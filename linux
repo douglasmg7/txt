@@ -381,10 +381,6 @@ m>&n
 m is a file descriptor, which defaults to 1, if not explicitly set
 n is another file descriptior
 
-df
-disk free - reports the amount of space used and available on currently
-mounted filesystem
-
 stat file
 show file status like timestamp
 
@@ -397,8 +393,17 @@ list history of commands used
 !1234
 re-use history command 1234
 
-du -sh
+du -shc *
 size content directory
+-s --summarize
+-h --human-readable
+-c --total
+-a --all 
+--max-depth=1
+
+df
+disk free - reports the amount of space used and available on currently
+mounted filesystem
 
 ctrl + d, ctrl + d
 insert EOF in command line
@@ -408,3 +413,8 @@ filters out adjacent, duplicate lines in a file
 
 hostname
 get the computer name
+
+sort -hr
+sort lines
+-h --human-numeric-sort (2K 1G)
+-r --reverse
