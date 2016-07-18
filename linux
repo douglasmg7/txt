@@ -223,6 +223,10 @@ stands for global regular expression print
 grep -i mount
 enable case insensitive
 
+grep -q good file
+-q silent mode
+return 0 if match
+
 grep -R Arctic /home
 grep -Rl Arctic /home
 searches all files in a directory
@@ -339,6 +343,17 @@ The.Linux.Command.Line
 man -k '^print'
 find all point on man that begin with print
 
+man touch
+open manual for touch
+
+apropos touch
+man -k touch
+displays a list of all topics in the man pages
+show all references for touch on man pages
+
+whatis touch
+obtain a brief description only about a specific command whose exact name is already known
+
 ps aux | grep 'node'
 outputs all node.js programs running on a machine
 
@@ -433,9 +448,23 @@ sort lines
 -h --human-numeric-sort (2K 1G)
 -r --reverse
 
-env <program>
+
 run a program in a modified environment
+env <program>
 	-i, --ignore-environment
 		start with an empty environment
 	-u, --unset=NAME
 		remove variable from the environment
+
+send ICMP ECHO_REQUEST to network hosts
+ping -c 3 -W 1 1.1.1.1
+-c count
+-W timeout
+
+cat file | head -3 | tail -1
+select the 3th line
+head -3  	# print tree first lines
+tail -1		# print one end line
+
+awk 'NR==2'
+print second line

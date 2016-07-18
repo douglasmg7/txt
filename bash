@@ -43,6 +43,9 @@
 # A shell that is executed without logging in, necessary for this is a current logged in user. When you open a graphic terminal in gnome it is a non-login (interactive) shell. Sourced files:
 # /etc/bashrc and ~/.bashrc for bash
 
+# bash command help
+help read 	# show help for command read
+
 # run a bash script
 chmod + script.txt
 bash script.txt
@@ -57,7 +60,7 @@ cat /etc/shells
 # /bin/usr/env
 # It's a program that can find and start other programs
 
-# hashbang - shebang
+# hashbang / shebang
 # it is important to use, for compatibility
 #!/usr/bin/env bash
 #!/bin/env bash
@@ -100,10 +103,6 @@ time ls
 # conncect fd1 and fd2 from cmd_a to cmd_b
 cmd_a |& cmd_b
 
-# control operator
-cmd_a; cmd_b	# start a new line, run the command and wait for it to end before advancing to the next command in the list 
-cmd_a || cmd_b	# run the command before it as it normally would, but after finishing that command move to the next command only if the command before it failed
-
 # bash commands
 	# functions - are previously declared blocks of commands that were given a name
 	# builtin - are tiny procedures built into bash
@@ -112,6 +111,7 @@ cmd_a || cmd_b	# run the command before it as it normally would, but after finis
 # show where bash find the program
 type ping
 type echo
+type -a node 	# show all node app present
 
 # including home directory into path
 PATH=$PATH:~
@@ -382,3 +382,149 @@ list of the environment variable of current user
 # prompt
 read -p 'What is your name?' <var_name>
 -p prompt message
+
+# control operator
+&& || ','
+cmd_a; cmd_b	# start a new line, run the command and wait for it to end before advancing to the next command in the list 
+cmd_a || cmd_b	# run the command before it as it normally would, but after finishing that command move to the next command only if the command before it failed
+rm file || { echo 'Could not remove file' >&2; exit 1; }
+# every command return an exit code, 0 = no error
+mkdir d && cd d 	# only run the next command if the first return no error
+
+# if-else-command
+if [ $a = $b ]
+then echo 'a is the same as b'
+elif [ $a -gt $b ] 'a is big than b'
+else echo 'a is small than as b'
+fi
+
+# expansion a='era um' b='era dois' 
+[[ $a = $b ]] = [[ 'era um' = 'era dois' ]]
+[ "$a" = "$b" ] = [ 'era um' = 'era dois' ]
+[ $a = $b ] = [ era um = era dois ]
+
+# pattern match
+[[ file_name = *.png]]
+
+# pattern match
+$ foo=[a-z]* name=lhunath
+$ [[ $name = $foo   ]] && echo "Name $name matches pattern $foo"
+# Name lhunath matches pattern [a-z]*
+$ [[ $name = "$foo" ]] || echo "Name $name is not equal to the string $foo"
+# Name lhunath is not equal to the string [a-z]*
+# The first test checks whether $name matches the pattern in $foo. The second test checks whether $name is equal to the string in $foo. The quotes really do make that much difference -- a subtlety worth noting.
+
+# Tests supported by [ (also known as test):
+# -e FILE: True if file exists.
+# -f FILE: True if file is a regular file.
+# -d FILE: True if file is a directory.
+# -h FILE: True if file is a symbolic link.
+# -p PIPE: True if pipe exists.
+# -r FILE: True if file is readable by you.
+# -s FILE: True if file exists and is not empty.
+# -t FD : True if FD is opened on a terminal.
+# -w FILE: True if the file is writable by you.
+# -x FILE: True if the file is executable by you.
+# -O FILE: True if the file is effectively owned by you.
+# -G FILE: True if the file is effectively owned by your group.
+# FILE -nt FILE: True if the first file is newer than the second.
+# FILE -ot FILE: True if the first file is older than the second.
+# -z STRING: True if the string is empty (it's length is zero).
+# -n STRING: True if the string is not empty (it's length is not zero).
+# String operators:
+	# STRING = STRING: True if the first string is identical to the second.
+	# STRING != STRING: True if the first string is not identical to the second.
+	# STRING < STRING: True if the first string sorts before the second.
+	# STRING > STRING: True if the first string sorts after the second.
+	# EXPR -a EXPR: True if both expressions are true (logical AND).
+	# EXPR -o EXPR: True if either expression is true (logical OR).
+	# ! EXPR: Inverts the result of the expression (logical NOT).
+# Numeric operators:
+	# INT -eq INT: True if both integers are identical.
+	# INT -ne INT: True if the integers are not identical.
+	# INT -lt INT: True if the first integer is less than the second.
+	# INT -gt INT: True if the first integer is greater than the second.
+	# INT -le INT: True if the first integer is less than or equal to the second.
+	# INT -ge INT: True if the first integer is greater than or equal to the second.
+# Additional tests supported only by [[:
+	# STRING = (or ==) PATTERN: Not string comparison like with [ (or test), but pattern matching is performed. True if the string matches the glob pattern.
+	# STRING != PATTERN: Not string comparison like with [ (or test), but pattern matching is performed. True if the string does not match the glob pattern.
+	# STRING =~ REGEX: True if the string matches the regex pattern.
+	# ( EXPR ): Parentheses can be used to change the evaluation precedence.
+	# EXPR && EXPR: Much like the '-a' operator of test, but does not evaluate the second expression if the first already turns out to be false.
+	# EXPR || EXPR: Much like the '-o' operator of test, but does not evaluate the second expression if the first already turns out to be true.
+
+# ex:
+test -e /etc/X11/xorg.conf && echo 'Your Xorg is configured!'
+# Your Xorg is configured!
+
+# Whenever you're making a Bash script, you should always use [[ rather than [. 
+# Whenever you're making a Shell script, which may end up being used in an environment where Bash is not available, you should use [, because it is far more portable. (While being built in to Bash and some other shells, [ should be available as an external application as well; meaning it will work as argument to, for example, find's -exec and xargs.) 
+# Don't ever use the -a or -o tests of the [ command. Use multiple [ commands instead (or use [[ if you can). POSIX doesn't define the behavior of [ with complex sets of tests, so you never know what you'll get.
+
+# while loop
+$ while true
+do echo "Infinite loop"
+done
+
+# while loop
+while ! ping -c 1 -W 1 1.1.1.1; do
+echo "still waiting for 1.1.1.1"
+sleep 1
+done
+
+#synonym for test
+[]
+
+" "
+# Whitespace — this is a tab, newline, vertical tab, form feed, carriage return, or space. Bash uses whitespace to determine where words begin and end. The first word is the command name and additional words become arguments to that command.
+
+$
+# Expansion — introduces various types of expansion: parameter expansion (e.g. $var or ${var}), command substitution (e.g. $(command)), or arithmetic expansion (e.g. $((expression))). More on expansions later.
+
+''
+# Single quotes — protect the text inside them so that it has a literal meaning. With them, generally any kind of interpretation by Bash is ignored: special characters are passed over and multiple words are prevented from being split.
+
+""
+# Double quotes — protect the text inside them from being split into multiple words or arguments, yet allow substitutions to occur; the meaning of most other special characters is usually prevented.
+
+\
+# Escape — (backslash) prevents the next character from being interpreted as a special character. This works outside of quoting, inside double quotes, and generally ignored in single quotes.
+
+#
+# Comment — an introduction of a # character begins a commentary that extends to the end of the line. Comments are notes of explanation and are not processed by the shell.
+
+[[]]
+# Test — an evaluation of a conditional expression to determine whether it is "true" or "false". Tests are used in Bash to evaluate a number of conditions. More of this will be covered later.
+
+!
+# Negate — used to negate or reverse a test or exit status. For example: ! grep text file; exit $?.
+
+><
+# Redirection — redirect a command's output or input. Redirections will be covered later.
+
+|
+# Pipe — redirect output from a initial command to the input of secondary command. This is a method of chaining commands together. Example: echo "Hello beautiful." | grep -o beautiful.
+
+;
+# Command separator — a representation of a newline. Used to separate multiple commands that are on the same line.
+
+{}
+# Inline group — commands inside the curly braces are treated as if they were one command. It is convenient to use these when Bash syntax requires only one command and a function doesn't feel warranted.
+
+()
+# Subshell group — similar to the above but where commands within are executed in subshell. Used much like a sandbox, if a command causes side effects (like changing variables), it will have no effect on the current shell.
+
+(())
+# Arithmetic expression — with an arithmetic expression, characters such as +, -, *, and / are mathematical operators used for calculations. They can be used for variable assignments like (( a = 1 + 4 )) as well as tests like if (( a < b )). More on this later.
+
+$(())
+# Arithmetic expansion — Comparable to the above, but the expression is replaced with the result of its arithmetic evaluation. Example: echo "The average is $(( (a+b)/2 ))".
+
+~
+# Home directory — the tilde is a representation of the home directory. When followed by a /, it means the current user's home directory; otherwise, a username will have to be specified (e.g. ls ~/Documents; cp ~john/.bashrc .).
+
+continue
+4. Special Parameters and Variables
+continue
+15. Conditional Loops (while, until and for)
