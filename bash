@@ -32,6 +32,11 @@ echo $SHELL
 # how long take to run the command
 time ls
 
+# shell configuration
+~/.bash_profile 	# if not exist look for ~/.profile
+~/.profile 	# generic shell profile configuration file (POSIX sh syntax not bash-specific shell syntax)
+~/.bashrc
+
 # conncect fd1 and fd2 from cmd_a to cmd_b
 cmd_a |& cmd_b
 
@@ -103,20 +108,116 @@ cat <<<"era" >c.txt
 # bash will create a new file descriptor ("plug") for you with that number
 exec 3>&1
 
-# define var color
-color=blue
+# bash parameters
+	# positional parameters
+	# special parameters
+	# shell variables - parameter that has a name
 
-# print var color
+# assign the value blue to the variable color
+color=blue
+# run the command color with argument "=" and "blue"
+color = blue
+
+# assign
+greeting="$greeting world"
+greeting+=" world"
+
+# expand the value of color into the echo argument
+# expansion is done by prefixing the name with a $ symbol
 echo $color
 echo ${color}
 
-# make color global
+# Shell variable are stored inside the bash
+# Environment variables are variables stored on your process
+		# When you run a new program from the shell, bash will run this program in a new process. When it does, this new process will have its own environment. But unlike shell processes, ordinary processes do not have shell variables. They only have environment variables. More importantly, when a new process is created, its environment is populated by making a copy of the environment of the creating process
+# It is a common misconception that the environment is a system-global pool of variables that all processes share. This illusion is often the result of seeing the same variables available in child processes. When you create a custom environment variable in the shell, any child processes you create afterwards will inherit this variable as a result of it being copied from your shell into the child's environment. However, since the environment is specific to each process, changing or creating new variables in the child will in no way affect the parent
+
+name=Britta time=23.73	# We want to expand time and add an s for seconds
+echo "$name's current record is $times."	# but bash mistakes the name for times which holds nothing
+# Britta's current record is .
+echo "$name's current record is ${time}s."	# Braces explicitly tell bash where the name ends
+# Britta's current record is 23.73s.
+
+# expandion operators
+name=Britta time=23.73
+echo "$name's current record is ${time%.*} seconds and ${time#*.} hundredths."
+# Britta's current record is 23 seconds and 73 hundredths.
+echo "PATH currently contains: ${PATH//:/, }"
+# PATH currently contains: /Users/lhunath/.bin, /usr/local/bin, /usr/bin, /bin, /usr/libexec
+# "%" remove to end
+# "#" remove from begin
+# "//" replace
+
+# Remove the shortest string that matches the pattern if it's at the start of the value.
+${parameter#pattern}	
+"${url#*/}"	
+http://guide.bash.academy/variables.html
+/guide.bash.academy/variables.html
+
+# Remove the longest string that matches the pattern if it's at the start of the value.
+${parameter##pattern}	
+"${url##*/}"	
+http://guide.bash.academy/variables.html
+variables.html
+
+# Remove the shortest string that matches the pattern if it's at the end of the value.
+${parameter%pattern}	
+"${url%/*}"	
+http://guide.bash.academy/variables.html
+http://guide.bash.academy
+
+# Remove the longest string that matches the pattern if it's at the end of the value.
+${parameter%%pattern}	
+"${url%%/*}"	
+http://guide.bash.academy/variables.html
+http:
+
+# Replace the first string that matches the pattern with the replacement.
+${parameter/pattern/replacement}	
+"${url/./-}"	
+http://guide.bash.academy/variables.html
+http://guide-bash.academy/variables.html
+
+# Replace each string that matches the pattern with the replacement.
+${parameter//pattern/replacement}	
+"${url//./-}"	
+http://guide.bash.academy/variables.html
+http://guide-bash-academy/variables-html
+
+# Replace the string that matches the pattern at the beginning of the value with the 
+${parameter/#pattern/replacement}	
+"${url/#*:/https:}"	
+http://guide.bash.academy/variables.html
+https://guide.bash.academy/variables.html
+
+# Replace the string that matches the pattern at the end of the value with the replacement.
+${parameter/%pattern/replacement}	
+"${url/%.html/.jpg}"	
+http://guide.bash.academy/variables.html
+http://guide.bash.academy/variables.jpg
+
+# Expand the length of the value (in bytes)
+# ${#parameter}	
+"${#url}"	
+http://guide.bash.academy/variables.html
+40
+
+# Expand a part of the value, starting at start, length bytes long.
+# ${parameter:start[:length]}	
+"${url:7}"	
+http://guide.bash.academy/variables.html
+guide.bash.academy/variables.html
+
+# Expand the transformed value, either upper-casing or lower-casing the first or all characters that match the pattern. You can omit the pattern to match any character.
+# ${parameter[^|^^|,|,,][pattern]}
+"${url^^[ht]}"	
+http://guide.bash.academy/variables.html
+HTTp://guide.basH.academy/variables.HTml
+
+# make the shell variable color a environment variable
 export color
 
-# tells the shell to make the contents of PATH available to child process of this shell
-export PATH
-
-# unmake color global
+# unmake col or global
 unset color
 
 # execute the comand between back quote `

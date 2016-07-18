@@ -102,6 +102,9 @@ volta para o diretório anterior
 cd ~usuário
 vai para a pasta de um usuário espcífico
 
+cd "$(find -name ofic* -quit)"
+use find as argument
+
 file file_name
 lista o tipo do arquivo
 
