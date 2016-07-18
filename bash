@@ -1,4 +1,8 @@
 # Bourne Again Shell - bash
+# a shell program
+
+# shell is a user program or it's environment provided for user interaction. Shell is an command language interpreter that executes commands read from the standard input device (keyboard) or from a file.
+# shell is not part of system kernel, but uses the system kernel to execute programs, create files etc
 
 # process
 # When you "run" or "execute" a program, your kernel loads its pre-written instructions (its code) by creating a process for your program to work in.
@@ -13,6 +17,32 @@
 # 	standard error
 # 		File descriptor 2
 
+# Interactive
+# As the term implies: Interactive means that the commands are run with user-interaction from keyboard. E.g. the shell can prompt the user to enter input.
+# A shell (login or non-login) where you can interactively type or interrupt commands. For example a gnome terminal (non-login) or a virtual terminal (login). In an interactive shell the prompt variable must be set ($PS1). Sourced files:
+# /etc/profile and ~/.profile
+# /etc/bashrc or /etc/bash.bashrc for bash
+
+# Non-interactive
+# the shell is probably run from an automated process so it can't assume if can request input or that someone will see the output. E.g Maybe it is best to write output to a log-file.
+# non-interactive shell: A (sub)shell that is probably run from an automated process you will see neither input nor outputm when the calling process don't handle it. That shell is normally a non-login shell, because the calling user has logged in already. A shell running a script is always a non-interactive shell, but the script can emulate an interactive shell by prompting the user to input values. Sourced files:
+# /etc/bashrc or /etc/bash.bashrc for bash (but, mostly you see this at the beginning of the script: [ -z "$PS1" ] && return. That means don't do anything if it's a non-interactive shell)
+# depending on shell; some of them read the file in the $ENV variable
+
+#Login 
+# Means that the shell is run as part of the login of the user to the system. Typically used to do any configuration that a user needs/wants to establish his work-environment.
+# A login shell logs you into the system as a spiecified user, necessary for this is a username and password. When you hit ctrl+alt+F1 to login into a virtual terminal you get after successful login: a login shell (that is interactive). Sourced files:
+# /etc/profile and ~/.profile for Bourne compatible shells (and /etc/profile.d/*)
+# ~/.bash_profile for bash
+# /etc/zprofile and ~/.zprofile for zsh
+# /etc/csh.login and ~/.login for csh
+# ps show -bash (dash before bash in login shell)
+
+# Non-login 
+# Any other shell run by the user after logging on, or which is run by any automated process which is not coupled to a logged in user.
+# A shell that is executed without logging in, necessary for this is a current logged in user. When you open a graphic terminal in gnome it is a non-login (interactive) shell. Sourced files:
+# /etc/bashrc and ~/.bashrc for bash
+
 # run a bash script
 chmod + script.txt
 bash script.txt
@@ -20,6 +50,9 @@ bash script.txt
 
 # which shell
 echo $SHELL
+
+# find all available shells
+cat /etc/shells
 
 # /bin/usr/env
 # It's a program that can find and start other programs
@@ -32,9 +65,36 @@ echo $SHELL
 # how long take to run the command
 time ls
 
-# shell configuration
-~/.bash_profile 	# if not exist look for ~/.profile
-~/.profile 	# generic shell profile configuration file (POSIX sh syntax not bash-specific shell syntax)
+# The bash executable
+/bin/bash
+
+# The systemwide initialization file, executed for login shells
+/etc/profile
+/etc/profile.d/*
+
+# The personal initialization file, executed for login shells
+~/.bash_profile
+
+# The individual per-interactive-shell startup file
+/etc/bashrc
+~/.bashrc
+
+# The individual login shell cleanup file, executed when a login shell exits
+~/.bash_logout
+
+# Individual readline initialization file
+~/.inputrc
+
+# read by a shell that's both interactive and non-login (ex: terminal gui)
+~/.bash_profile
+# if ~/.bash_profile not exist look for 
+# .profile is simply the login script filename originally used by /bin/sh. bash, being generally backwards-compatible with /bin/sh, will read .profile if one exists.
+~/.profile
+# most people end up telling their .bash_profile to also read .bashrc with something like
+[[ -r ~/.bashrc ]] && . ~/.bashrc
+
+# generic shell profile configuration file (POSIX sh syntax not bash-specific shell syntax)
+~/.profile
 ~/.bashrc
 
 # conncect fd1 and fd2 from cmd_a to cmd_b
@@ -111,7 +171,13 @@ exec 3>&1
 # bash parameters
 	# positional parameters
 	# special parameters
-	# shell variables - parameter that has a name
+	# shell variables
+	
+# shell variable
+# parameter that has a name
+# Internal shell variables - shell variables with ALL-UPPERCASE names
+# you should make all of your own shell variables lower-case to avoid ever accidentally overriding a shell-internal variable of the same name. 
+# If you create an environment variable, give it an ALL-UPPERCASE name.
 
 # assign the value blue to the variable color
 color=blue
@@ -219,6 +285,66 @@ export color
 
 # unmake col or global
 unset color
+
+# positional parameters
+$1
+$3
+${12}
+grep Name resgistrations.txt
+# If grep were a bash script, the first argument would be available in the script by expanding $1 and the second argument by expanding $2. Positional parameters higher than 2 will be unset
+# It's good to know that there is also a zero'th positional parameter. This positional parameter expands to the name of the process
+
+# set positional parameters
+set -- 'first argument' second third 'fourth argument'
+echo $1; echo $2; echo $3; echo $4
+
+# New First Argument Second Third Fourth Argument
+$ shift 2 	# Push the positional parameters back 2.
+# Third Fourth Argument <----The first two disappeared and the third is now in first spot with the fourth in second place.
+
+bash -c 'echo "1: $1, 2: $2, 4: $4"' -- 'New First Argument' Second Third 'Fourth Argument'
+# 1: New First Argument, 2: Second, 4: Fourth Argument
+
+# special parameters
+$*, $@, $# etc..
+
+"$*"	
+echo "Arguments: $*"
+# Expands a single string, joining all positional parameters into one, separated by the first character in IFS (by default, a space).
+# Note: You should never use this parameter unless you explicitly intend to join all the parameters. You almost always want to use @ instead.
+
+"$@"	
+rm "$@"	
+# Expands the positional parameters as a list of separate arguments.
+bash -c 'echo "${@: -1}"' -- 1 2 'The Third'
+# The Third
+
+"$#"	
+echo "Count: $#"	
+# Expands into a number indicating the amount of positional parameters that are available.
+
+"$?"	
+(( $? == 0 )) || echo "Error: $?"		
+# Expands the exit code of the last (synchronous) command that just finished.
+# An exit code of 0 indicates the command succeeded, any other number indicates why the command failed.
+
+"$-"	
+[[ $- = *i* ]]	
+# Expands to the set of option flags that are currently active in the shell.
+# Option flags configure the behaviour of the shell, the example tests for the presence of the i flag, indicating the shell is interactive (has a prompt) and is not running a script.
+
+"$$"	
+echo "$$" > /var/run/myscript.pid	
+# Expands a number that's the unique process identifier for the shell process (that's parsing the code).
+
+"$!"	
+kill "$!"	
+# Expands a number that's the unique process identifier of the last process that was started in the background (asynchronously).
+# The example signals the background process that it's time to terminate.
+
+"$_"	
+mkdir -p ~/workspace/projects/myscripts && cd "$_"	
+# Expands to the last argument of the previous command.
 
 # execute the comand between back quote `
 echo "A data é `date`"

@@ -1,9 +1,17 @@
-find . - lista todos os caminhos de todos arquivos do diretório corrente
+# lista todos os caminhos de todos arquivos do diretório corrente
+find . 
 
-find / -name file_name - procura por file_name a partir do diretório raiz
+# procura por file_name a partir do diretório raiz case sensitive
+find / -name <file_name>
 
-find /tmp /var/tmp . $HOME -name 2>/dev/null - procura em vários lugares e não imprime erro
+# procura por file_name a partir do diretório raiz case insensitive
+find / -iname <file_name>
 
-find / -type f -mtime -7 - procura por todos arquivos modificados até 7 dias
+# procura em vários lugares e não imprime erro
+find /tmp /var/tmp . $HOME -name 2>/dev/null
 
-find / -mmin -10 - até  minutos atrás
+# modificados até 7 dias
+find / -type f -mtime -7
+
+# 10 minutos atrás
+find / -mmin -10

@@ -1,3 +1,9 @@
+login tty1 (virtual terminal)
+ctr + alt + f1
+
+go to gui
+ctr + alt + f7
+
 /DPMS
 Debian Package Management System
 
@@ -104,6 +110,9 @@ vai para a pasta de um usuário espcífico
 
 cd "$(find -name ofic* -quit)"
 use find as argument
+
+mkdir -p <directory>
+create dir, no error if exist
 
 file file_name
 lista o tipo do arquivo
@@ -280,8 +289,10 @@ htop (improved top)
 gnome-system-monitor
 cpu and memory use
 
-ps aux
-list all processes
+ps - report a snapshot of the current processes
+ps -e 	list processes - standard syntax
+ps aux	list processes - BSD syntax
+ps -p 48 	list process by id
 
 pgrep firefox
 get pid of firefox process
