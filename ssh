@@ -1,0 +1,9 @@
+ssh host
+host in this example is the IP address or domain name that you are trying to connect to
+assumes that your username on the remote system is the same as your username on your local system
+
+ssh user@host
+connect using a diferent user
+
+exit
+exit to you local session 

@@ -26,3 +26,6 @@ get file_src dir_a/file_b
 
 # download serveral files
 mget
+
+# Toggles prompting. Ftp prompts during multiple file transfers to allow you to selectively retrieve or store files; mget and mput transfer all files if prompting is turned off. By default, prompting is on.
+prompt

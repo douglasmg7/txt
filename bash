@@ -652,3 +652,7 @@ fi
 echo th{e,a}n 	# then than
 echo {1..9}			# 1 2 3 4 5 6 7 8 9
 echo {0..1}{0..4} 	# 00 01 02 03 04 10 11 12 13 14
+
+
+continue
+15. Conditional Loops (while, until and for)
