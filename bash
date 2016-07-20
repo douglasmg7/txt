@@ -524,7 +524,91 @@ $(())
 ~
 # Home directory — the tilde is a representation of the home directory. When followed by a /, it means the current user's home directory; otherwise, a username will have to be specified (e.g. ls ~/Documents; cp ~john/.bashrc .).
 
+# shell variable provided
+# BASH_VERSION: Contains a string describing the version of Bash.
+# HOSTNAME: Contains the hostname of your computer, I swear. Either short or long form, depending on how your computer is set up.
+# PPID: Contains the PID of the parent process of this shell.
+# PWD: Contains the current working directory.
+# RANDOM: Each time you expand this variable, a (pseudo)random number between 0 and 32767 is generated.
+# UID: The ID number of the current user. Not reliable for security/authentication purposes, alas.
+# COLUMNS: The number of characters that fit on one line in your terminal. (The width of your terminal in characters.)
+# LINES: The number of lines that fit in your terminal. (The height of your terminal in characters.)
+# HOME: The current user's home directory.
+# PATH: A colon-separated list of paths that will be searched to find a command, if it is not an alias, function, builtin command, or shell keyword, and no pathname is specified.
+# PS1: Contains a string that describes the format of your shell prompt.
+# TMPDIR: Contains the directory that is used to store temporary files (by the shell).
+
+declare -a tmp_var
+# Array - The variable is an array of strings.
+
+declare -A tmp_var
+# Associative array - The variable is an associative array of strings (bash 4.0 or higher).
+
+declare -i tmp_var
+# Integer - The variable holds an integer. Assigning values to this variable automatically triggers Arithmetic Evaluation.
+
+declare -r tmp_var
+# Read Only - The variable can no longer be modified or unset.
+
+declare -x variable
+# Export - The variable is marked for export which means it will be inherited by any child process.
+
+a=3; a+=3; echo $a
+# 33
+
+a=3; let a+=3; echo $a
+# 6
+
+# rename file
+$ for file in *.JPG *.jpeg
+do mv -- "$file" "${file%.*}.jpg"
+done
+
+# parameter expansion (PE)
+# You may be tempted to use external applications such as sed, awk, cut, perl or others to modify your strings. Be aware that all of these require an extra process to be started, which in some cases can cause slowdowns. Parameter Expansions are the perfect alternative.
+${parameter:-word}
+# Use Default Value. If 'parameter' is unset or null, 'word' (which may be an expansion) is substituted. Otherwise, the value of 'parameter' is substituted.
+
+${parameter:=word}
+# Assign Default Value. If 'parameter' is unset or null, 'word' (which may be an expansion) is assigned to 'parameter'. The value of 'parameter' is then substituted.
+
+${parameter:+word}
+# Use Alternate Value. If 'parameter' is null or unset, nothing is substituted, otherwise 'word' (which may be an expansion) is substituted.
+
+${parameter:offset:length}
+# Substring Expansion. Expands to up to 'length' characters of 'parameter' starting at the character specified by 'offset' (0-indexed). If ':length' is omitted, go all the way to the end. If 'offset' is negative (use parentheses!), count backward from the end of 'parameter' instead of forward from the beginning. If 'parameter' is @ or an indexed array name subscripted by @ or *, the result is 'length' positional parameters or members of the array, respectively, starting from 'offset'.
+
+${#parameter}
+# The length in characters of the value of 'parameter' is substituted. If 'parameter' is an array name subscripted by @ or *, return the number of elements.
+
+${parameter#pattern}
+# The 'pattern' is matched against the beginning of 'parameter'. The result is the expanded value of 'parameter' with the shortest match deleted. 
+# If 'parameter' is an array name subscripted by @ or *, this will be done on each element. Same for all following items.
+
+${parameter##pattern}
+# As above, but the longest match is deleted.
+
+${parameter%pattern}
+# The 'pattern' is matched against the end of 'parameter'. The result is the expanded value of 'parameter' with the shortest match deleted.
+
+${parameter%%pattern}
+# As above, but the longest match is deleted.
+
+${parameter/pat/string}
+# Results in the expanded value of 'parameter' with the first (unanchored) match of 'pat' replaced by 'string'. Assume null string when the '/string' part is absent.
+
+${parameter//pat/string}
+# As above, but every match of 'pat' is replaced.
+
+${parameter/#pat/string}
+# As above, but matched against the beginning. Useful for adding a common prefix with a null pattern: "${array[@]/#/prefix}".
+
+${parameter/%pat/string}
+# As above, but matched against the end. Useful for adding a common suffix with a null pattern.
+
+# pattern
+# is a string with a special format designed to match filenames, or to check, classify or validate data strings.
+# Since version 3.0, Bash also supports regular expression patterns. These will be useful mainly in scripts to test user input or parse data. (You can't use a regular expression to select filenames; only globs and extended globs can do that.)
+
 continue
-4. Special Parameters and Variables
-continue
-15. Conditional Loops (while, until and for)
+7. Glob Patterns

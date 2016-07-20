@@ -175,6 +175,9 @@ extract .gz files
 unzip <file>
 extract .zip files
 
+unrar x <file>
+extract .rar files
+
 sudo date -s "11 APR 2014 07:34:00"
 configurar a data
 
