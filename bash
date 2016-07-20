@@ -610,5 +610,45 @@ ${parameter/%pat/string}
 # is a string with a special format designed to match filenames, or to check, classify or validate data strings.
 # Since version 3.0, Bash also supports regular expression patterns. These will be useful mainly in scripts to test user input or parse data. (You can't use a regular expression to select filenames; only globs and extended globs can do that.)
 
-continue
-7. Glob Patterns
+# Globs
+# patterns that can be used to match filenames or other strings
+# Globs are implicitly anchored at both ends. What this means is that a glob must match a whole string (filename or data string). A glob of a* will not match the string cat, because it only matches the at, not the whole string. A glob of ca*, however, would match cat
+# When a glob is used to match filenames, the * and ? characters cannot match a slash (/) character. So, for instance, the glob */bin might match foo/bin but it cannot match /usr/local/bin. When globs match patterns, the / restriction is removed.
+# You should always use globs instead of ls (or similar) to enumerate files. Globs will always expand safely and minimize the risk for bugs
+
+* 	# Matches any string, including the null string.
+? 	# Matches any single character.
+[...] 	# Matches any one of the enclosed characters.
+
+# Extended Globs
+# Bash also supports a feature called Extended Globs. These globs are more powerful in nature; technically, they are equivalent to regular expressions, although the syntax looks different than most people are used to. This feature is turned off by default, but can be turned on with the shopt command, which is used to toggle shell options:
+
+# enable external glob
+shopt -s extglob
+?(list)		# Matches zero or one occurrence of the given patterns.
+*(list)		# Matches zero or more occurrences of the given patterns.
++(list)		# Matches one or more occurrences of the given patterns.
+@(list)		# Matches one of the given patterns.
+!(list) 	# Matches anything but the given patterns.
+
+# Regular expressions (regex)
+# similar to Glob Patterns, but they can only be used for pattern matching, not for filename matching.
+# bash uses the Extended Regular Expression (ERE) dialect
+# Regular Expression patterns that use capturing groups (parentheses) will have their captured strings assigned to the BASH_REMATCH variable for later retrieval
+langRegex='(..)_(..)'
+if [[ $LANG =~ $langRegex ]]
+then
+     echo "Your country code (ISO 3166-1-alpha-2) is ${BASH_REMATCH[2]}."
+     echo "Your language code (ISO 639-1) is ${BASH_REMATCH[1]}."
+else
+     echo "Your locale was not recognised"
+fi
+# Since the way regex is used in 3.2 is also valid in 3.1 we highly recommend you just never quote your regex. Remember to keep special characters properly escaped!
+# For cross-compatibility (to avoid having to escape parentheses, pipes and so on) use a variable to store your regex, e.g. re='^\*( >| *Applying |.*\.diff|.*\.patch)'; [[ $var =~ $re ]] This is much easier to maintain since you only write ERE syntax and avoid the need for shell-escaping, as well as being compatible with all 3.x BASH versions.
+
+# Brace Expansion
+# Brace Expansion technically does not fit in the category of patterns, but it is similar. Globs only expand to actual filenames, but brace expansions will expand to any possible permutation of their contents
+# Brace expansion happens before filename expansion
+echo th{e,a}n 	# then than
+echo {1..9}			# 1 2 3 4 5 6 7 8 9
+echo {0..1}{0..4} 	# 00 01 02 03 04 10 11 12 13 14

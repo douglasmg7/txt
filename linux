@@ -235,12 +235,13 @@ grep -Rl Arctic /home
 searches all files in a directory
 
 sed
-stands for stream editor
+stream editor, but can edit files directly too
 
-set 's/snow/rain' file.txt
-set 's/snow/rain/g' file.txt
-substitution snow by rain
-g - global
+sed -i -e 's/foo/bar/g' filename
+s is used to replace the found expression "foo" with "bar"
+g stands for "global", meaning to do this for the whole line. If you leave off the g and "foo" appears twice on the same line, only the first "foo" is changed to "bar".
+-i option is used to edit in place on filename.
+-e option indicates a command to run.
 
 cat file_name
 imprimir um arquivo no console
