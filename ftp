@@ -1,31 +1,34 @@
-# start ftp client
 ftp
+start ftp client
 
-# connect to a ftp
 ftp> open test.talia.net
 ftp test.talia.net
+connect to a host
 
-# list of ftp servers to test
 ftp://speedtest.tele2.net/
 test.talia.net
+ftp servers to test
 
-# user and password
 anonymous
 email
+user and password
 
-# login
 user
+login
 
-# list files
+list files
 ls
 
-# download file
 get file
 get file_src file_dst
 get file_src dir_a/file_b
+download file
 
-# download serveral files
-mget
+mget *
+download serveral files
 
-# Toggles prompting. Ftp prompts during multiple file transfers to allow you to selectively retrieve or store files; mget and mput transfer all files if prompting is turned off. By default, prompting is on.
 prompt
+Toggles prompting. Ftp prompts during multiple file transfers to allow you to selectively retrieve or store files; mget and mput transfer all files if prompting is turned off. By default, prompting is on.
+
+local print work directory
+!pwd

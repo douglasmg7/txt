@@ -15,3 +15,6 @@ find / -type f -mtime -7
 
 # 10 minutos atrás
 find / -mmin -10
+
+# find directory
+find / -name <name> -type d

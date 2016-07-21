@@ -6,3 +6,6 @@ menu configuration
 /usr/share/applications
 ~/.local/share/applications
 files for menu entry
+
+icons
+/usr/share/icons
