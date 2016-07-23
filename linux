@@ -472,3 +472,21 @@ tail -1		# print one end line
 
 awk 'NR==2'
 print second line
+
+bc
+arbitrary precision calculator language
+bc 	# go interactive
+bc <<< 'scale=2; 100/3' 	# 33.33
+
+
+youtube-dl https://www.youtube.com/watch?v=iRYvuS9OxdA
+download youtube video
+
+youtube-dl --list-formats https://www.youtube.com/watch?v=iRYvuS9OxdA
+list available formats
+
+youtube-dl -f 18 https://www.youtube.com/watch?v=iRYvuS9OxdA
+download a preferred file format
+
+youtube-dl -a youtube_links.txt
+download a alist of videos on file youtube_links.txt

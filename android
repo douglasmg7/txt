@@ -1,9 +1,14 @@
-apt-get install gphotofs
-mkdir ~/mobile
-# on android set Connect as Camera (PTP)
-gphotofs ~/mobile
-# before disconnect, close the file browser and
-fusermount -u ~/mobile
-
 apt-get install lib32z1 lib32z1-dev lib32stdc++6 zliblg lib64z1
 for gradle errors
+
+install program
+apt-get install gphotofs
+
+connect to mobile
+$ mkdir ~/mobile
+on mobile set Connect as Camera MTP or PTP
+mount
+$ gphotofs ~/mobile
+
+before disconnect, close the file browser or terminal
+$ fusermount -u ~/mobile
