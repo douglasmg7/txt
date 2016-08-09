@@ -632,3 +632,7 @@ git checkout <branch_name>
 # rebase
 	* to create a linear history
 
+git commit -m "Fixes #1"
+will automaticaly close the github issue
+	"fixes", "closes" or "resolves" word in a message will close the issue
+
