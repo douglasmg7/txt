@@ -653,6 +653,24 @@ echo th{e,a}n 	# then than
 echo {1..9}			# 1 2 3 4 5 6 7 8 9
 echo {0..1}{0..4} 	# 00 01 02 03 04 10 11 12 13 14
 
+# for
+for file in *.mp3
+do rm "$file"
+done
+
+for i in 10 9 8 7 6 5 4 3 2 1
+do echo "$i empty cups of juice."
+done
+
+for i in {10..1}
+do echo "$i empty cups of juice."
+done
+
+# create array
+names=("Bob" "Peter" "$USER" "Big Bad Jonhn")
+names=([0]="Bob" [1]="Peter" [20]="$USER" [21]="Big Bad Jonhn")
+names[0]="Bob"
+photos=(*.jpg)
 
 continue
-15. Conditional Loops (while, until and for)
+18. Using Arrays
