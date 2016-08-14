@@ -490,3 +490,12 @@ download a preferred file format
 
 youtube-dl -a youtube_links.txt
 download a alist of videos on file youtube_links.txt
+
+setterm -reset
+setterm -foreground cyan
+setterm -background yellow
+setterm -inversescreen on
+change terminal colors
+
+cat /etc/passwd | grep root
+user's shell cofigured for root
