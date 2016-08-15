@@ -111,8 +111,8 @@ vai para a pasta de um usuário espcífico
 cd "$(find -name ofic* -quit)"
 use find as argument
 
-mkdir -p <directory>
-create dir, no error if exist
+mkdir -p dir1/sub1/sub2
+create directories and subdirectories
 
 file file_name
 lista o tipo do arquivo
@@ -136,6 +136,12 @@ remove o diretório
 
 cp -u *.txt dir_destino
 copia todos os aqruivos que não existem ou são mais novos
+
+cp -i a.txt b.txt
+ask if you want overwrite hte file
+
+cp -R dir_a/ dir_b/
+copy all files
 
 mv a.txt b.txt
 rename a file
@@ -182,6 +188,7 @@ sudo date -s "11 APR 2014 07:34:00"
 configurar a data
 
 man ls
+man 1 ls
 mostra a documentação do comando ls
 
 ls -h ou ls --help
@@ -196,11 +203,16 @@ mostra informações do arquivo
 
 ls
 -F mostra o tipo do arquivo / diretório * executavel, @ symbolic link, % whiteout, = socket, | FIFO
--d fazer uma pesquisa por pattern * qualquer string, ? um único caracter, [] lista de caracter
+-R recursive - show directory content
+-d list name directory, no the content directory
 -t order by date
 -tr order by reverse date
 -a list hide files
 -l list in long format
+-i inode number
+
+ls -l --time=atime a.txt
+show access time instead change time
 
 pwd
 print working directory
@@ -245,6 +257,15 @@ g stands for "global", meaning to do this for the whole line. If you leave off t
 
 cat file_name
 imprimir um arquivo no console
+-n print line number
+-b print no empty line nuber
+
+more file_name
+imprimir um arquivo no console
+
+less file_name
+imprimir um arquivo no console
+fast for big files
 
 cat > a.txt
 bla bla <c-d><c-d>
@@ -292,22 +313,30 @@ cpu info
 cat /proc/meminfo
 memory info
 
-top
+top (f to setup)
 htop (improved top)
 gnome-system-monitor
 cpu and memory use
 
-ps - report a snapshot of the current processes
-ps -e 	list processes - standard syntax
+ps
+report a snapshot of the current processes
+-e show all precess
+-f full format listing
+-l long format output
 ps aux	list processes - BSD syntax
+ps li list processes - BSD syntax
 ps -p 48 	list process by id
 
 pgrep firefox
 get pid of firefox process
 
 kill 1254
-send a term signal to the process
+kill -15 1254
+send a term(15) signal to the process
 this allows the program to perform clean-up operations and exit smoothly
+
+kill -l
+list signal names
 
 kill -KILL 4545
 send to kernel, which shuts down the process
@@ -370,6 +399,9 @@ change timestamps file, if not exist create the file
 
 touch text-{a,b,c}.txt
 create files: text-a.txt, text-b.txt, text-c.txt
+
+touch -a file.txt
+change only the access time
 
 dmesg
 hardware error messages
@@ -465,13 +497,33 @@ ping -c 3 -W 1 1.1.1.1
 -c count
 -W timeout
 
-cat file | head -3 | tail -1
+head -3 file_name | tail -1
 select the 3th line
 head -3  	# print tree first lines
 tail -1		# print one end line
 
+tail -f file_name
+update, good to view log files
+
+colrm 100
+show the first 100 column for each line
+
+cut -f1 -d: file_name
+	f1	fild to extract
+	-		delimiter
+cut -c44-50
+	print 44 column to 50
+cut -c44-
+	print 44 column to end
+
+awk
+'condition {action}'
+dpkg -l | awk ' /'vim'/ {print $2}'
+	print second column from line with 'vim'
+ps -f | awk '{print $2, $8}'
+	print column 2 and 8
 awk 'NR==2'
-print second line
+	print second line
 
 bc
 arbitrary precision calculator language
@@ -499,3 +551,7 @@ change terminal colors
 
 cat /etc/passwd | grep root
 user's shell cofigured for root
+
+file globbing
+metacharacter wildcard
+*, ?, [], !
