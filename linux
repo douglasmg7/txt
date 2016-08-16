@@ -246,6 +246,11 @@ grep -R Arctic /home
 grep -Rl Arctic /home
 searches all files in a directory
 
+ps -eF | egrep "UID|bash"
+grep -E 'word1|word2' *.doc
+grep -e string1 -e string2 *.pl
+search for two words
+
 sed
 stream editor, but can edit files directly too
 
@@ -338,12 +343,15 @@ this allows the program to perform clean-up operations and exit smoothly
 kill -l
 list signal names
 
+kill -SIGKILL 4545
 kill -KILL 4545
+kill KILL 4545
+kill -9 4545
 send to kernel, which shuts down the process
 this is used to bypass programs that ignore the signals sent to them
 
-killall firefox
-send a term signal to all process instance
+killall http*
+kill all processes that start with http
 
 lscpu - list cpu
 lsusb - list usbs
@@ -358,6 +366,17 @@ show who is logged
 
 sudo fdisk -l
 list partition table
+
+mount
+list media devices currently mounted
+
+mount -t type device directory
+mount -t vfat /dev/sdb1 /media/disk
+mount a media device
+
+unmount a device
+umount [directory | device]
+umount /home/rich/mnt
 
 sudo umount -fl /dev/sdb1
 unmount
@@ -483,7 +502,10 @@ sort -hr
 sort lines
 -h --human-numeric-sort (2K 1G)
 -r --reverse
-
+-n recognize numbers as numbers
+-M --month-sort
+-t --field-separator
+-k --key 	position
 
 run a program in a modified environment
 env <program>
@@ -555,3 +577,11 @@ user's shell cofigured for root
 file globbing
 metacharacter wildcard
 *, ?, [], !
+
+open program in background
+xterm &
+
+suspend a program and put in backgroun
+xterm
+[ctrl + z]
+bg
