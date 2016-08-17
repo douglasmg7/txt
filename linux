@@ -232,33 +232,35 @@ view the value of USER enviroment variable
 ls | grep java
 obtem todas as linha que contem java
 
-grep
-stands for global regular expression print
+grep - global regular expression print
+	-i  enable case insensitive
+	-q  silent mode - return 0 if match
+	-v  output lines that don't match the pattern
+	-n  show line nuber
+	-c  count number of lines
+	-e  specify more than one matching pattern
 
-grep -i mount
-enable case insensitive
+	searches all files in a directory
+		grep -R Arctic /home
+		grep -Rl Arctic /home
 
-grep -q good file
--q silent mode
-return 0 if match
+	more than one pattern
+		egrep "UID|bash" file
+		grep -E 'word1|word2' file
+		grep -e string1 -e string2 file
 
-grep -R Arctic /home
-grep -Rl Arctic /home
-searches all files in a directory
+egrep - offshoot of grep
+	allows you to specify POSIX extended regular expressions, which contain more characters for specifying the matching pattern
 
-ps -eF | egrep "UID|bash"
-grep -E 'word1|word2' *.doc
-grep -e string1 -e string2 *.pl
-search for two words
+fgrep - offshoot of grep
+	allows you to specify matching patterns as a list of fi xed-string values, separated by newline characters
 
-sed
-stream editor, but can edit files directly too
-
-sed -i -e 's/foo/bar/g' filename
-s is used to replace the found expression "foo" with "bar"
-g stands for "global", meaning to do this for the whole line. If you leave off the g and "foo" appears twice on the same line, only the first "foo" is changed to "bar".
--i option is used to edit in place on filename.
--e option indicates a command to run.
+sed - stream editor, but can edit files directly too
+	sed -i -e 's/foo/bar/g' filename
+	s is used to replace the found expression "foo" with "bar"
+	g stands for "global", meaning to do this for the whole line. If you leave off the g and "foo" appears twice on the same line, only the first "foo" is changed to "bar".
+	-i option is used to edit in place on filename.
+	-e option indicates a command to run.
 
 cat file_name
 imprimir um arquivo no console
