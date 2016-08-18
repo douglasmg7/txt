@@ -22,3 +22,27 @@ select database();
 ver base de dados sendo utilizada
 
 show tables;
+
+describe table_a
+	show structure of a table
+
+mysql -u user -p password -h hostname database
+	no space between -p and password
+
+pager less
+	show like less
+
+pager script_name
+	process output by a script (ex: grep t)
+
+nopager
+	disable page
+
+edit
+	open vi to edit command
+
+using script
+	mysql < batch-file
+	mysql < batch-file > mysql.out
+	mysql < batch-file | more
+	mysql -h host -u user -p < batch-file
