@@ -1,23 +1,24 @@
 ftp
-start ftp client
+ -p  start ftp client using passive mode, avoid firewall
+ -i  prompt off
 
-ftp> open test.talia.net
-ftp test.talia.net
-connect to a host
+open test.talia.net
+	connect to a host
 
-ftp://speedtest.tele2.net/
-test.talia.net
-ftp servers to test
-
-anonymous
-email
-user and password
+ftp to test commands
+	speedtest.tele2.net/
+	test.talia.net
 
 user
-login
+	anonymous
+password
+	email
 
-list files
-ls
+user
+	to login
+
+ls	
+	list files
 
 get file
 get file_src file_dst
@@ -30,5 +31,12 @@ download serveral files
 prompt
 Toggles prompting. Ftp prompts during multiple file transfers to allow you to selectively retrieve or store files; mget and mput transfer all files if prompting is turned off. By default, prompting is on.
 
-local print work directory
-!pwd
+!
+	use for local commands
+	!pwd
+
+lcd
+	change local working directory
+
+prompt
+	turn on, off request for yes or no
