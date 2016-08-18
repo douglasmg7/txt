@@ -167,13 +167,17 @@ adiciona uma caminho na variável de ambiente
 ./
 You need the ./ bit to tell the shell where the executable is, since the current directory is unlikely to be in $PATH.
 
+tar - archiving utility
+	-z redirects to gzip (.gz)
+	-j redirects to bzip2 (.bz2)
+	-f use archive
+	-x extract
+	-v verbose
+	-c create
+	-t list but not extract
+
 tar -xzvf file_name.tar.gz
 tar -jxf file.tar.bz2
--z gzip
--j bz2
--f use archive
--x extract
--v verbose
 
 gzip -d <file>
 extract .gz files
@@ -202,14 +206,14 @@ stat file
 mostra informações do arquivo
 
 ls
--F mostra o tipo do arquivo / diretório * executavel, @ symbolic link, % whiteout, = socket, | FIFO
--R recursive - show directory content
--d list name directory, no the content directory
--t order by date
--tr order by reverse date
--a list hide files
--l list in long format
--i inode number
+	-F mostra o tipo do arquivo / diretório * executavel, @ symbolic link, % whiteout, = socket, | FIFO
+	-R recursive - show directory content
+	-d list name directory, no the content directory
+	-t order by date
+	-tr order by reverse date
+	-a list hide files
+	-l list in long format
+	-i inode number
 
 ls -l --time=atime a.txt
 show access time instead change time
@@ -239,6 +243,7 @@ grep - global regular expression print
 	-n  show line nuber
 	-c  count number of lines
 	-e  specify more than one matching pattern
+	-w  exactly match word surround by by non-word constituent character
 
 	searches all files in a directory
 		grep -R Arctic /home
@@ -326,13 +331,15 @@ gnome-system-monitor
 cpu and memory use
 
 ps
-report a snapshot of the current processes
--e show all precess
--f full format listing
--l long format output
-ps aux	list processes - BSD syntax
-ps li list processes - BSD syntax
-ps -p 48 	list process by id
+	report a snapshot of the current processes
+	-e show all precess
+	-f full format listing
+	-F full format listing (another)
+	-l long format output
+	--forest show subshell tree
+	ps aux	list processes - BSD syntax
+	ps li list processes - BSD syntax
+	ps -p 48 	list process by id
 
 pgrep firefox
 get pid of firefox process
@@ -587,3 +594,12 @@ suspend a program and put in backgroun
 xterm
 [ctrl + z]
 bg
+
+sh
+default system shell
+usally bin/sh -> bash
+
+dash
+start a dash shell
+
+subshell is a child shell
