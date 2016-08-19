@@ -672,5 +672,25 @@ names=([0]="Bob" [1]="Peter" [20]="$USER" [21]="Big Bad Jonhn")
 names[0]="Bob"
 photos=(*.jpg)
 
+(sleep 2 ; ls)
+	process list
+	() create a subshell 
+
+coproc sleep 2
+	spawns a subshell in background mode and executes a command within that subshell
+
+coproc My_Job { sleep 10; }
+	give a name to a job
+
+$BASH_SUBSHELL
+	number of subshell running
+
+background mode
+	allow the command to be processed and frees up your cli for other use
+
+built-in vs external command
+	echo - call the built-in command (when there is a built-in command)
+	/bin/echo - call the external program
+
 continue
 18. Using Arrays

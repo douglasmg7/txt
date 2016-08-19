@@ -155,14 +155,18 @@ cria um symbolic link
 cp /var/* .
 copia tudo para o diretório atual
 
-type cp
-mostra o tipo do comando, -a mostra todos em vez de mostrar somente o primeiro
+type -a cp
+	mostra o tipo do comando, -a mostra todos em vez de mostrar somente o primeiro
+	show all if have a built-in shell command and a external program
 
 which ls
 mostra a localização do comando
 
 PATH=$PATH:"/var"
-adiciona uma caminho na variável de ambiente
+	adiciona uma caminho na variável de ambiente
+
+PATH=$PATH:.
+	put current directoy into path
 
 ./
 You need the ./ bit to tell the shell where the executable is, since the current directory is unlikely to be in $PATH.
@@ -221,17 +225,21 @@ show access time instead change time
 pwd
 print working directory
 
+env
 printenv
-view ao enviroment variables
+	view ao global enviroment variables
 
 printenv USER
-view the value of USER enviroment variable
+	view the value of USER enviroment variable
 
 set
-view all enviroment variables, shell variables and functions variables
+	view all enviroment variables (local, global, user-defined), shell variables and functions variables
 
 echo $USER
 view the value of USER enviroment variable
+
+unset var_name
+	remove a variable
 
 ls | grep java
 obtem todas as linha que contem java
@@ -362,6 +370,10 @@ this is used to bypass programs that ignore the signals sent to them
 killall http*
 kill all processes that start with http
 
+jobs
+	list process in background for current shell
+	-l list PID
+
 lscpu - list cpu
 lsusb - list usbs
 lsscsi - list scsis
@@ -481,10 +493,18 @@ journalctl --unit=bash
 show error msg from porcess bash
 
 history
-list history of commands used
+	list history of commands used
+	-a force the history command to be writen, before exit the shell
+	-n force the .bash_history to be read
 
 !1234
-re-use history command 1234
+	re-use history command 1234
+
+!!
+	re-use the last command
+
+~/.bash_history
+	keep the history command
 
 du -shc *
 size content directory
@@ -603,3 +623,10 @@ dash
 start a dash shell
 
 subshell is a child shell
+
+alias ls='ls -l'
+	create a alias
+	-p show list of created alias
+
+bash
+	spawn a subshell
