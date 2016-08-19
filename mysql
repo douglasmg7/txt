@@ -1,14 +1,33 @@
+apt-get install mysql-server
+	install server
+
+apt-get install mysql-client
+	install client
+
 root
 saladino
 
-sudo service mysql status
-sudo service mysql stop
-sudo service mysql start
-sudo service mysql restart
+set password for root@localhost = password('saladino');
+	change password
 
-mysql -u root -p
+service mysql status
+service mysql stop
+service mysql start
+service mysql restart
+
+mysql -h host -u root -p
+mysql -h host -u root -p database
+mysql -u root -psaladino -h localhost
 
 select version();
+select current_date;
+select version(), current_date;
+select now();
+select user();
+
+\c
+	cancel a query
+	select * from\c
 
 quit
 
@@ -19,11 +38,14 @@ create database test;
 use test;
 
 select database();
-ver base de dados sendo utilizada
+	see database in use
 
 show tables;
 
+GRANT ALL ON menagerie.* TO 'your_mysql_name'@'your_client_host';
+
 describe table_a
+desc table_a
 	show structure of a table
 
 mysql -u user -p password -h hostname database
@@ -38,6 +60,9 @@ pager script_name
 nopager
 	disable page
 
+status
+	show status
+
 edit
 	open vi to edit command
 
@@ -46,3 +71,13 @@ using script
 	mysql < batch-file > mysql.out
 	mysql < batch-file | more
 	mysql -h host -u user -p < batch-file
+	mysql> source file_name
+	mysql> \. file_name
+
+mysql -t
+	to get the interactive output format in batch mode
+
+mysql -v
+	to echo to the output the statements that are executed in batch
+
+create table pet (name varchar(20), owner varchar(20), species varchar(20), sex char(1), birth date);
