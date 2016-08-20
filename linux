@@ -600,8 +600,11 @@ setterm -background yellow
 setterm -inversescreen on
 change terminal colors
 
-cat /etc/passwd | grep root
-user's shell cofigured for root
+/etc/passwd
+	match login name to a corresponding UID
+
+useradd -D
+	show system default
 
 file globbing
 metacharacter wildcard

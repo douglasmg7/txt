@@ -667,10 +667,12 @@ do echo "$i empty cups of juice."
 done
 
 # create array
-names=("Bob" "Peter" "$USER" "Big Bad Jonhn")
-names=([0]="Bob" [1]="Peter" [20]="$USER" [21]="Big Bad Jonhn")
-names[0]="Bob"
+names=(Bob Peter $USER Big "Bad Jonhn")
+names=([0]=Bob [1]=Peter [20]=$USER [21]="Big Bad Jonhn")
+names[0]=Bob
 photos=(*.jpg)
+echo ${name[1]}
+echo ${name[*]}
 
 (sleep 2 ; ls)
 	process list
