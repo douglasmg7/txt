@@ -715,7 +715,97 @@ var4=$[$var1 * ($var2 - $var3)]
 zsh
 	shell that suport full floating-point
 
+bc -q 
+	bash calculator
+variable=$(echo "scale=4; 3.44 / 5 " | bc)
 
+var5=$(bc << EOF
+scale = 4
+a1 = ( $var1 * $var2)
+b1 = ($var3 * $var4)
+a1 + b1
+EOF
+)
+	the EOF text string indicates the beginning and end of the inline redirection data
 
-continue
-18. Using Arrays
+if pwd
+then
+	echo "It worked"
+else
+	echo "Not worked"
+fi
+
+if pwd; then
+	echo "It worked"
+elif ls -d /etc; then
+	echo "It worked"
+else
+	echo "not worked"
+fi
+
+if verify the exit code command
+
+test $my_variable
+	return 0 if hava some value
+
+if [ 3 -gt 7 ]
+test 3 -gt 7
+numeric comparasions
+  -eq, -ge, -gt, -le, -lt. -ne
+string comparasions
+ 	=, !=, \<, \>, -n (length greater than zero), -z (length of zero)
+
+-d
+	file exists and is a directory
+
+-e
+	file exists
+
+-f
+	file exists and is a file
+
+-r 
+	file exists and is readable
+
+-s 
+	file exists and is not empry
+
+-w
+	file exists and is writable
+
+-x
+	file exists and is executable
+
+-O
+	file exists and is owned by the current user
+
+-G
+	file exists and the default group is the same as the current user
+
+file1 -nt file2
+	file1 is newer thean file2
+
+file1 -ot file2
+	file1 is older thean file2
+
+if [[ @USER == r* ]]
+	[[]] accept regular expression, [] not accept
+
+case variable in
+pattern1 | pattern2) commands1;;
+pattern3) commands2;;
+*) default commands;;
+esac
+	switch case
+
+case $USER in
+rich | barbara)
+echo "Welcome, $USER"
+echo "Please enjoy your visit";;
+testing)
+echo "Special testing account";;
+jessica)
+echo "Do not forget to log off when you're done";;
+*)
+echo "Sorry, you are not allowed here";;
+esac

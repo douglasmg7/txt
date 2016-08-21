@@ -73,8 +73,6 @@ if (theDay instanceof Date) {
   // statements to execute
 }
 
-for(var key in object)
-
 create a method
 var setValue(value) = {this.value = value}
 obj.setValue = setValue

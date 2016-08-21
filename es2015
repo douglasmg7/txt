@@ -145,7 +145,7 @@ maps can be used with for of
 let user = {};
 let comment = {};
 let mapSettings = new WeakMap();
-mapSettings.set(user. 'user');
+mapSettings.set(user, 'user');
 mapSettings.set(comment, 'comment');
 weak map can be used only with key object
 is not iterable, can't use for of

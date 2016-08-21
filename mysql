@@ -74,7 +74,17 @@ using script
 	mysql> source file_name
 	mysql> \. file_name
 
+keep password out from batch
+	create file ~/.my.cnf
+		[client]
+		user=douglas
+		password=fox
+	chmod 600 ~/.my.cnf
+	mysql --defaults-file=/home/user_x/.my.cnf -h host_name data
+
 mysql -t
+	-t --table
+	tabular mode
 	to get the interactive output format in batch mode
 
 mysql -v

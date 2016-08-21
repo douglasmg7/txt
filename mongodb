@@ -1,20 +1,40 @@
-mongo
-start mongo shell
-looks for a database server listening on port 27017 on the localhost
-for diferente host and port use the options --port and --host
+/var/lib/mongodb
+	store mongodb instance
+
+/var/log/mongodb
+	log files
+
+/etc/mongod.conf
+	config files
+
+mongod
+	service
+
+mongo db_x
+	start mongo shell using database db_x
+	looks for a database server listening on port 27017 on the localhost
+	for diferente host and port use the options --port and --host
+
+find port
+	cat /etc/mongod.conf | grep port
+	lsof -i | grep mongo
 
 db
-display the current db
+	display the current db
 
 show dbs
-display the list of databases
+	display the list of databases
 
 use mydb
-switch to a new database named mydb
+	switch to a new database named mydb
+
+remove a db
+	use db_x
+	db.dropDatabase()
 
 help
-method.help()
-get mongo help
+	method.help()
+	get mongo help
 
 j = {l:3}
 db.testDb.insert(j)
@@ -22,12 +42,6 @@ create a document j and insert into testDb collection
 
 db.testDb.save({a:1})
 saves a document in the collection
-
-db.testDb.update(query, {$set: data});
-updates items that match query in with data object values
-
-db.testDb.remove(query)
-removes all items that match query criteria
 
 printjson(document)
 prints the variable document
