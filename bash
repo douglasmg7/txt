@@ -694,5 +694,28 @@ built-in vs external command
 	echo - call the built-in command (when there is a built-in command)
 	/bin/echo - call the external program
 
+echo -n message
+	no new line after echo
+
+${var_1}e
+	diferencie var_1 from var_1e
+
+v1=`date`
+v1=$(date)
+	put output from command into variable
+	command substitution characters
+
+expr 1 + 5
+expr 2 \* 2
+	expr command used processing mathematical equations
+
+var4=$[$var1 * ($var2 - $var3)]
+	$[] - expression
+
+zsh
+	shell that suport full floating-point
+
+
+
 continue
 18. Using Arrays

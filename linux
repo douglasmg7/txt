@@ -1,69 +1,81 @@
-login tty1 (virtual terminal)
 ctr + alt + f1
+	login tty1 (virtual terminal)
 
-go to gui
 ctr + alt + f7
+	go to gui
 
-/DPMS
-Debian Package Management System
+dpms
+	Debian Package Management System
 
-- apt
-A difference between APT and dpkg is that APT does not directly deal with
-.deb packages; instead, it manages software via the locations (repositories) specified in a configuration file. This file is the sources.list file.
+apt
+	A difference between apt and dpkg is that apt does not directly deal with .deb packages; instead, it manages software via the locations (repositories) specified in a configuration file. This file is the sources.list file.
 
-$ dpkg -l
-List all currently installed softwares.
-n
-$ dpkg -l bash
-Get basic information about the bash package.
+dpkg -l
+	list all currently installed softwares
 
-$ dpkg --print-avail
-Get detailed information about the bash package.
+dpkg -l bash
+	Get basic information about the bash package.
 
-$ dpkg -L bash
-$ dpkg-query -L bash
-Get list of files that comes with the bash package.
+dpkg --print-avail
+	show detailed information about the bash package.
 
-$dpkg -x file.deb
-extract a .deb file
+dpkg -L bash
+dpkg-query -L bash
+	list of files that comes with the bash package
 
-$ sudo dpkg --install lynx_2.8.6-2ubuntu2_i386.deb
-$ sudo dpkg --remove lynx
-Install and remove a .deb package.
+dpkg -x file.deb
+	extract a .deb file
+
+dpkg --install lynx_2.8.6-2ubuntu2_i386.deb
+dpkg --remove lynx
+	Install and remove a .deb package.
 
 dpkg-query -l
 dpkg --get-selections | grep -v deinstall
-list of packages installed
--v tag "inverts" grep to return non-matching lines
+	list of packages installed
+	-v tag "inverts" grep to return non-matching lines
 
-$ apt-get update
-refresh apt-get's cache of package information using the repository
-/etc/apt/sources.list
+dpkg --search absolute_file_name
+	find what package a particular file belongs to
 
-$ apt-get upgrade
-upgrade installed softwares.
+apt-get update
+	refresh apt-get's cache of package information using the repository
+	/etc/apt/sources.list
 
-$ apt-get update && apt-get upgrade
-Best way to use the commands.
+apt-get upgrade
+	upgrade installed softwares.
 
-$ apt-get dist-upgrade
-in addition to performing the function of upgrade, also intelligently handles changing dependencies with new versios of packages
-$ sudo apt-get install lynx
-$ sudo apt-get remove lynx
-$ sudo apt-get install lynx-
-$ sudo apt-get --purge remove lynx	// remove configuration files too.
-Insall a package called lynx and take care of any dependency issues.
+apt-get update && apt-get upgrade
+	best way to use the commands.
 
-$ apt-cache search slite3
-Pesquisar por pacotes
+pt-get dist-upgrade
+	in addition to performing the function of upgrade, also intelligently handles changing dependencies with new versios of packages
+apt-get install lynx
+apt-get remove lynx
+apt-get install lynx-
+apt-get --purge remove lynx
+	remove configuration files too.
+
+apt-cache search slite3
+	Pesquisar por pacotes
 
 apt-cache show torcs
-Hmmm... it seems interesting. But is this game not already installed on my computer? And what is the available version? Is it from Universe or main?
+	show info about a package
 
 apt-cache policy torcs
-Ok, so now, let's install it!
+	show policy about a package
 
-apt-get install torcs
+aptitude
+	show installed packages
+
+aptitude show package_name
+	display package details
+
+aptitude --search package_name
+	look for a package
+
+aptitude install package_name
+	install a package
 
 #
 indica que está logado como usuário root
@@ -385,39 +397,37 @@ count number of lines
 who
 show who is logged
 
-sudo fdisk -l
-list partition table
-
 mount
-list media devices currently mounted
+	list media devices currently mounted
 
 mount -t type device directory
 mount -t vfat /dev/sdb1 /media/disk
-mount a media device
+	mount a media device
 
-unmount a device
 umount [directory | device]
 umount /home/rich/mnt
+	unmount a device
 
-sudo umount -fl /dev/sdb1
-unmount
+umount -fl /dev/sdb1
+	unmount
 
-sudo fdisk /dev/sdb
-partition the disk sdb
+/etc/fstab
+	filesystem mount at boot time
 
-mkfs.ext3 /dev/sdb1
-mkfs.vflat /dev/sdb1
-format linux partition using ext2fs on the new disk
+fdisk -l
+	list partition table
 
-sudo eject /dev/sdb1
-eject the device
-The.Linux.Command.Line
+fdisk /dev/sdb
+	create partitions the disk sdb
 
-man -k '^print'
-find all point on man that begin with print
+mkfs.ext4 /dev/sdb1
+	create a ext4 filesystem on partition /dev/sdb1
+
+eject /dev/sdb1
+	eject the device
 
 man touch
-open manual for touch
+	open manual for touch
 
 apropos touch
 man -k touch
@@ -447,16 +457,23 @@ dmesg
 hardware error messages
 
 chmod 777 file-name
-change permission
+	change permission
 
-chown owner file-name
-change file permission
+chmod [ugoa][+-][rwxXstugo] file_name
+	u - owner
+	g - group
+	o - other
+	a - all above
+chmod u+x file_name
 
-chgrp group file-name
-change file name group
+chown owner file_name
+	change file owner
 
-chmod +x file
-make file executable
+chown owner.group file_name
+	change owner and group for file_name
+
+chgrp group file_name
+	change file group
 
 xdg-open file-name
 open a pdf
@@ -606,6 +623,75 @@ change terminal colors
 useradd -D
 	show system default
 
+useradd user_name -m
+	create a user_name 
+	-m use /etc/skel as template
+
+userdel -r user_name
+	remove user
+	-r remove /home/user_name
+
+usermod
+	change user account
+	-l changes the login name
+	-L locks the account
+	-U unlocks the account
+	-p change the password (avoid this, use passwd)
+
+passwd user_name
+	change the user_name password
+
+passwd
+	change current user password
+
+GID
+	group id
+	/etc/group is like /etc/passwd
+
+groupadd group_name
+	create a new group
+
+usermod -g group_name user_name
+	replace the default group for the user account
+
+usermod -G group_name user_name
+	add user to more one group
+
+groupmod -n new_name old_name 
+	change group name
+
+groupmod -g 1025 group_name
+	change GID
+
+groupdel group_name
+	remove a group
+
+group password allows a non-group member to temporarily become a member
+
+file permission symbols
+	- for files
+	d for directories
+	l for links
+	c for character devices
+	b for block device
+	n for network devices
+
+	r for read
+	w for write
+	x for execute
+
+	owner - group - everyone
+
+umask
+	shows the default permissions
+
+umask 022
+	sets the default permissions
+	0022 configured mask
+	666 file default
+	777 directory default
+	666 - 022 = 644 (file configured)
+
 file globbing
 metacharacter wildcard
 *, ?, [], !
@@ -633,3 +719,18 @@ alias ls='ls -l'
 
 bash
 	spawn a subshell
+
+install from source
+	unpack a software tarball with tar
+	read the README or AAAREADME file
+	./configure
+		check your linux system to ensure it has the proper library dependencies
+	make
+		compile the source code
+	make install
+		install it in a common location on your linux system
+
+
+
+
+
