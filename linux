@@ -730,7 +730,13 @@ install from source
 	make install
 		install it in a common location on your linux system
 
+xclip -selection c
+	ls | xclip -selection c
+	copy to clipboard
 
+readlink -f file_name
+realpath file_name
+	show full path name for file_name
 
 
 

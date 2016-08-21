@@ -1,2 +1,5 @@
 apt-get install galculator
-for xfce, no use of gnome
+	for xfce, no use of gnome
+
+xclip	
+	copy to clipboard
