@@ -753,3 +753,17 @@ realpath file_name
 
 gpg
 	encryption
+
+# Returns just the script’s name without the path
+basename /home/Christine/test5b.sh
+# -> test5b.sh
+
+shopt
+	# Show options status
+	# Change additional shell optional behavior.
+shopt -s nocaseglob
+	# (set) no case sensitive
+shopt -u nocaseglob
+	# (unset) case sensitive
+
+

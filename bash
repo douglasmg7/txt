@@ -310,11 +310,13 @@ $*, $@, $# etc..
 
 "$*"	
 echo "Arguments: $*"
+# Takes all the parameters supplied on the command line as a single word.
 # Expands a single string, joining all positional parameters into one, separated by the first character in IFS (by default, a space).
 # Note: You should never use this parameter unless you explicitly intend to join all the parameters. You almost always want to use @ instead.
 
 "$@"	
 rm "$@"	
+# Takes all the parameters supplied on the command line as separate words in the same string.
 # Expands the positional parameters as a list of separate arguments.
 bash -c 'echo "${@: -1}"' -- 1 2 'The Third'
 # The Third
@@ -322,6 +324,9 @@ bash -c 'echo "${@: -1}"' -- 1 2 'The Third'
 "$#"	
 echo "Count: $#"	
 # Expands into a number indicating the amount of positional parameters that are available.
+
+${!#}
+# Expands to the last parameter
 
 "$?"	
 (( $? == 0 )) || echo "Error: $?"		
@@ -809,3 +814,64 @@ echo "Do not forget to log off when you're done";;
 *)
 echo "Sorry, you are not allowed here";;
 esac
+
+# IFS - internal field separator
+#	the IFS environment variable defines a list of characters the bash shell uses as fi eld separators
+#	default (space, tab, new line)
+#	change IFS to new line only
+IFS=$'\n'
+#	newline, colon, semicolon, and double quotation mark 
+# IFS=$'\n':;"
+
+# best practice to change IFS
+IFS.OLD=$IFS
+IFS=$'\n'
+# use the new IFS value in code
+IFS=$IFS.OLD
+
+# for-loop
+for (( i=1; i <= 10; i++ ))
+do
+echo "The next number is $i"
+done
+
+# while-loop
+var1=10
+while [ $var1 -gt 0 ]
+do
+echo $var1
+var1=$[ $var1 - 1 ]
+done
+
+# until-loop
+# only the exit status of the last command determines if the bash shell executes the other commands defined
+var1=100
+until [ $var1 -eq 0 ]
+do
+echo $var1
+var1=$[ $var1 - 25 ]
+done
+
+# Processing the output of a loop.
+# Instead of displaying the results on the monitor, the shell redirects the results of the for command to the file output.txt.
+for file in /home/rich/* ; do
+	if [ -d "$file" ]; then
+		echo "$file is a directory"
+	elif
+		echo "$file is a file"
+	fi
+done > output.txt
+
+# piping a loop to another command
+for state in "North Dakota" Connecticut Illinois Alabama Tennessee ; do
+	echo "$state is the next place to go"
+done | sort
+
+# Process new user accounts
+# To feed the data from the file into the while command, you just use a redirection symbol at the end of the while command
+input="users.csv"
+while IFS=',' read -r userid name
+	do
+	echo "adding $userid"
+	useradd -c "$name" -m $userid
+done < "$input"
