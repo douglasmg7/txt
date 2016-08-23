@@ -9,3 +9,17 @@ files for menu entry
 
 icons
 /usr/share/icons
+
+xfce4-terminal --hide-menubar --hide-toolbar --hide-borders
+
+/etc/lightdm/lightdm.conf
+autologin-user=
+autologin-user-timeout=
+
+startx
+startxfce4
+start gui
+
+lightdm (xfce desktop manager)
+kdm (kde desktop manager)
+gdm (gnome desktop manager)

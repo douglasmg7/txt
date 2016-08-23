@@ -138,7 +138,7 @@ rm "/home/$a" 	# error message - try to remove '/home/ log'
 /dev/null
 
 # redirection
->		# output
+>		# input
 1>	# output
 2>	# error
 ls -l a b >out.txt	# error to display, result to out.txt
@@ -296,6 +296,7 @@ grep Name resgistrations.txt
 
 # set positional parameters
 set -- 'first argument' second third 'fourth argument'
+# -- instructs set to replace the command line parameter variables with the values on the set command’s command line.
 echo $1; echo $2; echo $3; echo $4
 
 # New First Argument Second Third Fourth Argument
@@ -875,3 +876,70 @@ while IFS=',' read -r userid name
 	echo "adding $userid"
 	useradd -c "$name" -m $userid
 done < "$input"
+
+# Shifts the command line parameters in their relative positions.
+shift 
+shift 2
+
+# Take a list of command line options and parameters.
+getopt ab:cd -a -b test1 -cde test2 test3
+# -> -a -b test1 -c -d -- test2 test3
+# ':', option need a parameter
+# -q  omit error message
+
+# Processing options and parameters
+set -- $(getopt -q ab:cd "$@")
+while [ -n "$1" ]
+do
+	case "$1" in
+	  -a) echo "Found the -a option" ;;
+	  -b) param="$2"
+	      echo "Found the -b option, with parameter value $param"
+	      shift ;;
+	  -c) echo "Found the -c option" ;;
+	  --) shift
+	      break ;;
+	  *) echo "$1 is not an option";;
+	esac
+	shift
+done
+#
+count=1
+for param in "$@"
+do
+	echo "Parameter #$count: $param"
+	count=$[ $count + 1 ]
+done
+
+# getopts (plural), a bether getopt
+# getopts optstring variable
+# start optionstring with ':', to suppress error message
+# OPTARG environment variable contains the value to be used if an option requires a parameter value
+# OPTIND environment variable contains the value of the current location within the parameter list where getopts left off
+while getopts :ab:c opt
+do
+	case "$opt" in
+		a) echo "Found the -a option" ;;
+		b) echo "Found the -b option, with value $OPTARG";;
+		c) echo "Found the -c option" ;;
+		*) echo "Unknown option: $opt";;
+	esac
+done
+
+# Common Linux Command Line Options
+# -a Shows all objects
+# -c Produces a count
+# -d Specifi es a directory
+# -e Expands an object
+# -f Specifi es a fi le to read data from
+# -h Displays a help message for the command
+# -i Ignores text case
+# -l Produces a long format version of the output
+# -n Uses a non-interactive (batch) mode
+# -o Specifi es an output fi le to redirect all output to
+# -q Runs in quiet mode
+# -r Processes directories and fi les recursively
+# -s Runs in silent mode
+# -v Produces verbose output
+# -x Excludes an object
+# -y Answers yes to all questions

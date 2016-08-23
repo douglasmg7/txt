@@ -520,8 +520,22 @@ history
 !!
 	re-use the last command
 
+!?cl
+	look history for command with cl
+
+!cl
+	execute clear again
+
 ~/.bash_history
 	keep the history command
+
+	# look for history command
+ctr+r
+	# enter reverse search
+ctr+r
+	# to choose the command
+return
+	# execute the comand	
 
 du -shc *
 size content directory
@@ -766,4 +780,45 @@ shopt -s nocaseglob
 shopt -u nocaseglob
 	# (unset) case sensitive
 
+fold -w 80 file_name
+	# wrap with 80 width
 
+rcconf
+update-rc.d
+file-rc
+	# utilities to manage your startup or init scripts
+
+update-rc.d firewall start 20 2 3 4 5 . stop 20 0 1 6 .
+	# serviço firewall
+	# ordem 20 (S20firewall)
+	# runlevel
+
+update-rc.d firewall defaults [NN | NN-start NN-stop]
+	# will make links to start the service in runlevels 2345 and to stop the service in runlevels 016. By     default  all the links will have sequence number 20, but this should be overridden if there are dependencies
+
+update-rc.d firewall defaults
+update-rc.d firewall defaults 20
+update-rc.d firewall defaults 20 20
+update-rc.d firewall start 20 2 3 4 5 . stop 20 0 1 6 .
+	# equivalent
+
+update-rc.d -f firewall remove		
+	# remove symbolic links from rcN.d
+
+update-rc.d -n firewall remove
+	# simulate the command, but don't do nothing
+
+/etc/init.d/rc.local
+	# put your personal scripts
+
+/etc/init.d
+	# files in /etc/init.d are shell scripts that respond to start, stop, restart, and (when supported) reload commands to manage a particular service. These scripts can be invoked directly or (most commonly) via some other trigger (typically the presence of a symbolic link in /etc/rc?.d/). 
+
+init
+	# init program, the first process that is run when the kernel has finished initializing
+
+/etc/init
+	# contains configuration files used by Upstart. Upstart is a young service management package championed by Ubuntu. Files in /etc/init are configuration files telling Upstart how and when to start, stop, reload the configuration, or query the status of a service. As of lucid, Ubuntu is transitioning from SysVinit to Upstart, which explains why many services come with SysVinit scripts even though Upstart configuration files are preferred. In fact, the SysVinit scripts are processed by a compatibility layer in Upstart.
+
+.d 
+	# in directory names typically indicates a directory containing many configuration files or scripts for a particular situation (e.g. /etc/apt/sources.list.d contains files that are concatenated to make a virtual sources.list; /etc/network/if-up.d contains scripts that are executed when a network interface is activated). This structure is usually used when each entry in the directory is provided by a different source, so that each package can deposit its own plug-in without having to parse a single configuration file to reference itself. In this case, it just happens that “init” is a logical name for the directory, SysVinit came first and used init.d, and Upstart used plain init for a directory with a similar purpose (it would have been more “mainstream”, and perhaps less arrogant, if they'd used /etc/upstart.d instead).

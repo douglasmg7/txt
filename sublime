@@ -127,3 +127,6 @@ create build
 
 ctrl+k, ctrl+c
 show at center
+
+shift + lbm
+block selection

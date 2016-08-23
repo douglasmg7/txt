@@ -51,8 +51,14 @@ desc table_a
 mysql -u user -p password -h hostname database
 	no space between -p and password
 
+select * from table_name\G
+	show field by line
+
 pager less
 	show like less
+
+pager less -SFX
+	show like less, no tabular distorsion
 
 pager script_name
 	process output by a script (ex: grep t)
@@ -91,3 +97,4 @@ mysql -v
 	to echo to the output the statements that are executed in batch
 
 create table pet (name varchar(20), owner varchar(20), species varchar(20), sex char(1), birth date);
+
