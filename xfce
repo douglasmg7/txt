@@ -23,3 +23,18 @@ start gui
 lightdm (xfce desktop manager)
 kdm (kde desktop manager)
 gdm (gnome desktop manager)
+
+alt+rmb
+# resize window
+
+alt+f7
+# move window
+
+alt+f9
+# hide window
+
+shift+alt-page_down
+# switch window
+
+ctrl+alt+d
+# shoe desktop

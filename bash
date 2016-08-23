@@ -357,6 +357,8 @@ echo "A data é `date`"
 
 # write user input do variable tmp
 read tmp
+read -p "Please enter your age: " age
+	# -p message
 
 # to use escape sequence
 printf "Oi\nBeleza\n"
