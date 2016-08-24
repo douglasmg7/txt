@@ -138,16 +138,29 @@ rm "/home/$a" 	# error message - try to remove '/home/ log'
 /dev/null
 
 # redirection
->		# input
-1>	# output
-2>	# error
-ls -l a b >out.txt	# error to display, result to out.txt
+# At begin
+# fd0 STDIN (keyboard)
+# fd1 STDOUT (monitor)
+# fd2 STDERR (monitor)
+
+<				# fd0
+>file 	# fd1 to file
+1>file	# fd1 to file
+2>file	# fd2 to file
+&>file  # fd1 and fd2 to file
+echo 'blá' >&2			# redirect to fd2
+exec 1>file 	# permanent redirection (using in script) STDOUT to file
+exec 6<&0			# fd6 point to fd0 (input)
+exec 0< testfile  # fd0 from testfile
+exec 0<&6 		# fd0 from input again
+
+ls -l a b >out.txt							# error to display, result to out.txt
 ls -l a b >out.txt 2>/dev/null	# error to file /dev/null , result to out.txt
 ls -l a b >out.txt 2>out.txt		# wrong - mix the output
 ls -l a b >out.txt 2>&1					# correct - 2>&1 as make FD 2 write(>) to where FD(&) 1 is currently writing
 ls -l a b 2>&1 >output.txt			# error - 2>&1 point to display, because &1 still point to display when configured (left to right)
 ping 127.0.0.1 >>result 				# append
-ping 127.0.0.1 &>results				# truncate - make both FD 1 (standard output) and FD 2 (standard error) write to file
+ping 127.0.0.1 &>results				# truncate - make both FD 1 (standard output) and FD 2 (standard error) write to file (error are print first and together)
 ping 127.0.0.1 &>>results				# append - make both FD 1 (standard output) and FD 2 (standard error) write to file
 [x]>&-		# stream is disconnected from file descriptor x and the file descriptor is removed from the process
 [x]<&-		# stream is disconnected from file descriptor x and the file descriptor is removed from the process
@@ -364,6 +377,15 @@ read -n1 -p "Enter your name"  # data place in REPLY
 	# -t if not receive data in 5 second, exit with non-zero status
 	# -n? wait for ? numbers characters (no need enter)
 	# -s not display the data entered on monitor
+
+# reading data from a file
+count=1
+cat test | while read line
+do
+	echo "Line $count: $line"
+	count=$[ $count + 1]
+done
+echo "Finished processing the file"
 
 # to use escape sequence
 printf "Oi\nBeleza\n"

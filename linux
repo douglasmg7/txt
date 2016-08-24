@@ -107,9 +107,9 @@ obtem a data do sistema
 /usr/share - Items that might be common to multiple systems.
 /var - System-specific data and configuration files.
 
-date "APR 21 2013 21:47:00"
+date -s "11 APR 2014 07:34:00"
 date +%T -s "10:13:13"
-Configurar a data
+	# configure system time
 
 free
 mémoria ram livre
@@ -203,9 +203,6 @@ extract .zip files
 
 unrar x <file>
 extract .rar files
-
-sudo date -s "11 APR 2014 07:34:00"
-configurar a data
 
 man ls
 man 1 ls
@@ -316,8 +313,27 @@ linux version
 dpkg-reconfigure keyboard-configuration
 keyboard configuration
 
+iw
+	# configuration utility for wireless devices
+iw dev wlan0 scan | grep SSID
+iw wlan0 scan | grep SSID
+	# scan wifi network (su)
+iw dev
+	# list all the connected WiFi adapters
+iw wlan0 link
+	# check connection status
+
+ip
+	# show / manipulate routing, devices, policy routing and tunnels
+ip link show wlan0
+	# show status wlan0
+ip link set wlan0 up
+	# bring up wlan0
 ip a
+
 iwconfig
+	# deprecated, use iw instead
+
 find wireless interface
 
 iwlist scan
@@ -330,13 +346,38 @@ ifup wlan0
 start interface wla0
 
 wpa_passphrase my-ssid password
-create password to use into /etc/network/interface
+	# create password to use into /etc/network/interface or /etc/wpa_supplicant.conf
+wpa_passphrase ssid > file_out 
+password
+	# create password into file_out
 
-/etc/network/interface expemple
-auto wlan0
-iface wlan0 inet dhcp
-	wpa-ssid Vivo WiFi
-	wpa-psk as38492039asfkjalskfdj348390adflakjd
+# /etc/network/interface example
+# auto wlan0
+# iface wlan0 inet dhcp
+# 	wpa-ssid Vivo WiFi
+# 	wpa-psk as38492039asfkjalskfdj348390adflakjd
+
+# /etc/wpa_supplicant.conf example
+# network={
+#   ssid="blackMOREOps"
+#   psk=42e1cbd0f7fbf3824393920ea41ad6cc8528957a80a404b24b5e4461a31c820c
+# }
+
+# connect networking using supplicant 
+wpa_supplicant -B -D wext -i wlan0 -c /etc/wpa_supplicant.conf
+	# -B means run wpa_supplicant in the background
+	# -D specifies the wireless driver. wext is the generic driver
+	# -c specifies the path for the configuration file
+
+dhclient wlan0
+	# get an IP address by DHCP
+
+ifconfig wlan0
+ip addr show wlan0
+	# show ip address
+
+ip route show 
+	# show routes
 
 cat /proc/cpuinfo
 lscpu
@@ -822,3 +863,14 @@ init
 
 .d 
 	# in directory names typically indicates a directory containing many configuration files or scripts for a particular situation (e.g. /etc/apt/sources.list.d contains files that are concatenated to make a virtual sources.list; /etc/network/if-up.d contains scripts that are executed when a network interface is activated). This structure is usually used when each entry in the directory is provided by a different source, so that each package can deposit its own plug-in without having to parse a single configuration file to reference itself. In this case, it just happens that “init” is a logical name for the directory, SysVinit came first and used init.d, and Upstart used plain init for a directory with a similar purpose (it would have been more “mainstream”, and perhaps less arrogant, if they'd used /etc/upstart.d instead).
+
+amixer scontrols
+	# veiw of mix controls
+amixer sset Master 60%
+	# change master volume
+amixer -q sset Master toggle
+	# mute/umute
+alsamixer
+	# interacrive sound control
+
+
