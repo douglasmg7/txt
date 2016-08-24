@@ -357,8 +357,13 @@ echo "A data é `date`"
 
 # write user input do variable tmp
 read tmp
-read -p "Please enter your age: " age
-	# -p message
+read -p "Please enter your age: " var_a var_b var_c
+read -t 5 -p "Enter your name"  # data place in REPLY
+read -n1 -p "Enter your name"  # data place in REPLY
+	# -p prompt message
+	# -t if not receive data in 5 second, exit with non-zero status
+	# -n? wait for ? numbers characters (no need enter)
+	# -s not display the data entered on monitor
 
 # to use escape sequence
 printf "Oi\nBeleza\n"
