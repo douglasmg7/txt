@@ -15,9 +15,8 @@ service mysql stop
 service mysql start
 service mysql restart
 
-mysql -h host -u root -p
-mysql -h host -u root -p database
-mysql -u root -psaladino -h localhost
+mysql -u root -psaladino -h localhost database
+	no space between -p and password
 
 select version();
 select current_date;
@@ -48,8 +47,7 @@ describe table_a
 desc table_a
 	show structure of a table
 
-mysql -u user -p password -h hostname database
-	no space between -p and password
+
 
 select * from table_name\G
 	show field by line
@@ -98,3 +96,5 @@ mysql -v
 
 create table pet (name varchar(20), owner varchar(20), species varchar(20), sex char(1), birth date);
 
+select count(*) from produtos_vtabela where titulo like 'G%';
+	wildcard
