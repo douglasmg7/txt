@@ -426,6 +426,10 @@ kill all processes that start with http
 jobs
 	list process in background for current shell
 	-l list PID
+	-n list only jobs that have changed their status sice the last notification from the shell
+	-p list only the pid of the jobs
+	-r list only the running jobs
+	-s list only stopped jobs
 
 lscpu - list cpu
 lsusb - list usbs
@@ -873,4 +877,16 @@ amixer -q sset Master toggle
 alsamixer
 	# interacrive sound control
 
+mktemp
+	# create a unique temporary file in the /tmp folder
+mktemp /tmp/bla.XXXX
+	# create a temp file with format bla.XXXX
+mktemp -t bla.XXXX
+	# create a temp file in the temporary directory of the system
+mktem -d dir.XXXX
+	# create a temp dir
 
+ctrl + c
+	# generates a SIGINT (interrupt)
+ctrl + z
+	# generates a SIGTSTP (stop or pause)
