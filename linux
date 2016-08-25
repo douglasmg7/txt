@@ -206,6 +206,7 @@ extract .rar files
 
 man ls
 man 1 ls
+info ls
 mostra a documentação do comando ls
 
 ls -h ou ls --help
@@ -401,6 +402,38 @@ ps
 	ps aux	list processes - BSD syntax
 	ps li list processes - BSD syntax
 	ps -p 48 	list process by id
+ps -p 7495 -o pid, ni, cmd
+	show specific informations
+
+nice -n 10 sleep 3000&
+nice -10 sleep 3000&	
+	start program with priority 10 (-20 - 19)
+
+renice -11 -p 4489
+	change process priority
+
+at -f script_name now + 25 minutes
+at -f script_name now
+at -f script_name 10:27
+at -f script_name dd.mm.yy
+	schedule a job
+	-M suppress generated output
+
+atq
+	list peding jobs
+
+atrm 18
+	remove peding job 18
+
+crontab -l
+	list a cron tab
+crontab -e
+	edit cron tab
+	min hour dayofmonth month dayofweek command
+	15 10 * * * command
+
+anacron
+	determines that a job has missed a scheduled running, it runs the job as soon as possible. This means that if your Linux system is turned off for a few days, when it starts back up, any jobs scheduled to run during the time it was off are automatically run
 
 pgrep firefox
 get pid of firefox process
@@ -559,6 +592,9 @@ history
 	-a force the history command to be writen, before exit the shell
 	-n force the .bash_history to be read
 
+history 8
+	show last 8 commands
+
 !1234
 	re-use history command 1234
 
@@ -574,7 +610,7 @@ history
 ~/.bash_history
 	keep the history command
 
-	# look for history command
+# look for history command
 ctr+r
 	# enter reverse search
 ctr+r
@@ -890,3 +926,11 @@ ctrl + c
 	# generates a SIGINT (interrupt)
 ctrl + z
 	# generates a SIGTSTP (stop or pause)
+
+man standarts
+[]  - Anything between square brackets (“[” and “]”) is optional.
+... - Anything followed by an ellipsis (“...”) can be repeated.
+{}  - Curly braces (“{” and “}”) mean that you should select one of the items separated by vertical bars (“|”).
+
+mandb
+	If you add additional man pages to your system, you may need to rebuild this file with mandb
