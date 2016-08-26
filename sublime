@@ -77,6 +77,9 @@ delete to beginning
 ctrl+k, ctrl+k
 delete to end
 
+ctrl + shift + k
+delete line, not cut
+
 ctrl + backspace
 delete word forward
 
