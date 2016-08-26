@@ -58,3 +58,9 @@ convert xml to json on command line
 
 node-xml2js
 Simple XML to JavaScript object converter
+
+xmldom 
+
+cheerio
+
+xpath
