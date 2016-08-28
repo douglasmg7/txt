@@ -1,3 +1,4 @@
+:e	open file
 ZZ ou :wq - salva e sai
 :e! - descarta as alterações
 :q! - sai sem salvar

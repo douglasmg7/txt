@@ -28,3 +28,6 @@ show / select grammar
 
 alt + shift + w
 suround with tag
+
+ctrl-shift-alt-s
+	run shell command on selection (shell-it)

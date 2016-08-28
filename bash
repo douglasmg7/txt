@@ -29,7 +29,7 @@
 # /etc/bashrc or /etc/bash.bashrc for bash (but, mostly you see this at the beginning of the script: [ -z "$PS1" ] && return. That means don't do anything if it's a non-interactive shell)
 # depending on shell; some of them read the file in the $ENV variable
 
-#Login 
+#Login
 # Means that the shell is run as part of the login of the user to the system. Typically used to do any configuration that a user needs/wants to establish his work-environment.
 # A login shell logs you into the system as a spiecified user, necessary for this is a username and password. When you hit ctrl+alt+F1 to login into a virtual terminal you get after successful login: a login shell (that is interactive). Sourced files:
 # /etc/profile and ~/.profile for Bourne compatible shells (and /etc/profile.d/*)
@@ -38,7 +38,7 @@
 # /etc/csh.login and ~/.login for csh
 # ps show -bash (dash before bash in login shell)
 
-# Non-login 
+# Non-login
 # Any other shell run by the user after logging on, or which is run by any automated process which is not coupled to a logged in user.
 # A shell that is executed without logging in, necessary for this is a current logged in user. When you open a graphic terminal in gnome it is a non-login (interactive) shell. Sourced files:
 # /etc/bashrc and ~/.bashrc for bash
@@ -90,7 +90,7 @@ time ls
 
 # read by a shell that's both interactive and non-login (ex: terminal gui)
 ~/.bash_profile
-# if ~/.bash_profile not exist look for 
+# if ~/.bash_profile not exist look for
 # .profile is simply the login script filename originally used by /bin/sh. bash, being generally backwards-compatible with /bin/sh, will read .profile if one exists.
 ~/.profile
 # most people end up telling their .bash_profile to also read .bashrc with something like
@@ -196,11 +196,11 @@ lsof -a -p $$ -d 0,1,2
 	# positional parameters
 	# special parameters
 	# shell variables
-	
+
 # shell variable
 # parameter that has a name
 # Internal shell variables - shell variables with ALL-UPPERCASE names
-# you should make all of your own shell variables lower-case to avoid ever accidentally overriding a shell-internal variable of the same name. 
+# you should make all of your own shell variables lower-case to avoid ever accidentally overriding a shell-internal variable of the same name.
 # If you create an environment variable, give it an ALL-UPPERCASE name.
 
 # assign the value blue to the variable color
@@ -239,68 +239,68 @@ echo "PATH currently contains: ${PATH//:/, }"
 # "//" replace
 
 # Remove the shortest string that matches the pattern if it's at the start of the value.
-${parameter#pattern}	
-"${url#*/}"	
+${parameter#pattern}
+"${url#*/}"
 http://guide.bash.academy/variables.html
 /guide.bash.academy/variables.html
 
 # Remove the longest string that matches the pattern if it's at the start of the value.
-${parameter##pattern}	
-"${url##*/}"	
+${parameter##pattern}
+"${url##*/}"
 http://guide.bash.academy/variables.html
 variables.html
 
 # Remove the shortest string that matches the pattern if it's at the end of the value.
-${parameter%pattern}	
-"${url%/*}"	
+${parameter%pattern}
+"${url%/*}"
 http://guide.bash.academy/variables.html
 http://guide.bash.academy
 
 # Remove the longest string that matches the pattern if it's at the end of the value.
-${parameter%%pattern}	
-"${url%%/*}"	
+${parameter%%pattern}
+"${url%%/*}"
 http://guide.bash.academy/variables.html
 http:
 
 # Replace the first string that matches the pattern with the replacement.
-${parameter/pattern/replacement}	
-"${url/./-}"	
+${parameter/pattern/replacement}
+"${url/./-}"
 http://guide.bash.academy/variables.html
 http://guide-bash.academy/variables.html
 
 # Replace each string that matches the pattern with the replacement.
-${parameter//pattern/replacement}	
-"${url//./-}"	
+${parameter//pattern/replacement}
+"${url//./-}"
 http://guide.bash.academy/variables.html
 http://guide-bash-academy/variables-html
 
-# Replace the string that matches the pattern at the beginning of the value with the 
-${parameter/#pattern/replacement}	
-"${url/#*:/https:}"	
+# Replace the string that matches the pattern at the beginning of the value with the
+${parameter/#pattern/replacement}
+"${url/#*:/https:}"
 http://guide.bash.academy/variables.html
 https://guide.bash.academy/variables.html
 
 # Replace the string that matches the pattern at the end of the value with the replacement.
-${parameter/%pattern/replacement}	
-"${url/%.html/.jpg}"	
+${parameter/%pattern/replacement}
+"${url/%.html/.jpg}"
 http://guide.bash.academy/variables.html
 http://guide.bash.academy/variables.jpg
 
 # Expand the length of the value (in bytes)
-# ${#parameter}	
-"${#url}"	
+# ${#parameter}
+"${#url}"
 http://guide.bash.academy/variables.html
 40
 
 # Expand a part of the value, starting at start, length bytes long.
-# ${parameter:start[:length]}	
-"${url:7}"	
+# ${parameter:start[:length]}
+"${url:7}"
 http://guide.bash.academy/variables.html
 guide.bash.academy/variables.html
 
 # Expand the transformed value, either upper-casing or lower-casing the first or all characters that match the pattern. You can omit the pattern to match any character.
 # ${parameter[^|^^|,|,,][pattern]}
-"${url^^[ht]}"	
+"${url^^[ht]}"
 http://guide.bash.academy/variables.html
 HTTp://guide.basH.academy/variables.HTml
 
@@ -333,44 +333,44 @@ bash -c 'echo "1: $1, 2: $2, 4: $4"' -- 'New First Argument' Second Third 'Fourt
 # special parameters
 $*, $@, $# etc..
 
-"$*"	
+"$*"
 echo "Arguments: $*"
 # Takes all the parameters supplied on the command line as a single word.
 # Expands a single string, joining all positional parameters into one, separated by the first character in IFS (by default, a space).
 # Note: You should never use this parameter unless you explicitly intend to join all the parameters. You almost always want to use @ instead.
 
-"$@"	
-rm "$@"	
+"$@"
+rm "$@"
 # Takes all the parameters supplied on the command line as separate words in the same string.
 # Expands the positional parameters as a list of separate arguments.
 bash -c 'echo "${@: -1}"' -- 1 2 'The Third'
 # The Third
 
-"$#"	
-echo "Count: $#"	
+"$#"
+echo "Count: $#"
 # Expands into a number indicating the amount of positional parameters that are available.
 
 ${!#}
 # Expands to the last parameter
 
-"$?"	
-(( $? == 0 )) || echo "Error: $?"		
+"$?"
+(( $? == 0 )) || echo "Error: $?"
 # Expands the exit code of the last (synchronous) command that just finished.
 # An exit code of 0 indicates the command succeeded, any other number indicates why the command failed.
 
-"$-"	
-[[ $- = *i* ]]	
+"$-"
+[[ $- = *i* ]]
 # Expands to the set of option flags that are currently active in the shell.
 # Option flags configure the behaviour of the shell, the example tests for the presence of the i flag, indicating the shell is interactive (has a prompt) and is not running a script.
 
-"$$"	
+"$$"
 # current pid
 
-"$!"	
+"$!"
 # the last pid that was started in the background
 
-"$_"	
-mkdir -p ~/workspace/projects/myscripts && cd "$_"	
+"$_"
+mkdir -p ~/workspace/projects/myscripts && cd "$_"
 # Expands to the last argument of the previous command.
 
 # execute the comand between back quote `
@@ -428,7 +428,7 @@ read -p 'What is your name?' <var_name>
 
 # control operator
 && || ','
-cmd_a; cmd_b	# start a new line, run the command and wait for it to end before advancing to the next command in the list 
+cmd_a; cmd_b	# start a new line, run the command and wait for it to end before advancing to the next command in the list
 cmd_a || cmd_b	# run the command before it as it normally would, but after finishing that command move to the next command only if the command before it failed
 rm file || { echo 'Could not remove file' >&2; exit 1; }
 # every command return an exit code, 0 = no error
@@ -441,7 +441,7 @@ elif [ $a -gt $b ] 'a is big than b'
 else echo 'a is small than as b'
 fi
 
-# expansion a='era um' b='era dois' 
+# expansion a='era um' b='era dois'
 [[ $a = $b ]] = [[ 'era um' = 'era dois' ]]
 [ "$a" = "$b" ] = [ 'era um' = 'era dois' ]
 [ $a = $b ] = [ era um = era dois ]
@@ -501,8 +501,8 @@ $ [[ $name = "$foo" ]] || echo "Name $name is not equal to the string $foo"
 test -e /etc/X11/xorg.conf && echo 'Your Xorg is configured!'
 # Your Xorg is configured!
 
-# Whenever you're making a Bash script, you should always use [[ rather than [. 
-# Whenever you're making a Shell script, which may end up being used in an environment where Bash is not available, you should use [, because it is far more portable. (While being built in to Bash and some other shells, [ should be available as an external application as well; meaning it will work as argument to, for example, find's -exec and xargs.) 
+# Whenever you're making a Bash script, you should always use [[ rather than [.
+# Whenever you're making a Shell script, which may end up being used in an environment where Bash is not available, you should use [, because it is far more portable. (While being built in to Bash and some other shells, [ should be available as an external application as well; meaning it will work as argument to, for example, find's -exec and xargs.)
 # Don't ever use the -a or -o tests of the [ command. Use multiple [ commands instead (or use [[ if you can). POSIX doesn't define the behavior of [ with complex sets of tests, so you never know what you'll get.
 
 # while loop
@@ -625,7 +625,7 @@ ${#parameter}
 # The length in characters of the value of 'parameter' is substituted. If 'parameter' is an array name subscripted by @ or *, return the number of elements.
 
 ${parameter#pattern}
-# The 'pattern' is matched against the beginning of 'parameter'. The result is the expanded value of 'parameter' with the shortest match deleted. 
+# The 'pattern' is matched against the beginning of 'parameter'. The result is the expanded value of 'parameter' with the shortest match deleted.
 # If 'parameter' is an array name subscripted by @ or *, this will be done on each element. Same for all following items.
 
 ${parameter##pattern}
@@ -719,7 +719,7 @@ echo ${name[*]}
 
 (sleep 2 ; ls)
 	process list
-	() create a subshell 
+	() create a subshell
 
 coproc sleep 2
 	spawns a subshell in background mode and executes a command within that subshell
@@ -758,7 +758,7 @@ var4=$[$var1 * ($var2 - $var3)]
 zsh
 	shell that suport full floating-point
 
-bc -q 
+bc -q
 	bash calculator
 variable=$(echo "scale=4; 3.44 / 5 " | bc)
 
@@ -807,10 +807,10 @@ string comparasions
 -f
 	file exists and is a file
 
--r 
+-r
 	file exists and is readable
 
--s 
+-s
 	file exists and is not empry
 
 -w
@@ -858,7 +858,7 @@ esac
 #	default (space, tab, new line)
 #	change IFS to new line only
 IFS=$'\n'
-#	newline, colon, semicolon, and double quotation mark 
+#	newline, colon, semicolon, and double quotation mark
 # IFS=$'\n':;"
 
 # best practice to change IFS
@@ -915,7 +915,7 @@ while IFS=',' read -r userid name
 done < "$input"
 
 # Shifts the command line parameters in their relative positions.
-shift 
+shift
 shift 2
 
 # Take a list of command line options and parameters.
@@ -1023,3 +1023,32 @@ bg 2
 # start a stopped job in foreground
 fg 2
 	# start a job in foreground
+
+# define a function
+# exit status is 4
+function func1 {
+	echo "This is an example of a function"
+	return $[ 2 + 2 ]
+}
+
+# define a fucntion
+# exit status of a function is the exit status returned by the last command
+func1() {
+	echo "This is an example of a function"
+}
+
+# get value from function
+super() {
+	echo Kal
+}
+vup=$(super)
+echo "The value is: $vup"
+
+# passing params to a function
+sum() {
+	echo $[ $1 + $2 ]
+}
+echo "A soma de dois números é: $(sum 2 3)"
+
+# define a local variable inside a function
+local var_name
