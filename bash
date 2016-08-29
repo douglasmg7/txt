@@ -1006,7 +1006,7 @@ trap "echo ' Goodbye'" EXIT
 	# to rec-onfig, just emit new trap command
 trap -- SIGINT
 trap - SIGINT
-	# remove a set trap
+	# remove a set trap - or --
 
 # nohup command runs another command blocking any SIGHUP signals that are sent to the process. This prevents the process from exiting when you exit your terminal session.
 nohup ./test1.sh &

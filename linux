@@ -132,7 +132,7 @@ lista o tipo do arquivo
 less file_name - view content file
 /search_name - pesquisa
 n - próximo da pesquisa
-q - sair do less 
+q - sair do less
 
 dpkg --get-selections
 obtem os programas instalados
@@ -342,7 +342,7 @@ start interface wla0
 
 wpa_passphrase my-ssid password
 	# create password to use into /etc/network/interface or /etc/wpa_supplicant.conf
-wpa_passphrase ssid > file_out 
+wpa_passphrase ssid > file_out
 password
 	# create password into file_out
 
@@ -358,7 +358,7 @@ password
 #   psk=42e1cbd0f7fbf3824393920ea41ad6cc8528957a80a404b24b5e4461a31c820c
 # }
 
-# connect networking using supplicant 
+# connect networking using supplicant
 wpa_supplicant -B -D wext -i wlan0 -c /etc/wpa_supplicant.conf
 	# -B means run wpa_supplicant in the background
 	# -D specifies the wireless driver. wext is the generic driver
@@ -371,7 +371,7 @@ ifconfig wlan0
 ip addr show wlan0
 	# show ip address
 
-ip route show 
+ip route show
 	# show routes
 
 cat /proc/cpuinfo
@@ -400,7 +400,7 @@ ps -p 7495 -o pid, ni, cmd
 	show specific informations
 
 nice -n 10 sleep 3000&
-nice -10 sleep 3000&	
+nice -10 sleep 3000&
 	start program with priority 10 (-20 - 19)
 
 renice -11 -p 4489
@@ -532,6 +532,7 @@ chmod u+x file_name
 
 chown owner file_name
 	change file owner
+	-h no derefereence mode (change symbolic link)
 
 chown owner.group file_name
 	change owner and group for file_name
@@ -602,14 +603,14 @@ ctr+r
 ctr+r
 	# to choose the command
 return
-	# execute the comand	
+	# execute the comand
 
 du -shc *
 size content directory
 -s --summarize
 -h --human-readable
 -c --total
--a --all 
+-a --all
 --max-depth=1
 
 df
@@ -704,7 +705,7 @@ useradd -D
 	show system default
 
 useradd user_name -m
-	create a user_name 
+	create a user_name
 	-m use /etc/skel as template
 
 userdel -r user_name
@@ -737,7 +738,7 @@ usermod -g group_name user_name
 usermod -G group_name user_name
 	add user to more one group
 
-groupmod -n new_name old_name 
+groupmod -n new_name old_name
 	change group name
 
 groupmod -g 1025 group_name
@@ -869,7 +870,7 @@ update-rc.d firewall defaults 20 20
 update-rc.d firewall start 20 2 3 4 5 . stop 20 0 1 6 .
 	# equivalent
 
-update-rc.d -f firewall remove		
+update-rc.d -f firewall remove
 	# remove symbolic links from rcN.d
 
 update-rc.d -n firewall remove
@@ -879,7 +880,7 @@ update-rc.d -n firewall remove
 	# put your personal scripts
 
 /etc/init.d
-	# files in /etc/init.d are shell scripts that respond to start, stop, restart, and (when supported) reload commands to manage a particular service. These scripts can be invoked directly or (most commonly) via some other trigger (typically the presence of a symbolic link in /etc/rc?.d/). 
+	# files in /etc/init.d are shell scripts that respond to start, stop, restart, and (when supported) reload commands to manage a particular service. These scripts can be invoked directly or (most commonly) via some other trigger (typically the presence of a symbolic link in /etc/rc?.d/).
 
 init
 	# init program, the first process that is run when the kernel has finished initializing
@@ -887,7 +888,7 @@ init
 /etc/init
 	# contains configuration files used by Upstart. Upstart is a young service management package championed by Ubuntu. Files in /etc/init are configuration files telling Upstart how and when to start, stop, reload the configuration, or query the status of a service. As of lucid, Ubuntu is transitioning from SysVinit to Upstart, which explains why many services come with SysVinit scripts even though Upstart configuration files are preferred. In fact, the SysVinit scripts are processed by a compatibility layer in Upstart.
 
-.d 
+.d
 	# in directory names typically indicates a directory containing many configuration files or scripts for a particular situation (e.g. /etc/apt/sources.list.d contains files that are concatenated to make a virtual sources.list; /etc/network/if-up.d contains scripts that are executed when a network interface is activated). This structure is usually used when each entry in the directory is provided by a different source, so that each package can deposit its own plug-in without having to parse a single configuration file to reference itself. In this case, it just happens that “init” is a logical name for the directory, SysVinit came first and used init.d, and Upstart used plain init for a directory with a similar purpose (it would have been more “mainstream”, and perhaps less arrogant, if they'd used /etc/upstart.d instead).
 
 amixer scontrols
@@ -920,3 +921,10 @@ man standarts
 
 mandb
 	If you add additional man pages to your system, you may need to rebuild this file with mandb
+
+halt
+	terminates all processes and shuts down the cpu
+poweroff
+	is exactly like halt, but it also turns off the unit itself (lights and everything on a PC). It sends an ACPI command to the board, then to the PSU, to cut the power.
+shutdown
+	is like poweroff, but it also runs the shutdown scripts.
