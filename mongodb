@@ -25,12 +25,18 @@ db
 show dbs
 	display the list of databases
 
+show collections
+	list the collections
+
 use mydb
 	switch to a new database named mydb
 
 remove a db
 	use db_x
 	db.dropDatabase()
+
+remove a collection
+	db.collection_name.drop()
 
 help
 	method.help()
@@ -45,9 +51,6 @@ saves a document in the collection
 
 printjson(document)
 prints the variable document
-
-show collections
-list the collections
 
 db.testDb.find()
 return a iterator
@@ -162,7 +165,7 @@ skip the first 3 and get the next 3
 
 {
 	name: 'invisibilty',
-	vendor_id: 'portions_sa' 
+	vendor_id: 'portions_sa'
 }
 reference to another document
 
@@ -185,9 +188,9 @@ db.portions.aggregate(
 aggregation framework
 
 db.portions.aggregate([
-	{$group: 
+	{$group:
 		{
-			_id: '$vendor_id', 
+			_id: '$vendor_id',
 			'total': {'$sum': 1},
 			'grade_total': {'$sum': '$grade'}
 		}
@@ -199,9 +202,9 @@ $x: $y - x is a operator, y is a filed pattern
 {'_id': "Leprechaun Inc", 'total': 1, 'grade_total': 92}
 
 db.portions.aggregate([
-	{$group: 
+	{$group:
 		{
-			_id: '$vendor_id', 
+			_id: '$vendor_id',
 			'avg-grade': {'$avg': '$grade'}
 		}
 	}
@@ -210,7 +213,7 @@ averaging grade per vendor
 
 db.portions.aggregate{[
 	{'$match': {'ingredients': 'unicorn'}},
-	{'$group': 
+	{'$group':
 		{
 			'_id': $vendor_id,
 			'portion_count': {'$sum': 1}
@@ -228,3 +231,8 @@ db.portions.aggregate{[
 	{'$limit': 3}
 ]};
 more complex pipeline
+
+The insert() method is deprecated in major driver so you should use the the .insertOne() method whenever you want to insert a single document into your collection and the .insertMany when you want to insert multiple documents into your collection. Of course this is not mentioned in the documentation but the fact is that nobody really writes an application in the shell. The same thing applies to updateOne, updateMany, deleteOne, deleteMany, findOneAndDelete, findOneAndUpdate and findOneAndReplace
+
+db.collection.count()
+	number of itens
