@@ -928,3 +928,6 @@ poweroff
 	is exactly like halt, but it also turns off the unit itself (lights and everything on a PC). It sends an ACPI command to the board, then to the PSU, to cut the power.
 shutdown
 	is like poweroff, but it also runs the shutdown scripts.
+
+ENOENT
+	Error NO ENTry
