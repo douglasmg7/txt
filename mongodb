@@ -236,3 +236,14 @@ The insert() method is deprecated in major driver so you should use the the .ins
 
 db.collection.count()
 	number of itens
+
+mongo store --eval "printjson(db.dealerProducts.findOne())" > log_file
+	print to file
+
+mongo | tee file.txt
+	redirect output from mongo client to file too
+	tail -n +3 file.txt | egrep -v "^>|^bye" > output.json
+		clean the propt output
+
+mongo localhost/mydatabase --quiet myScriptFile.js > output
+	run mongo script
