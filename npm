@@ -12,3 +12,40 @@ search for a module in npm repository
 
 npm install express@4.9
 install especific version
+
+npm adduser
+  authenticate in npm cli to publish
+
+npm config ls
+  show npm configuration
+
+cd dir_package
+npm publish
+  publish npm packages
+
+change the version
+npm publish
+    update a package
+
+npm version major
+npm version minor
+npm version patch
+  make 1.0.0 turn 1.0.1
+
+version semantic
+  0 - isn't yet stable for the initial release
+  1.0.0 - read to be used
+  1.0.1 - patch release - bug fix
+  1.1.0 - minor release - new api functionality (new function), which doesn't break anything
+  2.0.0 - major release - break api, no backward compability
+  accept only patch release
+    1.0
+    1.0.x
+    ~1.0.4
+  accept minor release
+    1
+    1.x
+    ^1.0.4
+  accept major release
+    *
+    x
