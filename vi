@@ -41,10 +41,10 @@ d0 - até o inicio da linha
 dw - até o final da palavra
 dd - toda a linha
 d$ ou D - cut até o final da linha
-daw - uma palavra 
+daw - uma palavra
 dap - um parágrafo
 
-c - change (go to insert mode) 
+c - change (go to insert mode)
 
 y - yank into register
 
@@ -92,7 +92,8 @@ access all currently defined registers
 "+y - copy to clipboard
 "+x - cut from clipboard
 "+p - paste from clipboard
-"* - ?
+"* - system clipboard
+"+ - system clipboard
 ": - last comand
 
 :so %
@@ -248,6 +249,9 @@ view themes
 help function-list
 earn vim script
 
+paste from clipboard
+go to insert mode
+ctrl + shift + v
 remap caps lock to ctrl?
 Tim Pope’s commentary.vim plugin
 Kana Natsuno’s textobj-entire plugin is a good example

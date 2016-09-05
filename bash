@@ -1052,3 +1052,13 @@ echo "A soma de dois números é: $(sum 2 3)"
 
 # define a local variable inside a function
 local var_name
+
+# passsing array to a function
+function testit(){
+	local newArray = (;'echo "$@"' )
+	echo "The new array: ${newArray[*]}"
+}
+myArray = (1 2 3 4 5)
+testit ${myArray[*]}
+
+# continue from 466 functions when finish the document
