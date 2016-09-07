@@ -14,3 +14,6 @@ Ctrl-b w (List all windows / window numbers)
 
 ctrl-b ctr-arrow - resize panes
 ctrl-b arrow - change pane
+
+ctrl-b [ Scroll mode
+q		 Quit scroll mode

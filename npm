@@ -49,3 +49,9 @@ version semantic
   accept major release
     *
     x
+
+npm start
+	run script prestart start and poststart
+
+npm run-script script_name
+	run script 
