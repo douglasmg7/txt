@@ -1,0 +1,15 @@
+npm install -g browserify
+install browserify
+
+npm i --save jquery
+npm i --save backbone
+
+var $ = require('jquery')(window);
+var Backbone = requere('backbone');
+Backbone.$ = $;
+
+browserify app.js -o bundle.js
+bundle everything in one file
+
+browserify main.js --debug | exorcist bundle.js.map > bundle.js
+browserify main.js | uglifyjs -mc > bundle.js
