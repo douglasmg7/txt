@@ -931,3 +931,6 @@ shutdown
 
 ENOENT
 	Error NO ENTry
+
+acpi -V
+	view computer temperature
