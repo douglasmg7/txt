@@ -76,3 +76,8 @@ exorcist
 nodemon
 automaticly restart the server
 
+vue
+mvvc framework
+
+vue-resource
+ajax for vue

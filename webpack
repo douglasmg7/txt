@@ -1,0 +1,29 @@
+# install globally
+npm install webpack -g
+
+# install locally
+npm install webpack --save-dev
+
+# install dev tools
+npm install webpack-dev-server --save-dev
+
+# make the bundle file
+webpack ./app.js app.bundle.js
+
+# configuration file
+webpack.config.js
+
+# watch mode with prettier output
+webpack --progress --colors --watch
+
+# production mode (minified version)
+webpack -p
+
+# debug mode
+webpack
+
+# development server
+npm install webpack-dev-server -g
+webpack-dev-server --progress --colors
+http://localhost:8080/webpack-dev-server/bundle
+
