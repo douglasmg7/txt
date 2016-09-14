@@ -16,6 +16,9 @@ webpack.config.js
 # watch mode with prettier output
 webpack --progress --colors --watch
 
+# watch mode
+webpack -w
+
 # production mode (minified version)
 webpack -p
 
@@ -27,3 +30,15 @@ npm install webpack-dev-server -g
 webpack-dev-server --progress --colors
 http://localhost:8080/webpack-dev-server/bundle
 
+require("style!css!less!./file.less")
+# Turn file.less into plain CSS with the Less loader
+# Resolve all the imports and url(...)s in the CSS with the CSS loader
+# Insert those styles into the page with the style loader
+
+# Hints from build stats
+webpack --profile --json > stats.json
+http://webpack.github.io/analyse
+
+# source map
+devtool: 'source-map',   // for production
+devtool: 'eval-cheap-module-source-map',   // fast build
