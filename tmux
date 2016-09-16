@@ -17,3 +17,18 @@ ctrl-b arrow - change pane
 
 ctrl-b [ Scroll mode
 q		 Quit scroll mode
+
+# list sessions
+tmux ls
+
+# attach to session 0
+tmux attach -t 0
+
+# create a new session with the name database
+tmux new -s database
+
+# rename existing session
+tmux rename-change -t 0 database
+
+# full screen a pane
+prefix z
