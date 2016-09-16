@@ -171,8 +171,8 @@ git branch <branch-name>
 create a new branch using the current working directory as its base
 
 git branch
--a include remote tracking branches in red
 list all branches
+	-a include remote tracking branches in red
 
 git checkout <branch-name>
 make the working directory and the HEAD match the specified branch
@@ -181,8 +181,8 @@ git checkout -b new_feature
 create a new branch and checkout
 
 git merge <branch-name>
---no-ff no fast-forward merge (will be recursive merge)
-merge a branch into the checked-out branch
+	--no-ff no fast-forward merge (will be recursive merge)
+	merge a branch into the checked-out branch
 
 git branch -d <branch-name>
 delete a branch
