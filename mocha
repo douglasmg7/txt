@@ -1,0 +1,10 @@
+# run test
+mocha -u bdd -R spec -t 500 --recursive
+	-u which test interface to use to write tests - bdd (behavior drive development)
+	-R allows you to define the test report format you want to use 
+	-t how many milliseconds Mocha will	wait for a test to finish
+	--recursive instructs Mocha to explore the specified test folder recursively to look for tests to execute
+	-w it will watch for changes in the current working directory, whenever a file is changed, it will re-execute all the tests
+
+describe 
+	creates a new test suite for Mocha
