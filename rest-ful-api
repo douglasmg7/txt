@@ -26,3 +26,18 @@ DELETE /tasks/:id will delete a task.
 500 Server error	501 Not implemented
 502 Bad gateway	503 Service unavailable
 504 Gateway timeout	505 Bad HTTP version
+
+An HTTP PUT is supposed to accept the body of the request, and then store that at the resource identified by the URI.
+An HTTP POST is more general. It is supposed to initiate an action on the server. That action could be to store the request body at the resource identified by the URI, or it could be a different URI, or it could be a different action.
+PUT is like a file upload. A put to a URI affects exactly that URI. A POST to a URI could have any effect at all.
+
+To give examples of REST-style resources:
+"POST /books" with a bunch of book information might create a new book, and respond with the new URL identifying that book: "/books/5".
+"PUT /books/5" would have to either create a new book with the id of 5, or replace the existing book with ID 5.
+In non-resource style, POST can be used for just about anything that has a side effect. One other difference is that PUT should be idempotent - multiple PUTs of the same data to the same URL should be fine, wheras multiple POSTs might create multiple objects or whatever it is your POST action does.
+
+CRUD       HTTP
+Create      POST
+Read         GET
+Update     PUT
+Delete      DELETE
