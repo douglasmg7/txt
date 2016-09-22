@@ -79,6 +79,9 @@ the mongo shell loads and parses the .mongorc.js file on startup so your functio
 mongoimport --db blog --collection users --file ./db/users.json --jsonArray
 insert data into database from a json file
 
+# regex - (sql like)
+db.dealerProducts.find({"desc": /90/},{_id: false, desc: true})
+
 db.potions.remove({'name': 'Love'});
 remove all documents that match
 
