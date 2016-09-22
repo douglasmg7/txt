@@ -129,10 +129,12 @@ create directories and subdirectories
 file file_name
 lista o tipo do arquivo
 
+# Imprimir um arquivo no console
+# fast for big files
 less file_name - view content file
-/search_name - pesquisa
-n - próximo da pesquisa
-q - sair do less
+	/search_name - pesquisa
+	n - próximo da pesquisa
+	q - sair do less
 
 dpkg --get-selections
 obtem os programas instalados
@@ -279,21 +281,17 @@ sed - stream editor, but can edit files directly too
 	-i option is used to edit in place on filename.
 	-e option indicates a command to run.
 
+# imprimir um arquivo no console
 cat file_name
-imprimir um arquivo no console
--n print line number
--b print no empty line nuber
+	-n print line number
+	-b print no empty line nuber
 
-more file_name
-imprimir um arquivo no console
-
-less file_name
-imprimir um arquivo no console
-fast for big files
-
+# send text to a file
 cat > a.txt
 bla bla <c-d><c-d>
-send the text to a.txt
+
+# imprimir um arquivo no console
+more file_name
 
 /usr/share/applications$
 launcher for applications

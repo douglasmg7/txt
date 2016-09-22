@@ -55,8 +55,14 @@ prints the variable document
 db.testDb.find()
 return a iterator
 
+# return a iterator with limit of 3
 db.testDb.find().limit(3)
-return a iterator with limit of 3
+
+# return a second item.
+db.testDb.find().skipt(1).limit(1)
+
+# view output
+mongo | tee file.txt
 
 db.testDb.findOne()
 return a document
@@ -247,3 +253,10 @@ mongo | tee file.txt
 
 mongo localhost/mydatabase --quiet myScriptFile.js > output
 	run mongo script
+
+# pretty output - function
+db.temp.find().limit(2).pretty()
+db.temp.find().limit(2).toArray()
+
+# pretty output - config
+echo DBQuery.prototype._prettyShell = true >> ~/.mongorc.js
