@@ -42,6 +42,9 @@ help
 	method.help()
 	get mongo help
 
+# clear a command - cli
+ctrl + u
+
 j = {l:3}
 db.testDb.insert(j)
 create a document j and insert into testDb collection
