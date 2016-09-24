@@ -48,7 +48,7 @@ apt-get upgrade
 apt-get update && apt-get upgrade
 	best way to use the commands.
 
-pt-get dist-upgrade
+apt-get dist-upgrade
 	in addition to performing the function of upgrade, also intelligently handles changing dependencies with new versios of packages
 apt-get install lynx
 apt-get remove lynx
@@ -932,3 +932,8 @@ ENOENT
 
 acpi -V
 	view computer temperature
+
+# convert audio
+apt-get install libav-tools
+avconv -i file.m4a file.mp3
+for i in *.m4a; do avconv -i "$i" "${i/.m4a/.mp3}"; done
