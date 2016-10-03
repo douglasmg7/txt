@@ -1,6 +1,9 @@
 # lista todos os caminhos de todos arquivos do diretório corrente
 find . 
 
+# using wildcard
+find . -name "*js*"
+
 # procura por file_name a partir do diretório raiz case sensitive
 find / -name <file_name>
 

@@ -249,7 +249,7 @@ The insert() method is deprecated in major driver so you should use the the .ins
 db.collection.count()
 	number of itens
 
-mongo store --eval "printjson(db.dealerProducts.findOne())" > log_file
+mongo store --eval "printjson(db.dealerProducts.findOne().toArray())" > log_file
 	print to file
 
 mongo | tee file.txt
