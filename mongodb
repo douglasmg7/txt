@@ -10,6 +10,16 @@
 mongod
 	service
 
+# start-stop mongod service
+service mongod stop
+service mongod start
+
+# mongod log
+/var/log/mongodb
+
+# solution - mongod not starting after stoped
+rm /tmp/mongodb-27017.sock
+
 mongo db_x
 	start mongo shell using database db_x
 	looks for a database server listening on port 27017 on the localhost
@@ -31,7 +41,7 @@ show collections
 use mydb
 	switch to a new database named mydb
 
-remove a db
+remove a db_x
 	use db_x
 	db.dropDatabase()
 
