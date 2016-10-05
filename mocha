@@ -6,5 +6,15 @@ mocha -u bdd -R spec -t 500 --recursive
 	--recursive instructs Mocha to explore the specified test folder recursively to look for tests to execute
 	-w it will watch for changes in the current working directory, whenever a file is changed, it will re-execute all the tests
 
+# creates a new test suite for Mocha
 describe 
-	creates a new test suite for Mocha
+
+# create a test
+it
+
+# run only this test
+it.only
+
+# skip this test
+it.skip
+

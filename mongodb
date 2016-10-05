@@ -29,8 +29,8 @@ find port
 	cat /etc/mongod.conf | grep port
 	lsof -i | grep mongo
 
+# display the current db
 db
-	display the current db
 
 show dbs
 	display the list of databases
