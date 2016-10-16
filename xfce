@@ -41,3 +41,6 @@ ctrl+alt+d
 
 xfce4-mixer
 sound volume
+
+# open a file
+xdg-open file_name
