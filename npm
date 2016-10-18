@@ -55,3 +55,15 @@ npm start
 
 npm run-script script_name
 	run script 
+
+# update all global packages
+npm update -g
+
+# view outdated global packages
+npm updated -g --depth=0
+
+# update specific global package
+npm update -g <package>
+
+# list global modules installed
+npm -g ls --depth=0

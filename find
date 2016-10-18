@@ -21,3 +21,6 @@ find / -mmin -10
 
 # find directory
 find / -name <name> -type d
+
+# depth
+find -maxdepth 2 -name <name>

@@ -1,0 +1,6 @@
+bower
+bunyan (for use cli)
+eslint
+express-generator
+json-server
+pug-cli
