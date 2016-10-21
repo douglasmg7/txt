@@ -1,0 +1,8 @@
+# mount in /media/flash_drive
+pmount /dev/sdb1 flash_drive
+
+# mount in /media/device
+pmount /dev/sdb1
+
+# unmount
+pumount

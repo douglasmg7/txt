@@ -6,3 +6,6 @@ xclip
 	
 gpick
 	color pick
+
+# mount device
+pmount
