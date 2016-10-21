@@ -1,0 +1,11 @@
+# node or vertex
+a point represented by three coordinates, x, y and z
+
+# edge:
+line connecting two points.
+
+# face
+surface defined by at least three points
+
+# wireframe
+shape consisting of just nodes and edges

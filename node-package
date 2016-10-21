@@ -81,3 +81,6 @@ mvvc framework
 
 vue-resource
 ajax for vue
+
+# A simple zero-configuration command-line http server
+http-server

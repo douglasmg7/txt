@@ -4,3 +4,4 @@ eslint
 express-generator
 json-server
 pug-cli
+http-server
