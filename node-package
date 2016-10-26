@@ -84,3 +84,12 @@ ajax for vue
 
 # A simple zero-configuration command-line http server
 http-server
+
+# Bezier curve
+bezier-js
+
+# Pug template engine
+pug
+
+# Pug template engine cli
+pug-cli

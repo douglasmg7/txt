@@ -1,0 +1,8 @@
+A spline is a smooth curve composed of cubic curves. 
+For smoothness, we must have that at every point where 2 cubics meet the directions of their derivatives are also equal.
+
+Given a pair of points and desired derivatives at each point, there is exactly one cubic between these points with these derivatives (note that there are precisely 4 constraints, and a cubic has 4 parameters). 
+So we may build a spline between any n points if we specify the desired derivative at each point.
+
+It turns out that a spline is a solution for a minimal energy problem for a flexible rod. 
+This explains why splines look so good -- you actually see them in nature. It also explains the name -- Webster's 2nd definition -- "a long, flexible piece of wood sometimes used as a ruler" -- was actually used by draughtsmen BC to draw smooth curves between control points. And since the piece of wood would assume the minimal energy configuration, they were in fact drawing splines. 

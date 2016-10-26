@@ -2,3 +2,4 @@ babel-cli (dev)
 mocha
 nodemon
 webpack
+pug
