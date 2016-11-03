@@ -306,43 +306,50 @@ linux version
 dpkg-reconfigure keyboard-configuration
 keyboard configuration
 
+
+# configuration utility for wireless devices
 iw
-	# configuration utility for wireless devices
+
+# scan wifi network (su)
 iw dev wlan0 scan | grep SSID
 iw wlan0 scan | grep SSID
-	# scan wifi network (su)
-iw dev
-	# list all the connected WiFi adapters
-iw wlan0 link
-	# check connection status
 
+# list all the connected WiFi adapters
+iw dev
+
+# check connection status
+iw wlan0 link
+
+# show / manipulate routing, devices, policy routing and tunnels
 ip
-	# show / manipulate routing, devices, policy routing and tunnels
+
+# show status wlan0
 ip link show wlan0
-	# show status wlan0
+
+# bring up wlan0
 ip link set wlan0 up
-	# bring up wlan0
+
 ip a
 
+# find wireless interface - deprecated, use iw instead
 iwconfig
-	# deprecated, use iw instead
 
-find wireless interface
 
+# scan for available networks
 iwlist scan
-scan for available networks
 
 ifdown wlan0
 shutdown interface wlan0
 
+# start interface wla0
 ifup wlan0
-start interface wla0
 
+# create password to use into /etc/network/interface or /etc/wpa_supplicant.conf
 wpa_passphrase my-ssid password
-	# create password to use into /etc/network/interface or /etc/wpa_supplicant.conf
+
+# create password into file_out
 wpa_passphrase ssid > file_out
 password
-	# create password into file_out
 
 # /etc/network/interface example
 # auto wlan0
