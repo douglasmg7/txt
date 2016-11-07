@@ -44,3 +44,6 @@ sound volume
 
 # open a file
 xdg-open file_name
+
+# no min max buttons
+xfwm4 --replace
