@@ -46,4 +46,6 @@ sound volume
 xdg-open file_name
 
 # no min max buttons
+cd ~/.cache
+rm -rf sessions
 xfwm4 --replace
