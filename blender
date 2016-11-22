@@ -1,5 +1,12 @@
-n - toggle panel right
-t - toggle panel left
+# toggle right panel (view port properties)
+n
+
+# toggle left panel (tools)
+t
+
+# show operator pane
+F6
+
 shift + a - add
 tab - change object mode to edit mode and vice vesra
 m - change object layer
@@ -58,3 +65,9 @@ i - insert a face
 ctrl + tab - mesh select mode
 
 preferences/interface/rotate around selection
+
+# save current scene as default
+ctrl + u
+
+# add on
+	Measureit
