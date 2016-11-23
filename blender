@@ -4,8 +4,14 @@ n
 # toggle left panel (tools)
 t
 
-# show operator pane
+# show operator pane - edit last command
 F6
+
+# slow move mouse
+shift
+
+# wireframe/solid toggle
+z
 
 shift + a - add
 tab - change object mode to edit mode and vice vesra
@@ -29,7 +35,7 @@ shift + s - precisely place the 3d cursor
 shift + c - put 3d cursor on the origin and zoom out
 
 home - zoom all
-/ (num pad) - zoom selected object
+\ (num pad) - zoom selected object
 
 w - shortcut menu for editing options
 o - proportional edition enable/desable
@@ -69,5 +75,5 @@ preferences/interface/rotate around selection
 # save current scene as default
 ctrl + u
 
-# add on
+# add-ons
 	Measureit
