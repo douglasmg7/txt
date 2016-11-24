@@ -13,8 +13,35 @@ shift
 # wireframe/solid toggle
 z
 
-shift + a - add
-tab - change object mode to edit mode and vice vesra
+# engon
+face with more then four faces
+
+# loop cut and slide
+ctrl + r
+scrollor, '+' or '-' to change the number of rings
+
+# inset faces
+i
+
+# bevel edges
+ctrl + b
+
+# bevel vertices
+ctrl + shift + b
+
+# knife too 
+k
+enter to finish
+
+# mesh add
+shift + a
+
+# object/edit mode toggle
+tab
+
+# dissolve and delete - to restore mesh
+x, select dissolve
+
 m - change object layer
 sapce (in to 3d view) - search bar
 ctr+alt+u - user preferences
@@ -25,11 +52,20 @@ a - select all / deselect all
 ctr + lmb - selet
 ctr + shift + lmb - deselect
 
+# grap
 g (+ x, y ou z) - grab
+
+# scale
 s (+ x, y ou z) - scale
 s (shift + z) negate z, scale x and y
+
+# rotate
 r (+ x, y ou z) - rotate
-e (+ x, y ou z) - extrude
+
+# extrude
+e + 'x', 'y' or 'z' to fix axe
+rmb to fix extrude above the old
+
 r y 30 - rotate into x 30 graus
 shift + s - precisely place the 3d cursor
 shift + c - put 3d cursor on the origin and zoom out
@@ -50,7 +86,7 @@ p - in object mode deletes the scene background, esc to go back
 
 f - create a face from selected vertices
 
-k - knife too, enter to finish
+
 
 alt + c - convert curve to mesh
 
@@ -62,7 +98,6 @@ v - change the handle type
 
 shift + d - duplicate
 
-ctrl + r - add edge loop
 
 d + rmb - write line
 d + lmb - erase line
