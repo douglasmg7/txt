@@ -17,7 +17,7 @@ z
 face with more then four faces
 
 # loop cut and slide
-ctrl + r
+ctrl r
 scrollor, '+' or '-' to change the number of rings
 
 # inset faces
@@ -29,12 +29,9 @@ ctrl + b
 # bevel vertices
 ctrl + shift + b
 
-# knife too 
+# knife tool 
 k
-enter to finish
-
-# mesh add
-shift + a
+enter to finish # mesh add shift a
 
 # object/edit mode toggle
 tab
@@ -42,18 +39,55 @@ tab
 # dissolve and delete - to restore mesh
 x, select dissolve
 
-m - change object layer
-sapce (in to 3d view) - search bar
-ctr+alt+u - user preferences
+# change object layer
+m
 
-b - box select object
-c - circle select in edit mode
-a - select all / deselect all
-ctr + lmb - selet
-ctr + shift + lmb - deselect
+# search bar in 3d view
+sapce
 
-# grap
-g (+ x, y ou z) - grab
+# user preferencers
+ctr + alt + u
+
+# box selection
+b
+lbm to select
+mbm to deselect
+
+# circle selection
+c
+lbm to select
+mbm to deselect
+
+# edge loop selection
+alt + shift + lbm
+
+# edge ring selection
+ctrl + alt + shift + lbm
+
+# select all/none
+a
+
+# select more/less
+ctrl + numpad +
+ctrl + numpad -
+
+# shade mode toggle wireframe/solid
+z
+
+# hide selected
+h
+
+# hide unselected
+shift + h
+
+# show hidden
+alt + h
+
+# grap on global z axe
+g z
+
+# grap on local z axe
+g z z
 
 # scale
 s (+ x, y ou z) - scale
@@ -66,16 +100,26 @@ r (+ x, y ou z) - rotate
 e + 'x', 'y' or 'z' to fix axe
 rmb to fix extrude above the old
 
+# duplicate
+shift + d
+
+# duplicate link
+alt + d
+
+# rotate 30 degrees over axe y
 r y 30 - rotate into x 30 graus
+
+# snap (replace 3d curosr)
 shift + s - precisely place the 3d cursor
-shift + c - put 3d cursor on the origin and zoom out
+
+# make link duplicate be a unique object
+clik on number of duplicate itens on edit tab inside properties window
 
 home - zoom all
 \ (num pad) - zoom selected object
 
 w - shortcut menu for editing options
 o - proportional edition enable/desable
-z - change the shade mode
 
 alt + rmb - circular selection in edit mode
 shift - slow the motiom of the mouse
