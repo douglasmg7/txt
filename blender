@@ -115,6 +115,18 @@ shift + s - precisely place the 3d cursor
 # make link duplicate be a unique object
 clik on number of duplicate itens on edit tab inside properties window
 
+# reset position
+alt + g
+
+# reset scale
+alt + s
+
+# reset rotate
+alt + r
+
+# applay object's transformation to its data
+ctrl + a
+
 home - zoom all
 \ (num pad) - zoom selected object
 
