@@ -31,7 +31,10 @@ ctrl + shift + b
 
 # knife tool 
 k
-enter to finish # mesh add shift a
+enter to finish 
+
+# mesh add 
+shift + a
 
 # object/edit mode toggle
 tab
@@ -127,6 +130,9 @@ alt + r
 # applay object's transformation to its data
 ctrl + a
 
+# crease
+shift + e
+
 home - zoom all
 \ (num pad) - zoom selected object
 
@@ -166,5 +172,14 @@ preferences/interface/rotate around selection
 # save current scene as default
 ctrl + u
 
+# zoom out
+shift + c
+
 # add-ons
 	Measureit
+
+# make qud be triangule
+ctrl + t
+
+# mesh select mode
+ctrl + tab
