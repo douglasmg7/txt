@@ -183,3 +183,7 @@ ctrl + t
 
 # mesh select mode
 ctrl + tab
+
+# add vertex or extrude
+ctrl + rbm
+e
