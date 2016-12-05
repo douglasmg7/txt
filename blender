@@ -187,3 +187,9 @@ ctrl + tab
 # add vertex or extrude
 ctrl + rbm
 e
+
+# grease pencil
+d + lbm
+
+# grease erase
+d + rbm
