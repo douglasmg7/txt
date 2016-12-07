@@ -1,0 +1,2 @@
+# install network drive for dell D620/630
+apt-get install firmware-b43-installer
