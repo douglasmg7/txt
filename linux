@@ -944,3 +944,6 @@ acpi -V
 apt-get install libav-tools
 avconv -i file.m4a file.mp3
 for i in *.m4a; do avconv -i "$i" "${i/.m4a/.mp3}"; done
+
+# change hd name, label
+e2label /dev/sdb1 new_name
