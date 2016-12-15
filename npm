@@ -60,7 +60,7 @@ npm run-script script_name
 npm update -g
 
 # view outdated global packages
-npm updated -g --depth=0
+npm outdated -g --depth=0
 
 # update specific global package
 npm update -g <package>
