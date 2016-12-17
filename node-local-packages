@@ -2,4 +2,7 @@ babel-cli (dev)
 mocha
 nodemon
 webpack
+webpack-dev-server
 pug
+cross-env
+

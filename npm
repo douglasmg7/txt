@@ -67,3 +67,13 @@ npm update -g <package>
 
 # list global modules installed
 npm -g ls --depth=0
+
+# view current package version installed
+npm v webpack version
+alias: view, info, show
+
+# view all packages versions
+npm v webpack versions --json
+
+# view all informations
+npm v webpack

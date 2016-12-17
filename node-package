@@ -93,3 +93,9 @@ pug
 
 # Pug template engine cli
 pug-cli
+
+# hot reload with webpack
+webpack-dev-server
+
+# set env for linux and windows
+cross-env
