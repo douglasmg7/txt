@@ -19,11 +19,14 @@ webpack --progress --colors --watch
 # watch mode
 webpack -w
 
-# production mode (minified version)
+# for building once for production (minified version)
 webpack -p
 
-# debug mode
+# for building once for development
 webpack
+
+# to include source map
+webpack -d
 
 # development server
 npm install webpack-dev-server -g
