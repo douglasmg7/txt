@@ -99,3 +99,6 @@ webpack-dev-server
 
 # set env for linux and windows
 cross-env
+
+# Simply and beautifully log to console
+lme
