@@ -45,3 +45,10 @@ http://webpack.github.io/analyse
 # source map
 devtool: 'source-map',   // for production
 devtool: 'eval-cheap-module-source-map',   // fast build
+
+# HMR
+# hot module reload
+
+# webpack server and HMR with express
+webpack-hot-middleware
+webpack-dev-middleware

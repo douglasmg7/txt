@@ -56,6 +56,9 @@ npm start
 npm run-script script_name
 	run script 
 
+# update packages and update package.js
+npm update --save
+
 # update all global packages
 npm update -g
 
