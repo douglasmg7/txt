@@ -102,3 +102,6 @@ cross-env
 
 # Simply and beautifully log to console
 lme
+
+# Livereload for browser
+livereload
