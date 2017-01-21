@@ -1,0 +1,9 @@
+# install semantic-ui
+npm i gulp-cli -g
+npm i semantic-ui --save
+cd semnatic-ui
+gulp build
+
+# include
+link(rel="stylesheet" href="/semantic/dist/semantic.min.css" charset="utf-8")
+script(src="/bower_components/jquery/dist/jquery.min.js")
