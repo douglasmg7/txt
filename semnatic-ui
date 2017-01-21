@@ -7,3 +7,15 @@ gulp build
 # include
 link(rel="stylesheet" href="/semantic/dist/semantic.min.css" charset="utf-8")
 script(src="/bower_components/jquery/dist/jquery.min.js")
+
+# runs default task (watch)
+gulp 
+
+# watches files for changes
+gulp watch 
+
+# builds all files from source
+gulp build 
+
+# re-runs install
+gulp install 

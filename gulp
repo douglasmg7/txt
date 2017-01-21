@@ -1,15 +1,15 @@
+# run the default task
 gulp
-run the default task
 
+# run a specific task
 gulp copy
-run the copy task
 
+# default gulp file
 gulpfile.js
-default gulp file
 
-packages
-	watch
-	util
-	uglify
-	liverload
-	browsersync
+# packages
+watch
+util
+uglify
+liverload
+browsersync
