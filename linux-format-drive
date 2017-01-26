@@ -1,0 +1,8 @@
+# look for usb-drive to format
+df
+
+# unmount drive
+umount /dev/sdc1
+
+# format drive to fat32
+mkfs.vfat -n 'DMG-16G' -I /dev/sdc1
