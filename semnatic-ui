@@ -19,3 +19,10 @@ gulp build
 
 # re-runs install
 gulp install 
+
+# no-download lato fonts
+on file 'site/global/site.variables' include '@importGoogleFonts: false;'
+# re-build
+gulp build
+# Fonts will default to Helvetica Neue or Arial which are readily available if Lato is not
+

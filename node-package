@@ -105,3 +105,6 @@ lme
 
 # Livereload for browser
 livereload
+
+# use google fonts offline
+google-fonts-offline
