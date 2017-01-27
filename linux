@@ -258,6 +258,9 @@ grep - global regular expression print
 	-c  count number of lines
 	-e  specify more than one matching pattern
 	-w  exactly match word surround by by non-word constituent character
+	-A  number of lines after
+	-B  number of lines befor
+	-r  recursive
 
 	searches all files in a directory
 		grep -R Arctic /home
