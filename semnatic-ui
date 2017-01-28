@@ -24,5 +24,24 @@ gulp install
 on file 'site/global/site.variables' include '@importGoogleFonts: false;'
 # re-build
 gulp build
-# Fonts will default to Helvetica Neue or Arial which are readily available if Lato is not
+# fonts will default to Helvetica Neue or Arial which are readily available if Lato is not
 
+# change variables
+site.variables
+
+# override css rules
+site.overrides
+
+# cascading inheritance
+src/site/
+src/theme/theme-name
+src/theme/default/
+
+# call tree
+semantic.less
+	definition/global/site.less
+		theme.config 
+			theme.less
+				theme/defaulg/site.variable
+				theme/theme-name/site.variable
+				site/site.variables
