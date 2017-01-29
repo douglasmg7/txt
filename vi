@@ -108,8 +108,8 @@ N - back find
 ggn - start file
 Gn - end file
 ? - find backward
-* - find for current exactly word in normal mode
-# - find backword current exactly word in normal mode
+* - find forward for the word under the cursor
+# - find backword for the word under the cursor
 
 :ls - list all buffers
 :bn - go to next buffer
@@ -122,11 +122,11 @@ Gn - end file
 :r !cmd - execute cmd and insert its standard output below the cursor
 
 slpit windows
-Ctrl+W, S for horizontal splitting
-Ctrl+W, V for vertical splitting
-Ctrl+W, Q to close one
-Ctrl+W, Ctrl+W to switch between windows
-Ctrl+W, J (xor K, H, L) to switch to adjacent window (intuitively up, down, left, right)
+Ctrl + w, S for horizontal splitting
+Ctrl + w, V for vertical splitting
+Ctrl + w, Q to close one
+Ctrl + w, Ctrl+W to switch between windows
+Ctrl + w, J (xor K, H, L) to switch to adjacent window (intuitively up, down, left, right)
 :sp filename for a horizontal split
 :vsp filename or :vs filename for a vertical split
 
@@ -250,8 +250,40 @@ help function-list
 earn vim script
 
 paste from clipboard
-go to insert mode
 ctrl + shift + v
+
+ctrl + f
+move forward one screenfull
+
+ctrl + bb
+move backward one screenfull
+
+{
+move to start of pargagraph or code block
+
+}
+move to end of paragraph or code block
+
+gi
+go to the last edit point in insert mode
+
+g,
+go to the last edit point
+
+f<char>
+move to next <char> (line command)
+
+F<char>
+move to previous <char> (line command)
+
+q:
+command history
+
+q/
+search history
+
 remap caps lock to ctrl?
 Tim Pope’s commentary.vim plugin
 Kana Natsuno’s textobj-entire plugin is a good example
+
+
