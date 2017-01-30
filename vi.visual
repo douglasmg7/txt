@@ -1,0 +1,9 @@
+v - go to visual character-wise mode
+
+V - go to visual line-wise mode
+
+<C-v> - go to visual block-wise mode
+
+gv - reselect the last visual mode
+
+o - go to other end of highlighted text

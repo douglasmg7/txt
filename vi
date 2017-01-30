@@ -2,6 +2,7 @@
 ZZ ou :wq - salva e sai
 :e! - descarta as alterações
 :q! - sai sem salvar
+:qa - close all
 
 i - insere no caracter atual
 a - insere no próximo caracter
@@ -282,8 +283,27 @@ command history
 q/
 search history
 
-remap caps lock to ctrl?
-Tim Pope’s commentary.vim plugin
-Kana Natsuno’s textobj-entire plugin is a good example
+vi -o file1 file2 file3
+split horizontal
 
+vi -O file1 file2 file3
+split vertical
 
+vi -p file1 file2 file3
+tabs
+
+:tabedit {file}   edit specified file in a new tab
+:tabfind {file}   open a new tab with filename given, searching the 'path' to find it
+:tabclose         close current tab
+:tabclose {i}     close i-th tab
+:tabonly          close all other tabs (show only the current tab)
+
+:tabs         list all tabs including their displayed windows
+:tabm 0       move current tab to first
+:tabm         move current tab to last
+:tabm {i}     move current tab to position i+1
+
+:tabn         go to next tab
+:tabp         go to previous tab
+:tabfirst     go to first tab
+:tablast      go to last tab
