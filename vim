@@ -58,6 +58,7 @@ R - modifica o texto até presionar esc
 s - apaga um caracter e vai para o modo insert
 x - apaga um caracter e continua no modo comand
 S - apaga a linha e vai pro modo insert
+J - make rows a line
 
 gu - low case
 gU - upper case
@@ -68,13 +69,16 @@ gUgU - upper case all the line
 gUU - upper case all the line
 gUap - uper case a paragraph
 ~~ - modifica o case do caracter
+gUit - upper case inside tag
+
 
 :syntax on
 colore o texto em função da sintaxe
 
 
-u - undo
-ctrl-r - redo
+u   undo
+ctrl-r   redo
+U   return the last line which was modified to its original state (reverse all changes in last modified line) 
 
 . - repete a ultima entrada
 
@@ -118,6 +122,7 @@ Gn - end file
 :b1 - go to buffer 1
 :2bd - delete o buffer 2
 :bd txt <tab> - show buffers that match the txt
+<C-6> - trogglo between two buffers
 
 :r file - insert the file below the cursor
 :r !cmd - execute cmd and insert its standard output below the cursor
@@ -307,3 +312,5 @@ tabs
 :tabp         go to previous tab
 :tabfirst     go to first tab
 :tablast      go to last tab
+
+:noh    turn off highlighting until the next search

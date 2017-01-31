@@ -7,3 +7,9 @@ V - go to visual line-wise mode
 gv - reselect the last visual mode
 
 o - go to other end of highlighted text
+
+vit - visually select inside tag
+
+u - convert to lower case
+
+U - convert to upper cas
