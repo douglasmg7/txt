@@ -18,6 +18,9 @@ configura o tamanho do tab
 :set nu
 mostra o número da linha
 
+A   # start insert mode at end of line
+I   # start insert mode at begin of line
+
 <C-h>   delete a letter in insert mode
 <C-w>   delete a word in insert mode
 <C-u>   delte back to start of line
@@ -48,13 +51,13 @@ P - cola antes do cursor
 p - cola depois do cursor
 "0p - cola the yank before the last d
 
-r   modifica um único caracter e volta pro modo comando
-R   modifica o texto até presionar esc
-s   apaga um caracter e vai para o modo insert
-x   apaga um caracter e continua no modo comand
-X   del character before
-S   apaga a linha e vai pro modo insert
-J   make rows a line
+r    #  modifica um único caracter e volta pro modo comando
+R    #  modifica o texto até presionar esc
+s    #  apaga um caracter e vai para o modo insert
+S    #  apaga a linha e vai pro modo insert
+x    #  apaga um caracter e continua no modo comand
+X    #  del character before
+J    #  join lines
 
 gu - low case
 gU - upper case
@@ -124,13 +127,17 @@ Gn - end file
 :r !cmd - execute cmd and insert its standard output below the cursor
 
 slpit windows
-Ctrl + w, S for horizontal splitting
-Ctrl + w, V for vertical splitting
-Ctrl + w, Q to close one
-Ctrl + w, Ctrl+W to switch between windows
-Ctrl + w, J (xor K, H, L) to switch to adjacent window (intuitively up, down, left, right)
-:sp filename for a horizontal split
-:vsp filename or :vs filename for a vertical split
+<C-w>,s   # horizontal splitting
+<C-w>,v   # vertical splitting
+<C-w>,q   # close one
+<C-w>,<C-w>   # switch between windows
+<C-w>,j (xor k, h, l)   # switch to adjacent window (intuitively up, down, left, right)
+:sp <filename>    # horizontal split
+:vs <filename>    # vertical split
+<C-w>,_     # maximaize the size of the split
+<C-w>,|     # maximaize the size of the vertical-split
+<C-w>,+     # grow split
+<C-w>,-     # shrink split
 
 :h key-notation
 key notation information
@@ -302,3 +309,15 @@ tabs
 :tablast      go to last tab
 
 :noh    turn off highlighting until the next search
+
+<C-p>     # completion previos selection
+<C-n>     # completion next selection
+
+qa      # record action in the register 'a'
+q       # stop recording
+@a      # will replay the macro saved into register 'a'
+@@      # will replay the last macro saved
+
+>     # indent right
+<     # indent left
+=     # auto indent

@@ -1,0 +1,11 @@
+cs'"    change surround ' to "
+cs"'    change surround " to '
+cs"<p>    change surround " to <p></p>
+ysiw'   surround word with '
+ys$'    surround cursor to end line with '
+cst'    surround tag with '
+ds'     delete '
+yss]    surround line with []
+yss[    surround line with [  ]
+yssb    surround line with ()
+VS<p class='first'>   surround line with tag

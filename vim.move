@@ -1,3 +1,6 @@
+<start position><command><end position>   # most commands can be used using the following general format
+
+:34 move to line 34
 h   move one character left
 j   move one row down
 k   move one row up
@@ -37,11 +40,10 @@ Ctrl-E  move view pane down
 
 n   next matching search pattern
 N   previous matching search pattern
-*   next whole word under cursor
-#   previous whole word under cursor
-g*  next matching search (not whole word) pattern under cursor
-g#  previous matching search (not whole word) pattern under cursor
-
+*   go to the next whole word under cursor
+#   go to the previous whole word under cursor
+g*  go to the next matching search (not whole word) pattern under cursor
+g#  go to the previous matching search (not whole word) pattern under cursor
 %   jump to matching bracket { } [ ] ( )
 
 fX  to next 'X' after cursor, in the same line (X is any character)

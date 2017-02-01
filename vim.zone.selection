@@ -1,0 +1,12 @@
+<action>a<object>   # around
+<action>i<object>   # inside
+action - d, y, or v
+object - w, W, s, p, ", ', ), }, ]
+
+suppose the cursor is on the first o of (map (+) ("foo"))
+vi"  → will select foo.
+va"  → will select "foo".
+vi)  → will select "foo".
+va)  → will select ("foo").
+v2i) → will select map (+) ("foo")
+v2a) → i select (map (+) ("foo"))
