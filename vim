@@ -1,24 +1,11 @@
-:e	open file
-ZZ ou :wq - salva e sai
-:e! - descarta as alterações
-:q! - sai sem salvar
-:qa - close all
+:e   open file
+ZZ, :wq, :x   salva e sai (:x only save if necessary)
+:q!   quit without save
+:e!   descarta as alterações
+:qa   close all
 
-i - insere no caracter atual
-a - insere no próximo caracter
-
-gg - para o inicio do texto
-G - para o fim do arquivo
-0 - para o incio da linha
-$ - para o fim da linha
-A - para o final da linha e modo insert
-w - para a próxima palavra
-b - para a palavra anterior
-e - para o fim da próxima palavra
-ge - para o fim da palavra anterior
 M - put cursor on middle of the text
 
-2w - duas palavras a frente
 3gg - vai para linha 3
 3G  - vai para linha 3
 
@@ -31,19 +18,27 @@ configura o tamanho do tab
 :set nu
 mostra o número da linha
 
+<C-h>   delete a letter in insert mode
+<C-w>   delete a word in insert mode
+<C-u>   delte back to start of line
+<C-m>   cr
+<C-j>   line feed
+<C-i>   horizontal tab
+
 l - um caracter
 aw - uma palavra
 ap - um parágrafo
 dd - repeat the operator to applay to a line
 
-d - delete
-dl - um caracter
-d0 - até o inicio da linha
-dw - até o final da palavra
-dd - toda a linha
-d$ ou D - cut até o final da linha
-daw - uma palavra
-dap - um parágrafo
+d    delete
+dl   um caracter
+daw   uma palavra
+dap   um parágrafo
+d0   até o inicio da linha
+d^   delete from current backward to first non-white-space character
+dw   até o final da palavra
+dd   toda a linha
+d$ ou D   cut até o final da linha
 
 c - change (go to insert mode)
 
@@ -53,12 +48,13 @@ P - cola antes do cursor
 p - cola depois do cursor
 "0p - cola the yank before the last d
 
-r - modifica um único caracter e volta pro modo comando
-R - modifica o texto até presionar esc
-s - apaga um caracter e vai para o modo insert
-x - apaga um caracter e continua no modo comand
-S - apaga a linha e vai pro modo insert
-J - make rows a line
+r   modifica um único caracter e volta pro modo comando
+R   modifica o texto até presionar esc
+s   apaga um caracter e vai para o modo insert
+x   apaga um caracter e continua no modo comand
+X   del character before
+S   apaga a linha e vai pro modo insert
+J   make rows a line
 
 gu - low case
 gU - upper case
@@ -195,14 +191,6 @@ operator+movement
 dw
 after type d, vim go to operator-pending mode
 
-<C-w>
-delete back one word
-
-<C-h>
-delete back on character (backspace)
-
-<C-u>
-delte back to start of line
 
 <C-o>
 insert normal mode

@@ -950,3 +950,6 @@ for i in *.m4a; do avconv -i "$i" "${i/.m4a/.mp3}"; done
 
 # change hd name, label
 e2label /dev/sdb1 new_name
+
+add-apt-repository ppa:neovim-ppa/unstable    # add ppa
+add-apt-repository --remove ppa:neovim-ppa/unstable   # remove ppa
