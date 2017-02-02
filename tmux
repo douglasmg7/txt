@@ -33,9 +33,13 @@ tmux rename-change -t 0 database
 # full screen a pane
 prefix z
 
-# powerline configuration
-# add the following line to your ~/.tmux.conf
+# powerline configuration - add to ~/tmux.conf
 source /usr/local/lib/python2.7/dist-packages/powerline/bindings/tmux/powerline.conf
 set-option -g default-terminal "screen-256color"
 # modifying ~/.bashrc
 export TERM=xterm-256color
+
+# remap prefix to <C-a>
+unbind C-b
+set -g prefix C-a
+bind C-a send-prefix
