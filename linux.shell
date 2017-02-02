@@ -1,0 +1,5 @@
+echo $SHELL	# default shell running
+
+chsh -s zsh	# change default shell to zsh
+
+cat /etc/shells		# list available shells
