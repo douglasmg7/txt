@@ -1,0 +1,8 @@
+general installation procedure
+  Read the README file and other applicable docs
+  Run xmkmf -a, or the INSTALL or configure script
+  Check the Makefile
+  If necessary, run make clean, make Makefiles, make includes, and make depend
+  Run make
+  Check file permissions
+  If necessary, run make install
