@@ -953,3 +953,6 @@ e2label /dev/sdb1 new_name
 
 add-apt-repository ppa:neovim-ppa/unstable    # add ppa
 add-apt-repository --remove ppa:neovim-ppa/unstable   # remove ppa
+
+# show lines that contain "var nu_l" from all js files
+find -n *.js | xargs grep "var nu_l"
