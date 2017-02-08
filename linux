@@ -86,27 +86,6 @@ loga como usuário root
 date
 obtem a data do sistema
 
-/bin - Core operation system commands.
-/boot - kernel and files needed to load the kernel.
-/dev - Device entries for disks, printers, pseudo-terminals, etc.
-/etc - Critical startup and configuration files.
-/home - Default home directories for users.
-/lib - Libraries, shared libraries, and parts of the C compiler.
-/media - Mount points for filessystems on removable media.
-/mnt - Temporary mount points, mounts for removable media.
-/opt - Optional software packages (not consistently used).
-/proc - Information about all running process.
-/root - Home directory of the superuser.
-/sbin - Commands needed for minimal system operability.
-/tmp - Temporary files that may disappear between reboots.
-/usr - Hierarchy of secondary files and commands.
-/usr/bin - Most commands and executable files.
-/usr/include - Header files for compiling C programs.
-/usr/lib - Libraries; also, support files for standard programs.
-/usr/local - Software you write or install.
-/usr/share - Items that might be common to multiple systems.
-/var - System-specific data and configuration files.
-
 date -s "11 APR 2014 07:34:00"
 date +%T -s "10:13:13"
 	# configure system time
