@@ -49,14 +49,18 @@
     netstat The network statistics utility (optional)
     ping    The ICMP network test utility (optional)[201~k
 
+/boot
+  # stores data that is used before the kernel begins executing user-mode programs
+  # kernel and files needed to load the kernel
+  # programs necessary to arrange for the boot loader to be able to boot a file are placed in /sbin
+  # configuration files for boot loaders are placed in /etc
+  # the system kernel is located in either / or /boot
 
+/dev
+  # location of special or device files
+  # devices are defined by type, such as 'block' or 'character', and 'major' and 'minor' number
+  # the major number is used to categorize a device and the minor number is used to identify a specific device type
 
-
-
-
-
-/boot - kernel and files needed to load the kernel.
-/dev - Device entries for disks, printers, pseudo-terminals, etc.
 /etc - Critical startup and configuration files.
 /home - Default home directories for users.
 /lib - Libraries, shared libraries, and parts of the C compiler.
