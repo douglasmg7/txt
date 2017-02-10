@@ -1,88 +1,95 @@
 /bin
-  # several useful commands that are of use to both the system administrator as well as non-privileged users 
-  # it usually contains the shells like bash, csh, etc.... and commonly used commands like cp, mv, rm, cat, ls
-  # in contrast to /usr/bin, the binaries in this directory are considered to be essential 
-  # also contains programs which boot scripts may depend on
-  # no subdirectories in /bin and that the following commands, or symbolic links to commands, are located there
-    cat      Utility to concatenate files to standard output
-    chgrp    Utility to change file group ownership
-    chmod    Utility to change file access permissions
-    chown    Utility to change file owner and group
-    cp       Utility to copy files and directories
-    date     Utility to print or set the system data and time
-    dd       Utility to convert and copy a file
-    df       Utility to report filesystem disk space usage
-    dmesg    Utility to print or control the kernel message buffer
-    echo     Utility to display a line of text
-    false    Utility to do nothing, unsuccessfully
-    hostname Utility to show or set the system's host name
-    kill     Utility to send signals to processes
-    ln       Utility to make links between files
-    login    Utility to begin a session on the system
-    ls       Utility to list directory contents
-    mkdir    Utility to make directories
-    mknod    Utility to make block or character special files
-    more     Utility to page through text
-    mount    Utility to mount a filesystem
-    mv       Utility to move/rename files
-    ps       Utility to report process status
-    pwd      Utility to print name of current working directory
-    rm       Utility to remove files or directories
-    rmdir    Utility to remove empty directories
-    sed      The `sed' stream editor
-    sh       The Bourne command shell
-    stty     Utility to change and print terminal line settings
-    su       Utility to change user ID
-    sync     Utility to flush filesystem buffers
-    true     Utility to do nothing, successfully
-    umount   Utility to unmount file systems
-    uname    utility to print system information
+# several useful commands that are of use to both the system administrator as well as non-privileged users 
+# it usually contains the shells like bash, csh, etc.... and commonly used commands like cp, mv, rm, cat, ls
+# in contrast to /usr/bin, the binaries in this directory are considered to be essential 
+# also contains programs which boot scripts may depend on
+# no subdirectories in /bin and that the following commands, or symbolic links to commands, are located there
+  cat      Utility to concatenate files to standard output
+  chgrp    Utility to change file group ownership
+  chmod    Utility to change file access permissions
+  chown    Utility to change file owner and group
+  cp       Utility to copy files and directories
+  date     Utility to print or set the system data and time
+  dd       Utility to convert and copy a file
+  df       Utility to report filesystem disk space usage
+  dmesg    Utility to print or control the kernel message buffer
+  echo     Utility to display a line of text
+  false    Utility to do nothing, unsuccessfully
+  hostname Utility to show or set the system's host name
+  kill     Utility to send signals to processes
+  ln       Utility to make links between files
+  login    Utility to begin a session on the system
+  ls       Utility to list directory contents
+  mkdir    Utility to make directories
+  mknod    Utility to make block or character special files
+  more     Utility to page through text
+  mount    Utility to mount a filesystem
+  mv       Utility to move/rename files
+  ps       Utility to report process status
+  pwd      Utility to print name of current working directory
+  rm       Utility to remove files or directories
+  rmdir    Utility to remove empty directories
+  sed      The `sed' stream editor
+  sh       The Bourne command shell
+  stty     Utility to change and print terminal line settings
+  su       Utility to change user ID
+  sync     Utility to flush filesystem buffers
+  true     Utility to do nothing, successfully
+  umount   Utility to unmount file systems
+  uname    utility to print system information
 
-  # the following programs, or symbolic links to programs, must be in /bin if the corresponding subsystem is installed
-    csh     the c shell (optional)
-    ed      the `ed' editor (optional)
-    tar     the tar archiving utility (optional)
-    cpio    the cpio archiving utility (optional)
-    gzip    the gnu compression utility (optional)
-    gunzip  the gnu uncompression utility (optional)
-    zcat    the gnu uncompression utility (optional)
-    netstat the network statistics utility (optional)
-    ping    the icmp network test utility (optional)[201~k
+# the following programs, or symbolic links to programs, must be in /bin if the corresponding subsystem is installed
+  csh     the c shell (optional)
+  ed      the `ed' editor (optional)
+  tar     the tar archiving utility (optional)
+  cpio    the cpio archiving utility (optional)
+  gzip    the gnu compression utility (optional)
+  gunzip  the gnu uncompression utility (optional)
+  zcat    the gnu uncompression utility (optional)
+  netstat the network statistics utility (optional)
+  ping    the icmp network test utility (optional)[201~k
 
 /boot
-  # stores data that is used before the kernel begins executing user-mode programs
-  # kernel and files needed to load the kernel
-  # programs necessary to arrange for the boot loader to be able to boot a file are placed in /sbin
-  # configuration files for boot loaders are placed in /etc
-  # the system kernel is located in either / or /boot
+# stores data that is used before the kernel begins executing user-mode programs
+# kernel and files needed to load the kernel
+# programs necessary to arrange for the boot loader to be able to boot a file are placed in /sbin
+# configuration files for boot loaders are placed in /etc
+# the system kernel is located in either / or /boot
 
 /dev
-  # location of special or device files
-  # devices are defined by type, such as 'block' or 'character', and 'major' and 'minor' number
-  # the major number is used to categorize a device and the minor number is used to identify a specific device type
+# location of special or device files
+# devices are defined by type, such as 'block' or 'character', and 'major' and 'minor' number
+# the major number is used to categorize a device and the minor number is used to identify a specific device type
 
 /etc
-  # this is the nerve center of your system, it contains all system related configuration files in here or in its sub-directories
-  # it's a good idea to backup this directory regularly
-  # it will definitely save you a lot of re-configuration later if you re-install or lose your current installation
-  # normally, no binaries should be or are located here
+# this is the nerve center of your system, it contains all system related configuration files in here or in its sub-directories
+# it's a good idea to backup this directory regularly
+# it will definitely save you a lot of re-configuration later if you re-install or lose your current installation
+# normally, no binaries should be or are located here
 
 /home
-  # default home directories for users
+# default home directories for users
 
 /lib 
-  # contains kernel modules and those shared library images (the C programming code library) needed to boot the system and run the commands in the root filesystem, ie. by binaries in /bin and /sbin
-  # libraries are readily identifiable through their filename extension of *.so. windows equivalent to a shared library would be a DLL (dynamically linked library) file 
+# contains kernel modules and those shared library images (the C programming code library) needed to boot the system and run the commands in the root filesystem, ie. by binaries in /bin and /sbin
+# libraries are readily identifiable through their filename extension of *.so. windows equivalent to a shared library would be a DLL (dynamically linked library) file 
 
 /lost+found
-  # any corrupt recovered files that it find
-  # each partition has its own lost+found directory
+# any corrupt recovered files that it find
+# each partition has its own lost+found directory
 
 /media
-  # mount points for removable media
+# mount points for removable media
 
-/mnt - Temporary mount points, mounts for removable media.
-/opt - Optional software packages (not consistently used).
+/mnt
+# this is a generic mount point under which you mount your filesystems or devices
+# mounting is the process by which you make a filesystem available to the system
+# after mounting your files will be accessible under the mount-point 
+# temporary mount points, mounts for removable media
+
+/opt
+# reserved for all the software and add-on packages that are not part of the default installation
+
 /proc - Information about all running process.
 /root - Home directory of the superuser.
 /sbin - Commands needed for minimal system operability.
