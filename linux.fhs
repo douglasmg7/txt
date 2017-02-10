@@ -39,15 +39,15 @@
     uname    utility to print system information
 
   # the following programs, or symbolic links to programs, must be in /bin if the corresponding subsystem is installed
-    csh     The C shell (optional)
-    ed      The `ed' editor (optional)
-    tar     The tar archiving utility (optional)
-    cpio    The cpio archiving utility (optional)
-    gzip    The GNU compression utility (optional)
-    gunzip  The GNU uncompression utility (optional)
-    zcat    The GNU uncompression utility (optional)
-    netstat The network statistics utility (optional)
-    ping    The ICMP network test utility (optional)[201~k
+    csh     the c shell (optional)
+    ed      the `ed' editor (optional)
+    tar     the tar archiving utility (optional)
+    cpio    the cpio archiving utility (optional)
+    gzip    the gnu compression utility (optional)
+    gunzip  the gnu uncompression utility (optional)
+    zcat    the gnu uncompression utility (optional)
+    netstat the network statistics utility (optional)
+    ping    the icmp network test utility (optional)[201~k
 
 /boot
   # stores data that is used before the kernel begins executing user-mode programs
@@ -61,10 +61,26 @@
   # devices are defined by type, such as 'block' or 'character', and 'major' and 'minor' number
   # the major number is used to categorize a device and the minor number is used to identify a specific device type
 
-/etc - Critical startup and configuration files.
-/home - Default home directories for users.
-/lib - Libraries, shared libraries, and parts of the C compiler.
-/media - Mount points for filessystems on removable media.
+/etc
+  # this is the nerve center of your system, it contains all system related configuration files in here or in its sub-directories
+  # it's a good idea to backup this directory regularly
+  # it will definitely save you a lot of re-configuration later if you re-install or lose your current installation
+  # normally, no binaries should be or are located here
+
+/home
+  # default home directories for users
+
+/lib 
+  # contains kernel modules and those shared library images (the C programming code library) needed to boot the system and run the commands in the root filesystem, ie. by binaries in /bin and /sbin
+  # libraries are readily identifiable through their filename extension of *.so. windows equivalent to a shared library would be a DLL (dynamically linked library) file 
+
+/lost+found
+  # any corrupt recovered files that it find
+  # each partition has its own lost+found directory
+
+/media
+  # mount points for removable media
+
 /mnt - Temporary mount points, mounts for removable media.
 /opt - Optional software packages (not consistently used).
 /proc - Information about all running process.
