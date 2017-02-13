@@ -90,8 +90,16 @@
 /opt
 # reserved for all the software and add-on packages that are not part of the default installation
 
-/proc - Information about all running process.
-/root - Home directory of the superuser.
+/proc
+# process information pseudo-file system
+# it doesn't contain 'real' files but runtime system information
+# for this reason it can be regarded as a control and information centre for the kernel
+# a lot of system utilities are simply calls to files in this directory
+# for example, 'lsmod' is the same as 'cat /proc/modules' while 'lspci' is a synonym for 'cat /proc/pci
+
+/root
+# home directory of the superuser
+
 /sbin - Commands needed for minimal system operability.
 /tmp - Temporary files that may disappear between reboots.
 /usr - Hierarchy of secondary files and commands.
