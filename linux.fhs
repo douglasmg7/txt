@@ -100,12 +100,21 @@
 /root
 # home directory of the superuser
 
-/sbin - Commands needed for minimal system operability.
-/tmp - Temporary files that may disappear between reboots.
-/usr - Hierarchy of secondary files and commands.
-/usr/bin - Most commands and executable files.
-/usr/include - Header files for compiling C programs.
-/usr/lib - Libraries; also, support files for standard programs.
-/usr/local - Software you write or install.
-/usr/share - Items that might be common to multiple systems.
-/var - System-specific data and configuration files.
+/sbin
+# software used for system maintenance and/or administrative tasks
+# locally installed system administration programs should be placed into /usr/local/sbin
+
+/tmp
+# programs use this to create lock files and for temporary storage of data
+# temporary files that may disappear between reboots
+# many of these files are important for currently running programs and deleting them may result in a system crash
+
+/usr
+# user system resourc
+# this is one of the most important directories in the system as it contains all the user binaries, their documentation, libraries, header files, etc...
+
+/usr/local
+# software you write or install
+
+/var
+# variable data like system logging files
