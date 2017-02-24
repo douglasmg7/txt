@@ -1,0 +1,5 @@
+apt-get install rubberband-cli ffmpeg   # install
+
+ffmpeg -i file.mp3 /tmp/file.wav    # convert your sound file to .wav format (required for rubberband)
+
+rubberband -T 0.6 /tmp/file.wav /tmp/slow.wav   # make audio 60% slow

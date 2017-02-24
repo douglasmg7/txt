@@ -1,0 +1,1 @@
+mplayer a.mp3 -ss 5 -endpos 2 -loop 3   # start at 5 seconds, finish 2 seconds later and repeat 3 times
