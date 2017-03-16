@@ -862,3 +862,5 @@ add-apt-repository --remove ppa:neovim-ppa/unstable   # remove ppa
 
 # show lines that contain "var nu_l" from all js files
 find -n *.js | xargs grep "var nu_l"
+
+find $PWD -name '*.mp3' | xargs -I{} cp {} ~/mob/store_00010001/aa     # copy several files
