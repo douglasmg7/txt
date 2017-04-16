@@ -31,3 +31,5 @@ curl -H "Content-Type: application/x-www-form-urlencoded" -X POST -d "CodigoClie
 
 curl -v -X GET 'http://wspub.allnations.com.br/wsIntEstoqueClientes/ServicoReservasPedidosExt.asmx/ConsultarDisponibilidadeProduto?CodigoCliente=0014770&Senha=728626&CodigoProduto=0044819'
 curl -X GET 'http://wspub.allnations.com.br/wsIntEstoqueClientes/ServicoReservasPedidosExt.asmx/ConsultarDisponibilidadeProduto?CodigoCliente=0014770&Senha=728626&CodigoProduto=0044819'
+
+curl http://127.0.0.1:3000 --cookie "Cho=Kim;Greet=Hello"   # send a cookie

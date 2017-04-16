@@ -1,18 +1,29 @@
+lspci -k    # to list pci hardwares
+
+lsusb -v    # to list usb drivers
+
+dmesg | grep firmware   # to list firmware messages
+
+ip    # show / manipulate routing, devices, policy routing and tunnels
+
+ip link   # list all interfaces
+ip a      # list all interfaces
+
+ip link show wlan0  # show specific interface
+
+ip link set wlan0 up    # activate a interface 
+ip link set wlan0 down  # deactivate a interface
+
+iw dev    # list all wifi devices
+
+iw dev wlan0 info   # show interface status
 
 iw dev wlan0 scan | grep SSID   # scan wifi network (su)
 iw wlan0 scan | grep SSI        # scan wifi network (su)
 
-iw dev    # list all the connected WiFi adapters
-
 iw wlan0 link   # check connection status
 
-ip    # show / manipulate routing, devices, policy routing and tunnels
-
-ip link show wlan0  # show status wlan0
-
-ip link set wlan0 up  # bring up wlan0
-
-ip a
+iw dev wlan0 connect "your_essid"   # connect to an access point - no encryption
 
 ifdown wlan0  # shutdown interface wlan0
 
