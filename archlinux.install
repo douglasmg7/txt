@@ -1,0 +1,58 @@
+# download the lastest archlinux version
+
+wifi-menu -o wlan0    # to config wifi
+
+fdisk -l    # to check partition table
+
+fdisk /dev/sda   # to create partition
+# chose one to be bootable
+# chose one to be swap
+
+mkfs.ext4 /dev/sda1   # format each partition
+
+mkswap /dev/sda2    # format swap
+
+swapon /dev/sda2    # activate the swap
+
+mount /dev/sda1 /mnt    # mount 
+mkdir /mnt/home
+mount /dev/sda2 /mnt/home
+
+pacstrap /mnt base    # run script to install base package or
+pacstrap /mnt base-devel    # run script to install base package dev
+
+genfstab /mnt >> /mnt/etc/fstab   # generate fstab file
+
+arch-chroot /mnt    # change root into the new system
+
+ln -sf /usr/share/zoneinfo/Region/City /etc/localtime   # set the time zone
+
+hwclock --systohc   # generate /etc/adjtime
+
+# Uncomment en_US.UTF-8 UTF-8 and other needed localizations in /etc/locale.gen, and generate them with:
+locale-gen
+
+# set /etc/locale.conf
+LANG=en_US.UTF-8
+
+# set /etc/hostname
+myhostname
+
+passwd    # change root password
+
+# edit the file:
+/etc/hosts
+
+systemctl enable dhcpcd   # make network connections persistent
+
+# grub installation
+pacman -S grub os-prober
+grub-install /dev/sda
+grub-mkconfig -o /boot/grub/grub.cfg
+
+# exit installation
+exit
+umount /mnt/home
+umount /mnt
+reboot
+# remove the intallation media
