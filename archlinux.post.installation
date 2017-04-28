@@ -1,0 +1,36 @@
+pacman -S tmux    # install tmux
+
+vi /etc/pacman.conf   # enable 32 and 64 on 64 archlinux - uncomment the following lines:
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+
+useradd -m -g users -G wheel,storage,power -s /bin/bash username     # create a new user
+-m create home directory
+-g defines the group name
+-G list of supplementary groups which the user is also member
+-s default login shell
+
+passwd username   # set password
+
+pacman -S git wget     # install git wget
+
+pacman -S xorg xorg-server    # display server
+pacman -S xorg-init   # server init (xstart)
+pacman -S xterm    # standard terminal emulator for the X Window System
+pacman -S xorg-twm    # window manager for X11
+
+~/.xserverrc    # create the file
+#!/bin/sh
+exec /usr/bin/Xorg -nolisten tcp "$@" vt$XDG_VTNR
+
+cp /etc/X11/xinit/xinitrc ~/.xinitrc    # copy the file
+
+startx    # start X using ~/.xinitrc
+pkill -15 Xorg    # to quit X
+
+pacman -S i3    # install i3 windows manager
+startx /usr/bin/i3    # start x using i3 windows manager
+
+pacman -S htop
+pacman -S firefox
+pacman -S chromium

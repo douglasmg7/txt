@@ -434,26 +434,6 @@ change only the access time
 dmesg
 hardware error messages
 
-chmod 777 file-name
-	change permission
-
-chmod [ugoa][+-][rwxXstugo] file_name
-	u - owner
-	g - group
-	o - other
-	a - all above
-chmod u+x file_name
-
-chown owner file_name
-	change file owner
-	-h no derefereence mode (change symbolic link)
-
-chown owner.group file_name
-	change owner and group for file_name
-
-chgrp group file_name
-	change file group
-
 xdg-open file-name
 open a pdf
 
@@ -611,81 +591,6 @@ setterm -foreground cyan
 setterm -background yellow
 setterm -inversescreen on
 change terminal colors
-
-/etc/passwd
-	match login name to a corresponding UID
-
-useradd -D
-	show system default
-
-useradd user_name -m
-	create a user_name
-	-m use /etc/skel as template
-
-userdel -r user_name
-	remove user
-	-r remove /home/user_name
-
-usermod
-	change user account
-	-l changes the login name
-	-L locks the account
-	-U unlocks the account
-	-p change the password (avoid this, use passwd)
-
-passwd user_name
-	change the user_name password
-
-passwd
-	change current user password
-
-GID
-	group id
-	/etc/group is like /etc/passwd
-
-groupadd group_name
-	create a new group
-
-usermod -g group_name user_name
-	replace the default group for the user account
-
-usermod -G group_name user_name
-	add user to more one group
-
-groupmod -n new_name old_name
-	change group name
-
-groupmod -g 1025 group_name
-	change GID
-
-groupdel group_name
-	remove a group
-
-group password allows a non-group member to temporarily become a member
-
-file permission symbols
-	- for files
-	d for directories
-	l for links
-	c for character devices
-	b for block device
-	n for network devices
-
-	r for read
-	w for write
-	x for execute
-
-	owner - group - everyone
-
-umask
-	shows the default permissions
-
-umask 022
-	sets the default permissions
-	0022 configured mask
-	666 file default
-	777 directory default
-	666 - 022 = 644 (file configured)
 
 file globbing
 metacharacter wildcard

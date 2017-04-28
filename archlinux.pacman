@@ -1,0 +1,5 @@
+# pacman (package mannager)
+
+pacman -S package-name   # install package
+
+pacman -Syu   # update system
