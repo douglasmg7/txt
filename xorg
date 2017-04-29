@@ -1,0 +1,6 @@
+startx    # start X using ~/.xinitrc
+pkill -15 Xorg    # to quit X
+
+startx /usr/bin/i3    # start x using i3 windows manager
+
+startx /usr/bin/firefox   # start x with one specific application
