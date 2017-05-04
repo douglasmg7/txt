@@ -12,6 +12,12 @@ useradd -m -g users -G wheel,storage,power -s /bin/bash username     # create a 
 
 passwd username   # set password
 
+# permit user to use sudo command
+# add to hte /etc/sudoers the following line
+# username ALL=(ALL) ALL
+
+pacman -S vim   # install vim
+
 pacman -S git wget     # install git wget
 
 pacman -S xorg xorg-server    # display server

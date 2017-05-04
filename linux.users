@@ -1,3 +1,7 @@
+id username   # list user info
+
+GID   # group id - /etc/group is like /etc/passwd
+
 /etc/shadow 	Secure user account information
 /etc/passwd 	User account information - match login name to a corresponding UID
   account:password:UID:GID:GECOS:directory:shell
@@ -8,8 +12,8 @@
     GECOS is an optional field used for informational purposes; usually it contains the full user name, but it can also be used by services such as finger and managed with the chfn command. This field is optional and may be left blank.
     directory is used by the login command to set the $HOME environment variable. Several services with their own users use /, but normal users usually set a folder under /home.
     shell is the path to the user's default command shell. This field is optional and defaults to /bin/bash.
-/etc/gshadow 	Contains the shadowed information for group accounts
-/etc/group 	  Defines the groups to which users belong
+/etc/gshadow 	Contains the shadowed information for group accounts    name:password:administrators:members
+/etc/group 	  Defines the groups to which users belong    name:password:GID:members
 /etc/sudoers 	List of who can run what by sudo
 
 chmod 777 _filename   # change permission
@@ -19,9 +23,7 @@ chmod u+x _filename
   u - owner
   g - group
   o - other
-  a - all above
-
-chown owner _filename_    # change file owner
+  a - all abovehttps://www.google.com.br/search?q=gshadow+vs+group&ie=utf-8&oe=utf-8&client=firefox-b-ab&gws_rd=cr&ei=OxMLWdChCMeMwwSw8ZmYCQ
   -h no derefereence mode (change symbolic link)
 
 chown owner.group _filename_    # change owner and group for file_name
@@ -31,39 +33,33 @@ chgrp group _filename_    # change file group
 useradd -D    # show system default
 
 useradd -m _username_   # create a user
-useradd -m -g users -G wheel,storage,power -s /bin/bash _username_    # create a user
+useradd -m -g users -G wheel,storage,power -s /bin/bash username    # create a user
   -m create home directory (use /etc/skel as template)
   -g defines the group name
   -G list of supplementary groups which the user is also member
   -s default login shell
 
-passwd _username_   # set password
+passwd username   # set password
 
-userdel -r _username_    # remove a user
-	-r remove /home/user_name
+userdel -r username    # remove a user
+	-r remove /home/username
 
-usermod   # change user account
-	-l changes the login name
-	-L locks the account
-	-U unlocks the account
-	-p change the password (avoid this, use passwd)
-
-GID   # group id
-	/etc/group is like /etc/passwd
-
-groupadd _groupname_    # create a new group
-
-usermod -g groupname username   # replace the default group for the user account
-
-usermod -G groupname username   # add user to more one group
-
-groupmod -n new-name old-name   # change group name
-
+groupadd groupname    # create a new group
 groupmod -g 1025 groupname    # change GID
+groupmod -n new-name old-name   # change group name
 
 groupdel groupname    # remove a group
 
 group password allows a non-group member to temporarily become a member
+
+usermod -g groupname username   # replace the default group for the user account
+usermod -G groupname username   # add user to more one group
+  -G add supplementary group
+	-l changes the login name
+	-L locks the account
+	-U unlocks the account
+	-p change the password (avoid this, use passwd)
+  -aG add user to supplementary group(s). use only with the -G option
 
 file permission symbols
 	- for files

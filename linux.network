@@ -11,8 +11,8 @@ ip a      # list all interfaces
 
 ip link show wlan0  # show specific interface
 
-ip link set wlan0 up    # activate a interface 
-ip link set wlan0 down  # deactivate a interface
+ip link set dev wlan0 up    # activate a interface
+ip link set dev wlan0 down  # deactivate a interface
 
 iw dev    # list all wifi devices
 
@@ -58,7 +58,7 @@ ifconig   # list interfaces
 ifconfig wlan0        # show ip address
 
 ip addr show wlan0    # show ip address
-	
+
 ip route show     # show routes
 
 nmcli d wifi list   # list wifi hotspots
@@ -69,7 +69,6 @@ nmcli d disconnect wlan0  # disconnect device wlan0
 
 nmcli d connect wlan0   # connect device wlan0
 
-nmcli c down XT1058\ dmg  # disconnect from hotspot, system will connect to the next saved disponiable 
+nmcli c down XT1058\ dmg  # disconnect from hotspot, system will connect to the next saved disponiable
 
 nmcli c up XT1058\ dmg  # connect to hotspot, not need disconnect from previows
-

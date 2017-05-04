@@ -1,5 +1,23 @@
 # pacman (package mannager)
 
-pacman -S package-name   # install package
-
 pacman -Syu   # update system
+
+pacman -S package-name   # queries the sync databases
+pacman -Si package-name   # queries the sync databases, display extensive information
+pacman -Ss '^vim-'    # queries the sync databases
+
+pacmant -R package_name   # remove a single package, leaving all of its dependencies installed
+
+pacman -Rs package_name   # remove a package and its dependencies which are not required by any other installed package
+
+pacman -Qs string1 string2    # search for already installed packages
+pacman -Q    # list installed packages
+pacman -Qe    # list installed packages - no libs
+pacman -Qi    # list installed packages - more information
+
+# pacman stores its downloaded packages in /var/cache/pacman/pkg/ and does not remove the old or uninstalled versions automatically, therefore it is necessary to deliberately clean up that folder periodically to prevent such folder to grow indefinitely in size
+pacman -Sc    # clean the package cache
+
+pacman -Sw package_name   # download a package without installing it
+
+pacman -U /path/to/package/package_name-version.pkg.tar.xz    # Install a 'local' package that is not from a remote repository (e.g. the package is from the AUR) 
