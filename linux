@@ -83,18 +83,14 @@ indica que está logado como usuário root
 sudo -l
 loga como usuário root
 
-date
-obtem a data do sistema
-
+date    # get the date system
 date -s "11 APR 2014 07:34:00"
-date +%T -s "10:13:13"
-	# configure system time
 
-free
-mémoria ram livre
+date +%T -s "10:13:13"    # configure system time
 
-cd -
-volta para o diretório anterior
+free    # show free ram memory
+
+cd -    # back to pwd before
 
 cd ~usuário
 vai para a pasta de um usuário espcífico
