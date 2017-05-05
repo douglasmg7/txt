@@ -16,4 +16,8 @@ fc-match -v monospace   # more info
 
 fc-list   # list all installed fonts
 
-pacman -S ttf-dejavu terminus-font
+pacman -S ttf-dejavu terminus-font ttf-inconsolata
+
+/etc/vconsole.conf
+FONT=lat2-16    # ter-216n.psf.gz
+FONT_MAP=8859-2
