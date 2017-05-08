@@ -15,9 +15,3 @@ fc-match monospace    #  find which font it is representing the alias
 fc-match -v monospace   # more info
 
 fc-list   # list all installed fonts
-
-pacman -S ttf-dejavu terminus-font ttf-inconsolata
-
-/etc/vconsole.conf
-FONT=lat2-16    # ter-216n.psf.gz
-FONT_MAP=8859-2

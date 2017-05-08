@@ -1,3 +1,14 @@
+# verify
+os.tmpDir() use os.tmpdir() instead
+
+# config files
+~/.atom/*.cson
+~/.atom/*.coffee
+~/.atom/*.less
+~/.atom/*.json
+apm list --installed --bare > ~/.atom/package.list    # save installed packages
+apm install --packages-file ~/.atom/package.list      # install saved package list
+
 zen package
 	shift-f11
 	distraction free

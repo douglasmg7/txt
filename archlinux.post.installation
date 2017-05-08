@@ -1,6 +1,5 @@
-pacman -S tmux    # install tmux
-
-vi /etc/pacman.conf   # enable 32 and 64 on 64 archlinux - uncomment the following lines:
+# enable 32 and 64 archlinux - uncomment the following lines:
+/etc/pacman.conf
 [multilib]
 Include = /etc/pacman.d/mirrorlist
 
@@ -10,33 +9,88 @@ useradd -m -g users -G wheel,storage,power -s /bin/bash username     # create a 
 -G list of supplementary groups which the user is also member
 -s default login shell
 
-passwd username   # set password
+# password
+passwd username
 
 # permit user to use sudo command
-# add to hte /etc/sudoers the following line
-# username ALL=(ALL) ALL
+/etc/sudoers
+username ALL=(ALL) ALL
 
-pacman -S vim   # install vim
+# console font
+pacman -S terminus-font
+/etc/vconsole.conf
+FONT=ter-216n.psf.gz
+FONT_MAP=8859-2
 
-pacman -S git wget     # install git wget
+# htop
+pacman -S htop
+
+# wget
+pacman -S wget
+
+# git
+pacman -S git
+git config --global user.name "Han Solo"
+git config --global user.email "hansolo@gmail.com"
+git config --global core.editor sublime		# use sublime for interactive commands
+
+# dotfiles and reference txt
+cd ~
+git clone https://github.com/douglasmg7/dotfiles.git
+git clone https://github.com/douglasmg7/txt.git
+
+# tmux
+pacman -S tmux    # install tmux
+ln -s dotfiles/tmux.conf .tmux.conf
+
+# vim
+pacman -S vim
+mkdir ~/.vim && mkdir ~/.vim/bundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+ln -s dotfiles/vimrc .vimrc
+vim
+:PluginInstall
+
+# zsh
+pacman -S zsh
+cd ~ && ln -s /dotfiles/zshrc .zshrc
+chsh -s $(which zsh)  # change default shell to zsh
+# logout and login back again to use your new default shell
+echo $SHELL   # expected result: /bin/zsh or similar
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
 pacman -S xorg xorg-server    # display server
-pacman -S xorg-init   # server init (xstart)
-pacman -S xterm    # standard terminal emulator for the X Window System
-pacman -S xorg-twm    # window manager for X11
+pacman -S xorg-init   # xstart
+pacman -S xterm    # terminal emulator for the X Window System
 
-~/.xserverrc    # create the file
+# choose a windows manager to install
+pacman -S xorg-twm    # .xinitrc come configured with that
+pacman -S i3
+papcman -S dwm
+
+# xserver config
+~/.xserverrc
 #!/bin/sh
 exec /usr/bin/Xorg -nolisten tcp "$@" vt$XDG_VTNR
 
-cp /etc/X11/xinit/xinitrc ~/.xinitrc    # copy the file
+# .xinitrc conig
+cp /etc/X11/xinit/xinitrc ~/.xinitrc
 
-startx    # start X using ~/.xinitrc
-pkill -15 Xorg    # to quit X
+# start xserver
+startx    # using ~/.xinitrc
+startx /usr/bin/dwm   # using a dwm windows manager, not using ~/.xinirc
 
-pacman -S i3    # install i3 windows manager
-startx /usr/bin/i3    # start x using i3 windows manager
+# install atom
+pacman -S atom
+# create symbolic link for files in ~/dotfiles/atom in ~/.atom
+apm install --packages-file ~/.atom/package.list    # install atom packages
 
-pacman -S htop
+# quit xserver
+pkill -15 Xorg
+
+# install browsers
 pacman -S firefox
 pacman -S chromium
+
+# install xserver fonts
+pacman -S ttf-dejavu ttf-inconsolata

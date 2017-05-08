@@ -99,12 +99,7 @@ between two hash
 git diff master bird
 between two branchs
 
-git blame index.html --date short
-show file history changes
-
-git reset HEAD
-git reset
-to unstaged
+git blame index.html --date shortterminus
 
 HEAD
 refers to last commit
@@ -116,11 +111,7 @@ git reset octofamily/octodog.txt
 to unstage files
 
 git checkout -- octocat.txt
-get rid of all the changes since the last commit
--- It's simply promising the command line that there are no more options after the '--'. This way if you happen to have a branch named octocat.txt, it will still revert the file, instead of switching to the branch of the same name.
-
-git reset --soft HEAD^
-undo last commit, put changes into staging
+get rid of all the changes since the last committerminus
 
 git reset --hard HEAD^
 undo last commit and all changes
@@ -250,7 +241,7 @@ add your ssh to the ssh-agent
 	ssh-add ~/.ssh/id_rsa
 copy to clipboatd the file content
 	~/.ssh/id_rsa.pub
-test 
+test
 	ssh -T git@github.com
 use ssh
 	$ git remote set-url origin git@github.com:username/repo.git
@@ -340,7 +331,7 @@ create alias
 git tree
 
 git rebase <new-base>
-move the current branch’s commits to the tip of <new-base>, 
+move the current branch’s commits to the tip of <new-base>,
 which can be either a branch name or a commit ID.
 
 git checkout unicorns
@@ -514,7 +505,7 @@ stage them but not commit
 you can make changes and commit
 
 git cherry-pick -x 4321
--x adds source SHA(original) to commit message 
+-x adds source SHA(original) to commit message
 
 git cherry-pick -signoff 4321
 --signoff adds current user's name to commit message
@@ -631,4 +622,3 @@ git checkout <branch_name>
 git commit -m "Fixes #1"
 will automaticaly close the github issue
 	"fixes", "closes" or "resolves" word in a message will close the issue
-
