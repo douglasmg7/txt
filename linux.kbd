@@ -1,5 +1,10 @@
-# scancode is the lowest identification number for a key, it is the value that a keyboard sends to a computer
-# keycode is the second level of identification for a key, a keycode corresponds to a function
+scancode
+  The lowest identification number for a key.
+  It is the value that a keyboard sends to a computer.
+
+keycode
+  The second level of identification for a key.
+  A keycode corresponds to a function.
 # keysym is the third level of identification for a key, it corresponds to a symbol. It may depend on whether the Shift key or another modifier key was also pressed
 
 showkey --scancodes   # show scancode - virtual console only
@@ -14,3 +19,18 @@ xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $
 dumpkeys --keys-only   # list the keycode -> keysyms
 
 dumpkeys -l   # list the keycode -> keysyms
+
+Find scancode key
+  showkey --scancode
+
+Config a key
+  /etc/udev/hwdb.d/70-keyboard-my.hwdb
+    # make Caps_Lock be a Control key
+    evdev:atkbd:dmi:*
+     KEYBOARD_KEY_3a=leftctrl
+
+systemd-hwdb update
+  re-build the /lib/udev/hwdb.bin from hwdb.d files
+
+udevadm trigger
+  load hwdb.bin without reboot
