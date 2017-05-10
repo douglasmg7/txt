@@ -751,3 +751,64 @@ add-apt-repository --remove ppa:neovim-ppa/unstable   # remove ppa
 find -n *.js | xargs grep "var nu_l"
 
 find $PWD -name '*.mp3' | xargs -I{} cp {} ~/mob/store_00010001/aa     # copy several files
+
+Udev
+  Is the device manager that creates/remove device nodes
+  in the /dev directory dynamically.
+
+  The Kernel will send a bunch of data through the netlink
+  socket when a device is added to, or removed from a system.
+
+  The Udev daemon catches all this data and will do the rest, i.e.,
+  device node creation, module loading etc.
+
+  Udev parses the rules in /etc/udev/rules.d/ for every device
+  state change in the Kernel
+
+Dbus
+  Is like a system bus which is used for inter-process communication.
+
+HAL
+  Gets information from the Udev service, when a device is
+  attached to the system and it create an XML representation
+  of that device
+
+modalias
+  Contains all the information required to find the corresponding
+  device driver.
+
+  Udev uses the modalias data to find the correct device drive from:
+    /lib/modules/`uname -r`/modules.alias
+      v
+        vendor ID of the device.
+      d
+        device ID of the device.
+      sv
+        subsystem version vendor
+        A majority of the time sv and sd are ignored. They are mainly used by the hardware developers to distinguish slight differences in the inner workings which do not change the device as a whole.
+      sd
+        subsystem version device
+      bc
+        base class
+        Are usesd to create the class listed bu lspci
+      sc
+        Sub class
+      i
+        Programming interface
+        Which is only meaningful for a few devices classes
+
+  Get more information about the drive (module)
+    modinfo <device-name>
+    modinfo r8169
+
+netlink
+  The Kernel supplies data through netlink
+
+hwdb
+  Hardware database.
+  The hwdb files are read from the files located in:
+    system hwdb directory
+      /usr/lib/udev/hwdb.d
+    administration hwdb directory
+      /etc/udev/hwdb.d
+      have the highest priority

@@ -1,0 +1,16 @@
+# scancode is the lowest identification number for a key, it is the value that a keyboard sends to a computer
+# keycode is the second level of identification for a key, a keycode corresponds to a function
+# keysym is the third level of identification for a key, it corresponds to a symbol. It may depend on whether the Shift key or another modifier key was also pressed
+
+showkey --scancodes   # show scancode - virtual console only
+
+showkey --keycodes    # show keycode - virtual console only
+
+# to see keycode in xorg
+xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
+
+# use evtest instead showkey for usb keyboards
+
+dumpkeys --keys-only   # list the keycode -> keysyms
+
+dumpkeys -l   # list the keycode -> keysyms

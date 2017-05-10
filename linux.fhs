@@ -1,7 +1,7 @@
 /bin
-# several useful commands that are of use to both the system administrator as well as non-privileged users 
+# several useful commands that are of use to both the system administrator as well as non-privileged users
 # it usually contains the shells like bash, csh, etc.... and commonly used commands like cp, mv, rm, cat, ls
-# in contrast to /usr/bin, the binaries in this directory are considered to be essential 
+# in contrast to /usr/bin, the binaries in this directory are considered to be essential
 # also contains programs which boot scripts may depend on
 # no subdirectories in /bin and that the following commands, or symbolic links to commands, are located there
   cat      Utility to concatenate files to standard output
@@ -56,10 +56,19 @@
 # configuration files for boot loaders are placed in /etc
 # the system kernel is located in either / or /boot
 
+
+
+/sys
+  Sys filesystem (sysfs) contains files that provide information about devices: whether it's powered on, the vendor name and model, what bus the device is plugged into, etc. It's of interest to applications that manage devices.
+
 /dev
-# location of special or device files
-# devices are defined by type, such as 'block' or 'character', and 'major' and 'minor' number
-# the major number is used to categorize a device and the minor number is used to identify a specific device type
+  Dev filesystem contains files that allow programs to access the devices themselves: write data to a serial port, read a hard disk, etc. It's of interest to applications that access devices.
+  A metaphor is that /sys provides access to the packaging, while /dev provides access to the content of the box.
+  The files in /sys are not device nodes, but symbolic links and regular files. Those regular files are special in that reading or writing to them invokes file-specific functions in the kernel, like device nodes. The difference is that files in /sys work this way because of the filesystem they are on, whereas device nodes work this way due to their device node characteristics (the file type indicating a (block or character) device, and the device major and minor number indicating which device it is).
+  The reason for /dev existing independently of /sys is partly historical: /dev dates back to the dawn of Unix, while /sys is a much more recent invention. If Linux was designed today with no historical background, /dev/sda might be /sys/block/sda/content
+  Location of special or device files
+  Devices are defined by type, such as 'block' or 'character', and 'major' and 'minor' number
+  The major number is used to categorize a device and the minor number is used to identify a specific device type
 
 /etc
 # this is the nerve center of your system, it contains all system related configuration files in here or in its sub-directories
@@ -70,9 +79,9 @@
 /home
 # default home directories for users
 
-/lib 
+/lib
 # contains kernel modules and those shared library images (the C programming code library) needed to boot the system and run the commands in the root filesystem, ie. by binaries in /bin and /sbin
-# libraries are readily identifiable through their filename extension of *.so. windows equivalent to a shared library would be a DLL (dynamically linked library) file 
+# libraries are readily identifiable through their filename extension of *.so. windows equivalent to a shared library would be a DLL (dynamically linked library) file
 
 /lost+found
 # any corrupt recovered files that it find
@@ -84,7 +93,7 @@
 /mnt
 # this is a generic mount point under which you mount your filesystems or devices
 # mounting is the process by which you make a filesystem available to the system
-# after mounting your files will be accessible under the mount-point 
+# after mounting your files will be accessible under the mount-point
 # temporary mount points, mounts for removable media
 
 /opt
