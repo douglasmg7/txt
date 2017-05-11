@@ -1,21 +1,38 @@
-find .     # lista todos os caminhos de todos arquivos do diretório corrente
+find .
+  List all path from all files from current directory.
 
-find . -name "*js*"    # using wildcard
+find . -name "*js*"
+  Using wildcard.
 
-find / -name <file_name>     # procura por file_name a partir do diretório raiz case sensitive
+find / -name <file_name>
+  Find file_name over /, sensitive case.
 
-find / -iname <file_name>    # procura por file_name a partir do diretório raiz case insensitive
+find / -iname <file_name>
+  Find file_name over /, insensitive case.
 
-find /tmp /var/tmp . $HOME -name 2>/dev/null     # procura em vários lugares e não imprime erro
+find /tmp /var/tmp . $HOME -name <file_name> 2>/dev/null
+  Find over several places for <file_name> and do not print error.
 
-find / -type f -mtime -7     # modificados até 7 dias
+find / -type f -mtime -7
+  Find for files modified until 7 days.
 
 find / -mmin -10       # 10 minutos atrás
+  Find for files modified until 10 minutes.
 
-find / -name <name> -type d      # find directory
+find / -name <dir_name> -type
+  Find for files.
 
-find -maxdepth 2 -name <name>    # depth
+find -maxdepth 2 -name <file_name>
+  Find depth.
 
-find / -group group-name    # list files owned by a group
+find / -group group-name
+  List files owned by a group.
 
-find / -user user-name      # list files owned by a user
+find / -user user-name
+  List files owned by a user.
+
+find -name <file_name> -print0
+  Print the full file name followed by a null character.
+
+find -name <file_name> -print0 | xargs -0 cat
+  Print file content

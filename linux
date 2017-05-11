@@ -225,33 +225,6 @@ unset var_name
 ls | grep java
 obtem todas as linha que contem java
 
-grep - global regular expression print
-	-i  enable case insensitive
-	-q  silent mode - return 0 if match
-	-v  output lines that don't match the pattern
-	-n  show line nuber
-	-c  count number of lines
-	-e  specify more than one matching pattern
-	-w  exactly match word surround by by non-word constituent character
-	-A  number of lines after
-	-B  number of lines befor
-	-r  recursive
-
-	searches all files in a directory
-		grep -R Arctic /home
-		grep -Rl Arctic /home
-
-	more than one pattern
-		egrep "UID|bash" file
-		grep -E 'word1|word2' file
-		grep -e string1 -e string2 file
-
-egrep - offshoot of grep
-	allows you to specify POSIX extended regular expressions, which contain more characters for specifying the matching pattern
-
-fgrep - offshoot of grep
-	allows you to specify matching patterns as a list of fi xed-string values, separated by newline characters
-
 sed - stream editor, but can edit files directly too
 	sed -i -e 's/foo/bar/g' filename
 	s is used to replace the found expression "foo" with "bar"
@@ -517,13 +490,14 @@ hostname
 get the computer name
 
 sort -hr
-sort lines
--h --human-numeric-sort (2K 1G)
--r --reverse
--n recognize numbers as numbers
--M --month-sort
--t --field-separator
--k --key 	position
+  sort lines
+  -h --human-numeric-sort (2K 1G)
+  -r --reverse
+  -u unique
+  -n recognize numbers as numbers
+  -M --month-sort
+  -t --field-separator
+  -k --key 	position
 
 run a program in a modified environment
 env <program>

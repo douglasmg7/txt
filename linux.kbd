@@ -20,8 +20,11 @@ dumpkeys --keys-only   # list the keycode -> keysyms
 
 dumpkeys -l   # list the keycode -> keysyms
 
-Find scancode key
+Find scancode key to change
   showkey --scancode
+
+Find the keycode possible  to use
+  grep /usr/include/linux/input-event-condes.h -e KEY_
 
 Config a key
   /etc/udev/hwdb.d/70-keyboard-my.hwdb

@@ -1,0 +1,37 @@
+grep
+  global regular expression print
+	-i  enable case insensitive
+	-q  silent mode - return 0 if match
+	-v  output lines that don't match the pattern
+	-n  show line nuber
+	-c  count number of lines
+	-e  specify more than one matching pattern
+	-w  exactly match word surround by by non-word constituent character
+	-A  number of lines after
+	-B  number of lines befor
+	-r  recursive
+
+grep -R Arctic /home
+grep -Rl Arctic /home
+grep -r /etc -e artic
+  Searches all files in a directory.
+
+grep --include=\*.{c,h} -rnw '/path/to/somewhere/' -e "pattern"
+  Search through those files which have .c or .h extensions.
+
+grep --exclude=*.o -rnw '/path/to/somewhere/' -e "pattern"
+  Exclude searching all the files ending with .o extension.
+
+grep --exclude-dir={dir1,dir2,*.dst} -rnw '/path/to/somewhere/' -e "pattern"
+  Exclude directories
+
+egrep "UID|bash" file
+grep -E 'word1|word2' file
+grep -e string1 -e string2 file
+  more than one pattern
+
+egrep - offshoot of grep
+	allows you to specify POSIX extended regular expressions, which contain more characters for specifying the matching pattern
+
+fgrep - offshoot of grep
+	allows you to specify matching patterns as a list of fi xed-string values, separated by newline characters

@@ -59,6 +59,12 @@ chsh -s $(which zsh)  # change default shell to zsh
 echo $SHELL   # expected result: /bin/zsh or similar
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
+# make capslock a leftctrl
+cd /etc/udev/hwdb.d
+ln -s ~/dotfiles/70-keyboard-my.hwdb 70-keyboard-my.hwdb
+systemd-hwdb update
+udevadm trigger
+
 pacman -S xorg xorg-server    # display server
 pacman -S xorg-init   # xstart
 pacman -S xterm    # terminal emulator for the X Window System
