@@ -1,17 +1,29 @@
-showconsolefont   # print a table of glyphs or letters of a font
+showconsolefont
+  Print a table of glyphs or letters of a font.
 
-/usr/share/kbd/    # font files for console
+/usr/share/kbd/consolefonts/
+  Available console fonts
 
-/usr/share/fonts/   # font files
+/usr/share/kbd/consoletrans/
+  Available translations
 
-setfont font_file -m font_translation    # temporary set a font
-setfont cp866-8x16 -m 8859-2    # temporary set a font
-/usr/share/kbd/consolefonts/    # available fonts
-/usr/share/kbd/consoletrans/    # available translations
+/usr/share/fonts/
+  Font files
 
-setfont   # return to original font configuration
+setfont font_file -m font_translation
+  Temporary set a font for console.
 
-fc-match monospace    #  find which font it is representing the alias
-fc-match -v monospace   # more info
+setfont cp866-8x16 -m 8859-2
+  Temporary set a font for console.
 
-fc-list   # list all installed fonts
+setfont
+  Return to original font configuration for console.
+
+fc-match monospace
+  Find which font it is representing the alias.
+
+fc-match -v monospace
+  Find which font it is representing the alias with more info.
+
+fc-list
+  List all installed fonts.
