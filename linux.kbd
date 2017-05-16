@@ -12,6 +12,8 @@ showkey --scancodes   # show scancode - virtual console only
 showkey --keycodes    # show keycode - virtual console only
 
 # to see keycode in xorg
+xev
+xmodmap -pke
 xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
 
 # use evtest instead showkey for usb keyboards
