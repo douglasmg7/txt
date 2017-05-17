@@ -25,6 +25,9 @@ FONT_MAP=8859-2
 # htop
 pacman -S htop
 
+# Power consumption.
+pacman -S powertop
+
 # wget
 pacman -S wget
 
@@ -112,7 +115,8 @@ pacman -S chromium
 # install xserver fonts
 pacman -S ttf-dejavu ttf-inconsolata
 
-
+# Install file manager.
+pacman -S pcmanfm
 
 
 

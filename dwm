@@ -1,0 +1,44 @@
+shift+alt+enter
+  Terminal
+
+alt+p
+  Dmenu
+
+alt+j
+alt+k
+  Move to another window.
+
+alt+num
+  Focus on another tag.
+
+alt+shit+num
+  Move window to another tag.
+
+alt+i
+alt+d
+  Move window to master or stack.
+
+alt+shift+c
+  kill a window.
+
+alt+t
+  Tiled mode.
+
+alt+f
+  Float mode.
+
+alt+m
+  Monocle mode.
+
+alt+shift-space
+alt+middle-mouse-button
+  Toggle float mode.
+
+alt+right-mouse-button
+  Resize the window.
+
+alt+left-mouse-button
+  Move the window.
+
+alt+shift+q
+  Quit dwm cleanly.

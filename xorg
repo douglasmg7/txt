@@ -18,3 +18,6 @@ xrdb -merge ~/Xresources
 
 xrdb -query all
   See the current loaded resources.
+
+xsetroot -name "asdfasdf"
+  Set the name of the root window.

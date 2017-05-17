@@ -78,31 +78,25 @@ aptitude install package_name
 	install a package
 
 #
-indica que está logado como usuário root
+  indica que está logado como usuário root
 
-sudo -l
-loga como usuário root
+free
+  show free ram memory
 
-date    # get the date system
-date -s "11 APR 2014 07:34:00"
-
-date +%T -s "10:13:13"    # configure system time
-
-free    # show free ram memory
-
-cd -    # back to pwd before
+cd -
+  back to pwd before
 
 cd ~usuário
-vai para a pasta de um usuário espcífico
+  vai para a pasta de um usuário espcífico
 
 cd "$(find -name ofic* -quit)"
-use find as argument
+  use find as argument
 
 mkdir -p dir1/sub1/sub2
-create directories and subdirectories
+  create directories and subdirectories
 
 file file_name
-lista o tipo do arquivo
+  lista o tipo do arquivo
 
 # Imprimir um arquivo no console
 # fast for big files

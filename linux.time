@@ -1,0 +1,41 @@
+RTC
+  Real Time Clock.
+  hardware clock, also know as RTC, CMOS or BIOS clock.
+
+System clock or kernel clock
+  Maintained by operating system.
+
+  At boot time the clock hardware is read end used to set system clock.
+
+  Traditionally, on power off, the system clock will get
+  stored into the hardware clock by a shutdown script.
+
+NTP
+  Network Time Protocol server.
+
+hwclock
+hwclock -r
+  Print the hardware clock (RTC).
+
+hwclock -w
+  Set the hardclock to system time.
+
+hwclock -s
+  Set the system time from hardware clock.
+
+timedatectl
+  Get system date time configuration.
+
+timedateclt set-ntp true
+  Get date time from server.
+
+timedatectl set-ntp false
+timedatectl set-time "2015-01-31 11:13:54"
+  Manual date time configuration.
+
+date
+  Print the system date time.
+
+date -s "11 APR 2014 07:34:00"
+date +%T -s "10:13:13"
+  Set the system date time.
