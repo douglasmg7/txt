@@ -27,3 +27,6 @@ fc-match -v monospace
 
 fc-list
   List all installed fonts.
+
+fc-cache
+  Update font list from installed fonts.
