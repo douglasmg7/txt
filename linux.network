@@ -4,15 +4,39 @@ lsusb -v    # to list usb drivers
 
 dmesg | grep firmware   # to list firmware messages
 
-ip    # show / manipulate routing, devices, policy routing and tunnels
 
-ip link   # list all interfaces
-ip a      # list all interfaces
 
-ip link show wlan0  # show specific interface
 
-ip link set dev wlan0 up    # activate a interface
-ip link set dev wlan0 down  # deactivate a interface
+ip - Show / manipulate routing, devices, policy routing and tunnels.
+
+ip link
+  List all interfaces.
+
+ip a
+  List all interfaces.
+
+ip link show wlan0
+  Show specific interface.
+
+ip link set dev wlan0 up
+  Activate a interface.
+  
+ip link set dev wlan0 down
+  Deactivate a interface.
+
+
+
+
+iwlist - Get more detailed wireless information from a wireless interface.
+
+iwlist scan
+  Get information from interfaces including SSID.
+
+iwlist wlan0 scan
+  Get information from specific interface, incuding SSID.
+
+
+
 
 iw dev    # list all wifi devices
 
