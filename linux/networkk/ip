@@ -1,0 +1,25 @@
+ip - Show / manipulate routing, devices, policy routing and tunnels.
+
+ip a
+ip addr
+ip link
+  List interfaces.
+
+ip link show wlan0
+  Show informations from wlan0.
+
+ip link set dev wlan0 up
+  Activate a interface.
+
+ip link set dev wlan0 down
+  Deactivate a interface.
+
+ip addr show wlan0
+  Show ip address.
+
+ip route show
+  Show routes.
+
+ip -s link
+ip -stats link
+  Show statistics

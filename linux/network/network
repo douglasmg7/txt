@@ -1,0 +1,81 @@
+net-tools
+  arp, ifconfig, iptunnel, iwconfig, nameif, netstat, and route. These programs (except iwconfig) are included in the net-tools package that has been unmaintained for years.
+  Package that has been unmaintained for years.
+
+ifconfig
+  Deprecated, use ip instead.
+
+iwconfig
+  Deprecated, use iw instead.
+
+lspci -k
+  List pci hardwares.
+
+lsusb -v
+  List usb drivers.
+
+dmesg | grep firmware
+  Show firmware messages.
+
+dhclient wlan0
+  Get an IP address by DHCP.
+
+ifdown wlan0
+  Shutdown interface wlan0.
+
+ifup wlan0
+  Start interface wla0.
+
+wpa_passphrase my-ssid password
+  Create password to use into /etc/network/interface or /etc/wpa_supplicant.conf.
+
+wpa_passphrase ssid > file_out
+  Create password into file_out.
+
+# /etc/network/interface example
+# auto wlan0
+# iface wlan0 inet dhcp
+# 	wpa-ssid Vivo WiFi
+# 	wpa-psk as38492039asfkjalskfdj348390adflakjd
+
+# /etc/wpa_supplicant.conf example
+# network={
+#   ssid="blackMOREOps"
+#   psk=42e1cbd0f7fbf3824393920ea41ad6cc8528957a80a404b24b5e4461a31c820c
+# }
+
+# Automatic configuration.
+wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant.conf
+wpa_supplicant -B -D wext -i wlan0 -c /etc/wpa_supplicant.conf
+  Connect wifi using supplicant
+  -B run wpa_supplicant in the background
+	-D wireless driver. wext is the generic driver
+  -i interface
+	-c path for the configuration file
+
+wpa_supplicant -h
+  To see drive options.
+
+# Manual configuration.
+/etc/wpa_supplicant/example.conf
+  Create a file
+ctrl_interface=/run/wpa_supplicant
+update_config=1
+  File content.
+sudo wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/example.conf
+  Start the supplicant
+sudo wpa_cli
+  Start wpa cli.
+> status
+> list_network
+> scan
+> scan_result
+> add_network
+> set_network 0 ssid "caliant"
+> set_network 0 psk "ulaula"
+> enable_network 0
+> set update_config=1
+> save_config
+> quit
+dhcpcd wlan0
+  Start dhcp client.

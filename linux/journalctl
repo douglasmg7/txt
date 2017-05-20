@@ -1,0 +1,13 @@
+journalctl - Query the systemd journal
+
+journalctl -b
+  See the journal entries from the current boot.
+
+journalctl -k
+  See only kernel messages, such as those that are typically represented by dmesga.
+
+journalctl -u dbus.service
+  See all of the journal entries for the unit in question.
+
+journalctl -b -u dbus.service
+  See all of the journal entries for the unit in question from the boot.

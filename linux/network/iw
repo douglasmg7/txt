@@ -1,0 +1,14 @@
+iw dev
+  List wifi devices.
+
+iw dev wlan0 info
+  Show interface status
+
+iw dev wlan0 scan | grep SSID
+  Scan wifi network.
+
+iw dev wlan0 link
+  Check connection status.
+
+iw dev wlan0 connect "your_essid"
+  Connect to an access point - no encryption.

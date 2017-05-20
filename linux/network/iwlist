@@ -1,0 +1,12 @@
+iwlist - Get more detailed wireless information from a wireless interface.
+
+iwlist scan
+  Get information from interfaces including SSID.
+
+iwlist wlan0 scan
+  Get information from specific interface, incuding SSID.
+  Get disponible hotspot if not allredy connected.
+  Get information from actual connected hotspot.
+
+iwlist wlan0 scan | grep -i ssid
+  Get disponible hotspot.

@@ -1,0 +1,16 @@
+systemctl - Control the systemd system and service manager
+
+systemctl status dbus.service
+  How you whether the unit is active, information about the process, and the latest journal entries.
+
+systemctl cat dbus.service
+  See the full contents of a unit file.
+
+systemctl list-dependencies dbus.service
+  See the dependency tree of a unit.
+
+systemctl list-dependencies -all dbus.service
+  Show the dependent units, with target units recursively expanded.
+
+systemctl show dbus.service
+  See the low-level details of the unit's settings on the system.

@@ -1,0 +1,3 @@
+tset -q
+echo $TERM
+  Check which termimal is running.
