@@ -6,7 +6,7 @@ pacman -S package-name   # queries the sync databases
 pacman -Si package-name   # queries the sync databases, display extensive information
 pacman -Ss '^vim-'    # queries the sync databases
 
-pacmant -R package_name   # remove a single package, leaving all of its dependencies installed
+pacman -R package_name   # remove a single package, leaving all of its dependencies installed
 
 pacman -Rs package_name   # remove a package and its dependencies which are not required by any other installed package
 

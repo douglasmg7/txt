@@ -31,6 +31,9 @@ pacman -S powertop
 # wget
 pacman -S wget
 
+# ssh - Secure SHell
+$ pacman -S openssh
+
 # git
 pacman -S git
 git config --global user.name "Han Solo"
