@@ -623,6 +623,7 @@ gpg
 basename /home/Christine/test5b.sh
 # -> test5b.sh
 
+bash
 shopt
 	# Show options status
 	# Change additional shell optional behavior.
@@ -630,6 +631,9 @@ shopt -s nocaseglob
 	# (set) no case sensitive
 shopt -u nocaseglob
 	# (unset) case sensitive
+
+zsh
+unsetopt CASE_GLOB
 
 fold -w 80 file_name
 	# wrap with 80 width
