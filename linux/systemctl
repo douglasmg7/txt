@@ -1,16 +1,31 @@
-systemctl - Control the systemd system and service manager
+# systemctl - Control the systemd system and service manager
 
-systemctl status dbus.service
-  How you whether the unit is active, information about the process, and the latest journal entries.
+# Config files:
+  /usr/lib/systemd/system/
+  # Where pacman puts package scripts.
+  /etc/systemd/system/
+  # Where you put your scripts.
 
-systemctl cat dbus.service
-  See the full contents of a unit file.
+$ systemctl status dbus.service
+# Show if the unit is active, information about the process, and the latest journal entries.
 
-systemctl list-dependencies dbus.service
-  See the dependency tree of a unit.
+$ systemctl cat dbus.service
+# See the full contents of a unit file.
 
-systemctl list-dependencies -all dbus.service
-  Show the dependent units, with target units recursively expanded.
+$ systemctl list-dependencies dbus.service
+# See the dependency tree of a unit.
 
-systemctl show dbus.service
-  See the low-level details of the unit's settings on the system.
+$ systemctl list-dependencies -all dbus.service
+# Show the dependent units, with target units recursively expanded.
+
+$ systemctl show dbus.service
+# See the low-level details of the unit's settings on the system.
+
+$ systemctl list-units --type target
+# List currently loaded target units.
+
+$ systemctl list-units --type target -a
+# List all target units.
+
+$ systemctl get-default
+# Show which target unit is used by default.

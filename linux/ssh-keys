@@ -31,3 +31,12 @@ $ ssh-keygen -f ~/.ssh/id_rsa -p
 ~/.ssh
 # Default place where ssh-key pair is save.
 
+$ eval "$(ssh-agent -s)"
+# Start the ssh-agent in the background.
+
+$ ssh-add ~/.ssh/id_rsa
+# Add your SSH private key to the ssh-agent.
+
+$ xclip -sel clip < ~/.ssh/id_rsa.pub
+# Copies the contents of the id_rsa.pub file to your clipboard.
+# Paste the content on github settings/SSH and GPG keys/New SSH Key.

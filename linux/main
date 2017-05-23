@@ -784,3 +784,21 @@ hwdb
     administration hwdb directory
       /etc/udev/hwdb.d
       have the highest priority
+
+$ exec ls
+# Will not fork, but just replaces the shell.
+$ bash -c 'echo $$ ; ls -l /proc/self ; echo foo'
+$ bash -c 'echo $$ ; exec ls -l /proc/self ; echo foo'
+
+$ eval
+# Construct command by concatenating arguments.
+# It will not create a child process, so the variable is set in the current shell.
+# example.
+$ foo=10 x=foo
+$ y='$'$x
+$ echo $y
+  $foo
+$ eval y='$'$x
+$ echo $y
+  10
+
