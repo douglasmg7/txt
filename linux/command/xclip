@@ -1,0 +1,20 @@
+# xclip - command line interface to X selections (clipboard).
+
+$ uptime | xclip
+# Copy your uptime into the selection for pasting.
+# Use middle button to paste.
+
+$ xclip file_name
+# Copy a file content.
+
+$ xclip -o -sel clip > webpage.txt
+# Save some text you have Edit | Copied in a web browser.
+
+$ firefox 'xclip -o'
+# Opena a url.
+
+$ xclip -o | xclip -sel clip
+# Copy from primary to clipboard.
+
+:!xclip -f
+# Copy selected text on vim.

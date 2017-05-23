@@ -1,126 +1,159 @@
-# enable 32 and 64 archlinux - uncomment the following lines:
+# Enable 32 and 64 archlinux - uncomment the following lines from file:
 /etc/pacman.conf
-[multilib]
-Include = /etc/pacman.d/mirrorlist
+  [multilib]
+  Include = /etc/pacman.d/mirrorlist
 
-useradd -m -g users -G wheel,storage,power -s /bin/bash username     # create a new user
--m create home directory
--g defines the group name
--G list of supplementary groups which the user is also member
--s default login shell
+# Create a new user.
+$ useradd -m -g users -G wheel,storage,power -s /bin/bash username     
+  -m create home directory
+  -g defines the group name
+  -G list of supplementary groups which the user is also member
+  -s default login shell
 
-# password
-passwd username
+# Password.
+$ passwd username
 
-# permit user to use sudo command
+# Permit user to use sudo command, change the file:
 /etc/sudoers
-username ALL=(ALL) ALL
+  username ALL=(ALL) ALL
 
-# console font
-pacman -S terminus-font
+# Console font.
+$ pacman -S terminus-font
+# Create or change the file:
 /etc/vconsole.conf
-FONT=ter-216n.psf.gz
-FONT_MAP=8859-2
+  FONT=ter-216n.psf.gz
+  FONT_MAP=8859-2
 
-# htop
-pacman -S htop
+# xclip.
+$ pacman -S xclip
+
+# htop.
+$ pacman -S htop
 
 # Power consumption.
-pacman -S powertop
+$ pacman -S powertop
 
-# wget
-pacman -S wget
+# wget.
+$ pacman -S wget
 
-# ssh - Secure SHell
+# ssh - Secure SHell.
 $ pacman -S openssh
 
-# git
-pacman -S git
-git config --global user.name "Han Solo"
-git config --global user.email "hansolo@gmail.com"
-git config --global core.editor sublime		# use sublime for interactive commands
+# Git.
+$ pacman -S git
+$ git config --global user.name "Han Solo"
+$ git config --global user.email "hansolo@gmail.com"
+$ git config --global core.editor sublime
 
 # dotfiles and reference txt
-cd ~
-git clone https://github.com/douglasmg7/dotfiles.git
-git clone https://github.com/douglasmg7/txt.git
+$ cd ~
+$ git clone https://github.com/douglasmg7/dotfiles.git
+$ git clone https://github.com/douglasmg7/txt.git
 
-# tmux
-pacman -S tmux    # install tmux
-ln -s dotfiles/tmux.conf .tmux.conf
+# Tmux.
+$ pacman -S tmux    # install tmux
+$ ln -s dotfiles/tmux.conf .tmux.conf
 
-# vim
-pacman -S vim
-mkdir ~/.vim && mkdir ~/.vim/bundle
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-ln -s dotfiles/vimrc .vimrc
-vim
-:PluginInstall
+# Vim.
+$ pacman -S vim
+$ mkdir ~/.vim && mkdir ~/.vim/bundle
+$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+$ ln -s dotfiles/vimrc .vimrc
+$ vim
+$ :PluginInstall
 
-# termite - terminal emulator
-pacman -S termite
+# Neovim.
+$ pacman -S neovim
+$ mkdir -p ~/.config/nvim && cd ~/.config/nvim
+$ ln -s ~/dotfiles/nvim/init.vim init.vim
 
-# urxvt - terminal emulator
-pacman -S urxvt
+# Zsh.
+$ pacman -S zsh
+$ cd ~ && ln -s /dotfiles/zshrc .zshrc  
+# Change default shell to zsh.
+$ chsh -s $(which zsh)
+# Logout and login back again to use your new default shell.
+# Test shell, expected result: /bin/zsh or similar.
+$ echo $SHELL   
+$ git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
-# zsh
-pacman -S zsh
-cd ~ && ln -s /dotfiles/zshrc .zshrc
-chsh -s $(which zsh)  # change default shell to zsh
-# logout and login back again to use your new default shell
-echo $SHELL   # expected result: /bin/zsh or similar
-git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-
-# make capslock a leftctrl
+# Make capslock a leftctrl.
 cd /etc/udev/hwdb.d
-ln -s ~/dotfiles/70-keyboard-my.hwdb 70-keyboard-my.hwdb
-systemd-hwdb update
-udevadm trigger
+$ ln -s ~/dotfiles/70-keyboard-my.hwdb 70-keyboard-my.hwdb
+$ systemd-hwdb update
+$ udevadm trigger
+ 
+# Display server.
+$ pacman -S xorg xorg-server    
 
-pacman -S xorg xorg-server    # display server
-pacman -S xorg-init   # xstart
-pacman -S xterm    # terminal emulator for the X Window System
+# Xstart.
+$ pacman -S xorg-init   
 
-# choose a windows manager to install
-pacman -S xorg-twm    # .xinitrc come configured with that
-pacman -S i3
-papcman -S dwm
+# dwm - Dynamic Wondows Manager.
+$ cd ~/aur
+$ git clone https://aur.archlinux.org/dwm-git.git
+$ makepkg -si
+$ ln -s ~/dotfiles/dwm/config.h ~/aur/dwm-git/src/dwm/config.h
+$ makepkg -fi
 
-# xserver config
+# st - Simple Terminal.
+$ mkdir -p ~/aur && cd aur
+$ git clone https://aur.archlinux.org/st-git.git
+$ makepkg -si
+$ ln -s ~/dotfiles/st/config.h ~/aur/st-git/src/st/config.h
+$ makepkg -fi
+
+# Terminal emulator for the X Window System.
+$ pacman -S xterm    
+
+# Unicode rxvt - terminal emulator
+$ pacman -S urxvt
+
+# Termite - terminal emulator
+$ pacman -S termite
+
+# Xserver config file.
 ~/.xserverrc
-#!/bin/sh
-exec /usr/bin/Xorg -nolisten tcp "$@" vt$XDG_VTNR
+  #!/bin/sh
+  exec /usr/bin/Xorg -nolisten tcp "$@" vt$XDG_VTNR
 
-# .xinitrc conig
-cp /etc/X11/xinit/xinitrc ~/.xinitrc
-# or
-ln -s ~/dotfiles/xinitrc ~/.xinitrc
+# .xinitrc conig file.
+$ ln -s ~/dotfiles/xinitrc ~/.xinitrc
+# Or
+$ cp /etc/X11/xinit/xinitrc ~/.xinitrc
 
 # .Xresources
-ln -s ~/dotfiles/Xresources ~/.Xresources
+$ ln -s ~/dotfiles/Xresources ~/.Xresources
 
-# start xserver
-startx    # using ~/.xinitrc
-startx /usr/bin/dwm   # using a dwm windows manager, not using ~/.xinirc
+# Start xserver using ~/.xinitrc.
+$ startx    
+
+# Start xserver using a dwm windows manager, not using ~/.xinirc.
+$ startx /usr/bin/dwm   
+
+# Quit xserver.
+$ pkill -15 Xorg
 
 # install atom
-pacman -S atom
-# create symbolic link for files in ~/dotfiles/atom in ~/.atom
-apm install --packages-file ~/.atom/package.list    # install atom packages
+$ pacman -S atom
+# Create symbolic link for files in ~/dotfiles/atom in ~/.atom.
+# Install atom packages.
+$ apm install --packages-file ~/.atom/package.list    
 
-# quit xserver
-pkill -15 Xorg
+# Install browsers.
+$ pacman -S firefox
+$ pacman -S chromium
 
-# install browsers
-pacman -S firefox
-pacman -S chromium
-
-# install xserver fonts
-pacman -S ttf-dejavu ttf-inconsolata
+# Install xserver fonts.
+$ pacman -S ttf-dejavu ttf-inconsolata
 
 # Install file manager.
-pacman -S pcmanfm
+$ pacman -S pcmanfm
 
+# Pdf readers.
+$ pacman -S evince
+$ pacman -S mupdf
+$ pacman -S apvlv
 
 
 todo

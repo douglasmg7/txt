@@ -1,3 +1,7 @@
-tset -q
-echo $TERM
-  Check which termimal is running.
+# Check which termimal is running.
+$ tset -q
+$ echo $TERM
+
+# Primary copy.
+# Copy - just select the text, no need short keys.
+# Paste - mouse middle click.

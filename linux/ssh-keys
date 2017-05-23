@@ -25,5 +25,9 @@ $ ssh-keygen
 $ ssh-keygen -t rsa -b 4096 -C "your_mail@example.com"
 # Creates a new ssh key with 4096-bit RSA, using the provided email as a label (optional comment put in the public key).
 
+$ ssh-keygen -f ~/.ssh/id_rsa -p
+# The passphrase for the private RSA key.
+
 ~/.ssh
 # Default place where ssh-key pair is save.
+
