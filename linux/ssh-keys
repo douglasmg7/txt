@@ -40,3 +40,18 @@ $ ssh-add ~/.ssh/id_rsa
 $ xclip -sel clip < ~/.ssh/id_rsa.pub
 # Copies the contents of the id_rsa.pub file to your clipboard.
 # Paste the content on github settings/SSH and GPG keys/New SSH Key.
+
+# Start ssh-agent with systemd user.
+/etc/systemd/system/ssh-agent.service
+  [Unit]
+  Description=SSH key agent
+  
+  [Service]
+  Type=forking
+  Environment=SSH_AUTH_SOCK=%t/ssh-agent.socket
+  ExecStart=/usr/bin/ssh-agent -a $SSH_AUTH_SOCK
+  
+  [Install]
+  WantedBy=multi-user.target
+# Add to your shell's startup file, for example .bash_profile for Bash.
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"

@@ -6,8 +6,42 @@
   /etc/systemd/system/
   # Where you put your scripts.
 
-$ systemctl status dbus.service
+$ systemctl start unit
+# Start a unit immediately.
+
+$ systemctl stop unit
+# Stop a unit immediately.
+
+$ systemctl restart unit
+# Restart a unit.
+
+$ systemctl reload unit
+# Ask a unit to reload its configuration.
+
+$ systemctl status unit
 # Show if the unit is active, information about the process, and the latest journal entries.
+
+$ systemctl is-enabled unit
+# Check whether a unit is already enabled or not.
+
+$ systemctl enable unit
+# Enable a unit to be started on bootup.
+
+$ systemctl disable unit
+# Disable a unit to not start during bootup.
+
+$ systemctl mask unit
+# Mask a unit to make it impossible to start it.
+
+$ systemctl unmask unit
+# Unmask a unit.
+
+$ systemctl help unit
+# Show the manual page associated with a unit (this has to be supported by the unit file).
+
+$ systemctl daemon-reload
+# Reload systemd, scanning for new or changed units.
+
 
 $ systemctl cat dbus.service
 # See the full contents of a unit file.
@@ -29,3 +63,10 @@ $ systemctl list-units --type target -a
 
 $ systemctl get-default
 # Show which target unit is used by default.
+
+$ systemctl list-unit-files
+# List installed unit files.
+
+sudo systemctl --user enable arkos-redis.service
+systemctl daemon-reload
+
