@@ -85,9 +85,12 @@ systemd-analyze critical-chain
 systemd-analyze critical-chain --fuzz 1h
 # List exectuin tree.
 
+systemctl --user enable unit
+# --user for services that user start and manipulate.
+# ~/.config/systemd/useri, the local for --user units.
 
-sudo systemctl --user enable arkos-redis.service
 systemctl daemon-reload
+# Make systemd reload units changes.
 
 continue
   man systemd.unit

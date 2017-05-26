@@ -42,7 +42,7 @@ $ xclip -sel clip < ~/.ssh/id_rsa.pub
 # Paste the content on github settings/SSH and GPG keys/New SSH Key.
 
 # Start ssh-agent with systemd user.
-/etc/systemd/system/ssh-agent.service
+~/.config/systemd/user/ssh-agent.service
   [Unit]
   Description=SSH key agent
   
@@ -53,5 +53,8 @@ $ xclip -sel clip < ~/.ssh/id_rsa.pub
   
   [Install]
   WantedBy=multi-user.target
-# Add to your shell's startup file, for example .bash_profile for Bash.
+# Add to your shell's startup file, for example .bash_profile for Bash, zshrc for zsh.
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+# Enable the service.
+$ systemctl --user enable ssh-agent.service
+
