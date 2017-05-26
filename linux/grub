@@ -1,0 +1,6 @@
+/etc/default/grub
+  GRUB_TIMEOUT=0
+# Change the file to make grub not wait.
+
+grub-mkconfig -o /bood/grub/grub.cfg
+# Remember that grub.cfg has to be re-generated after any change to /etc/default/grub or files in /etc/grub.d/.
