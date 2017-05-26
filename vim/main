@@ -161,18 +161,6 @@ ident several lines
 >%
 ident all the curl, must be in the line of curl
 
-f+
-to the next + symbol in the line
-
-F+
-to the previous + symbol in the line
-
-;
-repeat the last search that the f command performed
-
-,
-repeat the last search that the f command performed backward
-
 :s/the/The
 substitution the by The in the current line
 
