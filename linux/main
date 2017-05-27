@@ -802,3 +802,6 @@ $ eval y='$'$x
 $ echo $y
   10
 
+tmpfs 
+# Is a temporary filesystem that resides in memory and/or your swap partition(s), depending on how much you fill it up.
+# Mounting directories as tmpfs can be an effective way of speeding up accesses to their files, or to ensure that their contents are automatically cleared upon reboot. 
