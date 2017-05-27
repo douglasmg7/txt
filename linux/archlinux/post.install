@@ -155,6 +155,17 @@ $ pacman -S evince
 $ pacman -S mupdf
 $ pacman -S apvlv
 
+# alsamixer and mixer.
+$ pacman -S alsa-utils
+
+# mpg123
+$ pacman -S mpg123
+
+# Mplayer
+$ pacman -S mplayer
+
+# unrar.
+$ pacman -S unrar
 
 todo
 verify who is setting xterm-256color
