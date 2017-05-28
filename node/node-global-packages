@@ -1,6 +1,6 @@
 bower
 bunyan (for use cli)
-eslint
+# eslint
 express-generator
 json-server
 pug-cli

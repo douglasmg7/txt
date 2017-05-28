@@ -1,8 +1,24 @@
-# install n
 curl -L https://git.io/n-install | bash
+# install n.
 
-# remove n
 n-uninstall
+# remove n.
 
-# list installed node
 n
+# list installed node.
+
+$ n 0.8.14
+# Installing/Activating Versions.
+
+$ n latest
+# Use or install the latest official release.
+
+$ n stable
+# Use or install the stable official release.
+
+$ n lts
+# Use or install the latest LTS official release.
+
+$ n rm 0.9.4 v0.10.0
+# Remove some version.
+
