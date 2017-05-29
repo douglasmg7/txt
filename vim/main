@@ -44,6 +44,10 @@ dd   toda a linha
 d$ ou D   cut até o final da linha
 
 c - change (go to insert mode)
+caw   delete a word and go to insert mode (change all word).
+ciw   delete a word and go to insert mode (change inside word).
+ci(   delete inside () and go to insert mode.
+ca(   delete incluseive () and go to insert mode.
 
 y - yank into register
 
