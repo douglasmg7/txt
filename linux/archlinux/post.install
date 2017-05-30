@@ -167,5 +167,8 @@ $ pacman -S mplayer
 # unrar.
 $ pacman -S unrar
 
+# mkfs.vfat.
+$ pacman -S dosfstools
+
 todo
 verify who is setting xterm-256color

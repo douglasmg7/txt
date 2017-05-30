@@ -1,0 +1,6 @@
+$ uname -m
+$ file $(which bash)
+$ cat /proc/cpuinfo
+# To know which arm (cpu).
+# ARMv7 (and below) is 32-bit. ARMv8 introduces the 64-bit instruction set.
+
