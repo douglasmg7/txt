@@ -98,12 +98,12 @@ mkdir -p dir1/sub1/sub2
 file file_name
   lista o tipo do arquivo
 
-# Imprimir um arquivo no console
-# fast for big files
-less file_name - view content file
-	/search_name - pesquisa
-	n - próximo da pesquisa
-	q - sair do less
+$ less file_name
+$ less file_name -R
+# Imprimir um arquivo no console.
+# Fast for big files.
+# -r or --raw-control-chars - Causes "raw" control characters to be displayed.
+# -R or --RAW-CONTROL-CHARS - Like  -r,  but only ANSI "color" escape sequences are output in "raw" form.
 
 dpkg --get-selections
 obtem os programas instalados
