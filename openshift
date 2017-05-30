@@ -1,0 +1,27 @@
+# Download oc (openshift command line).
+$ tar -xf oc.tar.gz
+$ mv oc ~/usr/bin
+# Install oc.
+
+$ oc login
+> https://api.starter-us-east-1.openshift.com
+> username: email@gmail.com
+> password: xxxxx
+# Config the user.
+
+$ oc status
+# Show a high level overview of the current project.
+
+$ oc logout
+# Log out of CLI.
+
+$ oc config view
+# Show the configuration.
+
+$ oc project
+# List current project.
+
+$ oc project project_name
+# Switch to a particular project.
+
+
