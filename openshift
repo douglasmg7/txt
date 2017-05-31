@@ -24,4 +24,10 @@ $ oc project
 $ oc project project_name
 # Switch to a particular project.
 
+$ oc get pods
+# List of pods in your current project.
 
+$ oc rsh <pod>
+# Open a remote shell session to the desired pod.
+sh$ mongo -u $MONGODB_USER -p $MONGODB_PASSWORD $MONGODB_DATABASE
+# Connect to mongo.

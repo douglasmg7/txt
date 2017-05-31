@@ -1,0 +1,7 @@
+$ mongo ds159371.mlab.com:59371/mammoth -u mammoth -p mammuthus
+# Connect using the mongo shell.
+
+$ mongodb://<dbuser>:<dbpassword>@ds159371.mlab.com:59371/mammoth
+# Connect using a driver via the standard MongoDB URI.
+
+
