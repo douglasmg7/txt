@@ -1,0 +1,34 @@
+network part
+subnet part
+host part
+
+All that a subnet mask does is indicate how many bits are being “borrowed” from the host component of an IP address.
+
+Class A
+0 - 126
+network.host.host.host
+
+Class B
+128 - 191
+network.network.host.host
+
+Class C
+192 - 223
+network.network.network.host
+
+Class D
+224 - 239
+not defined
+
+Class E
+240 - 255
+not defined
+
+The following blocks of IP addresses are allocated for private networks:
+
+    10.0.0.0/8  (10.0.0.0 to 10.255.255.255)
+    172.16.0.0/12  (172.16.0.0 to 172.31.255.255)
+    192.168.0.0/16  (192.168.0.0 to 192.168.255.255)
+    169.254.0.0/16  (169.254.0.0 to 169.254.255.255)*
+
+*Note that 169.254.0.0/16 is a block of private IP addresses used for random self IP assignment where DHCP servers are not available.

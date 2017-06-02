@@ -41,3 +41,23 @@ continuar pg 240
 
 ENOENT
 It's an abbreviation of Error NO ENTry, and can actually be used for more than files/directories.
+
+num[3] == *(num + 3) == *(3 + num) == 3[num]
+# Array
+ 
+char *cards = "JQK";
+# This create a string literal into constant area of memory and make cards point to there.
+# cards can not be used to change the string literal.
+# Use array instead.
+const chat *cards = "JQK";
+# Is the same as above. Use this.
+
+char cards[] = "JQK";
+# This create a string literal into constant area of memory and make a copy to the array.
+
+make(int num[]){
+}
+make(int *num({
+}
+# These two functions are equivalent.
+# Array as parameter is treated as array.

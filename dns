@@ -1,0 +1,9 @@
+If you want to use Google Public DNS, use the following settings:
+
+    Primary: 8.8.8.8
+    Secondary: 8.8.4.4
+
+If you want to use OpenDNS, use the following settings:
+
+    208.67.222.222
+    208.67.220.220

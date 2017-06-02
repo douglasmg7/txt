@@ -16,6 +16,9 @@ $ passwd username
 # Permit user to use sudo command, change the file:
 /etc/sudoers
   username ALL=(ALL) ALL
+# Test the sudo first, if not work try the adm.
+usermod -aG sudo username
+usermod -aG adm username
 
 # Console font.
 $ pacman -S terminus-font
@@ -66,6 +69,8 @@ $ :PluginInstall
 $ pacman -S neovim
 $ mkdir -p ~/.config/nvim && cd ~/.config/nvim
 $ ln -s ~/dotfiles/nvim/init.vim init.vim
+$ pacman -S python
+$ pacman -S python-neovim
 
 # Zsh.
 $ pacman -S zsh

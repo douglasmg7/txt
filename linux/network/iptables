@@ -1,0 +1,5 @@
+# iptables/ip6tables — administration tool for IPv4/IPv6 packet filtering and NAT
+
+iptables -L
+iptables -L -v
+# List all rules in the selected chain. 
