@@ -1,0 +1,7 @@
+# xrandr is an official configuration utility to the RandR X Window System extension.
+
+xrandr
+# List the screen configuration.
+
+xrandr --output VGA1 --rotate right
+# Rotate screen.
