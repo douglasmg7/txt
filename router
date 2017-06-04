@@ -1,9 +1,19 @@
 # Park Fiberlink 100
-http://192.168.0.1
-user: user
-password: user
+Public Ip
+  186.248.95.181
+Private Ip
+  192.168.0.1
+  user: user
+  password: user
+Opened ports
+  3000-3099
+  Forward to 192.168.02
 
 # Tp-link WR842ND v2
-http://192.168.1.1/
-user: admin
-password: admin
+LAN
+  192.168.1.1/
+  user: admin
+  password: admin
+WAN
+  192.168.0.2
+FORDWARD
