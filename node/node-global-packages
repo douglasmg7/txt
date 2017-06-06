@@ -1,9 +1,7 @@
 bower
-bunyan (for use cli)
-# eslint
+gulp-cli
+livereload
+pug-cli
 express-generator
 json-server
-pug-cli
 http-server
-pug-cli
-livereload
