@@ -175,5 +175,11 @@ $ pacman -S unrar
 # mkfs.vfat.
 $ pacman -S dosfstools
 
+# mtp (media transfer protocol) to connect to Android phone.
+$ mkdir -p ~/aur && cd ~/aur && git clone https://aur.archlinux.org/simple-mtpfs.git
+$ makepkg -si
+$ reboot now
+
+
 todo
 verify who is setting xterm-256color

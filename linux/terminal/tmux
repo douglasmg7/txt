@@ -28,7 +28,7 @@ tmux attach -t 0
 tmux new -s database
 
 # rename existing session
-tmux rename-change -t 0 database
+tmux rename-session -t 0 database
 
 # full screen a pane
 prefix z
@@ -43,3 +43,9 @@ export TERM=xterm-256color
 unbind C-b
 set -g prefix C-a
 bind C-a send-prefix
+
+# tmux: need UTF-8 locale (LC_CTYPE) but have ANSI_X3.4-1968
+# Uncomment.
+/etc/locale.gen
+  en_US.UTF-8 UTF-8
+> locale-gen
