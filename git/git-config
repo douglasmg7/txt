@@ -1,0 +1,46 @@
+# Configuration for a single repo.
+# --local
+.git/config
+
+# Configuration for a user.
+# --global
+~/.gitconfig
+
+# Configuration for all users.
+# --system
+
+$ git config --global user.name "Han Solo"
+$ git config --global user.email "hansolo@gmail.com"
+$ git config --global core.editor sublime		
+# use sublime for interactive commands.
+$ git config --global core.tool opendiff		
+# use opendiff for merging conflicts.
+$ git config --global credential.helper cache
+# Set git to use the credential memory cache.
+$ git config --global credential.helper 'cache --timeout=3600'
+# Set the cache to timeout after 1 hour (setting is in seconds).
+
+$ git config --list
+# List all configurations.
+
+$ git config --global push.default simple
+# Default >git-2.
+# Instead of match branch.
+
+$ git config --global pull.rebase true
+# git pull -> git fetch + git rebase(instead of merge).
+
+$ git config --global rerere.enable true
+# Records all fixes to merge conflicts.
+# Reuses them automatically if the same conflict recurs.
+# Particulary useful when cherry picking to multiple branches or constantly rebasing.
+
+$ git config --global alias.s 'status -s'
+$ git config --global alias.lg 'log --oneline --decorate --all --graph'
+# Alias.
+
+
+
+sharing configuration files
+put config files in a wikipage or dotfiles repository
+

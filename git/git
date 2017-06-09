@@ -1,50 +1,9 @@
-git help
-git help config
-get a help for comand config
+$ git help
+$ git help config
+# Get a help for comand config.
 
---local
-for a single repo
-.git/config
-
---global
-for your user
-~/.gitconfig
-
---system
-for all users
-
-git config --global user.name "Han Solo"
-git config --global user.email "hansolo@gmail.com"
-git config --global core.editor sublime		# use sublime for interactive commands
-git config --global core.tool opendiff		# use opendiff for merging conflicts
-
-git config --list
-list all configurations
-
-git config --global push.default simple
-default >git-2
-instead of match branch
-
-git config --global pull.rebase true
-git pull -> git fetch + git rebase(instead of merge)
-
-git config --global rerere.enable true
-records all fixes to merge conflicts
-reuses them automatically if the same conflict recurs
-particulary useful when cherry picking to multiple branches
-or constantly rebasing
-
-git config --global alias.s 'status -s'
-silent status
-
-git config --global alias.lg 'log --oneline --decorate --all --graph'
-a better git log
-
-sharing configuration files
-put config files in a wikipage or dotfiles repository
-
-git init
-initiate git repository
+$ git init
+# Initiate git repository.
 
 git log --oneline
 show each commit in oneline
@@ -622,12 +581,6 @@ git checkout <branch_name>
 git commit -m "Fixes #1"
 will automaticaly close the github issue
 	"fixes", "closes" or "resolves" word in a message will close the issue
-
-$ git config --global credential.helper cache
-# Set git to use the credential memory cache
-
-$ git config --global credential.helper 'cache --timeout=3600'
-# Set the cache to timeout after 1 hour (setting is in seconds)
 
 $ git checkout HEAD file_name
 # retrive deleted local file if not commited yet.
