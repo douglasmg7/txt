@@ -5,3 +5,4 @@ pug-cli
 express-generator
 json-server
 http-server
+npm-check-updates

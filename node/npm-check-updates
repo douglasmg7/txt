@@ -1,0 +1,10 @@
+# npm-check-updates is a command-line tool that allows you to upgrade your package.json or bower.json dependencies to the latest versions, regardless of existing version constraints. 
+
+$ npm i npm-check-updates -g
+# install 
+
+$ ncu
+# Show any new dependencies for the project in the current directory.
+
+$ ncu -u
+# Upgrade a project's package file.
