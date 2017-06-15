@@ -1,12 +1,18 @@
+$ git clone https://aur.archlinux.org/package_name.git
 # download the package
-git clone https://aur.archlinux.org/package_name.git
 
+$ cd package_name
+$ less PKGBUILD
+$ less package_name.install
 # Carefully check the PKGBUILD and any .install file for malicious commands. PKGBUILDs are bash scripts
-cd package_name
-less PKGBUILD
-less package_name.install
 
+$ makepkg -si
 # make and install the package
-makepkg -si
-  -s/--syncdeps automatically resolves and install any dependencies with pacman before building
-  -i/--install installs the package if it is built successfully. Alternatively the built package can be installed with pacman -U package.pkg.tar.xz
+#  -s/--syncdeps automatically resolves and install any dependencies with pacman before building
+#  -i/--install installs the package if it is built successfully. Alternatively the built package can be installed with pacman -U package.pkg.tar.xz
+
+$ makepkg -f
+# Force re-build.
+
+$ pacman -U file.pkg.tar.xz
+# Install the package.
