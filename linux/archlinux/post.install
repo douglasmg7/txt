@@ -39,8 +39,12 @@ $ pacman -S powertop
 # wget.
 $ pacman -S wget
 
-# ssh - Secure SHell.
+# ssh client.
 $ pacman -S openssh
+
+# Enable ssh server.
+$ systemctl enable sshd
+$ systemctl start sshd
 
 # Git.
 $ pacman -S git
@@ -56,6 +60,9 @@ $ git clone https://github.com/douglasmg7/txt.git
 # Tmux.
 $ pacman -S tmux    # install tmux
 $ ln -s dotfiles/tmux.conf .tmux.conf
+
+# Python 2.7.
+$ pacman -S python2
 
 # Vim.
 $ pacman -S vim
@@ -87,6 +94,17 @@ cd /etc/udev/hwdb.d
 $ ln -s ~/dotfiles/70-keyboard-my.hwdb 70-keyboard-my.hwdb
 $ systemd-hwdb update
 $ udevadm trigger
+
+# Node.
+curl -L https://git.io/n-install | bash
+
+# Mongodb.
+pacman -S mongodb
+systemctl enable mongodb
+systemctl start mongodb
+
+# youtube download.
+pacman -S youtube-dl
  
 # Display server.
 $ pacman -S xorg xorg-server    

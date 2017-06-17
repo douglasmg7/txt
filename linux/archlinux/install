@@ -1,42 +1,63 @@
 # download the lastest archlinux version
 
-wifi-menu -o wlan0    # to config wifi
+$ wifi-menu -o wlan0    
+# Config wifi.
 
-fdisk -l    # to check partition table
+$ fdisk -l    
+# Check partition table.
 
-fdisk /dev/sda   # to create partition
-# chose one to be bootable
-# chose one to be swap
+$ fdisk /dev/sda   
+# Create partition.
+# Root partition, /dev/sda1, as primary bootable with size 10 GB and ext4 formatted.
+# Swap partition, /dev/sda2, as primary with size 2xRAM size.
+# Logical partition, Home, /dev/sda5, rest of the space and ext4 formatted.
+# Chose sda1 to be bootable - a options.
+# Chose sda2 to be swap - t option, select 82.
 
-mkfs.ext4 /dev/sda1   # format each partition
+$ mkfs.ext4 /dev/sda1   
+# Format root partition.
 
-mkswap /dev/sda2    # format swap
+$ mkfs.ext4 /dev/sda3   
+# Format home partition.
 
-swapon /dev/sda2    # activate the swap
+$ mkswap /dev/sda2    
+# Format swap.
 
-mount /dev/sda1 /mnt    # mount 
-mkdir /mnt/home
-mount /dev/sda2 /mnt/home
+$ swapon /dev/sda2    
+# Activate the swap.
 
-pacstrap /mnt base    # run script to install base package or
-pacstrap /mnt base-devel    # run script to install base package dev
+$ mount /dev/sda1 /mnt    
+$ mkdir /mnt/home
+$ mount /dev/sda3 /mnt/home
+# Mount the system.
 
-genfstab /mnt >> /mnt/etc/fstab   # generate fstab file
+$ pacstrap /mnt base    
+# Run script to install base package.
+$ pacstrap /mnt base-devel    
+# Run script to install base package dev.
 
-arch-chroot /mnt    # change root into the new system
+$ genfstab /mnt >> /mnt/etc/fstab   
+# Generate fstab file.
 
-ln -sf /usr/share/zoneinfo/Region/City /etc/localtime   # set the time zone
+$ arch-chroot /mnt    
+# Change root into the new system.
 
-hwclock --systohc   # generate /etc/adjtime
+$ ln -sf /usr/share/zoneinfo/region/city /etc/localtime   
+# Set the time zone.
+
+$ hwclock --systohc   
+# generate /etc/adjtime.
 
 # Uncomment en_US.UTF-8 UTF-8 and other needed localizations in /etc/locale.gen, and generate them with:
 locale-gen
 
-# set /etc/locale.conf
-LANG=en_US.UTF-8
+# Change or create.
+/etc/locale.conf
+  LANG=en_US.UTF-8
 
-# set /etc/hostname
-myhostname
+# Change or create.
+/etc/hostname
+  myhostname
 
 passwd    # change root password
 
@@ -49,6 +70,9 @@ systemctl enable dhcpcd   # make network connections persistent
 pacman -S grub os-prober
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
+
+$ pacman -S wireless_tools wpa_supplicant dialog
+# wifi-menu.
 
 # exit installation
 exit
