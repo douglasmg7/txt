@@ -181,6 +181,15 @@ $ pacman -S apvlv
 # alsamixer and mixer.
 $ pacman -S alsa-utils
 
+# Sound server.
+$ pacman -S pulseaudio pulseaudio-alsa
+
+# Pulse audio interface (gui).
+$ pacman -S pavucontrol
+
+# Pulse audio interface (cli).
+$ pacman -S pamixer
+
 # mpg123
 $ pacman -S mpg123
 
@@ -189,6 +198,9 @@ $ pacman -S mplayer
 
 # unrar.
 $ pacman -S unrar
+
+# unzip.
+$ pacman -S unzip
 
 # mkfs.vfat.
 $ pacman -S dosfstools
