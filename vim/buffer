@@ -1,0 +1,26 @@
+:ls
+# List the buffers.
+
+:b3
+# Go to buffer 3.
+
+:bp 
+# Previous buffer.
+
+<ctrl-^>
+# Previous buffer.
+
+3<ctrl-^>
+# To buffer 3.
+
+<ctrl-o>
+<ctl-i>
+# Jump buffer history.
+
+:new
+# Create a empty buffer.
+
+:e file_name
+# Create a buffer for file_name (edit file_name).
+
+

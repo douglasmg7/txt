@@ -1,0 +1,20 @@
+<ctrl-p>
+# Start fuzz finder.
+
+<ctrl-d>
+# Switch to filename only search instead of full path.
+
+<ctrl-f>
+# Switch forward between dir-find, buffer-find, mru-find (most recent used).
+
+<ctrl-b>
+# Switch backward between dir-find, buffer-find, mru-find (most recent used).
+
+<ctrl-g>
+# Exit fuzz finder.
+
+<ctrl-t>
+# Open file in a new tab.
+
+<cr>
+# Open selected file.
