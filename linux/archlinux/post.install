@@ -62,7 +62,10 @@ $ pacman -S tmux    # install tmux
 $ ln -s dotfiles/tmux.conf .tmux.conf
 
 # Python 2.7.
-$ pacman -S python2
+$ pacman -S python2 python2-pip
+
+# Python 3.
+$ pacman -S python python-pip
 
 # Vim.
 $ pacman -S vim
