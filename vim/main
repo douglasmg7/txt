@@ -135,13 +135,16 @@ slpit windows
 <C-w>,v   # vertical splitting
 <C-w>,q   # close one
 <C-w>,<C-w>   # switch between windows
-<C-w>,j (xor k, h, l)   # switch to adjacent window (intuitively up, down, left, right)
+<C-w>,j (or k, h, l)   # switch to adjacent window (intuitively up, down, left, right)
 :sp <filename>    # horizontal split
 :vs <filename>    # vertical split
-<C-w>,_     # maximaize the size of the split
-<C-w>,|     # maximaize the size of the vertical-split
-<C-w>,+     # grow split
-<C-w>,-     # shrink split
+<c-w> =     # Make all equal size.
+<C-w> _     # Maximaize the size of the current window.
+<C-w> |     # maximaize the size of the vertical-split
+10 <C-w> +  # Grow current window 10 lines.
+<C-w>,-     # Shrink current window.
+:hide       # Close current window.
+:only       # Keep only current window open.
 
 :h key-notation
 key notation information

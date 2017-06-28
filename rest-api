@@ -1,9 +1,18 @@
-rest is representational state transfer
+"create" (HTTP POST)
+  POST /articles
+  Not have _id, db will generate
+
+"update" (HTTP PUT)
+  PUT /article/1234
 
 GET /tasks will retrieve a list of tasks;
 POST /tasks will add a task to the list of tasks;
+  http://localhost/ws
+  no id
 GET /tasks/:id will retrieve a single task;
 PUT /tasks/:id will edit a property of a task;
+  http://localhost/ws/22398723
+  have id
 DELETE /tasks/:id will delete a task.
 
 200 OK	201 Created

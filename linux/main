@@ -273,6 +273,10 @@ ps
 	ps aux	list processes - BSD syntax
 	ps li list processes - BSD syntax
 	ps -p 48 	list process by id
+
+$ ps T
+# Show proccess from current terminal.
+
 ps -p 7495 -o pid, ni, cmd
 	show specific informations
 

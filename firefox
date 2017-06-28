@@ -1,10 +1,4 @@
-iceweasel (45.0esr-1) unstable; urgency=medium
-
-  * The iceweasel package was replaced with the firefox-esr package.
-
-  * Preferences under /etc/iceweasel/prefs will need to be copied manually
-    to /etc/firefox-esr.
-  * Other customizations under /etc/iceweasel will need additional manual
-    steps, through CCK2 or addons.
-
- -- Mike Hommey <glandium@debian.org>  Mon, 7 Mar 2016 07:45:02 +0900
+Disable Firefox redirecting to localhost.com
+  Type about:config in the browser bar
+  Type browser.fixup.alternate.enabled in the search box that appears
+  Right click on the browser.fixup.alternate.enabled that appears in the filtered list below and choose Toggle to set the value to false

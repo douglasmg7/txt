@@ -18,3 +18,12 @@
 
 <cr>
 # Open selected file.
+
+<ctrl-t>
+# Open in new tab.
+
+<ctrl-v>
+# Open in split vertical.
+
+<ctrl-x>
+# Open in split horizontal.
