@@ -39,3 +39,11 @@ systemd-hwdb update
 
 udevadm trigger
   load hwdb.bin without reboot
+
+setxkbmap -print -verbose 10
+# XKB settings.
+
+$ setxkbmap -option compose:ralt
+$ setxkbmap -layout us -variant altgr-intl -option nodeadkeys
+# Choose one for pontuation, this not pesistent, must be put in xintrc.
+
