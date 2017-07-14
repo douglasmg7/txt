@@ -103,7 +103,7 @@ $ udevadm trigger
 curl -L https://git.io/n-install | bash
 
 # Mongodb.
-pacman -S mongodb
+pacman -S mongodb mongodb-tools
 systemctl enable mongodb
 systemctl start mongodb
 

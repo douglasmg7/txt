@@ -276,3 +276,23 @@ db.temp.find().limit(2).toArray()
 
 # pretty output - config
 echo DBQuery.prototype._prettyShell = true >> ~/.mongorc.js
+
+# Export a collection.
+$ mongoexport --db zunka --collection storeProducts --out ex.json
+$ mongoexport --host 192.168.1.100 --port 27017 --db zunka --collection storeProducts --out storeProducts.json
+$ mongoexport --host mongodb1.example.net --port 37017 --username user --password "pass" --collection contacts --db marketing --out mdb1-examplenet.json
+
+# Import a collection.
+$ mongoimport --db newdb --collection restaurants --file primer-dataset.json
+
+# Allow remote access - (accept any remote connections).
+/etc/mongod.conf
+  # bind_ip = 127.0.0.1
+sudo systemctl restart mongod
+
+# Allow remote access - (local network).
+/etc/mongod.conf
+  bind_ip = 127.0.0.1,192.168.1.100
+sudo systemctl restart mongod
+  
+
