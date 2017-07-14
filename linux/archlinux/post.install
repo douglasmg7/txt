@@ -14,6 +14,7 @@ $ useradd -m -g users -G wheel,storage,power -s /bin/bash username
 $ passwd username
 
 # Permit user to use sudo command, change the file:
+$ visudo
 /etc/sudoers
   username ALL=(ALL) ALL
 # Test the sudo first, if not work try the adm.

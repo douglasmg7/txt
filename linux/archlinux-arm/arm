@@ -4,6 +4,58 @@ $ cat /proc/cpuinfo
 # To know which arm (cpu).
 # ARMv7 (and below) is 32-bit. ARMv8 introduces the 64-bit instruction set.
 
-pacman -S base-devel
+$ pacman -S base-devel
 # Include everything need to c/c++ development.
 
+$ useradd -m -g users -G wheel,storage,power -s /bin/bash username 
+# create new user.
+
+$ passwd username
+# change password (alarm, root and new user)
+
+$ visudo
+/etc/sudoers
+  username ALL=(ALL) ALL
+# Permit user to use sudo command, change the file
+
+# Uncomment en_US.UTF-8 UTF-8 and other needed localizations in /etc/locale.gen, and generate them with:
+locale-gen
+
+# Change or create.
+/etc/locale.conf
+  LANG=en_US.UTF-8
+
+$ pacman -S htop 
+$ pacman -S wget
+$ pacman -S python python-pip python2 python2-pip 
+
+$ pacman -S tmux 
+$ ln -s dotfiles/tmux.conf .tmux.conf
+
+$ pacman -S git
+$ cd ~
+$ git clone https://github.com/douglasmg7/dotfiles.git
+$ git clone https://github.com/douglasmg7/txt.git
+
+# Vim.
+$ pacman -S vim
+$ mkdir ~/.vim && mkdir ~/.vim/bundle
+$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+$ ln -s dotfiles/vimrc .vimrc
+$ vim
+$ :PluginInstall
+
+# Neovim (not working to aarch64).
+$ pacman -S neovim
+$ mkdir -p ~/.config/nvim && cd ~/.config/nvim
+$ ln -s ~/dotfiles/nvim/init.vim init.vim
+$ pacman -S python
+$ pacman -S python-neovim
+
+# Node (not working to aarch64).
+curl -L https://git.io/n-install | bash
+
+# Mongodb.
+pacman -S mongodb
+systemctl enable mongodb
+systemctl start mongodb
