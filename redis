@@ -1,5 +1,71 @@
-npm install redis --save
-install redis
+Redis (REmote DIctionary Server)
+
+$ pacman -S redis
+$ systemctl enable redis
+$ systemctl start redis
+# Install redis on archlinux (6379 - default port).
+
+$ redis-cli ping
+# Test connection.
+
+$ redis-cli
+# Start redis cli.
+
+$ npm install redis --save
+# Install redis to use with node.
+
+$ set asdf 'ret'
+# Set a value.
+
+$ get asdf
+# Get a value.
+
+$ scan 0
+# Set cursor at 0 position and show the values.
+
+$ keys *
+# Get all keys.
+
+$ redis-cli dbsize
+# Get number of itens.
+
+$ save
+# Save db on disk imediatly.
+
+$ mset a 1 b 2 c 3
+# Set several values.
+
+$ mget a b c
+# Get several values.
+
+$ exists a
+# 0: value not exist, 1: value exist.
+
+$ del a
+# Delete a key.
+
+$ type a
+# Return the element type.
+
+$ expire a 5
+# Set a to expire in 5 seconds.
+
+$ set a asdf ex 20
+# set a to 'asdf' and expire in 20 seconds.
+
+$ ttl a
+# Get the remaind time to live from key a.
+
+$ flushdb
+# Delete current dataset.
+
+$ flushall
+# Delete all datasets.
+
+/etc/redis.conf
+  databases 16
+# Configure the number of datasets.
+
 
 var redis = require('redis');
 var client = redis.createClient();
