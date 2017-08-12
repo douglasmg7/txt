@@ -1,0 +1,10 @@
+# LAME is a program which can be used to create compressed audio files (encode) i.e. create mp3 files.
+
+$ lame track01.cdda.wav
+# Create mp3 file.
+
+$ $ lame -b 160 track01.cdda.wav
+# Set 160 bit rate.
+
+$ for t in track{01..18}*.wav; do lame $t; done
+# loop tracks.

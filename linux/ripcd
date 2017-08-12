@@ -1,0 +1,40 @@
+#!/bin/bash
+# A simple shell script to rip audio cd and create mp3 using lame 
+# and cdparanoia utilities.
+# ----------------------------------------------------------------------------
+# Written by Vivek Gite <http://www.cyberciti.biz/>
+# (c) 2006 nixCraft under GNU GPL v2.0+
+# ----------------------------------------------------------------------------
+read -p "Starting in 5 seconds ( to abort press CTRL + C ) " -t 5
+cdparanoia -B
+for i in *.wav
+do
+ lame --vbr-new -b 360 "$i" "${i%%.cdda.wav}.mp3"
+ rm -f "$i"
+done
+
+# A simple shell script to rip an audio CD and create MP3s using lame
+# and cdparanoia.
+# ----------------------------------------------------------------------------
+# Written by Vivek Gite  and WS
+# (c) 2011 nixCraft under GNU GPL v2.0+
+# ----------------------------------------------------------------------------
+read -p "Starting in 5 seconds (to abort press CTRL + C)" -t 5
+ 
+rc=0
+i=
+if ! cdparanoia -B; then
+ echo "cdparanoia ended with error, bailing out" 1>&2
+ exit 1
+fi
+ 
+for i in *.wav; do
+ if lame --vbr-new -q 0 "$i" "${i%%.cdda.wav}.mp3"; then
+ rm -f "$i"
+ else
+ echo "Could not encode $i" 1>&2
+ ((rc++))
+ fi
+done
+ 
+exit $rc

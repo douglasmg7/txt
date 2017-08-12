@@ -1,0 +1,16 @@
+# cdparanoia (CD reading and extraction utility which includes extra data verification features).
+
+$ cdparanoia -vsQ
+# Get detailed information about drive and audio CD.
+
+$ cdparanoia -B
+# Extract all tracks.
+
+$ cdparanoia -B -- -3
+# Extract tracks 1 to 3.
+
+$ cdparanoia -B -- 1-2
+# Extract tracks 1 to 2.
+
+$ cdparanoia "1[:13.13]-1[1:13]"
+# Extract from track 1, time 0:13.13 to 1:13.00.
