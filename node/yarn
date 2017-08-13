@@ -1,0 +1,30 @@
+$ yarn
+$ yarn install
+# npm install
+
+$ yarn add [package]
+# npm i --save [package]
+
+$ yarn add [package] --dev
+# npm i --save-dev [package]
+
+$ yarn global add [package]
+# npm i --global [package]
+
+$ yarn global upgrade
+# npm update --global
+
+$ yarn install --force
+# npm rebuild
+
+$ yarn remove
+# npm uninstall --save
+
+$ yarn upgrade 
+# rm -rf node_modules $$ npm install
+
+$ yarn init
+# initialize a package.json
+
+$ yarn publish
+# Publishes a package to a package manager.
