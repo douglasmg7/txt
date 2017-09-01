@@ -169,6 +169,9 @@ $ apm install --packages-file ~/.atom/package.list
 
 # Install browsers.
 $ pacman -S firefox
+$ pacman -S flashplugin
+# If flash sound not work.
+$ pacman -S libvdpau-va-gl
 $ pacman -S chromium
 
 # Install xserver fonts.
