@@ -2,6 +2,7 @@ bower
 gulp-cli
 livereload
 pug-cli
+stylus
 express-generator
 json-server
 http-server
