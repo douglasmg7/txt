@@ -1,0 +1,8 @@
+sudo npm i js-beautify -g
+# Install
+
+js-beautify file.js
+# Std output.
+
+js-beautify file.js > out.js
+# Specific output.

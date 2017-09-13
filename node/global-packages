@@ -7,3 +7,4 @@ express-generator
 json-server
 http-server
 npm-check-updates
+js-beautify
