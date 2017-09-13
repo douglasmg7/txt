@@ -27,7 +27,13 @@ remove a line (cut line)
 remove selection
 
 ctrl + l
-selecting an entire line
+select an entire line + <cr>
+
+ctrl + shift + l
+select an entire line without <cr>
+ 
+ctrl + u
+unselect a line
 
 ctrl + c
 copy line if nothing selected
