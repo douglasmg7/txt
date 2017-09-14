@@ -522,7 +522,7 @@ show the first 100 column for each line
 
 cut -f1 -d: file_name
 	f1	fild to extract
-	-		delimiter
+	-d	delimiter
 cut -c44-50
 	print 44 column to 50
 cut -c44-
