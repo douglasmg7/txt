@@ -1,0 +1,6 @@
+I   $a - Go to insert mode at begin of line. 
+A   ^i - Go to insert mode at end of line.
+
+C   c$ - Delete to the end and go to insert mode.
+s   cl - Delete char and go to insert mode.
+S   ^C - Delete line and go to insert mode.
