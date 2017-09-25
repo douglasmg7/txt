@@ -1,0 +1,6 @@
+# See available digraphs.
+:digraphs
+
+# θ in insert mode.
+ctr+k, h*
+
