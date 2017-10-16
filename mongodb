@@ -295,4 +295,5 @@ sudo systemctl restart mongod
   bind_ip = 127.0.0.1,192.168.1.100
 sudo systemctl restart mongod
   
-
+# List doc fields.
+Object.keys(db.storeProducts.findOne())
