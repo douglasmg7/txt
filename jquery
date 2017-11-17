@@ -315,3 +315,9 @@ forcing correct order call
  jqXHR
  jQuery XMLHttpRequest
  superset of the XMLHTTPRequest object
+
+.closest 
+# selector traverses up the DOM to find the parent that matches the conditions.
+
+.find 
+# selector traverses down the DOM where the event occurred, that matches the conditions.
