@@ -1,0 +1,5 @@
+# System update
+pacman -Syu
+
+# Install video drivers
+pacman -S xf86-video-fbdev xf86-video-vesa

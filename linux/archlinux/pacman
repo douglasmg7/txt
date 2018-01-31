@@ -42,3 +42,6 @@ $ pacman -Sw package_name
 
 $ pacman -U /path/to/package/package_name-version.pkg.tar.xz   
 # Install a 'local' package that is not from a remote repository (e.g. the package is from the AUR).
+
+$ pacman -Sc
+# Cleaning the package cache.
