@@ -1,0 +1,10 @@
+# See hardware temperature
+
+# Install
+sudo pacman -S lm_sensors
+
+# Configuration.
+sudo sensors-detect
+
+# View temperature
+sensors
