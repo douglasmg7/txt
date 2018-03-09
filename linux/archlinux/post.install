@@ -188,6 +188,9 @@ $ pacman -S evince
 $ pacman -S mupdf
 $ pacman -S apvlv
 
+# Image viewer
+$ pacman -S feh
+
 # alsamixer and mixer.
 $ pacman -S alsa-utils
 
