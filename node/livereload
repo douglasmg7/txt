@@ -1,0 +1,16 @@
+# Install livereload server (javascript).
+npm i livereload -g
+
+# Start server in debug mode to watch pug files.
+livereload . -d -e pug
+
+# Method 1 - include script on file (pug).
+script document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+
+# Method 2 - install add-on LiveReload by Nikita Vasilyev.
+
+# Express script for livereload cmd.
+"scripts": {
+  "dev": "npm run livereload & cross-env NODE_ENV=development DEBUG=express:* nodemon ./bin/www",
+  "livereload": "livereload ./views -e 'pug' -d"
+},
