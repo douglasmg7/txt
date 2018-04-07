@@ -1,0 +1,102 @@
+<!--------------A----------------->
+AdRotator                   ar
+
+
+<!--------------B----------------->
+Button                      btn
+
+
+<!--------------C----------------->
+Calender                    cal
+CheckBox                    chk
+CheckBoxList                chklst
+Column (DataGridView的)     col
+ColumnHeader (ListView 的)  ch
+Combobox                    cbo
+CompareValidator            cv
+CrystalReportViewer         rptvew
+
+
+<!--------------D----------------->
+DataGrid                    dg
+DataGridView                dgv
+DataList                    dl
+DomainUpDown                dud
+DropDownList                ddl
+
+
+<!--------------F----------------->
+FileUpload                  ful
+Form                        frm
+
+
+<!--------------G----------------->
+GridView                    gv
+GroupBox                    grp
+
+
+<!--------------H----------------->
+HiddenField                 hf
+
+
+<!--------------I----------------->
+Image                       img
+ImageButton                 imgbtn
+ImageList                   il
+
+
+<!--------------L----------------->
+Label                       lbl
+LinkButton                  lnkbtn
+ListBox                     lst
+ListView                    lv
+
+
+<!--------------M----------------->
+MenuStrip                   ms
+
+
+<!--------------O----------------->
+ObjectDataSource            ods
+
+
+<!--------------P----------------->
+PagedDataSource             pds
+Panel                       pnl
+PictureBox                  pic
+
+
+<!--------------R----------------->
+RadioButton                 rdo
+RadioButtonList             rdolst
+RangeValidator              rv
+RegularExpressionValidator  rev
+Repeater                    rpt
+RequiredFieldValidator      rfv
+
+
+<!--------------S----------------->
+StatusLabel                 slbl
+StatusStrip                 ss
+
+
+<!--------------T----------------->
+TabControl                  tab
+Table                       tbl
+TabPage                     tp
+TextBox                     txt 
+Timer                       tmr
+ToolStrip                   ts
+ToolStripButton             tsbtn
+ToolStripDropDownButton     tsddb
+ToolStripLabel              tslbl
+ToolStripMenuItem           tsmi
+TreeView                    tv/tvw
+
+
+<!--------------V----------------->
+ValidatorSummary            vs
+
+
+<!--------------W----------------->
+WebBrowser
