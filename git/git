@@ -215,6 +215,9 @@ set the cache to timeout after 1 hour (setting is in seconds)
 git tag
 list all tags
 
+git tag -n
+List all tags with description.
+
 git checkout v0.0.1
 checkout code at commit with a tag
 
