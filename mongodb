@@ -297,3 +297,7 @@ sudo systemctl restart mongod
   
 # List doc fields.
 Object.keys(db.storeProducts.findOne())
+
+# Rename collection name.
+db.storeProducts.renameCollection('products')
+

@@ -1,0 +1,21 @@
+.container {
+  display: flex; // Or inline-flex.
+  flex-direction: row | row-reverse | column | column-reverse;
+  flex-wrap: nowrap | wrap | wrap-reverse;
+  flex-flow: <flex-direction> <flex-wrap>;
+  justify-content: flex-start | flex-end | center | space-between | space-around | sapce-evenly;
+  align-items: stretch | flex-start | flex-end | center | baseline;
+  align-content: stretch | flex-start | flex-end | center | space-between | space-around;o
+}
+
+.item {
+  order: <integer>; // Default is 0.
+  flex-grow: <number>;  // Default is 0.
+  flex-shrink: <number>;  // Default is 1.
+  flex-basis: <length> | auto;  // Default is auto.
+  flex: <flex-grow> <flex-shrink> <flex-basis>;  // Default 1 1 auto. Second and third parameters are optinal.
+  align-self: auto | flex-start | flex-end | center | baseline | stretch;
+
+
+
+
