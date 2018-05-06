@@ -1,0 +1,8 @@
+# p7zip is command line port of 7-Zip. 
+
+# Install.
+$ pacman -S p7zip
+
+# To extract all files from an archive to the current directory without using directory names.
+$7z x file_name
+

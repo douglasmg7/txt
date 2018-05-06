@@ -42,3 +42,8 @@ alt+left-mouse-button
 
 alt+shift+q
   Quit dwm cleanly.
+
+# Change window to other monitor.
+alt+shift+>
+alt+shift+<
+  

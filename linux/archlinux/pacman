@@ -45,3 +45,5 @@ $ pacman -U /path/to/package/package_name-version.pkg.tar.xz
 
 $ pacman -Sc
 # Cleaning the package cache.
+$ pacman -Scc
+du -sh /var/log

@@ -1,0 +1,5 @@
+# ncdu (NCurses Disk Usage).
+
+# To analyse / dir.
+sudo ncdu -x /
+

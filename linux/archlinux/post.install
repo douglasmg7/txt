@@ -40,6 +40,12 @@ $ pacman -S htop
 # Power consumption.
 $ pacman -S powertop
 
+# Limit space use for log files.
+sudo journalctl --vacuum-size=100M
+
+# To analyse space used.
+$ pacman -S ncdu
+
 # wget.
 $ pacman -S wget
 

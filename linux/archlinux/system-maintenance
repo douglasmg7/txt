@@ -1,0 +1,25 @@
+# Keeping a list of explicitly installed packages can be useful to speed up installation on a new system.
+$ pacman -Qqe > pkglist.txt
+
+# To install packages from the list backup.
+$ pacman -S - < pkglist.txt
+
+# Clean pacman cach.
+$ pacman -Sc
+$ pacman -Scc
+
+# Verify log size.
+$ du -sh /var/log
+
+# Install NCurses Disk Usage to analyse used space.
+$ pacman -S ncdu
+$ sudo ncdu -x /
+
+# See space used by log files.
+journalctl --disk-usage
+
+# Restric space used by log files.
+sudo journalctl --vacuum-size=100M
+
+
+

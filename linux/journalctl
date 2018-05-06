@@ -11,3 +11,10 @@ journalctl -u dbus.service
 
 journalctl -b -u dbus.service
   See all of the journal entries for the unit in question from the boot.
+
+# See space used by log files.
+journalctl --disk-usage
+
+# Restric space used by log files.
+sudo journalctl --vacuum-size=100M
+
