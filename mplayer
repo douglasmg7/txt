@@ -11,3 +11,14 @@ mplayer -cache 2000 cdda://
 
 mplayer cdda://3:1 -cache 1024
 # Play track 3, cdrom speed 1
+
+# Play a DVD from the menu.
+# /dev/sr0 was created by the system instead of /dev/dvd.
+mplayer dvdnav:// -dvd-device /dev/sr0
+
+# Play a DVD from chapter 1.
+mplayer dvd://1 -dvd-device /dev/sr0
+
+# Play a DVD from chapter 2.
+mplayer dvd://2 -dvd-device /dev/sr0
+
