@@ -215,6 +215,9 @@ $ pacman -S mpg123
 # Mplayer
 $ pacman -S mplayer
 
+# To play encrypted DVDs, you must install the libdvd* packages.
+$ pacman -S libdvdread libdvdcss libdvdnav
+
 # Cdparanoia (cd ripper)
 $ pacman -S cdparanoia
 
