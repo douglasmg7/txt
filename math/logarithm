@@ -1,0 +1,22 @@
+# Logarithm base 2, How many 2s do we need to multiply to get 8.
+log2(8) = 3
+2^3 = 8
+
+# Common logarithm, base 10.
+log(8)
+log10(8)
+
+# Natural logarithm, base 2.718281828459045 (Euler's number).
+ln(8)
+
+# Base change formula.
+loga(x) = log10(x) / log10(10)
+
+# Change exponent formula.
+log(x^a) = a*log(x)
+
+# Multiply and division formula.
+log(a) + log(b) = log(a * b)
+log(a) - log(b) = log(a / b)
+
+
