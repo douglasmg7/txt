@@ -111,6 +111,7 @@ update count += 2
 db.potions.update({'portion': 'Shrinking'}, {'$inc': {'count': 1}}, {'upsert', true});
 create documento if not found
 
+# Remove a field.
 db.potions.update(
 	{},
 	{'$unset': {'color': ''}},
@@ -300,4 +301,7 @@ Object.keys(db.storeProducts.findOne())
 
 # Rename collection name.
 db.storeProducts.renameCollection('products')
+
+# Remove by _id.
+ db.orders.remove({_id: ObjectId("5b199298fdd3b0054c9f6047") })
 

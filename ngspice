@@ -1,0 +1,47 @@
+# Complete run netlist.
+ngspice < file_name.cir
+
+# Starting spice.
+ngspice
+
+# Change cd.
+cd new_dir
+
+# Load a netlist.
+source file_name.cir
+
+# Edit loaded netlist.
+edit
+
+# Listing netlist.
+listing
+
+# List known vectors and types.
+display
+
+# Print all values.
+print all
+
+# Plot v for node 1.
+plot v(1)
+
+# Print v for node 1.
+print v(1)
+
+# Print current.
+print v#branch
+
+# Print or plot voltage differrence of two nodes.
+print v(1,2)
+plot v(1,2)
+print v(2) - v(1)
+plot v(2) - v(1)
+
+# Dc analysis.
+# dc <source> <v start> <v stop> <steps>
+dc 0 9 .5
+print v(1) 
+print i(v1)
+
+# Batch mode.
+ngspice -t file.cir

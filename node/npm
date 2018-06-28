@@ -59,27 +59,22 @@ npm start
 npm run-script script_name
 	run script 
 
-# update packages and update package.js
-npm update --save
+# List outdated packages, -g for global.
+$ npm outdated
 
-# update all global packages
-npm update -g
+# update packages and update package.js.
+$ npm update
 
-# view outdated global packages
-npm outdated -g
+# View all informations about package webpack.
+$npm v webpack
 
-# update specific global package
-npm update -g <package>
+# View last version.
+$ npm v webpack version
 
-# list global modules installed
-npm -g ls
+# View all packages versions.
+$ npm v webpack versions --json
 
-# view current package version installed
-npm v webpack version
-alias: view, info, show
+# List installed packages.
+$ npm ls --depth=0
+$ npm ls package_name --depth=0
 
-# view all packages versions
-npm v webpack versions --json
-
-# view all informations
-npm v webpack

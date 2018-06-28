@@ -6,6 +6,6 @@ stylus
 express-generator
 json-server
 http-server
-npm-check-updates
+npm-check
 js-beautify
 svg-sprite
