@@ -9,3 +9,4 @@ http-server
 npm-check
 js-beautify
 svg-sprite
+pm2

@@ -1,0 +1,44 @@
+# Install.
+$ npm i pm2 -g
+
+# Generate a template for ecosystem file.
+$ pm2 init
+
+# Start using ecosystem file from current directory.
+$ pm2 start
+
+# Start using a especific ecosystem file.
+$ pm2 start ./ecosystem.config.js
+
+# Use your ecosystem file only on a specific application <app_name>.
+$ pm2 start --only app
+
+# start and add a process to your list.
+pm2 start app.js
+
+# show your list.
+pm2 ls
+
+# stop and delete a process from the list.
+$ pm2 delete app
+
+# kill the process but keep it in the process list.
+$ pm2 stop app
+
+# start the process again.
+$ pm2 start app
+
+# both stop and start.
+$ pm2 restart app
+
+# The local monitoring tool get you insight about CPU usage, memory usage, loop delay or request/min for each process.
+$ pm2 monit
+
+# all apps logs.
+$ pm2 logs
+
+# only app logs.
+$ pm2 logs app
+
+# You can empty all application logs with.
+$ mp2 flush

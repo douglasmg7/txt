@@ -1,0 +1,5 @@
+# Copy several files.
+$ ls | grep 'Example [1-5][a-z]' > a.txt
+$ for i in $(cat a.txt)
+$ cp $i ~/mnt/Music/beginner_lead_guitar_method
+
