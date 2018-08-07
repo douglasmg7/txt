@@ -809,3 +809,9 @@ $ echo $y
 tmpfs 
 # Is a temporary filesystem that resides in memory and/or your swap partition(s), depending on how much you fill it up.
 # Mounting directories as tmpfs can be an effective way of speeding up accesses to their files, or to ensure that their contents are automatically cleared upon reboot. 
+
+# Execute multiple commands (concat commands).
+# A; B    # Run A and then B, regardless of success of A
+# A && B  # Run B if and only if A succeeded
+# A || B  # Run B if and only if A failed
+# A &     # Run A in background.

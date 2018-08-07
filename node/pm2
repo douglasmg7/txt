@@ -14,10 +14,11 @@ $ pm2 start ./ecosystem.config.js
 $ pm2 start --only app
 
 # start and add a process to your list.
-pm2 start app.js
+$ pm2 start app.js
 
 # show your list.
-pm2 ls
+$ pm2 ls
+$ pm2 list
 
 # stop and delete a process from the list.
 $ pm2 delete app
@@ -42,3 +43,15 @@ $ pm2 logs app
 
 # You can empty all application logs with.
 $ mp2 flush
+
+# Create a configuration into systemd to startup pm2.
+$ pm2 startup
+
+# Save your process list with.
+$ pm2 save
+
+# Clean your process list (delete will not remove from start list).
+$ pm2 cleardump
+
+# Disable startup system.
+$ pm2 unstartup
