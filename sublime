@@ -9,6 +9,7 @@ install
 	npm install -g csslint
 	SublimeLinter-csslint
 	Clickable URLs
+  GoSublime
 
 Control Package Remove
 remove installed packages
