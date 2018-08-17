@@ -1,0 +1,6 @@
+# Generating a GPG key.
+$ gpg --full-generate-key
+  # Press Enter to select RSA and RSA.
+  # We recommend the maximum key size of 4096.
+  # Press Enter to specify the default selection, indicating that the key doesn't expire.
+
