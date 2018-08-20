@@ -1,0 +1,58 @@
+# Create a new branch using the current working directory as its base.
+$ git branch <branch_name>
+
+# List all branches.
+$ git branch
+  -a include remote tracking branches in red
+
+# List remote branchs, need use 'git fetch' first.
+$ git branch -r
+
+# List all branchs.
+$ git remote show origin
+
+
+# Make the working directory and the HEAD match the specified branch.
+$ git checkout <branch_name>
+
+# Create a new branch and checkout.
+$ git checkout -b <branch_name>
+
+# create remote branch.
+$ git checkout -b <branch_name>
+$ git push origin <branch_name>
+
+# Delete a branch.
+$ git branch -d <branch_name>
+
+# Delete a branch with warnings.
+$ git branch -D <branch_name>
+
+# Delete remote branch.
+$ git push origin :<branch_name>
+$ git push origin --delete <branch_name>
+
+# Clean up deleted remote branches.
+$ git remote prune origin
+
+# Merge a branch into the checked-out branch.
+$ git merge <branch_name>
+  --no-ff no fast-forward merge (will be recursive merge)
+
+# create a branch and push.
+$ git checkout -b <new_branch>
+$ git commit
+$ git push -u origin <new_branch>
+
+# Reviewing a pull request.
+$ git fetch
+$ git branch -a
+$ git checkout <branch_name>
+
+# Merge into master.
+$ git checkout master
+$ git merge <branch_name>
+$ git push
+$ git branch -d <branch_name>
+$ git branch origin --delete <branch_name>
+

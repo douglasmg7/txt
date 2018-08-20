@@ -117,47 +117,6 @@ git stash:
 Sometimes when you go to pull you may have changes you don't want to commit just yet. One option you have, other than commiting, is to stash the changes.
 Use the command 'git stash' to stash your changes, and 'git stash apply' to re-apply your changes after your pull.
 
-git branch <branch-name>
-create a new branch using the current working directory as its base
-
-git branch
-list all branches
-	-a include remote tracking branches in red
-
-git checkout <branch-name>
-make the working directory and the HEAD match the specified branch
-
-git checkout -b new_feature
-create a new branch and checkout
-
-git merge <branch-name>
-	--no-ff no fast-forward merge (will be recursive merge)
-	merge a branch into the checked-out branch
-
-git branch -d <branch-name>
-delete a branch
-
-git branch -D <branch-name>
-delete a branch with warnings
-
-create remote branch
-git checkout -b shopping_cart
-git push origin shopping_cart
-
-git branch -r
-list remote branchs
-need use 'git fetch' first
-
-git remote show origin
-list all branchs
-
-delete remote branch
-	git push origin :<branch_name>
-	git push origin --delete <branch_name>
-
-git remote prune origin
-to clean up deleted remote branches
-
 git push heroku-staging staging:master
 will push and deploy staging on heroku
 
@@ -560,16 +519,6 @@ git fetch upstream
 git merge upstream/master master
 ## push them to your fork (remote)
 git push origin master
-
-# create a branch and push
-git checkout -b new_feature
-git commit
-git push -u master new_feature
-
-# reviewing a pull request
-git fetch
-git branch -a
-git checkout <branch_name>
 
 # fast forward
 	* less commits
