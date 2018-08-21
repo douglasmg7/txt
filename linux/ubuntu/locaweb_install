@@ -1,0 +1,41 @@
+# Alredy installed.
+# htop tmux
+
+### Usefull commands ####################################################
+
+# To show package information.
+$ apt-cache show <package>
+
+# To log as root.
+$ su
+
+
+### System configuration #################################################
+
+# Log as root.
+$ ssh root@vps10092.publiccloud.com.br
+
+# Create a user.
+$ useradd -m -g users -s /bin/bash douglasmg7
+
+# Change password.
+$ passwd douglasmg7
+
+# Add to sudo group.
+$ usermod -aG sudo douglasmg7
+
+# Test sudo command (logout and login again, to update user group).
+$ exit
+$ ssh douglasmg7@vps10092.publiccloud.com.br
+$ sudo whoami
+# Shoud print "root".
+
+# Refresh apt-get's cache of package information using the repository.
+$ sudo apt-get update
+
+# Upgrade installed softwares.
+$ sudo apt-get upgrade
+
+# Install node and npm.
+$ sudo apt-get install nodejs npm
+

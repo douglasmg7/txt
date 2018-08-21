@@ -4,14 +4,14 @@
   Include = /etc/pacman.d/mirrorlist
 
 # Create a new user.
-$ useradd -m -g users -G wheel,storage,power -s /bin/bash username     
+$ useradd -m -g users -G wheel,storage,power -s /bin/bash <username>     
   -m create home directory
   -g defines the group name
   -G list of supplementary groups which the user is also member
   -s default login shell
 
 # Password.
-$ passwd username
+$ passwd <username>
 
 # Permit user to use sudo command, change the file:
 $ visudo
