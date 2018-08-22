@@ -1,5 +1,8 @@
 # xclip - command line interface to X selections (clipboard).
 
+# install
+$ sudo apt-get xclip
+
 $ uptime | xclip
 # Copy your uptime into the selection for pasting.
 # Use middle button to paste.

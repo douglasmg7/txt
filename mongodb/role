@@ -1,0 +1,4 @@
+# get roles
+$ db.getRoles()
+
+

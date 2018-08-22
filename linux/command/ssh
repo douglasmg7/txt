@@ -1,21 +1,24 @@
-ssh host
 # Host in this example is the IP address or domain name that you are trying to connect to assumes that your username on the remote system is the same as your username on your local system.
+ssh host
 
-ssh user@host
 # Connect using a diferent user.
+ssh user@host
 
-ssh user@host -p 3022
 # Choose a port to connect.
+ssh user@host -p 3022
 
-exit
 # Exit to you local session.
+exit
 
+# Change sshd port.
 /etc/ssh/sshd_config
   Port 22
 systemctl stop sshd
 systemctl start sshd
-# Change sshd port.
 
-scp -r -P 3022 192.168.1.100:~/code/zunka/dist/img .
+# copy a file from remote server
+scp douglasmg7@vps10092.publiccloud.com.br:/home/douglasmg7/zunka/a a
+
 # Copy a dir from remote server to local using scp tool.
+scp -r -P 3022 192.168.1.100:~/code/zunka/dist/img .
 

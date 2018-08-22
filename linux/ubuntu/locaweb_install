@@ -58,18 +58,50 @@ $ sudo systemctl daemon-reload
 $ sudo service mongodb restart
 # log into db
 $ mongo -u admin --authenticationDatabase admin -p
+# create user with backup privileges
+> db.createUser({user: "backup", pwd: "password", roles: [{role: "backup", db: "admin"}]})
+# create user with restore privileges
+> db.createUser({user: "restore", pwd: "password", roles: [{role: "restore", db: "admin"}]})
 # create user app
 > db.createUser({user: "zunka", pwd: "password", roles: [{role: "readWrite", db: "zunka"}]})
 # create user with dbOwner privileges
 # this role combines the privileges granted by the readWrite, dbAdmin and userAdmin roles
 > db.createUser({user: "douglasmg7", pwd: "password", roles: [{role: "dbOwner", db: "zunka"}]})
-# create user with backup privileges
-# not working > db.createUser({user: "backup", pwd: "password", roles: [{role: "backup", db: "zunka"}]})
-# create user with restore privileges
-# not working > db.createUser({user: "restore", pwd: "password", roles: [{role: "restore", db: "zunka"}]})
 > exit
 # Test user
 $ mongo -u zunka -p
 > use zunka
 > exit
 
+# install git-secret
+$ sudo apt-get install git-secret
+
+# create gpg key
+# checking for existing GPG keys
+$ gpg --list-secret-keys --keyid-format LONG
+
+# Generating a GPG key.
+$ gpg --full-generate-key
+  # Press Enter to select RSA and RSA.
+  # We recommend the maximum key size of 4096.
+  # Press Enter to specify the default selection, indicating that the key doesn't expire.
+ 
+# list the key
+$ gpg --list-secret-keys --keyid-format LONG
+# copy gpg key "<key>" rsa4096/<key> 2018-08-22 [SC]
+# sec   rsa4096/DC40E6E3292EAE53 2018-08-22 [SC]
+# key will be DC40E6E3292EAE53
+
+# Prints the GPG key ID, in ASCII armor format
+$ gpg --armor --export 3DC40E6E3292EAE5 > public_key.txt
+
+# copy your GPG key, beginning with -----BEGIN PGP PUBLIC KEY BLOCK----- and ending with -----END PGP PUBLIC KEY BLOCK-----
+# copy key to a system with x server to copy/paste on github
+$ scp douglasmg7@server_url:/home/douglasmg7/zunka/a a
+# Add the GPG key to your GitHub account
+
+# get app
+$ cd ~
+$ git clone https://github.com/douglasmg7/zunka
+$ cd zunka
+$ npm install

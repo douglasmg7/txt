@@ -1,0 +1,7 @@
+# create a user
+> db.createUser({user:"admin", pwd:"password", roles:[{role:"root", db:"admin"}]})
+
+# change password
+> use products
+> db.changeUserPassword("accountUser", "SOh3TbYhx8ypJPxmt1oOfL")
+
