@@ -1,5 +1,5 @@
 # Alredy installed.
-# htop tmux
+# htop tmux git
 
 ### Usefull commands ####################################################
 
@@ -36,6 +36,40 @@ $ sudo apt-get update
 # Upgrade installed softwares.
 $ sudo apt-get upgrade
 
-# Install node and npm.
-$ sudo apt-get install nodejs npm
+# Install node and npm using n node manage.
+$ curl -L https://git.io/n-install | bash
+
+# install mongodb (mongodb-tools included)
+$ sudo apt-get install mongodb
+# check that MongoDB has been started on port 27017
+$ netstat -plntu
+
+# configure mongodb user 
+$ mongo
+> use admin
+# create admin user
+> db.createUser({user:"admin", pwd:"password", roles:[{role:"root", db:"admin"}]})    
+> exit
+# edit "ExecStart" line from "/lib/systemd/system/mongod.service" add "--auth" option
+# example: "ExecStart=/usr/bin/mongod --auth --config /etc/mongod.conf"
+# reload systemd service
+$ sudo systemctl daemon-reload
+# restart mongodb
+$ sudo service mongodb restart
+# log into db
+$ mongo -u admin --authenticationDatabase admin -p
+# create user app
+> db.createUser({user: "zunka", pwd: "password", roles: [{role: "readWrite", db: "zunka"}]})
+# create user with dbOwner privileges
+# this role combines the privileges granted by the readWrite, dbAdmin and userAdmin roles
+> db.createUser({user: "douglasmg7", pwd: "password", roles: [{role: "dbOwner", db: "zunka"}]})
+# create user with backup privileges
+# not working > db.createUser({user: "backup", pwd: "password", roles: [{role: "backup", db: "zunka"}]})
+# create user with restore privileges
+# not working > db.createUser({user: "restore", pwd: "password", roles: [{role: "restore", db: "zunka"}]})
+> exit
+# Test user
+$ mongo -u zunka -p
+> use zunka
+> exit
 
