@@ -1,6 +1,9 @@
 # create a user
 > db.createUser({user:"admin", pwd:"password", roles:[{role:"root", db:"admin"}]})
 
+# Remove a user.
+> db.dropUser("user_name")
+
 # change password
 > use products
 > db.changeUserPassword("accountUser", "SOh3TbYhx8ypJPxmt1oOfL")

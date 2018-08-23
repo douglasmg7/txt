@@ -63,15 +63,20 @@ $ mongo -u admin --authenticationDatabase admin -p
 # create user with restore privileges
 > db.createUser({user: "restore", pwd: "password", roles: [{role: "restore", db: "admin"}]})
 # create user app
-> db.createUser({user: "zunka", pwd: "password", roles: [{role: "readWrite", db: "zunka"}]})
+> use zunka
+> db.createUser({user: "app", pwd: "password", roles: [{role: "readWrite", db: "zunka"}]})
 # create user with dbOwner privileges
 # this role combines the privileges granted by the readWrite, dbAdmin and userAdmin roles
+> use zunka
 > db.createUser({user: "douglasmg7", pwd: "password", roles: [{role: "dbOwner", db: "zunka"}]})
 > exit
 # Test user
 $ mongo -u zunka -p
 > use zunka
 > exit
+
+# Install redis.
+$ sudo apt-get install redis
 
 # install git-secret
 $ sudo apt-get install git-secret
@@ -105,3 +110,6 @@ $ cd ~
 $ git clone https://github.com/douglasmg7/zunka
 $ cd zunka
 $ npm install
+
+# Install pm2.
+$ npm install pm2 -g

@@ -112,9 +112,14 @@ $ udevadm trigger
 curl -L https://git.io/n-install | bash
 
 # Mongodb.
-pacman -S mongodb mongodb-tools
-systemctl enable mongodb
-systemctl start mongodb
+$ pacman -S mongodb mongodb-tools
+$ systemctl enable mongodb
+$ systemctl start mongodb
+
+# Install redis on archlinux (6379 - default port).
+$ pacman -S redis
+$ systemctl enable redis
+$ systemctl start redis
 
 # youtube download.
 pacman -S youtube-dl
