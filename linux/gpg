@@ -20,3 +20,32 @@ $ gpg --armor --export 3DC40E6E3292EAE5 > public_key.txt
 # copy key to a system with x server to copy/paste on github
 $ scp douglasmg7@server_url:/home/douglasmg7/zunka/a a
 # Add the GPG key to your GitHub account
+
+
+
+
+# Encrypting a file (using the key that was generated with user user@email.com).
+# Will create a crypted file with extension gpg.
+$ gpg -e -r <user@email.com> <file>
+
+# Decryping a file.
+$ gpg <file.gpg>
+
+# List public keys.
+$ gpg -k
+
+# List secret keys.
+$ gpg -K
+
+# Delete a public key.
+$ gpg --delete-keys <uid>
+
+# Delete a private key.
+$ gpg --delete-secret-keys <uid>
+
+# Export a public key.
+$ gpg --export <uid>
+$ gpg --export -a -o <file> <uid>   # -a ascii format, -o output  file.
+
+# Import a key from a file.
+$ gpg --import <file>

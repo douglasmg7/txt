@@ -17,7 +17,10 @@ systemctl stop sshd
 systemctl start sshd
 
 # copy a file from remote server
-scp douglasmg7@vps10092.publiccloud.com.br:/home/douglasmg7/zunka/a a
+scp douglasmg7@vps10092.publiccloud.com.br:/home/douglasmg7/zunka/file_name file_name
+
+# copy a file from remote server
+scp douglasmg7@vps10092.publiccloud.com.br:/home/douglasmg7/zunka/file_name file_name
 
 # Copy a dir from remote server to local using scp tool.
 scp -r -P 3022 192.168.1.100:~/code/zunka/dist/img .
