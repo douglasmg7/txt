@@ -54,3 +54,12 @@ $ sudo systemctl enable nginx
 # Any Nginx errors will be recorded in this log.
 "/var/log/nginx/error.log" 
 
+# Change the entire directory where nginx will server files.
+$ chmod -R 755 <dir>
+
+# Change permission for files.
+$ chmod 644 <file>
+
+# Identify nginx user.
+$ ps -ef | grep nginx
+

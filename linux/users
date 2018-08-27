@@ -28,8 +28,6 @@ chmod u+x _filename
 
 chown owner.group _filename_    # change owner and group for file_name
 
-chgrp group _filename_    # change file group
-
 useradd -D    # show system default
 
 useradd -m _username_   # create a user
@@ -43,14 +41,6 @@ passwd username   # set password
 
 userdel -r username    # remove a user
 	-r remove /home/username
-
-groupadd groupname    # create a new group
-groupmod -g 1025 groupname    # change GID
-groupmod -n new-name old-name   # change group name
-
-groupdel groupname    # remove a group
-
-group password allows a non-group member to temporarily become a member
 
 usermod -g groupname username   # replace the default group for the user account
 usermod -G groupname username   # add user to more one group

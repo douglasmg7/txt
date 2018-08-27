@@ -1,0 +1,40 @@
+# Print group memberships for each user_name or, if no user_name is specified, for the current process.
+$ groups <user_name>
+
+# Change the file group.
+$ chgrp <group_name> <file_name>
+
+# Create a group.
+$ sudo groupadd <group_name>
+
+# Change the primary group of a user.
+$ sudo usermod -g <group> <user>
+
+# Change group GID.
+$ sudo groupmod -g <new_gid> <group_name>
+
+# Change group name.
+$ sudo groupmod -n <new_name> <old_name>
+
+# Remove a group.
+$ sudo groupdel <group_name>
+
+# Add user to a group.
+$ sudo usermod -G <group> <user>
+$ sudo usermod -G <group_a>, <group_b>, <group_c> <user>
+$ sudo adduser <user> <group>
+# Use option -a, to not remove from groups not in the list.
+$ sudo usermod -aG <group_a>, <group_b>, <group_c> <user>
+
+# Get User ID and Groups Information.
+$ id <user>
+
+# Change owner file.
+$ sudo chown <user> <file>
+
+# Change group file.
+$ sudo chgrp <group> <file>
+
+
+
+
