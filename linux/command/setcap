@@ -1,0 +1,11 @@
+# Setcap - set file capabilities.
+
+# Install.
+$ sudo apt-get install libcap2-bin
+
+# Bind a socket to Internet domain privileged ports (port numbers less than 1024).
+$ sudo setcap cap_net_bind_service=+ep /usr/local/bin/node
+# An action-list consists of a sequence of operator flag pairs.
+# Legal  operators are: `=', '+', and `-'.  Legal flags are: `e', `i', and `p'.
+# These flags are case-sensitive and specify the Effective, Inheritable and Permitted sets respectively.
+# Note <filename> must be a regular (non-symlink) file.

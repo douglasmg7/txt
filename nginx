@@ -1,0 +1,32 @@
+# nginx (pronounced "engine X"), is a free, open-source, high-performance HTTP server and reverse proxy, as well as an IMAP/POP3 proxy server, written by Igor Sysoev in 2005. nginx is well known for its stability, rich feature set, simple configuration, and low resource consumption.
+
+# Install.
+$ sudo pacman -S nginx
+
+# Check if service is running.
+$ systemctl status nginx
+
+# If not running.
+$ systemctl start nginx
+
+# Confirm if nginx is running.
+http://127.0.0.1/
+
+# To stop your web server.
+$ sudo systemctl stop nginx
+
+# To start the web server when it is stopped.
+$ sudo systemctl start nginx
+
+# To stop and then start the service again.
+$ sudo systemctl restart nginx
+
+# If you are simply making configuration changes, Nginx can often reload without dropping connections.
+$ sudo systemctl reload nginx
+
+# By default, Nginx is configured to start automatically when the server boots. If this is not what you want, you can disable this behavior.
+$ sudo systemctl disable nginx
+
+# To re-enable the service to start up at boot.
+$ sudo systemctl enable nginx
+
