@@ -815,3 +815,8 @@ tmpfs
 # A && B  # Run B if and only if A succeeded
 # A || B  # Run B if and only if A failed
 # A &     # Run A in background.
+
+# Start Vim as my user with root privileges.
+sudoedit <file>
+# EDITOR env must be vim.
+export EDITOR=vim
