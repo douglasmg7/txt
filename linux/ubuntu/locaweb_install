@@ -124,5 +124,12 @@ $ npm install pm2 -g
 $ npm run insertMakers
 $ npm run insertCategories
 
+# Install nginx.
+$ sudo apt-get install nginx
+# Point to config file.
+$ cd /etc/nginx
+$ sudo cp nginx.conf nginx.conf.old
+$ sudo ln -s /home/douglasmg7/zunka/nginx.conf nginx.cong
+
 # Start server.
 $ npm start
