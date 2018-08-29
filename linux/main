@@ -820,3 +820,8 @@ tmpfs
 sudoedit <file>
 # EDITOR env must be vim.
 export EDITOR=vim
+
+# slash "/" at end of file name, file is a directory.
+# Asterisk "*" at end of file, file is executable.
+# Vertical bar "|" at end of file, file is a FIFO.
+# sign "@" at end of file, file is a symbolic link.
