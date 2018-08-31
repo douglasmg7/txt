@@ -117,6 +117,9 @@ $ git clone https://github.com/douglasmg7/zunka
 $ cd zunka
 $ npm install
 
+# Install stylus.
+$ npm install stylus -g
+
 # Install pm2.
 $ npm install pm2 -g
 
@@ -130,6 +133,7 @@ $ sudo apt-get install nginx
 $ cd /etc/nginx
 $ sudo cp nginx.conf nginx.conf.old
 $ sudo ln -s /home/douglasmg7/zunka/nginx.conf nginx.cong
+
 
 # Start server.
 $ npm start

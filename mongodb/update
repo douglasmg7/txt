@@ -1,0 +1,2 @@
+# Update array.
+> db.users.updateOne({email: "douglasmg7@gmail.com"}, {$set: {group: ["admin"]}})
