@@ -49,3 +49,17 @@ $ gpg --export -a -o <file> <uid>   # -a ascii format, -o output  file.
 
 # Import a key from a file.
 $ gpg --import <file>
+
+
+# Backup gpg keys.
+# Export public and secret key and ownertrust
+$ gpg -a --export chris@seagul.co.uk > chrisroos-public-gpg.key
+$ gpg -a --export-secret-keys chris@seagul.co.uk > chrisroos-secret-gpg.key
+$ gpg --export-ownertrust > chrisroos-ownertrust-gpg.txt
+
+# Import secret key (which contains the public key) and ownertrust
+$ gpg --import chrisroos-secret-gpg.key
+$ gpg --import-ownertrust chrisroos-ownertrust-gpg.txt
+
+# Backup all 
+

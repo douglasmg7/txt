@@ -1,0 +1,2 @@
+# User admin.
+> mongo -u admin --authenticationDatabase admin -p

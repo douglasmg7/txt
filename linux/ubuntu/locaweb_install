@@ -135,5 +135,8 @@ $ sudo cp nginx.conf nginx.conf.old
 $ sudo ln -s /home/douglasmg7/zunka/nginx.conf nginx.cong
 
 
+# Compile style files to css.
+$ npm run build
+
 # Start server.
 $ npm start

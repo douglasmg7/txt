@@ -1,0 +1,11 @@
+# Backup cert (on server).
+$ cd /etc
+$ sudo tar -pcvzf letsencrypt.tar.gz letsencrypt/
+
+# Copy file from server. 
+$ scp douglasmg7@vps10092.publiccloud.com.br:/etc/letsencrypt.tar.gz letsencrypt.tar.gz
+
+# Encryp the file.
+gpg -e -r douglasmg7@gmail.com letsencrypt.tar.gz
+
+

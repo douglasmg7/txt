@@ -1,0 +1,12 @@
+# To create a tar.gz archive from a given folder. 
+$ tar -zcvf tar-archive-name.tar.gz source-folder-name
+
+# To extract a tar.gz compressed archive.
+$ tar -zxvf tar-archive-name.tar.gz
+
+# To create a tar.gz archive from a given folder and preserve permissions.
+tar -pcvzf tar-archive-name.tar.gz source-folder-name
+
+# To extract a tar.gz compressed archive and preserver permissions.
+tar -pxvzf tar-archive-name.tar.gz 
+
