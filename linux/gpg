@@ -29,6 +29,7 @@ $ scp douglasmg7@server_url:/home/douglasmg7/zunka/a a
 $ gpg -e -r <user@email.com> <file>
 
 # Decryping a file.
+$ gpg -d <file.gpg> > <file>
 $ gpg <file.gpg>
 
 # List public keys.
