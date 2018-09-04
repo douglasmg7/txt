@@ -1,0 +1,10 @@
+# Set a variable value.
+USER="Ali BaHH"
+
+# Get a variable value.
+echo $USER
+echo User--${USER}--
+
+# Using return of a command.
+RETURN=$(ls)
+

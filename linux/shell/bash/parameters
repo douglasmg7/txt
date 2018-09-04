@@ -1,0 +1,13 @@
+# Positional parameters.
+
+# Script name.
+$0
+
+# Parameter 1.
+$1
+
+# Parameter 2.
+$2
+
+# Parameter 1 to end.
+$@

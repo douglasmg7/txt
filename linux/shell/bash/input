@@ -1,0 +1,3 @@
+# Get user input.
+read -p "Enter a user name" USER_NAME
+echo $USER_NAME

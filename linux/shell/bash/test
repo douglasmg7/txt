@@ -1,0 +1,72 @@
+# Test.
+[ -e /etc/passwd]
+
+
+##################################
+# File operators.
+#################################
+
+# True if file is a directory.
+[ -d <file> ]
+
+# True if file exists.
+[ -e <file> ]
+
+# True if file exists and is a regular file.
+[ -f <file> ]
+
+# True if file is readable by you.
+[ -r <file> ]
+
+# True if file exists and is not empty.
+[ -s <file> ]
+
+# True if file is writable by you.
+[ -w <file> ]
+
+# True if file is executable by you.
+[ -x <file> ]
+
+
+##################################
+# String operators.
+#################################
+
+# True if string is empty.
+[ -z <string> ]
+
+# True if string is not empty.
+[ -n <string> ]
+
+# True if string is not empty.
+[ <string> ]
+
+# True if strings are equal. 
+[ <string1> = <string2> ]
+
+# True if strings are not equal.
+[ <string1> != <string2> ]
+
+
+##################################
+# Arithmetic operators.
+#################################
+
+# True if arg1 is equal arg2.
+[ arg1 -eq arg2 ]
+
+# True if arg1 is not equal arg2.
+[ arg1 -ne arg2 ]
+
+# True if arg1 is less than arg2.
+[ arg1 -lt arg2 ]
+
+# True if arg1 is less than or equal than arg2.
+[ arg1 -le arg2 ]
+
+# True if arg1 is greater than arg2.
+[ arg1 -gt arg2 ]
+
+# True if arg1 is greater or equal than arg2.
+[ arg1 -ge arg2 ]
+

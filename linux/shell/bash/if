@@ -1,0 +1,31 @@
+# If.
+if [ condition-true ]
+then
+  command 1
+  command 2
+fi
+
+# If else.
+if [ condition-true ]
+then
+  command 1
+  command 2
+else
+  command 1
+  command 2
+fi
+
+# If else if.
+if [ condition-true ]
+then
+  command 1
+  command 2
+elif
+then
+  command 1
+  command 2
+else
+  command 1
+  command 2
+fi
+

@@ -1,0 +1,15 @@
+# For.
+for ITEM in ITEM1 ITEM2 ITEM3
+do
+  command1
+  command2
+done
+
+# Example.
+#!/bin/bash
+COLORS="red green blue"
+for COLOR in $COLORS
+do
+  echo "color: $COLOR"
+done
+
