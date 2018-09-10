@@ -8,4 +8,5 @@ $ scp douglasmg7@vps10092.publiccloud.com.br:/etc/letsencrypt.tar.gz letsencrypt
 # Encryp the file.
 gpg -e -r douglasmg7@gmail.com letsencrypt.tar.gz
 
-
+# Extract .gz files.
+gaip -d <file.gz>

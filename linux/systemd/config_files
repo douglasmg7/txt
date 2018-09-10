@@ -2,22 +2,22 @@
 
 # Config files:
   /lib/systemd/syste/
-  # This will be the generic, vanilla unit file, often written by the upstream project's maintainers that should work on any system that deploys systemd in its standard implementation.
-  # You should not edit files in this directory.
-  # Instead you should override the file, if necessary, using another unit file location which will supersede the file in this location. 
+    # This will be the generic, vanilla unit file, often written by the upstream project's maintainers that should work on any system that deploys systemd in its standard implementation.
+    # You should not edit files in this directory.
+    # Instead you should override the file, if necessary, using another unit file location which will supersede the file in this location. 
   
   /usr/lib/systemd/system/
-  # Where pacman puts package scripts.
-  
+    # Where pacman puts package scripts.
+    
   /etc/systemd/system/
-  # If you wish to modify the way that a unit functions, the best location to do.
-  # Unit files found in this directory location take precedence over any of the other locations on the filesystem.
+    # If you wish to modify the way that a unit functions, the best location to do.
+    # Unit files found in this directory location take precedence over any of the other locations on the filesystem.
   
   /run/systemd/system
-  # Location for run-time unit definitions.
-  # Unit files found in this directory have a priority landing between those in /etc/systemd/system and /lib/systemd/system.
-  # This directory can be used to change the system's unit behavior for the duration of the session.
-  # All changes made in this directory will be lost when the server is rebooted.
+    # Location for run-time unit definitions.
+    # Unit files found in this directory have a priority landing between those in /etc/systemd/system and /lib/systemd/system.
+    # This directory can be used to change the system's unit behavior for the duration of the session.
+    # All changes made in this directory will be lost when the server is rebooted.
 
 $ systemctl start unit
 # Start a unit immediately.
