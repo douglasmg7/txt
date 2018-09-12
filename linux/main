@@ -466,14 +466,6 @@ ctr+r
 return
 	# execute the comand
 
-du -shc *
-size content directory
--s --summarize
--h --human-readable
--c --total
--a --all
---max-depth=1
-
 df
 disk free - reports the amount of space used and available on currently
 mounted filesystem
