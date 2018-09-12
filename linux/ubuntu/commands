@@ -6,7 +6,12 @@ $ sudo tar -pcvzf letsencrypt.tar.gz letsencrypt/
 $ scp douglasmg7@vps10092.publiccloud.com.br:/etc/letsencrypt.tar.gz letsencrypt.tar.gz
 
 # Encryp the file.
-gpg -e -r douglasmg7@gmail.com letsencrypt.tar.gz
+$ gpg -e -r douglasmg7@gmail.com letsencrypt.tar.gz
 
 # Extract .gz files.
-gaip -d <file.gz>
+$ gaip -d <file.gz>
+
+# See service log.
+$ sudo journalctl -u certbot.service
+# Just from current boot.
+$ sudo journalctl -b -u certbot.service

@@ -1,13 +1,17 @@
 # systemctl - Control the systemd system and service manager
 
 # Config files:
-  /lib/systemd/syste/
+  /lib/systemd/system/
     # This will be the generic, vanilla unit file, often written by the upstream project's maintainers that should work on any system that deploys systemd in its standard implementation.
     # You should not edit files in this directory.
     # Instead you should override the file, if necessary, using another unit file location which will supersede the file in this location. 
   
   /usr/lib/systemd/system/
     # Where pacman puts package scripts.
+
+  /usr/lib/systemd/system/
+  /usr/lib/systemd/system/user
+    # Where i am puting my services. 
     
   /etc/systemd/system/
     # If you wish to modify the way that a unit functions, the best location to do.

@@ -1,3 +1,14 @@
+# Test renew certification.
+$ certbot-auto renew --dry-run
+
+# Renew certification.
+$ certbot-auto renew
+
+# Certbot.
+# You should test your configuration at:
+# https://www.ssllabs.com/ssltest/analyze.html?d=www.zunka.com.br
+
+# Message after sucessful certification.
 - Congratulations! Your certificate and chain have been saved at:
   /etc/letsencrypt/live/www.zunka.com.br/fullchain.pem
   Your key file has been saved at:
@@ -15,3 +26,4 @@
 
   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
   Donating to EFF:                    https://eff.org/donate-le
+
