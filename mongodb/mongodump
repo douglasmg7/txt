@@ -1,0 +1,12 @@
+# Export all db.
+$mongodump --db zunka -u admin --authenticationDatabase admin --out ~/dump/$(date +"%Y-%h-%d@%T")
+
+# mongodump a Collection.
+$ mongodump  --db test --collection collection
+
+# mongodump a Database Excluding Specified Collections.
+$ mongodump  --db test --excludeCollection=users --excludeCollection=salaries
+
+# mongodump with Access Control.
+$ mongodump --host mongodb1.example.net --port 37017 --username user --password "pass" --out /opt/backup/mongodump-2011-10-2
+

@@ -1,0 +1,15 @@
+# Disk usage.
+
+# To list disk usage per directores and sort by reverse.
+$ du -sh /home/douglasmg7/* | sort -hr
+
+# Disk usage options.
+$ du -shc *
+# Size content directory
+# -s --summarize
+# -h --human-readable
+# -c --total
+# -a --all
+# --max-depth=1
+
+

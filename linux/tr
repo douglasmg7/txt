@@ -1,0 +1,4 @@
+# tr - translate or delete characters.
+
+# Replace space from a date.
+$ date | tr ' ' _
