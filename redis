@@ -14,6 +14,23 @@ $ redis-cli
 $ npm install redis --save
 # Install redis to use with node.
 
+# Authentication.
+> auth <password>
+
+# Show data location.
+> config get dir
+
+# Backup db.
+# To get a much more recent copy of the Redis data, a better route is to access redis-cli.
+> save
+$ cp /var/lib/redis/dump.rdb ~/temp
+
+# Restore db.
+$ sudo service redis-server stop
+$ sudo service redis-server status
+$ sudo mv /var/lib/redis/dump.rdb /var/lib/redis/dump.rdb.old
+
+
 $ set asdf 'ret'
 # Set a value.
 

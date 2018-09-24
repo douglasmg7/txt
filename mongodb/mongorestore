@@ -1,0 +1,4 @@
+# Restore mongo data from a export mongo data.
+
+# Restore a gz archive file.
+$ mongorestore -u admin --authenticationDatabase admin --nsInclude zunka.products --nsFrom 'zunka.*' --nsTo 'zunkaRecovery.*' --gzip --archive=./dump/2018-Sep-14@08:21:22.gz

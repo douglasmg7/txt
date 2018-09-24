@@ -1,0 +1,3 @@
+# Insert from differentt dbs.
+$ let db2  = db.getSiblingDB('zunka');
+$ db.products.find({storeProductId: '155570A20'}).forEach(function (doc) {db2.products.insert(doc);})
