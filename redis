@@ -29,7 +29,10 @@ $ cp /var/lib/redis/dump.rdb ~/temp
 $ sudo service redis-server stop
 $ sudo service redis-server status
 $ sudo mv /var/lib/redis/dump.rdb /var/lib/redis/dump.rdb.old
-
+$ sudo cp -p /home/temp/dump.rdb /var/lib/redis
+$ sudo chown redis:redis /var/lib/redis/dump.rdb
+$ sudo chmod 660 /var/lib/redis/dump.rdb
+$ sudo service redis-server start
 
 $ set asdf 'ret'
 # Set a value.
