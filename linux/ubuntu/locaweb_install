@@ -139,9 +139,9 @@ $ sudo ln -s /home/douglasmg7/zunka/nginx.conf nginx.cong
 $ wget https://dl.eff.org/certbot-auto
 $ chmod a+x certbot-auto
 # To not change nginx config (nginx backup alredy change, so use this).
-$ sudo ./path/to/certbot-auto --nginx certonly
+$ sudo ./path/to/certbot-auto --nginx certonly -d www.zunka.com.br -d zunka.com.br
 # Or to change nginx config (Just if not have nginx config backup).
-$ sudo ./path/to/certbot-auto --nginx   
+$ sudo ./path/to/certbot-auto --nginx -d www.zunka.com.br -d zunka.com.br  
 # Test renew, do nothing if option --dry-run.
 $ sudo ./path/to/certbot-auto renew --dry-run
 # Run script to install service to automatically run renew twice a day.
