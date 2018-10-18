@@ -11,3 +11,15 @@ a = input("Entry a value: ")
 # Multiplication operator.
 # asdf asdf asdf 
 print('asdf '*3)
+
+# Get the type.
+type(object)
+
+# Pretty print.
+import pprint
+pprint.pprint(some_complex_dictionary)
+
+# Tell if the value evaluetes to true or false.
+bool(0)
+bool('')
+bool([])

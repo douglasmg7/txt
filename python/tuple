@@ -1,0 +1,6 @@
+# Create a tuple.
+t = (3, 4, 6)
+t = (3,)
+
+# Creatte a tuple from a string.
+t = tuple('asdf')

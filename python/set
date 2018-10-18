@@ -4,5 +4,13 @@ letters = { 'a', 'b', 'c'}
 # Create a set from a string.
 vowels = set('aeiou')
 
+# Combining sets.
+u = vowels.union('asdf')
+
+# Difference between sets.
+d = vowels.difference('af')
+
+# Intersection.
+i = vowels.intersection('as')
 
 

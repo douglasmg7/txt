@@ -23,3 +23,23 @@
 # set
   unordered
   set of unique objects
+
+# docstring, used on function documentation.
+""" Function do some thing """
+
+# PEP 8- and PEP 257-
+""" for docstring """
+'for string'
+function_name
+
+# Suite is the name for block in python.
+
+# Function.
+def do_some_thing(word):
+  """ Some documentation """
+  for ch in word:
+    print(ch)
+  return 'fim'
+  
+
+
