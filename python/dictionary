@@ -1,0 +1,27 @@
+#bOB Create a dictionary.
+dic = { 'a': 1, 'b': 2 }
+
+# Access a dic value.
+dic['a']
+
+# Insert a key/value.
+dic['c'] = 3
+
+# Interating.
+for k in dic:
+  print(k)
+  print(dic[j])
+
+# Sorting and interating.
+for k in sorted(dic):
+  print(k)
+  print(dic[j])
+
+
+# Sorting and interating with key and value.
+for k, v in sorted(dic.items()):
+  print(k)
+  print(v)
+
+# Intialize a asdf key with 3, only if not exist yet.
+dic.setdefault('asdf', 3)

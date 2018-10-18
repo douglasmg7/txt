@@ -1,0 +1,25 @@
+# Everything in python is a object.
+
+# For built-in data structures.
+  list
+  tuple
+  dictionary (map, hash)
+  set
+
+# list
+  ordered
+  mutable
+  collection of objects
+
+# tuple
+  ordered
+  immutable
+  collection of objects
+
+# dictionary
+  unordered
+  set of key/value pairs
+
+# set
+  unordered
+  set of unique objects

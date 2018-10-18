@@ -1,0 +1,11 @@
+# Time.
+import time
+
+# '23:55'.
+time.strftime("%H:%M")
+
+# 'Sunday PM'.
+time.strftime("%A %p")
+
+# Sleep 5 seconds.
+time.sleep(4)

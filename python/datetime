@@ -1,0 +1,11 @@
+# datetime module.
+import datetime
+
+# Current date.
+datetime.date.today()
+
+# Component parts of today's date.
+d = datetime.date.today()
+d.day
+d.month
+d.year

@@ -1,0 +1,13 @@
+# Query an object.
+dir(time)
+
+# Asking the interpreter for help.
+help(time)
+help(time.strftime)
+
+# Get a value from user.
+a = input("Entry a value: ")
+
+# Multiplication operator.
+# asdf asdf asdf 
+print('asdf '*3)

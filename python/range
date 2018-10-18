@@ -1,0 +1,8 @@
+# Create a list from 1 to 59.
+range(60)
+
+# Create a list from 0 to 59, step by 2, (start, stop ,step)
+range(0, 60, 2)
+
+# Create a list from 99 to 1.
+range(99, 0, -1)

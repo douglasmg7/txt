@@ -1,0 +1,54 @@
+# List
+  ordered 
+  mutable 
+  collection of objects
+
+# Creating a list
+a = [1, 3, 'a', "adf"]
+a = list("asdf")
+
+# Interate into list.
+for i in [1, 2, 3]:
+  print(i)
+
+# True.
+2 in [1, 2, 3]
+
+# False.
+2 not in [1, 2, 3]
+
+# List length.
+len(a)
+
+# Add element at end.
+a.append('c')
+
+# Add severeal elements.
+a.extend([1, 2, 3])
+
+# Insert at specified index.
+a.insert(1, 'asf')
+
+# Remove the first occurrence of a specified data value from a list.
+a.remove('c')
+
+# Remove and return the last value.
+a.pop()
+
+# Remove and return the value at index.
+a.pop(2)
+
+# Create a string from char or/and string list.
+a = ''.join(['l', 'lkj'])
+
+# Clone a list.
+b = a.copy()
+
+# Get second item.
+a[1]
+
+# Get the last item.
+a[-1]
+
+# List slice [start:stop:step].
+b = a[1:3:1]

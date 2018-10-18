@@ -1,0 +1,5 @@
+# Random.
+import random
+
+# Get a random int between 1 and 60 incluing 1 and 60.
+random.randint(1, 60)

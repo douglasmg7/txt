@@ -1,0 +1,8 @@
+# sys python.
+import sys
+
+# Get platform.
+sys.platform
+
+# Python version.
+sys.version

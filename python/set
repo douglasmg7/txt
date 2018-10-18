@@ -1,0 +1,8 @@
+# Creating a set.
+letters = { 'a', 'b', 'c'}
+
+# Create a set from a string.
+vowels = set('aeiou')
+
+
+

@@ -1,0 +1,7 @@
+if a = "asdf":
+  print(1)
+  print(2)
+elif a = "fdsa":
+  print(3)
+else:
+  print(4)

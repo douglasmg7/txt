@@ -1,0 +1,11 @@
+# Os.
+import os
+
+# Get current directory.
+os.getcwd()
+
+# Get all environment variables.
+os.environ
+
+# Get a specific environment variable.
+os.getenv("HOME")
