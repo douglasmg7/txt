@@ -27,13 +27,6 @@
 # docstring, used on function documentation.
 """ Function do some thing """
 
-# PEP 8- and PEP 257-
-""" for docstring """
-'for string'
-function_name
-
-# Suite is the name for block in python.
-
 # Function.
 def do_some_thing(word):
   """ Some documentation """
@@ -42,4 +35,11 @@ def do_some_thing(word):
   return 'fim'
   
 
+# Anotation.
+# Not used by compile, just for programming and help bif.
+def do_some_thing(word:str) -> str:
+  """ Some documentation """
+  for ch in word:
+    print(ch)
+  return 'fim'
 

@@ -1,0 +1,11 @@
+# Docstring.
+""" Some information about a function.
+
+# Use quote for string.
+'some string'
+
+# Use undescores to separete wordes in function name.
+function_name
+
+# Use two line between functions.
+
