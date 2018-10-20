@@ -43,3 +43,7 @@ def do_some_thing(word:str) -> str:
     print(ch)
   return 'fim'
 
+# Places where the inerpreter searches for module.
+  Your current working directory.
+  You inerpreter's site-packages locations.
+
