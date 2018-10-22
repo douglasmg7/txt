@@ -1,9 +1,13 @@
 # Query an object.
-dir(time)
+> dir(time)
 
 # Asking the interpreter for help.
-help(time)
-help(time.strftime)
+> help(time)
+> help(time.strftime)
+
+# Get installed modules.
+> help('module_name')
+$ pip3 freeze
 
 # Get a value from user.
 a = input("Entry a value: ")

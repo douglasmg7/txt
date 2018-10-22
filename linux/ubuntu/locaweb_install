@@ -68,12 +68,10 @@ $ mongo -u admin --authenticationDatabase admin -p
 > db.createUser({user: "backup", pwd: "password", roles: [{role: "backup", db: "admin"}]})
 # create user with restore privileges
 > db.createUser({user: "restore", pwd: "password", roles: [{role: "restore", db: "admin"}]})
-# create user app
-> use zunka
+# create user app, maybe need 'use admin' or 'use zunka'
 > db.createUser({user: "app", pwd: "password", roles: [{role: "readWrite", db: "zunka"}]})
-# create user with dbOwner privileges
+# create user with dbOwner privileges, maybe need 'use admin' or 'use zunka'
 # this role combines the privileges granted by the readWrite, dbAdmin and userAdmin roles
-> use zunka
 > db.createUser({user: "douglasmg7", pwd: "password", roles: [{role: "dbOwner", db: "zunka"}]})
 > exit
 # Test user
