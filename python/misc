@@ -5,10 +5,6 @@
 > help(time)
 > help(time.strftime)
 
-# Get installed modules.
-> help('module_name')
-$ pip3 freeze
-
 # Get a value from user.
 a = input("Entry a value: ")
 
