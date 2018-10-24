@@ -1,0 +1,13 @@
+# Install pip (Package insaller for python) for python 2.
+$ sudo apt install python-pip
+$ pip --version
+
+# Install pip (Package insaller for python) for python 3.
+$ sudo apt install python3-pip
+$ pip3 --version
+
+# Install a module with pip.
+$ pip install "SomeProject"
+$ pip install "SomeProject==1.4"
+
+

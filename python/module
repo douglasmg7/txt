@@ -12,3 +12,7 @@ $ pip3 freeze
 # Examine contents of imported module.
 > dir(module_name)
 
+# Places where the inerpreter searches for module.
+  Your current working directory.
+  You inerpreter's site-packages locations.
+

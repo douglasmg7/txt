@@ -1,0 +1,4 @@
+# Func params in python (call-by-reference vs call-by-value)
+  Mutable value are passed as reference (lists, dictionaries and sets).
+  Immutable vlaues are passed as value (strings, integers and tubles).
+

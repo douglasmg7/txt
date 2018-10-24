@@ -1,5 +1,11 @@
 # Everything in python is a object.
 
+# __varname__
+  dunder name
+
+# _varname_
+  wonder name
+
 # Install pip (Package insaller for python) for python 2.
 $ sudo apt install python-pip
 $ pip --version
@@ -51,7 +57,4 @@ def do_some_thing(word:str) -> str:
     print(ch)
   return 'fim'
 
-# Places where the inerpreter searches for module.
-  Your current working directory.
-  You inerpreter's site-packages locations.
 
