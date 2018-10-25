@@ -1,0 +1,16 @@
+# Viurtual environments
+
+# Install venv.
+$ sudo apt install python3-venv
+# Or.
+$ pip install virtualenv
+
+# Creating a venv.
+$ mkdir new_project && cd new_project
+$ python-3 -m venv venv
+
+# Activate the environment.
+$ source venv/bin/activate
+
+# Deactivate the environment.
+$ deactivate
