@@ -1,0 +1,11 @@
+$ cat > file.txt <<EOF
+> line 1
+> line 2
+> line 3
+> EOF
+
+$ cat > file.txt
+$ line 1
+$ line 2
+$ line 3
+$ <ctrl + d>
