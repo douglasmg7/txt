@@ -1,0 +1,11 @@
+# Install on archlinux.
+$ sudo pacman -S jdk10-openjdk
+
+# Show default jdk.
+$ archlinux-java status
+
+# Set default jdk.
+$ sudo archlinux-java set java-10-openjdk
+
+# Confirm if jdk(not only jre) is working.
+$ javac
