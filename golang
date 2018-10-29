@@ -1,0 +1,35 @@
+# Install on ubunto.
+sudo apt install golang-go
+
+# Get golang compile version.
+go version
+
+# Create GOPATH into .bashrc or/and .zshrc.
+# This is where go keep the source and bin from installed packages.
+export $HOME/code/golang
+
+# Test yout installation.
+mkdir $GOPATH/src/hello && cd $_
+# Create hello.go example.
+cat > hello.go << EOF
+package main
+
+import "fmt"
+
+fun main(){
+  fmt.Printf("Hello world!\n")
+}
+EOF
+# Build.
+go build
+# Run.
+./hello
+
+# Install Vim and Sublime plugins to format code on save.
+
+# Install package(.o) or app(bin).
+go install  # Inside package dir.
+go install package_name   # Anywere.
+
+# Install remote package.
+go get github.com/astaxie/beedb
