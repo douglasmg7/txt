@@ -1,0 +1,21 @@
+# Array.
+# Their most common purpose in Go is to hold storage for a slice. 
+# https://blog.golang.org/slices
+
+# Define a array.
+# The type of buffer includes its size, [256]byte. An array with 512 bytes would be of the distinct type [512]byte.
+var buffer [256]bytes
+
+# Slice.
+# A slice is a data structure describing a contiguous section of an array stored separately from the slice variable itself. 
+# A slice is not an array. A slice describes a piece of an array. 
+# Under the covers, it is a struct value holding a pointer and a length.
+
+# Create a slice that describes elements 100 through 150 (to be precise, 100 through 149, inclusive) by slicing the array.
+var slice []byte = buffer[100:150]
+# The more idiomatic syntax would drop the type, which is set by the initializing expression.
+var slice = buffer[100:150]
+# Inside a function we could use the short declaration form,
+slice := buffer[100:150]
+
+

@@ -10,6 +10,7 @@ export $HOME/code/golang
 
 # Test yout installation.
 mkdir $GOPATH/src/hello && cd $_
+
 # Create hello.go example.
 cat > hello.go << EOF
 package main
@@ -20,10 +21,24 @@ fun main(){
   fmt.Printf("Hello world!\n")
 }
 EOF
-# Build.
+
+# Run without create a compiled file on disk.
+go run hello.go
+
+# Build (create a compiled file).
 go build
-# Run.
+
+# Run the compiled file.
 ./hello
+
+# Build and install at $GOPATH/bin (need be in folder project).
+go install 
+
+# Build and install at $GOPATH/bin (can run this command anywere in the system).
+go install github.com/user/folder/project_folder
+
+# Add golang bin to path, to call from anywere.
+PATH=$PATH;$GOPATH/bim
 
 # Install Vim and Sublime plugins to format code on save.
 

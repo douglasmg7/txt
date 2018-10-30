@@ -1,0 +1,39 @@
+# Refers to last commit.
+HEAD
+
+# Detach HEAD from master and point to a specific commit.
+git checkout 3423fdf<tab>
+
+# Checkout code at commit with a tag.
+git checkout v0.0.1
+
+# Detach HEAD from master and point to commit before.
+git checkout HEAD^
+
+# Detach HEAD from master and point to 3 commits before.
+git checkout HEAD~3
+
+# Discard changes to cats.html and index.html
+git checkout -- cats.html index.html
+
+# Retrive deleted local file if not commited yet.
+git checkout HEAD file_name
+
+# Undo last commit and all changes
+git reset --hard HEAD^
+
+# Undo last 2 commit and all changes.
+git reset --hard HEAD^^
+
+# Clean added files.
+git clean -f
+
+# Dont't do these after you push.
+git reset --soft HEAD^
+git reset --hard HEAD^
+git commit -amend
+
+# Create a new commit discarting the changes from the last command.
+# Make the last commit equal one before.
+# Undo this commit rather than restore this version.
+git revert HEAD
