@@ -38,9 +38,7 @@ go install
 go install github.com/user/folder/project_folder
 
 # Add golang bin to path, to call from anywere.
-PATH=$PATH;$GOPATH/bim
-
-# Install Vim and Sublime plugins to format code on save.
+PATH=$PATH;$GOPATH/bin
 
 # Install package(.o) or app(bin).
 go install  # Inside package dir.

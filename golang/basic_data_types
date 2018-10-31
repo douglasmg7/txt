@@ -1,0 +1,25 @@
+Go's types fall into four categories
+  basic types
+    numbers
+      int8 int16 int32 int64 
+      uint8 uint16 uint32 uint64
+      int (can be int32 or int64)
+      uint (can be uint32 or uint64)
+      rune (synonym for int32, unicode code pint)
+      byte (synonym for int8, emphasizes that the value is a piece of raw data rather than a small numeric quantity)
+      uintptr (width is not specified but is sufficient to hold all the bits of a pointer value)
+      float32 (~6 decimal)
+      float64 (~15 decimal) should be preferred for most purposes because float32 computations accumulate error rapily
+    strings
+    booleans
+  aggregate types
+    arrays
+    structs
+  reference types
+    pointers
+    slice
+    maps
+    functions
+    channels
+  interface types 
+    interface
