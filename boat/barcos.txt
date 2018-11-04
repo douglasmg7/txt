@@ -1,0 +1,38 @@
+Laser
+loa - 4,2m (13' 9")
+lwl - 3,8m (12' 6")
+beam - 1,39 (4' 6")
+draft - 0,79 (2' 7")
+hull weight 59kg (130lb)
+sail - 7m2 (76 sq ft)
+
+granny pram
+loa - 2,84m (9'3")
+beam - 1,23m (4')
+draft - 0,8m (2'7")
+weight - 34kg (75lb)
+sail - 4m2 (43 sq ft)
+
+optimist
+loa - 2,34
+beam - 1,13
+weight - 35kg
+sail - 3,25m2
+
+first mate
+loa - 4,57m (15 ft)
+lwl - 4,06m
+beam - 1,53m (5 ft)
+sail - 7,1m (76 sq ft)
+
+day sailer
+loa - 5,10m
+lwl - 4,88m
+beam -1,91m
+sail - 13,47m
+weight - 260kg
+
+shellback
+loa - 3,4m
+beam - 1,35m
+weight - 45kg

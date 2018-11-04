@@ -1,0 +1,68 @@
+Partes do barco
+	Casco (Hull)
+	Vela (Sail)
+	Mastro (Mast)
+	Retranca (Boom)
+	Proa (Bow)
+	Popa (Stern)
+	Espelho de popa (transom)
+	Bordos
+	Bombordo (Port)
+	Boreste (Starboard)
+	Escota da vela principal (Mainsheet)
+		Usada para ajustar o anglo da retranca em relação ao barco
+			Caçar
+			Folgar
+	Escotas da vela de proa (Jib Sheet)
+	Leme (Rudder)
+	Cana do leme (Tiller)
+	Extensor da cana do leme (Tiller extension)
+	Bolina (Center Board)
+				(Daggerboard - Pivot Board)
+	Caixa de Bolina (Daggerboard Slot)
+	Adriças (Halyard)
+	Burro (Kicking Strap Tackle - Boom Vang)
+		Mantem a retranca para baixo quando velejamos
+	Enora (Socket)
+	Estai de proa (Forestay)
+		Mantém o mastro erguido
+	Brandais (Shroud)
+		Mantém o mastro erguido
+	Alça de escora (Toestrap)
+	Mordedores (Cam Cleat - Clam Cleat)
+	
+Vela
+	As velas são controladas pelas escotas
+	A vela principal tem uma escota que é ligada a retranca
+	A vela de proa (Jybe) tem duas escotas uma para cada lado do barco
+	
+Partes da vela
+	As velas mais comuns são as triangulares
+	Punho da adriça (head)
+	Punho da amura (tack)
+	Punho da escota (clew)
+	Testa (Luff)
+	Valuma (Leech)
+	Esteira (foot)
+	Talas (Batten)
+	
+
+Vento
+	Barlavento (Windward-Upwind)
+	Sotavento (Leeward-Downwind)
+	
+Manobra
+	Orçar
+	Arribar
+	Cambar (Bordejar)
+	Jybe
+	
+Mareação
+	Zona morta (Dead zone)
+	Orça máxima (Close hauled)
+	Través orçado ()
+	Través (Reach beam)
+	Través folgado (Broad reach)
+	Popa (Run)
+	
+	
