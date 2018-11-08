@@ -1,0 +1,23 @@
+// Function main must be in the package main to the build tool produce a executable.
+
+// All code files in a folder must use the same package name, and it's common practice to name the package after the folder.
+
+// A package defines a unit of compiled code, and each unit of code represents a package.
+
+// The Go compiler won't let you declare a package to be imported if it's not used.
+// The blank identifier allows the compiler to accept the import and call any "init" function
+// that can be found in the different code files within that package.
+import (
+  _ "github.com/goinaction/code/chapter2/sample/search"
+)
+
+// The compiler will always look for the packages you import at the locations referenced by
+// the GOROOT and GOPATH environment variables.
+
+// It's common to declare functions that return a value and an error.
+// If a error occurs, never trust the other values being returned from the function.
+feeds, err := RetrieveFeeds()
+
+// The keyword range can be used with arrays, strings, slices, maps and channels.
+for _, feed := range feeds {
+}
