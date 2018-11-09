@@ -1,0 +1,9 @@
+# Install on ubuntu.
+sudo apt install golang-golang-x-tools
+
+# View fmt package doc.
+godoc fmt | less
+go doc fmt | less
+
+# View fmt package doc on web.
+https://golang.org/pkg/fmt/

@@ -31,6 +31,9 @@ go build
 # Run the compiled file.
 ./hello
 
+# Remove compiled files (Usefull for git commit).
+go clean
+
 # Build and install at $GOPATH/bin (need be in folder project).
 go install 
 
