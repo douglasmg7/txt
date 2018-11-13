@@ -41,4 +41,7 @@ var slice = buffer[100:150]
 # Inside a function we could use the short declaration form,
 slice := buffer[100:150]
 
-
+# Append.
+newslice = append(newslice, 60)
+# When there's no available capacity in the underlying array for a slice, append function
+# will create a new underlying array, copy the existing values that are being referenced, and assign the new value.
