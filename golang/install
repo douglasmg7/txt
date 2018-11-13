@@ -49,3 +49,9 @@ go install package_name   # Anywere.
 
 # Install remote package.
 go get github.com/astaxie/beedb
+
+# Check your code for commom errors.
+go vet
+
+# Format code (usally editor plugin alredy do this on save).
+go fmt

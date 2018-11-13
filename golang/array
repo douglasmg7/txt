@@ -6,6 +6,32 @@
 # The type of buffer includes its size, [256]byte. An array with 512 bytes would be of the distinct type [512]byte.
 var buffer [256]bytes
 
+# Once a array is declared, neither the type of data being stored nor its length can be changed. 
+
+# Declaring an array using an array literal.
+array := [5]int{0 ,1, 2, 3, 4}
+
+# Declaring an array with Go calculating size.
+array := [...]int{0 ,1, 2, 3, 4}
+
+# Declaring an array initializing specific elements.
+array := [5]int{1: 20, 2: 30}
+
+# Declaring an array of integer pointer.
+array := [5]*int{0: new(int), 1: new(int)}
+# Assign values to index 0.
+*array[0] = 10
+
+# copy the values from array2 into array1.
+array1 = array2
+# Only arrays of the same type can be assigned.
+# The type of an array variable includes both the length and the type of data that can be stored in each element.
+
+# Use pointer to array to pass large array to a function.
+func foo(array *[1e6]int){
+}
+foo(&array)
+
 # Slice.
 # A slice is a data structure describing a contiguous section of an array stored separately from the slice variable itself. 
 # A slice is not an array. A slice describes a piece of an array. 

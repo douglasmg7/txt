@@ -7,3 +7,14 @@ go doc fmt | less
 
 # View fmt package doc on web.
 https://golang.org/pkg/fmt/
+
+# Run a web server for go docs.
+godoc -http=:6060
+
+# To include a large body of text to document your package, include a file called doc.go
+# that declares the same package as your project, and put your package introduction as
+# a comment before the package declaration.
+/* 
+  Package ....
+*/
+package usb
