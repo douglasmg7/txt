@@ -41,6 +41,7 @@ var slice = buffer[100:150]
 # Inside a function we could use the short declaration form,
 slice := buffer[100:150]
 
+<<<<<<< HEAD
 # Three index slices gives you control over the capacity of the new slice.
 # The purpose is not to increase capacity, but to restrict the capacity.
 # If you attempt to set a capacity that's large than available capacity, you'll get a run time error.
@@ -63,3 +64,9 @@ for index, value := range slice {
   fmt.Printf("Index: %d Value: %d\n", index, value)
 }
 # value is a copy.
+=======
+# Append.
+newslice = append(newslice, 60)
+# When there's no available capacity in the underlying array for a slice, append function
+# will create a new underlying array, copy the existing values that are being referenced, and assign the new value.
+>>>>>>> c203135db703b73b85ccfdb70513099c469d4c66
