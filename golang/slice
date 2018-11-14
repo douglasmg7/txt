@@ -41,4 +41,25 @@ var slice = buffer[100:150]
 # Inside a function we could use the short declaration form,
 slice := buffer[100:150]
 
+# Three index slices gives you control over the capacity of the new slice.
+# The purpose is not to increase capacity, but to restrict the capacity.
+# If you attempt to set a capacity that's large than available capacity, you'll get a run time error.
+slice := source[2:3:4]
 
+# By having the option to set the capacity of a new slice to be the same as the length,
+# you can force the first append operation to detach the new slice from the underlying array.
+# Detaching the new slice from its original source array makes it safe to change.
+source := []string{"Apples", "Oranges", "Plum", "Banana", "Grape"}
+# Contains a length and capacity of 1 element.
+slice := source[2:3:3]
+# Will create a new underlying array.
+slice = append(slice, "Kiwi")
+
+# Append two slices.
+append(s1, s2...)
+
+# iterate.
+for index, value := range slice {
+  fmt.Printf("Index: %d Value: %d\n", index, value)
+}
+# value is a copy.
