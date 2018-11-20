@@ -1,0 +1,38 @@
+# Ubuntu install.
+sudo apt update
+sudo apt install postgresql postgresql-contrib
+
+# Login into postgres account (the only created at install).
+sudo su postgres
+
+# Access postgres.
+psql
+
+# Exit postgres.
+>> \q
+# Or.
+>> ctrl+d
+
+
+# Create a user.
+createuser --interactive
+createdb <your account name>
+
+# Create db.
+createdb <you account name>
+
+# Run a sql script.
+psql -f setup.sql -d data_base_name
+
+# Start psql on a diferent database.
+psql -d data_base_name
+
+# List data.
+>> \d
+
+# List only tables.
+>> \dt
+
+# Describe table.
+>> \d+ table_name
+
