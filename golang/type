@@ -1,0 +1,38 @@
+# User defined types.
+type user struct {
+  name string
+  email string
+  ext int
+  privileged bool
+}
+
+# Declare a variable of type user.
+var bill user
+
+# Reserve the use of the keyword "var" as a way to indicate that a variable is being set to its zero value. 
+
+# Declaration of a variable of the struct type using a struct literal.
+lisa := user{
+  name: "Lisa",
+  email: "lisa@email.com",
+  ext: 123,
+  privileged: true,
+}
+# Or.
+lisa := user{"Lisa", "lisa@email.com", 123, true}
+
+# Taking an existing type and using it as the type specification for the new type.
+type Durattion int64
+
+# When a function has a receiver, than a function is called a method.
+# Implements a method with a value receiver.
+# u is a copy.
+func (u user) notify(){
+  fmt.Printf("Sending User Email To %s<%s>\n", u.name, u.email)
+}
+# Using with a pointer receiver.
+# u is shared with the method.
+func (u *user) changeEmail(email string){
+  u.email = email
+}
+

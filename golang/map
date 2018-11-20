@@ -1,0 +1,33 @@
+# Map is an unordered collection of key/value pairs.
+
+# Create a map with a key of type string and a value of type int.
+# A empty map.
+dcit := make(map[string]int){}
+
+# Map literal.
+dict := make(map[string]string){"red": "#da1337", "orange", "#e95a22"}
+
+# Add a item to map.
+dict["red"] = "#da1337"
+
+# Create a nil map.
+dcit := make(map[string]int)
+
+# Retrieve the value of the key blue.
+value, exists := colors["Blue"]
+if exists {
+  fmt.Println(value)
+}
+
+# Iterating over a map.
+for key, value := range colors {
+  fm.Printf("key: %s Value: %s\n", key, value)
+}
+
+# Remove a key/value.
+delete(colors, "Coral")
+
+# Passing a map between two functions doesn't make a copy of the map.
+# The map is passed as reference.
+
+
