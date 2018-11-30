@@ -15,3 +15,7 @@ $ gaip -d <file.gz>
 $ sudo journalctl -u certbot.service
 # Just from current boot.
 $ sudo journalctl -b -u certbot.service
+
+# Copy db from server.
+cd ~/code/zunka/dump
+scp douglasmg7@vps10092.publiccloud.com.br:/home/douglasmg7/zunka/dump/2018-Nov-27@18:49:28.gz .

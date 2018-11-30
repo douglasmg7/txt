@@ -1,0 +1,6 @@
+# Remove document.
+db.collection_name.drop()
+
+# Remoe database.
+use db_name
+db.dropDatabase()

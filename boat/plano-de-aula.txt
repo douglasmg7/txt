@@ -1,0 +1,77 @@
+*****************************************************************************
+* FORA DA ÁGUA
+*****************************************************************************
+
+Partes do barco (apenas o básico)
+  Casco
+  Proa
+  Popa
+  Bordos
+  Mastro
+  Retranca
+  Leme
+  Vela
+  Escota
+
+Função do leme
+  Controlar a direção do barco
+    É o que fica na água
+  Como usar a cana do leme juntamente com o extensor do leme
+  Posição que deve segurar o extensor (posicionado na frente do corpo)
+
+Função da vela
+  É o motor do barco
+  Como controlar a vela
+    Escota
+      Caçar
+      Folgar (reduz o empuxo)
+    Vela cheia (gera o empuxo)
+      Obesrvar se a região próxima a testa da vela não está panejando
+    Vela folgada (panejando)
+
+Identificar a direção do vento
+  Através dos houvidos
+  Utilizando a posição da rectranca com a vela panejando
+
+
+*****************************************************************************
+* DENTRO DA ÁGUA
+*****************************************************************************
+
+Ideal que o vento esteja fraco
+Utilizar boias para referencia
+Velejar recebendo o vento pelo lado do barco (vento de través)
+  Melhor posição para manter o rumo, acelerar e parar
+Manter um rumo de ida e vinda para que o aluno mantenha-se no vento de través
+  Acelerar
+  Parar
+  Controlar a velocidade
+  Fazer bordo
+  Evitar jybe
+  Identifcar a zona morta (região que a vela não funciona)
+Manter sentado na posição correta (mais no meio do bordo a sotavento)
+  Para não atrapalhar o movimento da cana do leme e manter o barco equilibrado
+
+Aproximar a cana do leme da retranca
+  Orçando
+
+Afastar a cana do leme da retranca
+  Arribando
+  
+Acelerar
+  Cabo da escota folgado
+  Posicionar o barco no vento de través
+  Manter o leme no meio
+  Caçar a vela até parar de panejar
+
+Parar
+  Barcos não tem freio
+  Folgar a escota até a vela panejar completamente
+  
+Duas formas de trocar o bordo que recebe o vento
+  Cambar (fazer um bordo)
+    Passando a proa pelo vento
+    Empurrar o extensor
+  Jybe
+    Passando a popa pelo vento
+    Puxar o extensor

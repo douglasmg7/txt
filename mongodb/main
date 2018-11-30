@@ -41,13 +41,6 @@ show collections
 use mydb
 	switch to a new database named mydb
 
-remove a db_x
-	use db_x
-	db.dropDatabase()
-
-remove a collection
-	db.collection_name.drop()
-
 help
 	method.help()
 	get mongo help
