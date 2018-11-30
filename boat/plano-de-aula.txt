@@ -1,7 +1,10 @@
 *****************************************************************************
-* FORA DA ÁGUA
+* AULA 1 E 2 (Duas horas de aula)
 *****************************************************************************
 
+*****************************************************************************
+* FORA DA ÁGUA
+*****************************************************************************
 Partes do barco (apenas o básico)
   Casco
   Proa
@@ -41,8 +44,8 @@ Identificar a direção do vento
 Ideal que o vento esteja fraco
 Utilizar boias para referencia
 Velejar recebendo o vento pelo lado do barco (vento de través)
-  Melhor posição para manter o rumo, acelerar e parar
-Manter um rumo de ida e vinda para que o aluno mantenha-se no vento de través
+  Melhor posição para treinar o uso do leme e acelerar o barco
+Manter um rumo de ida e volta de forma que o aluno mantenha-se no vento de través
   Acelerar
   Parar
   Controlar a velocidade
@@ -58,9 +61,12 @@ Aproximar a cana do leme da retranca
 Afastar a cana do leme da retranca
   Arribando
   
+Posicionar o barco no vento de través com o mesmo parado
+  Lemando ou empurrar a retranca e o extensor do leme para o mesmo bordo
+
 Acelerar
   Cabo da escota folgado
-  Posicionar o barco no vento de través
+  Posicionar o barco no vento de través (lemando ou empurrando o leme e a retranca para o mesmo lado)
   Manter o leme no meio
   Caçar a vela até parar de panejar
 
@@ -75,3 +81,12 @@ Duas formas de trocar o bordo que recebe o vento
   Jybe
     Passando a popa pelo vento
     Puxar o extensor
+
+Cambar
+  Verificar se a área está livre para realizar a manobra
+  Verificar a nova referência para o rumo (180 do atual rumo)
+  Empurrar o extensor
+  Colocar o extensor no meio quando atingir o novo rumo
+  Regular a vela se necessário
+
+
