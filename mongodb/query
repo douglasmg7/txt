@@ -1,0 +1,2 @@
+# Basic query.
+db.products.find({}, {storeProductCategory: 1, _id: 0})

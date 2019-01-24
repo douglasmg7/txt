@@ -1,0 +1,2 @@
+# Distinct command.
+db.products.distinct("storeProductCategory")

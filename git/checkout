@@ -4,6 +4,9 @@ HEAD
 # Detach HEAD from master and point to a specific commit.
 git checkout 3423fdf<tab>
 
+# Back to the tip of branch.
+git checkout master
+
 # Checkout code at commit with a tag.
 git checkout v0.0.1
 
