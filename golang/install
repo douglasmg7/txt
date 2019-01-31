@@ -4,6 +4,9 @@ sudo apt install golang-go
 # Get golang compile version.
 go version
 
+# Get information about current your current go installation and environment.
+go env
+
 # Create GOPATH into .bashrc or/and .zshrc.
 # This is where go keep the source and bin from installed packages.
 export $HOME/code/golang
@@ -24,6 +27,9 @@ EOF
 
 # Run without create a compiled file on disk.
 go run hello.go
+
+# Run all files from package main.
+go run *
 
 # Build (create a compiled file).
 go build
