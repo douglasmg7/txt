@@ -21,3 +21,6 @@ feeds, err := RetrieveFeeds()
 // The keyword range can be used with arrays, strings, slices, maps and channels.
 for _, feed := range feeds {
 }
+
+// Template file can have any extenxion, or none, but it usal to have gothml
+file.gohtml
