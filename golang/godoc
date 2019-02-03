@@ -5,8 +5,20 @@ sudo apt install golang-golang-x-tools
 godoc fmt | less
 go doc fmt | less
 
-# View fmt package doc on web.
-https://golang.org/pkg/fmt/
+# View Print function from fmt package.
+https://golang.org/pkg/fmt/#Print
+
+# Go reference.
+https://golang.org/ref/spec
+
+# Documentation for Go packages on Bitbucket, GitHub, Google Project Hosting and Launchpad.
+https://godoc.org/
+
+# Effective Go.
+https://golang.org/doc/effective_go.html
+
+# Forum.
+https://forum.golangbridge.org/
 
 # Run a web server for go docs.
 godoc -http=:6060
