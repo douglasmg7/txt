@@ -1,0 +1,9 @@
+# Install.
+sudo apt install sqlite3
+
+# Start cli.
+sqlite3
+
+# Exit cli.
+> .quit
+
