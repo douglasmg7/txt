@@ -1,9 +1,64 @@
 # Install.
 sudo apt install sqlite3
 
+# Docs.
+https://sqlite.org/doclist.html
+https://sqlite.org/cli.html
+https://www.tutorialspoint.com/sqlite/sqlite_commands.htm
+
 # Start cli.
 sqlite3
+sqlite3 db_name.db
 
 # Exit cli.
 > .quit
+
+# List tables.
+> .tables
+
+# See default settings.
+> .show
+
+# Format output.
+> .header on
+> .mode column
+> .time on
+
+# Know if foreign keys is enabled
+> pragma foreign_keys;
+# Enable/disable foreign keys
+> pragma foreign_keys = ON;
+> pragma foreign_keys = OFF;
+
+
+# See schema from a table.
+> .schema table_name
+
+# Load a script.
+> .read createDb.sql
+
+# Run scrip from bash.
+#!/usr/bin/env bash
+sqlite3 lake.db <<EOF
+create table n (id INTEGER PRIMARY KEY,f TEXT,l TEXT);
+insert into n (f,l) values ('john','smith');
+select * from n;
+EOF 
+
+# Load script from cli.
+sqlite3 database.db < commands.sql
+
+# Export complete database in a text file.
+sqlite3 database.db .dump > database.sql
+
+# crud
+https://www.digitalocean.com/community/tutorials/how-and-when-to-use-sqlite#install-sqlite-on-your-vps
+CREATE TABLE wines (id integer, producer varchar(30), kind varchar(20), country varchar(20)); 
+INSERT INTO WINES VALUES (1, "Rooiberg", "Pinotage", "South Africa");
+INSERT INTO WINES VALUES (2, "KWV", "Shiraz", "South Africa");
+INSERT INTO WINES VALUES (3, "Marks & Spencer", "Pinot Noir", "France");
+SELECT * FROM wines;
+UPDATE wines SET country="South Africa" WHERE country="France";
+DELETE FROM wines WHERE id=2;
+
 
