@@ -19,3 +19,10 @@ $ sudo journalctl -b -u certbot.service
 # Copy db from server.
 cd ~/code/zunka/dump
 scp douglasmg7@vps10092.publiccloud.com.br:/home/douglasmg7/zunka/dump/2018-Nov-27@18:49:28.gz .
+
+# Db login.
+mongo -u admin --authenticationDatabase admin -p
+
+# Vps login.
+ssh douglasmg7@vps10092.publiccloud.com.br
+
