@@ -1,0 +1,4 @@
+ciw       Deleta a word.
+"         Add the first double quote.
+ctr+r "   Insert content from " register.  
+"         Insert the closing double quote.
