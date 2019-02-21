@@ -1,0 +1,11 @@
+# Delete inside "{".
+di{
+
+# Jumps to the match of the item under cursor.
+%
+
+# Select inside ")" including ")", two nivels.
+v2a)
+
+# Select inside ")", two nivels.
+v2i)
