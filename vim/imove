@@ -1,0 +1,13 @@
+ctrl-O h  move cursor left 
+ctrl-O l  move cursor right
+ctrl-O j  move cursor down
+ctrl-O k  move cursor up
+
+ctrl-W    delete word to the left of cursor
+ctrl-O D  delete everything to the right of cursor
+ctrl-U    delete everything to the left of cursor
+ctrl-H    backspace/delete
+ctrl-J    insert newline (easier than reaching for the return key)
+ctrl-T    indent current line
+ctrl-D    un-indent current line
+

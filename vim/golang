@@ -1,0 +1,12 @@
+# Save and run.
+-r
+
+# To import.
+:GoImports
+
+# To run.
+:GoRun %
+
+# To run.
+:!go run %
+
