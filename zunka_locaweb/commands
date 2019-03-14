@@ -26,3 +26,11 @@ mongo -u admin --authenticationDatabase admin -p
 # Vps login.
 ssh douglasmg7@vps10092.publiccloud.com.br
 
+# Remove ssh key when REMOTE HOST IDENTIFICATION HAS CHANGED.
+ssh-keygen -R vps10092.publiccloud.com.br
+
+# To stop and then start the service again.
+$ sudo systemctl restart nginx
+
+# If you are simply making configuration changes, Nginx can often reload without dropping connections.
+$ sudo systemctl reload nginx

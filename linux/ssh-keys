@@ -58,3 +58,5 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 # Enable the service.
 $ systemctl --user enable ssh-agent.service
 
+# Remove ssh key when REMOTE HOST IDENTIFICATION HAS CHANGED.
+ssh-keygen -R vps10092.publiccloud.com.br
