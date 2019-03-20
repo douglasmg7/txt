@@ -1,20 +1,69 @@
 journalctl - Query the systemd journal
 
+<space>   Move down one page.
+b         Move up one page.
+50p       Go to 50% of document.
+50%       Go to 50% of document.
+
+# See the journal entries from the current boot.
 journalctl -b
-  See the journal entries from the current boot.
 
+# See messages from the previous boot.
+journalctl -b -1
+
+# Show only entries logged at the error level or above.
+journalctl -p err -b
+    0: emerg
+    1: alert
+    2: crit
+    3: err
+    4: warning
+    5: notice
+    6: info
+    7: debug
+# To process data with text manipulation tools.
+journalctl --no-pager
+
+# Display the timestamps in UTC.
+journalctl --utc
+
+# Display only kernel messages from current boot.
 journalctl -k
-  See only kernel messages, such as those that are typically represented by dmesga.
+journalctl --dmesg
 
+# Diplay kernel messages from five boots ago.
+journalctl -k -b -5
+
+# List boots.
+journactl --list-boots
+# Go to specific boot.
+journalctl -b a09dce7b2c1c458d861d7d0f0a7c8c65
+
+# See oldest to newest.
+journalctl -b -r
+
+# Time range.
+journalctl --since "2019-03-01"
+journalctl --since "2019-03-01 14:10:10"
+journalctl --since "2018-08-30 14:10:10" --until "2018-09-02 12:05:50"
+
+# Monitor new log messages.
+journalctl -f
+
+# See only kernel messages, such as those that are typically represented by dmesga.
+journalctl -k
+
+# See all of the journal entries for the unit in question.
 journalctl -u dbus.service
-  See all of the journal entries for the unit in question.
 
+# See all of the journal entries for the unit in question from the boot.
 journalctl -b -u dbus.service
-  See all of the journal entries for the unit in question from the boot.
 
 # See space used by log files.
 journalctl --disk-usage
 
 # Restric space used by log files.
 sudo journalctl --vacuum-size=100M
+
+
 

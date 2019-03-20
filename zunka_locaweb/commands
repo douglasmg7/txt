@@ -34,3 +34,28 @@ $ sudo systemctl restart nginx
 
 # If you are simply making configuration changes, Nginx can often reload without dropping connections.
 $ sudo systemctl reload nginx
+
+# Linux logs.
+$ su
+$ less /var/log/syslog
+$ less /var/log/syslog.1
+
+# Verify ssh status.
+$ systemctl status ssh
+
+# Log service ssh.
+$ journalctl -u ssh
+$ journalctl -u ssh.service
+
+# Log service ssh from current boot.
+$ journalctl -u ssh -b
+
+# Log current boot.
+$ journalctl -b
+
+# Log from date.
+journalctl --since "2018-08-30 14:10:10" --until "2018-09-02 12:05:50"
+journalctl --since "2019-03-30 08:10:10" --until "2019-03-02 19:05:50"
+
+# Log kernel messages from previous boot with level err.
+journalctl -k -b -1 -p err
