@@ -1,0 +1,6 @@
+# List order informations.
+db.orders.find({},{name: true, timestamps: true, _id: false}).pretty();
+
+# Export collection.
+$ mongoexport --db zunka --collection orders -u admin --authenticationDatabase admin --out test.txt
+# Open with atom.io and use the command pretty json prettify.
