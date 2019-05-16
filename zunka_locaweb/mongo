@@ -1,5 +1,11 @@
+# Redirect output to a file.
+mongo -u admin --authenticationDatabase admin -p | tee output.txt
+
 # List order informations.
 db.orders.find({},{name: true, timestamps: true, _id: false}).pretty();
+
+# List order by id.
+db.orders.find({_id: ObjectId("5cb482c63835141ad87ab8e5")}, {name: true, "shipping.box": true, "shipping.correioResult": true}).pretty()
 
 # Export collection.
 $ mongoexport --db zunka --collection orders -u admin --authenticationDatabase admin --out test.txt
