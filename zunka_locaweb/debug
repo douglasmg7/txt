@@ -1,0 +1,46 @@
+> db.orders.find({_id: ObjectId("5cdcc223a4036a0851728f07")}, {name: true, "shipping.box": true, "shipping.correioResult": true}).pretty();
+{
+        "_id" : ObjectId("5cdcc223a4036a0851728f07"),
+        "name" : "Andrey Kadoch",
+        "shipping" : {
+                "box" : {
+                        "_id" : ObjectId("5cdcc223a4036a0851728f0e"),
+                        "cepOrigin" : "31030160",
+                        "cepDestiny" : "91710000",
+                        "length" : 48,
+                        "height" : "38",
+                        "width" : "11",
+                        "weight" : "3"
+                },
+                "correioResult" : {
+                        "_id" : ObjectId("5cdcc223a4036a0851728f0f"),
+                        "Codigo" : 4510,
+                        "Valor" : "29,20",
+                        "PrazoEntrega" : "10",
+                        "ValorMaoPropria" : "0,00",
+                        "ValorAvisoRecebimento" : "0,00",
+                        "ValorValorDeclarado" : "0,00",
+                        "EntregaDomiciliar" : "S",
+                        "EntregaSabado" : "N",
+                        "Erro" : "0",
+                        "MsgErro" : "",
+                        "ValorSemAdicionais" : "29,20",
+                        "obsFim" : ""
+                }
+        }
+}
+
+nCdEmpresa: '',  // Código administrativo junto à ECT (para clientes com contrato) .
+sDsSenha: '',
+nCdServico: '04510',  // Para clientes sem contrato (04510 - PAC à vista).
+sCepOrigem: box.cepOrigin.replace(/\D/g, ''),
+sCepDestino: box.cepDestiny.replace(/\D/g, ''),
+nVlPeso: (box.weight / 1000).toString(),    // Weight in Kg.
+nCdFormato: 1,    // 1 - caixa/pacote, 2 - rolo/prisma, 3 - Envelope.
+nVlComprimento: box.length,  // Lenght in cm.
+nVlAltura: box.height,  // Height in cm.
+nVlLargura: box.width,   // Width in cm.
+nVlDiametro: 0,   // Diâmetro em cm.
+sCdMaoPropria      : 'N',   // Se a encomenda será entregue com o serviço adicional mão própria.
+nVlValorDeclarado  : 0,
+sCdAvisoRecebimento: 'N'
