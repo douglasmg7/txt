@@ -1,0 +1,42 @@
+# To control whether or not each shell session has the base environment activated or not, run: 
+conda config --set auto_activate_base False or True
+
+# Activate anaconda.
+source <path_to_anaconda>/bin/activate
+conda init
+# Or.
+conda activate
+
+# Launch Anaconda navigator.
+~/anaconda3/bin/anaconda-navigator
+
+# Conda is a cli equivalent of anaconda-navigator.
+# Version.
+conda --version
+
+# Update conda.
+conda update conda
+
+# Create the env snowflakes and install BioPython.
+conda create --name snowflakes biopython
+# Or using a specific python version.
+conda create --name snowflakes biopython python=3.5
+
+# Activate snowflakes env.
+conda activate snowflakes
+# Or
+source activate snowflakes
+
+# List all your environments.
+conda info --envs
+
+# Check if a package not already installed is available from the anaconda repository.
+conda activate snowflakes
+conda search biopython
+# Install the package.
+conda install biopython
+# List installed packages.
+conda list
+
+# Start jupyter.
+jupyter-notebook

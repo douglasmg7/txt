@@ -1,2 +1,2 @@
-video 13 - 7:10min.
-$ conda env create -f virtual_plataform_linux.yml
+# Install packages.
+pip3 install --user numpy scipy matplotlib ipython jupter pandas symps nose
