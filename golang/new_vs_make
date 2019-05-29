@@ -1,0 +1,18 @@
+This post will briefly describe the differences between the builtin new() and make() functions in Go. It assumes that you have completed A Tour of Go and have consulted relevant sections of Effective Go and the target audience is primarily newcomers to the Go programming language.
+
+The builtin new(T) function allocates “zeroed” storage for a new item of type T and returns its address, a value of type *T. In Go terminology, it returns a pointer to a newly allocated zero value of type T. For example, here are three different ways to create a pointer p that points to a zeroed bytes.Buffer value, each of which are equivalent:
+
+// Allocate enough memory to store a bytes.Buffer value
+// and return a pointer to the value's address.
+var buf bytes.Buffer
+p := &buf
+
+// Use a composite literal to perform allocation and
+// return a pointer to the value's address.
+p := &bytes.Buffer{}
+
+// Use the new function to perform allocation, which will
+// return a pointer to the value's address.
+p := new(bytes.Buffer)
+
+https://www.godesignpatterns.com/2014/04/new-vs-make.html
