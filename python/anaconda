@@ -7,6 +7,9 @@ conda init
 # Or.
 conda activate
 
+# Deactivate.
+conda deactivate
+
 # Launch Anaconda navigator.
 ~/anaconda3/bin/anaconda-navigator
 
