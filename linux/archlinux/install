@@ -16,6 +16,20 @@ $ sha1sum archlinux-x-x86_64.iso
 # Value returned must be equal to the shown on the site.
 # SHA1: 53117ee010363388c114cf29e8a7154003854b76
 
+# Find out the USB drive name.
+$ sudo fdisk -l
+# Or
+$ lsblk
+
+# Write iso to USB drive.
+# Run the following command, replacing /dev/sdx with your drive, e.g. /dev/sdb. 
+# (Do not append a partition number, so do not use something like /dev/sdb1) 
+$ dd bs=4M if=path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
+
+# Warning 
+# This will irrevocably destroy all data on /dev/sdx. To restore the USB drive as an empty, usable storage device after using the Arch ISO image, the ISO 9660 filesystem signature needs to be removed by running wipefs --all /dev/sdx as root, before repartitioning and reformating the USB drive.
+https://wiki.archlinux.org/index.php/USB_flash_installation_media
+
 $ wifi-menu -o wlan0    
 # Config wifi.
 
