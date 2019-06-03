@@ -1,4 +1,20 @@
-# download the lastest archlinux version
+# download the lastest archlinux version from BitTorrent (recommended)  
+https://www.archlinux.org/download/
+
+# Verify PGP signature.
+$ gpg --keyserver-options auto-key-retrieve --verify archlinux-xxx.iso.sig archlinux-xxx-x86_64.iso
+# Primary key fingerprint and RSA must be equal. 
+# It's ok "WARNING: This key is not certified with a trusted signature!"
+
+# MD5 checksum.
+$ md5sum archlinux-xxx.iso
+# Value returned must be equal to the shown on the site.
+# MD5: 2ad784bba7b5d3906ea61d76aec11778
+
+# Check SHA1.
+$ sha1sum archlinux-x-x86_64.iso
+# Value returned must be equal to the shown on the site.
+# SHA1: 53117ee010363388c114cf29e8a7154003854b76
 
 $ wifi-menu -o wlan0    
 # Config wifi.
