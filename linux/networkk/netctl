@@ -1,4 +1,0 @@
-netctl - CLI-based tool used to configure and manage network connections via profiles.
-
-/etc/netctl
-  Contain the netctl profiles.

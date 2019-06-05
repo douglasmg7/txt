@@ -30,6 +30,23 @@ $ dd bs=4M if=path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
 # This will irrevocably destroy all data on /dev/sdx. To restore the USB drive as an empty, usable storage device after using the Arch ISO image, the ISO 9660 filesystem signature needs to be removed by running wipefs --all /dev/sdx as root, before repartitioning and reformating the USB drive.
 https://wiki.archlinux.org/index.php/USB_flash_installation_media
 
+# Config computer to boot from usb.
+
+# Set the keyboard layout.
+# Find out a layout.
+$ ls /usr/share/kbd/keymaps/**/*.map.gz | grep br
+# Modify the layout.
+$ loadkeys br-abnt2
+
+# Verify the boot mode.
+# If UEFI mode is enabled on an UEFI motherboard, Archiso will boot Arch Linux accordingly via systemd-boot. 
+# To verify this, list the efivars directory: 
+$ ls /sys/firmware/efi/efivars
+# If the directory does not exist, the system may be booted in BIOS or CSM mode.
+
+# List network interfaces.
+$ ip link
+
 $ wifi-menu -o wlan0    
 # Config wifi.
 

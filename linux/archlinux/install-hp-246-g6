@@ -1,0 +1,189 @@
+# download the lastest archlinux version from BitTorrent (recommended)  
+https://www.archlinux.org/download/
+
+# Verify PGP signature.
+$ gpg --keyserver-options auto-key-retrieve --verify archlinux-xxx.iso.sig archlinux-xxx-x86_64.iso
+# Primary key fingerprint and RSA must be equal. 
+# It's ok "WARNING: This key is not certified with a trusted signature!"
+
+# MD5 checksum.
+$ md5sum archlinux-xxx.iso
+# Value returned must be equal to the shown on the site.
+# MD5: 2ad784bba7b5d3906ea61d76aec11778
+
+# Check SHA1.
+$ sha1sum archlinux-x-x86_64.iso
+# Value returned must be equal to the shown on the site.
+# SHA1: 53117ee010363388c114cf29e8a7154003854b76
+
+# Find out the USB drive name.
+$ sudo fdisk -l
+# Or
+$ lsblk
+
+# Write iso to USB drive.
+# Run the following command, replacing /dev/sdx with your drive, e.g. /dev/sdb. 
+# (Do not append a partition number, so do not use something like /dev/sdb1) 
+$ dd bs=4M if=path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
+
+# Warning 
+# This will irrevocably destroy all data on /dev/sdx. To restore the USB drive as an empty, usable storage device after using the Arch ISO image, the ISO 9660 filesystem signature needs to be removed by running wipefs --all /dev/sdx as root, before repartitioning and reformating the USB drive.
+https://wiki.archlinux.org/index.php/USB_flash_installation_media
+
+# Config computer to boot from usb.
+
+# Set the keyboard layout.
+# Find out a layout.
+$ ls /usr/share/kbd/keymaps/**/*.map.gz | grep br
+# Modify the layout.
+$ loadkeys br-abnt2
+
+# Verify the boot mode.
+# If UEFI mode is enabled on an UEFI motherboard, Archiso will boot Arch Linux accordingly via systemd-boot. 
+# To verify this, list the efivars directory: 
+$ ls /sys/firmware/efi/efivars
+# If the directory does not exist, the system may be booted in BIOS or CSM mode.
+
+# List interfaces (-v verbose, -vv very verbose, -k kernel drivers handling each device).
+$ lspci
+
+# Find out which kernel module contains the driver for your network device.
+$ lspci -v
+# Kernel modules: module_name
+# Check that the driver was loaded via dmesg | grep module_name.
+
+# Network interface.
+# By default udev assigns names to your network interfaces using Predictable Network Interface Names, which prefixes interfaces names with:
+# en (wired/Ethernet), wl (wireless/WLAN), or ww (WWAN). 
+
+# List network interfaces options.
+$ ip link
+$ ls /sys/class/net
+$ iw dev   # For wifi only.
+
+# Show interface status.
+$ ip link show dev eno1
+
+# Config wifi.
+$ wifi-menu -o wlan0    
+
+# Update the system clock.
+$  timedatectl set-ntp true
+
+# To check the service status, use:
+$ timedatectl status
+
+# Check partition table.
+$ fdisk -l    
+$ lsblk -f
+$ blkid
+
+# Create partition (BIOS with MBR).
+# Root partition, /dev/sda1, as primary bootable with size +50G and ext4 formatted (83-Linux)
+# Swap partition, /dev/sda2, as primary with size +8G (2xRAM size) (82-Linux swap).
+# Logical partition, Home, /dev/sda5, rest of the space and ext4 formatted.
+# Chose sda1 to be bootable - a options.
+# Chose sda2 to be swap - t option, select 82.
+$ fdisk /dev/sda   
+
+# Create partition (UEFI with GPT).
+# UEFI booting does not involve any "boot" flag.
+# /boot or /efi,  /dev/sda1, primary, +512M, ext4 (83-Linux)
+# /,              /dev/sda2, logical, +50G,  ext4 (83-Linux)
+# [SWAP],         /dev/sda3, logical, +4G (~2xRAM size) (82-Linux swap).
+# /home,          /dev/sda4, primary, +200G, ext4 (83-Linux).
+# Chose sda3 to be swap - t option, select 82.
+$ fdisk /dev/sda   
+
+# Create partition (UEFI with GPT) and Windows alredy installed. ## USE THIS ONE ##
+# UEFI booting does not involve any "boot" flag.
+# Using UEFI partition alredy created by the Windows.
+# Change filesystem using the option t.
+# /,              /dev/sda5, +50G,                24 Linux root (x86-64)
+# [SWAP],         /dev/sda6, +4G (~2xRAM size),   19 Linux swap.
+# /home,          /dev/sda7, +160G,               20 Linux filesystem.
+$ fdisk /dev/sda   
+
+# Format EFI partition.
+$ mkfs.fat -F32 /dev/sdax
+# Format root and home.
+$ mkfs.ext4 /dev/sdax   
+# Format swap.
+$ mkswap /dev/sdax    
+
+# Activate the swap.
+$ swapon /dev/sda2    
+
+# Mount system.
+$ mount /dev/sda5 /mnt        # Root.    
+$ mkdir /mnt/efi
+$ mount /dev/sda2 /mnt/efi    # EFI, alredy created by the Windows.
+$ mkdir /mnt/home
+$ mount /dev/sda7 /mnt/home   # Home.
+
+# Select the mirrors
+# Packages to be installed must be downloaded from mirror servers, which are defined in /etc/pacman.d/mirrorlist.
+# On the live system, all mirrors are enabled, and sorted by their synchronization status and speed at the time the installation image was created.
+# You may want to edit the file accordingly, and move the geographically closest mirrors to the top of the list, although other criteria should be taken into account.
+# This file will later be copied to the new system by pacstrap, so it is worth getting right. 
+
+# Run script to install base package.
+$ pacstrap /mnt base    
+# Run script to install base package dev.
+$ pacstrap /mnt base-devel    
+
+# Generate an fstab file (use -U or -L to define by UUID or labels, respectively):
+$ genfstab -U /mnt >> /mnt/etc/fstab   
+
+# Change root into the new system.
+$ arch-chroot /mnt    
+
+$ ln -sf /usr/share/zoneinfo/region/city /etc/localtime   
+# Set the time zone.
+
+$ hwclock --systohc   
+# generate /etc/adjtime.
+
+# Uncomment en_US.UTF-8 UTF-8 and other needed localizations in /etc/locale.gen, and generate them with:
+locale-gen
+
+# Change or create.
+/etc/locale.conf
+  LANG=en_US.UTF-8
+
+# Change or create.
+/etc/hostname
+  myhostname
+
+passwd    # change root password
+
+# edit the file:
+/etc/hostname
+# my_hostname
+
+# Edit hosts if necessafy.
+/etc/hosts
+# 127.0.0.1        localhost.localdomain         localhost
+# ::1              localhost.localdomain         localhost
+# 127.0.1.1        myhostname.localdomain        myhostname
+
+systemctl enable dhcpcd   # make network connections persistent
+
+# grub installation
+pacman -S grub efibootmgr
+grub-install --target=x86_64-efi --efi-directory=esp --bootloader-id=GRUB
+grub-install --target=x86_64-efi --efi-directory=efi/EFI --bootloader-id=GRUB
+grub-mkconfig -o /boot/grub/grub.cfg
+
+$ pacman -S wireless_tools wpa_supplicant dialog
+# wifi-menu.
+
+# exit installation
+# Exit chroot environment.
+exit
+# Optionally manually unmount all the partitions.
+umount -R /mnt
+# Restart.
+reboot
+
+# remove the intallation media
