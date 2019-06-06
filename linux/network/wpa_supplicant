@@ -1,0 +1,63 @@
+# Create password to use into "/etc/network/interface" or "/etc/wpa_supplicant/wpa_supplicant.conf".
+$ wpa_passphrase <ssid> <password> > /etc/wpa_supplicant/wpa_supplicant.conf
+
+# Example file "/etc/network/interface"
+# auto wlan0
+# iface wlan0 inet dhcp
+# 	wpa-ssid Vivo WiFi
+# 	wpa-psk as38492039asfkjalskfdj348390adflakjd
+
+# Connect to wifi using supplicant cli.
+#   -B run wpa_supplicant in the background
+#	  -D wireless driver. wext is the generic driver
+#   -i interface
+#	  -c path for the configuration file
+$ wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant.conf
+$ wpa_supplicant -B -D wext -i wlan0 -c /etc/wpa_supplicant.conf
+
+# Show drive options.
+$ wpa_supplicant -h
+
+# Manual configuration.
+# Create a minimal configuration file "/etc/wpa_supplicant/wpa_supplicant.conf" with content:
+#   ctrl_interface=/run/wpa_supplicant
+#   update_config=1
+
+# Discovery the interface name.
+$ networkctl list
+# Start wpa_supplicant:
+$ sudo wpa_supplicant -B -i <interface> -c /etc/wpa_supplicant/wpa_supplican.conf
+
+# Start wpa cli.
+$ sudo wpa_cli
+> status
+> list_network
+> scan
+> scan_result
+> add_network
+> set_network 0 ssid "caliant"
+> set_network 0 psk "ulaula"
+> enable_network 0
+> set update_config=1
+> save_config
+> quit
+
+# Start dhcp client.
+$ dhcpcd <interface>
+
+# Stop wifi connection:
+$ killall wap_supplicant
+
+# To connect again on the next boot.
+$ sudo wpa_supplicant -B -i <interface> -c /etc/wpa_supplicant/wpa_supplican.conf
+$ dhcpcd <interface>
+
+# If the network does not have a passphrase, e.g. a public Wi-Fi: 
+# network={
+#   ssid="MYSSID"
+#   key_mgmt=NONE
+# }
+
+# At boot (systemd)
+# wpa_supplicant@interface.service - accepts the interface name as an argument and starts the wpa_supplicant daemon for this interface. It reads a /etc/wpa_supplicant/wpa_supplicant-interface.conf configuration file.
+/etc/wpa_supplicant$ sudo ln -s /etc/wpa_supplicant.conf wpa_supplicant-wlan0.conf

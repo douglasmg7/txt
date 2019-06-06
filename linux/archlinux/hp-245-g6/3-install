@@ -1,35 +1,8 @@
-# Enable 32 and 64 archlinux - uncomment the following lines from file:
-/etc/pacman.conf
-  [multilib]
-  Include = /etc/pacman.d/mirrorlist
-
-# Create a new user.
-$ useradd -m -g users -G wheel,storage,power -s /bin/bash <username>     
-  -m create home directory
-  -g defines the group name
-  -G list of supplementary groups which the user is also member
-  -s default login shell
-
-# Password.
-$ passwd <username>
-
-# Permit user to use sudo command, change the file:
-$ visudo
-/etc/sudoers
-  username ALL=(ALL) ALL
-# Test the sudo first, if not work try the adm.
-usermod -aG sudo username
-usermod -aG adm username
-
-# Console font.
-$ pacman -S terminus-font
-# Create or change the file:
-/etc/vconsole.conf
-  FONT=ter-216n.psf.gz
-  FONT_MAP=8859-2
-
 # xclip.
 $ pacman -S xclip
+
+# Screensaver.
+$ pacman -S cmatrix
 
 # Battery status.
 $ pacman -S acpi
@@ -57,7 +30,6 @@ $ systemctl enable sshd
 $ systemctl start sshd
 
 # Git.
-$ pacman -S git
 $ git config --global user.name "Han Solo"
 $ git config --global user.email "hansolo@gmail.com"
 $ git config --global core.editor sublime
@@ -65,7 +37,6 @@ $ git config --global core.editor sublime
 # dotfiles and reference txt
 $ cd ~
 $ git clone https://github.com/douglasmg7/dotfiles.git
-$ git clone https://github.com/douglasmg7/txt.git
 
 # Tmux.
 $ pacman -S tmux    # install tmux
@@ -243,3 +214,9 @@ $ reboot now
 
 todo
 verify who is setting xterm-256color
+/etc/default/grub
+  GRUB_TIMEOUT=0
+# Change the file to make grub not wait.
+
+grub-mkconfig -o /bood/grub/grub.cfg
+# Remember that grub.cfg has to be re-generated after any change to /etc/default/grub or files in /etc/grub.d/.

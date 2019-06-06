@@ -1,0 +1,37 @@
+# Add a network.
+$ sudo wpa_cli
+> status
+> list_network
+> scan
+> scan_result
+> add_network
+> set_network 0 ssid "caliant"
+> set_network 0 psk "ulaula"
+> enable_network 0
+> set update_config=1
+> save_config
+> quit
+
+# Select a specific network.
+> list_network
+> select_network 0
+
+# List interfaces.
+> interface
+
+# List configuration variables.
+> dump
+
+> enable_network
+> disable_network
+
+# Remove network.
+> remove_network
+
+# Disconnect.
+> disconnect
+
+# Connect.
+> connect
+
+
