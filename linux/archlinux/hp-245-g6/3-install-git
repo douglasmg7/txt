@@ -1,8 +1,3 @@
-# Enable 32 and 64 archlinux - uncomment the following lines from file:
-/etc/pacman.conf
-  [multilib]
-  Include = /etc/pacman.d/mirrorlist
-
 # Create a new user.
 $ useradd -m -g users -G wheel,storage,power -s /bin/bash <username>     
   -m create home directory
@@ -243,3 +238,9 @@ $ reboot now
 
 todo
 verify who is setting xterm-256color
+/etc/default/grub
+  GRUB_TIMEOUT=0
+# Change the file to make grub not wait.
+
+grub-mkconfig -o /bood/grub/grub.cfg
+# Remember that grub.cfg has to be re-generated after any change to /etc/default/grub or files in /etc/grub.d/.

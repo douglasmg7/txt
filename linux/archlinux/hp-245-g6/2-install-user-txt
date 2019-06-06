@@ -1,0 +1,33 @@
+# Set grub to not wait - 
+# Edit line GRUB_TIMEOUT on file "/etc/default/grub".
+  GRUB_TIMEOUT=0
+
+# Remember that grub.cfg has to be re-generated after any change to /etc/default/grub or files in /etc/grub.d/.
+$ grub-mkconfig -o /bood/grub/grub.cfg
+
+# Create a new user.
+# -m create home directory
+# -g defines the group name
+# -G list of supplementary groups which the user is also member
+# -s default login shell
+$ useradd -m -g users -G wheel,storage,power -s /bin/bash <username>     
+
+# Password.
+$ passwd <username>
+
+# Grant perimition to use the sudo command.
+# Use the command visudo, it will change the file "/etc/sudoers".
+# Uncomment the line "%wheel ALL=(ALL) ALL"
+$ visudo
+
+# Console font.
+$ pacman -S terminus-font
+# Create or change the file:
+/etc/vconsole.conf
+  FONT=ter-216n.psf.gz
+  FONT_MAP=8859-2
+
+# Git and txt files.
+$ pacman -S git
+$ cd ~
+$ git clone https://github.com/douglasmg7/txt.git
