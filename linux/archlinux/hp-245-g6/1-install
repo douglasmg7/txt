@@ -78,15 +78,7 @@ $ fdisk -l
 $ lsblk -f
 $ blkid
 
-# Create partition (BIOS with MBR).
-# Root partition, /dev/sda1, as primary bootable with size +50G and ext4 formatted (83-Linux)
-# Swap partition, /dev/sda2, as primary with size +8G (2xRAM size) (82-Linux swap).
-# Logical partition, Home, /dev/sda5, rest of the space and ext4 formatted.
-# Chose sda1 to be bootable - a options.
-# Chose sda2 to be swap - t option, select 82.
-$ fdisk /dev/sda   
-
-# Create partition (UEFI with GPT).
+# Create partition (UEFI with GPT) without Windows.
 # UEFI booting does not involve any "boot" flag.
 # /boot or /efi,  /dev/sda1, primary, +512M, ext4 (83-Linux)
 # /,              /dev/sda2, logical, +50G,  ext4 (83-Linux)
@@ -150,29 +142,29 @@ locale-gen
 # Change or create.
 /etc/locale.conf
   LANG=en_US.UTF-8
+  LANG=en_US ISO-8859-1
+  LANG=pt_BR.UTF-8 UTF-8
+  LANG=pt_BR ISO-8859-1
 
 # Change or create.
 /etc/hostname
-  myhostname
+  lyptus
 
 passwd    # change root password
 
 # edit the file:
 /etc/hostname
-# my_hostname
+# lyptus
 
 # Edit hosts if necessafy.
 /etc/hosts
-# 127.0.0.1        localhost.localdomain         localhost
-# ::1              localhost.localdomain         localhost
-# 127.0.1.1        myhostname.localdomain        myhostname
+# 127.0.0.1        localhost
 
 systemctl enable dhcpcd   # make network connections persistent
 
 # grub installation
 pacman -S grub efibootmgr
-grub-install --target=x86_64-efi --efi-directory=esp --bootloader-id=GRUB
-grub-install --target=x86_64-efi --efi-directory=efi/EFI --bootloader-id=GRUB
+grub-install --target=x86_64-efi --efi-directory=efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
 $ pacman -S wireless_tools wpa_supplicant dialog
