@@ -1,14 +1,11 @@
 # Use AUR.
 # pacman -S mongodb mongodb-tools
+# Enable mongodb.
+# systemctl enable mongodb
+# systemctl start mongodb
 
-# Git configuration.
-git config --global user.name "Douglas Gomes"
-git config --global user.email "douglasmg7@gmail.com"
-git config --global core.editor vi
-
-# dotfiles.
-cd ~
-git clone https://github.com/douglasmg7/dotfiles.git
+echo "Cloning dotfiles..."
+cd ~ && git clone https://github.com/douglasmg7/dotfiles.git
 
 # tmux configuration.
 $ ln -s dotfiles/tmux.conf .tmux.conf
@@ -35,18 +32,6 @@ $ pacman -S python-neovim
 # Node.
 # curl -L https://git.io/n-install | bash
 
-# Enable mongodb.
-# systemctl enable mongodb
-# systemctl start mongodb
-
-# Install redis on archlinux (6379 - default port).
-# Enable redis
-# systemctl enable redis
-# systemctl start redis
-
-# youtube download.
-# pacman -S youtube-dl
- 
 # Display server.
 pacman -S xorg xorg-server    
 

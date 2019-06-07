@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-# Git configuration.
-git config --global user.name "Douglas Gomes"
-git config --global user.email "douglasmg7@gmail.com"
-git config --global core.editor vi
