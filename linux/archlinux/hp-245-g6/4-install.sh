@@ -37,63 +37,67 @@ makepkg -fi
 # printf("\nInstalling Unicode rxvt - terminal emulator..."
 # sudo pacman -S urxvt --noconfirm
 
-# Termite - terminal emulator
-# pacman -S termite
+# printf("\nInstalling Termite - terminal emulator..."
+# sudo pacman -S termite --noconfirm
 
-# Xserver config file.
-~/.xserverrc
-  #!/bin/sh
-  exec /usr/bin/Xorg -nolisten tcp "$@" vt$XDG_VTNR
+printf "Creating Xserver config file..." 
+car > ~/.xserverrc << EOF
+#!/bin/sh
+exec /usr/bin/Xorg -nolisten tcp "$@" vt$XDG_VTNR
+EOF
 
-# .xinitrc conig file.
+printf "Creating symbolic link for .xinitrc..."
 $ ln -s ~/dotfiles/xinitrc ~/.xinitrc
-# Or
-$ cp /etc/X11/xinit/xinitrc ~/.xinitrc
 
 # .Xresources
+printf "Creating symbolic link for .Xresources..."
 $ ln -s ~/dotfiles/Xresources ~/.Xresources
 
+printf "\nInstalling xserver fonts..."
+sudo pacman -S ttf-dejavu ttf-inconsolata --noconfirm
+
 # Start xserver using ~/.xinitrc.
-$ startx    
+# startx    
 
 # Start xserver using a dwm windows manager, not using ~/.xinirc.
-$ startx /usr/bin/dwm   
+# startx /usr/bin/dwm   
 
 # Quit xserver.
-$ pkill -15 Xorg
+# pkill -15 Xorg
 
 # install atom
-$ pacman -S atom
+# pacman -S atom
 # Create symbolic link for files in ~/dotfiles/atom in ~/.atom.
 # Install atom packages.
-$ apm install --packages-file ~/.atom/package.list    
+# apm install --packages-file ~/.atom/package.list    
 
 # Install browsers.
-$ pacman -S firefox
-$ pacman -S flashplugin
+printf "\nInstalling Firefox..."
+sudo pacman -S firefox flashplugin --noconfirm
 # If flash sound not work.
-$ pacman -S libvdpau-va-gl
-$ pacman -S chromium
+# pacman -S libvdpau-va-gl
+# pacman -S chromium
 
-# Install xserver fonts.
-$ pacman -S ttf-dejavu ttf-inconsolata
 
-# Install file manager.
-$ pacman -S pcmanfm
+# File manager.
+printf "\nInstalling file manager..."
+sudo pacman -S pcmanfm --noconfirm
 
 # Pdf readers.
-$ pacman -S evince
-$ pacman -S mupdf
-$ pacman -S apvlv
+printf "\nInstalling pdf readers..."
+sudo pacman -S evince mupdf apvlv --noconfirm
 
 # Image viewer
-$ pacman -S feh
+printf "\nInstalling image viewer..."
+sudo pacman -S feh --noconfirm
 
 # alsamixer and mixer.
-$ pacman -S alsa-utils
+printf "\nInstalling alsamixer and mixer..."
+sudo pacman -S alsa-utils --noconfirm
 
 # Sound server.
-$ pacman -S pulseaudio pulseaudio-alsa
+printf "\nInstalling sound server..."
+sudo pacman -S pulseaudio pulseaudio-alsa --noconfirm
 
 # Pulse audio interface (gui).
 $ pacman -S pavucontrol
