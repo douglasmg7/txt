@@ -209,8 +209,3 @@ $ pacman -S terminus-font
 # Create or change the file "/etc/vconsole.conf"
 #   FONT=ter-216n.psf.gz
 #   FONT_MAP=8859-2
-
-# Install git and clone txt files.
-$ pacman -S git
-$ cd ~
-$ git clone https://github.com/douglasmg7/txt.git
