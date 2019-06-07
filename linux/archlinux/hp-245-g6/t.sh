@@ -10,5 +10,7 @@ printf "\nCreating symbolic link to git configuration file..."
 ln -s ~/dotfiles/gitconfig ~/.gitconfig
 
 printf "\nInstalling moc player..."
-sudo pacman -S mocp --noconfirm
+sudo pacman -S moc --noconfirm
+printf "\nCreating symbolic link to mocp configuration file..."
+mkdir -p ~/.moc
 ln -s ~/dotfiles/moc/config ~/.moc/config
