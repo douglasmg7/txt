@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 echo "Set maximum space for log files..."
 sudo journalctl --vacuum-size=100M
 
