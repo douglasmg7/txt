@@ -8,7 +8,7 @@ ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 
 printf "\nInstalling vim..."
 # sudo pacman -S vim --noconfirm
-printf "\nSet vim configuration..."
+printf "\n\nSetting vim configuration..."
 mkdir -p ~/.vim && mkdir -p ~/.vim/bundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ln -s ~/dotfiles/vimrc ~/.vimrc
@@ -16,7 +16,7 @@ vim +PluginInstall +q +q
 
 printf "\nInstalling neovim..."
 # sudo pacman -S neovim --noconfirm
-printf "\nSet neovim configuration..."
+printf "\n\nSetting neovim configuration..."
 mkdir -p ~/.config/nvim
 ln -s ~/dotfiles/nvim/init.vim ~/.config/nvim/init.vim
 sudo pacman -S python-neovim --noconfirm
