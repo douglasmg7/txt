@@ -4,10 +4,10 @@ echo "Set maximum space for log files..."
 sudo journalctl --vacuum-size=100M
 
 echo "Installing xclip..."
-sudo pacman -S xclip 
+sudo pacman -S xclip --noconfirm
 
 echo "Installing screen saver..." 
-sudo pacman -S cmatrix 
+sudo pacman -S cmatrix --noconfirm
 
 echo "Installing acpi for battery status..."
 sudo pacman -S acpi --noconfirm
@@ -33,9 +33,6 @@ sudo pacman -S vim --noconfirm
 echo "Installing neovim..."
 sudo pacman -S neovim --noconfirm
 
-echo "Installing mongodb and tools..."
-sudo pacman -S mongodb mongodb-tools --noconfirm
-
 echo "Installing redis..."
 sudo pacman -S redis --noconfirm
 
@@ -49,5 +46,5 @@ echo "Installing ssh client..."
 sudo pacman -S openssh --noconfirm
 
 echo "Enabling ssh server..."
-systemctl enable sshd
-systemctl start sshd
+sudo systemctl enable sshd
+sudo systemctl start sshd
