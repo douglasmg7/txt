@@ -9,9 +9,8 @@ sudo pacman -S xorg-init --noconfirm
 printf "\nCreating AUR directory..."
 mkdir -p ~/aur
 
-cd ~/aur
 printf "\nCloning dwm (Dynamic Windows Manager)..."
-git clone https://aur.archlinux.org/dwm-git.git
+git clone https://aur.archlinux.org/dwm-git.git ~/aur/dwm-git
 cd ~/aur/dwm-git
 printf "\nCompiling dwm..."
 makepkg -si
@@ -20,9 +19,8 @@ ln -s ~/dotfiles/dwm/config.h ~/aur/dwm-git/src/dwm/config.h
 printf "\nRecompiling dwm with new configuration file..."
 makepkg -fi
 
-cd ~/aur
 printf "\nCloning st (Simple terminal)..."
-git clone https://aur.archlinux.org/st-git.git
+git clone https://aur.archlinux.org/st-git.git ~/aur/st-git
 cd ~/aur/st-git
 printf "\nCompiling st..."
 makepkg -si
@@ -99,44 +97,36 @@ sudo pacman -S alsa-utils --noconfirm
 printf "\nInstalling sound server..."
 sudo pacman -S pulseaudio pulseaudio-alsa --noconfirm
 
-# Pulse audio interface (gui).
-$ pacman -S pavucontrol
+printf "\nInstalling pulse audio interface (cli)..."
+sudo pacman -S pamixer --noconfirm
 
-# Pulse audio interface (cli).
-$ pacman -S pamixer
+printf "\nInstalling pulse audio interface (gui)..."
+sudo pacman -S pavucontrol --noconfirm
 
-# mpg123
-$ pacman -S mpg123
+printf "\nInstalling mpg124..."
+sudo pacman -S mpg123 --noconfirm
 
-# Mplayer
-$ pacman -S mplayer
+printf "\nInstalling mplayer..."
+sudo pacman -S mplayer --noconfirm
 
-# To play encrypted DVDs, you must install the libdvd* packages.
-$ pacman -S libdvdread libdvdcss libdvdnav
+# printf "\nInstalling libs to play encrypted DVDs..."
+# sudo pacman -S libdvdread libdvdcss libdvdnav --noconfirm
 
-# Cdparanoia (cd ripper)
-$ pacman -S cdparanoia
+# printf "\nInstalling cdparanoia (cd ripper)..."
+# sudo pacman -S cdparanoia --noconfirm
 
-# unrar.
-$ pacman -S unrar
+printf "\nInstalling unrar..."
+sudo pacman -S unrar --noconfirm
 
-# unzip.
-$ pacman -S unzip
+printf "\nInstalling unzip..."
+sudo pacman -S unzip --noconfirm
 
-# mkfs.vfat.
-$ pacman -S dosfstools
+printf "\nInstalling mkfs.vfat..."
+sudo pacman -S dosfstools --noconfirm
 
-# mtp (media transfer protocol) to connect to Android phone.
-$ mkdir -p ~/aur && cd ~/aur && git clone https://aur.archlinux.org/simple-mtpfs.git
-$ makepkg -si
-$ reboot now
-
-
-todo
-verify who is setting xterm-256color
-/etc/default/grub
-  GRUB_TIMEOUT=0
-# Change the file to make grub not wait.
-
-grub-mkconfig -o /bood/grub/grub.cfg
-# Remember that grub.cfg has to be re-generated after any change to /etc/default/grub or files in /etc/grub.d/.
+printf "Cloning simple-mtpfs, mtp (media transfer protocol) to connect to Android phone..."
+git clone https://aur.archlinux.org/simple-mtpfs.git ~/aur/simple-mtpfs.git
+cd ~/aur/simple-mtpfs
+printf "\nInstalling simple-mtpfs..."
+makepkg -si
+# reboot now

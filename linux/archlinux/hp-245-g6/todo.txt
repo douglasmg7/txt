@@ -1,0 +1,2 @@
+todo
+verify who is setting xterm-256color
