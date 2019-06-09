@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
 
-printf "Creating Xserver config file..." 
+printf "\nCreating Xserver config file...\n" 
 cat > ~/.xserverrc << EOF
 #!/bin/sh
-exec /usr/bin/Xorg -nolisten tcp "$@" vt$XDG_VTNR
+exec /usr/bin/Xorg -nolisten tcp "\$@" vt\$XDG_VTNR
 EOF
 
-printf "Creating symbolic link for .xinitrc..."
+printf "\nCreating symbolic link for .xinitrc...\n"
 ln -s ~/dotfiles/xinitrc ~/.xinitrc
 
 # .Xresources
-printf "Creating symbolic link for .Xresources..."
+printf "\nCreating symbolic link for .Xresources...\n"
 ln -s ~/dotfiles/Xresources ~/.Xresources
