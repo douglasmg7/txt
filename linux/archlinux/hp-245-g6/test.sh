@@ -1,15 +1,11 @@
 #!/usr/bin/env bash
 
+printf "\nCreating symbolic link to dwm configuration...\n"
+ln -s ~/dotfiles/dwm/config.h ~/aur/dwm-git/src/dwm/config.h
+printf "\nRecompiling dwm with new configuration file...\n"
+makepkg -fi
 
-printf "\nCreating Xserver config file...\n" 
-cat > ~/.xserverrc << EOF
-#!/bin/sh
-exec /usr/bin/Xorg -nolisten tcp "\$@" vt\$XDG_VTNR
-EOF
-
-printf "\nCreating symbolic link for .xinitrc...\n"
-ln -s ~/dotfiles/xinitrc ~/.xinitrc
-
-# .Xresources
-printf "\nCreating symbolic link for .Xresources...\n"
-ln -s ~/dotfiles/Xresources ~/.Xresources
+printf "\nCreating symbolic link to st configuration...\n"
+ln -s ~/dotfiles/st/config.h ~/aur/st-git/src/st/config.h
+printf "\nRecompiling st with new configuration file...\n"
+makepkg -fi

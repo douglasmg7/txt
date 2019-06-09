@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
 
+printf "\nInstalling video driver...\n"
+sudo pacman -S xf86-video-intel --noconfirm
+
 printf "\nInstalling display server..."
 sudo pacman -S xorg xorg-server --noconfirm
 
 printf "\nInstalling Xstart..."
-sudo pacman -S xorg-init --noconfirm 
+sudo pacman -S xorg-xinit --noconfirm 
 
 printf "\nCreating AUR directory..."
 mkdir -p ~/aur
@@ -38,17 +41,17 @@ makepkg -fi
 # printf("\nInstalling Termite - terminal emulator..."
 # sudo pacman -S termite --noconfirm
 
-printf "Creating Xserver config file..." 
+printf "\nCreating Xserver config file...\n" 
 cat > ~/.xserverrc << EOF
 #!/bin/sh
-exec /usr/bin/Xorg -nolisten tcp "$@" vt$XDG_VTNR
+exec /usr/bin/Xorg -nolisten tcp "\$@" vt\$XDG_VTNR
 EOF
 
-printf "Creating symbolic link for .xinitrc..."
+printf "\nCreating symbolic link for .xinitrc...\n"
 ln -s ~/dotfiles/xinitrc ~/.xinitrc
 
 # .Xresources
-printf "Creating symbolic link for .Xresources..."
+printf "\nCreating symbolic link for .Xresources...\n"
 ln -s ~/dotfiles/Xresources ~/.Xresources
 
 printf "\nInstalling xserver fonts..."
@@ -129,4 +132,5 @@ git clone https://aur.archlinux.org/simple-mtpfs.git ~/aur/simple-mtpfs.git
 cd ~/aur/simple-mtpfs
 printf "\nInstalling simple-mtpfs..."
 makepkg -si
+
 # reboot now
