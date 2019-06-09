@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+
 printf "Creating Xserver config file..." 
 cat > ~/.xserverrc << EOF
 #!/bin/sh
