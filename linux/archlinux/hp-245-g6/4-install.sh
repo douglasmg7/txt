@@ -39,17 +39,17 @@ makepkg -fi
 # sudo pacman -S termite --noconfirm
 
 printf "Creating Xserver config file..." 
-car > ~/.xserverrc << EOF
+cat > ~/.xserverrc << EOF
 #!/bin/sh
 exec /usr/bin/Xorg -nolisten tcp "$@" vt$XDG_VTNR
 EOF
 
 printf "Creating symbolic link for .xinitrc..."
-$ ln -s ~/dotfiles/xinitrc ~/.xinitrc
+ln -s ~/dotfiles/xinitrc ~/.xinitrc
 
 # .Xresources
 printf "Creating symbolic link for .Xresources..."
-$ ln -s ~/dotfiles/Xresources ~/.Xresources
+ln -s ~/dotfiles/Xresources ~/.Xresources
 
 printf "\nInstalling xserver fonts..."
 sudo pacman -S ttf-dejavu ttf-inconsolata --noconfirm
