@@ -1,13 +1,31 @@
-# create a file
+# Create a file
 mkdir /media/external
 
-# mount fat
+# Mount fat
 mount -t vfat /dev/sdb1 /media/external -o uid=1000,gid=1000,utf8,dmask=027,fmask=137
 
-# mount ntfs
+# Mount ntfs
 sudo mount -t ntfs-3g /dev/sdb1 /media/external
 
-# unmount
+# Mount a iso file.
+sudo mount /path/to/image.iso /mnt/iso -o loop
+
+# Unmount
+umount <device>
 umount /dev/sdb1
-# or
+# Or
+umount <dir>
 umount /media/external
+
+# Unmount a busy file system as soon as it is not busy anymore.
+umount -l <dir>
+
+# Display all currently attached file systems.
+mount
+
+# Display all currently attached file systems with type t.
+mount -t ext4
+
+# Mount device or directory using what is defined on "/etc/fstab".
+mount <device>
+mount <dir>

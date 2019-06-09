@@ -16,16 +16,6 @@ GID   # group id - /etc/group is like /etc/passwd
 /etc/group 	  Defines the groups to which users belong    name:password:GID:members
 /etc/sudoers 	List of who can run what by sudo
 
-chmod 777 _filename   # change permission
-
-chmod [ugoa][+-][rwxXstugo] _filename_    # change permission
-chmod u+x _filename
-  u - owner
-  g - group
-  o - other
-  a - all abovehttps://www.google.com.br/search?q=gshadow+vs+group&ie=utf-8&oe=utf-8&client=firefox-b-ab&gws_rd=cr&ei=OxMLWdChCMeMwwSw8ZmYCQ
-  -h no derefereence mode (change symbolic link)
-
 chown owner.group _filename_    # change owner and group for file_name
 
 useradd -D    # show system default
@@ -50,20 +40,6 @@ usermod -G groupname username   # add user to more one group
 	-U unlocks the account
 	-p change the password (avoid this, use passwd)
   -aG add user to supplementary group(s). use only with the -G option
-
-file permission symbols
-	- for files
-	d for directories
-	l for links
-	c for character devices
-	b for block device
-	n for network devices
-
-	r for read
-	w for write
-	x for execute
-
-	owner - group - everyone
 
 umask   # shows the default permissions
 umask 022

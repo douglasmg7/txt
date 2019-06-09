@@ -1,3 +1,8 @@
+# To list a file.
+$ tar --list --file <filename>
+$ tar -tf <filename>
+$ tar tf <filename>
+
 # To create a tar.gz archive from a given folder. 
 $ tar -zcvf tar-archive-name.tar.gz source-folder-name
 
@@ -9,4 +14,3 @@ tar -pcvzf tar-archive-name.tar.gz source-folder-name
 
 # To extract a tar.gz compressed archive and preserver permissions.
 tar -pxvzf tar-archive-name.tar.gz 
-

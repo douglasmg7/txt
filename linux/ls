@@ -1,0 +1,21 @@
+# ls - list directory content.
+
+# List directory with several information.
+$ ls -l
+-rw-r--r-- 1 douglasmg7 douglasmg7    35 out 18  2018 acpi
+
+File permission symbols.
+	- for files
+	d for directories
+	l for links
+	c for character devices
+	b for block device
+	n for network devices
+
+File permission code for owner, group and everyone.
+	r for read
+	w for write
+	x for execute
+
+[file permission symbols][Owner][Group][Everyone] [Number of hard links][Owner][Group][size][Last datetime modification]
+

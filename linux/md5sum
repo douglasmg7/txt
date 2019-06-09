@@ -1,0 +1,10 @@
+# To compute the sum of a single file:
+$ md5sum <file>
+# Verifiy the output against the expected value.
+# <c-c> on output value, <c-f> <c-f> o webpage with the expected checksum value.
+
+# If the software provide an md5sums files which has a list of filename, checksum pairs, than you can run:
+md5sum -c <md5sums-file>
+# which will look in your local system for every file listed in the <md5sums-file>, compute its checksum, and
+# report an error if it is not the expected value.
+

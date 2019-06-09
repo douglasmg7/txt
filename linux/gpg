@@ -1,3 +1,13 @@
+# Some software providers sign archive files instead of (or as well as) providing as md5 checksum.
+# In this case you should:
+#   Download the provider's publick key from their website (using https where possible)
+#   Download the "signature file" for the archive-file; this will be a small file which has the same base name as the downloaded file, with suffix ".sig" or ".asc"
+#   Perform the following steps
+$ gpg --import <publick-key>
+$ gpg --verify <signature-file-name>
+# The verify setp decrypts the signature-file, revealing a checksum;
+# It will runs a checksum algorithm over a real file and check that they are the same.
+
 # checking for existing GPG keys
 $ gpg --list-secret-keys --keyid-format LONG
 

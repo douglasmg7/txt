@@ -1,14 +1,40 @@
-make test
-to create test from test.c (cc test.c -o test)
+# Patching.
+# Sometimes the downloaded software is known not to work in your enviornment, and somebody has alredy figured out how
+# to tweak it to resolve the problem. The person who solved the problem may publish their "tweak" in the form of a
+# sed or awk command, a shell script containing multiple sed/awk commands, or a patch file. Obviously, you need to
+# be cautious about such changes, applying them only if you trust the source or have the ability to double-check the 
+# changes.
 
-CFLAGS="-Wall" make ex1
-using cflags option only durant the command
+# A patchfile is created by using a "diff" tool to compare two versions of the same file and output the differences.
+# The patch tool can take the output of "diff" and apply it to one of the files to "convert it" to the other version.
+# The nice thing about patchfiles (ie the output of diff) is that is quite human-readable, ie it is reasonably easy
+# to see what changes will be made.
 
-export CFLAGS="-Wall"
-using for all commands into shell session
+# Prcess to compile and install a program from source.
+# Unpack and read documentation.
+$ tar xf <filename>
+$ cd <dir created by above step>
+$ less README
+$ less INSTALL
+# Generate customised makefile.
+$ ./configure <some options>  # or cmake.
+# Compile everything in the local directory.
+$ make
+# Update global directories.
+$ sudo make install
 
-CFLAGS=-Wall -g
-report all warnings and debug
 
-Makefile
-file used by make command
+# To create test from test.c (will execute "cc test.c -o test").
+$ make test
+
+# Report all warnings and debug.
+$ CFLAGS=-Wall -g
+
+# Using cflags option only durant the command (using environment variable).
+$ CFLAGS="-Wall" make ex1
+
+# Using for all commands into shell session.
+$ export CFLAGS="-Wall"
+
+# File name used by command make.
+"Makefile"

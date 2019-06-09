@@ -1,0 +1,20 @@
+# chmod - change file mode bits.
+
+# Change file permission; add execute permission to the file owner.
+chmod u+x <filename>
+
+# Set file permission.
+chmod u=rwx,g=rx,o=r <filename>
+
+# chmod [ugoa][+-][rwxXstugo] <filename>    
+  u - owner
+  g - group
+  o - other
+  a - all above
+
+  r - read,
+  w - write,
+  x - execute,
+  X - ?,
+  s - ?,
+  t - stick (can't delete),

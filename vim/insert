@@ -5,5 +5,7 @@ C   c$ - Delete to the end and go to insert mode.
 s   cl - Delete char and go to insert mode.
 S   ^C - Delete line and go to insert mode.
 
+<c-w> - Delete back word.
+
 <c-n> - next omni completion.
 <c-x> - omni completion options.
