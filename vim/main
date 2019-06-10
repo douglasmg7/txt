@@ -95,15 +95,6 @@ U   return the last line which was modified to its original state (reverse all c
 :reg
 access all currently defined registers
 
-"ay - copy o texto selecionado para o registro a
-"ap - paste o texto do registro a
-"+y - copy to clipboard
-"+x - cut from clipboard
-"+p - paste from clipboard
-"* - system clipboard
-"+ - system clipboard
-": - last comand
-
 :so %
 :so $MYVIMRC
 reload .vimrc
