@@ -1,0 +1,12 @@
+# lspci - list all PCI devices.
+# lspci is a utility for displaying information about PCI buses in the system and devices connecte to them.
+
+# Show a tree-liked diagram containing all buses, bridges, devices and connections between them.
+$ lspci -t
+
+# Be verbose and display detailed information about all devices.
+$ lspci -v
+
+# Show kernel drivers handling each device and also kernel modules capable of handling it.
+$ lspci -k
+
