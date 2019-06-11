@@ -1,23 +1,43 @@
 #!/usr/bin/env bash
 
-printf "\nSet maximum space for log files..."
+printf "\nSet maximum space for log files...\n"
 sudo journalctl --vacuum-size=100M
 
-printf "\nInstalling git..."
+printf "\nSarting/enabling datetime sync...\n"
+sudo systemctl start systemd-timesyncd.service
+sudo systemctl enable systemd-timesyncd.service
+
+printf "\nInstalling git...\n"
 sudo pacman -S git --noconfirm
 
-printf "\nCloning txt..."
+printf "\nCloning txt...\n"
 git clone https://github.com/douglasmg7/txt.git ~/txt
 
-printf "\nCloning dotfiles..."
+printf "\nCloning dotfiles...\n"
 git clone https://github.com/douglasmg7/dotfiles.git ~/dotfiles
 
-printf "\nCreating symbolic link to git configuration file..."
+printf "\nCreating symbolic link to git configuration file...\n"
 ln -s ~/dotfiles/gitconfig ~/.gitconfig
 # Git configuration.
 # git config --global user.name "douglasmg7"
 # git config --global user.email "douglasmg7@gmail.com"
 # git config --global core.editor vi
+
+# Installing aic94xx-firmware.
+mkdir -p ~/aur && cd ~/aur
+printf "Cloning aic94xx-firmware..."
+git clone https://aur.archlinux.org/aic94xx-firmware.git
+cd ~/aur/aic94xx-firmware
+printf "\nInstalling aic94xx-firmware..."
+makepkg -si
+
+# Installing aic94xx-firmware.
+cd ~/aur
+printf "Cloning wd719x-firmware..."
+git clone https://aur.archlinux.org/wd719x-firmware.git
+cd ~/aur/wd719x-firmware
+printf "\nInstalling wd719x-firmware..."
+makepkg -si
 
 printf "\nInstalling xclip..."
 sudo pacman -S xclip --noconfirm

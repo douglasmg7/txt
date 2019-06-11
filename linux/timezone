@@ -1,0 +1,22 @@
+# Check the time zone:
+$ timedatectl status
+
+# To list available zones:
+$ timedatectl list-timezones
+
+# To set your time zone:
+# timedatectl set-timezone Zone/SubZone
+# Example:
+$ timedatectl set-timezone Canada/Eastern
+
+# Adjust time and save dirft on "/etc/adjtime":
+$ hwclock
+
+# Ajust time using the drift value:
+$ hwclock --adjust
+
+# Get UTC time.
+$ hwclock -u
+
+# Get localtime.
+$ hwclock -l

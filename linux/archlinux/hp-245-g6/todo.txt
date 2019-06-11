@@ -1,2 +1,5 @@
 todo
 verify who is setting xterm-256color
+missing firmware for module
+aic94xx
+wd719x

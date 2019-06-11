@@ -60,6 +60,13 @@ sudo pacman -S ttf-dejavu ttf-inconsolata --noconfirm
 printf "\nInstalling dmenu..."
 sudo pacman -S dmenu --noconfirm
 
+# To show current wifi on dwm menu.
+printf "\nInstalling iw...\n"
+sudo pacman -S iw --noconfirm
+
+printf "\nINstalling slock..."
+sudo pacman -S slock --noconfirm
+
 # Keyboard layout setting (no needed, alredy on .xinitrc).
 # $ startx
 # List current config.
