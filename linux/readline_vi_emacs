@@ -1,0 +1,5 @@
+# Edit mode to emacs.
+$ set -o emacs
+
+# Edit mode to vi.
+$ set -o vi

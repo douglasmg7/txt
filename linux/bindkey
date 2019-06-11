@@ -1,5 +1,0 @@
-# Bind key to emacs to use ctrl+a, ctrl+e.
-$ bindkey -e
-
-# Bind key to vi to use esc 0, $.
-$ bindkey -v
