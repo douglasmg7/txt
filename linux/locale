@@ -1,0 +1,31 @@
+# List of enabled locales:
+$ locale -a
+# language[_territory][.codeset][@modifier]
+
+# To display the currently set locale and its related environmental settings, type: 
+$ locale
+
+# To generating locales.
+# Uncomment locales in "/etc/locale.gen", and run:
+$ sudo locale-gen
+
+# Set locale.
+$ localectl set-locale LANG=pt_BR.UTF8
+# Or set the file /etc/locale.conf
+#   LANG=pt_BR.UTF8
+
+# Get current configuration.
+$ localectl status
+
+# Get a list of keymaps.
+$ localectl list-keymaps
+
+$ localectl list-x11-keymap-models
+$ localectl list-x11-keymap-layouts
+$ localectl list-x11-keymap-variants [layout]
+$ localectl list-x11-keymap-options
+
+# Set configuration.
+# localectl set-x11-keymap layout [model [varint [options]]]
+$ sudo localectl set-x11-keymap br abnt2 
+$ sudo localectl set-x11-keymap br abnt2 latin9_nodeadkeys 

@@ -57,6 +57,17 @@ ln -s ~/dotfiles/Xresources ~/.Xresources
 printf "\nInstalling xserver fonts..."
 sudo pacman -S ttf-dejavu ttf-inconsolata --noconfirm
 
+printf "\nInstalling dmenu..."
+sudo pacman -S dmenu --noconfirm
+
+# Keyboard layout setting (no needed, alredy on .xinitrc).
+# $ startx
+# List current config.
+# $ setxkbmap -query
+# Set keyboard layout.
+# $ setxkbmap -model abnt2 -layout br -option
+# Blank option, so compose:ralt will not be setted.
+
 # Start xserver using ~/.xinitrc.
 # startx    
 
