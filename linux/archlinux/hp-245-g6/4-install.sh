@@ -64,8 +64,15 @@ sudo pacman -S dmenu --noconfirm
 printf "\nInstalling iw...\n"
 sudo pacman -S iw --noconfirm
 
-printf "\nINstalling slock..."
+printf "\nInstalling slock..."
 sudo pacman -S slock --noconfirm
+
+printf "\nInstalling libinput to set inputs like touchpad...\n"
+sudo pacman -S xf86-input-libinput --noconfirm
+# To config touchpad.
+# $ xinput list
+# $ xinput list-props device
+# $ xinput set-prop <device> <option-number> <setting>
 
 # Keyboard layout setting (no needed, alredy on .xinitrc).
 # $ startx
