@@ -102,6 +102,12 @@ cp ~/dotfiles/ssh/ssh-agent.service ~/.ssh/ssh-agent.service
 # todo - not working.
 systemctl --user enable ssh-agent.service
 
+printf "\nInstalling bluetoooth...\n..."
+sudo pacman -S bluez bluez-utils pulseaudio-bluetooth --noconfirm
+printf "\nStarting/Enabling bluetooth service...\n"
+sudo systemctl start bluetooth.service
+sudo systemctl enable bluetooth.service
+
 printf "\nInstalling vim..."
 # sudo pacman -S vim --noconfirm
 printf "\n\nSetting vim configuration..."
