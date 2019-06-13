@@ -22,6 +22,8 @@ ln -s ~/dotfiles/gitconfig ~/.gitconfig
 # git config --global user.name "douglasmg7"
 # git config --global user.email "douglasmg7@gmail.com"
 # git config --global core.editor vi
+# Set the cache to timeout after 10 hours (setting is in seconds).
+# git config --global credential.helper 'cache --timeout=36000'
 
 # Installing aic94xx-firmware.
 mkdir -p ~/aur && cd ~/aur
