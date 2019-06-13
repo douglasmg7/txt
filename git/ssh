@@ -9,6 +9,7 @@ $ eval "$(ssh-agent -s)"
 # Or.
 $ cp ~/dotfiles/ssh/ssh-agent.service /etc/systemd/user
 $ systemctl --user start ssh-agent.service
+$ systemctl --user enable ssh-agent.service
 
 # Add your ssh to the ssh-agent.
 $ ssh-add ~/.ssh/id_rsa
