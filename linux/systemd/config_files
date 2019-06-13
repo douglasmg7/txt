@@ -16,6 +16,9 @@
   /etc/systemd/system/
     # If you wish to modify the way that a unit functions, the best location to do.
     # Unit files found in this directory location take precedence over any of the other locations on the filesystem.
+
+# User specific service (systemctl --user start name.service).
+/etc/systemd/user/
   
   /run/systemd/system
     # Location for run-time unit definitions.
