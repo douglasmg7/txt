@@ -74,6 +74,16 @@ sudo pacman -S xf86-input-libinput --noconfirm
 # $ xinput list-props device
 # $ xinput set-prop <device> <option-number> <setting>
 
+printf "\nCreating touchpad config file...\n" 
+cat > /etc/X11/xorg.conf.d/30-touchpad.conf << EOF
+# Touchpad tapping enable.
+Section "InputClass"
+  Identifier "ETPS/2 Elantech Touchpad"
+	Driver "libinput"
+	option "Tapping" "on"
+EndSection
+EOF
+
 # Keyboard layout setting (no needed, alredy on .xinitrc).
 # $ startx
 # List current config.
