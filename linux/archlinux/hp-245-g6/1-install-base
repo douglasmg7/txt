@@ -32,6 +32,10 @@ https://wiki.archlinux.org/index.php/USB_flash_installation_media
 
 # Config computer to boot from usb.
 
+# To set linux param temporarily, press "e" when the menu shows up and add them on the linux line:
+# linux /boot/vmlinuz-linux root=UUID=97.... quite pci=nomsi
+# Use "pci=nomsi" param to avoid pcie error when turn the wifi on (ip link set dev wlo1 up).
+
 # Set the keyboard layout.
 # Find out a layout.
 $ ls /usr/share/kbd/keymaps/**/*.map.gz | grep br
@@ -182,9 +186,14 @@ reboot
 # Set the boot bios to grub in the computer bios
 # Press f10 on computer startup to enter in bios setup.
 
-# Set grub to not wait - 
+# Set grub to not wait.
 # Edit line GRUB_TIMEOUT on file "/etc/default/grub".
   GRUB_TIMEOUT=0
+
+# Set kernel param "pci=nomsi".
+# This is avoid the pice err from rtl8723be wireless card.
+# Edit the line GRUB_CMDLINE_LINUX_DEFAULT on file "/etc/default/grub".
+  GRUB_CMDLINE_LINUX_DEFAULT="quiet pci=nomsi"
 
 # Install intel ucode (grub-mkconfig will enable ucode automatically).
 $ sudo pacman -S intel-ucode
