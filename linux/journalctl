@@ -1,4 +1,13 @@
-journalctl - Query the systemd journal
+# journalctl - Query the systemd journal
+
+# How much disk space is currently taken up by the journal.
+$ journalctl --disk-usage
+
+# Delete any archived journal files so the journal size comes back to 100MB.
+$ sudo journalctl --vacuum-size=100M
+
+# Configuration.
+/etc/systemd/journald.conf
 
 <space>   Move down one page.
 b         Move up one page.
@@ -59,11 +68,7 @@ journalctl -u dbus.service
 # See all of the journal entries for the unit in question from the boot.
 journalctl -b -u dbus.service
 
-# See space used by log files.
-journalctl --disk-usage
 
-# Restric space used by log files.
-sudo journalctl --vacuum-size=100M
 
 
 

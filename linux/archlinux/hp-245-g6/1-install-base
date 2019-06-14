@@ -186,7 +186,10 @@ reboot
 # Edit line GRUB_TIMEOUT on file "/etc/default/grub".
   GRUB_TIMEOUT=0
 
-# Remember that grub.cfg has to be re-generated after any change to /etc/default/grub or files in /etc/grub.d/.
+# Install intel ucode (grub-mkconfig will enable ucode automatically).
+$ sudo pacman -S intel-ucode
+
+# Remember that grub.cfg has to be re-generated after any change to /etc/default/grub, files in /etc/grub.d/ and intel-ucode install.
 $ grub-mkconfig -o /bood/grub/grub.cfg
 
 # Create a new user.

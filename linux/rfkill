@@ -1,0 +1,8 @@
+# Many laptops have a dardware switch to turn off wireless card, however, the card can also be blocked by kernel.
+# This can be handled by rfkill.
+
+# To show current status.
+$ rfkill list
+
+# To soft unblock.
+$ rfkill unblock bluetooth
