@@ -39,8 +39,8 @@ $ sudo apt-get upgrade
 # Install node and npm using n node manage.
 $ curl -L https://git.io/n-install | bash
 
-# Install and use lts node version (8.11.4).
-$ n lts
+# Install node version in use. It was 10.15.0 version in 17 Jun 2019.
+$ n 10.15.0
 
 # Grant permission to node use ports <1024.
 $ sudo setcap cap_net_bind_service=+ep $(which node)
