@@ -60,8 +60,8 @@ $ mongo
 # example: "ExecStart=/usr/bin/mongod --auth --config /etc/mongod.conf"
 # reload systemd service
 $ sudo systemctl daemon-reload
-# restart mongodb
-$ sudo service mongodb restart
+# restart mongodb $ sudo service mongodb restart
+$ sudo systemctl restart mongodb
 # log into db
 $ mongo -u admin --authenticationDatabase admin -p
 # create user with backup privileges
