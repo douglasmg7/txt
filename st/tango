@@ -1,0 +1,35 @@
+/* Terminal colors (16 first used in escape sequence) */
+static const char *colorname[] = {
+
+	/* 8 normal colors */
+  "#2E3436",  // Black.
+  "#CC0000",  // Red.
+  "#4E9A06",  // Green.
+  "#C4A000",  // Yellow.
+  "#3465A4",  // Blue.
+  "#75507B",
+  "#06989A",
+  "#D3D7CF",
+
+	/* 8 bright colors */
+  "#555753",
+  "#EF2929",
+  "#8AE234",
+  "#FCE94F",
+  "#729FCF",
+  "#AD7FA8",
+  "#34E2E2",
+  "#EEEEEC",
+
+	[255] = 0,
+
+  "#FDF6E3",   // Background"
+  "#333333",   // Text"
+
+  "#555555",
+};
+
+unsigned int defaultfg = 257;
+unsigned int defaultbg = 256;
+static unsigned int defaultcs = 257;
+static unsigned int defaultrcs = 258;

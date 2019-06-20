@@ -49,3 +49,22 @@ bind C-a send-prefix
 /etc/locale.gen
   en_US.UTF-8 UTF-8
 > locale-gen
+
+# Reload config file.
+:source-file ~/.tmux.conf
+tmux source-file ~/.tmux.conf
+
+# close pane
+ctrl+d
+  
+# go to specific window
+ctrl+c 2
+  
+# detached from session
+prefix d
+
+# connect to session 0
+tmux attach -t
+
+# tmux ls
+list created sessions
