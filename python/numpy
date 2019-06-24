@@ -3,3 +3,50 @@ conda install numpy
 
 # Import.
 import numpy as np
+
+# Array from a list.
+np.array([0, 1, 2])
+
+# Matrix from lists.
+np.array([[1,2],[3,4]])
+
+# Array range 0 to 9.
+np.arange(0,10)
+
+# Array range with step of 2.
+np.arange(0,11,2)
+
+# Array of zeros.
+np.zeros(4)
+np.zeros((4,4))
+
+# Array of ones.
+np.ones(4)
+np.ones((4,4))
+
+# Identity matrix.
+np.eye(3)
+
+# Random from [0, 1).
+np.random.rand(2)
+
+# Random from a standard normal distribution.
+np.random.randn(2)
+
+# Random from ints [low, high) and number of items.
+np.random.randint(10, 1001, 20)
+
+# Reshape to a matrix.
+np.arange(0, 100, 1).reshape(10,10)
+
+# Array of 20 linearly spaced points between 0 and 1.
+np.linspace(0,1,20)
+
+# Max and min value and location or max and min.
+np.arange(20).min()
+np.arange(20).max()
+np.arange(20).argmin()
+np.arange(20).argmax()
+
+# Show array dimension.
+np.arange(20).shape()

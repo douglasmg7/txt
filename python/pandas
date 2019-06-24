@@ -1,0 +1,2 @@
+# Install pandas on specific enviorment.
+conda install pandas
