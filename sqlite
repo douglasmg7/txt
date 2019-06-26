@@ -22,7 +22,9 @@ sqlite3 db_name.db
 # Format output.
 > .header on
 > .mode column
+> .mode line
 > .time on
+> .output a.txt
 
 # Know if foreign keys is enabled
 > pragma foreign_keys;
