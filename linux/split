@@ -1,0 +1,16 @@
+# Split files.
+
+# Split by size.
+split -b 1M <filename>
+
+# Split by line numbers.
+split -l 100
+
+# Prefix.
+split -b 1M -d <filename> <prefix>
+
+# Example of split e join.
+split -l 1 <filename>
+# xaa xab ...
+cat x?? > <filename>
+

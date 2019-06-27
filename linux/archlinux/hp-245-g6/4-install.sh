@@ -113,6 +113,9 @@ sudo pacman -S firefox flashplugin --noconfirm
 # If flash sound not work.
 # pacman -S libvdpau-va-gl
 # pacman -S chromium
+printf "\nInstalling surf..."
+sudo pacman -S surf tabbed --noconfirm
+# To run with tab: $tabbed surf -e
 
 
 # File manager.
