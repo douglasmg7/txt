@@ -1,26 +1,26 @@
+# install media transfer protocol package.
 $ mkdir -p ~/aur && cd ~/aur && git clone https://aur.archlinux.org/simple-mtpfs.git
 $ makepkg -si
 $ reboot now
-# install media transfer protocol package.
 
-$ simple-mtpfs -l
 # List devices.
+$ simple-mtpfs -l
 
-$ simple-mtpfs --device 1 ~/mnt
 # Mount device with index 1 one ~/mnt.
+$ simple-mtpfs --device 1 ~/mnt
 
-$ fusermount -u ~/mnt
 # Unmount device mounted on ~/mnt.
+$ fusermount -u ~/mnt
 
 
-$ apt-get install lib32z1 lib32z1-dev lib32stdc++6 zliblg lib64z1
 # For errors.
-$ apt-get install gphotofs
+$ apt-get install lib32z1 lib32z1-dev lib32stdc++6 zliblg lib64z1
 # install media transfer protocol package.
+$ apt-get install gphotofs
 
 # Set mobile to Connect as Camera MTP or PTP.
-$ gphotofs ~/mobile
 # Mount device.
+$ gphotofs ~/mobile
 
 # Unmount.
 $ fusermount -u ~/mobile
