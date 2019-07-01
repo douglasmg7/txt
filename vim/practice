@@ -1,0 +1,5 @@
+# Insert the result of a command into the caret position.
+:r !ls
+
+# Insert the commad at end of buffer.
+:!ls>><filename>
