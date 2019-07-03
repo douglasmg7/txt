@@ -11,16 +11,13 @@ $ git branch -r
 # List all branchs.
 $ git remote show origin
 
-
 # Make the working directory and the HEAD match the specified branch.
 $ git checkout <branch_name>
 
-# Create a new branch and checkout.
+# create a branch and push.
 $ git checkout -b <branch_name>
-
-# create remote branch.
-$ git checkout -b <branch_name>
-$ git push origin <branch_name>
+$ git commit
+$ git push -u origin <branch_name>
 
 # Delete a branch.
 $ git branch -d <branch_name>
@@ -38,11 +35,6 @@ $ git remote prune origin
 # Merge a branch into the checked-out branch.
 $ git merge <branch_name>
   --no-ff no fast-forward merge (will be recursive merge)
-
-# create a branch and push.
-$ git checkout -b <new_branch>
-$ git commit
-$ git push -u origin <new_branch>
 
 # Reviewing a pull request.
 $ git fetch
