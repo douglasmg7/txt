@@ -3,3 +3,9 @@
 
 # Insert the commad at end of buffer.
 :!ls>><filename>
+
+# Get file type.
+:set filetype?
+
+# Set file type.
+:set filetype=html
