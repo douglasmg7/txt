@@ -1,0 +1,4 @@
+# To undo a git add before a commit.
+git reset <filename>
+# To unstage all changes.
+git reset
