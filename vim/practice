@@ -9,3 +9,6 @@
 
 # Set file type.
 :set filetype=html
+
+# Exit insert (paste).
+:set nopaste

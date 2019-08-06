@@ -1,0 +1,7 @@
+# Run script on same process as the calling script.
+. prog.sh
+. ./prog.sh
+source ./prog.sh
+
+# Exit script without close shell.
+return
