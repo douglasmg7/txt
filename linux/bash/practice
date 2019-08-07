@@ -5,3 +5,7 @@ source ./prog.sh
 
 # Exit script without close shell.
 return
+
+# Command substitution, backtick or $().
+# $() nests better.
+echo `id -u`

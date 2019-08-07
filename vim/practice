@@ -12,3 +12,9 @@
 
 # Exit insert (paste).
 :set nopaste
+
+# Jump to next "{".
+%
+
+# Select whole function at first line of the function.
+f{V%y
