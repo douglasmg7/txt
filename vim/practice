@@ -18,3 +18,18 @@
 
 # Select whole function at first line of the function.
 f{V%y
+
+# Auto ident. Format code. Remove trailing spaces from the cursor position to the end of the file.
+gg=G
+
+# Move to top of screen.
+H   
+
+# Move to middle of screen
+M
+
+# Move to bottom of screen
+L
+
+# Move to the first no blank charcter from begin of line.
+_
