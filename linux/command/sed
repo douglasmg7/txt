@@ -7,3 +7,6 @@ echo "este é um teset" | sed 's/teset/teste/'
 
 # using more than one command
 sed -e 's/brow/green/; s/dog/cat/' data1.txt
+
+# Using a file script.
+sed -f <scriptfile> <inputfile>
