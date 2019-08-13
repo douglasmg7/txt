@@ -33,3 +33,12 @@ L
 
 # Move to the first no blank charcter from begin of line.
 _
+
+
+# Format/ident json file.
+:%!jq .
+:%!jq
+
+# Pipes the current file's contents to command's stdin.
+:%! command
+# So, :%! sort is pretty much the same as (from a shell) cat file | sort.
