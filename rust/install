@@ -1,0 +1,26 @@
+# Intall rustup tool, which installs the latest stable verion of Rust.
+curl https://sh.rustup.rs -sSf | sh
+# Re-start shell to update PATH enviornment.
+
+# Uninstall Rust.
+rustup self uninstall
+
+# Update Rust to the latest version.
+rustup update
+
+# Rust compile verison.
+rustc --version
+
+# Read Rust documentation offline (open in the browser).
+rustup doc
+
+# Compile a main.rs with static linking and Rust runtime (bigger file).
+rustc main.rs
+# Force dynamically link and no Rust runtime included (much smaller executable file).
+rustc main.rs -C prefer-dynamic
+
+# Install rustfmt.
+rustup component add rustfmt --toolchain stable-x86_64-unknown-linux-gnu
+
+# Format a file.
+rustfmt filename.rs
