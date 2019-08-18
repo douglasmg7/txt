@@ -1,0 +1,5 @@
+# Compile and link.
+g++ -o <file> file.cpp
+
+# Console out.
+std::cout << "asdf";
