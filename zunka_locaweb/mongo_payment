@@ -1,0 +1,2 @@
+# Get approval payment.
+db.orders.find({_id: ObjectId("5d5d32525ae5400dcb7174da")}, {name: true, "payment.pppApprovalPayment": true }).pretty()
