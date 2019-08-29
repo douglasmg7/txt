@@ -1,2 +1,11 @@
 # Get approval payment.
 db.orders.find({_id: ObjectId("5d5d32525ae5400dcb7174da")}, {name: true, "payment.pppApprovalPayment": true }).pretty()
+
+# Get sale.state.
+db.orders.find({_id: ObjectId("5d640160e13a333bf162bdfa")}, { "payment.pppExecutePayment.transactions.related_resources.sale.state": 1 }).pretty()
+
+# Update sale.state.
+db.orders.update({_id: ObjectId("5d640160e13a333bf162bdfa")}, { "$set": {"payment.pppExecutePayment.transactions.0.related_resources.0.sale.state": "pending"} })
+
+# Update order.status.
+db.orders.update({_id: ObjectId("5d640160e13a333bf162bdfa")}, { "$set": {"status": "placed"} })

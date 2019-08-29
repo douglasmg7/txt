@@ -44,7 +44,7 @@ journalctl --dmesg
 journalctl -k -b -5
 
 # List boots.
-journactl --list-boots
+journalctl --list-boots
 # Go to specific boot.
 journalctl -b a09dce7b2c1c458d861d7d0f0a7c8c65
 
