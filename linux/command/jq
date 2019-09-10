@@ -1,0 +1,7 @@
+# JSON processor.
+
+# Install.
+sudo pacman -S jq
+
+# Site.
+https://github.com/stedolan/jq/
