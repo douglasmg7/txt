@@ -164,3 +164,9 @@ $ npm run build
 
 # Start server.
 $ npm start
+
+# Start on boot.
+$ pm2 startup
+# Run the script.
+# Save process list.
+$ pm2 save

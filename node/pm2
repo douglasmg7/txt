@@ -46,6 +46,7 @@ $ mp2 flush
 
 # Create a configuration into systemd to startup pm2.
 $ pm2 startup
+# When upgrading to newer Node.js version, update the PM2 startup script! Use pm2 unstartup first then pm2 startup again.
 
 # Save your process list with.
 $ pm2 save
@@ -55,3 +56,5 @@ $ pm2 cleardump
 
 # Disable startup system.
 $ pm2 unstartup
+$ pm2 unstartup systemd
+
