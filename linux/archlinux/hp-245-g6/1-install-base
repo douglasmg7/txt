@@ -100,7 +100,7 @@ $ fdisk /dev/sda
 # /home,          /dev/sda7, +160G,               20 Linux filesystem.
 $ fdisk /dev/sda   
 
-# Format EFI partition.
+ Format EFI partition.
 $ mkfs.fat -F32 /dev/sdax
 # Format root and home.
 $ mkfs.ext4 /dev/sdax   

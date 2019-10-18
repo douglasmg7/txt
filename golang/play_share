@@ -1,2 +1,5 @@
 # Replace repetead and blank character for " ".
 https://play.golang.org/p/rKaqa7XpyIT
+
+# Convert "123456789" to "1.234.567,89".
+https://play.golang.org/p/0N9pBh8yN7H
