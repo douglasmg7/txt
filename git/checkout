@@ -22,6 +22,9 @@ git checkout -- cats.html index.html
 # Retrive deleted local file if not commited yet.
 git checkout HEAD file_name
 
+# Remove all changes.
+git reset --hard
+
 # Undo last commit and all changes
 git reset --hard HEAD^
 
