@@ -9,7 +9,7 @@ go env
 
 # Create GOPATH into .bashrc or/and .zshrc.
 # This is where go keep the source and bin from installed packages.
-export $HOME/code/golang
+export GOPATH=$HOME/code/golang
 
 # Test yout installation.
 mkdir $GOPATH/src/hello && cd $_

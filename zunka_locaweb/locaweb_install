@@ -170,3 +170,60 @@ $ pm2 startup
 # Run the script.
 # Save process list.
 $ pm2 save
+
+# Install golang.
+$ cd ~
+$ wget https://dl.google.com/go/go1.13.3.linux-amd64.tar.gz
+$ sudo tar -C /usr/local -xzf go1.13.3.linux-amd64.tar.gz
+
+# Update .bashrc for golang path.
+# Golang tools (compiler).
+export PATH=$PATH:/usr/local/go/bin
+# Golang path.
+export GOPATH=$HOME/code/golang
+export PATH=$PATH:$GOPATH/bin
+# Dmg golang src.
+export GS=$GOPATH/src/github.com/douglasmg7
+# Zunka path.
+export ZUNKAPATH=~/.local/share/zunka
+
+# Check version.
+$ go version
+
+# Get golang repositories.
+go get github.com/douglasmg7/zunkasrv
+go get github.com/douglasmg7/aldowsc
+# s files.
+$ cd $GS/zunkasrv
+$ git secret reveal
+
+# Create init file "~/.local/share/zunka/config.toml".
+# Zunka configuration file.
+[all]
+env = "production"
+logDir = "log"
+dbDir = "db"
+listDir = "list"
+xmlDir = "xml"
+
+[zunkasrv]
+logFileName = "zunkasrv.log"
+dbFileName = "zunkasrv.db"
+port = "8080"
+
+[aldowsc]
+logFileName = "aldowsc.log"
+dbFileName = "aldowsc.db"
+minPrice = "500,00"
+maxPrice = "100.000,00"
+
+# Install sqlite3.
+$ sudo apt install sqlite3
+
+# Create dbs.
+$ $GS/zunkasrv/bin/db/create_db.sh
+$ $GS/aldowsc/bin/db/create_db.sh
+
+
+
+
