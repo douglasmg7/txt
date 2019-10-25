@@ -186,6 +186,8 @@ export PATH=$PATH:$GOPATH/bin
 export GS=$GOPATH/src/github.com/douglasmg7
 # Zunka path.
 export ZUNKAPATH=~/.local/share/zunka
+export ZUNKA_SRV_DB=zunkasrv.db
+export ZUNKA_ALDOWSC_DB=aldowsc.db
 
 # Check version.
 $ go version
@@ -197,33 +199,10 @@ go get github.com/douglasmg7/aldowsc
 $ cd $GS/zunkasrv
 $ git secret reveal
 
-# Create init file "~/.local/share/zunka/config.toml".
-# Zunka configuration file.
-[all]
-env = "production"
-logDir = "log"
-dbDir = "db"
-listDir = "list"
-xmlDir = "xml"
-
-[zunkasrv]
-logFileName = "zunkasrv.log"
-dbFileName = "zunkasrv.db"
-port = "8080"
-
-[aldowsc]
-logFileName = "aldowsc.log"
-dbFileName = "aldowsc.db"
-minPrice = "500,00"
-maxPrice = "100.000,00"
-
 # Install sqlite3.
 $ sudo apt install sqlite3
 
-# Create dbs.
-$ $GS/zunkasrv/bin/db/create_db.sh
-$ $GS/aldowsc/bin/db/create_db.sh
-
-
+# Init log, list, xml and dbs.
+$ $GS/zunkasrv/bin/init.sh
 
 
