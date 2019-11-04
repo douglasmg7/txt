@@ -111,6 +111,9 @@ $ scp douglasmg7@server_url:/home/douglasmg7/zunka/a a
 $ cd ~
 $ git clone https://github.com/douglasmg7/zunka
 
+# Enviorment variables.
+sudo ln -s /home/douglasmg7/code/zunka/zunka.sh /etc/profile.d/zunka.sh
+
 # Install packages.
 cd zunka
 npm install
@@ -175,19 +178,7 @@ $ pm2 save
 $ cd ~
 $ wget https://dl.google.com/go/go1.13.3.linux-amd64.tar.gz
 $ sudo tar -C /usr/local -xzf go1.13.3.linux-amd64.tar.gz
-
-# Update .bashrc for golang path.
-# Golang tools (compiler).
-export PATH=$PATH:/usr/local/go/bin
-# Golang path.
-export GOPATH=$HOME/code/golang
-export PATH=$PATH:$GOPATH/bin
-# Dmg golang src.
-export GS=$GOPATH/src/github.com/douglasmg7
-# Zunka path.
-export ZUNKAPATH=~/.local/share/zunka
-export ZUNKA_SRV_DB=zunkasrv.db
-export ZUNKA_ALDOWSC_DB=aldowsc.db
+# Enviorment variables alredy set on "/etc/profile.d/zunka.sh"
 
 # Check version.
 $ go version
