@@ -112,7 +112,7 @@ $ cd ~
 $ git clone https://github.com/douglasmg7/zunka
 
 # Enviorment variables.
-sudo ln -s /home/douglasmg7/code/zunka/zunka.sh /etc/profile.d/zunka.sh
+sudo ln -s /home/douglasmg7/zunka/zunka.sh /etc/profile.d/zunka.sh
 
 # Install packages.
 cd zunka
