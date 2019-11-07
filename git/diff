@@ -1,0 +1,9 @@
+# Update refs from origin, but do not merge.
+git fetch
+# git fetch shows which refs where updated. It will show something like:
+# a8e5e4e..295bf31  master     -> origin/master
+# This means the last time you fetched master it was at a8e5e4e now it is at 295bf31. You can see the changed files with something like:
+git diff --name-status a8e5e4e..295bf31
+git diff master...origin/master
+git diff --stat master...origin/master
+git diff --name-only master...origin/master
