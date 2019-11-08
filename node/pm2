@@ -44,11 +44,11 @@ $ pm2 logs app
 # You can empty all application logs with.
 $ mp2 flush
 
-# Create a configuration into systemd to startup pm2.
+# Create a configuration into systemd to startup pm2 when the os boot.
 $ pm2 startup
 # When upgrading to newer Node.js version, update the PM2 startup script! Use pm2 unstartup first then pm2 startup again.
 
-# Save your process list with.
+# Save your process list with to be used on startup boot.
 $ pm2 save
 
 # Clean your process list (delete will not remove from start list).
