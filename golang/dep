@@ -1,0 +1,11 @@
+# Go dependency management tool https://golang.github.io/dep/
+
+# Install on archlinux.
+$ sudo pacman -S dep
+
+# Install packages from a project (dep will look for import directives in the go files and install the packages).
+$ cd project_name
+$ dep ensure
+
+# Add a package (will not add directive import to go file like npm).
+$ dep ensure -add "go.mongodb.org/mongo-driver/mongo@~1.1.0"

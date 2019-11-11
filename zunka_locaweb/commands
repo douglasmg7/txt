@@ -25,6 +25,8 @@ $ sudo journalctl -b -u certbot.service
 
 # Db login.
 mongo -u admin --authenticationDatabase admin -p
+# Test not work yet (maybe neet open the port).
+mongo vps10092.publiccloud.com.br:27017/zunka -u admin --authenticationDatabase admin -p
 
 # Vps login.
 ssh douglasmg7@vps10092.publiccloud.com.br
