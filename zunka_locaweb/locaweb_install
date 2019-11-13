@@ -122,10 +122,6 @@ npm i pm2 -g
 npm i bower -g
 bower install
  
-# Insert product makers and product categories.
-$ npm run insertMakers
-$ npm run insertCategories
-
 # Create backup from server running.
 npm run create-backup
 # Upload backup from new server.
@@ -162,18 +158,6 @@ $ sudo ./path/to/certbot-auto renew --dry-run
 # Run script to install service to automatically run renew twice a day.
 $ npm run install-certbot-service
 
-# Compile style files to css.
-$ npm run build
-
-# Start server.
-$ npm start
-
-# Start on boot.
-$ pm2 startup
-# Run the script.
-# Save process list.
-$ pm2 save
-
 # Install golang.
 $ cd ~
 $ wget https://dl.google.com/go/go1.13.3.linux-amd64.tar.gz
@@ -186,8 +170,11 @@ $ go version
 # Get golang repositories.
 go get github.com/douglasmg7/zunkasrv
 go get github.com/douglasmg7/aldowsc
+go get github.com/douglasmg7/zoomwsc
 # s files.
 $ cd $GS/zunkasrv
+$ git secret reveal
+$ cd $GS/zoomwsc
 $ git secret reveal
 
 # Install sqlite3.
@@ -196,4 +183,12 @@ $ sudo apt install sqlite3
 # Init log, list, xml and dbs.
 $ $GS/zunkasrv/bin/init.sh
 
+# Start server.
+$ npm run update
 
+# Config boot startup.
+$ pm2 startup
+# Run the script.
+
+# Save process list.
+$ pm2 save

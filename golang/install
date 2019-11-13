@@ -43,6 +43,9 @@ go clean
 # Build and install at $GOPATH/bin (need be in folder project).
 go install 
 
+# Uninstall.
+go clean -i
+
 # Build and install at $GOPATH/bin (can run this command anywere in the system).
 go install github.com/user/folder/project_folder
 
