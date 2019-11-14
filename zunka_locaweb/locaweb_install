@@ -158,6 +158,9 @@ $ sudo ./path/to/certbot-auto renew --dry-run
 # Run script to install service to automatically run renew twice a day.
 $ npm run install-certbot-service
 
+# Install sqlite3.
+$ sudo apt install sqlite3
+
 # Install golang.
 $ cd ~
 $ wget https://dl.google.com/go/go1.13.3.linux-amd64.tar.gz
@@ -168,17 +171,20 @@ $ sudo tar -C /usr/local -xzf go1.13.3.linux-amd64.tar.gz
 $ go version
 
 # Get golang repositories.
+# zunkasrv.
 go get github.com/douglasmg7/zunkasrv
-go get github.com/douglasmg7/aldowsc
-go get github.com/douglasmg7/zoomwsc
-# s files.
 $ cd $GS/zunkasrv
 $ git secret reveal
+$ go install
+# aldowsc.
+go get github.com/douglasmg7/aldowsc
+$ cd $GS/aldowsc
+$ go install
+# zoomwsc.
+go get github.com/douglasmg7/zoomwsc
 $ cd $GS/zoomwsc
 $ git secret reveal
-
-# Install sqlite3.
-$ sudo apt install sqlite3
+$ go install
 
 # Init log, list, xml and dbs.
 $ $GS/zunkasrv/bin/init.sh
