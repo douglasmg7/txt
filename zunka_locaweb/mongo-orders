@@ -12,3 +12,11 @@ db.orders.update({_id: ObjectId("5d640160e13a333bf162bdfa")}, { "$set": {"paymen
 
 # Update order.status.
 db.orders.update({_id: ObjectId("6d640160e13a333bf162bdfa")}, { "$set": {"status": "placed"} })
+
+# Undo canceled order.
+# Show details.
+db.orders.find({_id: ObjectId("5dd7ccde686951213134446c")}, { timestamps: 1, status: true }).pretty()
+# Choose a correct status.
+db.orders.update({_id: ObjectId("5dd7ccde686951213134446c")}, { "$set": { "status": "placed" } })
+# Remove timestamps.canceledAt.
+db.orders.update({_id: ObjectId("5dd7ccde686951213134446c")}, { $unset: { "timestamps.canceledAt": "" } });
