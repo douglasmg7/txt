@@ -5,7 +5,22 @@ $ sudo pacman -S dep
 
 # Install packages from a project (dep will look for import directives in the go files and install the packages).
 $ cd project_name
+$ dep init
 $ dep ensure
 
 # Add a package (will not add directive import to go file like npm).
+# Of course, given this model, you don't have to use dep ensure -add to add new dependencies - you can also just add an appropriate import statement in your code, then run dep ensure. However, this approach doesn't always play nicely with goimports, and also won't append a [[constraint]] into Gopkg.toml. Still, it can be useful at times, often for rapid iteration and off-the-cuff experimenting.
 $ dep ensure -add "go.mongodb.org/mongo-driver/mongo@~1.1.0"
+
+# Tell you what is out of sync in your project.
+# If anything is out of sync, running dep ensure will bring it back into line.
+$ dep check
+
+# Revision status.
+$ dep status
+
+# Ideally, updating a dependency project to a newer version is a single command:
+$ dep ensure -update github.com/foo/bar
+
+# This also works without arguments to try to update all dependencies (though it's generally not recommended):
+$ dep ensure -update
