@@ -15,6 +15,14 @@ git tag -a v0.0.3 -m 'first release'
 # Push changes and new tags - tags are not pushed automatically.
 git push --tags
 
+# move a tag to a different commit.
+# Delete the tag on any remote before you push.
+$ git push origin :refs/tags/<tagname>
+# Replace the tag to reference the most recent commit.
+$ git tag -fa <tagname>
+# Push the tag to the remote origin.
+$ git push origin master --tags
+
 tag
   tag every time you push to production
 lightweiht
