@@ -1,6 +1,9 @@
 # Copy log file from server.
 $ scp douglasmg7@vps10092.publiccloud.com.br:/home/douglasmg7/.local/share/zunka/log/zunkasite6.log .
 
+# Copy file to server.
+$ scp ./a.txt douglasmg7@vps10092.publiccloud.com.br:/home/douglasmg7/a.txt
+
 # Backup cert (on server).
 $ cd /etc
 $ sudo tar -pcvzf letsencrypt.tar.gz letsencrypt/

@@ -103,6 +103,12 @@ ln -s ~/dotfiles/ssh/config ~/.ssh/config
 cp ~/dotfiles/ssh/ssh-agent.service ~/.ssh/ssh-agent.service
 # todo - not working.
 systemctl --user enable ssh-agent.service
+# Copy public key to remote server:
+$ ssh-copy-id vps10092.publiccloud.com.br
+# If user differ on remote machine:
+$ ssh-copy-id douglasmg7@vps10092.publiccloud.com.br
+# Test connection. 
+$ ssh vps10092.publiccloud.com.br
 
 printf "\nInstalling bluetoooth...\n..."
 sudo pacman -S bluez bluez-utils pulseaudio-bluetooth --noconfirm
