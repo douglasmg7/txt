@@ -67,3 +67,11 @@ journalctl --since "2019-03-30 08:10:10" --until "2019-03-02 19:05:50"
 
 # Log kernel messages from previous boot with level err.
 journalctl -k -b -1 -p err
+
+# pm2
+pm2 start   ecosystem.config.js --only zunka_srv
+# Restart is faster, and if you don't care about 0-second downtime it might be preferable.
+pm2 restart ecosystem.config.js --only zunka_srv
+# Reload should be used always with stateless applications. It is also documented now that reload will fallback to restart after a timeout.
+pm2 reload  ecosystem.config.js --only zunka_srv
+pm2 delete  ecosystem.config.js --only zunka_srv
