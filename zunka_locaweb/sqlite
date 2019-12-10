@@ -1,0 +1,5 @@
+# Select product.
+select description, code, mongodb_id from product;
+
+# Remove mongodb_id.
+update product set mongodb_id="" where code="40262-0";
