@@ -1,0 +1,2 @@
+# Re-compile if error after system update.
+$ python install.py --clang-completer --go-completer --ts-completer
