@@ -1,0 +1,5 @@
+# Init.
+go mod init github.com/my/repo
+
+# List the current module and all its dependecies.
+go list -m all
