@@ -1,0 +1,40 @@
+ATmega168
+
+CPU
+
+Flash memory (16k)
+    Store compiled code.
+    Nonvolatile.
+
+RAM or SRAM (RAM == DRAM)
+    Store temporary variables.
+    Volatile.
+
+EEPROM
+    Slow to write.
+    There is not to much or it.
+    Nonvolatile.
+
+Clocks
+   There are multiple clocks that are all derivated from the same commom timebase.
+   Internal RC oscillator as the master clock source.
+   It runs around 8 MHz.
+   The CPU clock is then divided down from the master clock, and runs at 1 MHz by default.
+
+Outputs
+    Digital.
+    Supply voltage level, VCC or GND.
+    If the voltage applied externally to the pin is greater than half the supply voltage, the chip sets a bit in an internal variable to one.
+
+Analog (doesn't have)
+    PWM (pulse width modulation) 
+        Switching the digital pin state vary rapidly between high and low voltages so the average voltage is somewhere in the middle.
+
+Serial communications buit in
+    USART - For communication with desktop computer, radio modems, and GPS units.
+    SPI - Good for ultra-fast communication over very short distances with peripherals like memories, ADCs, and DACs.
+    12C - Like a small network, allowing you to connect up to 127 different sensors to the same couple of wires. 
+   
+Interrupts
+
+Timers/counters
