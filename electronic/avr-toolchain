@@ -1,0 +1,6 @@
+# Install compiler.
+sudo pacman -S avr-gcc
+
+# Install software uploader.
+sudo pacman -S avrdude
+

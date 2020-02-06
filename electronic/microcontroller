@@ -1,4 +1,6 @@
 ATmega168
+    16k Flash memory
+    8 bits
 
 CPU
 
@@ -38,3 +40,7 @@ Serial communications buit in
 Interrupts
 
 Timers/counters
+
+ISP (in-system programming)
+    An in-system programming (ISP) header is typically a six-pin, 2x3 header, although some designs use eight-pin, 2x4 header. There are even some designs that use a ten-pin, 2x5 header. 
+    An ISP header provides a standardized interface for carrying programming signals from an external programmer to a chip.
