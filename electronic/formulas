@@ -1,0 +1,15 @@
+V (voltage) - V (volt)
+I (Current) - A (amper)
+R (Resistence) - Ohm
+P (Power) - Wat
+E (Energy) - J (joule), KWh
+
+I = V / R
+R = V / I
+V = R * I
+
+P = V * I
+P = R * I2
+P = V2 / R
+
+E = P * t
