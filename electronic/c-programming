@@ -1,0 +1,17 @@
+SWO (Serial Wire Output) of SWD interface.
+    printf works over SWO pin.
+    Only applicable to MCUs based on ARM cortex M3/M4/M7 or higher processors.
+
+SWD (Serial Wire Debug)
+    Is a two wire protocol for accessing the ARM debug interface.
+    2 pin (debug) + 1 pin (trace)
+        SWDIO
+        SWCLK
+        SWO
+
+ITM unit
+    Is a optional application-driven trace source that supports printf style debugging to trace operating system and application events,
+    and generates diagnostic system information.
+
+Debug
+    Se proccessor memory, registers, half the processor, start and stop the processor, insert breakpoints, etc... 
