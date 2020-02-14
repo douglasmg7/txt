@@ -1,4 +1,25 @@
-#include <sdtio.h> - inclui uma biblioteca padrão
+# Comile flags.
+-save-temps     # Create main.i, main.s, main.o
+
+# Escape sequence.
+\0  # Null
+
+# printf.
+%x  # Hexadecimal lower case.
+%X  # Hexadecimal upper case.
+%0  # Octal.
+%c  # Character.
+%p  # Address.
+
+definition != declaration
+extern int val;     # Declaretion.
+int val;            # Definition.
+
+# Storage class specifiers
+extern
+static
+
+include <sdtio.h>   # Inclui uma biblioteca padrão.
 
 #define PI 3.14159 - define uma constante
 
