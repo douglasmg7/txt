@@ -1,0 +1,16 @@
+# Building an execution pipeline from standard input.
+
+# Create three files.
+$ echo 'one two three' | xargs mkdir
+
+# Remove dir by time.
+$find /tmp -mtime +14 | xargs rm
+
+# Print the command.
+$ echo 'one two three' | xargs -t rm
+
+# Prompt.
+$ echo 'one two three' | xargs -p touch
+
+# Multiple commands.
+$ cat foo.txt | xargs -I % sh -c 'echo %; mkdir %'
