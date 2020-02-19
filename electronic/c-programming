@@ -15,3 +15,12 @@ ITM unit
 
 Debug
     Se proccessor memory, registers, half the processor, start and stop the processor, insert breakpoints, etc... 
+
+.elf
+    A type of executable which stands for executable and linkable format.
+    Which is used for debugging.
+
+.bin
+.hex
+    A type of executable which are actullay pure binary executable.
+    Which are used for production.
