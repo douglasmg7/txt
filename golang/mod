@@ -1,5 +1,23 @@
 # Init.
-go mod init github.com/my/repo
+cd new_repo
+go mod init github.com/my/new_repo
 
-# List the current module and all its dependecies.
+# Automatically add new dependecies to go.mod as needed.
+go build
+go test
+go get
+
+# Changes the required version of a dependency (or adds a new dependency).
+go get
+go get -u # Update to minor version.
+go get -u=patch # Update patch verion.
+
+# Print the current module's dependecies.
 go list -m all
+
+# Show outdated dependencies.
+go list -m -u all
+
+# Cleans up unused dependencies.
+go tidy
+
