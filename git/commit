@@ -1,4 +1,8 @@
+# Discard changes to cats.html and index.html
+git checkout -- cats.html index.html
+
 # To undo a git add before a commit.
 git reset <filename>
+
 # To unstage all changes.
 git reset
