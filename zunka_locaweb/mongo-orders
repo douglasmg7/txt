@@ -20,3 +20,7 @@ db.orders.find({_id: ObjectId("5dd7ccde686951213134446c")}, { timestamps: 1, sta
 db.orders.update({_id: ObjectId("5dd7ccde686951213134446c")}, { "$set": { "status": "placed" } })
 # Remove timestamps.canceledAt.
 db.orders.update({_id: ObjectId("5dd7ccde686951213134446c")}, { $unset: { "timestamps.canceledAt": "" } });
+
+# Itens.
+db.orders.find({_id: ObjectId("5e6684d02fb9bf051ecac6f8")}, { items: true }).pretty()
+db.orders.update({_id: ObjectId("5e6684d02fb9bf051ecac6f8")}, { "$set": { "items.0.dealerName": "" } })
