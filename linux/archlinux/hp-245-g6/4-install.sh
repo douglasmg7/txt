@@ -150,6 +150,9 @@ sudo pacman -S mpg123 --noconfirm
 printf "\nInstalling mplayer..."
 sudo pacman -S mplayer --noconfirm
 
+printf "\nInstalling transmission-gtk..."
+sudo pacman -S transmission-gtk --noconfirm
+
 # printf "\nInstalling libs to play encrypted DVDs..."
 # sudo pacman -S libdvdread libdvdcss libdvdnav --noconfirm
 
