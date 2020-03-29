@@ -75,3 +75,18 @@ pm2 restart ecosystem.config.js --only zunka_srv
 # Reload should be used always with stateless applications. It is also documented now that reload will fallback to restart after a timeout.
 pm2 reload  ecosystem.config.js --only zunka_srv
 pm2 delete  ecosystem.config.js --only zunka_srv
+
+# Find out of memory erros.
+grep -i -r "out of memory" /var/log/
+
+# Process stat.
+ps -p 1324 -o pid,cmd,size,%mem,%cpu
+
+# Memory
+free -h
+
+# Filter by process id.
+journalctl _PID=1324
+
+# Process memory.
+pmap 1324

@@ -68,7 +68,8 @@ journalctl -u dbus.service
 # See all of the journal entries for the unit in question from the boot.
 journalctl -b -u dbus.service
 
-
+# More recent lines.
+journalctl –lines 300
 
 
 

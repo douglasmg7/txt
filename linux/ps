@@ -1,0 +1,22 @@
+# List All Processes in Current Shell.
+ps
+
+# Print All Processes in Different Formats.
+ps -e
+ps -A
+
+# Perform a full-format listing, add the -f or -F flag.
+ps -ef
+
+# Display User Running Processes.
+ps -x
+
+# You can list processes by PID as follows.
+ps -fp 1178, 1148
+
+# Out put. 
+ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head
+ps -eo pid,cmd,%mem,%cpu
+
+# First, find the PID of the unresponsive process or application.
+ps -A | grep -i stress

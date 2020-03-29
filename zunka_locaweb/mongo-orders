@@ -24,3 +24,9 @@ db.orders.update({_id: ObjectId("5dd7ccde686951213134446c")}, { $unset: { "times
 # Itens.
 db.orders.find({_id: ObjectId("5e6684d02fb9bf051ecac6f8")}, { items: true }).pretty()
 db.orders.update({_id: ObjectId("5e6684d02fb9bf051ecac6f8")}, { "$set": { "items.0.dealerName": "" } })
+
+# Find newest order.
+db.orders.find({}, { timestamps: 1, status: true }).sort({"timestamps.placedAt": -1}).limit(3).pretty()
+
+# Delete one document.
+db.orders.deleteOne({_id: ObjectId("5e7a983c3cca770bc3d125c8")})
