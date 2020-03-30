@@ -27,6 +27,10 @@ db.orders.update({_id: ObjectId("5e6684d02fb9bf051ecac6f8")}, { "$set": { "items
 
 # Find newest order.
 db.orders.find({}, { timestamps: 1, status: true }).sort({"timestamps.placedAt": -1}).limit(3).pretty()
+db.orders.find({"timestamps.placedAt" : { $gte : new ISODate("2020-03-29T00:00:01Z") }}, { totalPrice: 1, "timestamps.placedAt": 1, status: true }).sort({"timestamps.placedAt": -1}).pretty()
 
 # Delete one document.
 db.orders.deleteOne({_id: ObjectId("5e7a983c3cca770bc3d125c8")})
+
+# Delete many by date.
+db.orders.deleteMany({"timestamps.placedAt" : { $gte : new ISODate("2020-03-29T00:00:01Z") }})
