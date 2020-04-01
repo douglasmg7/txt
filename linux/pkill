@@ -1,0 +1,6 @@
+Kill all process with bash.
+$ pgrep bash
+
+Kill by name, usefull to scripts
+user       773 68.5  7.5 701904 77448 pts/0    Rl+  09:49   0:01 nodejs scriptname.js
+$ pkill -f scriptname.js

@@ -1,0 +1,35 @@
+The fg command moves a background job into the foreground.
+The bg command moves a suspended foreground job into the background.
+The jobs command shows the current list of jobs.
+The kill command can kill jobs or send signals to them.
+The disown command removes a job from the list of jobs (without killing it).
+A foreground job can be suspended by typing ^Z (Control-Z). A suspended job is temporarily stopped
+
+Run shell script in background.
+$ script.sh &
+
+To foreground the process, simply use the fg command.
+$ fg
+
+List jobs.
+$ jobs
+
+If you are running it in a terminal, and you want to then close the terminal, use nohup or disown.
+$ nohup script.sh &
+$ disown
+
+Using the job number to remove from jobs list.
+$ disown 3
+
+$ script &
+$ disown
+
+To background a currently running process
+    If you have already started the process in the foreground, but you want to move it to the background, you can do the following:
+
+    Press Ctrl+z to put the current process to sleep and return to your shell. (This process will be paused until you send it another signal.)
+    Run the bg command to resume the process, but have it run in the background instead of the foreground.
+
+
+Run script in the same process.
+. ./script.sh
