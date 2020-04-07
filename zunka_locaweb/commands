@@ -90,3 +90,8 @@ journalctl _PID=1324
 
 # Process memory.
 pmap 1324
+
+# List zobie process.
+ps axo stat,ppid,pid,comm | grep -w defunct
+# Try to kill zombie process.
+kill -s SIGCHLD PID
