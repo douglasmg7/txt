@@ -14,6 +14,9 @@ $ fg
 List jobs.
 $ jobs
 
+List jobs with process id.
+$ jobs -l
+
 If you are running it in a terminal, and you want to then close the terminal, use nohup or disown.
 $ nohup script.sh &
 $ disown
@@ -33,3 +36,4 @@ To background a currently running process
 
 Run script in the same process.
 . ./script.sh
+source script.sh
