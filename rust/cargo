@@ -1,0 +1,21 @@
+Cargo 
+the Rust build tool and package manager
+When you install Rustup you’ll also get the latest stable version of the Rust build tool and package manager, also known as Cargo. Cargo does lots of things:
+
+# Build your project.
+cargo build
+
+# Run your project.
+cargo run
+
+# Test your project.
+cargo test
+
+# Build documentation for your project.
+cargo doc
+
+# Publish a library to crates.io.
+cargo publish
+
+# To test that you have Rust and Cargo installed.
+cargo --version
