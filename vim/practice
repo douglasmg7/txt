@@ -42,3 +42,6 @@ _
 # Pipes the current file's contents to command's stdin.
 :%! command
 # So, :%! sort is pretty much the same as (from a shell) cat file | sort.
+
+# Read status bar messages.
+:messages

@@ -1,2 +1,5 @@
 # Re-compile if error after system update.
-$ python install.py --clang-completer --go-completer --ts-completer
+cd ~/.vim/bundle/youcompleteme
+$ python install.py --clangd-completer --go-completer --rust-completer
+# $ python install.py --clangd-completer --go-completer
+# $ python install.py --clangd-completer --go-completer --rust-completer --ts-completer
