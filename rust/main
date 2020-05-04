@@ -1,3 +1,8 @@
 # Rust style is to indent with four spaces, not a tab.
 
-# println! calls a Rust macro. If it called a function instead, it would be entered as println (without the !).
+# Calls a Rust macro. If it called a function instead, it would be entered as println (without the !).
+println!
+
+# An associated function is implemented on a type, in this case String, rather than on a particular instance of a String.
+# Some languages call this a static method.
+String::new()
