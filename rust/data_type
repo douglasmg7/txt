@@ -1,0 +1,14 @@
+Scalar
+    integers
+    floating-point numbers
+    booleans
+    characters
+
+Compound
+    tuple
+    array
+
+Tuple
+Grouping together a number of values with a variety of types into one compound type.
+Tuples have a fixed length: once declared, they cannot grow or shrink in size.
+    
