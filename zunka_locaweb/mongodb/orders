@@ -17,9 +17,11 @@ db.orders.update({_id: ObjectId("6d640160e13a333bf162bdfa")}, { "$set": {"status
 # Show details.
 db.orders.find({_id: ObjectId("5dd7ccde686951213134446c")}, { timestamps: 1, status: true }).pretty()
 
-# Choose a correct status.
+# Set order placed.
 db.orders.update({_id: ObjectId("5dd7ccde686951213134446c")}, { "$set": { "status": "placed" } })
-db.orders.update({_id: ObjectId("5eb5902cb1a3d12a64c46fd1")}, { "$set": { "status": "shipped", "timestamps.shippedAt" : new ISODate("2020-05-08T20:00:01Z") } } )
+# Set order shipped.
+db.orders.update({_id: ObjectId("5eb56ab409e1f7174041cba1")}, { "$set": { "status": "shipped", "timestamps.shippedAt" : new ISODate("2020-05-08T20:00:01Z") } } )
+# Set order delivered.
 db.orders.update({_id: ObjectId("5eb5b6afbbae06546e188564")}, { "$set": { "status": "delivered", "timestamps.shippedAt" : new ISODate("2020-05-08T20:00:01Z"), "timestamps.deliveredAt" : new ISODate("2020-05-08T20:00:01Z") } } )
 
 # Remove timestamps.canceledAt.

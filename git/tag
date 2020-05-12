@@ -1,16 +1,19 @@
 # List all tags with description.
-git tag -n
+$git tag -n
 
 # List all tags.
-git tag
+$git tag
 
 # Checkout using tag.
-git checkout v0.0.1
+$git checkout v0.0.1
 
-# Create a tag - first checkout at the desire commit.
-git tag -a v0.0.3 -m 'first release'
+# Create a tag local - first checkout at the desire commit.
+$git tag -a v0.0.3 -m 'first release'
   -a name
   -m description
+
+# Remove tag local.
+$git tag -d v1.0.1
   
 # Push changes and new tags - tags are not pushed automatically.
 git push --tags
