@@ -1,0 +1,57 @@
+# All market zoom.
+db.products.find({marketZoom: true}, {_id: true}).pretty()
+
+# Quantity all.
+db.products.find({}).count()
+db.products.find({marketZoom: true}).count()
+db.products.find({marketZoom: false}).count()
+db.products.find({marketZoom: {$exists: false}}).count()
+
+# Select valid to mark to zoom.
+db.products.find(
+{
+    storeProductTitle: {$regex: /\S/}, 
+    storeProductActive: true, 
+    storeProductPrice: {$gt: 0}, 
+    storeProductCommercialize: true, 
+    storeProductQtd: {$gt: 0}, 
+    deletedAt: {$exists: false}, 
+    marketZoom: false
+}, 
+{
+    _id: true
+});
+
+# Set mark to zoom for all valids.
+db.products.updateMany(
+{
+    storeProductTitle: {$regex: /\S/}, 
+    storeProductActive: true, 
+    storeProductPrice: {$gt: 0}, 
+    storeProductCommercialize: true, 
+    storeProductQtd: {$gt: 0}, 
+    deletedAt: {$exists: false}, 
+    marketZoom: {$in: [null, false]}
+}, 
+{
+    $set: {marketZoom: true},
+    $currentDate: {updatedAt: true}
+});
+
+# Unset all unmark to zoom.
+db.products.updateMany({}, {$set: {marketZoom: false}, $currentDate: {updatedAt: true}});
+
+# Find not possible to mark to zoom.
+db.products.find(
+{
+    storeProductActive: true, 
+    storeProductCommercialize: true, 
+    storeProductQtd: {$gt: 0}, 
+    deletedAt: {$exists: false}, 
+    marketZoom: {$in: [null, false]}
+}, 
+{
+    _id: true
+});
+
+# $or: [{marketZoom: false}, {marketZoom: {$exists: false}}]
