@@ -1,0 +1,39 @@
+Data structure
+    A way to 'organize data' in a way that enables it to be processed in an efficient time
+
+Some of common data structure (DS) are
+    Array
+    Linked List
+    Stack
+    Queue
+    Tree
+    Hashing
+    Graph
+    Etc...
+
+Algorithms
+    Is a set of rules to be followed to solve a problem
+
+All these data structure have their own properites which is very unique in most of cases
+So depending on the problem that we encounter we have to make a best choice of feature data structure
+
+Types of DS
+    Primiteve DS
+        Bool
+        Char
+        Integer
+        Float
+
+    Non-primitive DS
+        Physical DS
+            Array
+            Linked List
+
+        Logical DS
+            Stack
+                Can be implemented using Array or Linked List
+            Queue
+                Can be implemented using Array or Linked List
+            Tree
+            Graph
+
