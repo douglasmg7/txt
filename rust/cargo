@@ -2,12 +2,13 @@ Cargo
 the Rust build tool and package manager
 When you install Rustup you’ll also get the latest stable version of the Rust build tool and package manager, also known as Cargo. Cargo does lots of things:
 
-# Build your project.
+# Build your project - dev profile.
 $ cargo build
 
 # When your project is finally ready for release, you can use cargo build --release to compile it with optimizations.
 # This command will create an executable in target/release instead of target/debug.
 # The optimizations make your Rust code run faster, but turning them on lengthens the time it takes for your program to compile.
+# Release profile.
 $ cargo build --release
 
 # Build and run your project.
@@ -20,6 +21,7 @@ $ cargo check
 $ cargo test
 
 # Build documentation for your project.
+# Put the generate HTML documentation it the target/doc directory.
 $ cargo doc
 
 # Build documentation provided by all of your dependencies locally and open it in your browser.
@@ -37,3 +39,11 @@ $ cargo new project_name
 # When you do want to update a crate, Cargo provides another command, update, which will ignore the Cargo.lock file and figure out all the latest versions that fit your specifications in Cargo.toml.
 # If that works, Cargo will write those versions to the Cargo.lock file.
 $ cargo update
+
+# Install a binary, an app that was publised at crate.io.
+# If you installed Rust using rustup.rs and don’t have any custom configurations, this directory will be $HOME/.cargo/bin.
+# Ensure that directory is in your $PATH to be able to run programs you’ve installed with cargo install.
+$ cargo install binary_name
+
+# List custom commands.
+$ cargo --list
