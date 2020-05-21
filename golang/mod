@@ -21,3 +21,9 @@ go list -m -u all
 # Cleans up unused dependencies.
 go tidy
 
+# Point to a branch. Find commit using git lg.
+go get github.com/douglasmg7/aldoutil@e180939
+
+# Point to a version.
+go get github.com/douglasmg7/aldoutil@v1.1.0
+

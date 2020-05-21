@@ -1,3 +1,8 @@
+# create a branch and push.
+$ git checkout -b <branch_name>
+$ git commit
+$ git push -u origin <branch_name>
+
 # Create a new branch using the current working directory as its base.
 $ git branch <branch_name>
 
@@ -13,11 +18,6 @@ $ git remote show origin
 
 # Make the working directory and the HEAD match the specified branch.
 $ git checkout <branch_name>
-
-# create a branch and push.
-$ git checkout -b <branch_name>
-$ git commit
-$ git push -u origin <branch_name>
 
 # Delete a branch.
 $ git branch -d <branch_name>
