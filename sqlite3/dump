@@ -1,0 +1,15 @@
+# Create sql from all db.
+$ sqlite3 aldowsc.db .dump  > temp.sql
+
+# From sqlite.
+$ sqlite3 file.db
+> .output temp.sql
+> .dump table_name
+> .exit
+
+# From consult.
+$ sqlite3 file.db
+> .mode insert
+> .output temp.sql
+> select * from table_name;
+> .exit
