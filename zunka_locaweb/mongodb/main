@@ -17,3 +17,6 @@ mongo -u admin --authenticationDatabase admin -p
 mongo -u admin --host vps10092.publiccloud.com.br --port 27017 --authenticationDatabase admin -p
 mongo "mongodb://username:password@host:port/Database"
 mongo "mongodb://admin:xxxx@vps10092.publiccloud.com.br:27017/zunka"
+
+# Connect do specific db.
+$ mongo zunka -u admin --authenticationDatabase admin -p

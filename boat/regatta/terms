@@ -1,0 +1,9 @@
+SOG - Speed Over Ground
+
+VMG - Velocity Made Good
+    Indicating the speed of a sailboat towards (or from) the direction of the wind
+
+VMC - Velocity Made good on Course
+    The speed component in the direction of a mark
+    VMC =  SOG * cos(Course deviation)
+    If a mark is exactly currently in the direction of the wind, VMC will be the same as VMG
