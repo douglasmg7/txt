@@ -38,3 +38,26 @@ $ export CFLAGS="-Wall"
 
 # File name used by command make.
 "Makefile"
+
+
+# Notice that make and cmake are different programs. 
+# cmake is a Makefile generator, and the make utility is governed by a Makefile textual file.
+# cmake use CMakeLIsts.txt file.
+# make use MakeFile file.
+
+# To generate a build pipeline, CMake needs to know the source and binary folders.
+# The source folder is the one containing CMakeLists.txt.
+# The binary folder is where CMake generates the build pipeline.
+# You can create the binary folder anywhere you want.
+# A common practice is to create a subdirectory build beneath CMakeLists.txt.
+# Into dir where exist CMakeLists.txt.
+$ mkdir build && cd build
+# Configure step - Will create pipeline into current directory from source ..
+# Will use CMakeLIsts.txt file.
+$ cmake ..  
+# Compile - will use MakeFile file.
+$ make      
+# Install - copy files to "/usr/local".
+$ sudo make install
+# Uninstall - remove files from "/usr/local".
+$ sudo make uninstall
