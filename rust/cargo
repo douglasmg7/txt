@@ -35,6 +35,10 @@ $ cargo --version
 
 # Create a new project.
 $ cargo new project_name
+# For binary project.
+$ cargo new --bin project_name
+# For library project.
+$ cargo new --lib project_name
 
 # When you do want to update a crate, Cargo provides another command, update, which will ignore the Cargo.lock file and figure out all the latest versions that fit your specifications in Cargo.toml.
 # If that works, Cargo will write those versions to the Cargo.lock file.

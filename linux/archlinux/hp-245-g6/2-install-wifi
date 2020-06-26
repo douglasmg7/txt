@@ -73,3 +73,5 @@ $ sudo system enable wpa_supplicant@<device>.service
 # Enable networkd to initate dhcpcd for the devices.
 $ systemctl enable systemd-networkd
 
+# Enable dhcpcd service.
+$ systemctl enable dhcpcd
