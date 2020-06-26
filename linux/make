@@ -1,0 +1,64 @@
+# GCC - GNU Compiler Collection.
+
+# Syntax.
+$ gcc [options] [source files] [object files] [-o output file]
+
+# Compile source files to object files without linking.
+gcc -c
+
+# Disable all warning messages.
+gcc -w	
+
+# Enable all warning messages.
+gcc -Wall	
+
+# Add include directory of header files.
+gcc -Idir	
+
+# Look in directory for library files.
+gcc -Ldir	
+
+# Link with library file.
+gcc -llib	
+
+# Define a preprocessor macro.
+gcc -Dname[=value]
+
+# Generate position independent code for shared libraries.
+gcc -fPIC	
+
+# Generate debug information to be used by GDB.
+gcc -glevel	
+
+# Write build output to output file
+gcc -o output file
+
+# Optimize for code size and execution time.
+gcc -Olevel	
+
+# Generate shared object file for shared library.
+gcc -shared	
+
+# Undefine a preprocessor macro.
+gcc -Uname	
+
+# Enable extra warning messages.
+gcc -Wextra	
+
+# Compile file1.c and file2.c and link to output file execfile:
+$ gcc file1.c file2.c -o execfile
+
+# Compile file1.c and file2.c without linking:
+$ gcc -c file1.c file2.c
+
+# Compile myfile.c with debug information and link to output file execfile:
+$ gcc -g myfile.c -o execfile
+
+# Compile myfile.c with warning messages enabled and link to output file execfile:
+$ gcc -Wall myfile.c -o execfile
+
+# Compile myfile.c with and link with static library libmath.a located in /user/local/math to output file execfile:
+$ gcc -static myfile.c -L/user/local/math -lmath -o execfile
+
+# Compile myfile.c with optimization and link to output file execfile:
+$ gcc -O myfile.c -o execfile
