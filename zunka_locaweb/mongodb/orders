@@ -40,3 +40,6 @@ db.orders.deleteOne({_id: ObjectId("5e7a983c3cca770bc3d125c8")})
 
 # Delete many by date.
 db.orders.deleteMany({"timestamps.placedAt" : { $gte : new ISODate("2020-03-29T00:00:01Z") }})
+
+# Last paidAt.
+db.orders.find({"timestamps.paidAt": {$exists: true}}, {name: true, externalOrderNumber: true, "timestamps.paidAt": true}).sort({"timestamps.paidAt": -1}).limit(10).pretty();
