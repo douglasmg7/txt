@@ -24,3 +24,6 @@ Debug
 .hex
     A type of executable which are actullay pure binary executable.
     Which are used for production.
+
+Cross compilation
+    Produces executable for a different atchitecture.
