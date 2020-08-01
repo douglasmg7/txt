@@ -5,8 +5,8 @@ curl https://sh.rustup.rs -sSf | sh
 # Uninstall Rust.
 rustup self uninstall
 
-# Update Rust to the latest version.
-rustup update
+# Update Rust to the latest stable version.
+rustup update stable
 
 # Rust compile verison.
 rustc --version
