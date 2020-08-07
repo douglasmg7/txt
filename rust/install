@@ -5,6 +5,15 @@ curl https://sh.rustup.rs -sSf | sh
 # Uninstall Rust.
 rustup self uninstall
 
+# Install the nightly version of the tools (cargo, rustc, and so on). Also, it will switch the corresponding commands to use the nightly version.
+rustup default nightly
+
+# Update nightly version.
+rustup update
+
+# Go back to the stable version
+rustup default stable
+
 # Update Rust to the latest stable version.
 rustup update stable
 

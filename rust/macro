@@ -1,0 +1,13 @@
+# Debug macro - https://github.com/dtolnay/cargo-expand
+$ cargo install cargo-expand
+$ rustup default nightly
+$ cargo expand
+
+# To expand a particular test target:
+$ cargo expand --test test_something
+
+# To expand without rustfmt:
+$ cargo expand --ugly
+
+# To expand a specific module or type or function only:
+$ cargo expand path::to::module
