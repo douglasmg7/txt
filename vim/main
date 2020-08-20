@@ -121,22 +121,6 @@ Gn - end file
 :r file - insert the file below the cursor
 :r !cmd - execute cmd and insert its standard output below the cursor
 
-slpit windows
-<C-w>,s   # horizontal splitting
-<C-w>,v   # vertical splitting
-<C-w>,q   # close one
-<C-w>,<C-w>   # switch between windows
-<C-w>,j (or k, h, l)   # switch to adjacent window (intuitively up, down, left, right)
-:sp <filename>    # horizontal split
-:vs <filename>    # vertical split
-<c-w> =     # Make all equal size.
-<C-w> _     # Maximaize the size of the current window.
-<C-w> |     # maximaize the size of the vertical-split
-10 <C-w> +  # Grow current window 10 lines.
-<C-w>,-     # Shrink current window.
-:hide       # Close current window.
-:only       # Keep only current window open.
-
 :h key-notation
 key notation information
 
@@ -268,12 +252,6 @@ command history
 
 q/
 search history
-
-vi -o file1 file2 file3
-split horizontal
-
-vi -O file1 file2 file3
-split vertical
 
 vi -p file1 file2 file3
 tabs

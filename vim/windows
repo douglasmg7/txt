@@ -1,0 +1,39 @@
+# Multiple windows
+
+# horizontal splitting
+<C-w> s
+:sp <filename>
+
+# vertical splitting
+<C-w> v
+:vs <filename>
+
+# switch between windows
+<C-w> <C-w>
+
+# close one
+<C-w> q
+
+# switch to adjacent window (intuitively up, down, left, right)
+<C-w> j (or k, h, l)   
+
+# Make all equal size
+<c-w> =     
+
+# Maximaize the size of the current window
+<C-w> _     
+
+# maximaize the size of the vertical-split
+<C-w> |     
+
+# Grow current window 10 lines.
+10 <C-w> +  
+
+# Shrink current window.
+<C-w> -     
+
+# Close current window.
+:hide       
+
+# Keep only current window open.
+:only       
