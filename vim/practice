@@ -45,3 +45,14 @@ _
 
 # Read status bar messages.
 :messages
+
+# Save and run cargo build.
+-b
+
+# Save and run cargo run.
+-r
+
+# Toggle TagBar
+F8
+
+# Backspace working again.
