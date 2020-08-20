@@ -52,7 +52,13 @@ _
 # Save and run cargo run.
 -r
 
+# Run test over cursor.
+-t
+
 # Toggle TagBar
 F8
 
 # Backspace working again.
+
+# Run test under cursor.
+:RustTest
