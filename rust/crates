@@ -1,0 +1,2 @@
+# rusqlite need sqlite dev package.
+$ sudo apt install libsqlite3-dev
