@@ -199,3 +199,6 @@ $ pm2 startup
 
 # Save process list.
 $ pm2 save
+
+# Needed by rust to compile openSSL.
+sudo apt install pkg-config
