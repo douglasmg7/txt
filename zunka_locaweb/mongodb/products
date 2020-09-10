@@ -1,4 +1,0 @@
-# Find product by id.
-db.products.find({_id: ObjectId("5cb482c63835141ad87ab8e5")}, {}).pretty()
-
-mongo db_name --quiet --eval 'DBQuery.shellBatchSize = 2000; db.users.find({}).limit(2000)' > users.json
