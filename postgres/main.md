@@ -32,13 +32,20 @@ sudo systemctl start postgresql
 
 ### Create your first database/user
 
-If you create a PostgreSQL user with the same name as your Linux username, it allows you to access the PostgreSQL database shell without having to specify a user to login (which makes it quite convenient):
+If you create a PostgreSQL user with the same name as your Linux username, it allows you to access the PostgreSQL database shell without having to specify a user to login (which makes it quite convenient).
+The -u (user) option causes sudo to run the specified command as a user other than root:
 ```bash
 sudo -iu postgres
 createuser --interactive
 ```
 
-Create a new database over which the above user has read/write privileges using the createdb command (execute this command from your login shell if the database user has the same name as your Linux user, otherwise add -O database-username to the following command).
+With password:
+```bash
+sudo -iu postgres
+createuser --interactive --pwprompt
+```
+
+Create a new database over which the above user has read/write privileges using the createdb command (execute this command from your login shell if the database user has the same name as your Linux user, otherwise add -O database_username to the following command).
 
 If you did not grant your new user database creation privileges, add -U postgres to the following command.
 ```bash
@@ -57,6 +64,11 @@ Become the postgres user. Start the primary database shell, psql, where you can 
 ```
 
 ### Some helpful commands:
+
+Which user and database in use:
+```psql
+=# \conninfo
+```
 
 Get help:
 ```psql
@@ -86,4 +98,9 @@ Exit/quit the psql shell:
 There are of course many more meta-commands, but these should help you get started. To see all meta-commands run:
 ```psql
 =# \?
+```
+
+Expanded display on (format by line):
+```psql
+=# \x on
 ```
