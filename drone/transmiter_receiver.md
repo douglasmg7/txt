@@ -129,6 +129,14 @@ T16
 ### Jumper
 Multi-protocolo
 
+#### Modelos
+T16
+T16 Plus
+T16 Pro
+* Built-in (internal) Multi-protocol module (freeing the external JR port for TBS CRSF module)
+* T16 Pro Exclusive Hall Sensor Gimbals
+
+
 
 ### TBS Crossfire
 
