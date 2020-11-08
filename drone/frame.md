@@ -19,4 +19,6 @@ Motores brushless são parafusados no frame
 ## Tamanho do frame
 E a medida diagonal de motor a motor (eixo do motor).
 
-
+## Ductos
+Com ductos (protetor de hélice) atrapalha a aerodinamica mas melhora a estabilidade (forçando voltar pra posição horizontal).
+Freestyle não usa ductos.

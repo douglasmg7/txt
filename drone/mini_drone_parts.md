@@ -15,3 +15,8 @@
 
 ## Rádio controle
     FrSky i6s
+
+## Frame
+    Frame brushed LDARC (antiga King Kong) 85 mm
+    Canopy LDARC
+

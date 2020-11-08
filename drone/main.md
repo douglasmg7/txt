@@ -3,6 +3,20 @@ Build 5 inch drone
 Tiny whoop drones
 FGB simulator
 
+## Tipos de drones
+Tiny whoop
+Toothpick
+
+## Canopy
+Suporta a camera, tem que ser compatível com a camera
+Protege a camera
+
+## Turlte mode
+Desvirar o drone usando apenas dois motores
+Opção para brushless motor apenas
+Opção do Betaflight (flip over after crash)
+
+
 ## FPV drone parts
 Controller
 Goggles
