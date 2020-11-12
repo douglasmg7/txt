@@ -23,3 +23,12 @@
 ## Camera
     Camera LDARC
 
+## Bateria
+    LiHV 
+    1s 
+    500 mAh 
+    50C/100C
+    Marca GNB
+    Carregador Eachine 1s HV
+
+
