@@ -174,4 +174,8 @@ cd ~/aur/simple-mtpfs
 printf "\nInstalling simple-mtpfs..."
 makepkg -si
 
+# For joystick calibration.
+printf "\nInstalling joyutils..."
+sudo pacman -S joyutils --noconfirm
+
 # reboot now
