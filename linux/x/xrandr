@@ -1,7 +1,13 @@
 # xrandr is an official configuration utility to the RandR X Window System extension.
 
-xrandr
 # List the screen configuration.
+xrandr
 
-xrandr --output VGA1 --rotate right
 # Rotate screen.
+xrandr --output VGA1 --rotate right
+
+# Set resolution for hdm1.
+xrandr --output HDMI1 --mode 1920x1080
+
+# Set monitor HDMI1 to left of main monitor.
+xrandr --output eDP1 --auto --output HDMI1 --left-of eDP1
