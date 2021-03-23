@@ -1,0 +1,14 @@
+# For examples in this file
+import numpy as np
+import pandas as pd
+
+# Create a serie
+>>> labels = ['a', 'b', 'c']
+>>> my_data = [10, 20 , 30]
+>>> serie = pd.Series(data=my_data, index=labels)
+>>> serie
+a    10
+b    20
+c    30
+dtype: int64
+

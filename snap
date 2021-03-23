@@ -1,0 +1,18 @@
+# Snap 
+# Is a software deployment and package management system. The packages are called 'snaps' and the tool for using them is 'snapd', which works across a range of Linux distributions and allows, therefore, distro-agnostic upstream software deployment. Snap was originally designed and built by Canonical.
+
+# Install snap
+git clone https://aur.archlinux.org/snapd.git
+cd snapd
+makepkg -si
+sudo systemctl enable --now snapd.socket
+sudo ln -s /var/lib/snapd/snap /snap
+# Test
+sudo snap install hello-world
+hello-world
+
+# Install package
+sudo snap install hello-world
+
+# Remove package
+sudo snap remove hello-world

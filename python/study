@@ -1,0 +1,8 @@
+iptython
+bptyhon
+ptpython
+globals()
+dir()
+import turtle
+_ on interactive mode
+[item**3 for item in x]

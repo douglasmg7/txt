@@ -25,3 +25,35 @@ for k, v in sorted(dic.items()):
 
 # Intialize a asdf key with 3, only if not exist yet.
 dic.setdefault('asdf', 3)
+
+# Remove duplicated values
+>>> set([1, 2, 2, 3, 4, 5, 3])
+{1, 2, 3, 4, 5}
+
+
+>>> primes = {2, 3, 5, 7}
+>>> evens = {2, 4, 6, 8}
+
+>>> # Union
+>>> primes | evens
+{2, 3, 4, 5, 6, 7, 8}
+
+>>> # Intersection
+>>> primes & evens
+{2}
+
+>>> # Difference
+>>> primes - evens
+{3, 5, 7}
+
+# Add
+>>> primes = {2, 3, 5, 7}
+>>> primes.add(11)
+>>> primes
+{2, 3, 5, 7, 11}
+
+# Remove
+>>> primes = {2, 3, 5, 7, 11}
+>>> primes.remove(11)
+>>> primes
+{2, 3, 5, 7}

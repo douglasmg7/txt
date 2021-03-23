@@ -1,5 +1,9 @@
 # Run the line.
 shift + enter
 
+# Run the line and insert a new one
+alt + enter
+
 # Show docstring.
 shift + tab
+
