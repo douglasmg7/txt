@@ -6,3 +6,6 @@ dir()
 import turtle
 _ on interactive mode
 [item**3 for item in x]
+module_name.__file__
+> import sys
+> print '\n'.join(sys.path)

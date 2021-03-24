@@ -8,6 +8,9 @@ $ pip install virtualenv
 # Creating a venv.
 $ mkdir new_project && cd new_project
 $ python-3 -m venv venv
+$ source venv/bin/activate
+# To 'you complete me' work with neovim
+$ pip install neovim
 
 # Activate the environment.
 $ source venv/bin/activate
