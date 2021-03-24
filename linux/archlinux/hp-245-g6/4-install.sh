@@ -178,4 +178,8 @@ makepkg -si
 printf "\nInstalling joyutils..."
 sudo pacman -S joyutils --noconfirm
 
+# Autoenv for python venv
+cd
+git clone git://github.com/inishchith/autoenv.git ~/.autoenv
+
 # reboot now
