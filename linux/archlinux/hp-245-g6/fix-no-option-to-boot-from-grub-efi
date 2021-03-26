@@ -1,0 +1,4 @@
+# To show grub options on bios boot setup
+grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
+# I think this next line is not needed
+grub-mkconfig -o /boot/grub/grub.cfg
