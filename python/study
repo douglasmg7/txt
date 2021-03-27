@@ -1,11 +1,71 @@
-iptython
+iptython (jupyter-notebook)
+
 bptyhon
+
 ptpython
+
 globals()
+
 dir()
+
 import turtle
-_ on interactive mode
-[item**3 for item in x]
+
+# _ Last return value in interactive mode.
+
+# _ Discarded value.
+>>> for _ in range(32):
+... print('Hello, World.')
+
+_var
+# Leading undescore var
+# Private var or method, not reinforced by interpreter.
+_count = 3
+def _do_some_thing():
+
+# Trailing undescore var
+var_
+# Break the name conflict.
+count_ = 3
+
+# Double leading undescore
+# __var
+# Mangling, the interpreter changes the name of the variable in a way that makes it harder to create collisions when the class is extended later.
+class Dog:
+    def __init__(self):
+        slef.__color = 'brown'
+laika = Dog()
+laika.color     # Error, attribute not exist.
+laika._Dog__color   # Mnagling attribute.
+
+# "double underscore" = "dunders”
+# For example, you’d pronounce __baz as “dunder baz.” 
+# Likewise, __- init__ would be pronounced as “dunder init,” even though one might think it should be “dunder init dunder.”
+
+# Double leading and trailing undescore  __var__.
+# Reserved for special use in the language.
+
+# List comprehensions
+>>> square = [x*x for x in range(10)]
+>>> r = [x*x for x in range(1,10) if x>5]   # if a filter.
+
+# is vs ==.
+>>> a is b  # If a and b point to same object.
+>>> a == b  # If a and b have the same value but not necessary the same object (point to the same object).
+
 module_name.__file__
+
 > import sys
 > print '\n'.join(sys.path)
+
+assert 2 > 3, '2 is bigger than 3!'
+
+with open('hello.txt', 'w') as f:
+    f.write('hello, world!')
+
+# __str__ vs __repr__
+# __str__ => easy to read, for human consumption
+# __repr__ => unambiguous, meant for developer
+# At least add a __repr__ to your classes, if __str__ not defined, it will call __repr__
+
+# Unset a variable.
+dell var_a
