@@ -66,8 +66,8 @@ refers to last commit
 git diff HEAD
 diff of our most recent commit, which we can refer to using the HEAD pointer
 
+# Unstage files
 git reset octofamily/octodog.txt
-to unstage files
 
 git checkout -- octocat.txt
 get rid of all the changes since the last committerminus
