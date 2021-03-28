@@ -10,3 +10,9 @@ f
 
 ## To remove protected files
 sudo feh
+
+## Defaults keys
+d - toggle filename display
+e - toggle exif tag display
+f - toggle fullscreen
+

@@ -69,3 +69,23 @@ with open('hello.txt', 'w') as f:
 
 # Unset a variable.
 dell var_a
+
+# Shallow copy
+new_list = list(original_list)
+new_dic = dic(original_list)
+new_set = set(original_set)
+
+# Shallow copy
+import copy
+new_list = copy.copy(original_list)
+# works with custom class too
+
+# Deep copy
+import copy
+new_list = copy.deepcopy(original_list)
+# works with custom class too
+
+# ABC - Abstract Base Classs
+
+# Create a list
+l = 'asd erer ggigg'.split()
