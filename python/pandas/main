@@ -14,3 +14,30 @@ pd.Series(data=my_data, index=lables)
 pd.Series(my_data, lables)
 pd.Series(arr, lables)
 pd.Series(d)
+
+# Reada data frame from csv file
+df = pandas.read_csv('filename')
+
+# Head titles
+list(df)
+df.info()
+
+# First rows
+df.head()
+
+# Mean, min and max from 'Purchase Price' column
+df['Purchase Price'].mean()
+df['Purchase Price'].min()
+df['Purchase Price'].max()
+
+# Item count
+ecom['Language'].value_counts()
+
+# How many have the job as 'Lawyer'
+ecom[ecom['Job'] == 'Lawyer']['Job'].count()
+
+# Count for each repeat value from one column
+ecom['AM or PM'].value_counts()
+
+# Filter with lambda
+sum(ecom['CC Exp Date'].apply(lambda x: x[3:] == '25'))
