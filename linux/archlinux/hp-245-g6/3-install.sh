@@ -139,6 +139,17 @@ mkdir -p ~/.config/nvim
 ln -s ~/dotfiles/nvim/init.vim ~/.config/nvim/init.vim
 sudo pacman -S python-neovim --noconfirm
 
+printf "\nInstalling postgresql...\n"
+sudo pacman -S postgresql
+# include into /etc/pacman.conf:
+#   IgnorePkg = postgresql postgresql-libs
+# To avoid update database to incompatilbe version
+
+# sudo -iu postgres
+# [postgres]$ initdb -D /var/lib/postgres/data
+# [postgres]$ exit
+# sudo systemctl start postgresql
+
 # Make capslock a leftctrl.
 # cd /etc/udev/hwdb.d
 # ln -s ~/dotfiles/70-keyboard-my.hwdb 70-keyboard-my.hwdb

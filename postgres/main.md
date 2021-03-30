@@ -80,6 +80,16 @@ Connect to a particular database:
 =# \c <database>
 ```
 
+List all databases:
+```psql
+=# \l
+```
+
+Describe a table:
+```psql
+=# \d table_name
+```
+
 List all users and their permission levels:
 ```psql
 =# \du

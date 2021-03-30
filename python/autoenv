@@ -4,7 +4,9 @@
 # If using venv
 deactivate
 pip install autoenv
-# add to .bashrc
+# add to .bashrc:
     source /home/douglasmg7/.local/bin/activate.sh
-# Create a file .env for each python project using venv
+# Create a file .env for each python project using venv:
     source env/bin/activate
+# Install neovim module to ycm work
+python -m neovim
