@@ -1,7 +1,21 @@
-get - query
-post - change
-put - add
-delete - delete
+Action	HTTP Verb	Description
+Create	POST	    Create a new, unique thing
+Read	GET	        Read the information about a thing or collection of things
+Update	PUT	        Update the information about an existing thing
+Delete	DELETE	    Delete a thing
+
+The PUT method requests that the enclosed entity be stored under the supplied Request-URI. If the Request-URI refers to an already existing resource, the enclosed entity SHOULD be considered as a modified version of the one residing on the origin server. If the Request-URI does not point to an existing resource … the origin server can create the resource with that URI.
+
+The POST method is used to request that the origin server accept the entity enclosed in the request as a new subordinate of the resource identified by the Request-URI … The posted entity is subordinate to that URI in the same way that a file is subordinate to a directory containing it, a news article is subordinate to a newsgroup to which it is posted, or a record is subordinate to a database.
+
+POST or PUT - The server could respond with a 201 Created status code and the resource’s new location.
+
+Action	HTTP Verb	URL Path	            Description
+Create	POST	    /api/people	            Defines a unique URL to create a new person
+Read	GET	        /api/people	            Defines a unique URL to read a collection of people
+Read	GET	        /api/people/Farrell	    Defines a unique URL to read a particular person in the people collection
+Update	PUT	        /api/people/Farrell	    Defines a unique URL to update an existing order
+Delete	DELETE	    /api/orders/Farrell	    Defines a unique URL to delete an existing person
 
 1xx Informational
 2xx Success
