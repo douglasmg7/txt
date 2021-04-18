@@ -24,6 +24,10 @@ conda update conda
 conda create --name snowflakes biopython
 # Or using a specific python version.
 conda create --name snowflakes biopython python=3.5
+# Create conda env on specific dir.
+conda create --prefix /path/to/conda-env
+conda create -p /path/to/conda-env
+conda activate /path/to/conda-env
 
 # Activate snowflakes env.
 conda activate snowflakes
@@ -32,6 +36,7 @@ source activate snowflakes
 
 # List all your environments.
 conda info --envs
+conda env list
 
 # Check if a package not already installed is available from the anaconda repository.
 conda activate snowflakes
@@ -41,5 +46,22 @@ conda install biopython
 # List installed packages.
 conda list
 
+
+# List app packages to future replication.
+conda env export > environment.yml
+(conda-env) conda env export --file environment.yml
+conda env export -n conda-env -f /path/to/environment.yml
+# Replicate from a exported list.
+conda env create -f environment.yml
+conda env create -n conda-env -f /path/to/environment.yml
+# Update from a exported list.
+conda env update -n conda-env -f /path/to/environment.yml
+
+# Install package from packages provided by third party repositories like conda-forge.
+conda install --channel conda-forge opencv
+
 # Start jupyter.
 jupyter-notebook
+
+# Start jupyter lab.
+jupyter-lab
