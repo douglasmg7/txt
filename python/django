@@ -1,0 +1,46 @@
+# install
+pip install django
+
+# check version
+python -m django --version
+
+# create a project
+django-admin startproject mysite
+cd mysite
+python -m venv venv
+source venv/bin/activate
+pip install django
+
+# run the server
+python manage.py runserver
+python manage.py runserver 8080
+python manage.py runserver 0:8080
+python manage.py runserver 0.0.0.0:8080
+
+# create app
+python manage.py startapp polls
+
+# create database
+python manage.py migrate
+
+# made some changes to your models and that you’d like the changes to be stored as a migration 
+python manage.py makemigrations polls
+
+# see what SQL that migration would run
+python manage.py sqlmigrate polls 0001
+
+# this checks for any problems in your project without making migrations or touching the database
+python manage.py check
+
+# reate those model tables in your database
+python manage.py migrate
+
+# we’re using this instead of simply typing “python”, because manage.py sets the DJANGO_SETTINGS_MODULE environment variable, which gives Django the Python import path to your mysite/settings.py file 
+python manage.py shell
+>>> from polls.models import Choice, Question  # Import the model classes we just wrote.
+# No questions are in the system yet.
+>>> Question.objects.all()
+<QuerySet []>
+
+# create admin user
+python manage.py createsuperuser
