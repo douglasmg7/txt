@@ -46,6 +46,9 @@ conda install biopython
 # List installed packages.
 conda list
 
+# Change python version.
+conda activate my_env
+conda install python=3.6
 
 # List app packages to future replication.
 conda env export > environment.yml
