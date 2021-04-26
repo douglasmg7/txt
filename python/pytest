@@ -1,0 +1,27 @@
+# install
+conda install pytest
+
+# file must begin have test_*.py or *_test.py to be found by pytest
+# function must start with test_* to be called by pytest
+# to call test functions
+pytest
+
+# to be more verbose
+pytest -v
+
+# to call a specific file
+pytest file_name.py
+
+# filter test to run
+pytest -k <substring> -v
+pytest -k list_all -v
+
+# mark
+# test_square.py
+import pytest
+
+@pytest.mark.squre
+def test_sqrt():
+    ...
+# run only functions with @pytest.mark.square
+pytest -m squre
