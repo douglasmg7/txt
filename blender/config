@@ -1,0 +1,14 @@
+# Configurations
+Edit > Preferences... > Interface > Resolution Scale > 1.15
+Edit > Preferences... > Interface > Line Width > Default
+
+Edit > Preferences... > Keymap > Spacebar Action > Search
+
+Edit > Preferences... > Themes > 3D Viewport > Wire Edit > Blue color
+Edit > Preferences... > Themes > 3D Viewport > Vertex Size > 3 px
+
+Edit > Preferences... > System > Undo Steps > 256
+
+Edit > Preferences... > Input > Emulate Numpad [Checked]
+
+Save Preferences

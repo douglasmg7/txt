@@ -1,0 +1,40 @@
+# Select all in the scene.
+a
+
+# Loop selection.
+Shift + LCM
+
+# Invert selection.
+Ctrl + i
+
+# Repeat last command.
+Shift + r
+
+# Pick shortest path.
+Ctrl + LCM
+
+# Circle selection.
+c               # Enter circle select mode.
+Weel mouse      # Ajust circle size.
+LCM             # To select.
+Shith + LCM     # To unselect.
+Esc             # Exit circle select mode.
+
+# Toggle Wireframe / Solid
+Shift + z
+
+# Select unique mesh in edit mode.
+Ctrl + l
+
+# Separate two meshs in edit mode.
+p
+
+# Make two meshs into same object.
+Ctrl + j
+
+# Show right menu.
+n
+
+# Applay scale to not have a broken scale (make it 1 for all params).
+Ctrl + a
+select Scale

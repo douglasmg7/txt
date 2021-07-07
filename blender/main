@@ -26,8 +26,14 @@ i
 # bevel edges
 ctrl + b
 
+
 # bevel vertices
 ctrl + shift + b
+
+# bevel
+select a vertice
+ctrl + b
+v
 
 # knife tool 
 k
@@ -60,6 +66,9 @@ mbm to deselect
 c
 lbm to select
 mbm to deselect
+
+# loop selection
+alt + lbm
 
 # edge loop selection
 alt + shift + lbm
@@ -193,3 +202,16 @@ d + lbm
 
 # grease erase
 d + rbm
+
+# Rename object.
+f2
+
+# merge
+m
+select by distance
+
+# create faces (fill faces)
+alt + f
+
+# Create rings.
+ctrl + r
