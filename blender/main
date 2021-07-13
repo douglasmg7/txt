@@ -101,9 +101,12 @@ g z
 # grap on local z axe
 g z z
 
-# scale
+# scale.
 s (+ x, y ou z) - scale
 s (shift + z) negate z, scale x and y
+
+# Normal scale.
+alt + s
 
 # rotate
 r (+ x, y ou z) - rotate
@@ -136,14 +139,26 @@ alt + s
 # reset rotate
 alt + r
 
-# applay object's transformation to its data
+# Applay object's transformation to its data, ex: use to applay scale.
 ctrl + a
 
 # crease
 shift + e
 
-home - zoom all
-\ (num pad) - zoom selected object
+# Zoom all.
+home
+
+# Zoom selected.
+/
+\ (num pad)
+
+
+# zoom out
+shift + c
+
+# Zoom region.
+shift + b
+
 
 w - shortcut menu for editing options
 o - proportional edition enable/desable
@@ -154,6 +169,9 @@ shift - slow the motiom of the mouse
 ctrl + j - join objects, but retain the original nodes
 p - partition in edit mode to separete objects
 p - in object mode deletes the scene background, esc to go back
+
+# Part in edit mode.
+p
 
 f - create a face from selected vertices
 
@@ -180,9 +198,6 @@ preferences/interface/rotate around selection
 
 # save current scene as default
 ctrl + u
-
-# zoom out
-shift + c
 
 # add-ons
 	Measureit
@@ -215,3 +230,20 @@ alt + f
 
 # Create rings.
 ctrl + r
+
+# Extrude manifold (face must be selected).
+alt + e
+
+# Bridge edge loops (to make a hole between to loops).
+ctrl + e -> Bridge Edge Loops
+
+# Edge tools.
+ctrl + e
+
+# Boolean intersection using bool tool (Numpad must be emulated).
+# Select the two objects.
+ctrl + -
+ctrl + shift + -
+
+# Change normals.
+shift + n
