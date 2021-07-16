@@ -247,3 +247,18 @@ ctrl + shift + -
 
 # Change normals.
 shift + n
+
+# Toggle shading (Wireframe/Solid).
+shift + z
+
+# Toggle X-Ray.
+alt + z
+
+# Change Handle Type (Curve selected).
+v
+
+# Set parent to.
+ctrl + p
+
+# Clear parent.
+alt + p
