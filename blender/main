@@ -149,9 +149,7 @@ shift + e
 home
 
 # Zoom selected.
-/
 \ (num pad)
-
 
 # zoom out
 shift + c
@@ -262,3 +260,24 @@ ctrl + p
 
 # Clear parent.
 alt + p
+
+# Local view.
+/
+
+# Remove from local view.
+m
+
+# Hide selected object.
+h
+
+# Hide not selected objects
+shift + h
+
+# Unhide all objects.
+alt + h
+
+# Save view.
+n > View > Stored Views
+
+# Align.
+n > Item > Align Tools
