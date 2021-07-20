@@ -20,7 +20,7 @@ face with more then four faces
 ctrl r
 scrollor, '+' or '-' to change the number of rings
 
-# inset faces
+# inset faces (edit mode - faces)
 i
 
 # bevel edges
@@ -118,7 +118,7 @@ rmb to fix extrude above the old
 # duplicate
 shift + d
 
-# duplicate link
+# duplicate link (point to same mesh)
 alt + d
 
 # rotate 30 degrees over axe y
@@ -219,9 +219,9 @@ d + rbm
 # Rename object.
 f2
 
-# merge
+# merge (edit mode, with some points selected)
 m
-select by distance
+> select by distance
 
 # create faces (fill faces)
 alt + f
@@ -281,3 +281,14 @@ n > View > Stored Views
 
 # Align.
 n > Item > Align Tools
+
+# Modifiers used
+Weld
+Wireframe
+Subdivision Surface
+Array
+Solidify
+Triangulate
+Remesh
+Displace
+Decimate
