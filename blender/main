@@ -67,6 +67,9 @@ c
 lbm to select
 mbm to deselect
 
+# Lasso select.
+ctrl + rmb
+
 # loop selection
 alt + lbm
 
@@ -131,6 +134,7 @@ shift + s - precisely place the 3d cursor
 clik on number of duplicate itens on edit tab inside properties window
 
 # reset position
+Move selection to 
 alt + g
 
 # reset scale
@@ -157,6 +161,8 @@ shift + c
 # Zoom region.
 shift + b
 
+# Dolly zoom.
+ctrl + shift + mmb
 
 w - shortcut menu for editing options
 o - proportional edition enable/desable
@@ -292,3 +298,15 @@ Triangulate
 Remesh
 Displace
 Decimate
+
+# Maximize area
+ctrl + space
+
+# Toggle fullscreen area
+ctra + alt + space
+
+# Ajust last operation.
+f9
+
+# Transform orientation.
+,

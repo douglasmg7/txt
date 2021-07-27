@@ -1,7 +1,7 @@
 # Protocolos
 
 # Módulos
-Serve para comunicar com um tx espcífico
+Serve para comunicar com um TX espcífico
 Consiste em um chip ATMEGA328 e um de frequência de 2.4GHZ
 
 
@@ -24,6 +24,7 @@ AFHDS, AFHDS 2A
 * Automatic Frequency Hopping Digital System (AFHDS) spread spectrum technology
 
 ### FrSky
+SBUS
 Fport, D8, D16, LR12
 
 ### Spektrum
@@ -40,13 +41,18 @@ A modulação é feito pelo tempo em alto.
 Geralmente 10000 ms para mínimo, 15000 ms para médio e 20000 ms para máximo.
 Mais fios para fazer as conexões, criando um pouco mais de desorganização.
 
-### CPPM/PPM (Pulse Position Modulation)
+### CPPM/PPM - Pulse Position Modulation - Analog
 Todos os servos são conectados por um único fio a um único conector do receiver.  
 As informações são enviadas cada momento a um servo específico.
 Mais organizado, pois utiliza apenas um fio.
 
-### SBUS (serial bus)
+### SBUS or IBUS - Serial BUS - Digital
 Permite o uso de um único cabo para conectar todos os servos, mas não é igual ao PPM.
+SBUS inverted signaling (1=low, 0=high)
+IBUS standard signaling (1=high, 0=low)
+Some flight controllers can automatically configure inversion when you set the serial receiver type, other can't.
+If a manufacturer indicates that a certain UART should be used for a certain protocol, it's best to follow that recommendation.
+    * Especially true on F4 boards.
 
 
 ## Exemplo
@@ -145,4 +151,6 @@ T16 Pro
 Péssima precisão
 
 
-
+## Power
+Almost all receiver use 5v power.
+Spektrum satellite receivers use 3V3 power.

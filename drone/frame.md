@@ -8,9 +8,10 @@
 * Frágil
 * Indoor e outdoor
 
-85 mm
+85 mm 
 * Um pouco mais resitente
 * Melhor para outdoor
+* Usado o Tiny8x
 
 Motores brushed não são parafusados no frame, apenas encaixados
 Motores brushless são parafusados no frame

@@ -9,7 +9,7 @@
     48 mm diameter
 
 ## Flight controller
-    Beecores VTX
+    Beecore VTX
     Conector BT2.0
     Mini Receptor FS (Fly Sky) FLi 14+ (Externo, PPM, Duas antenas e RSSI (Potência do sinal, para uso no OSM))
 
