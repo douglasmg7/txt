@@ -9,6 +9,24 @@ Por onde o flight controller recebe a energia proviniente da bateria.
 Deve ser corretamente dimensionado para que não se aqueça.
 Pitch é a distância entre os pinos do conector.
 
+## Pinout diagram
+Indica cada função de um pino ou pad.
+Pode ser pesquisado por imagens google.
+
+## PDB - Power Distribution Board
+É um regulador de tensão que fornece a tensão necessária pelo FC e ESC.
+Geralmete o FC não tem regulador de tensão.
+
+## VBAT/VCC - Voltage fo the battery
+VBAT is just the raw LiPo voltage, not regulated. So it is whatever voltage the connected LiPo is.
+NOT regulated which means the voltage changes as the battery discharges.
+If a device takes VBAT as input, then it probably has a voltage regulator to step it down to what it needs internally,
+or is simply monitoring the voltage (to display on an OSD for instance).
+
+## RAM pin
+Provide dedicated power for VTX and camera.
+Sometimes filtered for cleaner video.
+
 ### JST
 Pinos clipados  
 

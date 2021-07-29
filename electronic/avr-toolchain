@@ -1,6 +1,14 @@
+# Debian install.
+apt-get install avrdude avrdude-doc binutils-avr avr-libc gcc-avr gdb-avr
+
 # Install compiler.
 sudo pacman -S avr-gcc
 
 # Install software uploader.
 sudo pacman -S avrdude
 
+# Compile the code using avr-gcc.
+make
+
+# Send compiled code to the MCU using avrdude.
+make flash
