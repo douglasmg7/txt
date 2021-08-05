@@ -48,25 +48,6 @@ PWM (pulse width modulation), switching the digital pin state vary rapidly betwe
 Is a device that allow us to program the flash memeory of a microcontroller.
 By program, we mean we can transfer a program which we have written and compiled and send it the microcontroller for the microcontroller to execute the program.
 
-## Serial communications built in
-
-### USART 
-For communication with desktop computer, radio modems, and GPS units.
-Simillar to UART, but have sychronous comunication too.
-
-### SPI - Serial Peripheral Interface
-Synchronous serial communication.
-Full duplex.
-Good for ultra-fast communication over very short distances with peripherals like memories, ADCs, and DACs.
-One master and multi slave communication.
-Four-wire serial bus.
-Different from SSI (Synchronous Serial Interface protocol).
-
-### I2C/IIC
-Like a small network, allowing you to connect up to 127 different sensors to the same couple of wires. 
-   
-
-
 ## Interrupts
 
 ## Timers/counters
