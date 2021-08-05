@@ -17,3 +17,8 @@ $ source venv/bin/activate
 
 # Deactivate the environment.
 $ deactivate
+
+# Git.
+echo 'venv' > .gitignore
+pip freeze > requirements.txt
+git add requirements.txt
