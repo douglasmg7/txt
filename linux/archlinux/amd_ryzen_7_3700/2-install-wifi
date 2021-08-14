@@ -1,0 +1,89 @@
+systemctl enable dhcpcd   # make network connections persistent
+
+# Install wifi-menu on the new system.
+$ pacman -S wireless_tools wpa_supplicant dialog
+
+
+# Intall terminus-font.
+
+
+# Install network manage and dependecies.
+pacman -Sy netctl dialog dhcpcd wpa_supplicant ifplugd
+
+# Do not enable concurrent, conflicting network services.
+# Use systemctl --type=service to ensure that no other network service is running before enabling a netctl profile/service.
+$ systemctl --type=service
+
+# Install the wpa_supplicant package, which includes the main program wpa_supplicant, the passphrase tool wpa_passphrase, and the text front-end wpa_cli. 
+$ pacman -S wpa_supplicant
+
+# Create a minimal configuration file "/etc/wpa_supplicant/wpa_supplicant.conf" with content:
+#   ctrl_interface=/run/wpa_supplicant
+#   update_config=1
+
+# Discovery the <interface> name.
+$ networkctl list
+
+# Start wpa_supplicant:
+$ sudo wpa_supplicant -B -i <interface> -c /etc/wpa_supplicant/wpa_supplican.conf
+
+# Start wpa cli to create an access point configuration.
+$ sudo wpa_cli
+> status
+> list_network
+> scan
+> scan_result
+> add_network
+> set_network 0 ssid "caliant"
+> set_network 0 psk "ulaula"
+> enable_network 0
+> set update_config=1
+> save_config
+> quit
+
+# Start dhcp client:
+$ dhcpcd <interface>
+
+# Stop wifi connection:
+$ killall wap_supplicant
+
+# Stop dhcpcd:
+$ killall dhcpcd
+
+# To connect again on the next boot if not yet enabled wpa_service service.
+$ sudo wpa_supplicant -B -i <interface> -c /etc/wpa_supplicant/wpa_supplican.conf
+$ dhcpcd <interface>
+
+# If the network does not have a passphrase, e.g. a public Wi-Fi: 
+# network={
+#   ssid="MYSSID"
+#   key_mgmt=NONE
+# }
+
+# Create a configuration file to be used with wpa_suplicant@interface.service.
+# wpa_supplicant@interface.service - accepts the interface name as an argument and starts the wpa_supplicant daemon for this interface. It reads a /etc/wpa_supplicant/wpa_supplicant-interface.conf configuration file.
+$ cd /etc/wpa_supplicant$ 
+$ sudo ln -s /etc/wpa_supplicant.conf wpa_supplicant-<interface>.conf
+
+# Enable wpa_supplicant service.
+$ sudo system enable wpa_supplicant@<device>.service
+
+# Create the ethernet configuration file "/etc/systemd/network/20-wired.network".
+#   [Match]
+#   name=en*
+#   
+#   [Network]
+#   DHCP=ipv4
+
+# Create the wireless configuration file "/etc/systemd/network/25-wireless.network".
+#   [Match]
+#   name=wl*
+#   
+#   [Network]
+#   DHCP=ipv4
+
+# Enable networkd to initate dhcpcd for the devices.
+$ systemctl enable systemd-networkd
+
+# Enable dhcpcd service.
+$ systemctl enable dhcpcd

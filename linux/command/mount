@@ -10,6 +10,9 @@ sudo mount -t ntfs-3g /dev/sdb1 /media/external
 # Mount a iso file.
 sudo mount /path/to/image.iso /mnt/iso -o loop
 
+# Mount a cd drive.
+sudo mount /dev/sr0 ~/mnt
+
 # Unmount
 umount <device>
 umount /dev/sdb1
