@@ -182,4 +182,9 @@ sudo pacman -S joyutils --noconfirm
 cd
 git clone git://github.com/inishchith/autoenv.git ~/.autoenv
 
+printf "\nArduino ide and cli..."
+sudo pacman -S arduino arduino-cli --noconfirm
+printf "\nCreating symbolic link to jre configuration for arduino window correction."
+ln -s ~/dotfiles/arduino.sh /etc/profile.d/arduino.sh
+
 # reboot now
