@@ -213,3 +213,10 @@ $ cd ~/aur
 $ git clone https://aur.archlinux.org/upd72020x-fw.git
 $ cd upd702020x-fw
 $ makepkg -si
+
+$ git clone https://github.com/douglasmg7/txt.git ~/txt
+$ git clone https://github.com/douglasmg7/dotfiles.git ~/dotfiles
+
+# Run script to continue installation.
+~/txt/linux/archlinux/amd_ryzen_7_3700/2-install.sh
+
