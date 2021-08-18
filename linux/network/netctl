@@ -1,33 +1,39 @@
-netctl - CLI-based tool used to configure and manage network connections via profiles.
+# netctl - CLI-based tool used to configure and manage network connections via profiles.
 
+# Contain the netctl profiles.
 /etc/netctl
-  Contain the netctl profiles.
 
-netctl list
 # List profiles and current profile in use.
+netctl list
 
-netctl start profile
 # Start a profile.
+netctl start profile_name
 
-netctl stop profile
 # Stop a profile.
+netctl stop profile_name
 
-pacman -S ifplugd
-systemctl enable netctl-ifplugd@wlan0.service
+# Enable a profile.
+netctl enable profile_name
+
+# Reenable a profile.
+netctl reenable profile_name
+
 # systemctl enable netctl-ifplugd@interface.service
 # DHCP profiles will be started/stopped when the network cable is plugged in/unplugged.
 # The netctl-ifplugd@interface.service will prefer profiles that use DHCP.
 # To automatically start a static IP profile the option ExcludeAuto=no needs to be set in it.
 # To prioritize a profile with a static IP over DHCP profiles, you can set Priority=2, which is higher than the default priority given to DHCP profiles of Priority=1.
+pacman -S ifplugd
+systemctl enable netctl-ifplugd@wlan0.service
 
-pacman -S wpa_actiond
-system enable netctl-auto@wlan0.service
 # system enable netctl-auto@interface.service
 # netctl profiles will be started/stopped automatically as you move from the range of one network into the range of another network (roaming).
 # Profiles must use Security=wpa-configsection or Security=wpa to work with netctl-auto rather than Security=wpa-config.
 # If you want some wireless profile not to be started automatically by netctl-auto@interface.service, you have to explicitly add ExcludeAuto=yes to that profile.
 # You can use priority= in the WPAConfigSection (see /etc/netctl/examples/wireless-wpa-configsection) to set priority of a profile when multiple wireless access points are available.
 # Note that interface is not literal, but to be substituted by the name of your device's interface, e.g. netctl-auto@wlp4s0.service. See netctl.profile(5) for details.
+pacman -S wpa_actiond
+system enable netctl-auto@wlan0.service
 
 netctl-auto list
 # List profiles and current profile in use.

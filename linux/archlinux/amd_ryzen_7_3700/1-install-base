@@ -127,6 +127,11 @@ sonic
 ::1             localhost
 127.0.1.1       sonic.localdomain   sonic 
 
+# Install netctl using the default=1.
+$ sudo pacman -Sy netctl
+# Install optional dependencies.
+$ sudo pacman -Sy dialog dhcpcd wpa_supplicant ifplugd
+
 # Create a new user.
 # -m create home directory
 # -g defines the group name
@@ -163,3 +168,48 @@ exit
 # Restart and remove the installation media.
 reboot
 
+# As root.
+$ su root
+
+# Do not enable concurrent, conflicting network services.
+# Use systemctl --type=service to ensure that no other network service is running before enabling a netctl profile/service.
+$ sudo systemctl --type=service
+# look up into generated list if some network service already exist. 
+
+# Create a profile using wifi-menu, it will be created at /etc/netctl (package dialog needed be installed).
+# -o obfuscate the wireless network.
+$ wifi-menu -o
+# To use dhcp add the line and enable dhcpcd:
+# DHCPClient=dhcpcd
+# $ systemctl enable dhcpcd.service
+
+
+# Start the profile created with wifi-menu.
+$ netctl start nimbus
+
+# Enable profile to start at boot.
+$ netctl enable nimbus
+
+# Install microcode.
+$ pacman -S amd-ucode
+$ grub-mkconfig -o /boot/grub/grub.cfg
+
+# Install git
+$ pacman -S git
+$ mkdir ~/aur 
+
+# Install drivers from aur packages.
+$ cd ~/aur
+$ git clone https://aur.archlinux.org/aic94xx-firmware.git
+$ cd aic94xx-firmware
+$ makepkg -si
+
+$ cd ~/aur
+$ git clone https://aur.archlinux.org/wd719x-firmware.git
+$ cd wd719x-firmware
+$ makepkg -si
+
+$ cd ~/aur
+$ git clone https://aur.archlinux.org/upd72020x-fw.git
+$ cd upd702020x-fw
+$ makepkg -si

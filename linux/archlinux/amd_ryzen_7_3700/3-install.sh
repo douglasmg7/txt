@@ -1,166 +1,190 @@
 #!/usr/bin/env bash
 
-printf "\nSet maximum space for log files...\n"
-sudo journalctl --vacuum-size=100M
+printf "\nInstalling video driver...\n"
+sudo pacman -S xf86-video-intel --noconfirm
 
-printf "\nSarting/enabling datetime sync...\n"
-sudo systemctl start systemd-timesyncd.service
-sudo systemctl enable systemd-timesyncd.service
+printf "\nInstalling display server..."
+sudo pacman -S xorg xorg-server --noconfirm
 
-printf "\nInstalling git...\n"
-sudo pacman -S git --noconfirm
+printf "\nInstalling Xstart..."
+sudo pacman -S xorg-xinit --noconfirm 
 
-printf "\nCloning txt...\n"
-git clone https://github.com/douglasmg7/txt.git ~/txt
+printf "\nCreating AUR directory..."
+mkdir -p ~/aur
 
-printf "\nCloning dotfiles...\n"
-git clone https://github.com/douglasmg7/dotfiles.git ~/dotfiles
+printf "\nCloning dwm (Dynamic Windows Manager)..."
+git clone https://aur.archlinux.org/dwm-git.git ~/aur/dwm-git
+cd ~/aur/dwm-git
+printf "\nCompiling dwm..."
+makepkg -si
+printf "\nCreating symbolic link to dwm configuration."
+ln -s ~/dotfiles/dwm/config.h ~/aur/dwm-git/src/dwm/config.h
+printf "\nRecompiling dwm with new configuration file..."
+makepkg -fi
 
-printf "\nCreating symbolic link to git configuration file...\n"
-ln -s ~/dotfiles/gitconfig ~/.gitconfig
-# Git configuration.
-# git config --global user.name "douglasmg7"
-# git config --global user.email "douglasmg7@gmail.com"
-# git config --global core.editor vi
-# Set the cache to timeout after 10 hours (setting is in seconds).
-# git config --global credential.helper 'cache --timeout=36000'
+printf "\nCloning st (Simple terminal)..."
+git clone https://aur.archlinux.org/st-git.git ~/aur/st-git
+cd ~/aur/st-git
+printf "\nCompiling st..."
+makepkg -si
+printf "\nCreating symbolic link to st configuration."
+ln -s ~/dotfiles/st/config.h ~/aur/st-git/src/st/config.h
+printf "\nRecompiling st with new configuration file..."
+makepkg -fi
 
-# Installing aic94xx-firmware.
-mkdir -p ~/aur && cd ~/aur
-printf "Cloning aic94xx-firmware..."
-git clone https://aur.archlinux.org/aic94xx-firmware.git
-cd ~/aur/aic94xx-firmware
-printf "\nInstalling aic94xx-firmware..."
+# printf("\nInstalling Terminal emulator for the X Window System..."
+# sudo pacman -S xterm --noconfirm
+
+# printf("\nInstalling Unicode rxvt - terminal emulator..."
+# sudo pacman -S urxvt --noconfirm
+
+# printf("\nInstalling Termite - terminal emulator..."
+# sudo pacman -S termite --noconfirm
+
+printf "\nCreating Xserver config file...\n" 
+cat > ~/.xserverrc << EOF
+#!/bin/sh
+exec /usr/bin/Xorg -nolisten tcp "\$@" vt\$XDG_VTNR
+EOF
+
+printf "\nCreating symbolic link for .xinitrc...\n"
+ln -s ~/dotfiles/xinitrc ~/.xinitrc
+
+# .Xresources
+printf "\nCreating symbolic link for .Xresources...\n"
+ln -s ~/dotfiles/Xresources ~/.Xresources
+
+printf "\nInstalling xserver fonts..."
+sudo pacman -S ttf-dejavu ttf-inconsolata --noconfirm
+
+printf "\nInstalling dmenu..."
+sudo pacman -S dmenu --noconfirm
+
+# To show current wifi on dwm menu.
+printf "\nInstalling iw...\n"
+sudo pacman -S iw --noconfirm
+
+printf "\nInstalling slock..."
+sudo pacman -S slock --noconfirm
+
+printf "\nInstalling libinput to set inputs like touchpad...\n"
+sudo pacman -S xf86-input-libinput --noconfirm
+# To config touchpad.
+# $ xinput list
+# $ xinput list-props device
+# $ xinput set-prop <device> <option-number> <setting>
+
+printf "\nCreating touchpad config file...\n" 
+cat > /etc/X11/xorg.conf.d/30-touchpad.conf << EOF
+# Touchpad tapping enable.
+Section "InputClass"
+  Identifier "ETPS/2 Elantech Touchpad"
+	Driver "libinput"
+	option "Tapping" "on"
+EndSection
+EOF
+
+# Keyboard layout setting (no needed, alredy on .xinitrc).
+# $ startx
+# List current config.
+# $ setxkbmap -query
+# Set keyboard layout.
+# $ setxkbmap -model abnt2 -layout br -option
+# Blank option, so compose:ralt will not be setted.
+
+# Start xserver using ~/.xinitrc.
+# startx    
+
+# Start xserver using a dwm windows manager, not using ~/.xinirc.
+# startx /usr/bin/dwm   
+
+# Quit xserver.
+# pkill -15 Xorg
+
+# install atom
+# pacman -S atom
+# Create symbolic link for files in ~/dotfiles/atom in ~/.atom.
+# Install atom packages.
+# apm install --packages-file ~/.atom/package.list    
+
+# Install browsers.
+printf "\nInstalling Firefox..."
+sudo pacman -S firefox flashplugin --noconfirm
+# If flash sound not work.
+# pacman -S libvdpau-va-gl
+# pacman -S chromium
+printf "\nInstalling surf..."
+sudo pacman -S surf tabbed --noconfirm
+# To run with tab: $tabbed surf -e
+
+
+# File manager.
+printf "\nInstalling file manager..."
+sudo pacman -S pcmanfm --noconfirm
+
+# Pdf readers.
+printf "\nInstalling pdf readers..."
+sudo pacman -S evince mupdf apvlv --noconfirm
+
+# Image viewer
+printf "\nInstalling image viewer..."
+sudo pacman -S feh --noconfirm
+
+# alsamixer and mixer.
+printf "\nInstalling alsamixer and mixer..."
+sudo pacman -S alsa-utils --noconfirm
+
+# Sound server.
+printf "\nInstalling sound server..."
+sudo pacman -S pulseaudio pulseaudio-alsa --noconfirm
+
+printf "\nInstalling pulse audio interface (cli)..."
+sudo pacman -S pamixer --noconfirm
+
+printf "\nInstalling pulse audio interface (gui)..."
+sudo pacman -S pavucontrol --noconfirm
+
+printf "\nInstalling mpg124..."
+sudo pacman -S mpg123 --noconfirm
+
+printf "\nInstalling mplayer..."
+sudo pacman -S mplayer --noconfirm
+
+printf "\nInstalling transmission-gtk..."
+sudo pacman -S transmission-gtk --noconfirm
+
+# printf "\nInstalling libs to play encrypted DVDs..."
+# sudo pacman -S libdvdread libdvdcss libdvdnav --noconfirm
+
+# printf "\nInstalling cdparanoia (cd ripper)..."
+# sudo pacman -S cdparanoia --noconfirm
+
+printf "\nInstalling unrar..."
+sudo pacman -S unrar --noconfirm
+
+printf "\nInstalling unzip..."
+sudo pacman -S unzip --noconfirm
+
+printf "\nInstalling mkfs.vfat..."
+sudo pacman -S dosfstools --noconfirm
+
+printf "Cloning simple-mtpfs, mtp (media transfer protocol) to connect to Android phone..."
+git clone https://aur.archlinux.org/simple-mtpfs.git ~/aur/simple-mtpfs.git
+cd ~/aur/simple-mtpfs
+printf "\nInstalling simple-mtpfs..."
 makepkg -si
 
-# Installing aic94xx-firmware.
-cd ~/aur
-printf "Cloning wd719x-firmware..."
-git clone https://aur.archlinux.org/wd719x-firmware.git
-cd ~/aur/wd719x-firmware
-printf "\nInstalling wd719x-firmware..."
-makepkg -si
+# For joystick calibration.
+printf "\nInstalling joyutils..."
+sudo pacman -S joyutils --noconfirm
 
-printf "\nInstalling xclip..."
-sudo pacman -S xclip --noconfirm
+# Autoenv for python venv
+cd
+git clone git://github.com/inishchith/autoenv.git ~/.autoenv
 
-printf "/nInstalling screen saver..."
-sudo pacman -S cmatrix --noconfirm
+printf "\nArduino ide and cli..."
+sudo pacman -S arduino arduino-cli --noconfirm
+printf "\nCreating symbolic link to jre configuration for arduino window correction."
+ln -s ~/dotfiles/arduino.sh /etc/profile.d/arduino.sh
 
-printf "/nInstalling acpi for battery status..."
-sudo pacman -S acpi --noconfirm
-
-printf "\nInstalling wget..."
-sudo pacman -S wget --noconfirm
-
-printf "\nInstalling moc player..."
-sudo pacman -S moc --noconfirm
-
-printf "\nCreating symbolic link to mocp configuration file..."
-mkdir -p ~/.moc
-ln -s ~/dotfiles/moc/config ~/.moc/config
-
-# printf "\nInstalling youtube download..."
-# sudo pacman -S youtube-dl --noconfirm
-
-printf "\nInstalling terminal multiplex..."
-sudo pacman -S tmux --noconfirm
-
-printf "\nSet tmux configuration symbolic link..."
-ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
-
-# printf "\nInstalling process monitor..."
-# sudo pacman -S htop --noconfirm
-
-printf "\nInstalling python 2..."
-sudo pacman -S python2 python2-pip --noconfirm
-
-printf "\nInstalling python 3..."
-sudo pacman -S python python-pip --noconfirm
-
-printf "\nInstalling redis..."
-sudo pacman -S redis --noconfirm
-# Default port - 6379
-# sudo systemctl enable redis
-# sudo systemctl start redis
-
-# printf "\nInstalling power analyzer..."
-# sudo pacman -S powertop --noconfirm
-
-# printf "\nInstalling hd memory analyzer..."
-# sudo pacman -S ncdu --noconfirm
-
-printf "\nInstalling ssh client..."
-sudo pacman -S openssh --noconfirm
-
-printf "\nEnabling ssh server..."
-sudo systemctl enable sshd
-sudo systemctl start sshd
-
-printf "\nCreating symbolic link to ssh configuration file...\n"
-mkdir -p ~/.ssh
-ln -s ~/dotfiles/ssh/config ~/.ssh/config
-cp ~/dotfiles/ssh/ssh-agent.service ~/.ssh/ssh-agent.service
-# todo - not working.
-systemctl --user enable ssh-agent.service
-# Copy public key to remote server:
-$ ssh-copy-id vps10092.publiccloud.com.br
-# If user differ on remote machine:
-$ ssh-copy-id douglasmg7@vps10092.publiccloud.com.br
-# Test connection. 
-$ ssh vps10092.publiccloud.com.br
-
-printf "\nInstalling bluetoooth...\n..."
-sudo pacman -S bluez bluez-utils pulseaudio-bluetooth --noconfirm
-printf "\nStarting/Enabling bluetooth service...\n"
-sudo systemctl start bluetooth.service
-sudo systemctl enable bluetooth.service
-
-printf "\nInsalling cmake...\n"   # Needed by YouCompleteMe vim plugin.
-sudo pacman -S cmake --noconfirm
-
-printf "\nInstalling vim...\n"
-sudo pacman -S vim --noconfirm
-printf "\nSetting vim configuration...\n"
-mkdir -p ~/.vim && mkdir -p ~/.vim/bundle
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-ln -s ~/dotfiles/vimrc ~/.vimrc
-vim +PluginInstall +q +q
-vim +GoInstallBinaries +q   # Needed by vim-go plugin.
-# Compile YouCompleteMe components.
-printf "\nCompiling YCM components...\n"
-cd ~/.vim/bundle/youcompleteme
-python3 install.py --go-completer --ts-completer
-
-printf "\nInstalling neovim...\n"
-sudo pacman -S neovim --noconfirm
-printf "\nSetting neovim configuration...\n"
-mkdir -p ~/.config/nvim
-ln -s ~/dotfiles/nvim/init.vim ~/.config/nvim/init.vim
-sudo pacman -S python-neovim --noconfirm
-
-printf "\nInstalling postgresql...\n"
-sudo pacman -S postgresql
-# include into /etc/pacman.conf:
-#   IgnorePkg = postgresql postgresql-libs
-# To avoid update database to incompatilbe version
-
-# sudo -iu postgres
-# [postgres]$ initdb -D /var/lib/postgres/data
-# [postgres]$ exit
-# sudo systemctl start postgresql
-
-# Make capslock a leftctrl.
-# cd /etc/udev/hwdb.d
-# ln -s ~/dotfiles/70-keyboard-my.hwdb 70-keyboard-my.hwdb
-# systemd-hwdb update
-# udevadm trigger
-
-# Use AUR.
-# pacman -S mongodb mongodb-tools
-# Enable mongodb.
-# systemctl enable mongodb
-# systemctl start mongodb
-
-# Node.
-# curl -L https://git.io/n-install | bash
+# reboot now

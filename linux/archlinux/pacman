@@ -47,3 +47,7 @@ $ pacman -Sc
 # Cleaning the package cache.
 $ pacman -Scc
 du -sh /var/log
+
+# Options.
+-y, --refresh
+Download a fresh copy of the master package database from the server(s) defined in pacman.conf(5). This should typically be used each time you use --sysupgrade or -u. Passing two --refresh or -y flags will force a refresh of all package databases, even if they appear to be up-to-date.
