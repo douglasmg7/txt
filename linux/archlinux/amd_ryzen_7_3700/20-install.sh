@@ -13,14 +13,14 @@ ln -s ~/dotfiles/gitconfig ~/.gitconfig
 printf "\nInstalling xclip..."
 sudo pacman -S xclip --noconfirm
 
-# printf "/nInstalling screen saver..."
-# sudo pacman -S cmatrix --noconfirm
-
 printf "/nInstalling acpi for battery status..."
 sudo pacman -S acpi --noconfirm
 
 printf "\nInstalling wget..."
 sudo pacman -S wget --noconfirm
+
+printf "\nInstalling curl..."
+sudo pacman -S curl --noconfirm
 
 printf "\nInstalling moc player..."
 sudo pacman -S moc --noconfirm
@@ -38,8 +38,8 @@ sudo pacman -S tmux --noconfirm
 printf "\nSet tmux configuration symbolic link..."
 ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 
-# printf "\nInstalling process monitor..."
-# sudo pacman -S htop --noconfirm
+printf "\nInstalling process monitor..."
+sudo pacman -S htop --noconfirm
 
 printf "\nInstalling python 2..."
 sudo pacman -S python2 python2-pip --noconfirm
@@ -66,4 +66,4 @@ sudo systemctl enable bluetooth.service
 # udevadm trigger
 
 # Node.
-# curl -L https://git.io/n-install | bash
+curl -L https://git.io/n-install | bash

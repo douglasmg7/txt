@@ -218,5 +218,5 @@ $ git clone https://github.com/douglasmg7/txt.git ~/txt
 $ git clone https://github.com/douglasmg7/dotfiles.git ~/dotfiles
 
 # Run script to continue installation.
-~/txt/linux/archlinux/amd_ryzen_7_3700/2-install.sh
+~/txt/linux/archlinux/amd_ryzen_7_3700/20-install.sh
 
