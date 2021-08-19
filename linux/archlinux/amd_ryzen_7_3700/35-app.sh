@@ -17,7 +17,7 @@ sudo pacman -S pcmanfm --noconfirm
 
 # Pdf readers.
 printf "\nInstalling pdf readers..."
-sudo pacman -S evince mupdf apvlv --noconfirm
+sudo pacman -S evince mupdf --noconfirm
 
 # Image viewer
 printf "\nInstalling image viewer..."
@@ -62,7 +62,7 @@ printf "\nInstalling mkfs.vfat..."
 sudo pacman -S dosfstools --noconfirm
 
 printf "Cloning simple-mtpfs, mtp (media transfer protocol) to connect to Android phone..."
-git clone https://aur.archlinux.org/simple-mtpfs.git ~/aur/simple-mtpfs.git
+git clone https://aur.archlinux.org/simple-mtpfs ~/aur/simple-mtpfs
 cd ~/aur/simple-mtpfs
 printf "\nInstalling simple-mtpfs..."
 makepkg -si
@@ -74,4 +74,10 @@ sudo pacman -S joyutils --noconfirm
 printf "\nArduino ide and cli..."
 sudo pacman -S arduino arduino-cli --noconfirm
 printf "\nCreating symbolic link to jre configuration for arduino window correction."
-ln -s ~/dotfiles/arduino.sh /etc/profile.d/arduino.sh
+sudo ln -s ~/dotfiles/arduino.sh /etc/profile.d/arduino.sh
+
+printf "\nInstalling freecad..."
+sudo pacman -S freecad --noconfirm
+
+printf "\nInstalling blender..."
+sudo pacman -S blender --noconfirm
