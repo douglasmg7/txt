@@ -1,7 +1,14 @@
 #!/usr/bin/env bash
 
+# Identify the graphics card.
+# lspci -v | grep -A1 -e VGA -e 3D
+
 printf "\nInstalling video driver...\n"
-sudo pacman -S xf86-video-intel --noconfirm
+sudo pacman -S nvidia --noconfirm
+
+printf "\nInstalling openGL driver...\n"
+sudo pacman -S nvidia-utils --noconfirm
+# If you run into trouble with CUDA not being available, run nvidia-modprobe first.
 
 printf "\nInstalling display server..."
 sudo pacman -S xorg xorg-server --noconfirm
@@ -100,9 +107,3 @@ EOF
 
 # Quit xserver.
 # pkill -15 Xorg
-
-# install atom
-# pacman -S atom
-# Create symbolic link for files in ~/dotfiles/atom in ~/.atom.
-# Install atom packages.
-# apm install --packages-file ~/.atom/package.list    
