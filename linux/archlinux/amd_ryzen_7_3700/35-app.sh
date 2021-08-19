@@ -71,10 +71,6 @@ makepkg -si
 printf "\nInstalling joyutils..."
 sudo pacman -S joyutils --noconfirm
 
-# Autoenv for python venv
-cd
-git clone git://github.com/inishchith/autoenv.git ~/.autoenv
-
 printf "\nArduino ide and cli..."
 sudo pacman -S arduino arduino-cli --noconfirm
 printf "\nCreating symbolic link to jre configuration for arduino window correction."

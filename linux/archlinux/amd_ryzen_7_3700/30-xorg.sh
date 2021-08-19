@@ -19,24 +19,29 @@ sudo pacman -S xorg-xinit --noconfirm
 printf "\nCreating AUR directory..."
 mkdir -p ~/aur
 
-printf "\nCloning dwm (Dynamic Windows Manager)..."
-git clone https://aur.archlinux.org/dwm-git.git ~/aur/dwm-git
-cd ~/aur/dwm-git
-printf "\nCompiling dwm..."
-makepkg -si
-printf "\nCreating symbolic link to dwm configuration."
-ln -s ~/dotfiles/dwm/config.h ~/aur/dwm-git/src/dwm/config.h
-printf "\nRecompiling dwm with new configuration file..."
+# st.
+# Required by dwm.
+printf "\nCloning st (Simple terminal)..."
+git clone https://aur.archlinux.org/st.git ~/aur/st
+cd ~/aur/st
+printf "\nCompiling st..."
+makepkg -s
+printf "\nCreating symbolic link to st configuration."
+mv ~/aur/st/src/st-0.8.4/config.h ~/aur/st/src/st-0.8.4/config_old.h
+ln -s ~/dotfiles/st/config_amd_ryzen_7_3700.h ~/aur/st/src/st-0.8.4/config.h
+printf "\nRecompiling st with new configuration file..."
 makepkg -fi
 
-printf "\nCloning st (Simple terminal)..."
-git clone https://aur.archlinux.org/st-git.git ~/aur/st-git
-cd ~/aur/st-git
-printf "\nCompiling st..."
-makepkg -si
-printf "\nCreating symbolic link to st configuration."
-ln -s ~/dotfiles/st/config.h ~/aur/st-git/src/st/config.h
-printf "\nRecompiling st with new configuration file..."
+# dwm.
+printf "\nCloning dwm (Dynamic Windows Manager)..."
+git clone https://aur.archlinux.org/dwm.git ~/aur/dwm
+cd ~/aur/dwm
+printf "\nCompiling dwm..."
+makepkg -s
+printf "\nCreating symbolic link to dwm configuration."
+mv ~/aur/dwm/src/dwm-6-2/config.h ~/aur/dwm/src/dwm-6-2/config_old.h
+ln -s ~/dotfiles/dwm/config_amd_ryzen_7_3700.h ~/aur/dwm/src/dwm-6-2/config.h
+printf "\nRecompiling dwm with new configuration file..."
 makepkg -fi
 
 # printf("\nInstalling Terminal emulator for the X Window System..."
@@ -55,7 +60,7 @@ exec /usr/bin/Xorg -nolisten tcp "\$@" vt\$XDG_VTNR
 EOF
 
 printf "\nCreating symbolic link for .xinitrc...\n"
-ln -s ~/dotfiles/xinitrc ~/.xinitrc
+ln -s ~/dotfiles/xinitrc_amd_ryzen_7_3700 ~/.xinitrc
 
 # .Xresources
 printf "\nCreating symbolic link for .Xresources...\n"
@@ -74,22 +79,13 @@ sudo pacman -S iw --noconfirm
 printf "\nInstalling slock..."
 sudo pacman -S slock --noconfirm
 
+# Required by xorg-server.
 printf "\nInstalling libinput to set inputs like touchpad...\n"
 sudo pacman -S xf86-input-libinput --noconfirm
 # To config touchpad.
 # $ xinput list
 # $ xinput list-props device
 # $ xinput set-prop <device> <option-number> <setting>
-
-printf "\nCreating touchpad config file...\n" 
-cat > /etc/X11/xorg.conf.d/30-touchpad.conf << EOF
-# Touchpad tapping enable.
-Section "InputClass"
-  Identifier "ETPS/2 Elantech Touchpad"
-	Driver "libinput"
-	option "Tapping" "on"
-EndSection
-EOF
 
 # Keyboard layout setting (no needed, alredy on .xinitrc).
 # $ startx
