@@ -36,6 +36,8 @@ makepkg -fi
 printf "\nCloning dwm (Dynamic Windows Manager)..."
 git clone https://aur.archlinux.org/dwm.git ~/aur/dwm
 cd ~/aur/dwm
+# Edit PKGBUILD, comment the line:
+#  cp "$srcdir/config.h" config.h
 printf "\nCompiling dwm..."
 makepkg -s
 printf "\nCreating symbolic link to dwm configuration."

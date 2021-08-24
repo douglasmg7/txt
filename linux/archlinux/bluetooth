@@ -12,7 +12,6 @@ $ sudo pulseaudo --start
 $ sudo systemctl restart bluetooth
 
 # Pairing.
-$ bluetoothctl
 # 1. (optional) Select a default controller with select MAC_address.
 # 2. Enter power on to turn the power to the controller on. It is off by default and will turn off again each reboot, see #Auto power-on after boot.
 # 3. Enter devices to get the MAC Address of the device with which to pair.
@@ -21,4 +20,16 @@ $ bluetoothctl
 # 6. Enter pair MAC_address to do the pairing (tab completion works).
 # 7. If using a device without a PIN, one may need to manually trust the device before it can reconnect successfully. Enter trust MAC_address to do so.
 # 8. Enter connect MAC_address to establish a connection
+
+# Pairing
+bluetoothctl
+[bluetooth]# power on
+[bluetooth]# scan on
+[bluetooth]# pair 00:12:34:56:78:90
+
+# List already paired devices
+[bluetooth]# devices
+
+# Connect
+[bluetooth]# connect 00:12:34:56:78:90
 
