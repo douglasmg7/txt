@@ -1,6 +1,14 @@
-download inkscape source
-apt-get install gcc
-apt-get install intltool
-apt-get build-dep inkscape
-make
-make install
+# Toggle selection tool
+<space>
+
+# Panning
+<space> + mouse
+
+# Select zoom tool
+z
+
+# Slow move.
+alt + arrow
+
+# Fast move.
+shift + arrow
