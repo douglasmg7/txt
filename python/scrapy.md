@@ -13,7 +13,7 @@ scrapy crawl name
 scrapy crawl quotes -O quotes.json
 
 ## Append using json line
-scrapy crawl quotes -0 quotes.jl
+scrapy crawl quotes -o quotes.jl
 
 ## Interactive mode
 scrapy shell 'http://quotes.toscrape.com/page/1/'
