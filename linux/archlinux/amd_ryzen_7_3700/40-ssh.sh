@@ -10,9 +10,11 @@ sudo systemctl start sshd
 printf "\nCreating symbolic link to ssh configuration file...\n"
 mkdir -p ~/.ssh
 ln -s ~/dotfiles/ssh/config ~/.ssh/config
-cp ~/dotfiles/ssh/ssh-agent.service ~/.ssh/ssh-agent.service
-# todo - not working.
+mkdir -p ~/.config/systemd/user && cd ~/.config/systemd/user
+cp ~/dotfiles/ssh/ssh-agent.service .
+systemctl --user start ssh-agent.service
 systemctl --user enable ssh-agent.service
+
 # Copy public key to remote server:
 $ ssh-copy-id vps10092.publiccloud.com.br
 # If user differ on remote machine:
