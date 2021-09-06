@@ -81,3 +81,7 @@ sudo pacman -S freecad --noconfirm
 
 printf "\nInstalling blender..."
 sudo pacman -S blender --noconfirm
+
+printf "Download FreeCAD-asm3-Stable-Conda-Py3-Qt5-20210717-glibc2.12-x86_64.AppImage from https://github.com/realthunder/FreeCAD_assembly3/releases"
+printf "sudo mv FreeCAD-asm3-Stable-Conda-Py3-Qt5-20210717-glibc2.12-x86_64.AppImage /opt"
+printf "ln -s /opt/FreeCAD-asm3-Stable-Conda-Py3-Qt5-20210717-glibc2.12-x86_64.AppImage /usr/bin/freecad"
