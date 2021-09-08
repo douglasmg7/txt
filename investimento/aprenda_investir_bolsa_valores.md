@@ -46,5 +46,21 @@ Não há limite para o número de leilões em um dia.
 * Acionado quando o índice da bolsa cai 20% após o segundo circuit break.
 * O pregão pode ser interrompido.
 
-# Valor da ação
+## Valor da ação
 O valor do fim do último pregão é diferente do valor inicio do pregão.
+
+## Custos mercado a vista (Swing e Position)
+* Corretagem
+* B3
+    * Normal - 0,003180%
+    * Day trade - 0,0275&
+* Central custodiante
+* Prefeitura
+* Tributos (IR)
+
+## IR
+15% sobre o lucro líquido (descontado corretagem e etc...)
+Não paga IR até 20.0000,00 de venda no mês (não vale para Day trader)
+Se passar de 20.000,00 paga 15% sobre o lucro total, não só o que passar dos 20 mil.
+Debitado 0,005% Apenas para controle da receita federal (pode ser debitado do IR)
+

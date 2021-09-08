@@ -1,7 +1,16 @@
 # Trade
-* Day Trade / Scalp
-* Swing Trade
-* Position Trade (Buy & Hold)
+
+## Day Trade / Scalp (mais rápido)
+* Compra e venda do ativo no mesmo pregão.
+
+## Swing Trade
+* Análise técnica
+* Estratégia de curto e médio prazo
+
+## Position Trade (Buy & Hold)
+* Análise fundametalista
+* Aguarda anos 3, 5 até 10 anos
+* Não se preocupa com as variações do mercado
 
 ## Dia a dia do trade
 * Estudo do ativo
@@ -33,7 +42,8 @@
 * Qual o seu alvo?
 
 ## Stop
-Medida de segurança que define a perda máxima tolerada
+Medida de segurança que define a perda máxima tolerada.
+Deve ser bem menor que o alvo.
 
 
 
@@ -50,4 +60,5 @@ Estudam diversos tipos de gráficos para realizar previsões do mercado.
 ## Análise de fluxo (tape reading)
 Acompanham as ordens de compra e venda no mercado para tomar as decisões.
 
+## Criar um diário das operações
 
