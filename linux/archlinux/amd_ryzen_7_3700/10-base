@@ -1,4 +1,5 @@
 # Setup bios.
+# BIOS / CSM Support / Disabled (Talvez apenas este)
 # BIOS / Storage Boot Option Control / UEFI Only
 # BIOS / Other PCI Device ROM Priority / UEFI Only (Talvez esse também)
 
@@ -101,8 +102,8 @@ $ genfstab -U /mnt >> /mnt/etc/fstab
 # Change root into the new system.
 $ arch-chroot /mnt    
 
-$ ln -sf /usr/share/zoneinfo/Brazil/East /etc/localtime   
 # Set the time zone.
+$ ln -sf /usr/share/zoneinfo/Brazil/East /etc/localtime   
 
 $ hwclock --systohc   
 # generate /etc/adjtime.
@@ -225,4 +226,3 @@ $ git clone https://github.com/douglasmg7/dotfiles.git ~/dotfiles
 
 # Run script to continue installation.
 ~/txt/linux/archlinux/amd_ryzen_7_3700/20-install.sh
-
