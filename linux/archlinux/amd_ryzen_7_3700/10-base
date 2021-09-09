@@ -1,4 +1,10 @@
-# Install Windows first.
+# Setup bios.
+# BIOS / Storage Boot Option Control / UEFI Only
+# BIOS / Other PCI Device ROM Priority / UEFI Only (Talvez esse também)
+
+# Boot from archlinux installation media and delete all partitions (make all hd memory free to create partition from windows) to window create EFI partition.
+# Install Windows Home Single Lenguage.
+# Create a 200G partition from windows installation.
 
 # Download the lastest archlinux version from BitTorrent (recommended)  
 https://www.archlinux.org/download/
