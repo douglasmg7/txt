@@ -111,13 +111,13 @@ $ hwclock --systohc
 # Install text editor.
 pacman -Sy vim
 
-# Uncomment en_US.UTF-8 UTF-8, pt_BR.UTF8 UTF8 and other needed localizations in /etc/locale.gen, and generate them with:
+# Old - Uncomment en_US.UTF-8 UTF-8, pt_BR.UTF8 UTF8 and other needed localizations in /etc/locale.gen, and generate them with:
+# New - Uncomment en_US.UTF-8 UTF-8 and other needed localizations in /etc/locale.gen, and generate them with:
 locale-gen
 
 # Change or create /etc/locale.conf
 LANG=en_US.UTF-8
-LANG=pt_BR.UTF-8
-# LANG=pt_BR.UTF-8 UTF-8
+# LANG=pt_BR.UTF-8
 
 # Console font.
 $ pacman -S terminus-font

@@ -70,6 +70,7 @@ curl -L https://git.io/n-install | bash
 
 # Links.
 ln -s ~/dotfiles/babelrc ~/.babelrc
+rm ~/.bashrc
 ln -s ~/dotfiles/bashrc ~/.bashrc
 ln -s ~/dotfiles/eslintrc.json ~/.eslintrc.json
 ln -s ~/dotfiles/jshintrc ~/.jshintrc
