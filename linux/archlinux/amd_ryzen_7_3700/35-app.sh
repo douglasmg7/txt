@@ -5,7 +5,10 @@
 # # pacman -S libvdpau-va-gl
 
 printf "\nInstalling chromium..."
-sudo pacman -S chromium
+sudo pacman -S chromium --noconfirm
+
+printf "\nInstalling firefox..."
+sudo pacman -S firefox --noconfirm
 
 # printf "\nInstalling surf..."
 # sudo pacman -S surf tabbed --noconfirm
@@ -76,12 +79,12 @@ sudo pacman -S arduino arduino-cli --noconfirm
 printf "\nCreating symbolic link to jre configuration for arduino window correction."
 sudo ln -s ~/dotfiles/arduino.sh /etc/profile.d/arduino.sh
 
-printf "\nInstalling freecad..."
-sudo pacman -S freecad --noconfirm
-
 printf "\nInstalling blender..."
 sudo pacman -S blender --noconfirm
 
-printf "Download FreeCAD-asm3-Stable-Conda-Py3-Qt5-20210717-glibc2.12-x86_64.AppImage from https://github.com/realthunder/FreeCAD_assembly3/releases"
-printf "sudo mv FreeCAD-asm3-Stable-Conda-Py3-Qt5-20210717-glibc2.12-x86_64.AppImage /opt"
-printf "ln -s /opt/FreeCAD-asm3-Stable-Conda-Py3-Qt5-20210717-glibc2.12-x86_64.AppImage /usr/bin/freecad"
+# printf "\nInstalling freecad..."
+# sudo pacman -S freecad --noconfirm
+
+echo "Download FreeCAD-asm3-Stable-Conda-Py3-Qt5-20210717-glibc2.12-x86_64.AppImage from https://github.com/realthunder/FreeCAD_assembly3/releases"
+echo "sudo mv FreeCAD-asm3-Stable-Conda-Py3-Qt5-20210717-glibc2.12-x86_64.AppImage /opt"
+echo "ln -s /opt/FreeCAD-asm3-Stable-Conda-Py3-Qt5-20210717-glibc2.12-x86_64.AppImage /usr/bin/freecad"
