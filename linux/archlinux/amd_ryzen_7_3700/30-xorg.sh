@@ -10,6 +10,9 @@ printf "\nInstalling openGL driver...\n"
 sudo pacman -S nvidia-utils --noconfirm
 # If you run into trouble with CUDA not being available, run nvidia-modprobe first.
 
+printf "\nInstalling Nvidia settings...\n"
+sudo pacman -S nvidia-settings --noconfirm
+
 printf "\nInstalling display server..."
 sudo pacman -S xorg xorg-server --noconfirm
 
