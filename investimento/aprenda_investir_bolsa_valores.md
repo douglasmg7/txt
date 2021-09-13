@@ -58,9 +58,25 @@ O valor do fim do último pregão é diferente do valor inicio do pregão.
 * Prefeitura
 * Tributos (IR)
 
-## IR
+### IR
 15% sobre o lucro líquido (descontado corretagem e etc...)
 Não paga IR até 20.0000,00 de venda no mês (não vale para Day trader)
 Se passar de 20.000,00 paga 15% sobre o lucro total, não só o que passar dos 20 mil.
 Debitado 0,005% Apenas para controle da receita federal (pode ser debitado do IR)
 
+## Custos mercado a vista (Day trade)
+20% sobre o lucro.
+Controle de 1% da IRRF na fonte, diferente do 0,005% no caso do mercado a vista.
+No momento de fazer o IR lebrar que já foi pago 1%.
+
+## Prejuízo a ver.
+Considerando o mesmo mercado (Day trade ou avista), caso tenha prejuízo ,pode deixar para ser descontado do lucro para definir o valor a pagar do IR.
+
+## IR
+A compra ou venda das ações(patrimônio) devem ser declaradas no momento da declaração do IR.
+O imposto deve ser recolhido mensalmente através de uma DARF até o primeiro dia útil do próximo mês.
+No momento da declaração do IR eu informo a Receita, atravéz do DARF do recolhimento do imposto.
+
+### Darf
+Pessoa física: código 6015
+Pessoa jurídica: código 3317

@@ -44,6 +44,8 @@
 ## Stop
 Medida de segurança que define a perda máxima tolerada.
 Deve ser bem menor que o alvo.
+Ex: Possibilidade de ganho de 100 perda de 30.
+Relação de ganho e prda mínimo de 1:1, ideal de 3:1.
 
 
 
@@ -62,3 +64,12 @@ Acompanham as ordens de compra e venda no mercado para tomar as decisões.
 
 ## Criar um diário das operações
 
+## Planing Trade
+* Capital disponível para operação
+* Limite de risco
+* Ativos
+* Estratégias
+* Stop loss/gain
+* Metas
+* Lotes a serem comprados
+* Número de operações por dia
