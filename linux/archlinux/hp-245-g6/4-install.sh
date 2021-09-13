@@ -13,24 +13,24 @@ printf "\nCreating AUR directory..."
 mkdir -p ~/aur
 
 printf "\nCloning dwm (Dynamic Windows Manager)..."
-git clone https://aur.archlinux.org/dwm-git.git ~/aur/dwm-git
-cd ~/aur/dwm-git
-printf "\nCompiling dwm..."
-makepkg -si
+git clone https://git.suckless.org/dwm ~/src/dwm
+cd ~/src/dwm
 printf "\nCreating symbolic link to dwm configuration."
-ln -s ~/dotfiles/dwm/config.h ~/aur/dwm-git/src/dwm/config.h
-printf "\nRecompiling dwm with new configuration file..."
-makepkg -fi
+ln -s ~/dotfiles/dwm/config.h ~/src/dwm/config.h
+printf "\nClening, compiling and installing dwm..."
+make clean
+make
+make install
 
 printf "\nCloning st (Simple terminal)..."
-git clone https://aur.archlinux.org/st-git.git ~/aur/st-git
-cd ~/aur/st-git
-printf "\nCompiling st..."
-makepkg -si
+git clone https://git.suckless.org/st ~/src/st
+cd ~/src/st
 printf "\nCreating symbolic link to st configuration."
-ln -s ~/dotfiles/st/config.h ~/aur/st-git/src/st/config.h
-printf "\nRecompiling st with new configuration file..."
-makepkg -fi
+ln -s ~/dotfiles/st/config.h ~/src/st/config.h
+printf "\nClening, compiling and installing st..."
+make clean
+make
+make install
 
 # printf("\nInstalling Terminal emulator for the X Window System..."
 # sudo pacman -S xterm --noconfirm
