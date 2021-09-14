@@ -1,5 +1,9 @@
 # Aprenda a Investir na Bolsa de Valores
 
+## Professores
+Leandro Rassier
+    * Assessor e especialista de investimentos
+
 ## Mercado primário
 * Empresa emite ações que podem ser compradas por investidores.
 * IOP - Oferta Inicial Pública
@@ -80,3 +84,49 @@ No momento da declaração do IR eu informo a Receita, atravéz do DARF do recol
 ### Darf
 Pessoa física: código 6015
 Pessoa jurídica: código 3317
+
+## Análise
+
+### Escola fundamentalista
+Ajuda na tomada de decisão de o que comprar e o que vender.
+Decisão com base nos fundamentos da empresa.
+Cenário econômico mundial e local.
+Para definir a escolha da melhor ação os analistas olham para:
+* Conjuntura do cenário ecônomico
+* Cenário político
+* Dólar
+* Inflação
+* Taxa Selic
+* Balanço das empresas
+* Fluxo de caixa das empresas
+
+#### Tomada de decisão por múltiplos
+É um indicador que ajuda na tomada de decisão.
+Complementam uma análise fundamentalista mais ampla.
+Usar entre empresas do mesmo setor.
+Indicador do crescimento a longo prazo.
+
+* P/L = Preço de mercado da ação / Lucro líquido da ação
+    Indica o tempo teórico (anos) do retorno sobre o investimento.
+    Quanto menor melhor.
+
+* P/PVA = Preço de mercado da ação / Valor patrimonial da empresa
+    Indica o quanto a ação representa do valor patrimonial contábil.
+    Se acima de 1, significa que o preço de mercado da ação é maior do que seu valor contábil.
+
+* Pay-Out = Dividendo por ações / Lucro líquido por ação
+    Indica quanto do lucro líquido da empresa será distribuido com dividendos aos acionistas.
+    Quanto maior melhor.
+
+* Dividend yield = Dividendos / Preço da ação
+    Revela o percentual do preço da ação que voltou ao acionista sob a forma de dividendos.
+    Quanto maior melhor.
+
+
+#### Fluxo de caixa descontado
+
+#### Métodos Valuation
+Serve para achar o valor justo da empresa, através do fluxo de caixa descontado.
+
+### Escola técnica (grafista)
+Ajuda na tomada de decisão de quando eu compro e quando eu vendo.

@@ -73,3 +73,45 @@ Acompanham as ordens de compra e venda no mercado para tomar as decisões.
 * Metas
 * Lotes a serem comprados
 * Número de operações por dia
+
+## Book building
+Fazer o levantamento de quanto vale a empresa, para futura realização do IPO.
+
+## Balanço operacional
+A cada três meses (Lei)
+
+## Dividendos
+Pose ser de três em três meses.
+
+## Ações
+
+### ON
+Ordinária
+Preferência de voto nas assembleias
+Final 3
+
+### PN
+Preferencial
+Preferencial no lucro, dividendos
+Final 4
+
+
+### Units
+PN + ON
+Final 11
+
+## Blue Chips
+Ações mais negociadas na bolsa.
+Maior participação do mercado.
+Ações com mais liquidez.
+Mais seguras.
+
+## Mercado a vista X Derivativos
+
+### Mercado a vista
+Compra é realizada na hora, a ação é sua.
+São as Ações.
+
+### Derivativo
+A prazo.
+Contratos com uma condição e um prazo específico.
