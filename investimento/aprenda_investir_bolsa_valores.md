@@ -130,3 +130,9 @@ Serve para achar o valor justo da empresa, através do fluxo de caixa descontado
 
 ### Escola técnica (grafista)
 Ajuda na tomada de decisão de quando eu compro e quando eu vendo.
+
+#### Teoria de Dow
+Todos os fatores externos já estão embutidos no último preço.
+Os preços se movimentam em tendência.
+O futuro repete o passsado.
+O volume deve confirmar a tendência.

@@ -113,5 +113,50 @@ Compra é realizada na hora, a ação é sua.
 São as Ações.
 
 ### Derivativo
+Derivados de ativos.
 A prazo.
-Contratos com uma condição e um prazo específico.
+Contratos com uma condição e prazo específico.
+* Opções
+* Mercado a termo
+* Mercado futuro
+* Swaps
+
+## Intra-D
+Negociações que acontecem dentro de um pregão.
+
+## Teoria de Dow (oito princípios)
+Criado por Charles Dow.
+Um dos fundadores do Wall street journals.
+Ajudou a fundar o índice Dow Jones.
+### Tendência
+Alta, baixa ou indefinida
+Onda primária
+    * Um ano ou mais.
+    * Com movimento de correção.
+Onda secundáira
+    * Semanas a meses.
+    * Com movimentos de correção.
+Onda terciáira
+    * Alguns dias a semanas.
+Uma tendência dura até ser substituída por outra.
+
+### Princípio da confirmação
+A tendência de um instrumento financeiro deve ser comparada
+    * Com o índice de outras ações do mesmo setor
+    * Com o índice da Bovespa (mais geral)
+
+### O volume acompanha a tendência
+Tendência de alta a volume de negociação é maior, na recuperação o volume é menor.
+
+### A tendência secundária pode ter movimentos laterais
+
+### Princípio de fechamento
+A recuperação deve fechar acima do rompimento, para se caracterizar um rompimento.
+
+## Fibonacci
+Detecta os movimentos de correção e tendência.
+A soma dos números anteriores.
+0 1 2 3 5 8 13 21 34 ...
+Razão de 61,8%
+Ferramenta de retração 
+Ferramenta de projeção
