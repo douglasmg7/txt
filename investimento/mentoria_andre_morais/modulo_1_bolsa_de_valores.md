@@ -92,3 +92,126 @@ Controle da Receita Federal
 ## Darf
 * 6015 para PF
 * 3317 para PJ
+
+
+# 8 - Índice de ações
+* Ibovespa
+    Resultado de uma carteira teórica de ativos.
+    Criado em 1968 com o valor base de 100 pontos.
+    65 ações atualmente.
+* IBrX50
+* IBrX100
+* IDIV - Dividendos
+
+## Principais a serem observadas
+* Ibovespa
+* Dow Jones - Primeiro criado na bolsa de NY
+* S&P 500 - 500 maiores empresas americanas
+* Nasdaq - Bolsa de tecnologia
+* DAX 30 - Bolsa da alemanha
+
+
+# 9 - Riscos no merdado de ações
+Diversificar as ações
+Diversificar o setor
+Definir o limite de perda (stop loss)
+    Pode ocorrer uma variação muito grande na abertura e o stop loss não ser acionado.
+Definir o limite de ganho (stop gain)
+
+
+# 10 - Tipos de análise
+
+## Teoria de Dow
+* Os índices já descontam tudo.
+* O mercado tem 3 tendências
+    * Primária - Maré
+    * Secundária - Ondas
+    * Terciárias - Marolas
+* Tendência primária tem 3 fazes
+    * Acumulação
+    * Participação públic
+    * Distribuição
+* Os índices e médias devem confirmar uns aos outros
+* O volume deve confirmar a tendência
+* Uma tendência irá ocorrer equanto não houverem sinais de reversão
+
+
+# 11 - Tipos de mercado (Parte 1 & 2)
+
+## Mercado Futuro - BM&F
+São negociados contratos futuros.
+Eles representam acordos de compra e venda por um determinado preço e período.
+Movimenta 100BI na Bovestpa, enquanto o mercado de ações movimenta em média 10BI.
+    * Dolar futuro
+    * Juros
+    * Commodities
+    * Índice Futuro
+Usado para Hedge (proteção) ou especulação.
+
+## Opções
+Negocia-se o direito de comprar ou de vender um bem por um preço fixo numa data futura.
+    Titular -> direito mas não obrigação
+    Lançador -> Obrigação de vender
+Call (comprar)
+Put (vender)
+Preço de exercício é preço que o titular paga ou recebe pelo bem em caso de exercício da opção.
+Prêmio é o valor pago pelo titular (e recebido pelo lançador) para adquirir o direito de comprar ou vender o ativo pelo preço de exercício em data futura.
+
+## Mercado a Termo
+É uma compra de ações a prazo e com juros.
+Pode ser usado para alavancagem
+Pode ser usado para liberar recursos que estão em sua carteira de ações.
+    Você pode vender essas ações, capitalizar-se, e recomprar as mesmas ações à Termo, com pagamento futuro.
+
+## Aluguel de Ações
+Investidores proprietátios dos títulos disponibilizam os mesmos para empréstimos e os investidores interessados os tomam mediante aporte de garantias.
+
+
+# 17 - Teoria de Dow (Parte 1 e 2)
+O mercado se move em tendências
+    Tendência de alta - Topos e fundos ascendentes
+    Tendência de baixa - Topos e fundos descendentes
+    Consolidação -  Laterização
+
+Número de candles para definir se um movimento é iportante
+    17
+
+1 Candle X fia ao cubo
+
+Alexander Elder gosta de Candle X 5
+
+## Teoria das ondas de Eliot
+1 ciclo - 1 onda completa  - 2 ondas (que visualizo como linhas)
+2 ciclo - 4 ondas - 8 linhas
+3 ciclo - 17 onda - 34 lihas
+4 ciclo - 72 ondas - 144 onda
+5 ciclo - 305 ondas - 610 onda
+
+fi = 1,618
+fi x fi x fi = 4,236 
+
+610 / 144 = 4,236
+
+Primeira referência 1 candle
+Segunda referência 1 x 4,236 = 4 candles
+Terceira referência 4 x 4,236 = 17 candles
+? Terceira referência 4,236 x 4,236 = 18 candles
+
+Na tendência de alta
+    Considerar pelo menos 17 candles entre fundos e 17 entre topos parar considerar como uma mudança importante (os dois juntos).
+
+# 19 - Números de força
+Esses números criam importantes barreiras emocionais, onde ocorre uma grande briga entre compradores e vendedores.
+
+## Suporte e resistência
+Regiões gráficas formadas por números de força.
+A linha de resistência é formada ligando os topos consecutivos com retas na horizontal.
+
+## Re-teste
+Após o rompimento da linha de resistência e o preço volta próximo a linha de resistência e depois sobe mais ainda.
+
+## LTA e LTB
+Quando as linhas de resistência são inclinadas.
+LTA - Fundos consecutivos
+LTB - Topos consecutivos
+
