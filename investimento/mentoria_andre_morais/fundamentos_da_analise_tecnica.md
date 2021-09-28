@@ -102,21 +102,3 @@ Para identificar o momento do mercado leva-se em consideração o preço do fech
 Impulsão é o no sentido da tendência.
 Pull-Back - Correção é contrário a tendência.
 
-# 8 - Candlestick
-Os padrões de candle começam até representatividade a partir dos gráficos de 15 minutos.
-
-## Padrões de indefinição
-* Doji
-
-# 9 - Candlestick: Padrões de alta
-* Engolfo de alta (positivo)
-    No final de um movimento de baixa
-* Martelo (negativo ou positivo, positivo é mais relevante)
-    Em ponto de reversão
-* Harami de alta
-
-# 10 - Candlestick:  Padrões de baixa
-* Engolfo de baixa
-* Estrela cadente
-* Harami de baixa
-
