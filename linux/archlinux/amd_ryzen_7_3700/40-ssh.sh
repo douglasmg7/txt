@@ -15,6 +15,18 @@ cp ~/dotfiles/ssh/ssh-agent.service .
 systemctl --user start ssh-agent.service
 systemctl --user enable ssh-agent.service
 
+# # Create ssh key.
+# $ cd ~/.ssh
+# # Generating a new ssh key.
+# $ ssh-keygen -t ed25519 -C "your_email@example.com"
+# # Add your ssh to the ssh-agent.
+# $ ssh-add ~/.ssh/id_rsa
+# # Copy to clipboatd the file content
+# $ xclip -sel cli <  ~/.ssh/id_rsa.pub
+# # Add ssh key to git account.
+# # Test.
+# $ ssh -T git@github.com
+
 # # Copy public key to remote server:
 # $ ssh-copy-id vps10092.publiccloud.com.br
 # # If user differ on remote machine:
