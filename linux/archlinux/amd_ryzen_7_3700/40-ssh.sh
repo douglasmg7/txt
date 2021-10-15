@@ -9,7 +9,7 @@ sudo systemctl start sshd
 
 printf "\nCreating symbolic link to ssh configuration file...\n"
 mkdir -p ~/.ssh
-ln -s ~/dotfiles/ssh/config ~/.ssh/config
+ln -s ~/dotfiles/ssh/config_amd_ryzen_7_3700 ~/.ssh/config
 mkdir -p ~/.config/systemd/user && cd ~/.config/systemd/user
 cp ~/dotfiles/ssh/ssh-agent.service .
 systemctl --user start ssh-agent.service
