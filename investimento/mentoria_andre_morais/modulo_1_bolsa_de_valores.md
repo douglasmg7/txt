@@ -1,4 +1,4 @@
-# 1 - Indrodução ao curso
+
 Na decada de 80 a bolsa era usada para manter o valor do capital por causa da inflação.
 Quando a inflação reduziu drasticamente, a bolsa começou a ser usada para aumentar o capital.
 
