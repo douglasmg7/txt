@@ -85,6 +85,9 @@ sudo pacman -S blender --noconfirm
 # printf "\nInstalling freecad..."
 # sudo pacman -S freecad --noconfirm
 
+printf "\nInstalling rawtherapee..."
+sudo pacman -S rawtherapee --noconfirm
+
 echo "Download FreeCAD-asm3-Stable-Conda-Py3-Qt5-20210717-glibc2.12-x86_64.AppImage from https://github.com/realthunder/FreeCAD_assembly3/releases"
 echo "sudo mv FreeCAD-asm3-Stable-Conda-Py3-Qt5-20210717-glibc2.12-x86_64.AppImage /opt"
 echo "ln -s /opt/FreeCAD-asm3-Stable-Conda-Py3-Qt5-20210717-glibc2.12-x86_64.AppImage /usr/bin/freecad"
