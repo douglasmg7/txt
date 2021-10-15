@@ -197,6 +197,15 @@ $ netctl start nimbus
 # Enable profile to start at boot.
 $ netctl enable nimbus
 
+# Enable wired network.
+# Find device.
+ip link
+# ex: enp5s0
+$ cp /etc/netctl/examples/ethernet-dhcp /etc/netctl/ethernet
+# Change interface=enps5s0 on /etc/netclt
+# Enable wired network.
+$ netctl enable ethernet
+
 # Install microcode.
 $ pacman -S amd-ucode
 $ grub-mkconfig -o /boot/grub/grub.cfg
