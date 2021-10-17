@@ -1,0 +1,35 @@
+# install asdf
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
+
+# Add to .bashrc
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+
+# Plugins:
+asdf plugin-add python
+asdf plugin list
+asdf plugin update --all
+asdf plugin update python
+asdf plugin remove python
+
+# List available versions:
+asdf list all python
+asdf list all python 3.6
+
+# Install a specific version:
+asdf install python 3.6.9
+asdf install python latest
+
+# See installed:
+asdf list
+
+# Set a version:
+asdf local python 3.6.9
+asdf global python 3.6.9
+asdf local python system    # Go back to the current system version.
+
+# See current:
+asdf current
+
+# Update asdf:
+asdf update
