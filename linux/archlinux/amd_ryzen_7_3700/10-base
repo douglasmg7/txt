@@ -230,8 +230,19 @@ $ git clone https://aur.archlinux.org/upd72020x-fw.git
 $ cd upd702020x-fw
 $ makepkg -si
 
+# Clone txt and dotfiles
 $ git clone https://github.com/douglasmg7/txt.git ~/txt
 $ git clone https://github.com/douglasmg7/dotfiles.git ~/dotfiles
+
+# Install git-secret
+$ mkdir ~/src && cd src
+$ git clone https://github.com/sobolevn/git-secret.git git-secret
+$ cd git-secret
+$ make build
+$ make install
+
+# Import gpg.
+$ gpg --import douglasmg7-secret-gpg.key
 
 # Run script to continue installation.
 ~/txt/linux/archlinux/amd_ryzen_7_3700/20-install.sh
