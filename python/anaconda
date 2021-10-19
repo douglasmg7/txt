@@ -1,5 +1,5 @@
 # To control whether or not each shell session has the base environment activated or not, run: 
-conda config --set auto_activate_base False or True
+conda config --set auto_activate_base false
 
 # Activate anaconda.
 source <path_to_anaconda>/bin/activate
@@ -37,6 +37,9 @@ source activate snowflakes
 # List all your environments.
 conda info --envs
 conda env list
+
+# Remove env?
+conda env remove -n ENV_NAME
 
 # Check if a package not already installed is available from the anaconda repository.
 conda activate snowflakes
