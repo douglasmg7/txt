@@ -38,7 +38,7 @@ source activate snowflakes
 conda info --envs
 conda env list
 
-# Remove env?
+# Remove env:
 conda env remove -n ENV_NAME
 
 # Check if a package not already installed is available from the anaconda repository.
