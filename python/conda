@@ -46,6 +46,7 @@ conda activate snowflakes
 conda search biopython
 # Install the package.
 conda install biopython
+conda remove biopython
 # List installed packages.
 conda list
 
