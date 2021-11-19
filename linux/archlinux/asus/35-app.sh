@@ -9,6 +9,11 @@ sudo pacman -S chromium --noconfirm
 
 printf "\nInstalling firefox..."
 sudo pacman -S firefox --noconfirm
+# Set startup to not load all pin tabs.
+# about:config
+# browser.sessionstore.restore_pinned_tabs_on_demand (pinned tabs)(false)
+# browser.sessionstore.restore_on_demand (default as set in Options -> Tabs)(true)
+# browser.sessionstore.restore_hidden_tabs (tabs in other tab groups)(false)
 
 # printf "\nInstalling surf..."
 # sudo pacman -S surf tabbed --noconfirm
