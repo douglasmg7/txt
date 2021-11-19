@@ -32,6 +32,3 @@ sudo pacman -S postgresql
 # Enable mongodb.
 # systemctl enable mongodb
 # systemctl start mongodb
-
-# Node.
-# curl -L https://git.io/n-install | bash

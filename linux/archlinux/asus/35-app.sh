@@ -96,8 +96,13 @@ sudo pacman -S virtualbox
 printf "\nInstalling rawtherapee..."
 sudo pacman -S rawtherapee --noconfirm
 
-echo "Download FreeCAD-asm3-Stable-Conda-Py3-Qt5-20210717-glibc2.12-x86_64.AppImage from https://github.com/realthunder/FreeCAD_assembly3/releases"
-echo "sudo mv FreeCAD-asm3-Stable-Conda-Py3-Qt5-20210717-glibc2.12-x86_64.AppImage /opt"
-echo "ln -s /opt/FreeCAD-asm3-Stable-Conda-Py3-Qt5-20210717-glibc2.12-x86_64.AppImage /usr/bin/freecad"
+echo "ManuallyInstall freecad from realthunder"
+# echo "Download FreeCAD-asm3-Stable-Conda-Py3-Qt5-20210717-glibc2.12-x86_64.AppImage from https://github.com/realthunder/FreeCAD_assembly3/releases"
+# echo "sudo mv FreeCAD-asm3-Stable-Conda-Py3-Qt5-20210717-glibc2.12-x86_64.AppImage /opt"
+# echo "ln -s /opt/FreeCAD-asm3-Stable-Conda-Py3-Qt5-20210717-glibc2.12-x86_64.AppImage /usr/bin/freecad"
 
-# Install anaconda
+echo "ManuallyInstall miniconda from downloaded script"
+# Download miniconda script to Install miniconda.
+# https://docs.conda.io/en/latest/miniconda.html
+# Conda configuration to not start activated.
+# conda config --set auto_activate_base false

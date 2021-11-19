@@ -163,9 +163,12 @@ $ visudo
 pacman -S grub efibootmgr
 # To find window installation.
 # pacman -S os-prober
-
 # Edit /etc/default/grub and add/uncomment:
 # GRUB_DISABLE_OS_PROBER=false
+
+# Set grub to not wait.
+# Edit line GRUB_TIMEOUT on file "/etc/default/grub".
+  GRUB_TIMEOUT=0
 
 grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
