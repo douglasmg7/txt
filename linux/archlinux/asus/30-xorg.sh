@@ -25,7 +25,7 @@ ln -s ~/dotfiles/st/config_asus.h ~/src/st/config.h
 printf "\nClening, compiling and installing st..."
 make clean
 make
-make install
+sudo make install
 
 # dwm.
 printf "\nCloning dwm (Dynamic Windows Manager)..."
@@ -36,49 +36,7 @@ ln -s ~/dotfiles/dwm/config_asus.h ~/src/dwm/config.h
 printf "\nClening, compiling and installing dwm..."
 make clean
 make
-make install
-
-
-# Old.
-# # st.
-# # Required by dwm.
-# printf "\nCloning st (Simple terminal)..."
-# git clone https://aur.archlinux.org/st.git ~/aur/st
-# cd ~/aur/st
-# printf "\nCompiling st..."
-# makepkg -s
-# printf "\nCreating symbolic link to st configuration."
-# mv ~/aur/st/src/st-0.8.4/config.h ~/aur/st/src/st-0.8.4/config_old.h
-# ln -s ~/dotfiles/st/config_amd_ryzen_7_3700.h ~/aur/st/src/st-0.8.4/config.h
-# printf "\nRecompiling st with new configuration file..."
-# makepkg -fi
-
-# Old.
-# # dwm.
-# printf "\nCloning dwm (Dynamic Windows Manager)..."
-# git clone https://aur.archlinux.org/dwm.git ~/aur/dwm
-# cd ~/aur/dwm
-# # Edit PKGBUILD, comment the line:
-# #   cp "$srcdir/config.h" config.h
-# # Maybe
-# #   rm ~/aur/dwm/src/config.h
-# #   Edit PKGBUILD, add line:
-# #       cp "$srcdir/$pkgname-$pkgver/config.h" "$srcdir/config.h"
-# printf "\nCompiling dwm..."
-# makepkg -s
-# printf "\nCreating symbolic link to dwm configuration."
-# mv ~/aur/dwm/src/dwm-6-2/config.h ~/aur/dwm/src/dwm-6-2/config_old.h
-# ln -s ~/dotfiles/dwm/config_amd_ryzen_7_3700.h ~/aur/dwm/src/dwm-6-2/config.h printf "\nRecompiling dwm with new configuration file..."
-# makepkg -fi
-
-# printf("\nInstalling Terminal emulator for the X Window System..."
-# sudo pacman -S xterm --noconfirm
-
-# printf("\nInstalling Unicode rxvt - terminal emulator..."
-# sudo pacman -S urxvt --noconfirm
-
-# printf("\nInstalling Termite - terminal emulator..."
-# sudo pacman -S termite --noconfirm
+sudo make install
 
 printf "\nCreating Xserver config file...\n" 
 cat > ~/.xserverrc << EOF
