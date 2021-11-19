@@ -4,7 +4,7 @@
 # lspci -v | grep -A1 -e VGA -e 3D
 
 printf "\nInstalling video driver...\n"
-sudo pacman -S  xf86-video-intel vulkan-intel mesa--noconfirm
+sudo pacman -S  xf86-video-intel vulkan-intel mesa --noconfirm
 
 printf "\nInstalling display server..."
 sudo pacman -S xorg xorg-server --noconfirm
