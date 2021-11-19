@@ -85,8 +85,10 @@ sudo pacman -S blender --noconfirm
 printf "\nInstalling docker..."
 sudo pacman -S docker --noconfirm
 
-printf "\nInstalling virtualbox..."
-sudo pacman -S virtualbox virtualbox-guest-utils --noconfirm
+printf "\nInstalling virtualbox, choose option 2=virtualbox-host-modules-arch"
+sudo pacman -S virtualbox 
+# sudo pacman -S virtualbox-guest-utils
+# sudo pacman -S virtualbox-guest-iso
 
 # printf "\nInstalling freecad..."
 # sudo pacman -S freecad --noconfirm
