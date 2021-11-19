@@ -28,7 +28,7 @@ printf "\nCloning st (Simple terminal)..."
 git clone https://git.suckless.org/st ~/src/st
 cd ~/src/st
 printf "\nCreating symbolic link to st configuration."
-ln -s ~/dotfiles/st/config_amd_ryzen_7_3700.h ~/src/st/config.h
+ln -s ~/dotfiles/st/config_asus.h ~/src/st/config.h
 printf "\nClening, compiling and installing st..."
 make clean
 make
@@ -39,7 +39,7 @@ printf "\nCloning dwm (Dynamic Windows Manager)..."
 git clone https://git.suckless.org/dwm ~/src/dwm
 cd ~/src/dwm
 printf "\nCreating symbolic link to dwm configuration."
-ln -s ~/dotfiles/dwm/config_amd_ryzen_7_3700.h ~/src/dwm/config.h
+ln -s ~/dotfiles/dwm/config_asus.h ~/src/dwm/config.h
 printf "\nClening, compiling and installing dwm..."
 make clean
 make
@@ -94,7 +94,7 @@ exec /usr/bin/Xorg -nolisten tcp "\$@" vt\$XDG_VTNR
 EOF
 
 printf "\nCreating symbolic link for .xinitrc...\n"
-ln -s ~/dotfiles/xinitrc_amd_ryzen_7_3700 ~/.xinitrc
+ln -s ~/dotfiles/xinitrc_asus ~/.xinitrc
 
 # .Xresources
 printf "\nCreating symbolic link for .Xresources...\n"
