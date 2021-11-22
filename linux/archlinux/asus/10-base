@@ -225,21 +225,21 @@ $ grub-mkconfig -o /boot/grub/grub.cfg
 $ pacman -S git
 $ mkdir ~/aur 
 
-# Install drivers from aur packages.
-# $ cd ~/aur
-# $ git clone https://aur.archlinux.org/aic94xx-firmware.git
-# $ cd aic94xx-firmware
-# $ makepkg -si
+#Install drivers from aur packages.
+$ cd ~/aur
+$ git clone https://aur.archlinux.org/aic94xx-firmware.git
+$ cd aic94xx-firmware
+$ makepkg -si
 
-# $ cd ~/aur
-# $ git clone https://aur.archlinux.org/wd719x-firmware.git
-# $ cd wd719x-firmware
-# $ makepkg -si
+$ cd ~/aur
+$ git clone https://aur.archlinux.org/wd719x-firmware.git
+$ cd wd719x-firmware
+$ makepkg -si
 
-# $ cd ~/aur
-# $ git clone https://aur.archlinux.org/upd72020x-fw.git
-# $ cd upd702020x-fw
-# $ makepkg -si
+$ cd ~/aur
+$ git clone https://aur.archlinux.org/upd72020x-fw.git
+$ cd upd702020x-fw
+$ makepkg -si
 
 # Clone txt and dotfiles
 $ git clone https://github.com/douglasmg7/txt.git ~/txt

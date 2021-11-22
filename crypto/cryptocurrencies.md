@@ -41,3 +41,14 @@ Normal money.
 
 ## Midium cap
 2,5Bi < x < 10Bi 
+
+## Current narratives
+NFTs
+DeFi
+
+## Sub trends
+Polkadot
+BSC
+Speed
+0 gas
+STOs - Secutity Tokens
