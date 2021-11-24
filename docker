@@ -1,5 +1,27 @@
 # Docker is a tool to make linux containers easy.
 
+# Images is a template for containers.
+
+# Install on archlinux:
+sudo pacman -Syu
+sudo pacman -S docker
+sudo usermod -aG docker douglasmg7
+# The user needs to Log out and log back into the server so that group membership is re-evaluated.
+
+# Start docker service.
+sudo systemctl start docker.service
+
+# List all running dockers.
+docker ps -a
+
+# Run the image and go in interactive mode.
+docker run -it node
+
+# Run commands on image.
+RUN
+
+# Run commands on docker.
+
 $ docker container run -p 9999:80 httpd:2.4
 # run container httpd version 2.4 using host port 9999 point to container port 80.
 

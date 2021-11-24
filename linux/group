@@ -35,6 +35,8 @@ $ sudo chown <user> <file>
 # Change group file.
 $ sudo chgrp <group> <file>
 
+# List all groups on the system.
+getant group
 
 
 

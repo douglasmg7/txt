@@ -89,6 +89,7 @@ sudo pacman -S blender --noconfirm
 
 printf "\nInstalling docker..."
 sudo pacman -S docker --noconfirm
+sudo usermod -aG docker douglasmg7
 
 printf "\nInstalling virtualbox, choose option 2=virtualbox-host-modules-arch"
 sudo pacman -S virtualbox 
