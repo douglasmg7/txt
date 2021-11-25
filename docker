@@ -11,9 +11,6 @@ sudo usermod -aG docker douglasmg7
 # Start docker service.
 sudo systemctl start docker.service
 
-# List all running dockers.
-docker ps -a
-
 # Run the image and go in interactive mode.
 docker run -it node
 
@@ -21,39 +18,30 @@ docker run -it node
 RUN
 
 # Run commands on docker.
+['node', 'server.js']
 
-$ docker container run -p 9999:80 httpd:2.4
-# run container httpd version 2.4 using host port 9999 point to container port 80.
+# Create a new image using the Dockerfile file.
+docker build .
 
-$ docker container ls
-# List container.
+# Stop the container.
+docker ps   # To find out the container name.
+docker stop $ID
 
-$ docker container exec id_container_or_name command
-$ odcker container exec my_container du -mh
-# Run commands against a running container.
+# Run container by id, publish a port -p external:internal.
+docker run -p 3000:80 334837ba6abd
 
-$ docker container exec -it elegant_noether /bin/bash
-# Attach a shell to a container, -i -t flags keep an interactive shell open, using bash shell.
+# List all running dockers:
+docker ps
 
-# A "Dockerfile" is a list of commands that will run and result in a new image that can be used to make a container.
-/tmp/Dockerfile
-  FROM httpd:2.4
-  EXPOSE 80
-  RUN apt-get update
-  RUN apt-get install -y fortunes
-  COPY page.html /usr/local/apache2/htdocs/
-  LABEL maintainer="moby-dock@example.com"
+# List all dockers:
+docker ps -a
 
-$ docker image build --tag webserver:1.0 .
-# Create a new image with name webserver, version 1.0, using the Dockerfile into directory "." .
+# Remove container
+docker rm $ID
 
-$ docker image ls
 # List images.
+docker images
+docker images -a
 
-# Data volumes expose files on your host machine to the container.
-
-$ docker container cp page.html elegant_noether:/usr/local/apache2/htdocs/
-# copy page.html to container elegant_noether into /usr/local/apache/htdocs/
-
-$ docker run -d -p 80:80 -v /my-files:/usr/local/apache2/htdocs web-server:1.1
-# Create a link between the folder /my-files on your host machine and the htdocs folder in the container. -d runs the container in the background.
+# Remove image:
+docker rmi $ID
