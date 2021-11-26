@@ -11,7 +11,7 @@ sudo usermod -aG docker douglasmg7
 # Start docker service.
 sudo systemctl start docker.service
 
-# Run the image and go in interactive mode.
+# Create a new container from a image and go in interactive mode.
 docker run -it node
 
 # Run commands on image.
@@ -26,9 +26,21 @@ docker build .
 # Stop the container.
 docker ps   # To find out the container name.
 docker stop $ID
+# Start container:
+docker start $ID
+# Start container in attach mode:
+docker start -a $ID
+# Start container in iterate and attach mode:
+docker start -ia $ID
+# Show logs:
+docker logs -f $ID
 
 # Run container by id, publish a port -p external:internal.
 docker run -p 3000:80 334837ba6abd
+# Deatached mode and remove container when stopped:
+docker run -p 3000:80 -d -rm 334837ba6abd
+# Attach to a container:
+docker attach $ID
 
 # List all running dockers:
 docker ps
@@ -37,7 +49,9 @@ docker ps
 docker ps -a
 
 # Remove container
-docker rm $ID
+docker rm $ID $ID2 $ID3
+# Remove all stopped containers at once:
+docker container purne
 
 # List images.
 docker images
@@ -45,3 +59,7 @@ docker images -a
 
 # Remove image:
 docker rmi $ID
+# Remove all images:
+docker image prune
+# Inspect a image:
+docker image inspect $ID
