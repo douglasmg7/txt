@@ -23,3 +23,6 @@ Os preços de abertura e fechamente do segundo dia devem estar entre os preços 
 A cor do segundo dia representa o início de uma nova tendência.
 
 ## Mulher grávida de baixa
+
+## Engolfo de alta
+
