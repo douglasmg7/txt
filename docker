@@ -61,5 +61,17 @@ docker images -a
 docker rmi $ID
 # Remove all images:
 docker image prune
+docker image prune -a   # Include tagged images.
 # Inspect a image:
 docker image inspect $ID
+
+# Copy files to a container:
+docker cp dummy/. $ID:/text
+# Copy files from a container:
+docker cp $ID:/text .
+
+# Naming container:
+docker run -p 3000:80 --name container_name 334837ba6abd
+
+# Tag image:
+docker build -t goals:latest .
