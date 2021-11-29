@@ -38,7 +38,7 @@ docker logs -f $ID
 # Run container by id, publish a port -p external:internal.
 docker run -p 3000:80 334837ba6abd
 # Deatached mode and remove container when stopped:
-docker run -p 3000:80 -d -rm 334837ba6abd
+docker run -p 3000:80 -d --rm 334837ba6abd
 # Attach to a container:
 docker attach $ID
 
@@ -75,3 +75,14 @@ docker run -p 3000:80 --name container_name 334837ba6abd
 
 # Tag image:
 docker build -t goals:latest .
+# Re-tag a image (create a clone image):
+docker tag node-demo douglasmg7/node-hello-world
+
+# Push and pull to docker:
+docker login
+docker push douglasmg/node-hello-world
+docker logout
+docker pull douglasmg7/node-hello-world:latest
+
+# Auto pull:
+docker run douglasmg7/node-hello-world:latest
