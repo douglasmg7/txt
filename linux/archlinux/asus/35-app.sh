@@ -93,8 +93,10 @@ sudo usermod -aG docker douglasmg7
 
 printf "\nInstalling virtualbox, choose option 2=virtualbox-host-modules-arch"
 sudo pacman -S virtualbox 
-# sudo pacman -S virtualbox-guest-utils
-# sudo pacman -S virtualbox-guest-iso
+sudo pacman -S virtualbox-guest-utils
+sudo pacman -S virtualbox-guest-iso     # Will create /usr/lib/virtualbox/additions/VBoxGuestAdditions.iso
+# After install windows on virtualbox, create a optical drive from /usr/lib/virtualbox/additions/VBoxGuestAdditions.iso
+# So install the software to update display resolution.
 
 # printf "\nInstalling freecad..."
 # sudo pacman -S freecad --noconfirm
