@@ -33,7 +33,8 @@ docker start -a $ID
 # Start container in iterate and attach mode:
 docker start -ia $ID
 # Show logs:
-docker logs -f $ID
+docker logs $CONTAINER
+docker logs -f $CONTAINER
 
 # Run container by id, publish a port -p external:internal.
 docker run -p 3000:80 334837ba6abd
@@ -86,3 +87,20 @@ docker pull douglasmg7/node-hello-world:latest
 
 # Auto pull:
 docker run douglasmg7/node-hello-world:latest
+
+# List volumes:
+docker volumes ls
+
+# Create a named volume:
+docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback feedback-node:volumes
+
+# Remove volumes:
+docker volume rm $VOL_NAME
+docker volume prune
+
+# Bind volume:
+docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback -v "/home/douglasmg7/code/docker/data-volumes-01-starting-setup/:/app" feedback-node:volumes
+docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback -v "$(pwd):/app" feedback-node:volumes
+
+# Using unamed volume to keep directory from image:
+docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback -v "/home/douglasmg7/code/docker/data-volumes-01-starting-setup/:/app" -v "/app/node_modules" feedback-node:volumes
