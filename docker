@@ -91,14 +91,17 @@ docker run douglasmg7/node-hello-world:latest
 # List volumes:
 docker volumes ls
 
-# Create a named volume:
-docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback feedback-node:volumes
-
 # Remove volumes:
 docker volume rm $VOL_NAME
 docker volume prune
 
-# Bind volume:
+# Create a unamed volume (survives container stop/start, used for logs):
+docker run -d -p 3000:80 --rm --name feedback-app -v /app/feedback feedback-node:volumes
+
+# Create a named volume (survives container rm, can be shared across containers):
+docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback feedback-node:volumes
+
+# Crea Bind mount (use of absolute path /):
 docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback -v "/home/douglasmg7/code/docker/data-volumes-01-starting-setup/:/app" feedback-node:volumes
 docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback -v "$(pwd):/app" feedback-node:volumes
 
