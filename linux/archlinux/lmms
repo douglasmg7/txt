@@ -1,0 +1,7 @@
+# Config midi keyboard
+Edit > Settings > Midi settings (Keyboard icon)
+Select ALSA-Sequencer  (Advenced Linux Sound Architecture)
+Restart LMMS
+
+# Select keyboard on track
+Select Gear icon > MIDI > input > Arturia

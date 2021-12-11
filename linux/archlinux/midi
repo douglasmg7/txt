@@ -1,0 +1,18 @@
+# Show midi interface port:
+aplaymidi -l
+
+# Listen midi interface port:
+aseqdump -p 24:0
+
+# Install usbutils to use lsusb:
+sudo pacman -S usbutils
+
+# List usb:
+lsusb
+
+# List modules:
+lsmod | grep usb
+
+# List all midi input ports:
+aconnect -i
+
