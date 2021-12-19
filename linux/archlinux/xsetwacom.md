@@ -9,6 +9,8 @@ sudo pacman -S xf86-input-wacom
 # Use this configuration for ultra widescreen at right and wacom with usb plug to right:
 xsetwacom set  11 rotate half
 xsetwacom set 11 area  0 0 26610 9500
+xsetwacom set  "Wacom One by Wacom S Pen stylus" rotate half
+xsetwacom set "Wacom One by Wacom S Pen stylus" area  0 0 26610 9500
 
 # List commands
 xsetwacom list parameters
