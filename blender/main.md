@@ -1,19 +1,30 @@
-# toggle right panel (view port properties)
+# Main
+
+## toggle right panel (view port properties)
 n
 
-# toggle left panel (tools)
+## toggle left panel (tools)
 t
 
-# show operator pane - edit last command
+# Mesh add 
+shift + a
+
+## show operator pane - edit last command
 F6
 
-# slow move mouse
+## slow move mouse
 shift
 
-# wireframe/solid toggle
+## Render select
 z
 
-# engon
+## Favorite menu
+q
+
+## Mode select (Object, edit mode, etc ...)
+ctrl + tab
+
+## Engon
 face with more then four faces
 
 # loop cut and slide
@@ -26,7 +37,6 @@ i
 # bevel edges
 ctrl + b
 
-
 # bevel vertices
 ctrl + shift + b
 
@@ -38,9 +48,6 @@ v
 # knife tool 
 k
 enter to finish 
-
-# mesh add 
-shift + a
 
 # object/edit mode toggle
 tab

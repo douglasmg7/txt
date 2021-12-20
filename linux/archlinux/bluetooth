@@ -1,5 +1,4 @@
-# Install.
-$ sudo pacman -S bluez bluez-utils pulseaudio-bluetooth
+# Install. $ sudo pacman -S bluez bluez-utils pulseaudio-bluetooth
 
 # Starting/enabling bluetooth service.
 $ sudo systemctl start bluetooth.service
@@ -30,6 +29,59 @@ bluetoothctl
 # List already paired devices
 [bluetooth]# devices
 
-# Connect
-[bluetooth]# connect 00:12:34:56:78:90
+# For devices that are already paired with your PC, you can simply connect to them in the future using the connect command as follows:
+[bluetooth]# connect B8:F6:53:5F:B0:22
+bluetoothctl connect B8:F6:53:5F:B0:22
 
+sudo systemctl enable bluetooth
+sudo systemctl start bluetooth
+# To actively search for Bluetooth devices that you can connect to, use the scan command as follows:
+bluetoothctl scan on
+
+# Note: If you can't find the Bluetooth device you are looking for, make sure that your system Bluetooth is discoverable.
+# To make your Bluetooth adapter discoverable to other devices, use the following command:
+bluetoothctl discoverable on
+
+# Listing Paired Devices With bluetoothctl:
+bluetoothctl paired-devices
+
+# The simplest way to connect with a Bluetooth device is to pair it with your PC using the pair command:
+bluetoothctl pair FC:69:47:7C:9D:A3
+
+# For devices that are already paired with your PC, you can simply connect to them in the future using the connect command as follows:
+bluetoothctl connect B8:F6:53:5F:B0:22
+
+# You can also list devices that are within the Bluetooth range of your computer using the command below:
+bluetoothctl devices
+
+# In addition to pairing with a Bluetooth device, you can also choose to trust certain devices so that you easily connect to them in the future:
+bluetoothctl trust FC:69:47:7C:9D:A3
+
+# You can untrust a device by issuing the following command:
+bluetoothctl untrust FC:69:47:7C:9D:A3
+
+# To unpair a Bluetooth device, use the remove command as follows:
+bluetoothctl remove FC:69:47:7C:9D:A3
+
+# You can also disconnect a device from your system using bluetoothctl:
+bluetoothctl disconnect FC:69:47:7C:9D:A3
+
+# If you wish to block a specific device from connecting to your system, you can use the block command followed by the MAC address of the device:
+bluetoothctl block FC:69:47:7C:9D:A3
+
+## Quick Summary
+
+### Just as a quick recap: To connect to a new device, you'd probably do something like this:
+bluetoothctl power on
+bluetoothctl scan on
+bluetoothctl devices
+bluetoothctl connect XX:XX:XX:XX:XX:XX
+
+### And to connect to an already known device, you can skip the scan step:
+bluetoothctl power on
+bluetoothctl devices
+bluetoothctl connect XX:XX:XX:XX:XX:XX
+
+### If your bluetooth controller is already on (which is probably the case if you're working on your system) you can even skip that step and end up with two simple commands to remember:
+bluetoothctl devices
+bluetoothctl connect XX:XX:XX:XX:XX:XX

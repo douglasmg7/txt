@@ -1,12 +1,19 @@
-# Zoom in/out
-Mouse Scroll whell
-Ctrl + Mouse Middle Button
+# Navigation
 
 # Pivot into a middle point
 Mouse Middle Button
+pen btn 1
+
+# Zoom
+Mouse Scroll whell
+ctrl + Mouse Middle Button
+ctrl + pen btn 1
+Numpad +
+Numpad -
 
 # Pan
-Shift + Mouse Middle Button
+Shift + mouse middle button
+Shift + pen btn 1
 
 # Snap navigation
 Click on gizmo
@@ -14,6 +21,12 @@ Click on gizmo
 # Center view (zoom all)
 Shift + C
 Home button
+
+# Zoom to selected object
+Numpad decimal point
+
+# Cam view
+Numpad 0
 
 # Walk mode (3D Viewport)
 view > Navigation > Fly Navigation
