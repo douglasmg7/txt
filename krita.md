@@ -18,3 +18,12 @@ shift + drag
 
 ## Colour pick
 ctrl
+
+## No destraction mode
+tab
+
+## Toggle foreground/background color
+x
+
+## Set foreground/backgound color to black/white
+d
