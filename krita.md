@@ -27,3 +27,13 @@ x
 
 ## Set foreground/backgound color to black/white
 d
+
+## Toggle erase mode:
+e
+
+## Toggle between two last brushes
+/
+
+## Brush resize:
+[
+]
