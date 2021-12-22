@@ -79,6 +79,9 @@ sudo pacman -S arduino arduino-cli --noconfirm
 printf "\nCreating symbolic link to jre configuration for arduino window correction."
 sudo ln -s ~/dotfiles/arduino.sh /etc/profile.d/arduino.sh
 
+printf "\nInstalling Wacom tablet dependencies..."
+sudo pacman -S xf86-input-wacom --noconfirm
+
 printf "\nInstalling blender..."
 sudo pacman -S blender --noconfirm
 
