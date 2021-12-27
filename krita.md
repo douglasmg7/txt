@@ -37,3 +37,21 @@ e
 ## Brush resize:
 [
 ]
+
+## Opacity:
+i
+o
+
+## Delete all pixel information in the active layer:
+Del
+
+## Show color history:
+h
+
+## Make the color darker and light:
+k
+l
+
+## Line:
+alt, to change position befor realese
+
