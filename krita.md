@@ -55,3 +55,8 @@ l
 ## Line:
 alt, to change position befor realese
 
+## Invert selection:
+ctrl + shift + i
+
+## Clear selection (custom assign):
+q
