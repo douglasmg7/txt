@@ -1,17 +1,36 @@
-# Select all in the scene.
+## Select all
 a
 
-# Loop selection.
-Shift + LCM
+## Deselect all
+aa
+Shift + a
 
-# Invert selection.
+## Box selection
+b + LMB
+
+## Box deselection
+b + MMB
+
+## Circle selection
+c
+
+## Lasso selection
+Ctrl + RBM
+
+## Lasso deselection
+Ctrl + Shifht + RBM
+
+## Invert selection
 Ctrl + i
+
+# Pick shortest path
+Ctrl + LBM
+
+## Loop selection.
+Shift + LBM
 
 # Repeat last command.
 Shift + r
-
-# Pick shortest path.
-Ctrl + LCM
 
 # Circle selection.
 c               # Enter circle select mode.
