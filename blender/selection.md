@@ -26,8 +26,10 @@ Ctrl + i
 # Pick shortest path
 Ctrl + LBM
 
-## Loop selection.
-Shift + LBM
+## Loop selection (select near top or side, chose loop direction)
+Alt + LBM
+## Loop selection (diferent line selection)
+Ctrl + Alt + LBM
 
 # Repeat last command.
 Shift + r
@@ -39,8 +41,15 @@ LCM             # To select.
 Shith + LCM     # To unselect.
 Esc             # Exit circle select mode.
 
+## Aumentar/diminuir seleção
+Ctrl + "Numpad +"
+Ctrl + "Numpad -"
+
 # Toggle Wireframe / Solid
 Shift + z
+
+# Select linked (edit mode)
+l
 
 # Select unique mesh in edit mode.
 Ctrl + l
