@@ -9,14 +9,20 @@ t
 # Mesh add 
 shift + a
 
+## Repeat last command
+shift + r
+
 ## show operator pane - edit last command
 F6
 
 ## slow move mouse
 shift
 
-## Render select
+## Viewport Shading
 z
+
+## Toggle viewport shading wireframe/solid shading
+Shift + z
 
 ## Favorite menu
 q
