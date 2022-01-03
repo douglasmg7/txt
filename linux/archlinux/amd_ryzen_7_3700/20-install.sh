@@ -29,6 +29,9 @@ printf "\nCreating symbolic link to mocp configuration file..."
 mkdir -p ~/.moc
 ln -s ~/dotfiles/moc/config ~/.moc/config
 
+printf "\nInstalling jq..."
+sudo pacman -S jq --noconfirm
+
 # printf "\nInstalling youtube download..."
 # sudo pacman -S youtube-dl --noconfirm
 
