@@ -85,6 +85,21 @@ sudo pacman -S xf86-input-wacom --noconfirm
 printf "\nInstalling blender..."
 sudo pacman -S blender --noconfirm
 
+printf "\nInstalling docker..."
+sudo pacman -S docker --noconfirm
+sudo usermod -aG docker douglasmg7
+
+printf "\nInstalling virtualbox, choose option 2=virtualbox-host-modules-arch"
+sudo pacman -S virtualbox 
+sudo pacman -S virtualbox-guest-utils
+sudo pacman -S virtualbox-guest-iso     # Will create /usr/lib/virtualbox/additions/VBoxGuestAdditions.iso
+# Enable AMD-V on bios
+#   Del to enter BIOS
+#   M.I.T > Advanced Frequency Dettings > Advanced CPU Settings > SVM Mode > Enable
+# After install windows on virtualbox, create a optical drive from /usr/lib/virtualbox/additions/VBoxGuestAdditions.iso
+# So install the software to update display resolution.
+
+
 # printf "\nInstalling freecad..."
 # sudo pacman -S freecad --noconfirm
 
