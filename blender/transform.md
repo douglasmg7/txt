@@ -15,3 +15,6 @@ Ctrl + a
 
 ## Copy x dimension to selected objects
 Side menu > Transform > RMB > X > Copy Single to Selected
+
+## Pie menu for tranform orientations
+,

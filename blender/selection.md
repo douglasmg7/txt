@@ -6,13 +6,19 @@ aa
 Shift + a
 
 ## Box selection
-b + LMB
+b, LMB
 
 ## Box deselection
-b + MMB
+b, MMB
 
 ## Circle selection
-c
+c, LMB
++, - to resize
+
+## Circle deselection
+c, Shfit + LMB
+c, MMB
++, - to resize
 
 ## Lasso selection
 Ctrl + RBM
