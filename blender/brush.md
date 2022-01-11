@@ -7,4 +7,7 @@ f
 Shift f
 
 ## Invert brush direction
-Ctrl
+Ctrl pressed
+
+## Temporary shift to smooth brusah
+Shift pressed
