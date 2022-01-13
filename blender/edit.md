@@ -15,3 +15,15 @@ Ctrl + delete
 ## Merge vertex
 m
 Mesh > Merge
+
+## Vertex > Rip vertices (mouse position define wich side will be moved)
+v
+
+## Vertex > Rip vertices and fill
+Alt v (fills the gap)
+
+## Vertex > Rip vertices and extend
+Alt d
+
+## Mesh > Split > Selection
+y

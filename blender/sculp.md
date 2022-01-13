@@ -1,4 +1,4 @@
-# Brush
+# Sculpt
 
 ## Change brush size
 f
@@ -11,3 +11,10 @@ Ctrl pressed
 
 ## Temporary shift to smooth brusah
 Shift pressed
+
+## Remesh - visual voxel size
+Shift r
+
+## Add subdivision
+Ctrl 1
+ctrl 5
