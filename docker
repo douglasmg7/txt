@@ -12,12 +12,14 @@ sudo usermod -aG docker douglasmg7
 sudo systemctl start docker.service
 
 # Create a new container from a image and go in interactive mode.
+# -i, --interactive                    Keep STDIN open even if not attached
+# -t, --tty     Allocate a pseudo-TTY
 docker run -it node
 
-# Run commands on image.
+# Run commands on image (docker file)
 RUN
 
-# Run commands on docker.
+# Run commands on docker (docker file)
 ['node', 'server.js']
 
 # Create a new image using the Dockerfile file.
@@ -29,6 +31,7 @@ docker stop $ID
 # Start container:
 docker start $ID
 # Start container in attach mode:
+# -a, --attach list                    Attach to STDIN, STDOUT or STDERR
 docker start -a $ID
 # Start container in iterate and attach mode:
 docker start -ia $ID
@@ -39,6 +42,7 @@ docker logs -f $CONTAINER
 # Run container by id, publish a port -p external:internal.
 docker run -p 3000:80 334837ba6abd
 # Deatached mode and remove container when stopped:
+# -d, --detach                         Run container in background and print container ID
 docker run -p 3000:80 -d --rm 334837ba6abd
 # Attach to a container:
 docker attach $ID
@@ -88,22 +92,25 @@ docker pull douglasmg7/node-hello-world:latest
 # Auto pull:
 docker run douglasmg7/node-hello-world:latest
 
-# List volumes:
-docker volumes ls
+# Volumes
+docker volume ls                # List volumes
+docker volume rm $VOL_NAME      # Remove one or more volumes
+docker volume prune             # Remove all unused local volumes
+docker volume inspect $VOL_NAME     # Inspect volume
 
-# Remove volumes:
-docker volume rm $VOL_NAME
-docker volume prune
-
-# Create a unamed volume (survives container stop/start, used for logs):
+# Create anonymous volume (Survives container stop/start, removed when container is removed. Used for logs):
+# Tied to specific container
 docker run -d -p 3000:80 --rm --name feedback-app -v /app/feedback feedback-node:volumes
 
-# Create a named volume (survives container rm, can be shared across containers):
+# Create named volume (survives container rm, can be shared across containers):
+# Not tied to specific container
 docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback feedback-node:volumes
 
-# Crea Bind mount (use of absolute path /):
+# Create Bind mount (use of absolute path /):
 docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback -v "/home/douglasmg7/code/docker/data-volumes-01-starting-setup/:/app" feedback-node:volumes
 docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback -v "$(pwd):/app" feedback-node:volumes
+# Using ro read only to avoid container change the source code (sub sequent volumes overwrite the read only from app sub folder defined):
+docker run -d -p 3000:80 --rm --name feedback-app -v "$(pwd):/app:ro" -v feedback:/app/feedback -v /app/temp feedback-node:volumes
 
-# Using unamed volume to keep directory from image:
-docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback -v "/home/douglasmg7/code/docker/data-volumes-01-starting-setup/:/app" -v "/app/node_modules" feedback-node:volumes
+# Using anonymous volume to keep directory from image (node_modules):
+docker run -d -p 3000:80 --rm --name feedback-app -v /app/node_modules -v feedback:/app/feedback -v "$(pwd):/app" feedback-node:volumes
