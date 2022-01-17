@@ -18,3 +18,6 @@ Shift r
 ## Add subdivision
 Ctrl 1
 ctrl 5
+
+## Color pick
+s
