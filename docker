@@ -133,5 +133,17 @@ docker run -d -p 3000:80 --rm --name feedback-app -v /app/node_modules -v feedba
 # .env
 PORT=8000
 
-# Build-time arguments:
+# Mongodb localhost:
+'mongodb://host.docker.internal:27017/database_name'
+# Mongodb dockerized:
+docker run -d --name mongodb mongo:3.6.3
+docker container inspect mongodb        # To see IPAddress
+'mongodb://172.17.0.2:27017/database_name'
+'mongodb://container_name:27017/database_name'      # For docker network
 
+# localhost server:
+'http://host.docker.internal:27017/'
+
+# Network:
+docker network create my_network        # Create network
+docker run -d --name mongodb --network my_network mongo     # Using the network
