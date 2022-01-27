@@ -147,3 +147,6 @@ docker container inspect mongodb        # To see IPAddress
 # Network:
 docker network create my_network        # Create network
 docker run -d --name mongodb --network my_network mongo     # Using the network
+
+# Mongodb:
+docker run --name mongodb -rm -d -p 27017:27017 mongo:3.6.3
