@@ -1,0 +1,9 @@
+# FreeCAD
+
+Once a Shape is created, it can be used and modified by all workbenches by creating scripted objects around that Shape.
+Essentially, every object derived from a Part Feature (Part::Feature class) is expected to hold and manipulate a Shape.
+
+## BREP
+In solid modeling and computer-aided design, boundary representation—often abbreviated as B-rep or BREP—is a method for representing shapes using the limits. 
+A solid is represented as a collection of connected surface elements, which define the boundary between interior and exterior points.
+Compared to the constructive solid geometry (CSG) representation, which uses only primitive objects and Boolean operations to combine them, boundary representation is more flexible and has a much richer operation set. In addition to the Boolean operations, B-rep has extrusion (or sweeping), chamfer, blending, drafting, shelling, tweaking and other operations which make use of these.
