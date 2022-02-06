@@ -1,0 +1,14 @@
+# 7z zip tool
+
+# Install:
+sudo pacman -S p7zip
+
+# List the content of an archive:
+7z l <archive name>
+
+# Extract all files from an archive to the current directory without using directory names:
+7z e <archive name>
+
+# Extract with full paths:
+7z x <archive name>
+
