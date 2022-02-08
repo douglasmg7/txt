@@ -22,3 +22,6 @@ mplayer dvd://1 -dvd-device /dev/sr0
 # Play a DVD from chapter 2.
 mplayer dvd://2 -dvd-device /dev/sr0
 
+# Resize osd:
+mplayer -subfont-osd-scale 1 00_INTRODUCTION_01.mp4
+

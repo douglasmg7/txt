@@ -3,6 +3,9 @@
 ## Install
 Install Bool Tool add-on.
 
+## Menu
+Ctrl + shift + b
+
 ## Difference
 Select cutter object
 Select object to be cutted
