@@ -1,0 +1,5 @@
+# Vertex operations
+
+# Create a edge from selected vertex
+f   # Not split the faces
+j   # Split the faces
