@@ -1,0 +1,26 @@
+# Squad view (font, side, top and pespective):
+ctrl, alt, q
+
+# Select view shading:
+z
+
+# Toggle Wire/Solid shading:
+ctrl, z
+
+# Toggle snap.
+shift, tab
+
+# Show quick favorites (First needed have buttons added to favorites):
+q
+
+# Insert vertex in edit mode:
+ctrl, rmb
+
+# Separate parts:
+p
+
+# Dissolve edges:
+ctrl, x
+
+# Join meshs into one objects:
+ctrl, j
