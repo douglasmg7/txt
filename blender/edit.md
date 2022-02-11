@@ -27,3 +27,15 @@ Alt d
 
 ## Mesh > Split > Selection
 y
+
+## Slide edge
+gg or shift, v
+e to match the shap of the adjacent vertices.
+f ?
+c go outside the mesh.
+
+## Slide vertex
+shift, v
+
+## Slide face
+shift, v

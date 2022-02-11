@@ -1,3 +1,25 @@
 Make video
 
-Create inface using cube, select nodes, j, bevel vertex 
+Create inface using cube, select nodes, j, bevel vertex (vértice)
+Bevel tool is a multiplicado de eges (aresta)
+    Custom
+    Mitter shape
+    Percentage
+    v for vertex
+
+Select path
+    one vertex -> ctrl, lmb
+
+Offset edge loop
+ctrl, shfit, r
+
+# Make it quad
+Alt + j 
+
+# Select no manifold mesh
+# select all
+# Select loops > select Boundary Loops
+# Vertex mode
+# Merge by distance
+
+# Set select boundary loops shortcuts to shift, ~

@@ -14,3 +14,6 @@ tar -pcvzf tar-archive-name.tar.gz source-folder-name
 
 # To extract a tar.gz compressed archive and preserver permissions.
 tar -pxvzf tar-archive-name.tar.gz 
+
+# Extract xz files.
+tar -xf file.tar.xz
