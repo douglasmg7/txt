@@ -1,0 +1,22 @@
+# Join/unjoin video and sound (Strip > Make Meta Strip):
+ctrl, g
+ctrl, shift, g
+
+# Toggle frames vs time into timeline:
+ctrl, t
+
+# Selet part of strip/unselect:
+p
+ctrl, p
+
+# Define start/end frame:
+ctrl, home
+ctrl, end
+
+# Set frame range to strip:
+Select desireds strips
+View > Range > Set Frame Range to Strip
+
+# Hide/Unhide strip:
+h
+alt, h
