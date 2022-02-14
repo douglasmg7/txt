@@ -144,6 +144,12 @@ docker container inspect mongodb        # To see IPAddress
 # localhost server:
 'http://host.docker.internal:27017/'
 
+# Persist mongodb data:
+docker run --name mongodb -v data:/data/db -rm -d mongo:3.6.3
+
+# Persist mongodb data and using password:
+docker run --name mongodb -v data:/data/db -rm -d -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASSWORD=secret mongo:3.6.3
+
 # Network:
 docker network create my_network        # Create network
 docker run -d --name mongodb --network my_network mongo     # Using the network
