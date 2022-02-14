@@ -3,6 +3,7 @@
 ## Use inset instead extrude and scale to keep proporitons:
 i, to inset and keep same distance from out borders.
 e, s, to extrude and keep the inner into same scale.
+i, i, inset individual.
 
 ## Inset have a option "offset even"
 For cube use offset even on for precision modeling.
