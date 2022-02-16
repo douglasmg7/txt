@@ -1,0 +1,9 @@
+# Script
+
+# bpy.data is simply a class with a list of properties, and each property is a collection. Each collection is a list of objects.
+
+# List properties:
+dir(bpy.data.objects)
+
+# List elements:
+dict(bpy.data.objects)

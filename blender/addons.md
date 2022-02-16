@@ -33,6 +33,7 @@ Add Curve: Extra Objects
 Add Mesh: Extra Objects
 Add Mesh: Bolt Factory
 Object: Bool Tool
+Object: Carver  # Ctrl + Shift + X
 Mesh: 3D Print ToolBox
 Mesh: F2
 Node: Node Wrangler
