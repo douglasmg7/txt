@@ -5,14 +5,17 @@ $ systemctl enable redis
 $ systemctl start redis
 # Install redis on archlinux (6379 - default port).
 
-$ redis-cli ping
+# Version
+redis-server --version
+
 # Test connection.
+redis-cli ping
 
-$ redis-cli
 # Start redis cli.
+redis-cli
 
-$ npm install redis --save
 # Install redis to use with node.
+npm install redis --save
 
 # Authentication.
 > auth <password>
