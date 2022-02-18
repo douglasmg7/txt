@@ -159,7 +159,8 @@ alt + r
 # Applay object's transformation to its data, ex: use to applay scale.
 ctrl + a
 
-# crease
+# Crease
+Select the edges
 shift + e
 
 # Zoom all.
