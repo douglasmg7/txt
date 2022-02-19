@@ -27,6 +27,7 @@ Mira Tools
 Bezier Mesh Shaper
 https://github.com/BenjaminSauder/EdgeFlow
 Pivot Transform 2.2.2
+PowerSave!
 
 ## In use
 Add Curve: Extra Objects
