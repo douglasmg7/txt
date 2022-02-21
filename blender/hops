@@ -1,15 +1,17 @@
 # Q menu
 q
 
+# Pie menu
+Shift + Q
+
 # Help
 Ctrl + '
 
 # Mirror
 Alt + X
 
-# View setup
-Shift + V
+# View setup, face orientation, wireframe, cavity, shadow
 Alt + V
 
-# Shortcuts:
+# Preferences:
 Ctrl + K
