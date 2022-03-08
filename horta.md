@@ -45,9 +45,31 @@ Adubação foliar com líquido de minhoca
 # Cebolinha
 Destacar para baixo
 Adora sol
-Adubar com ...
+Adubar com esterco de galinha
 
 # Esterco de aves
 Tem mais nitrogênio
 
 # Couve
+Vazo de 9l para uma muda
+Vazo de 50l para 4 mudas
+Gosta de clima mais amenos
+Precisa de cerca de 5 horas de sol pleno
+Solo bem adubado
+Bandeja para fazer brotos
+Colocar ovo para espantar borboleta
+Esterco de galinha (Garrafa pet com água e um quarto de esterco, aguardar dissolver por cinco dias), rico em nitrogênio.
+Casca de ovo na terra
+Plantar oregano junto para afastar pulgões (hortelã não, raíz muito forte)
+300 ml de esterco de galinha, 300 ml de torta de mamona e 200 g de farinha de osso 
+Líquido do humus para adubação
+## Solução para borrifar:
+Um litro de água
+Um Dente de alho
+Uma pimenta ardida
+Gotas de detergente
+Bater tudo do liquidificador e coar
+Borrifar nas folhas todo dia
+
+# Babosa
+Deixar em água por 15 minutos para a aloina sair.
