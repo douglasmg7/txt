@@ -5,3 +5,12 @@ shift + move
 
 # Copy
 ctrl + shift + move
+
+# backup folder
+Your program preferences are stored in the Delftship.bd7 file in this folder. On very rare occasions an error in this file
+can cause DELFTship to become unstable. This can be tested by starting DELFTship while holding down the Shift key-
+this start DELFTship in safe mode and bypasses your preferences.
+Deleting this file can solve an instability and will restore your settings to the program defaults
+
+# APP
+Aft perpendicular

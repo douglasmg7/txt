@@ -63,6 +63,7 @@ Casca de ovo na terra
 Plantar oregano junto para afastar pulgões (hortelã não, raíz muito forte)
 300 ml de esterco de galinha, 300 ml de torta de mamona e 200 g de farinha de osso 
 Líquido do humus para adubação
+Necessita de cálcio
 ## Solução para borrifar:
 Um litro de água
 Um Dente de alho
