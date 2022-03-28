@@ -77,3 +77,40 @@ Mastro devante projetado para receber velas redondas (iguais das caravelas)
 
 ## Saveiro
 Similar a escuna, mas com velas mais atuais.
+
+# Lazy jack
+Sistema de cabos para reter e guardar a vela mestra em um boom bag.
+
+# Vela balão
+
+## Spinnaker (balão)
+Cruising spin.
+Cruising chute - mais leve.
+Balão simétrico.
+Tem páu com amantiho e contra-amantilho.
+Mais complicado de trabalhar.
+Utilizável do popa raza até o trvés.
+
+## Geneaker
+É uma genoa para ventos fracos.
+Balão assimétrico.
+Indispensável e um barco de cruseiro, permite até dobrar a velocidade do barco em ventos fracos.
+Geneaker não faz o popa raza sem o páu.
+Utilizável da alheta até o través orçado.
+
+## Code zero
+Evolução da geneaker.
+É gigante.
+Geralmente usada no gurupes.
+Utilizável do través até a orça (través orçado).
+
+## Code D
+Pode ser utilizad em um enrrolador de genoa.
+É mais chata (mais plana) que a code 0.
+
+# Curva polar
+Define a performance do barco/desempenho da vela em função do vento aparente.
+
+# Professor
+Juca Andrade
+Cuso Baldoso - Escola de vela

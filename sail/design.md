@@ -55,3 +55,27 @@ Cp - Coeficiente prismático
 S - Superfície molhada
 KMt - Estabilidade a pequenos angulos
 KMl - KM longuitudinal
+
+# SMG - Speed Made Good
+Velocidade do barco no sentido contrário ao vento real.
+
+# Resistência ao avanço
+Resitência viscosa (atrito) e resistênica de onda.
+A baixas velocidades a resistência viscosa é maior que a resisteica de onda
+
+# Densidade da água salgada
+1.025
+
+# Sw - Superfície molhada
+
+# Rn - Reynolds number
+Rn - Indica a linearidade do fluxo, se é laminar ou turbulento.
+Valores menores caracteriza um escoamento linear.
+Valores grandes caracteriza um escoamento turbulento.
+Rn = VxL/v
+V = Velocidade do veleiro (m/s)
+v = viscosidade cinemática
+
+# Rf - Frictional resistance
+Rf = Cfx0.5xpxv2vSw
+
