@@ -17,14 +17,58 @@ Bimini (aré) - proteje do sol
 # Outros
 Linha d'água
 
+# Manobras
+
+## Cambar, fazer um bordo
+Virar dejavante
+
+## Jybe, virar em roda
+
 # Misc
 
+Derrabado, Abicado, Com banda para bombordo.
 Ardência é a tendencia que o veleiro tem de orçar.
+Escota, contra escota
+Biruta de vela (espermatozoides)
+Jenoa tem a razão entre LP e J mairo que 100%
+    * J = Comprimento da vela pojetada no convés
+    * LP = Comprimento da vela perpendicular a testa
 
 # Vela
 Testa, valuma, esteira
+Punho da adriça, punha da amura e punho da esteira
+Punho do Cuningham
+Duas velas é considerado como uma na regulagem, trabalham em conjunto. Quando se ajusta uma tem que ajustar a outra.
+Caçar - Trazer a vela para o centro do barco.
+Solecar (Folgar) - Afastar a vela do centro do barco.
+Toda caçada e estolada, indica que estamos dentro da zona morta.
+Quando começar a subir, não usar a catraca, somente depois.
+Quartelar a buja quando cambar em vento fraco, para ajudar a finalizar a manobra.
+Sozinho dar o bordo mais lento para dar tempo de fazer tudo.
+
+# Biruta de vela
+Em regata mantém a biruta de barlavento a 45 graus para cima da horizontal.
+
+## Forras de rizo
+Geralmete duas, podendo ter até três.
+Se precisar usar a terceira forra de rizo, provavelmente você gostaria de estar em casa.
+
+## Reforço da testa da vela
+    * Cabo costurado (macarrão)
+    * Slide e torpedo
+
+# Mareação
+Filado ao vento
+Orça máxima (45 graus no real e 30 graus no aparente)
+Orça fechada
+Orça folgada
+Través - Velas a 45 graus.
+Alheta
+Popa
+Popa rasa
 
 # Cabos
+Manicaca é a alavanca da catraca
 
 ## Adriça
 Para subir ou descer uma vela
