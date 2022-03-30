@@ -14,6 +14,15 @@ Quilha
 Dog-house (avante) - proteje do vento e sol
 Bimini (aré) - proteje do sol
 
+# MOB
+Cinto de segurança
+Linha de vida
+Colete
+As manobras tradicionais foram boladas para navios, não veleiros pequenos.
+Um tripulante não deve tirar os olhos da pessoa que caiu.
+Boia com retinida de 25m
+VHF Canal 16
+
 # Outros
 Linha d'água
 
@@ -24,15 +33,21 @@ Virar dejavante
 
 ## Jybe, virar em roda
 
-# Misc
+# Vento
+Vento aparente
+Vento real
+Rumo velocidade (velocidade do barco)
+Primeiro riso a 10kns (primeiros carneirinhos)
 
+# Misc
+Nunca entra em port desconhecido a noite
 Derrabado, Abicado, Com banda para bombordo.
 Ardência é a tendencia que o veleiro tem de orçar.
 Escota, contra escota
 Biruta de vela (espermatozoides)
 Jenoa tem a razão entre LP e J mairo que 100%
     * J = Comprimento da vela pojetada no convés
-    * LP = Comprimento da vela perpendicular a testa
+    * LP = Comprimento da vela perpendicular a testa (Talvez seja projetado no angulo da bisetriz do punho da escota)
 
 # Vela
 Testa, valuma, esteira
@@ -45,8 +60,29 @@ Toda caçada e estolada, indica que estamos dentro da zona morta.
 Quando começar a subir, não usar a catraca, somente depois.
 Quartelar a buja quando cambar em vento fraco, para ajudar a finalizar a manobra.
 Sozinho dar o bordo mais lento para dar tempo de fazer tudo.
+Vela no saco dura 30 anos, no sol 6 meses e panejando 15 minutos (Élio Magalhães).
+Garruncho - permite fixar a vela a um cabo.
+Em travessia a noite realizar o primeiro rizo por segurança.
 
-# Biruta de vela
+## Torção
+Tensionar o burro faz diminuir a torção na vela
+Achatar a vela (diminuindo a tensão) tensionar a adriça e ou cunnighan, o burro e a esteira.
+Mar com ondas utilizar vela mais barriguda, mais torção.
+Ajustar a torção visualizando as birutas de vela, a de cima é a mais rebelde, se ficar 50% do tempo na horizontal tá bom.
+Vento forte folgar o travler para achatar a vela.
+
+## Buja
+Buja de tempestade (fraldinha)
+Buja de trabalho (talvez de 2/3 da buja)
+
+## Carrinho da gena
+Ponto inicial da regulagem é na bicetriz do angulo do punho da escota.
+Valuma da parte superior da vela panejando, colocar carrinho para frente. Se não resolver puxar o rabo da bixa.
+Valuma da parte inferior da vela panejando, colocar carrinho para trás.
+Bixa é um cabo preso na valuma da vela que permite tensionar a valuma da mesma.
+Bixa pode ser na esteira da vela também.
+
+## Biruta de vela
 Em regata mantém a biruta de barlavento a 45 graus para cima da horizontal.
 
 ## Forras de rizo
@@ -56,6 +92,31 @@ Se precisar usar a terceira forra de rizo, provavelmente você gostaria de estar
 ## Reforço da testa da vela
     * Cabo costurado (macarrão)
     * Slide e torpedo
+
+## Rizar (primeira opção)
+1 - Enrrolar a genoa
+2 - Ligar o motor
+3 - Colocar o barco contra o vento
+4 - Rizar a vela
+
+## Rizar (segunda opção)
+1 - Colocar em orça
+2 - Baixar a vela até o ponto de forra e prender a testa na ferragem
+3 - Içar a vela novamente
+4 - Prender a valuma
+5 - Enrrolar o excedente da vela nas forras de rizo apenas, não na retranca.
+
+## Capear
+Colocar em capa
+Ancorar com as velas
+Aquartelá a genoa, deixar a mestra folgada e leme para o mesmo lado da genoa.
+(de forma a levar a proa pro lado que a genoa está aquartelada) (ponta da retranca apontando para a ponta da retranca).
+O veleiro deverá escorregar lentamente entre 40 e 60 graus do vento, dependendo do projeto da quilha. O movimento é de 0.5 knts a 1 knt
+Pode entrar em capa para rizar a mestra
+
+# Travler
+Aumentador e diminuidor de vento aparente.
+Mover para sotavente equivale a dar um rizo (Sei não), diminui a barriga se mantém a retranca na mesma posição.
 
 # Mareação
 Filado ao vento
