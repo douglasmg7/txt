@@ -79,3 +79,5 @@ v = viscosidade cinemática
 # Rf - Frictional resistance
 Rf = Cfx0.5xpxv2vSw
 
+# Misc
+Ângulo de desconforto - 30 graus

@@ -14,6 +14,108 @@ Quilha
 Dog-house (avante) - proteje do vento e sol
 Bimini (aré) - proteje do sol
 
+# Âncora
+Origem Belga
+As verdadeiras são feitas em uma unica peça, não tem solda.
+As que tem solda não são tão eficientes.
+Galvanizado é melhor pois avisa antes de falhar.
+Inox quebra sem aviso prévio.
+O peso da ancora não é o mais importante, pois a mesma é apenas um elemento do conjunto.
+Num 23 pés tem sido usado uma Bruce de 7 kilos.
+Num 32 pés tem sido usado uma Bruce de 15 kilos.
+Catenária - relação entre corrente e cabo.
+Garrou - ancora não fixou.
+Unhou - ancora está bem presa.
+Aguarda 15 min, fazendo um enfiamento para ter garantir que a ancora unhou.
+Fundear na poita, tem que ser uma poita de confiança, que você faz manutenção.
+Verificar o raio de giro.
+Potência do motor para verificar o fundeio - 1/3 da rotação do motor quando em serviço.
+Após o fundeio cabo não deve ficar o tempo todo na diagonal, deve ficar mais para baixo, indicando que a corrente tá no substrato marinho.
+Cabo tá pro lado, sinal que tá garrando.
+Usar muito cabo, pode acabar enrrolando na quilha e no leme.
+Usar um segundo ferro com um cabo mais fino e deixa um pouco frouxo, se o cabo esticar, indica que o ferro principal garrou.
+Amarra vs filame
+Amarrar o cabo em pelo menos dois cunhos.
+Guincho server para puxar filame não barco (motor avante para afouxar o cabo, então usar o guincho).
+Deixar sempre a ancora preparada, caso aconteça uma emergência.
+
+## Boia de arinque
+Fica na vertical, indicando a posição do ferro.
+Boia de arinque
+Arinque (o cabo)
+
+## Regras
+Devemos ter o comprimento de corrente de pelo menos o comprimento da embarcação.
+Ideal 15 a 20 metros de corrente.
+Ideal 50 a 10 metros de cabo sintético.
+O ferro deve ser liberado com barco dando ré, para não embolar a corrente
+
+## Tipos de ancoragem.
+Fig 1a - Rabo de galo (angulo menor que 90 graus entre os dois)
+Fig 1b - Agalda (Cinco emtros entre ferros), geralmente a primeira ancora é menor e de um tipo diferente.
+    * Muito boa
+
+### Lançar
+Parada rápida - 3x a profundidade
+Dormir - 5x
+Mau tempo - 7x
+
+### Suspender
+Puxa tudo
+Vai avante
+
+## Componentes (filame)
+Anete da ancora
+Manilha (galvanizado é melhor)
+Destorcedor (galvanizado é melhor)
+Corrente
+Manilha (galvanizado é melhor)
+Cabo
+
+## Anete
+Onde é prezo a manilha ou destorcedor.
+
+## Haste
+
+## Cruz 
+Junção entre a haste e o braço.
+Tem um furo onde pode ser colocado a boia de arinque ou preder outra ancora (ancoragem a galvo).
+
+## Braço
+## Pata
+## Unha
+
+## Tipos de ferro
+
+### Fateixa
+Milenar
+
+### Bruce
+Mais comum
+Bom para lama, areia e cascalho.
+Não é boa para fundo de pedra, pois é dificil de tirar.
+
+### Almirantada
+Tem o cepeo que a mantém na posição.
+
+### Patente
+
+### Danforth
+Melhor capacidade de unhar com relação a Bruce
+
+### Arado
+
+### Delta
+Evolução da ancora Arado
+Rocna 10 é considerada a melhor
+
+### Garateia
+Boa para pedras, pois entorta e sai.
+
+### Folding
+Usada em botes e pequenos veleiros.
+
+
 # MOB
 Cinto de segurança
 Linha de vida
@@ -48,6 +150,7 @@ Biruta de vela (espermatozoides)
 Jenoa tem a razão entre LP e J mairo que 100%
     * J = Comprimento da vela pojetada no convés
     * LP = Comprimento da vela perpendicular a testa (Talvez seja projetado no angulo da bisetriz do punho da escota)
+A matroca - sem propulrsão
 
 # Vela
 Testa, valuma, esteira
@@ -130,6 +233,14 @@ Popa rasa
 
 # Cabos
 Manicaca é a alavanca da catraca
+
+## Nós
+Oito, Lais de guia, Cunho, Volta redonda e dois cotes, né de escota e nó direito
+Cote são voltas
+Chicote livre - a parte menor
+Cabo de força - a parte maior
+Memória táctil
+
 
 ## Adriça
 Para subir ou descer uma vela
@@ -219,3 +330,108 @@ Define a performance do barco/desempenho da vela em função do vento aparente.
 # Professor
 Juca Andrade
 Cuso Baldoso - Escola de vela
+
+# Salvatagem
+Norman 03 DPC/MB - Esporte e recreio
+Tem que usar a bandeira do Brasil
+
+## Norman 05
+Trata dos coletes salva vidas
+
+## Colete Classe 4
+É mais um EPI
+Esporte e recreio.
+
+## Colete Classe 3
+Não tem os refletores
+Tem apito
+Tem gola
+Laranja
+Desvira uma pessoa inconsciente em 5 segundos
+R$43,00
+
+## Colete Classe 2
+Tem os refletores
+Tem apito
+Tem gola
+Laranja
+Desvira uma pessoa inconsciente em 5 segundos
+Geralmente mais incorpados
+R$79,00
+
+## Colete Classe 1
+Tem os refletores
+Tem apito
+Tem gola
+Laranja
+Luz estrobosópica
+Alça para ser içado para dentro do barco
+Alça para ligar um náufrago no outro.
+Desvira uma pessoa inconsciente em 5 segundos
+Geralmente mais incorpados
+R$557,00
+
+## Faxo homes
+Estrobo para boia circular
+
+# Navegação interior
+
+## Tipo 1
+Mais abrigado
+
+## Tipo 2
+Menos abrigado
+Pode entrar uma resaca
+
+# Rádio VHF
+O sinal não faz curva
+Alcance de vizada - o que você conseguimos enxergar
+Não usar sem antena para não queimar o rádio
+Ficar na escuta do canal 16 ou 68 quando 16 está muito congestionado
+Canal 16 - No mundo
+Canal 68 - ate clube e esporte a recreio
+Canal 73 - taxi boat
+As propagações dependem da situação climática
+
+## Regular o squelt, (ganho, sintonia fina)
+Voltar até ouvir a estático, e depois aumentar até sumir a estática.
+Quando muda a situação climática tem que regular o squelt.
+Se estiver recebeno sinal de muito longe e quiser diminuir a sensibilidade, é só afastar o squelte mais ainda da estática.
+
+## Movel
+Menos potente, menor alcance
+1 a 5 watts
+Marcas - Icom
+Deve ser usado na vertical
+
+## Fixo
+Mais potente, maior alcance
+25 watts
+
+## Como fazer uma chamada
+Papa - Yanke    Copia    Veleiro Manu
+
+### Tipos de chamada
+Barco / Barco - Canal 68
+Barco / Terra
+Terra / Barco
+
+Incia se uma chamada no canal principal, mas continua em outro canal.
+
+## Securité
+Perigo que pode levar um risco a toda a comunidade.
+Securité-Securité-Securité  Aqui veleiro Manu   Navegando no través da Muela    Containers boiando na água  Posição x
+Repito a mensagem três vezes
+
+## Pan Pan
+Algum tipo de emrgência a bordo, mas não há risco de vida.
+Pan Pan  -  Posição  -  Natureza da emergência  -  Tipo de ajuda necessária  -  Situação da tripulação  -  Intensão do comandante da embarcação
+
+## May Day
+Risco iminente a vida.
+
+## RENEC
+Rede Nacional de Estações Costeiras
+Cerca de 40 estações distribuidas ao longo da costa do Brasil
+
+## RCAI
