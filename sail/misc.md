@@ -39,6 +39,25 @@ Amarrar o cabo em pelo menos dois cunhos.
 Guincho server para puxar filame não barco (motor avante para afouxar o cabo, então usar o guincho).
 Deixar sempre a ancora preparada, caso aconteça uma emergência.
 
+## Poita
+Morto - A parte de concreto que faz o papel ferro
+Vergalhão
+Manilha
+Corrente
+Destorcedor
+Boia - Não amarrar o barco na orgola superior da poita, a argola serve para pegar a poita.
+Mão - Cabo para o barco
+
+Pegar a poita contra o vento ou corrente de maré, o que for maior.
+Crock - Vara para pegar a poita.
+
+Colocar uma defensa n mão (cabo da poita que vai para o barco) - ajuda pega-la
+Qundo for passar a noite, colocar a boia da poita presa da proa do barco, para evitar ficar pegando no costado, situação que ocorre muito no estofo da maré.
+
+A poita permite ter um raio de giro bem menor.
+
+O peso do morte tem cerca de 4 a 6 toneladas! No mar.
+
 ## Boia de arinque
 Fica na vertical, indicando a posição do ferro.
 Boia de arinque
@@ -392,6 +411,27 @@ Canal 16 - No mundo
 Canal 68 - ate clube e esporte a recreio
 Canal 73 - taxi boat
 As propagações dependem da situação climática
+Não deixar o cabo da antena enrrolado para não diminuir a potência
+Não pode ter emendas no cabo da antena
+A antena tem que ser proporcional ao rádio
+Antena reserva caso o mastro caia
+Função distress para rádios com GPS - Envia May Day automático
+Verificar se o rádio é a prova d'água
+radio vhf uniden solar
+radio vhf icom
+radio vhf baofeng
+Antena anagoia para melhorar o alcance
+Altura da antena melhora muito
+Tem que configurar os Canais com as freqências corretas e shifts (recepção pode ter frequência diferente do envio)
+
+# 03 Minutos de silêncio em toda hora cheia
+Primeiro minuto - may day - transmissão de may day
+Segundo minuto - may day relay - retransmissão do may day original por outras embarcações
+    Chamada Geral, Chamada Geral, Chamada Geral
+Terceiro minuto - Securité
+
+# Meia hora cheia
+Primeiro minuto - May Day
 
 ## Regular o squelt, (ganho, sintonia fina)
 Voltar até ouvir a estático, e depois aumentar até sumir a estática.
@@ -425,13 +465,32 @@ Repito a mensagem três vezes
 
 ## Pan Pan
 Algum tipo de emrgência a bordo, mas não há risco de vida.
-Pan Pan  -  Posição  -  Natureza da emergência  -  Tipo de ajuda necessária  -  Situação da tripulação  -  Intensão do comandante da embarcação
+Pan Pan, Pan Pan, Pan Pan  -  Identificação da embarcação  -  Posição  -  Natureza da emergência  -  Tipo de ajuda necessária  -  Situação da tripulação  -  Intensão do comandante da embarcação
 
 ## May Day
 Risco iminente a vida.
+May Day, May Day, May Day  -  Identificação da embarcação  -  Posição  -  Natureza da emergência  -  Tipo de ajuda necessária  -  Situação da tripulação  -  Intensão do comandante da embarcação
 
 ## RENEC
 Rede Nacional de Estações Costeiras
 Cerca de 40 estações distribuidas ao longo da costa do Brasil
 
 ## RCAI
+
+# Atrcar
+De proa - a popa fica para o pier
+Após atingir 2 nós deixar o motor no neutro para que o turbilhão do hélice não diminua a eficiência do leme.
+
+## De proa
+
+# RIPEAM
+
+Vai bater - Marcação constante e embarcação aumentando.
+Quem vê a luz verde tem a preferência.
+Amuras a bombordo - Significa amuras livres a bombordo, retranca está para boreste.
+Luz de cruzeta - Luz branca de motorização 225 graus a vante no mastro.
+
+# Navegação
+
+# Prova de capitão
+Livro do Altineu Pires Miguens
