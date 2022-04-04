@@ -491,6 +491,15 @@ Amuras a bombordo - Significa amuras livres a bombordo, retranca está para bore
 Luz de cruzeta - Luz branca de motorização 225 graus a vante no mastro.
 
 # Navegação
+* Planejaemnto e traçado da derrota (Estudo da viagem).
+* Seleção das cartas náuticas, cartas piloto e publicações de segurança à navegação necessárias.
+* Estudo detalhado da área em que se vai navegar.
+* Traçado da derrota nas cartas gerais e de grande escala.
+* Registro de rumos, velocidades e ETAs.
+
+## Carta piloto
+Apresenta as condições de ventos predominantes em uma região.
 
 # Prova de capitão
 Livro do Altineu Pires Miguens
+

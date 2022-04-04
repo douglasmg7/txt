@@ -81,3 +81,6 @@ Rf = Cfx0.5xpxv2vSw
 
 # Misc
 Ângulo de desconforto - 30 graus
+
+# Quilha
+Ângulo de deriva (ângulo de ataque) entre 4-5 graus nos bons barcos.
