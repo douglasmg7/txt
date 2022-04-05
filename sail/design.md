@@ -84,3 +84,7 @@ Rf = Cfx0.5xpxv2vSw
 
 # Quilha
 Ângulo de deriva (ângulo de ataque) entre 4-5 graus nos bons barcos.
+Naca de 6 digitos (para pequenos ângulos de ataque)
+
+# Leme
+Naca de 4 digitos (para grandes ângulos de ataque)
