@@ -503,3 +503,51 @@ Apresenta as condições de ventos predominantes em uma região.
 # Prova de capitão
 Livro do Altineu Pires Miguens
 
+# Formas litorâneas de relevo
+
+## Barra
+São canais que ligam rios e lagos com o mar, onde ocorre muita sedimentação, com a formação de bancos de areia e a deposição de detritos.
+
+## Baía
+Em proporções menores, também é chamada de saco; 
+Caracteriza-se por apresentar uma forma arredondada quase fechada, lembrando a forma da letra “u” ou de uma ferradura.
+
+## Golfo
+Assim como a baía, apresenta a reentrância do mar sobre o continente caracterizando um formato de ferradura, entretanto, diferentemente da baía, o Golfo possui grandes dimensões e uma forma mais aberta para o mar.
+
+## Península
+Parte do continente que avança para o oceano e é cercada por água em quase todos os lados. As penínsulas, em proporções menores, são chamadas de cabos. Dois cabos separados por uma pequena distância podem formar uma baía ou um golfo. Observe a ilustração abaixo:
+
+## Enseada
+Praia em formato de arco, semelhante à baía, porém com o arco mais aberto. Na enseada, os arcos que a circundam são mais afastados e a “curva” da praia é menos acentuada.
+
+## Recife
+Barreira formada no mar e localizada próximo à praia.  Pode ser formada por rochas ou por elementos biológicos, com corais e restos de animais marinhos.
+
+## Falésias
+São grandes paredões localizados muito próximos ao mar, normalmente formam belas paisagens.
+
+## Fiordes
+Grandes corredores com depressões relativas que foram preenchidas pela água do mar.
+
+## Foz
+É o ponto em que as águas dos rios deságuam diretamente sobre o mar. Existe a foz em estuário, quando as águas deságuam através de um único canal, e a foz em delta, quando as águas deságuam por meio de vários canais que formam algo parecido a um leque.
+
+
+# Mochila de mar
+Lanterna
+Cinto de segurança
+Luva
+Roupa de tempo
+Canivete
+Sapato (docker side)
+Boné
+Óculos
+Remédios
+
+# Estais
+Trocar a cada 15 anos
+
+# Navegadores
+Hélio Magalhães
+Maurício Rosa

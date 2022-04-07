@@ -88,3 +88,11 @@ Naca de 6 digitos (para pequenos ângulos de ataque)
 
 # Leme
 Naca de 4 digitos (para grandes ângulos de ataque)
+
+# CE - Centro de esforço da vela
+
+# CLR - Centro lateral de resistência
+Gerado pela parte do barco a baixo da linha d'água.
+CLR - Geométrico
+CLR - Hidrodinâmico
+
