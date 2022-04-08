@@ -551,3 +551,7 @@ Trocar a cada 15 anos
 # Navegadores
 Hélio Magalhães
 Maurício Rosa
+
+# Vento
+Suel (marulho) - Onda que foi formada em outro lugar por um vento, e chega em uma região que não está ventando.
+Vaga  - Onda formada pelo vento.
