@@ -1,19 +1,33 @@
 # Q menu
 q
 
+# Pie menu
+Shift + Q
+
 # Help
 Ctrl + '
 
 # Mirror
 Alt + X
 
-# View setup
-Shift + V
+# View setup, face orientation, wireframe, cavity, shadow
 Alt + V
 
+<<<<<<< HEAD
 # Shortcuts:
 Ctrl + K
 
 # Show modifiers:
 Select object
 Hold Ctrl, mouse over modifier to show name and select.
+=======
+# Preferences:
+Ctrl + K
+
+# Show cutters:
+Select cutted object
+Ctrl + MouseHover
+
+# (Dot UI) Show a table with a list of operations (boolean, modifier...)
+Q, Ever Scroll, Tab
+>>>>>>> 2f99f0245ccb7265d40ee191f4eaf71b7fe5ca2a

@@ -6,3 +6,9 @@ Ctrl + D
 
 # Taper (cutting)
 Shift + T
+
+# Keep cutter object selected and visible (shift live)
+At the end of cut operation use Shift + LMB instead only LMB
+
+# Preferences:
+Ctrl + K
