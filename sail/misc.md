@@ -185,6 +185,9 @@ Sozinho dar o bordo mais lento para dar tempo de fazer tudo.
 Vela no saco dura 30 anos, no sol 6 meses e panejando 15 minutos (Élio Magalhães).
 Garruncho - permite fixar a vela a um cabo.
 Em travessia a noite realizar o primeiro rizo por segurança.
+Dacron - poliester
+Prolan - polietileno - lona plástica
+Velaria - BK Sails
 
 ## Torção
 Tensionar o burro faz diminuir a torção na vela
@@ -555,3 +558,5 @@ Maurício Rosa
 # Vento
 Suel (marulho) - Onda que foi formada em outro lugar por um vento, e chega em uma região que não está ventando.
 Vaga  - Onda formada pelo vento.
+
+
