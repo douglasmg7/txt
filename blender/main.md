@@ -263,7 +263,7 @@ ctrl + e
 ctrl + -
 ctrl + shift + -
 
-# Change normals.
+# Flip normals.
 shift + n
 
 # Toggle shading (Wireframe/Solid).
@@ -324,3 +324,6 @@ f9
 
 # Transform orientation.
 ,
+
+# Proportional editor on/off
+o
