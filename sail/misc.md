@@ -13,6 +13,7 @@ Obras vivas
 Quilha
 Dog-house (avante) - proteje do vento e sol
 Bimini (aré) - proteje do sol
+Cambusa/rancho - dispença do navio
 
 # Âncora
 Origem Belga
