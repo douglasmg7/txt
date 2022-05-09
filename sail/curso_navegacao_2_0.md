@@ -61,3 +61,8 @@ Aviso de mau tempo para área
 
 ## Prova de capitão
 Apenas em Abril e Outubro
+
+## Filmes
+Mestre dos mares
+Terravision
+https://www.em.com.br/app/noticia/cultura/2021/10/22/interna_cultura,1315944/caso-real-de-disputa-pela-invencao-do-google-earth-gera-serie-eletrizante.shtml
