@@ -39,3 +39,6 @@ Mesh: 3D Print ToolBox
 Mesh: F2
 Node: Node Wrangler
 Loop Tools
+
+## Grease pencil
+Object: Grease Pencil Tools
