@@ -190,6 +190,12 @@ Dacron - poliester
 Prolan - polietileno - lona plástica
 Velaria - BK Sails
 
+## Battens
+They have the primary goal of supporting the leech, which otherwise would be
+constantly flap loosely like a flag. To be precise, this is true when sailing small angles to
+the wind. When sailing deep angles sails can self-support the roach, reason for which
+downwind sails have no battens while having a very large roach.
+
 ## Torção
 Tensionar o burro faz diminuir a torção na vela
 Achatar a vela (diminuindo a tensão) tensionar a adriça e ou cunnighan, o burro e a esteira.
@@ -559,5 +565,4 @@ Maurício Rosa
 # Vento
 Suel (marulho) - Onda que foi formada em outro lugar por um vento, e chega em uma região que não está ventando.
 Vaga  - Onda formada pelo vento.
-
 
