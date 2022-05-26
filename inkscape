@@ -12,3 +12,6 @@ alt + arrow
 
 # Fast move.
 shift + arrow
+
+# Resize page to selected items
+ctrl + shift + r
