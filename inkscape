@@ -15,3 +15,6 @@ shift + arrow
 
 # Resize page to selected items
 ctrl + shift + r
+
+# Select by line
+alt + move mouse
