@@ -84,6 +84,12 @@ sudo pacman -S arduino arduino-cli --noconfirm
 printf "\nCreating symbolic link to jre configuration for arduino window correction."
 sudo ln -s ~/dotfiles/arduino.sh /etc/profile.d/arduino.sh
 
+printf "\nInstalling inkscape..."
+sudo pacman -S inkscape python-lxml python-cssselect --noconfirm
+
+printf "\nInstalling gimp..."
+sudo pacman -S gimp --noconfirm
+
 printf "\nInstalling blender..."
 sudo pacman -S blender --noconfirm
 
@@ -95,8 +101,10 @@ printf "\nInstalling virtualbox, choose option 2=virtualbox-host-modules-arch"
 sudo pacman -S virtualbox 
 sudo pacman -S virtualbox-guest-utils
 sudo pacman -S virtualbox-guest-iso     # Will create /usr/lib/virtualbox/additions/VBoxGuestAdditions.iso
+# Download "Oracle VM VirtualBox Extension Pack" from https://www.virtualbox.org/wiki/Downloads and instal from File/Preferences/Extensions
 # After install windows on virtualbox, create a optical drive from /usr/lib/virtualbox/additions/VBoxGuestAdditions.iso
 # So install the software to update display resolution.
+
 
 # printf "\nInstalling freecad..."
 # sudo pacman -S freecad --noconfirm
