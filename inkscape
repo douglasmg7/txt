@@ -18,3 +18,15 @@ ctrl + shift + r
 
 # Select by line
 alt + move mouse
+
+# Temporary zoom
+q
+
+# Rotate canvas
+# First unlock rotation
+View > Orientation > Lock Rotation
+ctr + middle mouse button move
+ctr + shift + scroll mouse button
+
+# Select object under
+alt + left mouse click
