@@ -30,3 +30,9 @@ ctr + shift + scroll mouse button
 
 # Select object under
 alt + left mouse click
+
+# Show hiden objects
+with the mouse cursor above the stacked objects, alt + mouse scroll
+
+# Rotation using opposite corner as pivot point
+shift + lmb
