@@ -82,6 +82,12 @@ sudo ln -s ~/dotfiles/arduino.sh /etc/profile.d/arduino.sh
 printf "\nInstalling Wacom tablet dependencies..."
 sudo pacman -S xf86-input-wacom --noconfirm
 
+printf "\nInstalling inkscape..."
+sudo pacman -S inkscape python-lxml python-cssselect --noconfirm
+
+printf "\nInstalling gimp..."
+sudo pacman -S gimp --noconfirm
+
 printf "\nInstalling blender..."
 sudo pacman -S blender --noconfirm
 
