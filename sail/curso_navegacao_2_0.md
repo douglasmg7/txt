@@ -66,3 +66,8 @@ Apenas em Abril e Outubro
 Mestre dos mares
 Terravision
 https://www.em.com.br/app/noticia/cultura/2021/10/22/interna_cultura,1315944/caso-real-de-disputa-pela-invencao-do-google-earth-gera-serie-eletrizante.shtml
+
+## Preparação do veleiro
+Estação meteorológica de bordo tabajara
+Salvatagem e equipamentos de segurança
+Noções de sobrevivência no mar
