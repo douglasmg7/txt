@@ -1,0 +1,3 @@
+:PluginUpdate
+python install.py --clangd-completer --go-completer --rust-completer
+:GoInstallBinaries
