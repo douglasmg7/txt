@@ -31,6 +31,9 @@ ctr + shift + scroll mouse button
 # Select object under
 alt + left mouse click
 
+# Select object under (from a group)
+ctrl + alt + left mouse click
+
 # Show hiden objects
 with the mouse cursor above the stacked objects, alt + mouse scroll
 
