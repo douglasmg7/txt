@@ -30,6 +30,7 @@ go run hello.go
 
 # Run all files from package main.
 go run *
+go run .
 
 # Build (create a compiled file).
 go build

@@ -10,3 +10,33 @@
 # To run.
 :!go run %
 
+# Executes the main package using go run.
+:GoRun
+
+# Builds the current package using go build
+:GoBuild
+
+# Runs package tests using go test
+:GoTest
+
+# Toggles display of test coverage results
+:GoCoverageToggle 
+
+# Renames the identifier under the cursor in all .go files in the package
+:GoRename 
+
+# Displays which interfaces the identifier under the cursor implements
+:GoImplements 
+
+# Displays useful information about the identifier under the cursor, such as variable type or function signature
+:GoInfo 
+
+" Common Go commands
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage-toggle)
+au FileType go nmap <Leader>e <Plug>(go-rename)
+au FileType go nmap <Leader>s <Plug>(go-implements)
+au FileType go nmap <Leader>i <Plug>(go-info)
+
