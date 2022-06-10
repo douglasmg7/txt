@@ -122,3 +122,32 @@ AIS (Automatic Identification System) - Transponder - Sinal é enviado pelo VHF
 
 ### Radar
 Não é obrigatório
+
+### GPS
+Pelo menos um
+
+### Laterna
+Um aprova de água
+
+### Estojo de primeiros soccorros
+Necessário se houver mais de 15 pessoas a bordo
+
+### Quadros
+RIPEAM
+
+### Rádio VHF fixo
+Pelo menos um
+
+### Rádio HF
+Dispensável
+
+### Apito, sino ou buzina manual
+Tem que ter
+
+### Documentos
+Carteira de mestre amador
+TIE - Título de Inscrição da Embarcação
+Termo de responsabilidade para embarcações acima de 12m
+
+### Ecobatímetro
+Não é necessário
