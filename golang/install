@@ -35,6 +35,9 @@ go run .
 # Build (create a compiled file).
 go build
 
+# Build for specific os system.
+GOOS=windows go build filename.go
+
 # Run the compiled file.
 ./hello
 

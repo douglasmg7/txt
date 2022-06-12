@@ -151,3 +151,55 @@ Termo de responsabilidade para embarcações acima de 12m
 
 ### Ecobatímetro
 Não é necessário
+
+### Boia circular
+Classe II (para abandonar a embarcação)
+Embarcações abaixo de 12m, necessário uma
+Embarcações a partir de 12m, duas 
+Pelo menos uma com retinida flutuante (deve ficar livre, não preso ao barco)
+Todas com dispositivo de iluminação automático (facho holmes)
+
+### Bandeira
+Tem que ter uma na popa ou no mastro a bombordo
+Bandeira de cortesia no mastro a boreste, do país em que chegou, indicando que esta se sujeitando as normas daquele país (não necessário)
+Bandeira amarela de quarentenda no mastro a boreste (não necessário)
+
+### Água
+Água de serviço - água do tanque - não se bebe (pelo menose 200l) - 50l por pessal por dia
+Água mineral - para beber - usar de 500ml - 2l por pessoa por dia x 2 = 4l por pessoal por dia
+O que mais gasta água é para lavar louça - usar papel toalha na louça, antes de lavar
+Usar detergente na relação de 1:8, para facilitar o enxague
+Lavar com água do mar e o último enxague usar água doce
+Água da poita (marina) não é para beber, vem de cachoeira com muita areia.
+Não secar vazilha com água do mar com pano de prato, o pano não seca.
+Banho com borrifador para tirar á agua salgada.
+
+### Cambusa ou rancho
+Vapza - fabricante de alimentos no vacuo
+Gulozeimas - paçoca, chocolate, jujuba e etc...
+Sanduiche - pão de forma com mussarela
+Usar bow como prato
+
+### Combustível
+Disel é diferente, tem o ponto de fulgor maior
+Usar o Verana quando disponível - não cria borra - só acha em São Paulo e RJ
+Não pode misturar o verana com o disel marítimo
+Pode levar em galões no convés
+Embarcação de 30 pés costuma fazer 1l/hora a 5nós a 2000rpm
+
+### Ferramentas
+Cadeirinha para subir no mastro
+Alicate para cortar estaiamento ou esmerilhaderia a bateria
+Preventer ou boom braker para evitar o jybe
+Linha de vida em Y, mais seguro que o simples (deve ser fita, não cabo). 
+Usar linha de vida que passa pelo centro da embarcação em vez da de que passa pela borda falsa.
+Saber fazer terminais e esticadores norsemann
+
+
+### Estabilidade
+Abicada, trimada e derrabada
+Alquebramento
+Banda - Tende mais para um bordo do que outro
+
+### Rádio
+Chamar praticagem no chanal 13
