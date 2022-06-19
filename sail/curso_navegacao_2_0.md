@@ -202,4 +202,17 @@ Alquebramento
 Banda - Tende mais para um bordo do que outro
 
 ### Rádio
-Chamar praticagem no chanal 13
+Manter escuta permanente no canal 16
+Canal 68 é uma opção na região de Santos
+Chamar praticagem no canal 13
+Nunca usar o rádio sem a antena conectada
+Importante corrigir o ganho (skelt)
+Quanto mais alta a antena melhor o sinal
+Fixo tem alcance de até 16NM
+Movel tem alcance de até 3MN
+
+### Miscelania
+Pescador coloca rede entre 10 a 15NM da costa
+Até 20NM o efeito da corrente oceanica é pequena, talvez despresível.
+Os rios têm grande influência na corrente na navegação costeira.
+Geralmente utilizamos 5kt a velocidade no planejamento.
