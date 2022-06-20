@@ -1,0 +1,14 @@
+# Docker-compose
+
+# Install
+sudo pacman -Syu docker-compose
+
+# Start
+docker-compose up
+docker-compose up -d    # Start not attached
+
+# Stop
+docker-compose down
+docker-compose down -v  # Remove volumes
+
+
