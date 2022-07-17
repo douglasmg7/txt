@@ -9,3 +9,7 @@ e
 
 # Scale tool
 r
+
+# Move the camera to align with your current Scene
+Select the camera
+ctrl + shift + f
