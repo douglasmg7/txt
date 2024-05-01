@@ -4,8 +4,8 @@
 # # If flash sound not work.
 # # pacman -S libvdpau-va-gl
 
-printf "\nInstalling chromium..."
-sudo pacman -S chromium --noconfirm
+# printf "\nInstalling chromium..."
+# sudo pacman -S chromium --noconfirm
 
 printf "\nInstalling firefox..."
 sudo pacman -S firefox --noconfirm
@@ -69,38 +69,38 @@ sudo pacman -S unzip --noconfirm
 printf "\nInstalling mkfs.vfat..."
 sudo pacman -S dosfstools --noconfirm
 
-printf "Cloning simple-mtpfs, mtp (media transfer protocol) to connect to Android phone..."
-git clone https://aur.archlinux.org/simple-mtpfs ~/aur/simple-mtpfs
-cd ~/aur/simple-mtpfs
-printf "\nInstalling simple-mtpfs..."
-makepkg -si
+# printf "Cloning simple-mtpfs, mtp (media transfer protocol) to connect to Android phone..."
+# git clone https://aur.archlinux.org/simple-mtpfs ~/aur/simple-mtpfs
+# cd ~/aur/simple-mtpfs
+# printf "\nInstalling simple-mtpfs..."
+# makepkg -si
 
 # For joystick calibration.
 printf "\nInstalling joyutils..."
 sudo pacman -S joyutils --noconfirm
 
-printf "\nArduino ide and cli..."
-sudo pacman -S arduino arduino-cli --noconfirm
-printf "\nCreating symbolic link to jre configuration for arduino window correction."
-sudo ln -s ~/dotfiles/arduino.sh /etc/profile.d/arduino.sh
+# printf "\nArduino ide and cli..."
+# sudo pacman -S arduino arduino-cli --noconfirm
+# printf "\nCreating symbolic link to jre configuration for arduino window correction."
+# sudo ln -s ~/dotfiles/arduino.sh /etc/profile.d/arduino.sh
 
-printf "\nInstalling inkscape..."
-sudo pacman -S inkscape python-lxml python-cssselect --noconfirm
+# printf "\nInstalling inkscape..."
+# sudo pacman -S inkscape python-lxml python-cssselect --noconfirm
 
-printf "\nInstalling gimp..."
-sudo pacman -S gimp --noconfirm
+# printf "\nInstalling gimp..."
+# sudo pacman -S gimp --noconfirm
 
-printf "\nInstalling blender..."
-sudo pacman -S blender --noconfirm
+# printf "\nInstalling blender..."
+# sudo pacman -S blender --noconfirm
 
 printf "\nInstalling docker..."
 sudo pacman -S docker --noconfirm
 sudo usermod -aG docker douglasmg7
 
-printf "\nInstalling virtualbox, choose option 2=virtualbox-host-modules-arch"
-sudo pacman -S virtualbox 
-sudo pacman -S virtualbox-guest-utils
-sudo pacman -S virtualbox-guest-iso     # Will create /usr/lib/virtualbox/additions/VBoxGuestAdditions.iso
+# printf "\nInstalling virtualbox, choose option 2=virtualbox-host-modules-arch"
+# sudo pacman -S virtualbox 
+# sudo pacman -S virtualbox-guest-utils
+# sudo pacman -S virtualbox-guest-iso     # Will create /usr/lib/virtualbox/additions/VBoxGuestAdditions.iso
 # Download "Oracle VM VirtualBox Extension Pack" from https://www.virtualbox.org/wiki/Downloads and instal from File/Preferences/Extensions
 # After install windows on virtualbox, create a optical drive from /usr/lib/virtualbox/additions/VBoxGuestAdditions.iso
 # So install the software to update display resolution.
@@ -109,8 +109,8 @@ sudo pacman -S virtualbox-guest-iso     # Will create /usr/lib/virtualbox/additi
 # printf "\nInstalling freecad..."
 # sudo pacman -S freecad --noconfirm
 
-printf "\nInstalling rawtherapee..."
-sudo pacman -S rawtherapee --noconfirm
+# printf "\nInstalling rawtherapee..."
+# sudo pacman -S rawtherapee --noconfirm
 
 echo "ManuallyInstall freecad from realthunder"
 # echo "Download FreeCAD-asm3-Stable-Conda-Py3-Qt5-20210717-glibc2.12-x86_64.AppImage from https://github.com/realthunder/FreeCAD_assembly3/releases"
