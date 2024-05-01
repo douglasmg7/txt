@@ -76,7 +76,7 @@ $ fdisk -l
 
 $ cfdisk /dev/nvme0n1
 # Create partitions.
-#  512M EFI System - efi/boot
+#  1G EFI System - efi/boot
 #  32G Linux swap  - swap
 # 700G Linux filesystem - root
 # Remember to write.
@@ -84,6 +84,8 @@ $ cfdisk /dev/nvme0n1
 # Format.
 mkfs.ext4 /dev/nvme0n1pX    # filesystem
 mkswap /dev/nvme0n1pX       # swap
+mkfs.fat -F 32 /dev/nvme0n1pX # efi/boot
+
 swapon /dev/nvme0n1pX       # swap
 
 # Mount system.
@@ -129,9 +131,13 @@ FONT=ter-220n.psf.gz
 FONT_MAP=8859-2
 # The Terminus font files are located in /usr/share/kbd/consolefonts/
 # To test: $ setfont -v ter-218n.psf.gz
+# To change now: setfont ter-218n.psf.gz
+
+# Set font until link do dotfiles.
+setfont ter-124b
 
 # Change or create /etc/hostname
-sonic
+ionic
 
 # Edit hosts if necessafy /etc/hosts
 127.0.0.1       localhost
@@ -141,7 +147,7 @@ sonic
 # Install netctl using the default=1.
 $ sudo pacman -Sy netctl
 # Install optional dependencies.
-$ sudo pacman -Sy dialog dhcpcd wpa_supplicant ifplugd
+$ sudo pacman -Sy dialog dhcpcd wpa_supplicant 
 
 # Create a new user.
 # -m create home directory
@@ -209,6 +215,7 @@ $ netctl start nimbus
 $ netctl enable nimbus
 
 # Enable wired network.
+$ sudo pacman -Sy ifplugd
 # Find device.
 ip link
 # ex: enp5s0
@@ -254,6 +261,28 @@ $ make install
 
 # Import gpg.
 $ gpg --import douglasmg7-secret-gpg.key
+
+# If error no resolving address, expample: ping google.com
+systemctl start systemd-resolved.service
+systemctl enable systemd-resolved.service
+
+# To remove some "possible missing firmware for module".
+# For bfa, qla1280, qed and qla2xxx:
+$ cd ~/aur
+$ git clone https://aur.archlinux.org/linux-firmware-qlogic.git
+$ cd linux-firmware-qlogic
+$ makepkg -si
+# For ast:
+$ cd ~/aur
+$ git clone https://aur.archlinux.org/ast-firmware.git
+$ cd ast-firmware
+$ makepkg -si
+
+# If timed out waiting for device /dev/disk/by-uuid
+# Check current load disks:
+lsblk -f
+# Check if fstab is equal:
+sudo vim /etc/fstab
 
 # Run script to continue installation.
 ~/txt/linux/archlinux/asus/20-install.sh
