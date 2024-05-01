@@ -14,7 +14,8 @@ vim +GoInstallBinaries +q   # Needed by vim-go plugin.
 # Compile YouCompleteMe components.
 printf "\nCompiling YCM components...\n"
 cd ~/.vim/bundle/youcompleteme
-python3 install.py --go-completer --ts-completer
+# python3 install.py --go-completer --ts-completer
+python3 install.py --go-completer --rust-completer --ts-completer --clang-completer
 
 printf "\nInstalling neovim...\n"
 sudo pacman -S neovim --noconfirm
