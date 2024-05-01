@@ -127,7 +127,7 @@ $ pacman -S terminus-font
 # Create or change the file "/etc/vconsole.conf" to set font and retain keyboard configuration.
 KEYMAP=br-abnt2
 # FONT=ter-216n.psf.gz
-FONT=ter-220n.psf.gz
+FONT=ter-122n.psf.gz
 FONT_MAP=8859-2
 # The Terminus font files are located in /usr/share/kbd/consolefonts/
 # To test: $ setfont -v ter-218n.psf.gz
@@ -137,12 +137,12 @@ FONT_MAP=8859-2
 setfont ter-124b
 
 # Change or create /etc/hostname
-ionic
+citrus
 
 # Edit hosts if necessafy /etc/hosts
 127.0.0.1       localhost
 ::1             localhost
-127.0.1.1       sonic.localdomain   sonic 
+127.0.1.1       citrus.localdomain   citrus 
 
 # Install netctl using the default=1.
 $ sudo pacman -Sy netctl

@@ -1,32 +1,32 @@
+# Print a table of glyphs or letters of a font.
 showconsolefont
-  Print a table of glyphs or letters of a font.
 
+# Available console fonts
 /usr/share/kbd/consolefonts/
-  Available console fonts
 
+# Available translations
 /usr/share/kbd/consoletrans/
-  Available translations
 
+# Font files
 /usr/share/fonts/
-  Font files
 
+# Temporary set a font for console.
 setfont font_file -m font_translation
-  Temporary set a font for console.
 
+# Temporary set a font for console.
 setfont cp866-8x16 -m 8859-2
-  Temporary set a font for console.
 
+# Return to original font configuration for console.
 setfont
-  Return to original font configuration for console.
 
+#  Find which font it is representing the alias.
 fc-match monospace
-  Find which font it is representing the alias.
 
+#  Find which font it is representing the alias with more info.
 fc-match -v monospace
-  Find which font it is representing the alias with more info.
 
+# List all installed fonts.
 fc-list
-  List all installed fonts.
 
+# Update font list from installed fonts.
 fc-cache
-  Update font list from installed fonts.

@@ -7,3 +7,10 @@ sha256sum -c filename
 
 # Without create a file for checksum.
 echo "1ea2f885b4dbc3098662845560bc64271eb17085387a70c2ba3f29fff6f8d52f Miniconda3-latest-Linux-x86_64.sh" | sha256sum -c
+
+# Other way.
+MY_SHA256=e147f0392686c40cfd7d5e6f332c6ee74c4eab4d24e2694b3b0a0c037bf51dc5
+sha256sum some_binary | sha256sum --check ${MY_SHA256}
+
+# Other way.
+echo "$(cat archive.tar.gz.sha256) archive.tar.gz" | sha256sum --check --status
