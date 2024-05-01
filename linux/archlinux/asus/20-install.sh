@@ -78,3 +78,4 @@ ln -s ~/dotfiles/bashrc_asus ~/.bashrc
 ln -s ~/dotfiles/eslintrc.json ~/.eslintrc.json
 ln -s ~/dotfiles/jshintrc ~/.jshintrc
 ln -s ~/dotfiles/zshrc ~/.zshrc
+sudo ln -s ~/dotfiles/golang.sh /etc/profile.d/golang.sh
