@@ -1,23 +1,24 @@
+# Start X using ~/.xinitrc.
 startx
-  Start X using ~/.xinitrc.
 
+# Quit X.
+Ctrl + Alt + 2  # To change to other terminal.
 pkill -15 Xorg
-  Quit X.
 
+# Start X using dwm windows manager without load .xinitrc.
 startx /usr/bin/dwm
-  Start X using dwm windows manager without load .xinitrc.
 
+# Start X with one specific application.
 startx /usr/bin/firefox
-  Start X with one specific application.
 
+# Load a resource file, replacing any current settings.
 xrdb ~/Xrescources
-  Load a resource file, replacing any current settings.
 
+# Load a resource and merge with the current settings.
 xrdb -merge ~/Xresources
-  Load a resource and merge with the current settings.
 
+# See the current loaded resources.
 xrdb -query all
-  See the current loaded resources.
 
+# Set the name of the root window.
 xsetroot -name "asdfasdf"
-  Set the name of the root window.
