@@ -1,2 +1,31 @@
+https://rust-lang.github.io/rustup/index.html
+
 # Update rust tools (compile and etc...).
 rustup update
+
+# List toolchains
+rustup toolchain list
+
+# Install specific version
+rustup toolchain install <version>
+
+# Set default version
+rustup default <version>
+
+# Uninstall a toolchain
+rustup toolchain uninstall <version>
+
+# Add target for cross-compilation
+rustup target add <target>
+
+# List installed components
+rustup component list
+
+# Add a component
+rustup component add <component>
+
+# Remove a component
+rustup component remove <component>
+
+#Check which rustc binary is currently in use
+rustup which rustc

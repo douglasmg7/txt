@@ -51,3 +51,10 @@ $ cargo install binary_name
 
 # List custom commands.
 $ cargo --list
+
+# Install a dependency, must be runned into project directory.
+cargo add <crate name>
+cargo add <crate name> --features full
+
+# Format rust files.
+cargo fmt
