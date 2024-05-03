@@ -122,3 +122,8 @@ echo "ManuallyInstall miniconda from downloaded script"
 # https://docs.conda.io/en/latest/miniconda.html
 # Conda configuration to not start activated.
 # conda config --set auto_activate_base false
+
+$ cd ~/aur
+$ git clone https://aur.archlinux.org/packages/visual-studio-code-bin
+$ cd visual-studio-code-bin
+$ makepkg -si
