@@ -1,0 +1,11 @@
+# From whihc image.
+FROM node
+
+# Which dir to be used on the image.
+WORKDIR /app
+
+# Copy from local file to image file.
+COPY . /app
+
+# Run in the image creation.
+RUN npm install
