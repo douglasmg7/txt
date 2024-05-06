@@ -265,6 +265,9 @@ $ gpg --import douglasmg7-secret-gpg.key
 # If error no resolving address, expample: ping google.com
 systemctl start systemd-resolved.service
 systemctl enable systemd-resolved.service
+# If error installing golang gopls
+cd /etc
+ln -sf ../run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 
 # To remove some "possible missing firmware for module".
 # For bfa, qla1280, qed and qla2xxx:
