@@ -40,28 +40,29 @@ docker run -p 3000:3000 334837ba6abd
 
 # Stop the container.
 docker ps   # To find out the container name.
-docker stop $ID
+docker stop <container_id>
 # Start container:
-docker start $ID
+docker start <container_id>
 # Start container in attach mode:
 # -a, --attach list                    Attach to STDIN, STDOUT or STDERR
-docker start -a $ID
+docker start -a <container_id>
 # Start container in iterate and attach mode:
-docker start -ia $ID
+docker start -ia <container_id>
 # Show logs:
-docker logs $CONTAINER
-docker logs -f $CONTAINER
+docker logs <container_id>
+docker logs -f <container_id>
 
 # Create a contianer from a pre-build image.
 docker run node
 
 # Create a container from a image id, publish a port -p external:internal.
 docker run -p 3000:80 334837ba6abd
-# Deatached mode and remove container when stopped:
+# Deatached mode and remove container when stopped
 # -d, --detach                         Run container in background and print container ID
+# --rm remove container when stopped, what is good if you only stop the container to build the image again.
 docker run -p 3000:80 -d --rm 334837ba6abd
 # Attach to a container:
-docker attach $ID
+docker attach <container_id>
 
 # List all running containers:
 docker ps
@@ -70,7 +71,7 @@ docker ps
 docker ps -a
 
 # Remove container
-docker rm $ID $ID2 $ID3
+docker rm <container_id1> <container_id2> <container_id3>
 # Remove all stopped containers at once:
 docker container purne
 
@@ -79,22 +80,23 @@ docker images
 docker images -a
 
 # Remove image:
-docker rmi $ID
-# Remove all images:
+docker rmi <image_id>
+# Remove all images not in use:
 docker image prune
 docker image prune -a   # Include tagged images.
 # Inspect a image:
-docker image inspect $ID
+docker image inspect <image_id>
 
 # Copy files to a container:
-docker cp dummy/. $ID:/text
+docker cp dummy/. <container_id>:/text
 # Copy files from a container:
-docker cp $ID:/text .
+docker cp <container_id>:/text .
 
-# Naming container:
-docker run -p 3000:80 --name container_name 334837ba6abd
+# Create a container using a name:tag image and give a container name.
+docker run -p 3000:80 --name <container_name> <image_name>:<image_tag>
 
-# Tag image:
+# Create a container with a name and tag:
+docker build -t <name>:<tag> .
 docker build -t goals:latest .
 # Re-tag a image (create a clone image):
 docker tag node-demo douglasmg7/node-hello-world
@@ -167,3 +169,9 @@ docker run --name mongodb --rm -d -p 27017:27017 mongo:3.6.3
 
 # Access container
 docker exec -it 6d4 bash
+
+# Command help:
+docker ps --help
+
+# Attach to a runing container:
+docker attach <container_id>
