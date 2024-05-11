@@ -1,4 +1,4 @@
-# Init.
+# Create a new module.
 cd new_repo
 go mod init github.com/my/new_repo
 go mod init example/hello
@@ -29,3 +29,5 @@ go get github.com/douglasmg7/aldoutil@e180939
 # Point to a version.
 go get github.com/douglasmg7/aldoutil@v1.1.0
 
+# Run a module:
+go run .
