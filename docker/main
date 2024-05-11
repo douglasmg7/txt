@@ -32,7 +32,7 @@ ARG DEFAULT_PORT=80
 ENV PORT $DEFAULT_PORT
 docker build -t feedback-node:dev --build-arg DEFAULT_PORT=8000
 
-# Create a new image using the Dockerfile file.
+# Create a image using the Dockerfile file.
 docker build .  # Will give a id to use with docker run.
 
 # Create a new container by image id, publish a port -p external:internal.
@@ -81,7 +81,7 @@ docker images -a
 
 # Remove image:
 docker rmi <image_id>
-# Remove all images not in use:
+# Remove all images not in use (that not have containers):
 docker image prune
 docker image prune -a   # Include tagged images.
 # Inspect a image:
@@ -95,17 +95,23 @@ docker cp <container_id>:/text .
 # Create a container using a name:tag image and give a container name.
 docker run -p 3000:80 --name <container_name> <image_name>:<image_tag>
 
-# Create a container with a name and tag:
+# Create a image with a name and tag:
 docker build -t <name>:<tag> .
 docker build -t goals:latest .
-# Re-tag a image (create a clone image):
-docker tag node-demo douglasmg7/node-hello-world
+# Re-tag a image (create a clone image with the new name:tag):
+docker tag <old_name>:<old_tag> douglasmg7/node-hello-world
 
-# Push and pull to docker:
+# Push to docker:
 docker login
-docker push douglasmg/node-hello-world
-docker logout
+docker build -t douglasmg7/node-hello-world:latest .    # Create a image with the same tag that will be pushed.
+docker tag <old_name>:<old_tag> douglasmg7/node-hello-world:latest    # Or rename a existing image.
+docker push douglasmg7/node-hello-world
+docker logout   # Not necessary, can stay logged.
+
+# Pull from docker, if already in the system make a update if necessary:
 docker pull douglasmg7/node-hello-world:latest
+# Make the pull automatically if not already in the system, do not do update:
+docker run douglasmg7/node-hello-world:latest
 
 # Auto pull:
 docker run douglasmg7/node-hello-world:latest
