@@ -15,7 +15,7 @@ sudo systemctl start docker.service
 # Create a new container from a image and go in interactive mode.
 # -i, --interactive                    Keep STDIN open even if not attached
 # -t, --tty     Allocate a pseudo-TTY
-docker run -it node
+docker run -it <image_name>
 
 # Run commands on image (Dockerfile):
 RUN
@@ -36,6 +36,7 @@ docker build -t feedback-node:dev --build-arg DEFAULT_PORT=8000
 docker build .  # Will give a id to use with docker run.
 
 # Create a new container by image id, publish a port -p external:internal.
+docker run -p 3000:3000 <image_id>
 docker run -p 3000:3000 334837ba6abd
 
 # Stop the container.
@@ -53,14 +54,15 @@ docker logs <container_id>
 docker logs -f <container_id>
 
 # Create a contianer from a pre-build image.
+docker run <image_name>
 docker run node
 
 # Create a container from a image id, publish a port -p external:internal.
-docker run -p 3000:80 334837ba6abd
+docker run -p 3000:80 <image_id>
 # Deatached mode and remove container when stopped
 # -d, --detach                         Run container in background and print container ID
 # --rm remove container when stopped, what is good if you only stop the container to build the image again.
-docker run -p 3000:80 -d --rm 334837ba6abd
+docker run -p 3000:80 -d --rm <image_id>
 # Attach to a container:
 docker attach <container_id>
 
