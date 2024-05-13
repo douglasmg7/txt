@@ -9,3 +9,9 @@ COPY . /app
 
 # Run in the image creation.
 RUN npm install
+
+# Create a anonymous volume, not persist when countainer is shutdown:
+VOLUME [ "/app/feedback", ""]
+
+# Named volume, persist when countainer is shutdown.
+# Must be create when we run a container.

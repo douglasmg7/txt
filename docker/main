@@ -118,11 +118,11 @@ docker run douglasmg7/node-hello-world:latest
 # Auto pull:
 docker run douglasmg7/node-hello-world:latest
 
-# Volumes
+# Volumes are folders in the host machine hard drive which are mounted into containers.
 docker volume ls                # List volumes
-docker volume rm $VOL_NAME      # Remove one or more volumes
+docker volume rm <voume_anme>   # Remove one or more volumes
 docker volume prune             # Remove all unused local volumes
-docker volume inspect $VOL_NAME     # Inspect volume
+docker volume inspect <volume_name>     # Inspect volume
 
 # Create anonymous volume (Survives container stop/start, removed when container is removed. Used for logs):
 # Tied to specific container
@@ -138,7 +138,8 @@ docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback -v "
 # Using ro read only to avoid container change the source code (sub sequent volumes overwrite the read only from app sub folder defined):
 docker run -d -p 3000:80 --rm --name feedback-app -v "$(pwd):/app:ro" -v feedback:/app/feedback -v /app/temp feedback-node:volumes
 
-# Using anonymous volume to keep directory from image (node_modules):
+# Using anonymous volume to keep directory from image (node_modules).
+# Docker keep the more specific path in the case of crash beteween volumes, they will coexist:
 docker run -d -p 3000:80 --rm --name feedback-app -v /app/node_modules -v feedback:/app/feedback -v "$(pwd):/app" feedback-node:volumes
 
 # Set env when run a container:
