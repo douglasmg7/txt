@@ -7,6 +7,9 @@
 # Unload a buffer.
 :bd
 
+# Next buffer.
+:bp 
+
 # Previous buffer.
 :bp 
 
