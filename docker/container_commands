@@ -1,5 +1,7 @@
+# Runtime commands.
+
 # Expose a port comunication.
 EXPOSE 80
 
 # Run some commands.
-CMD [!"node", "server.js"]
+CMD ["node", "server.js"]

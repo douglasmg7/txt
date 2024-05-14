@@ -17,21 +17,6 @@ sudo systemctl start docker.service
 # -t, --tty     Allocate a pseudo-TTY
 docker run -it <image_name>
 
-# Run commands on image (Dockerfile):
-RUN
-
-# Run commands on docker (Dockerfile):
-['node', 'server.js']
-
-# Define env variable (Dockerfile):
-ENV PORT 80
-EXPOSE $PORT
-
-# Define args, can be used only into build command (Dockerfile):
-ARG DEFAULT_PORT=80
-ENV PORT $DEFAULT_PORT
-docker build -t feedback-node:dev --build-arg DEFAULT_PORT=8000
-
 # Create a image using the Dockerfile file.
 docker build .  # Will give a id to use with docker run.
 
@@ -124,12 +109,12 @@ docker volume rm <voume_anme>   # Remove one or more volumes
 docker volume prune             # Remove all unused local volumes
 docker volume inspect <volume_name>     # Inspect volume
 
-# Create anonymous volume (Survives container stop/start, removed when container is removed. Used for logs):
+# Create anonymous volume (Survives container stop/start, removed when container is removed. Used for logs).
 # Tied to specific container
 docker run -d -p 3000:80 --rm --name feedback-app -v /app/feedback feedback-node:volumes
 
-# Create named volume (survives container rm, can be shared across containers):
-# Not tied to specific container
+# Create named volume (survives container rm, can be shared across containers).
+# Not tied to specific container.
 docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback feedback-node:volumes
 
 # Create Bind mount (use of absolute path /):
