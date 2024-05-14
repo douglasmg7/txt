@@ -1,5 +1,8 @@
 # Docker-compose
 
+# Use a yaml file:
+docker-compose.yaml
+
 # Install
 sudo pacman -Syu docker-compose
 
