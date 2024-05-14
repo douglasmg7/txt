@@ -117,6 +117,8 @@ Gn - end file
 :2bd - delete o buffer 2
 :bd txt <tab> - show buffers that match the txt
 <C-6> - trogglo between two buffers
+gn - next buffer
+gp - previous buffer
 
 :r file - insert the file below the cursor
 :r !cmd - execute cmd and insert its standard output below the cursor
