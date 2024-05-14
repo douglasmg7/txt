@@ -3,6 +3,9 @@
 printf "\nInsalling cmake...\n"   # Needed by YouCompleteMe vim plugin.
 sudo pacman -S cmake --noconfirm
 
+printf "\nInsalling ctags...\n"   # Needed by tagbar vim plugin.
+sudo pacman -S ctags --noconfirm
+
 printf "\nInstalling vim...\n"
 sudo pacman -S vim --noconfirm
 printf "\nSetting vim configuration...\n"
