@@ -4,7 +4,7 @@
 docker-compose.yaml
 
 # Install
-sudo pacman -Syu docker-compose
+sudo pacman -S docker-compose
 
 # Start
 docker-compose up
