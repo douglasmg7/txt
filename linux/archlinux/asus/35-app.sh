@@ -93,8 +93,8 @@ sudo pacman -S joyutils --noconfirm
 # printf "\nInstalling blender..."
 # sudo pacman -S blender --noconfirm
 
-printf "\nInstalling docker..."
-sudo pacman -S docker --noconfirm
+printf "\nInstalling docker and docker-compose..."
+sudo pacman -S docker docker-compose --noconfirm
 sudo usermod -aG docker douglasmg7
 
 # printf "\nInstalling virtualbox, choose option 2=virtualbox-host-modules-arch"
