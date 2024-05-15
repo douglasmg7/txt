@@ -136,7 +136,7 @@ docker run -d -p 3000:80 --rm --name feedback-app -v /app/node_modules -v feedba
 # .env
 PORT=8000
 
-# Mongodb localhost:
+# Mongodb localhost is changed to host.docker.internal:
 'mongodb://host.docker.internal:27017/database_name'
 # Mongodb dockerized:
 docker run -d --name mongodb mongo:3.6.3
@@ -156,7 +156,9 @@ docker run --name mongodb -v data:/data/db --rm -d -e MONGO_INITDB_ROOT_USERNAME
 
 # Network:
 docker network create my_network        # Create network
-docker run -d --name mongodb --network my_network mongo     # Using the network
+# Change mongodb connection to mongodb container name:
+'http://mongodb:27017/database_name'
+docker run -d --name mongodb --network my_network mongo     # Using the network, do not need a port to communicate.
 
 # Mongodb:
 docker run --name mongodb --rm -d -p 27017:27017 mongo:3.6.3
