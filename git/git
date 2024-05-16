@@ -5,9 +5,6 @@ $ git help config
 $ git init
 # Initiate git repository.
 
-git log --oneline
-show each commit in oneline
-
 git add *.txt
 add all txt included in directory
 
@@ -181,13 +178,6 @@ create a new commit discarting the changes from the last command
 make the last commit equal one before
 undo this commit rather than restore this version
 
-git log --graph --full-history --all --color \
-        --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"
-git log --graph --full-history --all --pretty=format:"%h%x09%d%x20%s"
-git log --oneline --decorate --all --graph
-git log --graph --oneline --all
-show history tree
-
 git config --global alias.tree "log --oneline --decorate --all --graph"
 create alias
 git tree
@@ -209,34 +199,6 @@ we can choose a specific commit to rebase
 
 git config --global color.ui true
 make log color
-
-git log --pretty=oneline
-show log in one line
-
-git log --pretty=format:"%h %ad- %s [%an]"
-$ad - author date
-$an - author name
-%h  - sha hash
-$s  - subject
-$d  - ref names
-
-git log --oneline -p
-git log --patch
-git log -p
-show line changes - p for patch
-
-git log --oneline --stat
-show stats for each commit
-
-git log --oneline --graph
-visual representation of the branch merging into master
-
-git log --until=1.minute.ago
-git log --since=1.day.ago
-git log --since=1.hour.ago
-git log --since=1.month.ago --until=2.weeks.ago
-git log --since=2000-01-01 --until=2012-12-21
-show log by date ranges
 
 .git/info/exclude
 experiments/
