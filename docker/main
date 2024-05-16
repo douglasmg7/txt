@@ -164,7 +164,14 @@ docker run -d --name mongodb --network my_network mongo     # Using the network,
 docker run --name mongodb --rm -d -p 27017:27017 mongo:3.6.3
 
 # Access container
+docker run -it -d node
+docker exec -it <container_name> npm init
+
+# Access container
 docker exec -it 6d4 bash
+
+# Overwrite inicital container command:
+docker run -it node npm init
 
 # Command help:
 docker ps --help

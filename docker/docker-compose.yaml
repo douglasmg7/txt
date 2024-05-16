@@ -1,6 +1,7 @@
 version: '3.8'
 services:
   mongodb:
+    container_name: mongodb
     image: "mongodb"
     volumes:
       - data:/data/db
@@ -14,8 +15,33 @@ services:
     networks:
       - my_network
   backend:
+    container_name: backend
+    build: ./backend
+    # build:
+      # context: ./backend
+      # dockerfile: Dockerfile
+      # args:
+        # some-arg: 1
+    ports: 
+      - "80:80"
+    volumes:
+      - logs:/app/logs
+      - ./backend:/app
+      - /app/node_modules
+    depends_on:
+      - mongodb
   frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend/src:/app/src
+    stdin_open: true  # -i
+    tty: true # -t
+    depends_on:
+      - backend
 
   volumes:
     # Do not need specify anonymous volumes and bind volumes.
     data:
+    logs:

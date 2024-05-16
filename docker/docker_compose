@@ -9,9 +9,13 @@ sudo pacman -S docker-compose
 # Start
 docker-compose up
 docker-compose up -d    # Start not attached
+docker-compose up --build   # Rebuild images 
 
 # Stop
 docker-compose down
 docker-compose down -v  # Remove volumes
+
+# Build images, not run the containers
+docker-compose buid
 
 
