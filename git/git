@@ -78,9 +78,10 @@ undo last 2 commit and all changes
 git clean -f
 clean added files
 
+# Add to the last commit and update the message.
+# Dont't amend after you push your commit.
 git add todo.txt
 git commit --amend -m "Modify readme & add todo.txt."
-add to the last commit and update the message
 
 git remote add origin https://github.com/try-git/try_git.git
 create a remote repository with the name origin
