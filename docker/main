@@ -167,6 +167,14 @@ docker run --name mongodb --rm -d -p 27017:27017 mongo:3.6.3
 docker run -it -d node
 docker exec -it <container_name> npm init
 
+# Docker utility, passing a command. 
+# Dockerfile:
+FROM node:14-apline
+WORKDIR /app
+docker build .
+docker run -it -v <path_to_host_machine>:/app <container_name> <command>
+docker run -it -v <path_to_host_machine>:/app <container_name> npm init
+
 # Access container
 docker exec -it 6d4 bash
 
