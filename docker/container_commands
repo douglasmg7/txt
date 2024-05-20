@@ -4,4 +4,9 @@
 EXPOSE 80
 
 # Run some commands.
+# Commands added in the command line will overwrite the CMD.
 CMD ["node", "server.js"]
+
+# Run some commands.
+# Commands added in the command line will be appended to ENTRYPOINT.
+ENTRYPOINT ["npm"]
