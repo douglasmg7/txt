@@ -18,4 +18,7 @@ docker-compose down -v  # Remove volumes
 # Build images, not run the containers
 docker-compose buid
 
+# Start a specific server with a command to run after ENTRYPOINT.
+# Usefull for utility container.
+docker-compose up run --rm <service_name> <command_to_run>
 
