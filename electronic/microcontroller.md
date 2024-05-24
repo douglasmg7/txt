@@ -2,6 +2,40 @@
 Is a small computer on a single metal-oxide-semiconductor (MOS) integrated circuit (IC) chip.
 A microcontroller contais one or more CPUs along with memory and programmable input/output periphericals.
 
+## CMOS
+Complementary metal–oxide–semiconductor (CMOS, pronounced "sea-moss", /siːmɑːs/, /-ɒs/) is a type of metal–oxide–semiconductor field-effect transistor (MOSFET) fabrication process that uses complementary and symmetrical pairs of p-type and n-type MOSFETs for logic functions.[1] CMOS technology is used for constructing integrated circuit (IC) chips, including microprocessors, microcontrollers, memory chips (including CMOS BIOS), and other digital logic circuits. CMOS technology is also used for analog circuits such as image sensors (CMOS sensors), data converters, RF circuits (RF CMOS), and highly integrated transceivers for many types of communication.
+
+Two important characteristics of CMOS devices are high noise immunity and low static power consumption.[3] Since one transistor of the MOSFET pair is always off, the series combination draws significant power only momentarily during switching between on and off states. Consequently, CMOS devices do not produce as much waste heat as other forms of logic, like NMOS logic or transistor–transistor logic (TTL), which normally have some standing current even when not changing state. These characteristics allow CMOS to integrate a high density of logic functions on a chip. It was primarily for this reason that CMOS became the most widely used technology to be implemented in VLSI chips.
+
+## AVR
+AVR is a family of microcontrollers developed since 1996 by Atmel, acquired by Microchip Technology in 2016. These are modified Harvard architecture 8-bit RISC single-chip microcontrollers. AVR was one of the first microcontroller families to use on-chip flash memory for program storage, as opposed to one-time programmable ROM, EPROM, or EEPROM used by other microcontrollers at the time.
+
+AVR stands for Alf and Vegard's RISC processor.
+
+## ATmega328/328P
+ATmega328/328P is an Advanced Virtual RISC (AVR) microcontroller. It supports 8-bit data processing. ATmega-328/328P has 32KB internal flash memory. ATmega328/328P has 1KB Electrically Erasable Programmable Read-Only Memory (EEPROM). This property shows if the electric supply supplied to the micro-controller is removed, even then it can store the data and can provide results after providing it with the electric supply. Moreover, ATmega-328 has 2KB Static Random Access Memory (SRAM). ATmega328/328P is a 28-Pin AVR Microcontroller, manufactured by Microchip, follows RISC Architecture and has a flash-type program memory of 32KB.
+
+## PDIP Package
+The IC have wafer format.
+
+## TQFP/MLF Package
+The IC have a square format.
+
+## RISC
+Reduced Instruction Set Computation
+
+## Power supply pins
+Vcc, GND and AVcc.
+ATmega32 need a +5V.
+AVcc stands for analog voltage.
+
+## XTAL1, XTAL2
+Used to connect a external cristal oscilator for use a different frequence that IC alredy have.
+
+## RESET with a bar over
+Reset MCU (active low)
+
+
 ## ATmega168
 16k Flash memory.
 8 bits.
