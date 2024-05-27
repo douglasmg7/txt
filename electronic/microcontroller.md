@@ -35,6 +35,73 @@ Used to connect a external cristal oscilator for use a different frequence that 
 ## RESET with a bar over
 Reset MCU (active low)
 
+## AREF
+Analogic reference
+
+## PA0-PA7, PB0-PB7, PC0-PC7 and PD0-PD7
+4 ports, A, B, C and D with 8 pins each.
+GPIO pins.
+
+## ADC0-ADC7 (PA0-PA7)
+Analogic-Digital converter.
+
+## JTAG interface (PC2-PC5)
+TDI - Text Data Input
+TDO - Text Data Output
+TMS - Text Morse Select
+TCK - Text Clocl
+
+## SPI Protocol (PB4-PB7)
+Serial Peripherical Interface.
+Most popular serial comunication protocol.
+SS - Slave Select
+MOSI - Master Out Slave In
+MISO - Master In Slave Out
+SCK - Serial Clock
+
+## I2C Protocol (PC0-PC1)
+I To C protocol.
+Very popular serial protocol.
+SCL - Serial Clock
+SDA - Serial Data
+
+## UART - (PD0-PD1)
+Serial comunication.
+RXD - Receive Data
+TXD - Transmition Data
+
+## OCO (PD4, PD5 and PD7)
+Output Compare
+OC1A
+OC1B
+OC2
+
+## ICP (PD6)
+1/P Capture Pin
+
+## Analog Ins (PB2 and PB3)
+Used by analog comparato
+AIN0
+AIN1
+
+## External Interrupt Pins (PD2, PD3 and PB2)
+Used by external GPIO
+INT0
+INT1
+INT2
+
+## (PB0 and PB1)
+Used for giving pulses for counting when timer operates as counter.
+Operate the timer as a counter.
+T0
+T1
+
+## Timer Oscilator (PC6 ad PC7)
+External Oscilators for timer operation.
+TOSC1
+TOSC2
+
+
 
 ## ATmega168
 16k Flash memory.
