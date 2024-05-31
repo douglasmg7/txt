@@ -1,100 +1,96 @@
+# Install server
 apt-get install mysql-server
-	install server
 
+# Install client
 apt-get install mysql-client
-	install client
 
-root
-saladino
-
+# change password
 set password for root@localhost = password('saladino');
-	change password
 
+# Systemctl commands.
 service mysql status
 service mysql stop
 service mysql start
 service mysql restart
 
+# Connect to db, no space between -p and password
 mysql -u root -psaladino -h localhost database
-	no space between -p and password
 
+# Some commands.k
 select version();
 select current_date;
 select version(), current_date;
 select now();
 select user();
-
-\c
-	cancel a query
-	select * from\c
-
 quit
 
+# List databases.
 show databases;
 
+# Create a new database.
 create database test;
 
+# Use a specific database.
 use test;
 
+# Show database in use.
 select database();
-	see database in use
 
+# List existing tables.
 show tables;
 
+# Grant access.
 GRANT ALL ON menagerie.* TO 'your_mysql_name'@'your_client_host';
 
+# Show structure of a table.
 describe table_a
 desc table_a
-	show structure of a table
 
-
-
+# Show field by line.
 select * from table_name\G
-	show field by line
 
+# Show like less.
 pager less
-	show like less
 
+# Show like less, no tabular distorsion.
 pager less -SFX
-	show like less, no tabular distorsion
 
+# Process output by a script (ex: grep t).
 pager script_name
-	process output by a script (ex: grep t)
 
+# Disable page.
 nopager
-	disable page
 
+# Show status.
 status
-	show status
 
+# Open vi to edit command.
 edit
-	open vi to edit command
 
-using script
-	mysql < batch-file
-	mysql < batch-file > mysql.out
-	mysql < batch-file | more
-	mysql -h host -u user -p < batch-file
-	mysql> source file_name
-	mysql> \. file_name
+# Using script.
+mysql < batch-file
+mysql < batch-file > mysql.out
+mysql < batch-file | more
+mysql -h host -u user -p < batch-file
+mysql> source file_name
+mysql> \. file_name
 
-keep password out from batch
-	create file ~/.my.cnf
-		[client]
-		user=douglas
-		password=fox
-	chmod 600 ~/.my.cnf
-	mysql --defaults-file=/home/user_x/.my.cnf -h host_name data
+# Keep password out from batch
+create file ~/.my.cnf
+	[client]
+	user=douglas
+	password=fox
+chmod 600 ~/.my.cnf
+mysql --defaults-file=/home/user_x/.my.cnf -h host_name data
 
+# Tabular mode to get the interactive output format in batch mode.
+# -t --table
 mysql -t
-	-t --table
-	tabular mode
-	to get the interactive output format in batch mode
 
+# To echo to the output the statements that are executed in batch
 mysql -v
-	to echo to the output the statements that are executed in batch
 
+# Example:
 create table pet (name varchar(20), owner varchar(20), species varchar(20), sex char(1), birth date);
-
 select count(*) from produtos_vtabela where titulo like 'G%';
 	wildcard
