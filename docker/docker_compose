@@ -1,4 +1,6 @@
 # Docker-compose
+https://docs.docker.com/compose/gettingstarted/
+https://docs.docker.com/compose/compose-file/
 
 # Use a yaml file:
 docker-compose.yaml
