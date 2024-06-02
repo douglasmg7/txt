@@ -72,3 +72,6 @@ jupyter-notebook
 
 # Start jupyter lab.
 jupyter-lab
+
+# To make nvim works with conda activated.
+conda install conda-forge::neovim
