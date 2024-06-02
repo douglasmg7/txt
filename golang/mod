@@ -11,6 +11,7 @@ go get
 # Changes the required version of a dependency (or adds a new dependency).
 go get
 go get -u # Update to minor version.
+go get -u github.com/foo/bar@v2.0.0 # Update to a specific version.
 go get -u=patch # Update patch verion.
 
 # Print the current module's dependecies.
@@ -22,6 +23,7 @@ go list -m -u all
 # Cleans up unused dependencies.
 go tidy
 go mod tidy
+go get github.com/foo/bar@none  # Remove specific package.
 
 # Point to a branch. Find commit using git lg.
 go get github.com/douglasmg7/aldoutil@e180939
@@ -31,3 +33,9 @@ go get github.com/douglasmg7/aldoutil@v1.1.0
 
 # Run a module:
 go run .
+
+# Verify that the checksums of the downloaded packages on your machine match the entries in go.sum, so you can be confident that they haven’t been altered.
+go mod verify
+
+# Download all the dependencies for the project.
+go mod download
