@@ -93,4 +93,15 @@ mysql -v
 # Example:
 create table pet (name varchar(20), owner varchar(20), species varchar(20), sex char(1), birth date);
 select count(*) from produtos_vtabela where titulo like 'G%';
-	wildcard
+
+# Commands examples:
+select user, host from mysql.user;
+
+CREATE USER 'web'@'localhost';
+GRANT SELECT, INSERT, UPDATE, DELETE ON snippetbox.* TO 'web'@'localhost';
+ALTER USER 'web'@'localhost' IDENTIFIED BY 'pass';
+CREATE USER 'web'@'%' IDENTIFIED BY 'pass';
+
+# User host access.
+The pattern '%' means “any host” and is least specific.
+The empty string '' also means “any host” but sorts after '%'.
