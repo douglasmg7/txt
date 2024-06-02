@@ -19,6 +19,11 @@ docker run -it <image_name>
 
 # Create a image using the Dockerfile file.
 docker build .  # Will give a id to use with docker run.
+docker build -f <dockerfile_name> .
+docker build -t gg -f snippetbox.dockerfile .
+docker build -t <name>:<tag> .  # Create a image with a name and tag:
+docker build -t goals:latest .
+docker tag <old_name>:<old_tag> douglasmg7/node-hello-world # Re-tag a image (create a clone image with the new name:tag):
 
 # Create a new container by image id, publish a port -p external:internal.
 docker run -p 3000:3000 <image_id>
@@ -53,9 +58,9 @@ docker attach <container_id>
 
 # List all running containers:
 docker ps
+docker ps -a    # List all running and stopped containers.
+docker ps -lq   # Display only the container id from the last created container.
 
-# List all containers:
-docker ps -a
 
 # Remove container
 docker rm <container_id1> <container_id2> <container_id3>
@@ -82,11 +87,6 @@ docker cp <container_id>:/text .
 # Create a container using a name:tag image and give a container name.
 docker run -p 3000:80 --name <container_name> <image_name>:<image_tag>
 
-# Create a image with a name and tag:
-docker build -t <name>:<tag> .
-docker build -t goals:latest .
-# Re-tag a image (create a clone image with the new name:tag):
-docker tag <old_name>:<old_tag> douglasmg7/node-hello-world
 
 # Push to docker:
 docker login
@@ -186,3 +186,10 @@ docker ps --help
 
 # Attach to a runing container:
 docker attach <container_id>
+
+# Create a new image from a container's changes:
+docker commit <container_id> awesomeness
+docker commit $(docker ps -lq) awesomeness
+
+# We use exec hello instead of hello: this will replace the current process (the shell that we started) with the hello program. This ensures that hello will be PID 1 in the container, instead of having the shell as PID 1 and hello as a child process. This is totally useless for this tiny example, but when we will run more useful programs, this will allow them to receive external signals properly, since external signals are delivered to PID 1 of the container. What kind of signal, you might be wondering? A good example is docker stop, which sends SIGTERM to PID 1 in the container.
+docker run --rm golang sh -c "go get github.com/golang/example/hello/... && exec hello"

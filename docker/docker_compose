@@ -24,3 +24,7 @@ docker-compose buid
 # Usefull for utility container.
 docker-compose up run --rm <service_name> <command_to_run>
 
+# Start not all services, but the specificateds one:
+docker compose up <service_1> <service_2>
+# Or use depends_on service_1 in service_2 into yaml file, and call only the service_2:
+docker compose up <service_2>
