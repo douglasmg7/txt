@@ -7,6 +7,9 @@ go mod init example/hello
 go build
 go test
 go get
+# The ... (ellipsis) tells go get to also fetch the package's subpackages/dependencies.
+go get golang.org/x/example/hello/...
+
 
 # Changes the required version of a dependency (or adds a new dependency).
 go get
