@@ -33,7 +33,7 @@ $ cargo publish
 # To test that you have Rust and Cargo installed.
 $ cargo --version
 
-# Create a new project.
+# Create a package, will generate a Cargo.toml file.
 $ cargo new project_name
 # For binary project.
 $ cargo new --bin project_name
