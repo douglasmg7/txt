@@ -58,3 +58,8 @@ cargo add <crate name> --features full
 
 # Format rust files.
 cargo fmt
+
+# Viwe module struct.
+cargo install cargo-modules
+cargo modules structure
+cargo modules structure --lib
