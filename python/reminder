@@ -1,0 +1,20 @@
+# Imutables -> numbers, strings and tuples
+# Mutables -> list, dictionaries and sets
+
+# Show attributes.
+dir('some string)
+
+# Help.
+help(''.replace)
+
+# Unicode
+ord('\n')
+
+# Unicode
+'\xc4'  #A
+u'\xc4' #A
+
+# byte
+b'xc4'  #xc4
+
+

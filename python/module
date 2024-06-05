@@ -1,0 +1,10 @@
+# Every file.py is a module.
+
+# The <file>.py that start the script is considered the main module.
+
+# The import operation run the code in a file that is being loaded as final step.
+
+# To re-import a module again:
+from imp import reload
+Import script
+reload(script) # must be already imported.
