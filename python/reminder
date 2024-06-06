@@ -2,7 +2,7 @@
 # Mutables -> list, dictionaries and sets
 
 # Show attributes.
-dir('some string)
+dir('some string')
 
 # Help.
 help(''.replace)

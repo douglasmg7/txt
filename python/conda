@@ -1,6 +1,10 @@
 # To control whether or not each shell session has the base environment activated or not, run: 
 conda config --set auto_activate_base false
 
+# configure conda-forge as your default package channel:
+conda config --add channels conda-forge
+conda config --set channel_priority strict
+
 # Activate anaconda.
 source <path_to_anaconda>/bin/activate
 conda init
@@ -19,6 +23,9 @@ conda --version
 
 # Update conda.
 conda update conda
+
+# Update packages:
+conda update <package_name>
 
 # Create the env snowflakes and install BioPython.
 conda create --name snowflakes biopython
@@ -69,6 +76,7 @@ conda install --channel conda-forge opencv
 
 # Start jupyter.
 jupyter-notebook
+jupyter notebook
 
 # Start jupyter lab.
 jupyter-lab

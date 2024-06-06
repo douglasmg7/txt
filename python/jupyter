@@ -22,4 +22,3 @@ shift + tab
         Shift + J or Shift + Down selects the next sell in a downwards direction. You can also select sells in an upwards direction by using Shift + K or Shift + Up.
         Once cells are selected, you can then delete / copy / cut / paste / run them as a batch. This is helpful when you need to move parts of a notebook.
         You can also use Shift + M to merge multiple cells.
-
