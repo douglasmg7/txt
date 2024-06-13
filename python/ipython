@@ -29,6 +29,9 @@ np.*load*?
 # %cpaste is similar, except that it gives you a special prompt for pasting code into:
 $cpaste
 
+# pwd
+%pwd
+
 # Run a file name.
 %run <file_name>
 %run -i <file_name>     # Should you wish to give a script access to variables already defined in the interactive IPython namespace.

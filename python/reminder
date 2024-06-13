@@ -17,4 +17,24 @@ u'\xc4' #A
 # byte
 b'xc4'  #xc4
 
+# Hex to bin:
+bin(0xff)
 
+# Check if is instance of:
+b=2.1
+isinstance(b, float)
+isinstance(b, (int, float))
+
+# Check if object has some attribute:
+hasattr(s, '__iter__')
+
+# Call a method:
+getattr(s, 'split')()
+
+# Add a method:
+setattr
+
+# Check if two variables refer to the same object:
+a=1
+b=a
+a is b
