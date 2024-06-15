@@ -7,8 +7,9 @@ dir('some string')
 # Help.
 help(''.replace)
 
-# Unicode
-ord('\n')
+# Character code conversion:
+ord('A')
+chr(65)
 
 # Unicode
 '\xc4'  #A
@@ -38,3 +39,27 @@ setattr
 a=1
 b=a
 a is b
+
+# Negative stride:
+s='123456789'
+s[::-1]     #'987654321'
+s[::-2]     #'97531'
+
+# Convert to as-code string
+repr(3)
+
+# Replace the first ocurrency only:
+'ab2ab3ab4ab'.replace('ab', '--', 1)    # '--2ab3ab4ab'
+
+# Regular expression:
+re.match('a', 'cat')    # False
+re.match('a', 'acat')   # <re.Match object; span=(0, 1), match='a'>
+re.search('a', 'cat')   # <re.Match object; span=(1, 2), match='a'>
+re.split('[ab]', 'carbs')   # ['c', 'r', 's']
+re.sub('[0-9]', '---', 'e2k3k4j5k6sdlk8jfs0jk') # 'e---k---k---j---k---sdlk---jfs---jk'
+
+l, n = zip(('a', 1), ('b', 2), ('c', 3))
+l   # ('a', 'b', 'c')
+n   $ (1, 2, 3)
+
+
