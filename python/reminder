@@ -195,4 +195,139 @@ In [40]: a = (1, 2, 2, 2, 3, 4, 2)
 In [41]: a.count(2)
 Out[41]: 4
 
+>>> parts
+['[1, 2, 3]', "{'a': 1, 'b': 2}\n"]
+>>> eval(parts[0]) # Convert to any object type
+
+
+
+To store a dictionary in a file, for instance, we pickle it directly:
+>>> D = {'a': 1, 'b': 2}
+>>> F = open('datafile.pkl', 'wb')
+>>> import pickle
+>>> pickle.dump(D, F) # Pickle any object to file
+>>> F.close()
+Then, to get the dictionary back later, we simply use pickle again to re-create it:
+>>> F = open('datafile.pkl', 'rb')
+>>> E = pickle.load(F) # Load any object from file
+>>> E
+{'a': 1, 'b': 2}
+
+
+>>> import json
+>>> json.dumps(rec)
+'{"job": ["dev", "mgr"], "name": {"last": "Smith", "first": "Bob"}, "age": 40.5}'
+>>> S = json.dumps(rec)
+>>> S
+'{"job": ["dev", "mgr"], "name": {"last": "Smith", "first": "Bob"}, "age": 40.5}'
+>>> O = json.loads(S)
+>>> O
+{'job': ['dev', 'mgr'], 'name': {'last': 'Smith', 'first': 'Bob'}, 'age': 40.5}
+>>> O == rec
+True
+
+
+>>> json.dump(rec, fp=open('testjson.txt', 'w'), indent=4)
+>>> print(open('testjson.txt').read())
+{
+"job": [
+"dev",
+"mgr"
+],
+"name": {
+"last": "Smith",
+"first": "Bob"
+},
+"age": 40.5
+}
+>>> P = json.load(open('testjson.txt'))
+>>> P
+{'job': ['dev', 'mgr'], 'name': {'last': 'Smith', 'first': 'Bob'}, 'age': 40.5}
+
+
+
+• The == operator tests value equivalence. Python performs an equivalence test,
+comparing all nested objects recursively.
+• The is operator tests object identity. Python tests whether the two are really the
+same object (i.e., live at the same address in memory).
+
+
+>>> L = [1, 2, 3]
+>>> I = iter(L) # Obtain an iterator object from an iterable
+>>> I.__next__() # Call iterator's next to advance to next item
+1
+>>> I.__next__() # Or use I.next() in 2.X, next(I) in either line
+2
+>>> I.__next__()
+3
+>>> I.__next__()
+...error text omitted...
+StopIteration
+
+
+Objects that are iterable return results one at a time, not in a physical list:
+>>> R = range(5)
+>>> R # Ranges are iterables in 3.X
+range(0, 5)
+>>> I = iter(R) # Use iteration protocol to produce results
+>>> next(I)
+0
+>>> next(I)
+1
+>>> list(range(5)) # Or use list to collect all results at once
+[0, 1, 2, 3, 4]
+
+
+>>> E = enumerate('spam') # enumerate is an iterable too
+>>> E
+<enumerate object at 0x00000000029B7678>
+>>> I = iter(E)
+>>> next(I) # Generate results with iteration protocol
+(0, 's')
+>>> next(I) # Or use list to force generation to run
+(1, 'p')
+>>> list(enumerate('spam'))
+[(0, 's'), (1, 'p'), (2, 'a'), (3, 'm')]
+
+
+# Another type alias
+Matrix = List[List[float]]
+A = [[1, 2, 3], # A has 2 rows and 3 columns
+[4, 5, 6]]
+B = [[1, 2], # B has 3 rows and 2 columns
+[3, 4],
+[5, 6]]
+Given this list-of-lists representation, the matrix A has len(A) rows and len(A[0])
+columns, which we consider its shape:
+
+
+
+def squares(n=10):
+print(f"Generating squares from 1 to {n ** 2}")
+for i in range(1, n + 1):
+yield i ** 2
+
+In [213]: gen = squares()
+In [214]: gen
+Out[214]: <generator object squares at 0x7fefe437d620>
+
+In [215]: for x in gen:
+.....: print(x, end=" ")
+Generating squares from 1 to 100
+1 4 9 16 25 36 49 64 81 100
+
+In [216]: gen = (x ** 2 for x in range(100))
+In [217]: gen
+Out[217]: <generator object <genexpr> at 0x7fefe437d000>
+
+
+list comprehensions
+some_list = [x ** 2 for x in range(10)]
+
+Generator expressions
+some_generator = (x ** 2 for x in range(10))
+
+Depending on the number of elements produced by the comprehension expression, the generator version can sometimes be meaningfully faster.
+
+
 
