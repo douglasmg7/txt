@@ -386,3 +386,17 @@ dict.__doc__
 help(dict)
 python -m pydoc -b
 python -m pydoc timeit
+
+
+>>> from person import Person
+>>> bob = Person('Bob Smith')
+>>> bob # Show bob's __repr__ (not __str__)
+[Person: Bob Smith, 0]
+>>> print(bob) # Ditto: print => __str__ or __repr__
+[Person: Bob Smith, 0]
+>>> bob.__class__ # Show bob's class and its name
+<class 'person.Person'>
+>>> bob.__class__.__name__
+'Person'
+>>> list(bob.__dict__.keys()) # Attributes are really dict keys
+['pay', 'job', 'name'] # Use list to force list in 3.X
