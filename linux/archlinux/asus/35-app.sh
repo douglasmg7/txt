@@ -95,7 +95,7 @@ sudo pacman -S joyutils --noconfirm
 
 printf "\nInstalling docker and docker-compose..."
 sudo pacman -S docker docker-compose --noconfirm
-sudo usermod -aG docker douglasmg7
+sudo usermod -aG docker dmg
 
 # printf "\nInstalling virtualbox, choose option 2=virtualbox-host-modules-arch"
 # sudo pacman -S virtualbox 

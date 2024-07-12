@@ -1,0 +1,4 @@
+sudo usermod -l dmg douglasmg7
+sudo groupmod -n dmg douglasmg7
+sudo usermod -d /home/dmg -m dmg
+whoami
