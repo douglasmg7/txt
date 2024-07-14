@@ -12,5 +12,9 @@ pip install "SomeProject==1.4"
 
 # Update a package:
 pip install --upgrade <package_name>
+pip install --upgrade pip
+
+# List installed packages:
+pip list
 
 
