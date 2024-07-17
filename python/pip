@@ -17,4 +17,6 @@ pip install --upgrade pip
 # List installed packages:
 pip list
 
+# Install requred packages:
+pip install -r requirements.txt
 

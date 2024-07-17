@@ -1,0 +1,4 @@
+# Run the server:
+uvicorn file_name:app --reload
+fastapi run file_name
+fastapi dev file_name
