@@ -1,100 +1,99 @@
+# Install server on Debian:
 apt-get install mysql-server
-	install server
 
+# Install client on Debian;
 apt-get install mysql-client
-	install client
 
-root
-saladino
-
+# Change password:
 set password for root@localhost = password('saladino');
-	change password
 
+# How manipulate mysql service:
 service mysql status
 service mysql stop
 service mysql start
 service mysql restart
 
-mysql -u root -psaladino -h localhost database
-	no space between -p and password
+# Login (password toor):
+mysql -uroot -ptoor -h localhost database   # No space between -u and user, no sapce between -p and password.
 
-select version();
-select current_date;
-select version(), current_date;
-select now();
-select user();
+mysql> select version();
+mysql> select current_date();
+mysql> select now();
+mysql> select user();
+mysql> select version(), current_date();
 
-\c
-	cancel a query
-	select * from\c
+# Exit mysql prompt:
+mysql> quit
 
-quit
+# Show databases:
+mysql> show databases;
 
-show databases;
+# Create a database:
+mysql> create database test;
 
-create database test;
+# Use a specific database:
+mysql> use test;
 
-use test;
+# Show database in use:
+mysql> select database();
 
-select database();
-	see database in use
+# Show all tables into current database:
+mysql> show tables;
 
-show tables;
+# Grant:
+mysql> GRANT ALL ON menagerie.* TO 'your_mysql_name'@'your_client_host';
 
-GRANT ALL ON menagerie.* TO 'your_mysql_name'@'your_client_host';
+# Show structure of a table:
+mysql> describe table_a
+mysql> desc table_a
 
-describe table_a
-desc table_a
-	show structure of a table
+# Show field by line.
+mysql> select * from table_name\G
 
+# Show like less:
+mysql> pager less
 
+# Show like less, no tabular distorsion:
+mysql> pager less -SFX
 
-select * from table_name\G
-	show field by line
+# Process output by a script (ex: grep t):
+mysql> pager script_name
 
-pager less
-	show like less
+# Disable page:
+mysql> nopager
 
-pager less -SFX
-	show like less, no tabular distorsion
+# Show status:
+mysql> status
 
-pager script_name
-	process output by a script (ex: grep t)
+# Open vi to edit command:
+mysql> edit
 
-nopager
-	disable page
+# Using script:
+mysql < batch-file
+mysql < batch-file > mysql.out
+mysql < batch-file | more
+mysql -h host -u user -p < batch-file
+mysql> source file_name
+mysql> \. file_name
 
-status
-	show status
+# Keep password out from batch:
+create file ~/.my.cnf
+    [client]
+    user=douglas
+    password=fox
+chmod 600 ~/.my.cnf
+mysql --defaults-file=/home/user_x/.my.cnf -h host_name data
 
-edit
-	open vi to edit command
-
-using script
-	mysql < batch-file
-	mysql < batch-file > mysql.out
-	mysql < batch-file | more
-	mysql -h host -u user -p < batch-file
-	mysql> source file_name
-	mysql> \. file_name
-
-keep password out from batch
-	create file ~/.my.cnf
-		[client]
-		user=douglas
-		password=fox
-	chmod 600 ~/.my.cnf
-	mysql --defaults-file=/home/user_x/.my.cnf -h host_name data
-
+# Interactive output format in batch mode:
 mysql -t
 	-t --table
 	tabular mode
-	to get the interactive output format in batch mode
 
+# Echo to the output the statements that are executed in batch:
 mysql -v
-	to echo to the output the statements that are executed in batch
 
+# Create table example:
 create table pet (name varchar(20), owner varchar(20), species varchar(20), sex char(1), birth date);
 
+# Wildcard:
 select count(*) from produtos_vtabela where titulo like 'G%';
-	wildcard

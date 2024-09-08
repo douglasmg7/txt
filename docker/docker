@@ -64,8 +64,9 @@ docker ps -a
 
 # Remove container
 docker rm $ID $ID2 $ID3
+
 # Remove all stopped containers at once:
-docker container purne
+docker container prune
 
 # List images.
 docker images
@@ -74,7 +75,7 @@ docker images -a
 # Remove image:
 docker rmi $ID
 # Remove all images:
-docker image prune
+docker image prune      # Remove unused images.
 docker image prune -a   # Include tagged images.
 # Inspect a image:
 docker image inspect $ID

@@ -7,6 +7,9 @@ sudo pacman -Syu docker-compose
 docker-compose up
 docker-compose up -d    # Start not attached
 
+# Start only one service from compose yml file:
+docker-compose up $service_name
+
 # Stop
 docker-compose down
 docker-compose down -v  # Remove volumes
