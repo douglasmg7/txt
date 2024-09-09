@@ -42,3 +42,7 @@ go mod verify
 
 # Download all the dependencies for the project.
 go mod download
+
+# Change the version of go used by the module.
+go mod edit -go=1.23
+
