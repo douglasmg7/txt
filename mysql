@@ -1,32 +1,12 @@
-<<<<<<< HEAD
-# Install server on Debian:
-apt-get install mysql-server
-
-# Install client on Debian;
-apt-get install mysql-client
-
 # Change password:
 set password for root@localhost = password('saladino');
 
 # How manipulate mysql service:
-=======
-# Install server
-apt-get install mysql-server
-
-# Install client
-apt-get install mysql-client
-
-# change password
-set password for root@localhost = password('saladino');
-
-# Systemctl commands.
->>>>>>> 0eb31248113be0ee0713a91f0b63633a314178d4
 service mysql status
 service mysql stop
 service mysql start
 service mysql restart
 
-<<<<<<< HEAD
 # Login (password toor):
 mysql -uroot -ptoor -h localhost database   # No space between -u and user, no sapce between -p and password.
 
@@ -111,87 +91,6 @@ create table pet (name varchar(20), owner varchar(20), species varchar(20), sex 
 
 # Wildcard:
 select count(*) from produtos_vtabela where titulo like 'G%';
-=======
-# Connect to db, no space between -p and password
-mysql -u root -psaladino -h localhost database
-
-# Some commands.k
-select version();
-select current_date;
-select version(), current_date;
-select now();
-select user();
-quit
-
-# List databases.
-show databases;
-
-# Create a new database.
-create database test;
-
-# Use a specific database.
-use test;
-
-# Show database in use.
-select database();
-
-# List existing tables.
-show tables;
-
-# Grant access.
-GRANT ALL ON menagerie.* TO 'your_mysql_name'@'your_client_host';
-
-# Show structure of a table.
-describe table_a
-desc table_a
-
-# Show field by line.
-select * from table_name\G
-
-# Show like less.
-pager less
-
-# Show like less, no tabular distorsion.
-pager less -SFX
-
-# Process output by a script (ex: grep t).
-pager script_name
-
-# Disable page.
-nopager
-
-# Show status.
-status
-
-# Open vi to edit command.
-edit
-
-# Using script.
-mysql < batch-file
-mysql < batch-file > mysql.out
-mysql < batch-file | more
-mysql -h host -u user -p < batch-file
-mysql> source file_name
-mysql> \. file_name
-
-# Keep password out from batch
-create file ~/.my.cnf
-	[client]
-	user=douglas
-	password=fox
-chmod 600 ~/.my.cnf
-mysql --defaults-file=/home/user_x/.my.cnf -h host_name data
-
-# Tabular mode to get the interactive output format in batch mode.
-# -t --table
-mysql -t
-
-# To echo to the output the statements that are executed in batch
-mysql -v
-
-# Example:
-create table pet (name varchar(20), owner varchar(20), species varchar(20), sex char(1), birth date);
-select count(*) from produtos_vtabela where titulo like 'G%';
 
 # Commands examples:
 select user, host from mysql.user;
@@ -204,4 +103,3 @@ CREATE USER 'web'@'%' IDENTIFIED BY 'pass';
 # User host access.
 The pattern '%' means “any host” and is least specific.
 The empty string '' also means “any host” but sorts after '%'.
->>>>>>> 0eb31248113be0ee0713a91f0b63633a314178d4
