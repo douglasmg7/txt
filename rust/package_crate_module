@@ -1,0 +1,19 @@
+# Package
+Must have at least one crate
+At most one library crate
+Any numver of binary crate
+
+# The main binary will be in src/main.rs
+# The others binary will be in bin/some.rs, bin/other.rs
+cargo run --bin <package_name>  # To run the main.rs binary.
+cargo run --bin some  # To run the bin/some binary.
+
+# The root module is:
+cargo::
+
+# Make a module public do not make his members public.
+pub mod cutomer {
+    struct Customer {
+        id:u64,
+    }
+}

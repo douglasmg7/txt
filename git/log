@@ -1,0 +1,40 @@
+# git log
+
+# show each commit in oneline, shorthand for --pretty=online --abbrev-commit
+git log --oneline
+
+git log --graph --full-history --all --color \
+        --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"
+git log --graph --full-history --all --pretty=format:"%h%x09%d%x20%s"
+git log --oneline --decorate --all --graph
+git log --graph --oneline --all
+
+
+git log --pretty=format:"%h %ad- %s [%an]"
+$ad - author date
+$an - author name
+%h  - sha hash
+$s  - subject
+$d  - ref names
+
+# show line changes - p for patch
+git log --oneline -p
+git log --patch
+git log -p
+
+# show stats for each commit
+git log --oneline --stat
+
+# visual representation of the branch merging into master
+git log --oneline --graph
+
+# show log by date ranges
+git log --until=1.minute.ago
+git log --since=1.day.ago
+git log --since=1.hour.ago
+git log --since=1.month.ago --until=2.weeks.ago
+git log --since=2000-01-01 --until=2012-12-21
+
+# show reflog into log
+git log --walk-reflogs
+

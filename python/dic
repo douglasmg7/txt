@@ -7,15 +7,18 @@ dic['a']
 # Insert a key/value.
 dic['c'] = 3
 
+# Delete a key:
+del dic['c']
+
 # Interating.
 for k in dic:
   print(k)
-  print(dic[j])
+  print(dic[k])
 
 # Sorting and interating.
 for k in sorted(dic):
   print(k)
-  print(dic[j])
+  print(dic[k])
 
 
 # Sorting and interating with key and value.

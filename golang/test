@@ -1,5 +1,8 @@
-# To test a package.
+# To test a package:
 go test github.com/user/stringutil
 
-# To test a package (alredy inside the package directory).
+# To test a package (alredy inside the package directory):
 go test
+
+# Checke test coverage:
+go test -cover

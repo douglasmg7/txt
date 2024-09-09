@@ -25,9 +25,9 @@ sudo pacman -S curl --noconfirm
 printf "\nInstalling moc player..."
 sudo pacman -S moc --noconfirm
 
-printf "\nCreating symbolic link to mocp configuration file..."
-mkdir -p ~/.moc
-ln -s ~/dotfiles/moc/config ~/.moc/config
+# printf "\nCreating symbolic link to mocp configuration file..."
+# mkdir -p ~/.moc
+# ln -s ~/dotfiles/moc/config ~/.moc/config
 
 printf "\nInstalling jq..."
 sudo pacman -S jq --noconfirm
@@ -44,8 +44,8 @@ ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 printf "\nInstalling process monitor..."
 sudo pacman -S htop --noconfirm
 
-printf "\nInstalling python 2..."
-sudo pacman -S python2 python2-pip --noconfirm
+# printf "\nInstalling python 2..."
+# sudo pacman -S python2 python2-pip --noconfirm
 
 printf "\nInstalling python 3..."
 sudo pacman -S python python-pip --noconfirm
@@ -56,11 +56,11 @@ sudo pacman -S python python-pip --noconfirm
 # printf "\nInstalling hd memory analyzer..."
 # sudo pacman -S ncdu --noconfirm
 
-printf "\nInstalling bluetoooth...\n..."
-sudo pacman -S bluez bluez-utils pulseaudio-bluetooth --noconfirm
-printf "\nStarting/Enabling bluetooth service...\n"
-sudo systemctl start bluetooth.service
-sudo systemctl enable bluetooth.service
+# printf "\nInstalling bluetoooth...\n..."
+# sudo pacman -S bluez bluez-utils pulseaudio-bluetooth --noconfirm
+# printf "\nStarting/Enabling bluetooth service...\n"
+# sudo systemctl start bluetooth.service
+# sudo systemctl enable bluetooth.service
 
 # Make capslock a leftctrl.
 # cd /etc/udev/hwdb.d

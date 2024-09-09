@@ -1,3 +1,9 @@
+# Jump to the tag underneath the cursor (Go to definition)
+Ctrl-]
+
+# Vim shortcut to go to definition:
+gd
+
 # Insert the result of a command into the caret position.
 :r !ls
 

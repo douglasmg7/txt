@@ -154,11 +154,11 @@ $ sudo pacman -Sy dialog dhcpcd wpa_supplicant
 # -g defines the group name
 # -G list of supplementary groups which the user is also member
 # -s default login shell
-# $ useradd -m -g users -G wheel,storage,power,audio,video -s /bin/bash douglasmg7     
-$ useradd -m -G wheel,storage,power,audio,video -s /bin/bash douglasmg7     
+# $ useradd -m -g users -G wheel,storage,power,audio,video -s /bin/bash dmg     
+$ useradd -m -G wheel,storage,power,audio,video -s /bin/bash dmg     
 
 # Password.
-$ passwd douglasmg7
+$ passwd dmg
 
 # Grant perimition to use the sudo command.
 # Use the command visudo, it will change the file "/etc/sudoers".
@@ -265,12 +265,19 @@ $ gpg --import douglasmg7-secret-gpg.key
 # If error no resolving address, expample: ping google.com
 systemctl start systemd-resolved.service
 systemctl enable systemd-resolved.service
+# If error installing golang gopls
+cd /etc
+ln -sf ../run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 
 # To remove some "possible missing firmware for module".
 # For bfa, qla1280, qed and qla2xxx:
 $ cd ~/aur
-$ git clone https://aur.archlinux.org/linux-firmware-qlogic.git
-$ cd linux-firmware-qlogic
+# Old:
+# $ git clone https://aur.archlinux.org/linux-firmware-qlogic.git
+# $ cd linux-firmware-qlogic
+# New:
+$ git clone https://aur.archlinux.org/linux-firmware-git.git
+$ cd linux-firmware-git
 $ makepkg -si
 # For ast:
 $ cd ~/aur

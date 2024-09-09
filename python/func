@@ -1,4 +1,18 @@
 # Func params in python (call-by-reference vs call-by-value)
-  Mutable value are passed as reference (lists, dictionaries and sets).
-  Immutable vlaues are passed as value (strings, integers and tubles).
+# Mutable value are passed as reference (lists, dictionaries and sets).
+# Immutable vlaues are passed as value (strings, integers and tubles).
 
+
+def greet_user(username):
+    """Display a simple greeting."""
+    print(f"Hello, {username.title()}!")
+greet_user('jesse')
+
+username is a parameter
+'jesse' is a argument
+
+# Arbitrary arguments:
+You’ll often see the generic parameter name *args, which collects arbitrary positional arguments like this.
+
+# Arbitrary keywords arguments:
+You’ll often see the parameter name **kwargs used to collect non-specific keyword arguments.

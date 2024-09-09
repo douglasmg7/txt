@@ -1,0 +1,19 @@
+# A microcontroller is an integrated circuit (IC) device used for controlling other portions of an electronic system, usually via a microprocessor unit (MPU), memory, and some peripherals.
+# These devices are optimized for embedded applications that require both processing functionality and agile, responsive interaction with digital, analog, or electromechanical components.
+
+# IC
+Integrated Circuit
+
+
+# MCU
+Microprocessor Unit
+“MCU” is used interchangeably as it stands for “microcontroller unit”. You may also occasionally see “µC”
+
+# DSP
+A digital signal processor (or "DSP") is a microprocessor that is optimized for demanding computational tasks such as digital filtering, mathematical analysis of real-time signals, and data compression. A highly sophisticated microcontroller may be able to function as a replacement for a digital signal processor, but it is still considered a microcontroller if a significant portion of its internal circuitry is intended to control, monitor, and communicate with the surrounding system.
+
+# CPU
+Central Processing Unit
+
+# ISR
+An interrupt causes program execution to “vector” to an interrupt service routine (ISR), and after the ISR has completed its tasks, the processor returns to the function that was executing when the interrupt occurred.

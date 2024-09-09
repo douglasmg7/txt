@@ -33,7 +33,7 @@ $ cargo publish
 # To test that you have Rust and Cargo installed.
 $ cargo --version
 
-# Create a new project.
+# Create a package, will generate a Cargo.toml file.
 $ cargo new project_name
 # For binary project.
 $ cargo new --bin project_name
@@ -51,3 +51,15 @@ $ cargo install binary_name
 
 # List custom commands.
 $ cargo --list
+
+# Install a dependency, must be runned into project directory.
+cargo add <crate name>
+cargo add <crate name> --features full
+
+# Format rust files.
+cargo fmt
+
+# Viwe module struct.
+cargo install cargo-modules
+cargo modules structure
+cargo modules structure --lib

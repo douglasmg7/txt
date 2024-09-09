@@ -1,0 +1,31 @@
+# Commands used inside Dockerfile.
+
+# From whihc image.
+FROM node
+
+# Which dir to be used on the image.
+WORKDIR /app
+
+# Copy from local file to image file.
+# Use .dockerignore to not copy some files.
+COPY . /app
+
+# Run in the image creation.
+RUN npm install
+
+# Create a anonymous volume, not persist when countainer is shutdown:
+VOLUME [ "/app/feedback", ""]
+
+# Named volume, persist when countainer is shutdown.
+# Must be create when we run a container.
+
+# Define env variable:
+ENV PORT 80
+# To use in command line.
+EXPOSE $PORT
+# Or to use inside source file.
+
+# Define args, can be used only into build command:
+ARG DEFAULT_PORT=80
+ENV PORT $DEFAULT_PORT
+docker build -t feedback-node:dev --build-arg DEFAULT_PORT=8000

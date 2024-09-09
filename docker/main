@@ -1,0 +1,195 @@
+# Docker is a tool to make linux containers easy.
+
+# Images is a template for containers.
+# Containers are running instances of a images.
+
+# Install on archlinux:
+sudo pacman -Syu
+sudo pacman -S docker
+sudo usermod -aG docker douglasmg7
+# The user needs to Log out and log back into the server so that group membership is re-evaluated.
+
+# Start docker service.
+sudo systemctl start docker.service
+
+# Create a new container from a image and go in interactive mode.
+# -i, --interactive                    Keep STDIN open even if not attached
+# -t, --tty     Allocate a pseudo-TTY
+docker run -it <image_name>
+
+# Create a image using the Dockerfile file.
+docker build .  # Will give a id to use with docker run.
+docker build -f <dockerfile_name> .
+docker build -t gg -f snippetbox.dockerfile .
+docker build -t <name>:<tag> .  # Create a image with a name and tag:
+docker build -t goals:latest .
+docker tag <old_name>:<old_tag> douglasmg7/node-hello-world # Re-tag a image (create a clone image with the new name:tag):
+
+# Create a new container by image id, publish a port -p external:internal.
+docker run -p 3000:3000 <image_id>
+docker run -p 3000:3000 334837ba6abd
+
+# Stop the container.
+docker ps   # To find out the container name.
+docker stop <container_id>
+# Start container:
+docker start <container_id>
+# Start container in attach mode:
+# -a, --attach list                    Attach to STDIN, STDOUT or STDERR
+docker start -a <container_id>
+# Start container in iterate and attach mode:
+docker start -ia <container_id>
+# Show logs:
+docker logs <container_id>
+docker logs -f <container_id>
+
+# Create a contianer from a pre-build image.
+docker run <image_name>
+docker run node
+
+# Create a container from a image id, publish a port -p external:internal.
+docker run -p 3000:80 <image_id>
+# Deatached mode and remove container when stopped
+# -d, --detach                         Run container in background and print container ID
+# --rm remove container when stopped, what is good if you only stop the container to build the image again.
+docker run -p 3000:80 -d --rm <image_id>
+# Attach to a container:
+docker attach <container_id>
+
+# List all running containers:
+docker ps
+docker ps -a    # List all running and stopped containers.
+docker ps -lq   # Display only the container id from the last created container.
+
+
+# Remove container
+docker rm <container_id1> <container_id2> <container_id3>
+# Remove all stopped containers at once:
+docker container purne
+
+# List images.
+docker images
+docker images -a
+
+# Remove image:
+docker rmi <image_id>
+# Remove all images not in use (that not have containers):
+docker image prune
+docker image prune -a   # Include tagged images.
+# Inspect a image:
+docker image inspect <image_id>
+
+# Copy files to a container:
+docker cp dummy/. <container_id>:/text
+# Copy files from a container:
+docker cp <container_id>:/text .
+
+# Create a container using a name:tag image and give a container name.
+docker run -p 3000:80 --name <container_name> <image_name>:<image_tag>
+
+
+# Push to docker:
+docker login
+docker build -t douglasmg7/node-hello-world:latest .    # Create a image with the same tag that will be pushed.
+docker tag <old_name>:<old_tag> douglasmg7/node-hello-world:latest    # Or rename a existing image.
+docker push douglasmg7/node-hello-world
+docker logout   # Not necessary, can stay logged.
+
+# Pull from docker, if already in the system make a update if necessary:
+docker pull douglasmg7/node-hello-world:latest
+# Make the pull automatically if not already in the system, do not do update:
+docker run douglasmg7/node-hello-world:latest
+
+# Auto pull:
+docker run douglasmg7/node-hello-world:latest
+
+# Volumes are folders in the host machine hard drive which are mounted into containers.
+docker volume ls                # List volumes
+docker volume rm <voume_anme>   # Remove one or more volumes
+docker volume prune             # Remove all unused local volumes
+docker volume inspect <volume_name>     # Inspect volume
+
+# Create anonymous volume (Survives container stop/start, removed when container is removed. Used for logs).
+# Tied to specific container
+docker run -d -p 3000:80 --rm --name feedback-app -v /app/feedback feedback-node:volumes
+
+# Create named volume (survives container rm, can be shared across containers).
+# Not tied to specific container.
+docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback feedback-node:volumes
+
+# Create Bind mount (use of absolute path /):
+docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback -v "/home/douglasmg7/code/docker/data-volumes-01-starting-setup/:/app" feedback-node:volumes
+docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback -v "$(pwd):/app" feedback-node:volumes
+# Using ro read only to avoid container change the source code (sub sequent volumes overwrite the read only from app sub folder defined):
+docker run -d -p 3000:80 --rm --name feedback-app -v "$(pwd):/app:ro" -v feedback:/app/feedback -v /app/temp feedback-node:volumes
+
+# Using anonymous volume to keep directory from image (node_modules).
+# Docker keep the more specific path in the case of crash beteween volumes, they will coexist:
+docker run -d -p 3000:80 --rm --name feedback-app -v /app/node_modules -v feedback:/app/feedback -v "$(pwd):/app" feedback-node:volumes
+
+# Set env when run a container:
+--env PORT=8000
+-e PORT=8000
+-e PORT=8000 -e RUN_MODE=dev
+# Set file env:
+--env-file ./.env
+# .env
+PORT=8000
+
+# Mongodb localhost is changed to host.docker.internal:
+'mongodb://host.docker.internal:27017/database_name'
+# Mongodb dockerized:
+docker run -d --name mongodb mongo:3.6.3
+docker container inspect mongodb        # To see IPAddress
+'mongodb://172.17.0.2:27017/database_name'
+'mongodb://container_name:27017/database_name'      # For docker network
+
+# localhost server:
+'http://host.docker.internal:27017/'
+
+# Persist mongodb data:
+docker run --name mongodb -v data:/data/db --rm -d mongo:3.6.3
+docker run --name mongodb -v data:/data/db --rm -d -p 27017:27017 mongo:3.6.3
+
+# Persist mongodb data and using password:
+docker run --name mongodb -v data:/data/db --rm -d -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASSWORD=secret mongo:3.6.3
+
+# Network:
+docker network create my_network        # Create network
+# Change mongodb connection to mongodb container name:
+'http://mongodb:27017/database_name'
+docker run -d --name mongodb --network my_network mongo     # Using the network, do not need a port to communicate.
+
+# Mongodb:
+docker run --name mongodb --rm -d -p 27017:27017 mongo:3.6.3
+
+# Access container
+docker run -it -d node
+docker exec -it <container_name> npm init
+
+# Docker utility, passing a command. 
+# Dockerfile:
+FROM node:14-apline
+WORKDIR /app
+docker build .
+docker run -it -v <path_to_host_machine>:/app <container_name> <command>
+docker run -it -v <path_to_host_machine>:/app <container_name> npm init
+
+# Access container
+docker exec -it 6d4 bash
+
+# Overwrite inicital container command:
+docker run -it node npm init
+
+# Command help:
+docker ps --help
+
+# Attach to a runing container:
+docker attach <container_id>
+
+# Create a new image from a container's changes:
+docker commit <container_id> awesomeness
+docker commit $(docker ps -lq) awesomeness
+
+# We use exec hello instead of hello: this will replace the current process (the shell that we started) with the hello program. This ensures that hello will be PID 1 in the container, instead of having the shell as PID 1 and hello as a child process. This is totally useless for this tiny example, but when we will run more useful programs, this will allow them to receive external signals properly, since external signals are delivered to PID 1 of the container. What kind of signal, you might be wondering? A good example is docker stop, which sends SIGTERM to PID 1 in the container.
+docker run --rm golang sh -c "go get github.com/golang/example/hello/... && exec hello"

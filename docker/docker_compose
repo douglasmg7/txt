@@ -1,0 +1,30 @@
+# Docker-compose
+https://docs.docker.com/compose/gettingstarted/
+https://docs.docker.com/compose/compose-file/
+
+# Use a yaml file:
+docker-compose.yaml
+
+# Install
+sudo pacman -S docker-compose
+
+# Start
+docker-compose up
+docker-compose up -d    # Start not attached
+docker-compose up --build   # Rebuild images 
+
+# Stop
+docker-compose down
+docker-compose down -v  # Remove volumes
+
+# Build images, not run the containers
+docker-compose buid
+
+# Start a specific server with a command to run after ENTRYPOINT.
+# Usefull for utility container.
+docker-compose up run --rm <service_name> <command_to_run>
+
+# Start not all services, but the specificateds one:
+docker compose up <service_1> <service_2>
+# Or use depends_on service_1 in service_2 into yaml file, and call only the service_2:
+docker compose up <service_2>

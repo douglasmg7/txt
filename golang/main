@@ -32,9 +32,6 @@ go run hello.go
 go run *
 go run .
 
-# Build (create a compiled file).
-go build
-
 # Build for specific os system.
 GOOS=windows go build filename.go
 
@@ -68,3 +65,14 @@ go vet
 
 # Format code (usally editor plugin alredy do this on save).
 go fmt
+gofmt <filename>
+
+# Create a mod in a folder.
+go mod init git@github.com/douglasmg7/my_module
+
+# Build (create a compiled file).
+go build
+
+# Clean files built by go build command.
+go clean
+

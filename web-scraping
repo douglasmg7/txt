@@ -1,0 +1,19 @@
+# Beautiful Soup
+Easy do learn
+No JavaScript support
+Inefficient
+
+# Selenium (SE)
+Is a webdriver designed to render web pages for test automation of web applications.
+Works with JavaScript.
+Easy to learn than Scrapy.
+Slower than http requests because all the JS in the page will be executed.
+God option if speed is not a problem.
+
+# Scraping
+Scraping is a web scraping framework built specially for web scraping and written entirely in Python.
+Most complete web scraping tool in Python.
+Is harder to learn.
+It is asynchronous and fast.
+You can store data in database.
+Create crawlers.

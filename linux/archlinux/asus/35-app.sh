@@ -93,9 +93,9 @@ sudo pacman -S joyutils --noconfirm
 # printf "\nInstalling blender..."
 # sudo pacman -S blender --noconfirm
 
-printf "\nInstalling docker..."
-sudo pacman -S docker --noconfirm
-sudo usermod -aG docker douglasmg7
+printf "\nInstalling docker and docker-compose..."
+sudo pacman -S docker docker-compose --noconfirm
+sudo usermod -aG docker dmg
 
 # printf "\nInstalling virtualbox, choose option 2=virtualbox-host-modules-arch"
 # sudo pacman -S virtualbox 
@@ -122,3 +122,8 @@ echo "ManuallyInstall miniconda from downloaded script"
 # https://docs.conda.io/en/latest/miniconda.html
 # Conda configuration to not start activated.
 # conda config --set auto_activate_base false
+
+$ cd ~/aur
+$ git clone https://aur.archlinux.org/packages/visual-studio-code-bin
+$ cd visual-studio-code-bin
+$ makepkg -si

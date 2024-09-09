@@ -1,0 +1,25 @@
+#Statistics
+We use statistics to distill and communicate relevant fea‐
+tures of our data.
+
+# Mean
+Mean (or average), which is just the sum of the data divided by its count:
+
+# Median and Quantile
+A generalization of the median is the quantile, which represents the value under
+which a certain percentile of the data lies (the median represents the value under
+which 50% of the data lies):
+
+# Mode
+Less commonly you might want to look at the mode, or most common value(s)
+
+# Dispersion
+Dispersion refers to measures of how spread out our data is. Typically they’re statistics
+for which values near zero signify not spread out at all and for which large values
+(whatever that means) signify very spread out. For instance, a very simple measure is
+the range, which is just the difference between the largest and smallest elements:
+
+# Variance
+
+# Standart deviation
+math.sqrt(variance(xs))

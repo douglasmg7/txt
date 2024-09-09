@@ -16,7 +16,9 @@ $ git branch -r
 # List all branchs.
 $ git remote show origin
 
+# Change to other branch.
 # Make the working directory and the HEAD match the specified branch.
+$ git switch <branch_name>
 $ git checkout <branch_name>
 
 # Delete a branch.
@@ -48,3 +50,7 @@ $ git push
 $ git branch -d <branch_name>
 $ git push origin --delete <branch_name>
 
+# Rename a branch:
+$ cd <to_root_of_repository>
+$ git checkout <branch_to_be_renamed>
+$ git checkout -m <new_branch_name>

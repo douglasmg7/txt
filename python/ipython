@@ -1,0 +1,38 @@
+# ipython
+
+# Using a question mark (?) before or after a variable or functions will display some general information about the object:
+a?
+
+?           # Introduction and overview of IPython's features (this screen).
+object?     # Details about 'object'.
+object??    # More detailed, verbose information about 'object'.
+
+# Search for a comand:
+np.*load*?
+
+# A magic command is any command prefixed by the percent symbol %. 
+# For example, you can check the execution time of any Python statement.
+%timeit <some_function>
+
+# Help for a magic command:
+%timeit?
+
+# Magic commands can be viewed as command-line programs to be run within the IPython system. Many of them have additional “command-line” options, which can all be viewed (as you might expect) using ?:
+%debug?
+
+# Imports a script into a code cell:
+%load ipython_script_test.py
+
+# Takes whatever text is in the clipboard and executes it as a single block in the shell:
+%paste
+
+# %cpaste is similar, except that it gives you a special prompt for pasting code into:
+$cpaste
+
+# pwd
+%pwd
+
+# Run a file name.
+%run <file_name>
+%run -i <file_name>     # Should you wish to give a script access to variables already defined in the interactive IPython namespace.
+
