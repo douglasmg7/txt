@@ -1,0 +1,16 @@
+# minikube
+
+# docs
+https://minikube.sigs.k8s.io/docs/start/?arch=%2Flinux%2Fx86-64%2Fstable%2Fbinary+download
+
+# install
+sudo pacman -S minikube
+
+# use docker for virtualization
+minikube start --driver=docker
+
+# status check
+minikube status
+
+# web browser dashboard
+minikube dashboard

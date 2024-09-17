@@ -1,0 +1,7 @@
+# kubectl
+
+# install kuberctl
+sudo pacman -S kubectl
+
+# verify if correctly installed
+kubectl version --client
