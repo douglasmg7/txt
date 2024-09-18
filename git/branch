@@ -1,56 +1,60 @@
-# create a branch and push.
-$ git checkout -b <branch_name>
-$ git commit
-$ git push -u origin <branch_name>
+# change to other branch
+# make the working directory and the HEAD match the specified branch
+git switch <branch_name>
+git checkout <branch_name>
 
-# Create a new branch using the current working directory as its base.
-$ git branch <branch_name>
+# create and switch to the created branch
+git switch -c <branch_name>
 
-# List all branches.
-$ git branch
-  -a include remote tracking branches in red
+# create, switch to the new a branch and push.
+git checkout -b <branch_name>
+git commit
+git push -u origin <branch_name>
 
-# List remote branchs, need use 'git fetch' first.
-$ git branch -r
+# create a new branch using the current working directory as its base.
+git branch <branch_name>
 
-# List all branchs.
-$ git remote show origin
+# list all branches.
+git branch
+# include remote tracking branches in red
+git branch -a
 
-# Change to other branch.
-# Make the working directory and the HEAD match the specified branch.
-$ git switch <branch_name>
-$ git checkout <branch_name>
+# list remote branchs, need use 'git fetch' first.
+git branch -r
 
-# Delete a branch.
-$ git branch -d <branch_name>
+# list all branchs.
+git remote show origin
 
-# Delete a branch with warnings.
-$ git branch -D <branch_name>
+# delete a branch.
+git branch -d <branch_name>
 
-# Delete remote branch.
-$ git push origin :<branch_name>
-$ git push origin --delete <branch_name>
+# delete a branch with warnings.
+git branch -D <branch_name>
 
-# Clean up deleted remote branches.
-$ git remote prune origin
+# delete remote branch.
+git push origin :<branch_name>
+git push origin --delete <branch_name>
 
-# Merge a branch into the checked-out branch.
-$ git merge <branch_name>
+# clean up deleted remote branches.
+git remote prune origin
+
+# merge a branch into the checked-out branch.
+git merge <branch_name>
   --no-ff no fast-forward merge (will be recursive merge)
 
-# Reviewing a pull request.
-$ git fetch
-$ git branch -a
-$ git checkout <branch_name>
+# reviewing a pull request.
+git fetch
+git branch -a
+git checkout <branch_name>
 
-# Merge into master.
-$ git checkout master
-$ git merge <branch_name>
-$ git push
-$ git branch -d <branch_name>
-$ git push origin --delete <branch_name>
+# merge into master.
+git checkout master
+git merge <branch_name>
+git push
+git branch -d <branch_name>
+git push origin --delete <branch_name>
 
-# Rename a branch:
-$ cd <to_root_of_repository>
-$ git checkout <branch_to_be_renamed>
-$ git checkout -m <new_branch_name>
+# rename a branch:
+cd <to_root_of_repository>
+git checkout <branch_to_be_renamed>
+git checkout -m <new_branch_name>
