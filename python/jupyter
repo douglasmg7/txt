@@ -1,10 +1,16 @@
-# Run the line.
+# jupyter notebook
+
+# install
+pip install jupyter
+pip install jupyterthemes
+
+# run the line.
 shift + enter
 
-# Run the line and insert a new one
+# run the line and insert a new one
 alt + enter
 
-# Show docstring.
+# show docstring.
 shift + tab
 
 
