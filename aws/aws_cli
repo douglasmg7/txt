@@ -1,0 +1,7 @@
+# aws-cli
+
+# first - create a access key for the user
+aws configure
+# just enter for: Default output format[none]:
+# check if it works
+aws iam list-users
