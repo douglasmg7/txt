@@ -1,0 +1,14 @@
+# merge
+
+# merge into master.
+git switch master
+git merge <branch_name>
+git push
+git branch -d <branch_name>
+git push origin --delete <branch_name>
+
+# merge a branch into the checked-out branch.
+git merge <branch_name>
+  --no-ff no fast-forward merge (will be recursive merge)
+
+

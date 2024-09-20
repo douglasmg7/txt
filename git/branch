@@ -25,11 +25,13 @@ git branch -r
 # list all branchs.
 git remote show origin
 
-# delete a branch.
+# delete a branch, must be out the branch to be deleted
 git branch -d <branch_name>
+git branch --delete <branch_name>
 
-# delete a branch with warnings.
+# delete a branch with warnings, no merged branch
 git branch -D <branch_name>
+git branch --delete --force <branch_name>
 
 # delete remote branch.
 git push origin :<branch_name>
@@ -38,23 +40,14 @@ git push origin --delete <branch_name>
 # clean up deleted remote branches.
 git remote prune origin
 
-# merge a branch into the checked-out branch.
-git merge <branch_name>
-  --no-ff no fast-forward merge (will be recursive merge)
-
 # reviewing a pull request.
 git fetch
 git branch -a
 git checkout <branch_name>
 
-# merge into master.
-git checkout master
-git merge <branch_name>
-git push
-git branch -d <branch_name>
-git push origin --delete <branch_name>
-
-# rename a branch:
+# rename a branch, must be in the branch
 cd <to_root_of_repository>
-git checkout <branch_to_be_renamed>
-git checkout -m <new_branch_name>
+git switch <branch_to_be_renamed>
+git branch -m <new_branch_name>
+# or
+git branch --move <new_branch_name>
