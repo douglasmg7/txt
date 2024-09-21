@@ -1,0 +1,25 @@
+Great! Statistics is essential for data science. At the early stages, it's helpful to get familiar with these key concepts:
+
+1. **Descriptive Statistics**: Measures that summarize and describe the characteristics of a data set.
+   - **Mean**: The average.
+   - **Median**: The middle value when data is ordered.
+   - **Mode**: The most frequent value.
+   - **Standard Deviation**: Measures the spread of data.
+
+2. **Probability**: The likelihood of an event happening, important for understanding data distributions and making predictions.
+
+3. **Distributions**: Patterns of how data is spread out. Some common ones include:
+   - **Normal Distribution**: Bell-shaped and symmetric.
+   - **Binomial Distribution**: For two outcomes, like success/failure.
+   - **Poisson Distribution**: For rare events occurring in a fixed interval.
+
+4. **Inferential Statistics**: Drawing conclusions about populations based on sample data.
+   - **Hypothesis Testing**: Testing assumptions (e.g., using t-tests).
+   - **Confidence Intervals**: A range of values where you expect the population parameter to fall.
+   - **p-value**: Measures the evidence against a null hypothesis.
+
+5. **Correlation and Regression**: Analyzing relationships between variables.
+   - **Correlation**: Strength and direction of a linear relationship between two variables.
+   - **Regression**: Predicting one variable based on another.
+
+Would you like to dive deeper into any of these topics or explore some examples?

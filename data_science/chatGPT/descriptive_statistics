@@ -1,0 +1,67 @@
+Descriptive statistics help us summarize and describe the main features of a data set. 
+They provide a quick overview of the distribution, central tendency, and spread of the data. Let's break down the key components:
+
+### 1. **Measures of Central Tendency**
+These measures describe the center or "typical value" of a dataset.
+
+- **Mean** (average): Sum of all values divided by the number of values.
+  - Formula: 
+    \[
+    \text{Mean} = \frac{\sum X}{N}
+    \]
+    where \(X\) is each individual value, and \(N\) is the number of values.
+  - Example: For the data set {2, 4, 6}, the mean is \( \frac{2 + 4 + 6}{3} = 4 \).
+
+- **Median**: The middle value in a sorted data set.
+  - If there is an odd number of values, the median is the middle one. 
+  - If there is an even number, it's the average of the two middle values.
+  - Example: For {1, 3, 7}, the median is 3. For {1, 3, 7, 8}, the median is \( \frac{3+7}{2} = 5 \).
+
+- **Mode**: The most frequent value(s) in a data set.
+  - There can be more than one mode if multiple values occur with the same frequency.
+  - Example: In {1, 2, 2, 3, 4}, the mode is 2.
+
+### 2. **Measures of Spread (Dispersion)**
+These help understand the variability or spread of the data.
+
+- **Range**: The difference between the highest and lowest values.
+  - Formula: 
+    \[
+    \text{Range} = \text{Max} - \text{Min}
+    \]
+  - Example: For {2, 4, 6, 8, 10}, the range is \(10 - 2 = 8\).
+
+- **Variance**: The average of the squared differences from the mean. It tells us how much the values differ from the mean.
+  - Formula (for population variance):
+    \[
+    \sigma^2 = \frac{\sum (X - \mu)^2}{N}
+    \]
+    where \(\mu\) is the population mean, and \(N\) is the number of data points.
+  - Example: If the values are {1, 2, 3}, the mean is 2, and the variance is:
+    \[
+    \frac{(1 - 2)^2 + (2 - 2)^2 + (3 - 2)^2}{3} = \frac{1 + 0 + 1}{3} = 0.67
+    \]
+
+- **Standard Deviation**: The square root of the variance. It is in the same units as the data and helps understand how spread out the values are from the mean.
+  - Formula:
+    \[
+    \sigma = \sqrt{\frac{\sum (X - \mu)^2}{N}}
+    \]
+  - Example: For {1, 2, 3}, the standard deviation is \( \sqrt{0.67} = 0.82 \).
+
+### 3. **Shape of Distribution**
+- **Skewness**: It tells us about the symmetry of the data distribution.
+  - **Positive Skew** (Right-skewed): The right tail is longer; most data points are on the left.
+  - **Negative Skew** (Left-skewed): The left tail is longer; most data points are on the right.
+
+- **Kurtosis**: Describes the "tailedness" of the data distribution.
+  - **Leptokurtic**: Sharp peak with fatter tails.
+  - **Platykurtic**: Flatter peak with thinner tails.
+  - **Mesokurtic**: Normal distribution with medium tails.
+
+### 4. **Visualization**
+Descriptive statistics are often paired with visual tools like:
+- **Histograms**: Showing the frequency distribution.
+- **Box plots**: Visualizing the five-number summary (min, Q1, median, Q3, max), and detecting outliers.
+
+Do you want to try working through an example dataset to compute these statistics? Or do you want more detail on any specific topic?
