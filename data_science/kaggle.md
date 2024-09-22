@@ -36,3 +36,9 @@ X.head()
 
 ### Validation data
 The most straightforward way to do this is to exclude some data from the model-building process, and then use those to test the model's accuracy on data it hasn't seen before.
+
+### Overfitting
+When a model matches the training data almost perfectly, but does poorly in validation and other new data.
+
+### Underfitting
+When a model fails to capture important distinctions and patterns in the data, so it performs poorly even in training data.
