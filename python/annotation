@@ -1,0 +1,16 @@
+# annotation
+
+# install to check hints
+pip install mypy
+
+# imports to use more specific hints
+from typing import Any
+
+# check hints, but not worry about missing annotations
+mypy <file_name>
+
+# check hints, comply all missing hints
+mypy --strict <file_name>
+
+# this option flags functions that don’t have all of their parameters and return values annotated
+mypy --disallow-incomplete-defs <file_name>
