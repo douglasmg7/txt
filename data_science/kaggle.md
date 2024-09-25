@@ -33,6 +33,10 @@ Predicition target
 Features
 X.describe()
 X.head()
+X.<feature>.describe()
+X.<feature>.mean()
+X.<feature>.unique()
+X.<feature>.value_counts()
 
 ### Validation data
 The most straightforward way to do this is to exclude some data from the model-building process, and then use those to test the model's accuracy on data it hasn't seen before.
@@ -42,3 +46,13 @@ When a model matches the training data almost perfectly, but does poorly in vali
 
 ### Underfitting
 When a model fails to capture important distinctions and patterns in the data, so it performs poorly even in training data.
+
+### Map (on Series)
+reviews.points.map(lambda p: p - review_points_mean)
+
+### Apply (on DataFrame)
+def remean_points(row):
+    row.points = row.points - review_points_mean
+    return row
+
+reviews.apply(remean_points, axis='columns')
