@@ -122,7 +122,54 @@ are three clusters, A, B, and C, then the algorithm could determine that 60% of 
 particular point belongs to group A, 25% to group B, and 15% to group C.
 
 ### Dimensionality reduction algorithms 
-The algorithms that simplify our data and faithfully describe it with fewer features.
+The algorithms that simplify our data and faithfully describe it with fewer features (dimensions).
 
 ### Generative algorithms 
 The algorithms that can generate new data points that resemble the existing data.
+
+The field of generative learning consists of models that, given a dataset, can output new data
+points that look like samples from that original dataset.
+
+### Dimension
+The fancy word for the number of columns.
+
+### Cluster vs Dimension reducion
+Therefore, we can use clustering to reduce the number of rows in our dataset and dimensionality reduction to reduce the number of columns.
+
+### Matrix factorization and Singular value decomposition
+Reduce both the rows and the columns at the same time.
+These two algorithms express a big matrix of data into a product of smaller matrices.
+
+### Reinforcement learning
+Is a different type of machine learning in which no data is given, and we must get the computer to perform a task. Instead of data, the model receives an environment and an agent who is supposed to navigate in this environment. 
+The agent has a goal or a set of goals.
+The environment has rewards and punishments that guide the agent to make the right decisions
+to reach its goal.
+
+
+# Summary
+• Several types of machine learning exist, including supervised learning, unsupervised
+learning, and reinforcement learning.
+
+• Data can be labeled or unlabeled. Labeled data contains a special feature, or label, that we
+aim to predict. Unlabeled data doesn’t contain this feature.
+
+• Supervised learning is used on labeled data and consists of building models that predict
+the labels for unseen data.
+
+• Unsupervised learning is used on unlabeled data and consists of algorithms that simplify
+our data without losing a lot of information. Unsupervised learning is often used as a
+preprocessing step.
+
+• Two common types of supervised learning algorithms are called regression and classification.
+    – Regression models are those in which the answer is any number.
+    – Classification models are those in which the answer is of a type or a class.
+
+• Two common types of unsupervised learning algorithms are clustering and dimensionality reduction.
+    – Clustering is used to group data into similar clusters to extract information or make it easier to handle.
+    – Dimensionality reduction is a way to simplify our data, by joining certain similar features and losing as little information as possible.
+    – Matrix factorization and singular value decomposition are other algorithms that can simplify our data by reducing both the number of rows and columns.
+
+• Generative machine learning is an innovative type of unsupervised learning, consisting of generating data that is similar to our dataset. Generative models can paint realistic faces, compose music, and write poetry.
+
+• Reinforcement learning is a type of machine learning in which an agent must navigate an environment and reach a goal. It is extensively used in many cutting-edge applications.
