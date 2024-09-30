@@ -1,3 +1,15 @@
+# git diff
+
+# View unstaged changes.
+git diff
+
+# View staged and unstage changes.
+git diff HEAD
+
+# View staged changes 
+git diff --staged
+git diff --cached
+
 # Update refs from origin, but do not merge.
 git fetch
 # git fetch shows which refs where updated. It will show something like:
