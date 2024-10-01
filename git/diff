@@ -2,13 +2,25 @@
 
 # View unstaged changes.
 git diff
+git diff <file_name>
 
 # View staged and unstage changes.
 git diff HEAD
+git diff HEAD <file_name>
 
-# View staged changes 
+# View staged changes.
 git diff --staged
 git diff --cached
+git diff --staged <file_name>
+git diff --cached <file_name>
+
+# View branch diff.
+git diff <branch_name_a> <branch_name_b>
+git diff <branch_name_a>..<branch_name_b>
+
+# View commit diff.
+git diff <commit_a> <commit_b>
+git diff <commit_a>..<commit_b>
 
 # Update refs from origin, but do not merge.
 git fetch
