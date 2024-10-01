@@ -56,3 +56,17 @@ def remean_points(row):
     return row
 
 reviews.apply(remean_points, axis='columns')
+
+# Pandas
+reviews_per_region = reviews.region_1.fillna('Unknown').value_counts().sort_values(ascending=False)
+
+### Renaming and Combining
+reviews.rename(columns={'points': 'score'})
+reviews.rename(index={0: 'firstEntry', 1: 'secondEntry'})
+reviews.rename_axis("wines", axis='rows').rename_axis("fields", axis='columns')
+# Have the same filds (columns)
+pd.concat([canadian_youtube, british_youtube])
+# Diferent fields
+left = canadian_youtube.set_index(['title', 'trending_date'])
+right = british_youtube.set_index(['title', 'trending_date'])
+left.join(right, lsuffix='_CAN', rsuffix='_UK')
