@@ -1,0 +1,7 @@
+# EC2 - Elastic Computer Cloud - IAAS - Infrastructure as a Service
+# The most popular AWS offering.
+
+# Bootstrap - EC2 User Data Script
+Launch commands when a machine starts.
+That script is only run once at the instance first start.
+
