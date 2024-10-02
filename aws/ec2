@@ -5,3 +5,12 @@
 Launch commands when a machine starts.
 That script is only run once at the instance first start.
 
+# Connect ec2 instance using ssh.
+chmod 0400 <file_name>.pem
+ssh -i <file_name>.pem ec2-user@<public_ip>
+ssh ec2-user@<public_ip>
+whoami
+ping 8.8.8.8
+aws --version
+aws iam list-users      # Should hava IamReadOnlyAccess in the role of ec2 instance.
+
