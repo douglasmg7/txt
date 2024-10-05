@@ -46,6 +46,7 @@ docker start -a $ID
 docker start -ia $ID
 # Show logs:
 docker logs $CONTAINER
+# Follow log output --folow.
 docker logs -f $CONTAINER
 
 # Run container by id, publish a port -p external:internal.
