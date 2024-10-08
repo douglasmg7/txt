@@ -12,8 +12,8 @@ sudo pacman -S xorg xorg-server --noconfirm
 printf "\nInstalling Xstart..."
 sudo pacman -S xorg-xinit --noconfirm 
 
-printf "\nCreating AUR directory..."
-mkdir -p ~/aur
+# printf "\nCreating AUR directory..."
+# mkdir -p ~/aur
 
 # st.
 # Required by dwm.

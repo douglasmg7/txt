@@ -1,4 +1,9 @@
+sudo usermod -l new_username old_username
 sudo usermod -l dmg douglasmg7
+
+sudo groupmod -n newUsername oldUsername
 sudo groupmod -n dmg douglasmg7
+
+sudo usermod -d /home/new_username -m new_username
 sudo usermod -d /home/dmg -m dmg
 whoami

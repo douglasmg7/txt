@@ -154,11 +154,11 @@ $ sudo pacman -Sy dialog dhcpcd wpa_supplicant
 # -g defines the group name
 # -G list of supplementary groups which the user is also member
 # -s default login shell
-# $ useradd -m -g users -G wheel,storage,power,audio,video -s /bin/bash dmg     
-$ useradd -m -G wheel,storage,power,audio,video -s /bin/bash dmg     
+# $ useradd -m -g users -G wheel,storage,power,audio,video -s /bin/bash douglasmg7     
+$ useradd -m -G wheel,storage,power,audio,video -s /bin/bash douglasmg7     
 
 # Password.
-$ passwd dmg
+$ passwd douglasmg7
 
 # Grant perimition to use the sudo command.
 # Use the command visudo, it will change the file "/etc/sudoers".
