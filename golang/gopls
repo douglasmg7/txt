@@ -1,0 +1,3 @@
+# Correct gopls install conection error
+cd /etc
+ln -sf ../run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
