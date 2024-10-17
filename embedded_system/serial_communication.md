@@ -43,6 +43,7 @@ Ad-Hoc topology
 Bit Frame - Start and stop comunication.
 0s: 0V
 1s: 5v
+TX and RX led will not flash when using port 0 and 1. Only when using USB port.
 
 
 ### Configuration
@@ -78,7 +79,7 @@ Cs2 - Chip Select 2
 
 
 
-## I2C/IIC - Inter Integrated Circuit (TWI)
+## I2C/IIC - Inter Integrated Circuit or TWI - Two Wire Interface
 Synchronous / simplex / 1Mbps / medium power / 1m distance.
 Allow multiple peripherical digital IC to communicate with one or more controller chip (multi-controller system).
 Like a small network, allowing you to connect up to 127 different sensors to the same couple of wires. 
@@ -89,8 +90,9 @@ Data
 Data length in bits.
 
 ### Wire 2
-SDA - Signal Data
-SCL - Signal Clock
+SDA - Signal Data (implemented int the pin A4 too)
+SCL - Signal Clock (implemented int the pin A5 too)
+
     
    
 
