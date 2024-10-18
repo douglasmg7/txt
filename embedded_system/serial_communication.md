@@ -71,12 +71,13 @@ One master and multi slave communication.
 Different from SSI (Synchronous Serial Interface protocol).
 
 ### Wire 4+
-CIPO (MISO) - Controller In Peripherical Out
-COPI (MOSI) - Controller Out Peripherical In
+CIPO (MISO) - Controller In Peripherical Out - Master In Slave Out
+COPI (MOSI) - Controller Out Peripherical In - Master Out Slave In
 SCK - Signal Clock
 CS1 - Chip Select 1 (one for each peripherical device connected)
 Cs2 - Chip Select 2
 
+SS - Slave select
 
 
 ## I2C/IIC - Inter Integrated Circuit or TWI - Two Wire Interface
