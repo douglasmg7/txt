@@ -32,3 +32,6 @@ mount -t ext4
 # Mount device or directory using what is defined on "/etc/fstab".
 mount <device>
 mount <dir>
+
+# Mount with permission to all users write do pen-drive.
+sudo mount -o gid=users,fmask=113,dmask=002 /dev/sda1 /mnt
