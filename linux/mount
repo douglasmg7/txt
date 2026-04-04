@@ -33,5 +33,5 @@ mount -t ext4
 mount <device>
 mount <dir>
 
-# Mount with permission to all users write do pen-drive.
+# Mount with permission to all users write do pen-drive for fat drives.
 sudo mount -o gid=users,fmask=113,dmask=002 /dev/sda1 /mnt
