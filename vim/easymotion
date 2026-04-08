@@ -1,0 +1,8 @@
+<Leader><Leader>w: Jump to the start of words.
+<Leader><Leader>b: Jump to the start of words backwards.
+<Leader><Leader>e: Jump to the end of words.
+<Leader><Leader>f{char}: Jump to a specific character forward.
+<Leader><Leader>F{char}: Jump to a specific character backward.
+<Leader><Leader>j: Jump forward to the start of lines.
+<Leader><Leader>k: Jump backward to the start of lines.
+<Leader><Leader>s{char}: Bidirectional search for a character (anywhere on screen).
