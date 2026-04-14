@@ -1,0 +1,13 @@
+# Create a profile using wifi-menu, it will be created at /etc/netctl (package dialog needed be installed).
+# -o obfuscate the wireless network.
+$ wifi-menu -o
+# To use dhcp add the line and enable dhcpcd:
+# DHCPClient=dhcpcd
+# $ systemctl enable dhcpcd.service
+
+
+# Start the profile created with wifi-menu.
+$ netctl start nimbus
+
+# Enable profile to start at boot.
+$ netctl enable nimbus
