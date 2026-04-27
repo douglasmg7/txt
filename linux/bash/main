@@ -1062,3 +1062,7 @@ myArray = (1 2 3 4 5)
 testit ${myArray[*]}
 
 # continue from 466 functions when finish the document
+
+# By using the source command (or the . shortcut), you tell the current shell to execute the script's commands directly within its own environment instead of starting a new child process.
+. ./file_name.sh 
+source file_name.sh
