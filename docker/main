@@ -7,6 +7,7 @@
 sudo pacman -Syu
 sudo pacman -S docker
 sudo usermod -aG docker douglasmg7
+newgrp docker   # Apply the group changes to your current terminal session immediately without logging out.
 # The user needs to Log out and log back into the server so that group membership is re-evaluated.
 
 # Start docker service.
