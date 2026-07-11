@@ -20,11 +20,14 @@ python manage.py runserver 0.0.0.0:8080
 # create app
 python manage.py startapp polls
 
-# create database
-python manage.py migrate
+# Create migration files.
+python manage.py makemigrations
 
 # made some changes to your models and that you’d like the changes to be stored as a migration 
 python manage.py makemigrations polls
+
+# Create database from migration files.
+python manage.py migrate
 
 # see what SQL that migration would run
 python manage.py sqlmigrate polls 0001
