@@ -1,4 +1,7 @@
 # kubernetes
 
-# tools
+# tools.
 https://kubernetes.io/docs/tasks/tools/
+
+# Installation.
+sudo pacman -S kubectl minikube 

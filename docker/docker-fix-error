@@ -1,0 +1,8 @@
+# View detailed systemd logs for Docker
+sudo journalctl -xeu docker.service
+
+# View the current service status
+sudo systemctl status docker.service
+
+# Run the daemon manually in debug mode to see real-time errors
+sudo dockerd --debug
