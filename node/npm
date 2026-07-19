@@ -13,6 +13,9 @@ search for a module in npm repository
 ~1.2.3 will match all 1.2.x versions but will miss 1.3.0.
 ^1.2.3 will match any 1.x.x release including 1.3.0, but will hold off on 2.0.0.
 
+# Create a package.json
+npm init -y
+
 npm install express@4.9
 install especific version
 
