@@ -1,5 +1,5 @@
-# Install on ubuntu.
-sudo apt install golang-golang-x-tools
+# Install
+go install golang.org/x/tools/cmd/godoc@latest
 
 # View fmt package doc.
 godoc fmt | less
