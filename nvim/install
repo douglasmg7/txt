@@ -1,0 +1,11 @@
+git clone --depth 1 https://github.com/LazyVim/starter             ~/.config/nvim-lazyvim
+git clone --depth 1 https://github.com/NvChad/starter              ~/.config/nvim-nvchad
+git clone --depth 1 https://github.com/AstroNvim/template          ~/.config/nvim-astronvim
+git clone --depth 1 https://github.com/nvim-lua/kickstart.nvim     ~/.config/nvim-kickstart
+
+rm ~/.config/nvim-lazyvim/.git
+rm ~/.config/nvim-nvchad/.git
+rm ~/.config/nvim-astronvim/.git
+rm ~/.config/nvim-kickstart/.git
+
+source nvim_alias.sh

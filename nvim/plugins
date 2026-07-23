@@ -1,0 +1,26 @@
+https://neovimcraft.com/
+
+# Package manage for Neovim.
+:Lazy
+
+# A portable package manager for Neovim that lets you install and manage LSP servers, DAP servers, linters, and formatters.
+:Mason - opens a graphical status window
+:MasonUpdate - updates all managed registries
+:MasonInstall <package> ... - installs/re-installs the provided packages
+:MasonUninstall <package> ... - uninstalls the provided packages
+:MasonUninstallAll - uninstalls all packages
+:MasonLog - opens the mason.nvim log file in a new tab window
+
+
+
+# Move around
+leap
+flash
+
+
+# Python
+pyright
+ruff
+black   # Format
+debugpy # DAP
+
