@@ -44,6 +44,12 @@ ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 printf "\nInstalling process monitor..."
 sudo pacman -S htop --noconfirm
 
+printf "\nInstalling ripgrep - used by lazy neovim..."
+sudo pacman -S ripgrep
+
+printf "\nInstalling ast-grep - used by lazy neovim..."
+sudo pacman -S ast-grep
+
 # printf "\nInstalling python 2..."
 # sudo pacman -S python2 python2-pip --noconfirm
 
