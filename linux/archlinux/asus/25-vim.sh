@@ -27,3 +27,5 @@ printf "\nSetting neovim configuration...\n"
 mkdir -p ~/.config/nvim
 ln -s ~/dotfiles/nvim/init.vim ~/.config/nvim/init.vim
 sudo pacman -S python-neovim --noconfirm
+
+sudo pacman -S nerd-fonts --noconfirm
