@@ -1,0 +1,19 @@
+# Themes
+<leader> t h
+onedark
+
+# Fuzzy file finder
+<leader> ff
+
+# Live Grep
+<leader> fw
+
+# Toggle file tree
+<C-n>
+
+# Terminal open
+<leader> h
+<leader> v
+# Exit
+<C-x> :q
+

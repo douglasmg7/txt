@@ -24,3 +24,7 @@ ruff
 black   # Format
 debugpy # DAP
 
+# Rust
+rust-analyzer
+codelldb
+
