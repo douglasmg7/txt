@@ -68,6 +68,10 @@ sudo pacman -S fd --noconfirm
 printf "\ntldr..."
 sudo pacman -S tldr --noconfirm
 
+# Command line tool for show process
+printf "\nbtop..."
+sudo pacman -S btop --noconfirm
+
 # printf "\nInstalling power analyzer..."
 # sudo pacman -S powertop --noconfirm
 
