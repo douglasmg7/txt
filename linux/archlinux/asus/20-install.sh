@@ -56,6 +56,18 @@ sudo pacman -S ast-grep
 printf "\nInstalling python 3..."
 sudo pacman -S python python-pip --noconfirm
 
+# Command line tool for search inside files
+printf "\nrg..."
+sudo pacman -S rg --noconfirm
+
+# Command line tool for search files
+printf "\nfd..."
+sudo pacman -S fd --noconfirm
+
+# Command line tool for show simplified help
+printf "\ntldr..."
+sudo pacman -S tldr --noconfirm
+
 # printf "\nInstalling power analyzer..."
 # sudo pacman -S powertop --noconfirm
 
