@@ -1,0 +1,15 @@
+# Config files
+~/.claude/settings.json
+~/.claude/settings.local.json   # Not inserted into version control, subcribe settings.json
+
+# Some commands
+/theme
+/config
+/model
+
+# Clear current session and context window
+/clear
+
+# Token usage
+/context
+/usage
