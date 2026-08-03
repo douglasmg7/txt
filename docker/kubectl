@@ -5,3 +5,30 @@ sudo pacman -S kubectl
 
 # verify if correctly installed
 kubectl version --client
+
+# List deployments
+kubectl get deployments
+
+# List pods
+kubectl get pods
+
+# Create a image
+docker build -t kub-first-app .
+# Rename the image 
+docker tag kub-first-app douglasmg7/kub-first-app
+# Push the image to the repository
+docker push douglasmg7/kub-first-app:tagname
+# Check if deployment is running '1/1' and not '0/1' mabe take some time to update
+kubectl get deployments
+# Should have a pod running too
+kubectl get pods
+
+# Create a deployment
+kubectl create deployment <name> --image=<image>
+kubectl create deployment first-app --image=kub-first-app
+
+# Delete a deployment
+kubectl delete deployment <name>
+kubectl delete deployment first-app
+
+
