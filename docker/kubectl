@@ -31,4 +31,18 @@ kubectl create deployment first-app --image=kub-first-app
 kubectl delete deployment <name>
 kubectl delete deployment first-app
 
+# Create a service to expose a port
+# Only accessilbe inside the cluster
+kubectl expose deployment first-app --type=ClusterIP --port=8080
+# Accessilbe outside
+kubectl expose deployment first-app --type=NodePort --port=8080
+kubectl expose deployment first-app --type=LoadBalancer --port=8080
+# List services
+kubectl get services
+# Expose a port from minikube
+minikube service first-app
+
+# Scale a pod
+kubectl scale deployment/first-app --replicas=3
+
 
