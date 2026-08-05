@@ -1,5 +1,37 @@
+# C - Ctrl
+# A - Alt
+# S - Shift
+
+# Toggle tree files
+<C-N>
+
+# Move in insert mode
+<C-J>
+<C-K>
+<C-H>
+<C-L>
+<C-B>
+<C-E>
+
+# Close a tab
+<leader> x
+
+# Chad sheed
+<leader> ch
+
+# Toggle numbers
+<leader> n
+
+# Toggle relative number
+<leader> rn
+
+# Shot git commits
+<leader> cm
+# Show git status
+<leader> gt 
+
 # Themes
-<leader> t h
+<leader> th
 onedark
 
 # Fuzzy file finder
@@ -17,3 +49,17 @@ onedark
 # Exit
 <C-x> :q
 
+# Terminal toggle
+<A-i>
+<A-h>
+<A-v>
+
+# Move editor to terminal
+<C-j>
+# Move terminal to editor
+<C-X><C-K>
+
+# Terminal normal mode
+<C-X>
+# Terminal insert mode
+i
