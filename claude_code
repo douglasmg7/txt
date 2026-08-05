@@ -13,3 +13,20 @@
 # Token usage
 /context
 /usage
+
+# Initiate claude with a prompt.
+claude "explain this project"
+# Run in background.
+claude -p "explain this project"
+
+# Continue a session.
+/resume
+
+# Continue from the last session.
+claude -c
+
+# Avoid claude touch in other files out of the project. 
+docker sandbox run claude
+# Or use.
+/sandbox
+
