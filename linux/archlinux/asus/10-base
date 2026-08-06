@@ -144,10 +144,15 @@ citrus
 ::1             localhost
 127.0.1.1       citrus.localdomain   citrus 
 
-# Install netctl using the default=1.
-$ sudo pacman -Sy netctl
-# Install optional dependencies.
-$ sudo pacman -Sy dialog dhcpcd wpa_supplicant 
+# Internet Wireless Deamon (iwctl installed too).
+# A TUI (Terminal User Interface) for iwd.
+$ sudo pacman -Sy iwd impala
+$ sudo systemctl enable --now iwd
+# Create file /etc/iwd
+[General]
+EnableNetworkConfiguration=true
+
+# Run impala to config a network.
 
 # Create a new user.
 # -m create home directory
@@ -194,35 +199,6 @@ $ su root
 # If nvme not found - ERROR: find device
 # Disable VMD on bios.
 # F7 > Advanced (menu) > VMD setup menu > Disable > F10
-
-# Do not enable concurrent, conflicting network services.
-# Use systemctl --type=service to ensure that no other network service is running before enabling a netctl profile/service.
-$ sudo systemctl --type=service
-# look up into generated list if some network service already exist. 
-
-# Create a profile using wifi-menu, it will be created at /etc/netctl (package dialog needed be installed).
-# -o obfuscate the wireless network.
-$ wifi-menu -o
-# To use dhcp add the line and enable dhcpcd:
-# DHCPClient=dhcpcd
-# $ systemctl enable dhcpcd.service
-
-
-# Start the profile created with wifi-menu.
-$ netctl start nimbus
-
-# Enable profile to start at boot.
-$ netctl enable nimbus
-
-# Enable wired network.
-$ sudo pacman -Sy ifplugd
-# Find device.
-ip link
-# ex: enp5s0
-$ cp /etc/netctl/examples/ethernet-dhcp /etc/netctl/ethernet
-# Change interface=enps5s0 on /etc/netclt
-# Enable wired network.
-$ netctl enable ethernet
 
 # Install microcode.
 $ pacman -S intel-ucode
