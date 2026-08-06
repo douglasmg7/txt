@@ -10,6 +10,9 @@ sudo systemctl enable systemd-timesyncd.service
 printf "\nCreating symbolic link to git configuration file...\n"
 ln -s ~/dotfiles/gitconfig ~/.gitconfig
 
+printf "\nInstalling python 3..."
+sudo pacman -S python python-pip --noconfirm
+
 printf "\nInstalling xclip..."
 sudo pacman -S xclip --noconfirm
 
@@ -34,15 +37,15 @@ sudo pacman -S jq --noconfirm
 
 # printf "\nInstalling youtube download..."
 # sudo pacman -S youtube-dl --noconfirm
-
+#
 printf "\nInstalling terminal multiplex..."
 sudo pacman -S tmux --noconfirm
 
 printf "\nSet tmux configuration symbolic link..."
 ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 
-printf "\nInstalling process monitor..."
-sudo pacman -S htop --noconfirm
+printf "\nInstalling process monitor htop and btop..."
+sudo pacman -S htop btop --noconfirm
 
 printf "\nInstalling ripgrep - used by lazy neovim..."
 sudo pacman -S ripgrep
@@ -50,11 +53,9 @@ sudo pacman -S ripgrep
 printf "\nInstalling ast-grep - used by lazy neovim..."
 sudo pacman -S ast-grep
 
-# printf "\nInstalling python 2..."
-# sudo pacman -S python2 python2-pip --noconfirm
-
-printf "\nInstalling python 3..."
-sudo pacman -S python python-pip --noconfirm
+# Command-line fuzzy finder
+printf "\nfzf..."
+sudo pacman -S fzf --noconfirm
 
 # Command line tool for search inside files
 printf "\nrg..."
@@ -68,9 +69,29 @@ sudo pacman -S fd --noconfirm
 printf "\ntldr..."
 sudo pacman -S tldr --noconfirm
 
-# Command line tool for show process
-printf "\nbtop..."
-sudo pacman -S btop --noconfirm
+# Überzug++ is a command line utility written in C++ which allows to draw images on terminals by using X11/wayland 
+printf "\nueberzugpp..."
+sudo pacman -S ueberzugpp --noconfirm
+
+# resvg is an SVG rendering library
+printf "\nresvg..."
+sudo pacman -S resvg --noconfirm
+
+# zoxide is a smarter cd command, inspired by z and autojump
+printf "\nzoxide..."
+sudo pacman -S zoxide --noconfirm
+
+# Chafa is a command-line utility that converts image data, including animated GIFs, into graphics formats or ANSI.
+printf "\nchafa..."
+sudo pacman -S chafa --noconfirm
+
+# ImageMagick® is a free, open-source software suite, used for editing and manipulating digital images
+printf "\nimagemagick..."
+sudo pacman -S imagemagick --noconfirm
+
+# Yazi - ⚡️ Blazing Fast Terminal File Manager
+printf "\nyazi..."
+sudo pacman -S yazi --noconfirm
 
 # printf "\nInstalling power analyzer..."
 # sudo pacman -S powertop --noconfirm
