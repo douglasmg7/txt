@@ -1,0 +1,26 @@
+# runs $FZF_CTRL_T_COMMAND to get a list of files and directories
+CTRL-T 
+
+# runs $FZF_ALT_C_COMMAND to get a list of directories
+ALT-C 
+
+# runs fzf_compgen_path() with the prefix (~/) as the first argument
+vim ~/**<tab> 
+
+# runs fzf_compgen_dir() with the prefix (foo) as the first argument
+cd foo**<tab> 
+
+# show preview
+fzf --preview 'bat --color=always {}'
+
+# Can select multiple processes with <TAB> or <Shift-TAB> keys
+kill -9 **<TAB>
+
+# For ssh command, fuzzy completion for hostnames is provided. The names are extracted from /etc/hosts and ~/.ssh/config.
+ssh **<TAB>
+
+# bash and zsh
+unset **<TAB>
+export **<TAB>
+unalias **<TAB>
+
