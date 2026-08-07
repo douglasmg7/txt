@@ -1,0 +1,5 @@
+# Usefull commands
+:checkhealth
+:checkhealth nvim-treesitter
+:TSInstall! gomod
+:message
