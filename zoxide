@@ -1,0 +1,13 @@
+# Query database for foo 
+zoxide query foo
+
+# --list and --score
+zoxide query -ls
+
+# Commands
+z
+zi
+cd <tab>
+
+# Edit database.
+zoxide edit
