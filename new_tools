@@ -1,0 +1,26 @@
+zoxide
+yazi
+rg -i
+rg -e
+rg --glob
+fd
+tldr
+fzf
+<C-R>
+bat -p
+wiremix
+tree
+exa
+
+entr
+echo hello_world.py | entr python hello_world.py
+
+# Set bash vi mode
+> set -o vi
+
+fish
+zsh
+
+nvim <(curl https://google.com)
+uberzugpp
+impala
