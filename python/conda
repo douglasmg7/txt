@@ -51,9 +51,11 @@ conda env remove -n ENV_NAME
 # Check if a package not already installed is available from the anaconda repository.
 conda activate snowflakes
 conda search biopython
+
 # Install the package.
 conda install biopython
 conda remove biopython
+
 # List installed packages.
 conda list
 
@@ -73,6 +75,9 @@ conda env update -n conda-env -f /path/to/environment.yml
 
 # Install package from packages provided by third party repositories like conda-forge.
 conda install --channel conda-forge opencv
+
+# Install packages from a file.
+conda install --file requirements.txt
 
 # Start jupyter.
 jupyter-notebook
