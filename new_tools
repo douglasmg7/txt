@@ -24,3 +24,7 @@ zsh
 nvim <(curl https://google.com)
 uberzugpp
 impala
+
+ncdu
+duf
+lsblk
