@@ -1,0 +1,54 @@
+# uv
+
+# Initialize a new project:
+uv init my-project
+
+# Add a dependency (Installs the package and immediately adds it to pyproject.toml):
+uv add requests
+
+# Add a development-only dependency:
+uv add --dev pytest
+
+# Remove a dependency:
+uv remove requests
+
+# View your dependency tree:
+uv tree
+
+# Sync environment with your lockfile:
+uv sync
+
+# Update uv
+uv self update
+
+# uv manages virtual environments implicitly behind the scenes, so you do not need to manually activate an environment.
+# Run a project script:
+uv run main.py (Runs within the isolated project environment)
+
+# Run a CLI tool package:
+uv run flask run
+
+# Running Global CLI Tools (Replaces pipx)If you need a global command-line tool (like black, ruff, or youtube-dl) but don't want it messing with your project dependencies, use the tool command or the uvx shortcut:
+
+# Run a tool temporarily:
+uvx ruff check
+
+# Install a tool permanently to your global path:
+uv tool install ruff
+
+# List installed global tools:
+uv tool list
+
+# Uninstall a global tool:
+uv tool uninstall ruff
+
+# Legacy pip InterfaceIf you prefer standard pip workflows or are working on legacy infrastructure that relies on a requirements.txt file, uv offers a drop-in replacement interface that runs up to 100x faster than traditional pip:
+
+# Create a traditional virtual environment: 
+uv venv
+
+# Install from a requirements file:
+uv add -r requirements.txt
+
+# Compile a requirements file (replaces pip-compile): 
+uv pip compile pyproject.toml -o requirements.txt
