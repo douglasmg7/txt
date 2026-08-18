@@ -1,0 +1,13 @@
+# Race enabled binary will be 10 times slower and consume 10 times more memory.
+
+# Test the package
+go test -race mypkg
+
+# Compile and run the program
+go run -race mypkg
+
+# Build
+go build -race mypkg
+
+# Install the package
+go install -race mypkg
