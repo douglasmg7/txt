@@ -63,3 +63,11 @@ onedark
 <C-X>
 # Terminal insert mode
 i
+
+# mason.nvim is an external tool/binary manager for Neovim.
+# Its job is to download, install, and manage external CLI executables—such as Language Server Protocol (LSP) servers, Debug Adapter Protocol (DAP) servers, linters, and formatters (e.g., lua_ls, stylua, pyright).
+:Mason
+
+# lazy.nvim is a Neovim plugin manager (written in Lua).
+# Its job is to download, update, and lazy-load Lua plugins (the UI components, keymaps, theme files, and integration scripts that live inside Neovim).
+:Lazy
