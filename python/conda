@@ -86,5 +86,8 @@ jupyter notebook
 # Start jupyter lab.
 jupyter-lab
 
+# Show server with password
+jupyter server list
+
 # To make nvim works with conda activated.
 conda install conda-forge::neovim
