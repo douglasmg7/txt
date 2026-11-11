@@ -55,6 +55,8 @@ If that works, Cargo will write those versions to the Cargo.lock file.
 
 # Install a binary:
 $ cargo install binary_name
+# --locked, Cargo reads the Cargo.lock file included by the author instead of calculating new versions from Cargo.toml ranges.
+$ cargo install --locked binary_name
 
 Install a binary, an app that was publised at crate.io.
 If you installed Rust using rustup.rs and don’t have any custom configurations, this directory will be $HOME/.cargo/bin.
