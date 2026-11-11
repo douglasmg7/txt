@@ -8,6 +8,14 @@ curl http://localhost:3000/blocks
 # -i --include
 curl -i http://localhost:3000/blocks
 
+# silent - no progress
+# -s
+curl -s http://localhost:3000/blocks
+
+# verbose - show what is sent
+# -v
+curl -v http://localhost:3000/blocks
+
 # fetch http header only
 # -I, -head
 curl -I http://localhost:3000/blocks
