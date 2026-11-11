@@ -71,3 +71,24 @@ i
 # lazy.nvim is a Neovim plugin manager (written in Lua).
 # Its job is to download, update, and lazy-load Lua plugins (the UI components, keymaps, theme files, and integration scripts that live inside Neovim).
 :Lazy
+
+# Go to definition.
+gd
+
+# Jump backward to older cursor positions in your jump list.
+Ctrl + o
+# Jump forward to newer cursor positions in your jump list.
+Ctrl + i
+
+# Jump to the exact line and column where your cursor was last positioned before exiting or moving away.
+g`"
+`' "
+# Jump to your last change position.
+g;
+
+# Jump back to the last place you entered insert mode.
+gi
+
+# Jump to the exact mark of your last edit.
+`.
+'.
