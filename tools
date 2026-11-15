@@ -38,3 +38,6 @@ ncdu    # Current dir by dir
 duf     # System
 lsblk   # Mountain disk
 
+# Web
+httpie
+    http, https
