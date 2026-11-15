@@ -44,3 +44,19 @@ curl -v -X GET 'http://wspub.allnations.com.br/wsIntEstoqueClientes/ServicoReser
 curl -X GET 'http://wspub.allnations.com.br/wsIntEstoqueClientes/ServicoReservasPedidosExt.asmx/ConsultarDisponibilidadeProduto?CodigoCliente=0014770&Senha=728626&CodigoProduto=0044819'
 
 curl http://127.0.0.1:3000 --cookie "Cho=Kim;Greet=Hello"   # send a cookie
+
+# Print total time.
+curl -w "Total time: %{time_total}s\n" http://127.0.0.1:3002/
+
+# Loop the command.
+for i in {1..4};do curl -w Total time: %{time_total}sn http://127.0.0.1:3002/counter; done
+
+
+# Json data. Add Json header and post method.
+curl --json "{a:2}"
+
+# Save body to a file. --download
+curl -o file_name
+
+# Follow redirects. --follow
+curl -L
