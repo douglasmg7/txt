@@ -7,8 +7,11 @@ $ uptime | xclip
 # Copy your uptime into the selection for pasting.
 # Use middle button to paste.
 
+# Copy a file content to default buffer.
 $ xclip file_name
-# Copy a file content.
+
+# Copy a file content to default buffer.
+$ xclip -sel clip file_name
 
 $ xclip -o -sel clip > webpage.txt
 # Save some text you have Edit | Copied in a web browser.
@@ -21,3 +24,9 @@ $ xclip -o | xclip -sel clip
 
 :!xclip -f
 # Copy selected text on vim.
+
+# Primary buffer
+xclip -o
+
+# clipboard buffer
+xclip -o -sel clip
