@@ -39,5 +39,6 @@ duf     # System
 lsblk   # Mountain disk
 
 # Web
-httpie
+httpie - written in python.
     http, https
+xh - similar to httpie but written in rust.
