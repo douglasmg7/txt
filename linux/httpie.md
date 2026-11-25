@@ -21,3 +21,6 @@ http -p=hbm http://127.0.0.1:3000/
 
 ### Print everything (request, response, and elapsed time).
 http -vv example.com
+
+### Forces HTTPie to flush output in small chunks as it arrives rather than waiting for the entire response to finish.
+-S, --stream
