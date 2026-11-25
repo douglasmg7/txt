@@ -1,0 +1,25 @@
+# Check file (clippy)
+ctrl-shift m
+
+# Save without format
+ctrl-k s
+
+# Format
+ctrl-shift-i
+
+# Open settings.json
+ctrl-alt-,
+
+# Search project file
+ctrl-p
+
+# Execute a command
+ctrl-shift-p
+
+# Search project...
+ctrl-alt-o
+
+# Search buffer symbol...
+ctrl-shift-o
+
+rustfmt.toml
