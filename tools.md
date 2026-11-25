@@ -42,3 +42,7 @@ lsblk   # Mountain disk
 httpie - written in python.
     http, https
 xh - similar to httpie but written in rust.
+
+# Compare files and directories.
+meld
+difft
