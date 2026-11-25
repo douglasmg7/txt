@@ -68,3 +68,21 @@ tmux attach -t
 
 # tmux ls
 list created sessions
+
+# Install plugins manage.
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# Instal plugins.
+prefix + I
+
+# Uninstalling plugins
+Remove (or comment out) plugin from the list.
+Press prefix + alt + u (lowercase u as in uninstall) to remove the plugin.
+All the plugins are installed to ~/.tmux/plugins/ so alternatively you can find plugin directory there and remove it.
+
+# Installs new plugins from GitHub or any other git repository
+Refreshes TMUX environment
+prefix + U
+
+# Updates plugin(s)
+prefix + alt + u
