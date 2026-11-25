@@ -1,19 +1,19 @@
 # Refers to last commit.
 HEAD
 
-# Detach HEAD from master and point to a specific commit.
+# Detach HEAD from main and point to a specific commit.
 git checkout 3423fdf<tab>
 
 # Back to the tip of branch.
-git checkout master
+git checkout main
 
 # Checkout code at commit with a tag.
 git checkout v0.0.1
 
-# Detach HEAD from master and point to commit before.
+# Detach HEAD from main and point to commit before.
 git checkout HEAD^
 
-# Detach HEAD from master and point to 3 commits before.
+# Detach HEAD from main and point to 3 commits before.
 git checkout HEAD~3
 
 # Discard changes to cats.html and index.html
