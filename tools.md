@@ -8,17 +8,19 @@ tldr
 fzf
 <C-R>
 bat -p
-wiremix
 tree
 
-# A modern replacement for `ls` (List directory contents).  
-# Note: `exa` is no longer maintained. Use `eza` instead.
+# audio, sound, volume
+wiremix
+
+# a modern replacement for `ls` (List directory contents).  
+# note: `exa` is no longer maintained. Use `eza` instead.
 exa
 
 entr
 echo hello_world.py | entr python hello_world.py
 
-# Set bash vi mode
+# set bash vi mode
 > set -o vi
 
 fish
@@ -30,7 +32,7 @@ uberzugpp
 # wifi
 impala
 
-# Disk usage
+# disk usage
 du -sh  # Current dir
 du <dir_name> -sh
 df -h   # System
@@ -38,11 +40,20 @@ ncdu    # Current dir by dir
 duf     # System
 lsblk   # Mountain disk
 
-# Web
+# web
 httpie - written in python.
     http, https
 xh - similar to httpie but written in rust.
 
-# Compare files and directories.
+# compare files and directories.
 meld
 difft
+
+### print file name with complete path
+realpath file
+
+# multiplex
+herdr
+
+# markdown viwer
+mdfried
