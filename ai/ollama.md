@@ -11,3 +11,7 @@ ollama list
 ollama run gemma3:270m
 ollama run gemma4
 ollama run maternion/strand-rust-coder
+ollama launch claude --model gemma4
+
+# remove a model
+ollama rm gemma4
