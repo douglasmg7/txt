@@ -1,0 +1,36 @@
+# git remote
+
+### Add a pointer origin to a url.
+### Can have several remote repositories like, production and test
+git remote add origin https://github.com/try-git/try_git.git
+
+### List remote repositories:
+git remote -v
+
+### origin - remote repository name
+### master - local branch to push
+git push -u origin master
+
+# Add the --push flag if you want to pull from one repository and push to another:
+git remote set-url --push origin <new-push-url>
+
+### Remove remotes
+git remote rm <name>
+
+### Updating your fork
+### Add remote for upstream
+git remote add upstream <path_to_repo>
+### Fetch changes
+git fetch upstream
+### Merge them into your master branch
+git merge upstream/master master
+### Push them to your fork (remote)
+git push origin master
+
+### Retrieves the URL configured for a specific remote repository (such as origin or upstream).
+git remote get-url <name>
+git remote get-url origin
+
+### Updates both the fetch and push URLs without affecting your local commit history.
+git remote set-url <remote-name> <new-url>.
+git remote set-url origin https://github.com/OWNER/REPOSITORY.git
