@@ -57,3 +57,4 @@ herdr
 
 # markdown viwer
 mdfried
+md-tui
