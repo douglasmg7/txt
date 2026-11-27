@@ -56,5 +56,6 @@ realpath file
 herdr
 
 # markdown viwer
-mdfried
 md-tui
+https://markdownlivepreview.com/
+https://markdownviewer.org/
