@@ -1,7 +1,7 @@
 # Ollama
 
 ### Check if ollama server is running, not a model.
-ollama server
+ollama serve
 
 # Check wich models are present.
 ollama ps
